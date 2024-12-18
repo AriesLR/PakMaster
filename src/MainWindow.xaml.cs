@@ -10,7 +10,9 @@ namespace PakMaster
 {
     public partial class MainWindow : MetroWindow
     {
+        private string? inputFolderPath;
         private string? outputFolderPath;
+
 
         public MainWindow()
         {
@@ -32,10 +34,9 @@ namespace PakMaster
         // Start Unpack with Repak (.pak)
         private void StartRepakUnpack(object sender, RoutedEventArgs e)
         {
-            // You can either use a fixed aesKey or retrieve it from somewhere else
-            string aesKey = "0x33A604DF49A07FFD4A4C919962161F5C35A134D37EFA98DB37A34F6450D7D386";  // Update this as needed
+            // AES Key, eventually add a way to manually enter an AES Key, for now, Stalker 2 support only.
+            string aesKey = "0x33A604DF49A07FFD4A4C919962161F5C35A134D37EFA98DB37A34F6450D7D386";
 
-            // Get the selected input file from InputFilesListBox (which contains both display names and full paths)
             var selectedInputFile = InputFilesListBox.SelectedItem as KeyValuePair<string, string>?;
 
             if (selectedInputFile == null)
@@ -44,7 +45,7 @@ namespace PakMaster
                 return;
             }
 
-            string fullInputFilePath = selectedInputFile.Value.Value; // The full path is stored as the Value of the KeyValuePair
+            string fullInputFilePath = selectedInputFile.Value.Value;
             string fileNameWithoutExtension = Path.GetFileNameWithoutExtension(fullInputFilePath);
 
             if (string.IsNullOrEmpty(fullInputFilePath))
@@ -53,7 +54,6 @@ namespace PakMaster
                 return;
             }
 
-            // Check if the output folder path is available
             if (string.IsNullOrEmpty(outputFolderPath))
             {
                 MessageBox.Show("Please select an output folder.");
@@ -62,78 +62,67 @@ namespace PakMaster
 
             string outputPath = Path.Combine(outputFolderPath, fileNameWithoutExtension);
 
-            // Construct the arguments for the unpack command
             string arguments = $"-a {aesKey} unpack -o \"{outputPath}\" \"{fullInputFilePath}\"";
 
-            // Run the repak tool with the unpack arguments
             RunTool("repak", "repak.exe", arguments, output =>
             {
-                // Update the UI with the output (in a TextBox, for example)
                 UpdateCommandOutput(output);
             });
         }
 
-
-
         // Start Repack with Repak (.pak)
-        private void StartRepakRepack()
+        private void StartRepakRepack(object sender, RoutedEventArgs e)
         {
-            // Get the selected input folder from OutputFilesListBox (folder to be repacked)
-            string selectedInputFolder = OutputFilesListBox.SelectedItem as string;
+            var selectedInputFolder = OutputFilesListBox.SelectedItem as KeyValuePair<string, string>?;
 
-            if (string.IsNullOrEmpty(selectedInputFolder))
+            if (selectedInputFolder == null)
             {
                 MessageBox.Show("Please select an input folder to repack.");
                 return;
             }
 
-            // Ensure the selected input folder exists
-            string inputFolderPath = Path.Combine(Directory.GetCurrentDirectory(), "bin", "repak_cli", selectedInputFolder);
+            string fullInputFolderPath = selectedInputFolder.Value.Value;
 
-            if (!Directory.Exists(inputFolderPath))
+            if (!Directory.Exists(fullInputFolderPath))
             {
-                MessageBox.Show($"The selected folder does not exist: {inputFolderPath}");
+                MessageBox.Show($"The selected folder does not exist: {fullInputFolderPath}");
                 return;
             }
 
-            // Get the output path (where to save the .pak) from InputFilesListBox
-            string selectedOutputFolder = Path.GetDirectoryName(InputFilesListBox.SelectedItem as string);
-
-            if (string.IsNullOrEmpty(selectedOutputFolder))
+            if (string.IsNullOrEmpty(inputFolderPath))
             {
-                MessageBox.Show("Please select an output folder.");
+                MessageBox.Show("Please browse and select an input folder first.");
                 return;
             }
 
-            // Ensure the output folder exists
-            if (!Directory.Exists(selectedOutputFolder))
+            string folderName = Path.GetFileName(fullInputFolderPath);
+
+            if (string.IsNullOrEmpty(folderName))
             {
-                MessageBox.Show($"The selected output folder does not exist: {selectedOutputFolder}");
+                MessageBox.Show("Invalid input folder name.");
                 return;
             }
 
-            // Construct the output file path for the .pak (saved in the output folder)
-            string outputFilePath = Path.Combine(selectedOutputFolder, "repacked.pak");
+            string outputPakName = folderName.EndsWith("_P")
+                ? folderName.Substring(0, folderName.Length - 2) + "_Modified_P.pak"
+                : folderName + "_Modified_P.pak";
 
-            // Construct the arguments for the repack command
-            string arguments = $"pack --version V11 \"{inputFolderPath}\" \"{outputFilePath}\"";
+            string outputFilePath = Path.Combine(inputFolderPath, outputPakName);
 
-            // Run the repak tool with the repack arguments
+            string arguments = $"pack --version V11 \"{fullInputFolderPath}\" \"{outputFilePath}\"";
+
             RunTool("repak", "repak.exe", arguments, output =>
             {
-                // Update the UI with the output (e.g., in a TextBox)
                 UpdateCommandOutput(output);
             });
         }
-
-
 
         // Browse input folder and populate InputFilesListBox
         private void BrowseInputFolder(object sender, RoutedEventArgs e)
         {
             var openFileDialog = new OpenFileDialog
             {
-                Title = "Select a Folder",
+                Title = "Select a Folder for Input",
                 CheckFileExists = false,
                 CheckPathExists = true,
                 FileName = "Folder Selection"
@@ -141,27 +130,21 @@ namespace PakMaster
 
             if (openFileDialog.ShowDialog() == true)
             {
-                string selectedPath = Path.GetDirectoryName(openFileDialog.FileName);
+                inputFolderPath = Path.GetDirectoryName(openFileDialog.FileName);
 
-                if (!string.IsNullOrEmpty(selectedPath))
+                if (!string.IsNullOrEmpty(inputFolderPath))
                 {
-                    List<KeyValuePair<string, string>> files = new List<KeyValuePair<string, string>>();
-                    string[] extensions = { "*.pak", "*.ucas", "*.utoc" };
+                    List<KeyValuePair<string, string>> files = Directory.GetFiles(inputFolderPath, "*.pak")
+                        .Select(filePath => new KeyValuePair<string, string>(
+                            Path.GetFileName(filePath),
+                            filePath
+                        ))
+                        .ToList();
 
-                    foreach (var ext in extensions)
-                    {
-                        var fileNames = Directory.GetFiles(selectedPath, ext)
-                            .Select(filePath => new KeyValuePair<string, string>(Path.GetFileName(filePath), filePath))  // Store both file name and full path
-                            .ToList();
-                        files.AddRange(fileNames);
-                    }
-                    // Set the ListBox's ItemsSource to the list of files (only displaying the file names)
                     InputFilesListBox.ItemsSource = files;
                 }
             }
         }
-
-
 
         // Browse output folder and populate OutputFilesListBox
         private void BrowseOutputFolder(object sender, RoutedEventArgs e)
@@ -180,14 +163,18 @@ namespace PakMaster
 
                 if (!string.IsNullOrEmpty(outputFolderPath))
                 {
-                    // Populate OutputFilesListBox with subdirectories (if necessary)
-                    string[] subdirectories = Directory.GetDirectories(outputFolderPath)
-                        .Select(directoryPath => Path.GetFileName(directoryPath))
-                        .ToArray();
+                    List<KeyValuePair<string, string>> subdirectories = Directory.GetDirectories(outputFolderPath)
+                        .Select(directoryPath => new KeyValuePair<string, string>(
+                            Path.GetFileName(directoryPath),
+                            directoryPath
+                        ))
+                        .ToList();
+
                     OutputFilesListBox.ItemsSource = subdirectories;
                 }
             }
         }
+
 
 
         // Run the tool and capture output
@@ -210,7 +197,6 @@ namespace PakMaster
                     throw new DirectoryNotFoundException($"Tool directory not found: {toolDirectory}");
                 }
 
-                // Set up the process start info
                 ProcessStartInfo processStartInfo = new ProcessStartInfo
                 {
                     FileName = executablePath,
@@ -255,7 +241,6 @@ namespace PakMaster
             }
         }
 
-        // Update the output text box with the command result
         private void UpdateCommandOutput(string output)
         {
             // Ensure the UI update is on the UI thread

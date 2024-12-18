@@ -3,9 +3,6 @@ using System.Windows;
 
 namespace PakMaster
 {
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
     public partial class App : Application
     {
         private async void AppStartup(object sender, StartupEventArgs e)

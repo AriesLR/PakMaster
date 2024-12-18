@@ -17,9 +17,7 @@
     <mah:MetroWindow.LeftWindowCommands>
         <mah:WindowCommands>
             <Button Click="LaunchBrowserGitHubPakMaster" ToolTip="Open up the GitHub site">
-                <iconPacks:PackIconModern Width="22"
-                                  Height="22"
-                                  Kind="SocialGithubOctocat" />
+                <iconPacks:PackIconModern Width="22" Height="22" Kind="SocialGithubOctocat" />
             </Button>
         </mah:WindowCommands>
     </mah:MetroWindow.LeftWindowCommands>
@@ -30,13 +28,8 @@
                 <Button.ContentTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
-                            <iconPacks:PackIconModern Width="22"
-                                        Height="22"
-                                        VerticalAlignment="Center"
-                                        Kind="Refresh" />
-                            <TextBlock Margin="4 0 0 0"
-                         VerticalAlignment="Center"
-                         Text="{Binding}" />
+                            <iconPacks:PackIconModern Width="22" Height="22" VerticalAlignment="Center" Kind="Refresh" />
+                            <TextBlock Margin="4 0 0 0" VerticalAlignment="Center" Text="{Binding}" />
                         </StackPanel>
                     </DataTemplate>
                 </Button.ContentTemplate>
@@ -67,16 +60,41 @@
         </StackPanel>
 
         <!-- Center Buttons -->
-        <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="10">
-            <Button Content="Unpack" Click="StartRepakUnpack" Background="DarkRed" Foreground="White" Margin="5" />
-            <Button Content="Repack" Background="DarkRed" Foreground="White" Margin="5" />
+        <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10" Orientation="Vertical">
+            <!-- Unpack Button -->
+            <Button Margin="5" Width="150" Height="40" Click="StartRepakUnpack">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25" />
+                        <ColumnDefinition Width="75" />
+                        <ColumnDefinition Width="25" />
+                    </Grid.ColumnDefinitions>
+                    <!-- <TextBlock Grid.Column="0" Text=">>>" VerticalAlignment="Center" HorizontalAlignment="Center" /> -->
+                    <TextBlock Grid.Column="1" Text="Unpack" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <TextBlock Grid.Column="2" Text=">>>" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                </Grid>
+            </Button>
+            <!-- Repack Button -->
+            <Button Margin="5" Width="150" Height="40" Click="StartRepakRepack">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25" />
+                        <ColumnDefinition Width="75" />
+                        <ColumnDefinition Width="25" />
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Grid.Column="0" Text="&lt;&lt;&lt;" VerticalAlignment="Center" HorizontalAlignment="Left" />
+                    <TextBlock Grid.Column="1" Text="Repack" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    <!-- <TextBlock Grid.Column="2" Text="&lt;&lt;&lt;" VerticalAlignment="Center" HorizontalAlignment="Center" /> -->
+                </Grid>
+            </Button>
         </StackPanel>
+
 
         <!-- Output Section -->
         <StackPanel Grid.Column="2" Background="#262626" Margin="10">
             <TextBlock Text="Output" Foreground="White" FontSize="24" HorizontalAlignment="Center" />
             <!-- ListBox to display output files -->
-            <ListBox Name="OutputFilesListBox" SelectionMode="Single" Background="Transparent" Margin="5" Height="400" />
+            <ListBox Name="OutputFilesListBox" DisplayMemberPath="Key" SelectionMode="Single" Background="Transparent" Margin="5" Height="400" />
             <Button Content="Browse output folder" Margin="5" Click="BrowseOutputFolder" />
         </StackPanel>
 
@@ -84,8 +102,9 @@
         <StackPanel Grid.Row="2" Grid.ColumnSpan="3" Background="#262626" Margin="10" Height="125">
             <TextBlock x:Name="CommandOutputTextBlock" Text="Command line / Terminal Output/Display" 
                Foreground="White" FontSize="12" HorizontalAlignment="Center" Margin="5" />
-            <TextBox x:Name="CommandOutputTextBox" Background="#333333" Foreground="White" FontSize="12" 
-             IsReadOnly="True" VerticalScrollBarVisibility="Auto" Height="100" Margin="5"/>
+            <!-- TextBox to display cli output -->
+            <TextBox x:Name="CommandOutputTextBox" Background="#202020" Foreground="White" FontSize="12" 
+             IsReadOnly="True" VerticalScrollBarVisibility="Auto" Height="94" Margin="5"/>
         </StackPanel>
 
     </Grid>
