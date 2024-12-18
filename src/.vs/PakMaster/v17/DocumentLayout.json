@@ -1,0 +1,99 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "G:\\#Github#\\PakMaster\\src\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B60FBD04-8BFA-41F9-8826-BCFF48850110}|PakMaster.csproj|g:\\#github#\\pakmaster\\src\\resources\\functions\\services\\updateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B60FBD04-8BFA-41F9-8826-BCFF48850110}|PakMaster.csproj|solutionrelative:resources\\functions\\services\\updateservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B60FBD04-8BFA-41F9-8826-BCFF48850110}|PakMaster.csproj|g:\\#github#\\pakmaster\\src\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B60FBD04-8BFA-41F9-8826-BCFF48850110}|PakMaster.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B60FBD04-8BFA-41F9-8826-BCFF48850110}|PakMaster.csproj|g:\\#github#\\pakmaster\\src\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B60FBD04-8BFA-41F9-8826-BCFF48850110}|PakMaster.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B60FBD04-8BFA-41F9-8826-BCFF48850110}|PakMaster.csproj|g:\\#github#\\pakmaster\\src\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{B60FBD04-8BFA-41F9-8826-BCFF48850110}|PakMaster.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B60FBD04-8BFA-41F9-8826-BCFF48850110}|PakMaster.csproj|g:\\#github#\\pakmaster\\src\\resources\\functions\\services\\urlservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B60FBD04-8BFA-41F9-8826-BCFF48850110}|PakMaster.csproj|solutionrelative:resources\\functions\\services\\urlservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UpdateService.cs",
+              "DocumentMoniker": "G:\\#Github#\\PakMaster\\src\\Resources\\Functions\\Services\\UpdateService.cs",
+              "RelativeDocumentMoniker": "Resources\\Functions\\Services\\UpdateService.cs",
+              "ToolTip": "G:\\#Github#\\PakMaster\\src\\Resources\\Functions\\Services\\UpdateService.cs",
+              "RelativeToolTip": "Resources\\Functions\\Services\\UpdateService.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAACoAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T02:37:10.197Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UrlService.cs",
+              "DocumentMoniker": "G:\\#Github#\\PakMaster\\src\\Resources\\Functions\\Services\\UrlService.cs",
+              "RelativeDocumentMoniker": "Resources\\Functions\\Services\\UrlService.cs",
+              "ToolTip": "G:\\#Github#\\PakMaster\\src\\Resources\\Functions\\Services\\UrlService.cs",
+              "RelativeToolTip": "Resources\\Functions\\Services\\UrlService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-18T02:27:50.408Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "App.xaml",
+              "DocumentMoniker": "G:\\#Github#\\PakMaster\\src\\App.xaml",
+              "RelativeDocumentMoniker": "App.xaml",
+              "ToolTip": "G:\\#Github#\\PakMaster\\src\\App.xaml",
+              "RelativeToolTip": "App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-17T23:43:42.75Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "G:\\#Github#\\PakMaster\\src\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "MainWindow.xaml",
+              "ToolTip": "G:\\#Github#\\PakMaster\\src\\MainWindow.xaml",
+              "RelativeToolTip": "MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-12-17T23:40:15.647Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "G:\\#Github#\\PakMaster\\src\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "G:\\#Github#\\PakMaster\\src\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAwB0AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-17T23:47:02.317Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
