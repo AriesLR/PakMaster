@@ -62,13 +62,13 @@
         <StackPanel Grid.Column="0" Background="#262626" Margin="10">
             <TextBlock Text="Input" Foreground="White" FontSize="24" HorizontalAlignment="Center" />
             <!-- ListBox to display files -->
-            <ListBox Name="InputFilesListBox" Background="Transparent" Margin="5" Height="400" />
+            <ListBox Name="InputFilesListBox" DisplayMemberPath="Key" SelectionMode="Single" Background="Transparent" Margin="5" Height="400" />
             <Button Content="Browse input folder" Margin="5" Click="BrowseInputFolder" />
         </StackPanel>
 
         <!-- Center Buttons -->
         <StackPanel Grid.Column="1" VerticalAlignment="Center" Margin="10">
-            <Button Content="Unpack" Background="DarkRed" Foreground="White" Margin="5" />
+            <Button Content="Unpack" Click="StartRepakUnpack" Background="DarkRed" Foreground="White" Margin="5" />
             <Button Content="Repack" Background="DarkRed" Foreground="White" Margin="5" />
         </StackPanel>
 
@@ -76,13 +76,17 @@
         <StackPanel Grid.Column="2" Background="#262626" Margin="10">
             <TextBlock Text="Output" Foreground="White" FontSize="24" HorizontalAlignment="Center" />
             <!-- ListBox to display output files -->
-            <ListBox Name="OutputFilesListBox" Background="Transparent" Margin="5" Height="400" />
+            <ListBox Name="OutputFilesListBox" SelectionMode="Single" Background="Transparent" Margin="5" Height="400" />
             <Button Content="Browse output folder" Margin="5" Click="BrowseOutputFolder" />
         </StackPanel>
 
         <!-- Command Line Output -->
         <StackPanel Grid.Row="2" Grid.ColumnSpan="3" Background="#262626" Margin="10" Height="125">
-            <TextBlock Text="Command line / Terminal Output/Display" Foreground="White" FontSize="12" HorizontalAlignment="Center" Margin="5" />
+            <TextBlock x:Name="CommandOutputTextBlock" Text="Command line / Terminal Output/Display" 
+               Foreground="White" FontSize="12" HorizontalAlignment="Center" Margin="5" />
+            <TextBox x:Name="CommandOutputTextBox" Background="#333333" Foreground="White" FontSize="12" 
+             IsReadOnly="True" VerticalScrollBarVisibility="Auto" Height="100" Margin="5"/>
         </StackPanel>
+
     </Grid>
 </mah:MetroWindow>
