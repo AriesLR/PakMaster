@@ -6,7 +6,7 @@ namespace PakMaster.Resources.Functions.Services
 {
     public static class UpdateService
     {
-        private static readonly string currentVersionPakMaster = "0.0.1"; // REMEMBER TO UPDATE THIS, DUMBASS.
+        private static readonly string currentVersionPakMaster = "0.0.2"; // REMEMBER TO UPDATE THIS, DUMBASS.
         public static async Task CheckJsonForUpdates(string jsonUrl)
         {
             try
