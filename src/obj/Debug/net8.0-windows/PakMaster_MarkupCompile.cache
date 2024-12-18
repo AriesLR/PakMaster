@@ -4,15 +4,15 @@
 winexe
 C#
 .cs
-G:\#Github#\PakMaster\obj\Debug\net8.0-windows\
+G:\#Github#\PakMaster\src\obj\Debug\net8.0-windows\
 PakMaster
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-G:\#Github#\PakMaster\App.xaml
+G:\#Github#\PakMaster\src\App.xaml
 11407045341
 
-5-1520803479
+7-676883610
 20490504702
 MainWindow.xaml;
 
