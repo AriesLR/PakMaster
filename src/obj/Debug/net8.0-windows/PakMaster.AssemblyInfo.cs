@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PakMaster")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+92448db06e9fa12a0ddc8e6396e12662224cb9c3")]
 [assembly: System.Reflection.AssemblyProductAttribute("PakMaster")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PakMaster")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
