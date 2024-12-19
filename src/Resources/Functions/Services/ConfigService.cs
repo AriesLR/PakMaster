@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Diagnostics;
 using System.IO;
 
 namespace PakMaster.Resources.Functions.Services
@@ -42,7 +43,7 @@ namespace PakMaster.Resources.Functions.Services
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error loading config: {ex.Message}");
+                Debug.WriteLine($"Error loading config: {ex.Message}");
                 return new T(); // Return default config on error
             }
         }
@@ -57,7 +58,7 @@ namespace PakMaster.Resources.Functions.Services
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error saving config: {ex.Message}");
+                Debug.WriteLine($"Error saving config: {ex.Message}");
             }
         }
 
@@ -71,7 +72,7 @@ namespace PakMaster.Resources.Functions.Services
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error creating default config: {ex.Message}");
+                Debug.WriteLine($"Error creating default config: {ex.Message}");
             }
         }
     }

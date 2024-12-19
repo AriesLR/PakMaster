@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System.Diagnostics;
+using System.IO;
 using System.IO.Compression;
 using System.Net.Http;
 
@@ -43,11 +44,11 @@ namespace PakMaster.Resources.Functions.Services
                     {
                         ZipFile.ExtractToDirectory(tempZipFilePath, targetFolderPath);
                         File.Delete(tempZipFilePath);
-                        Console.WriteLine($"Zip file extracted to: {targetFolderPath}");
+                        Debug.WriteLine($"Zip file extracted to: {targetFolderPath}");
                     }
                     else
                     {
-                        Console.WriteLine("Error: Downloaded zip file not found.");
+                        Debug.WriteLine("Error: Downloaded zip file not found.");
                     }
                 }
                 else
@@ -61,12 +62,12 @@ namespace PakMaster.Resources.Functions.Services
                         await File.WriteAllBytesAsync(targetFilePath, fileBytes);
                     }
 
-                    Console.WriteLine($"File downloaded to: {targetFilePath}");
+                    Debug.WriteLine($"File downloaded to: {targetFilePath}");
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"An error occurred while downloading the file: {ex.Message}");
+                Debug.WriteLine($"An error occurred while downloading the file: {ex.Message}");
             }
         }
     }
