@@ -8,6 +8,7 @@
 
 - [Features](#features)
 - [Planned Features](#planned-features)
+- [How It Works](#how-it-works)
 - [Getting Started](#getting-started)
     - [Installer Version](#installer-version)
     - [Portable Version](#portable-version)
@@ -37,6 +38,12 @@
 ## Planned Features
 
 - `.ucas` & `.utoc` support - Currently only `.pak` is supported.
+
+## How It Works
+
+PakMaster leverages the existing tools [repak](https://github.com/trumank/repak) and [ZenTools](https://github.com/LongerWarrior/ZenTools) to pack and unpack files.
+PakMaster does not come with either of these tools, but upon launching PakMaster the latest version supported by PakMaster is downloaded automatically.
+By using PakMaster you also have to abide by repak and ZenTools' licenses, not just PakMaster's.
 
 ## Getting Started
 
