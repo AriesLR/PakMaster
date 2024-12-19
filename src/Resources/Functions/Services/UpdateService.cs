@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Diagnostics;
 using System.Net.Http;
 using System.Windows;
 
@@ -6,7 +7,7 @@ namespace PakMaster.Resources.Functions.Services
 {
     public static class UpdateService
     {
-        private static readonly string currentVersionPakMaster = "0.0.5"; // REMEMBER TO UPDATE THIS, DUMBASS.
+        private static readonly string currentVersionPakMaster = FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).FileVersion;
         public static async Task CheckJsonForUpdates(string jsonUrl)
         {
             try
@@ -19,7 +20,7 @@ namespace PakMaster.Resources.Functions.Services
                     {
                         // New version available, notify the user
                         var result = MessageBox.Show(
-                            $"A new version is available: {updateInfo.latestVersionPakMaster}\nWould you like to download the new version?",
+                            $"A new version is available: {updateInfo.latestVersionPakMaster}\nLatest Version: {updateInfo.latestVersionPakMaster}\nYour Version: {currentVersionPakMaster}\nWould you like to download the new version?",
                             "Update Available",
                             MessageBoxButton.YesNo,
                             MessageBoxImage.Information
@@ -33,7 +34,7 @@ namespace PakMaster.Resources.Functions.Services
                     }
                     else
                     {
-                        MessageBox.Show("You are already using the latest version.", "No Updates", MessageBoxButton.OK, MessageBoxImage.Information);
+                        MessageBox.Show($"You are already using the latest version.\nLatest Version: {updateInfo.latestVersionPakMaster}\nYour Version: {currentVersionPakMaster}", "No Updates", MessageBoxButton.OK, MessageBoxImage.Information);
                     }
                 }
             }
