@@ -20,8 +20,8 @@ namespace PakMaster.Resources.Functions.Services
                     {
                         // New version available, notify the user
                         var result = MessageBox.Show(
-                            $"A new version is available: {updateInfo.latestVersionPakMaster}\nLatest Version: {updateInfo.latestVersionPakMaster}\nYour Version: {currentVersionPakMaster}\nWould you like to download the new version?",
-                            "Update Available",
+                            $"A new version is available: {updateInfo.latestVersionPakMaster}\n\nLatest Version: {updateInfo.latestVersionPakMaster}\nYour Version: {currentVersionPakMaster}\nWould you like to download the new version?",
+                            "Check for updates",
                             MessageBoxButton.YesNo,
                             MessageBoxImage.Information
                         );
@@ -34,7 +34,7 @@ namespace PakMaster.Resources.Functions.Services
                     }
                     else
                     {
-                        MessageBox.Show($"You are already using the latest version.\nLatest Version: {updateInfo.latestVersionPakMaster}\nYour Version: {currentVersionPakMaster}", "No Updates", MessageBoxButton.OK, MessageBoxImage.Information);
+                        MessageBox.Show($"You are already using the latest version.\n\nLatest Version: {updateInfo.latestVersionPakMaster}\nYour Version: {currentVersionPakMaster}", "Check for updates", MessageBoxButton.OK, MessageBoxImage.Information);
                     }
                 }
             }

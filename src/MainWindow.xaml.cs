@@ -40,9 +40,9 @@ namespace PakMaster
         {
             try
             {
-                var config = _configService.LoadConfig<dynamic>(); // Load the config dynamically
-                string aesKey = config?.AesKey ?? string.Empty; // Get AES key or empty string if not found
-                AesKeyTextBox.Text = aesKey; // Set the text of the TextBox
+                var config = _configService.LoadConfig<dynamic>();
+                string aesKey = config?.AesKey ?? string.Empty;
+                AesKeyTextBox.Text = aesKey;
             }
             catch (Exception ex)
             {
@@ -54,12 +54,6 @@ namespace PakMaster
         private void SaveAesKey(object sender, RoutedEventArgs e)
         {
             string aesKey = AesKeyTextBox.Text.Trim();
-
-            if (string.IsNullOrEmpty(aesKey))
-            {
-                MessageBox.Show("Please enter a valid AES key.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                return;
-            }
 
             var config = new { AesKey = aesKey };
 
@@ -77,8 +71,11 @@ namespace PakMaster
 
             if (string.IsNullOrEmpty(aesKey))
             {
-                MessageBox.Show("AES Key is not set or is invalid in the config.");
-                return;
+                Debug.WriteLine("[DEBUG]: AES Key is empty");
+            }
+            else
+            {
+                Debug.WriteLine($"[DEBUG]: AES Key found.\n[DEBUG]: AES Key: {aesKey}");
             }
 
             var selectedInputFile = InputFilesListBox.SelectedItem as KeyValuePair<string, string>?;
@@ -106,15 +103,18 @@ namespace PakMaster
 
             string outputPath = Path.Combine(outputFolderPath, fileNameWithoutExtension);
 
-            string arguments = $"-a {aesKey} unpack -o \"{outputPath}\" \"{fullInputFilePath}\"";
+            string arguments = string.IsNullOrEmpty(aesKey)
+                ? $"unpack -o \"{outputPath}\" \"{fullInputFilePath}\""
+                : $"-a {aesKey} unpack -o \"{outputPath}\" \"{fullInputFilePath}\"";
 
             await RunToolAsync("repak", "repak.exe", arguments, output =>
             {
                 UpdateCommandOutput(output);
-                RepopulateInputListBox(); // Re-populate the input list box after unpacking
-                RepopulateOutputListBox(); // Re-populate the output list box after repacking
+                RepopulateInputListBox();
+                RepopulateOutputListBox();
             });
         }
+
 
         // Start Repack with Repak (.pak)
         private async Task StartRepakRepackAsync()
@@ -285,6 +285,7 @@ namespace PakMaster
         }
 
         // Toggle Switch Event Handler
+        /*
         private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
         {
             if (FileTypeToggleSwitch.IsOn)
@@ -298,6 +299,7 @@ namespace PakMaster
                 isZenToolsFormat = false;
             }
         }
+        */
 
         // Event handlers for unpacking and repacking, checks if toggle is on or off
         private async void btnRepack_Click(object sender, RoutedEventArgs e)
