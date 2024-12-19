@@ -10,13 +10,17 @@ namespace PakMaster
 {
     public partial class MainWindow : MetroWindow
     {
+        private ConfigService _configService;
+
+        private bool isZenToolsFormat = false;
         private string? inputFolderPath;
         private string? outputFolderPath;
-
 
         public MainWindow()
         {
             InitializeComponent();
+            _configService = new ConfigService();
+            LoadAesKey();
         }
 
         // Open PakMaster's GitHub Repo in the user's default browser 
@@ -31,11 +35,51 @@ namespace PakMaster
             await UpdateService.CheckJsonForUpdates("https://raw.githubusercontent.com/AriesLR/PakMaster/refs/heads/main/docs/version/update.json");
         }
 
-        // Start Unpack with Repak (.pak)
-        private void StartRepakUnpack(object sender, RoutedEventArgs e)
+        // Load AES Key
+        private void LoadAesKey()
         {
-            // AES Key, eventually add a way to manually enter an AES Key, for now, Stalker 2 support only.
-            string aesKey = "0x33A604DF49A07FFD4A4C919962161F5C35A134D37EFA98DB37A34F6450D7D386";
+            try
+            {
+                var config = _configService.LoadConfig<dynamic>(); // Load the config dynamically
+                string aesKey = config?.AesKey ?? string.Empty; // Get AES key or empty string if not found
+                AesKeyTextBox.Text = aesKey; // Set the text of the TextBox
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading config: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        // Save AES Key
+        private void SaveAesKey(object sender, RoutedEventArgs e)
+        {
+            string aesKey = AesKeyTextBox.Text.Trim();
+
+            if (string.IsNullOrEmpty(aesKey))
+            {
+                MessageBox.Show("Please enter a valid AES key.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
+            var config = new { AesKey = aesKey };
+
+            _configService.SaveConfig(config);
+
+            MessageBox.Show("AES Key saved successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+        }
+
+        // Start Unpack with Repak (.pak)
+        private async Task StartRepakUnpackAsync()
+        {
+            // Load the AES Key from the config
+            var config = _configService.LoadConfig<dynamic>();
+            string aesKey = config?.AesKey ?? string.Empty;
+
+            if (string.IsNullOrEmpty(aesKey))
+            {
+                MessageBox.Show("AES Key is not set or is invalid in the config.");
+                return;
+            }
 
             var selectedInputFile = InputFilesListBox.SelectedItem as KeyValuePair<string, string>?;
 
@@ -64,14 +108,16 @@ namespace PakMaster
 
             string arguments = $"-a {aesKey} unpack -o \"{outputPath}\" \"{fullInputFilePath}\"";
 
-            RunTool("repak", "repak.exe", arguments, output =>
+            await RunToolAsync("repak", "repak.exe", arguments, output =>
             {
                 UpdateCommandOutput(output);
+                RepopulateInputListBox(); // Re-populate the input list box after unpacking
+                RepopulateOutputListBox(); // Re-populate the output list box after repacking
             });
         }
 
         // Start Repack with Repak (.pak)
-        private void StartRepakRepack(object sender, RoutedEventArgs e)
+        private async Task StartRepakRepackAsync()
         {
             var selectedInputFolder = OutputFilesListBox.SelectedItem as KeyValuePair<string, string>?;
 
@@ -111,9 +157,11 @@ namespace PakMaster
 
             string arguments = $"pack --version V11 \"{fullInputFolderPath}\" \"{outputFilePath}\"";
 
-            RunTool("repak", "repak.exe", arguments, output =>
+            await RunToolAsync("repak", "repak.exe", arguments, output =>
             {
                 UpdateCommandOutput(output);
+                RepopulateInputListBox();
+                RepopulateOutputListBox();
             });
         }
 
@@ -128,6 +176,12 @@ namespace PakMaster
                 FileName = "Folder Selection"
             };
 
+            // Use the last selected input folder path if available
+            if (!string.IsNullOrEmpty(inputFolderPath))
+            {
+                openFileDialog.InitialDirectory = inputFolderPath;
+            }
+
             if (openFileDialog.ShowDialog() == true)
             {
                 inputFolderPath = Path.GetDirectoryName(openFileDialog.FileName);
@@ -135,10 +189,7 @@ namespace PakMaster
                 if (!string.IsNullOrEmpty(inputFolderPath))
                 {
                     List<KeyValuePair<string, string>> files = Directory.GetFiles(inputFolderPath, "*.pak")
-                        .Select(filePath => new KeyValuePair<string, string>(
-                            Path.GetFileName(filePath),
-                            filePath
-                        ))
+                        .Select(filePath => new KeyValuePair<string, string>(Path.GetFileName(filePath), filePath))
                         .ToList();
 
                     InputFilesListBox.ItemsSource = files;
@@ -157,6 +208,12 @@ namespace PakMaster
                 FileName = "Folder Selection"
             };
 
+            // Use the last selected output folder path if available
+            if (!string.IsNullOrEmpty(outputFolderPath))
+            {
+                openFileDialog.InitialDirectory = outputFolderPath;
+            }
+
             if (openFileDialog.ShowDialog() == true)
             {
                 outputFolderPath = Path.GetDirectoryName(openFileDialog.FileName);
@@ -164,10 +221,7 @@ namespace PakMaster
                 if (!string.IsNullOrEmpty(outputFolderPath))
                 {
                     List<KeyValuePair<string, string>> subdirectories = Directory.GetDirectories(outputFolderPath)
-                        .Select(directoryPath => new KeyValuePair<string, string>(
-                            Path.GetFileName(directoryPath),
-                            directoryPath
-                        ))
+                        .Select(directoryPath => new KeyValuePair<string, string>(Path.GetFileName(directoryPath), directoryPath))
                         .ToList();
 
                     OutputFilesListBox.ItemsSource = subdirectories;
@@ -175,23 +229,15 @@ namespace PakMaster
             }
         }
 
-
-
-        // Run the tool and capture output
-        private void RunTool(string toolFolderName, string executableName, string arguments, Action<string> outputCallback)
+        // Run the tool and capture output asynchronously
+        private async Task RunToolAsync(string toolFolderName, string executableName, string arguments, Action<string> outputCallback)
         {
             try
             {
-                // Get the current directory (app location)
                 string currentDirectory = Directory.GetCurrentDirectory();
-
-                // Find the tool folder (ZenTools or repak)
                 string toolDirectory = Path.Combine(currentDirectory, "bin", toolFolderName);
-
-                // Get the full path to the executable
                 string executablePath = Path.Combine(toolDirectory, executableName);
 
-                // Ensure that the tool directory exists
                 if (!Directory.Exists(toolDirectory))
                 {
                     throw new DirectoryNotFoundException($"Tool directory not found: {toolDirectory}");
@@ -208,10 +254,7 @@ namespace PakMaster
                     WorkingDirectory = toolDirectory
                 };
 
-                Process process = new Process
-                {
-                    StartInfo = processStartInfo
-                };
+                Process process = new Process { StartInfo = processStartInfo };
 
                 StringBuilder outputBuilder = new StringBuilder();
 
@@ -231,7 +274,7 @@ namespace PakMaster
                 process.BeginOutputReadLine();
                 process.BeginErrorReadLine();
 
-                process.WaitForExit();
+                await Task.Run(() => process.WaitForExit());
 
                 outputCallback?.Invoke(outputBuilder.ToString());
             }
@@ -241,14 +284,79 @@ namespace PakMaster
             }
         }
 
+        // Toggle Switch Event Handler
+        private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
+        {
+            if (FileTypeToggleSwitch.IsOn)
+            {
+                // .ucas/.utoc format selected
+                isZenToolsFormat = true;
+            }
+            else
+            {
+                // .pak format selected
+                isZenToolsFormat = false;
+            }
+        }
+
+        // Event handlers for unpacking and repacking, checks if toggle is on or off
+        private async void btnRepack_Click(object sender, RoutedEventArgs e)
+        {
+            if (isZenToolsFormat)
+            {
+                MessageBox.Show(" Currently Unsupported");
+                // await StartZenToolsRepackAsync();
+            }
+            else
+            {
+                await StartRepakRepackAsync();
+            }
+        }
+
+        private async void btnUnpack_Click(object sender, RoutedEventArgs e)
+        {
+            if (isZenToolsFormat)
+            {
+                MessageBox.Show(" Currently Unsupported");
+                // await StartZenToolsUnpackAsync();
+            }
+            else
+            {
+                await StartRepakUnpackAsync();
+            }
+        }
+
         private void UpdateCommandOutput(string output)
         {
-            // Ensure the UI update is on the UI thread
             Application.Current.Dispatcher.Invoke(() =>
             {
-                CommandOutputTextBox.Text = output; // Update the TextBox with captured output
+                CommandOutputTextBox.Text += output + Environment.NewLine;
             });
         }
 
+        // Methods for repopulating listboxes after unpacking or repacking
+        private void RepopulateInputListBox()
+        {
+            if (!string.IsNullOrEmpty(inputFolderPath))
+            {
+                List<KeyValuePair<string, string>> files = Directory.GetFiles(inputFolderPath, "*.pak")
+                    .Select(filePath => new KeyValuePair<string, string>(Path.GetFileName(filePath), filePath))
+                    .ToList();
+
+                InputFilesListBox.ItemsSource = files;
+            }
+        }
+
+        private void RepopulateOutputListBox()
+        {
+            if (!string.IsNullOrEmpty(outputFolderPath))
+            {
+                List<KeyValuePair<string, string>> subdirectories = Directory.GetDirectories(outputFolderPath)
+                    .Select(directoryPath => new KeyValuePair<string, string>(Path.GetFileName(directoryPath), directoryPath))
+                    .ToList();
+
+                OutputFilesListBox.ItemsSource = subdirectories;
+            }
+        }
     }
 }

@@ -5,8 +5,14 @@ namespace PakMaster
 {
     public partial class App : Application
     {
+        private ConfigService _configService;
+
         private async void AppStartup(object sender, StartupEventArgs e)
         {
+            // Initialize ConfigService and ensure the config file exists
+            _configService = new ConfigService();
+            _configService.EnsureConfigExists();
+
             // Check if repak.exe exists in bin/repak
             if (!DependenciesService.CheckIfDependencyExists("repak", "repak.exe"))
             {
@@ -28,5 +34,4 @@ namespace PakMaster
             }
         }
     }
-
 }

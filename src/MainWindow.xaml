@@ -7,10 +7,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PakMaster"
         Title="PakMaster"
-        Width="1200"
-        Height="675"
+        Width="1366"
+        Height="768"
+        FontFamily="Segoe UI"
         GlowBrush="{DynamicResource MahApps.Brushes.Accent}"
-        ResizeMode="CanResizeWithGrip"
+        ResizeMode="CanMinimize"
         WindowStartupLocation="CenterScreen"
         mc:Ignorable="d">
 
@@ -41,7 +42,7 @@
         <!-- Define the main layout grid -->
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="200" />
+            <ColumnDefinition Width="500" />
             <ColumnDefinition Width="1*" />
         </Grid.ColumnDefinitions>
 
@@ -53,59 +54,95 @@
 
         <!-- Input Section -->
         <StackPanel Grid.Column="0" Background="#262626" Margin="10">
-            <TextBlock Text="Input" Foreground="White" FontSize="24" HorizontalAlignment="Center" />
+            <TextBlock Text="Files" Foreground="White" FontWeight="Bold" FontSize="24" HorizontalAlignment="Center" />
             <!-- ListBox to display files -->
-            <ListBox Name="InputFilesListBox" DisplayMemberPath="Key" SelectionMode="Single" Background="Transparent" Margin="5" Height="400" />
-            <Button Content="Browse input folder" Margin="5" Click="BrowseInputFolder" />
+            <ListBox Name="InputFilesListBox" DisplayMemberPath="Key" SelectionMode="Single" Background="Transparent" Margin="5" Height="490" />
+            <Button Content="Browse input folder" FontWeight="Bold" Margin="5" Click="BrowseInputFolder" />
         </StackPanel>
+        
+        <!-- Center Column -->
+        <Grid Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
+            <!-- Define row structure -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="175" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="175" />
+            </Grid.RowDefinitions>
 
-        <!-- Center Buttons -->
-        <StackPanel Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10" Orientation="Vertical">
-            <!-- Unpack Button -->
-            <Button Margin="5" Width="150" Height="40" Click="StartRepakUnpack">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="25" />
-                        <ColumnDefinition Width="75" />
-                        <ColumnDefinition Width="25" />
-                    </Grid.ColumnDefinitions>
-                    <!-- <TextBlock Grid.Column="0" Text=">>>" VerticalAlignment="Center" HorizontalAlignment="Center" /> -->
-                    <TextBlock Grid.Column="1" Text="Unpack" VerticalAlignment="Center" HorizontalAlignment="Center" />
-                    <TextBlock Grid.Column="2" Text=">>>" VerticalAlignment="Center" HorizontalAlignment="Center" />
-                </Grid>
-            </Button>
-            <!-- Repack Button -->
-            <Button Margin="5" Width="150" Height="40" Click="StartRepakRepack">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="25" />
-                        <ColumnDefinition Width="75" />
-                        <ColumnDefinition Width="25" />
-                    </Grid.ColumnDefinitions>
-                    <TextBlock Grid.Column="0" Text="&lt;&lt;&lt;" VerticalAlignment="Center" HorizontalAlignment="Left" />
-                    <TextBlock Grid.Column="1" Text="Repack" VerticalAlignment="Center" HorizontalAlignment="Center" />
-                    <!-- <TextBlock Grid.Column="2" Text="&lt;&lt;&lt;" VerticalAlignment="Center" HorizontalAlignment="Center" /> -->
-                </Grid>
-            </Button>
-        </StackPanel>
+            <!-- AES Key Input Section -->
+            <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
+                <TextBlock Text="AES Key" Foreground="White" FontSize="20" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
+                <TextBox Name="AesKeyTextBox" Width="460" Height="30" Margin="5"/>
+                <Button Content="Save" FontSize="12" FontWeight="SemiBold" Width="180" Height="30" Margin="5" Click="SaveAesKey"/>
+            </StackPanel>
 
+
+            <!-- Pack/Unpack Buttons Section -->
+            <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5">
+                <Button Margin="5" Width="150" Height="40" Click="btnUnpack_Click">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="25" />
+                            <ColumnDefinition Width="75" />
+                            <ColumnDefinition Width="25" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="1" Text="Unpack" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        <TextBlock Grid.Column="2" Text=">>>" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </Grid>
+                </Button>
+                <Button Margin="5" Width="150" Height="40" Click="btnRepack_Click">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="25" />
+                            <ColumnDefinition Width="75" />
+                            <ColumnDefinition Width="25" />
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Grid.Column="0" Text="&lt;&lt;&lt;" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" />
+                        <TextBlock Grid.Column="1" Text="Repack" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                    </Grid>
+                </Button>
+            </StackPanel>
+
+            <!-- Repak/ZenTools Toggle -->
+            <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5">
+
+                <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="150" />
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="150" />
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock Text=".pak" Height="21" FontSize="16" FontWeight="SemiBold" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="20" Grid.Column="0" />
+
+                    <mah:ToggleSwitch x:Name="FileTypeToggleSwitch"
+                          Toggled="ToggleSwitch_Toggled"
+                          OffContent=""
+                          OnContent=""
+                          Width="50"
+                          Height="30"
+                          Grid.Column="1"
+                          FontSize="18"/>
+
+                    <TextBlock Text=".ucas/.utoc" Height="25" FontSize="16" FontWeight="SemiBold" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15" Grid.Column="2" />
+                </Grid>
+            </StackPanel>
+        </Grid>
 
         <!-- Output Section -->
         <StackPanel Grid.Column="2" Background="#262626" Margin="10">
-            <TextBlock Text="Output" Foreground="White" FontSize="24" HorizontalAlignment="Center" />
+            <TextBlock Text="Folders" Foreground="White" FontWeight="Bold" FontSize="24" HorizontalAlignment="Center" />
             <!-- ListBox to display output files -->
-            <ListBox Name="OutputFilesListBox" DisplayMemberPath="Key" SelectionMode="Single" Background="Transparent" Margin="5" Height="400" />
-            <Button Content="Browse output folder" Margin="5" Click="BrowseOutputFolder" />
+            <ListBox Name="OutputFilesListBox" DisplayMemberPath="Key" SelectionMode="Single" Background="Transparent" Margin="5" Height="490" />
+            <Button Content="Browse output folder" FontWeight="Bold" Margin="5" Click="BrowseOutputFolder" />
         </StackPanel>
 
         <!-- Command Line Output -->
         <StackPanel Grid.Row="2" Grid.ColumnSpan="3" Background="#262626" Margin="10" Height="125">
-            <TextBlock x:Name="CommandOutputTextBlock" Text="Command line / Terminal Output/Display" 
-               Foreground="White" FontSize="12" HorizontalAlignment="Center" Margin="5" />
             <!-- TextBox to display cli output -->
             <TextBox x:Name="CommandOutputTextBox" Background="#202020" Foreground="White" FontSize="12" 
-             IsReadOnly="True" VerticalScrollBarVisibility="Auto" Height="94" Margin="5"/>
+         IsReadOnly="True" VerticalScrollBarVisibility="Auto" Height="120" Margin="5"/>
         </StackPanel>
-
     </Grid>
+
 </mah:MetroWindow>
