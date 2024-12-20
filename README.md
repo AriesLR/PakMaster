@@ -15,6 +15,7 @@
   - [How To Use](#how-to-use)
     - [Unpacking](#unpacking)
     - [Repacking](#repacking)
+- [Screenshots](#screenshots)
 - [Acknowledgements](#acknowledgements)
 - [License](#license)
 - [Tips](#tips)
@@ -69,6 +70,10 @@ To get started with **PakMaster**, download the [Latest Version](https://github.
 
 #### Repacking
 - Select the folder you'd like to pack from the **Output** list on the right and click **"Repack"**.
+
+## Screenshots
+
+![PakMaster](https://raw.githubusercontent.com/AriesLR/PakMaster/main/docs/images/pakmaster-main.png)
  
 ## Acknowledgements
 - [repak](https://github.com/trumank/repak) - For the Unreal Engine .pak file library and CLI in rust.
