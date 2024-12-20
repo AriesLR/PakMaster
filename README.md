@@ -92,7 +92,7 @@ To get started with **PakMaster**, download the [Latest Version](https://github.
 
 ## Notes
 
-- No Notes, that's probably good, right?
+- ZenTools is not implemented yet, this will likely come in v0.0.7 or at the very least in the next release version.
 
 #
 
