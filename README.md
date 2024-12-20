@@ -73,7 +73,7 @@ To get started with **PakMaster**, download the [Latest Version](https://github.
 
 ## Screenshots
 
-![PakMaster](https://raw.githubusercontent.com/AriesLR/PakMaster/main/docs/images/pakmaster-main.png)
+![PakMaster](https://raw.githubusercontent.com/AriesLR/PakMaster/refs/heads/main/docs/images/pakmaster-main.png)
  
 ## Acknowledgements
 - [repak](https://github.com/trumank/repak) - For the Unreal Engine .pak file library and CLI in rust.
