@@ -52,9 +52,11 @@ By using PakMaster you also have to abide by repak and ZenTools' licenses, not j
 
 - `.ucas` & `.utoc` support - Currently only `.pak` is supported.
 
+- Ability to choose pack version, currently PakMaster is using V11 possible options are: `V0, V1, V2, V3, V4, V5, V6, V7, V8A, V8B, V9, V10, V11`
+
 ## Getting Started
 
-To get started with **PakMaster**, download the [Latest Version](https://github.com/arieslr/Aetherium/releases/latest). Once downloaded, extract the contents of `PakMaster-x86-windows-portable.zip`. This will create a `PakMaster` folder, which you can place anywhere on your computer.
+To get started with **PakMaster**, download the [Latest Version](https://github.com/AriesLR/PakMaster/releases/latest). Once downloaded, extract the contents of `PakMaster-x86-windows-portable.zip`. This will create a `PakMaster` folder, which you can place anywhere on your computer.
 
 ### How To Use
 
