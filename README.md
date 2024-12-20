@@ -23,9 +23,12 @@
 
 ## How It Works
 
-PakMaster leverages the existing tools [repak](https://github.com/trumank/repak) and [ZenTools](https://github.com/LongerWarrior/ZenTools) to pack and unpack files.
-PakMaster does not come with either of these tools, but upon launching PakMaster the latest version supported by PakMaster is downloaded automatically.
-By using PakMaster you also have to abide by repak and ZenTools' licenses, not just PakMaster's.
+PakMaster simplifies the process of packing and unpacking files by providing a GUI on top of the existing tools [repak](https://github.com/trumank/repak) and [ZenTools](https://github.com/LongerWarrior/ZenTools). 
+While these tools handle the core functionality, PakMaster streamlines the user experience, making repetitive tasks quicker and more accessible.
+
+PakMaster does not include repak or ZenTools. 
+Instead, it automatically downloads the latest supported versions of these tools upon launch. 
+By using PakMaster, users must also adhere to the licenses of repak and ZenTools in addition to PakMaster's own.
 
 ## OS Support
 - Windows 10/11
@@ -57,7 +60,7 @@ By using PakMaster you also have to abide by repak and ZenTools' licenses, not j
 
 ## Getting Started
 
-To get started with **PakMaster**, download the [Latest Version](https://github.com/AriesLR/PakMaster/releases/latest). Once downloaded, extract the contents of `PakMaster-x86-windows-portable.zip`. This will create a `PakMaster` folder, which you can place anywhere on your computer.
+To get started with **PakMaster**, download the [Latest Release](https://github.com/AriesLR/PakMaster/releases/latest). Once downloaded, extract the contents of `PakMaster-x86-windows-portable.zip`. This will create a `PakMaster` folder, which you can place anywhere on your computer.
 
 ### How To Use
 
