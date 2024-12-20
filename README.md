@@ -1,7 +1,5 @@
 # PakMaster
 
-#
-
 #### Hopefully the ultimate solution to unreal engine pak modding (.pak/.ucas/.utoc)
 
 ## Readme under construction
