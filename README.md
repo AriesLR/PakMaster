@@ -4,18 +4,33 @@
 
 #### Hopefully the ultimate solution to unreal engine pak modding (.pak/.ucas/.utoc)
 
+## Readme under construction
+<img src="https://i.imgflip.com/1u2oyu.jpg" alt="Under Construction" width="300">
+
 ## Table of Contents
 
+- [How It Works](#how-it-works)
+- [OS Support](#os-support)
 - [Features](#features)
 - [Planned Features](#planned-features)
-- [How It Works](#how-it-works)
 - [Getting Started](#getting-started)
-    - [Installer Version](#installer-version)
-    - [Portable Version](#portable-version)
+  - [How To Use](#how-to-use)
+    - [Unpacking](#unpacking)
+    - [Repacking](#repacking)
 - [Acknowledgements](#acknowledgements)
 - [License](#license)
 - [Tips](#tips)
 - [Notes](#notes)
+
+## How It Works
+
+PakMaster leverages the existing tools [repak](https://github.com/trumank/repak) and [ZenTools](https://github.com/LongerWarrior/ZenTools) to pack and unpack files.
+PakMaster does not come with either of these tools, but upon launching PakMaster the latest version supported by PakMaster is downloaded automatically.
+By using PakMaster you also have to abide by repak and ZenTools' licenses, not just PakMaster's.
+
+## OS Support
+- Windows 10/11
+  - Older versions of windows may still work.
 
 ## Features
 
@@ -39,24 +54,22 @@
 
 - `.ucas` & `.utoc` support - Currently only `.pak` is supported.
 
-## How It Works
-
-PakMaster leverages the existing tools [repak](https://github.com/trumank/repak) and [ZenTools](https://github.com/LongerWarrior/ZenTools) to pack and unpack files.
-PakMaster does not come with either of these tools, but upon launching PakMaster the latest version supported by PakMaster is downloaded automatically.
-By using PakMaster you also have to abide by repak and ZenTools' licenses, not just PakMaster's.
-
 ## Getting Started
 
-- Section WIP
+To get started with **PakMaster**, download the [Latest Version](https://github.com/arieslr/Aetherium/releases/latest). Once downloaded, extract the contents of `PakMaster-x86-windows-portable.zip`. This will create a `PakMaster` folder, which you can place anywhere on your computer.
 
-### Installer Version
+### How To Use
 
-- Section WIP
+1. Open `PakMaster.exe`.
+2. Select your **input** (Packed) folder.
+3. Select your **output** (Unpacked) folder.
 
-### Portable Version
+#### Unpacking
+- Choose a `.pak` file from the **Input** list on the left and click **"Unpack"**.
 
-- Section WIP
-
+#### Repacking
+- Select the folder you'd like to pack from the **Output** list on the right and click **"Repack"**.
+ 
 ## Acknowledgements
 - [repak](https://github.com/trumank/repak) - For the Unreal Engine .pak file library and CLI in rust.
     - [unpak](https://github.com/bananaturtlesandwich/unpak) - (Used by repak) Original crate featuring read-only pak operations.
