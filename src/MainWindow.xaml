@@ -59,7 +59,7 @@
             <ListBox Name="InputFilesListBox" DisplayMemberPath="Key" SelectionMode="Single" Background="Transparent" Margin="5" Height="490" />
             <Button Content="Browse input folder" FontWeight="Bold" Margin="5" Click="BrowseInputFolder" />
         </StackPanel>
-        
+
         <!-- Center Column -->
         <Grid Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
             <!-- Define row structure -->
@@ -68,14 +68,11 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="175" />
             </Grid.RowDefinitions>
-
-            <!-- AES Key Input Section -->
+            
+            <!-- AES Key Flyout Control -->
             <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
-                <TextBlock Text="AES Key" Foreground="White" FontSize="20" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
-                <TextBox Name="AesKeyTextBox" Width="460" Height="30" Margin="5"/>
-                <Button Content="Save" FontSize="12" FontWeight="SemiBold" Width="180" Height="30" Margin="5" Click="SaveAesKey"/>
+                <Button Content="AES Key Settings" FontSize="12" FontWeight="SemiBold" Width="180" Height="30" Margin="5" Click="OpenAesKeysFlyout"/>
             </StackPanel>
-
 
             <!-- Pack/Unpack Buttons Section -->
             <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5">
@@ -146,5 +143,26 @@
          IsReadOnly="True" VerticalScrollBarVisibility="Auto" Height="120" Margin="5"/>
         </StackPanel>
     </Grid>
+
+    <!-- AES Key Flyout -->
+    <mah:MetroWindow.Flyouts>
+        <mah:FlyoutsControl>
+            <mah:Flyout x:Name="AesKeysFlyout" 
+                    Header="AES Key Settings" 
+                    Position="Left"
+                    Width="500" 
+                    IsOpen="{Binding IsAesKeysFlyoutOpen}">
+                <StackPanel>
+                    <!-- AES Key Input Section -->
+                    <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
+                        <TextBlock Text="AES Key" Foreground="White" FontSize="20" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
+                        <TextBox Name="AesKeyTextBox" Width="460" Height="30" Margin="5"/>
+                        <Button Content="Save" FontSize="12" FontWeight="SemiBold" Width="180" Height="30" Margin="5" Click="SaveAesKey"/>
+                    </StackPanel>
+                </StackPanel>
+            </mah:Flyout>
+        </mah:FlyoutsControl>
+    </mah:MetroWindow.Flyouts>
+
 
 </mah:MetroWindow>

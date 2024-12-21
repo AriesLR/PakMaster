@@ -1,6 +1,7 @@
 ﻿using MahApps.Metro.Controls;
 using Microsoft.Win32;
 using PakMaster.Resources.Functions.Services;
+using PakMaster.Resources.ViewModels;
 using System.Diagnostics;
 using System.IO;
 using System.Text;
@@ -19,6 +20,7 @@ namespace PakMaster
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = new MainWindowViewModel();
             _configService = new ConfigService();
             LoadAesKey();
         }
@@ -358,6 +360,15 @@ namespace PakMaster
                     .ToList();
 
                 OutputFilesListBox.ItemsSource = subdirectories;
+            }
+        }
+
+        // Open AesKeys Flyout (Settings/Config)
+        private void OpenAesKeysFlyout(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is MainWindowViewModel viewModel)
+            {
+                viewModel.OpenAesKeysFlyout();
             }
         }
     }
