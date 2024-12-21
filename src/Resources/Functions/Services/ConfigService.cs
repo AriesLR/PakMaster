@@ -24,7 +24,7 @@ namespace PakMaster.Resources.Functions.Services
             _configFilePath = Path.Combine(configsDirectory, configFileName);
         }
 
-        // Method to check if the config exists and create it if not
+        // Check if config exists, if not, create a config file
         public void EnsureConfigExists()
         {
             if (!File.Exists(_configFilePath))
@@ -33,7 +33,7 @@ namespace PakMaster.Resources.Functions.Services
             }
         }
 
-        // Method to load configuration
+        // Load Config
         public T LoadConfig<T>() where T : new()
         {
             try
@@ -43,12 +43,12 @@ namespace PakMaster.Resources.Functions.Services
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"Error loading config: {ex.Message}");
+                Debug.WriteLine($"[DEBUG]: Error loading config: {ex.Message}");
                 return new T(); // Return default config on error
             }
         }
 
-        // Method to save configuration
+        // Save Config
         public void SaveConfig<T>(T config)
         {
             try
@@ -58,21 +58,21 @@ namespace PakMaster.Resources.Functions.Services
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"Error saving config: {ex.Message}");
+                Debug.WriteLine($"[DEBUG]: Error saving config: {ex.Message}");
             }
         }
 
-        // Method to create a default config file
+        // Create Default Config
         private void CreateDefaultConfig()
         {
             try
             {
-                var defaultConfig = new { AesKey = "" }; // Define default config structure
+                var defaultConfig = new { AesKey = "" };
                 SaveConfig(defaultConfig);
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"Error creating default config: {ex.Message}");
+                Debug.WriteLine($"[DEBUG]: Error creating default config: {ex.Message}");
             }
         }
     }

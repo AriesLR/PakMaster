@@ -17,7 +17,7 @@
 
     <mah:MetroWindow.LeftWindowCommands>
         <mah:WindowCommands>
-            <Button Click="LaunchBrowserGitHubPakMaster" ToolTip="Open up the GitHub site">
+            <Button Click="LaunchBrowserGitHubPakMaster" ToolTip="Open up the PakMaster GitHub repo">
                 <iconPacks:PackIconModern Width="22" Height="22" Kind="SocialGithubOctocat" />
             </Button>
         </mah:WindowCommands>

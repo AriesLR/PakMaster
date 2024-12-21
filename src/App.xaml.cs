@@ -21,7 +21,7 @@ namespace PakMaster
             }
             else
             {
-                Debug.WriteLine("repak.exe already exists.");
+                Debug.WriteLine("[DEBUG]: repak.exe already exists.");
             }
 
             // Check if zentools.exe exists in bin/zentools
@@ -31,7 +31,7 @@ namespace PakMaster
             }
             else
             {
-                Debug.WriteLine("ZenTools.exe already exists.");
+                Debug.WriteLine("[DEBUG]: ZenTools.exe already exists.");
             }
         }
     }

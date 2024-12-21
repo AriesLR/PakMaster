@@ -44,11 +44,11 @@ namespace PakMaster.Resources.Functions.Services
                     {
                         ZipFile.ExtractToDirectory(tempZipFilePath, targetFolderPath);
                         File.Delete(tempZipFilePath);
-                        Debug.WriteLine($"Zip file extracted to: {targetFolderPath}");
+                        Debug.WriteLine($"[DEBUG]: Zip file extracted to: {targetFolderPath}");
                     }
                     else
                     {
-                        Debug.WriteLine("Error: Downloaded zip file not found.");
+                        Debug.WriteLine("[DEBUG]: Error: Downloaded zip file not found.");
                     }
                 }
                 else
@@ -62,12 +62,12 @@ namespace PakMaster.Resources.Functions.Services
                         await File.WriteAllBytesAsync(targetFilePath, fileBytes);
                     }
 
-                    Debug.WriteLine($"File downloaded to: {targetFilePath}");
+                    Debug.WriteLine($"[DEBUG]: File downloaded to: {targetFilePath}");
                 }
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"An error occurred while downloading the file: {ex.Message}");
+                Debug.WriteLine($"[DEBUG]: An error occurred while downloading the file: {ex.Message}");
             }
         }
     }
