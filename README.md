@@ -58,6 +58,8 @@ By using PakMaster, users must also adhere to the licenses of repak and ZenTools
 
 - Ability to choose pak version, currently PakMaster is using V11, possible options are: `V0, V1, V2, V3, V4, V5, V6, V7, V8A, V8B, V9, V10, V11`
 
+- Load Order Editor - if your input folder is set to something like a game's mod folder you could easily modify load orders via PakMaster.
+
 ## Getting Started
 
 To get started with **PakMaster**, download the [Latest Release](https://github.com/AriesLR/PakMaster/releases/latest). Once downloaded, extract the contents of `PakMaster-x86-windows-portable.zip`. This will create a `PakMaster` folder, which you can place anywhere on your computer.
