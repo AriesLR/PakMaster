@@ -56,7 +56,7 @@ By using PakMaster, users must also adhere to the licenses of repak and ZenTools
 
 - `.ucas` & `.utoc` support - Currently only `.pak` is supported.
 
-- Ability to choose pack version, currently PakMaster is using V11, possible options are: `V0, V1, V2, V3, V4, V5, V6, V7, V8A, V8B, V9, V10, V11`
+- Ability to choose pak version, currently PakMaster is using V11, possible options are: `V0, V1, V2, V3, V4, V5, V6, V7, V8A, V8B, V9, V10, V11`
 
 ## Getting Started
 
