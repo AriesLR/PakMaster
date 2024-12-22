@@ -37,6 +37,10 @@ namespace PakMaster
             await UpdateService.CheckJsonForUpdates("https://raw.githubusercontent.com/AriesLR/PakMaster/refs/heads/main/docs/version/update.json");
         }
 
+        /////////////////////
+        // AES KEY SECTION //
+        /////////////////////
+
         // Load AES Key
         private void LoadAesKeys()
         {
@@ -63,8 +67,6 @@ namespace PakMaster
                 MessageBox.Show($"Error loading config: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-
-
 
         // Save Repak AES Key
         private void SaveRepakConfig(object sender, RoutedEventArgs e)
@@ -100,7 +102,9 @@ namespace PakMaster
 
 
 
-
+        ///////////////////
+        // REPAK SECTION //
+        ///////////////////
 
         // Start Unpack with Repak (.pak)
         private async Task StartRepakUnpackAsync()
@@ -205,6 +209,10 @@ namespace PakMaster
             });
         }
 
+        //////////////////////
+        // ZENTOOLS SECTION //
+        //////////////////////
+
         // Start Unpack with ZenTools (.ucas/.utoc)
         private async Task StartZenToolsUnpackAsync()
         {
@@ -251,6 +259,10 @@ namespace PakMaster
             }
         }
 
+        ////////////////////////////
+        // FOLDER BROWSER SECTION //
+        ////////////////////////////
+
         // Browse output folder and populate OutputFilesListBox
         private void BrowseOutputFolder(object sender, RoutedEventArgs e)
         {
@@ -282,6 +294,10 @@ namespace PakMaster
                 }
             }
         }
+
+        //////////////////////
+        // RUN TOOL SECTION //
+        //////////////////////
 
         // Run the tool and capture output asynchronously
         private async Task RunToolAsync(string toolFolderName, string executableName, string arguments, Action<string> outputCallback)
@@ -337,6 +353,10 @@ namespace PakMaster
                 MessageBox.Show($"Error running command: {ex.Message}");
             }
         }
+
+        ///////////////////////
+        // UI METHOD SECTION //
+        ///////////////////////
 
         // Toggle Switch Event Handler
         /*
