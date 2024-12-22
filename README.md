@@ -68,7 +68,7 @@ By using PakMaster, users must also adhere to the licenses of Repak and ZenTools
 
 ## Planned Features
 
-- `.ucas` & `.utoc` packing, likely via [UnrealReZen](https://github.com/rm-NoobInCoding/UnrealReZen) - Currently only unpacking is supported.
+- `.ucas` & `.utoc` packing - Currently only unpacking is supported.
 
 - Ability to choose pak version, currently PakMaster is using V11, possible options are: `V0, V1, V2, V3, V4, V5, V6, V7, V8A, V8B, V9, V10, V11`
 
