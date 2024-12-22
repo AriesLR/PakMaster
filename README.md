@@ -6,7 +6,8 @@
 
 - [How It Works](#how-it-works)
   - [Tools Used](#tools-used)
-- [OS Support](#os-support)
+- [Requirements](#requirements)
+  - [OS Support](#os-support)
 - [Features](#features)
 - [Planned Features](#planned-features)
 - [Known Issues](#known-issues)
@@ -39,7 +40,13 @@ By using PakMaster, users must also adhere to the licenses of Repak and ZenTools
 
 **Repacking (.ucas/.utoc)** - Currently Unsupported
 
-## OS Support
+## Requirements
+
+- [.NET 8.0 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
+  - This is probably already installed on your system.
+
+### OS Support
+
 - Windows 10/11
   - Older versions of windows may still work.
 
