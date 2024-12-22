@@ -2,9 +2,6 @@
 
 #### Hopefully the ultimate solution to Unreal Engine 5 modding (.pak/.ucas/.utoc)
 
-## Readme under construction
-<img src="https://i.imgflip.com/1u2oyu.jpg" alt="Under Construction" width="300">
-
 ## Table of Contents
 
 - [How It Works](#how-it-works)
@@ -137,6 +134,10 @@ To set your AES Key, open the AES Key Settings and set your key in the "Repak AE
 
 ## Issues
 If any issues do happen, PLEASE report them here first. It is very likely an issue on my part and if it is not I'll relay the information to the authors of the responsible dependency. Don't bother other authors about PakMaster as I am entirely responsible for it. If you are 100% sure that it's an issue with ZenTools or Repak then you can create an issue on their repos, but if you are not sure about it always report it to me.
+
+#
+
+<img src="https://i.imgflip.com/1u2oyu.jpg" alt="I like this doge" width="100">
 
 #
 
