@@ -12,7 +12,8 @@ namespace PakMaster
         {
             // Initialize ConfigService and ensure the config file exists
             _configService = new ConfigService();
-            _configService.EnsureConfigExists();
+            _configService.EnsureRepakConfigExists();
+            _configService.EnsureZenToolsConfigExists();
 
             // Check if repak.exe exists in bin/repak
             if (!DependenciesService.CheckIfDependencyExists("repak", "repak.exe"))

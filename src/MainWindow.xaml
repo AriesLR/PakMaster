@@ -150,19 +150,37 @@
             <mah:Flyout x:Name="AesKeysFlyout" 
                     Header="AES Key Settings" 
                     Position="Left"
-                    Width="500" 
+                    Width="500"
                     IsOpen="{Binding IsAesKeysFlyoutOpen}">
-                <StackPanel>
-                    <!-- AES Key Input Section -->
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="250"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="250"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Repak AES Key Input Section -->
                     <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
-                        <TextBlock Text="AES Key" Foreground="White" FontSize="20" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
+                        <TextBlock Text="Repak AES Key" Foreground="White" FontSize="20" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
                         <TextBox Name="AesKeyTextBox" Width="460" Height="30" Margin="5"/>
-                        <Button Content="Save" FontSize="12" FontWeight="SemiBold" Width="180" Height="30" Margin="5" Click="SaveAesKey"/>
+                        <Button Content="Save" FontSize="12" FontWeight="SemiBold" Width="180" Height="30" Margin="5" Click="SaveRepakConfig"/>
                     </StackPanel>
-                </StackPanel>
+
+                    <!-- Empty Row (Filler) -->
+                    <StackPanel Grid.Row="1" Visibility="Collapsed"/>
+
+                    <!-- ZenTools AES Key Input Section -->
+                    <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
+                        <TextBlock Text="ZenTools AES Key" Foreground="White" FontSize="20" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
+                        <TextBlock Text="GUID" Foreground="White" FontSize="12" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
+                        <TextBox Name="ZenToolsKeyGuidTextBox" Width="460" Height="30" Margin="5"/>
+                        <TextBlock Text="HEX" Foreground="White" FontSize="12" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
+                        <TextBox Name="ZenToolsKeyHexTextBox" Width="460" Height="30" Margin="5"/>
+                        <Button Content="Save" FontSize="12" FontWeight="SemiBold" Width="180" Height="30" Margin="5" Click="SaveZenToolsConfig"/>
+                    </StackPanel>
+                </Grid>
             </mah:Flyout>
         </mah:FlyoutsControl>
     </mah:MetroWindow.Flyouts>
-
-
 </mah:MetroWindow>

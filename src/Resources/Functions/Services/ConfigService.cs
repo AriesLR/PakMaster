@@ -6,9 +6,10 @@ namespace PakMaster.Resources.Functions.Services
 {
     public class ConfigService
     {
-        private readonly string _configFilePath;
+        private readonly string _repakConfigFilePath;
+        private readonly string _zenToolsConfigFilePath;
 
-        public ConfigService(string configFileName = "config.json")
+        public ConfigService()
         {
             // Get the path of the 'configs' folder next to the app
             string appDirectory = AppDomain.CurrentDomain.BaseDirectory;
@@ -20,59 +21,126 @@ namespace PakMaster.Resources.Functions.Services
                 Directory.CreateDirectory(configsDirectory);
             }
 
-            // Define the full path of the config file
-            _configFilePath = Path.Combine(configsDirectory, configFileName);
+            // Define the full paths of the config files
+            _repakConfigFilePath = Path.Combine(configsDirectory, "repak-aeskey.json");
+            _zenToolsConfigFilePath = Path.Combine(configsDirectory, "zentools-aeskey.json");
         }
 
-        // Check if config exists, if not, create a config file
-        public void EnsureConfigExists()
+        // Ensure Repak Config Exists
+        public void EnsureRepakConfigExists()
         {
-            if (!File.Exists(_configFilePath))
+            if (!File.Exists(_repakConfigFilePath))
             {
-                CreateDefaultConfig();
+                CreateDefaultRepakConfig();
             }
         }
 
-        // Load Config
-        public T LoadConfig<T>() where T : new()
+        // Load Repak Config
+        public T LoadRepakConfig<T>() where T : new()
+        {
+            return LoadConfig<T>(_repakConfigFilePath);
+        }
+
+        // Save Repak Config
+        public void SaveRepakConfig<T>(T config)
+        {
+            SaveConfig(_repakConfigFilePath, config);
+        }
+
+        // Create Default Repak Config
+        private void CreateDefaultRepakConfig()
+        {
+            var defaultConfig = new { AesKey = "" };
+            SaveRepakConfig(defaultConfig);
+
+            Debug.WriteLine("[DEBUG]: Default repak config created.");
+        }
+
+        // Ensure ZenTools Config Exists
+        public void EnsureZenToolsConfigExists()
+        {
+            if (!File.Exists(_zenToolsConfigFilePath))
+            {
+                CreateDefaultZenToolsConfig();
+            }
+        }
+
+        // Save ZenTools Config
+        public void SaveZenToolsConfig(string guid, string aesKey)
         {
             try
             {
-                string json = File.ReadAllText(_configFilePath);
-                return JsonConvert.DeserializeObject<T>(json);
+                var zenToolsConfig = new Dictionary<string, string>
+        {
+            { guid, aesKey }
+        };
+
+                string json = JsonConvert.SerializeObject(zenToolsConfig, Formatting.Indented);
+                File.WriteAllText(_zenToolsConfigFilePath, json);
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"[DEBUG]: Error loading config: {ex.Message}");
-                return new T(); // Return default config on error
+                Debug.WriteLine($"[DEBUG]: Error saving ZenTools config: {ex.Message}");
+            }
+        }
+
+        // Load ZenTools Config
+        public T LoadZenToolsConfig<T>() where T : new()
+        {
+            return LoadConfig<T>(_zenToolsConfigFilePath);
+        }
+
+        // Create Default ZenTools Config
+        private void CreateDefaultZenToolsConfig()
+        {
+            string defaultGuid = "00000000-0000-0000-0000-000000000000";
+            string defaultAesKey = string.Empty;
+
+            var defaultConfig = new Dictionary<string, string>
+    {
+        { defaultGuid, defaultAesKey }
+    };
+
+            SaveConfig(_zenToolsConfigFilePath, defaultConfig);
+
+            Debug.WriteLine("[DEBUG]: Default ZenTools config created.");
+        }
+
+
+        // Load Config
+        private T LoadConfig<T>(string filePath) where T : new()
+        {
+            try
+            {
+                if (File.Exists(filePath))
+                {
+                    string json = File.ReadAllText(filePath);
+                    return JsonConvert.DeserializeObject<T>(json);
+                }
+                else
+                {
+                    Debug.WriteLine($"[DEBUG]: Config file not found at {filePath}. Creating a default one.");
+                    return new T();
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"[DEBUG]: Error loading config from {filePath}: {ex.Message}");
+                return new T();
             }
         }
 
         // Save Config
-        public void SaveConfig<T>(T config)
+        private void SaveConfig<T>(string filePath, T config)
         {
             try
             {
                 string json = JsonConvert.SerializeObject(config, Formatting.Indented);
-                File.WriteAllText(_configFilePath, json);
+                File.WriteAllText(filePath, json);
             }
             catch (Exception ex)
             {
-                Debug.WriteLine($"[DEBUG]: Error saving config: {ex.Message}");
-            }
-        }
-
-        // Create Default Config
-        private void CreateDefaultConfig()
-        {
-            try
-            {
-                var defaultConfig = new { AesKey = "" };
-                SaveConfig(defaultConfig);
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine($"[DEBUG]: Error creating default config: {ex.Message}");
+                Debug.WriteLine($"[DEBUG]: Error saving config to {filePath}: {ex.Message}");
             }
         }
     }

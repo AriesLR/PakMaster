@@ -22,7 +22,7 @@ namespace PakMaster
             InitializeComponent();
             DataContext = new MainWindowViewModel();
             _configService = new ConfigService();
-            LoadAesKey();
+            LoadAesKeys();
         }
 
         // Open PakMaster's GitHub Repo in the user's default browser 
@@ -38,13 +38,25 @@ namespace PakMaster
         }
 
         // Load AES Key
-        private void LoadAesKey()
+        private void LoadAesKeys()
         {
             try
             {
-                var config = _configService.LoadConfig<dynamic>();
-                string aesKey = config?.AesKey ?? string.Empty;
+                // Load the Repak config (assuming it's a simple config)
+                var repakConfig = _configService.LoadRepakConfig<dynamic>();
+                string aesKey = repakConfig?.AesKey ?? string.Empty;
+
+                // Load the ZenTools config
+                var zentoolsConfig = _configService.LoadZenToolsConfig<Dictionary<string, string>>();
+
+                // Extract the guid and aesKey from the ZenTools config
+                string zenToolsKeyGuid = zentoolsConfig?.Keys.FirstOrDefault() ?? string.Empty; // Guid stored as a key to ensure it's the first value
+                string zenToolsKeyHex = zentoolsConfig?.Values.FirstOrDefault() ?? string.Empty; // Hex stored as a regular value
+
+                // Update the UI
                 AesKeyTextBox.Text = aesKey;
+                ZenToolsKeyGuidTextBox.Text = zenToolsKeyGuid;
+                ZenToolsKeyHexTextBox.Text = zenToolsKeyHex;
             }
             catch (Exception ex)
             {
@@ -52,23 +64,49 @@ namespace PakMaster
             }
         }
 
-        // Save AES Key
-        private void SaveAesKey(object sender, RoutedEventArgs e)
+
+
+        // Save Repak AES Key
+        private void SaveRepakConfig(object sender, RoutedEventArgs e)
         {
             string aesKey = AesKeyTextBox.Text.Trim();
 
             var config = new { AesKey = aesKey };
 
-            _configService.SaveConfig(config);
+            _configService.SaveRepakConfig(config);
 
-            MessageBox.Show("AES Key saved successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+            MessageBox.Show("Repak configuration saved successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
         }
+
+        // Save ZenTools AES Key
+        private void SaveZenToolsConfig(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // Get the AES key and GUID from the UI text boxes
+                string zenToolsKeyGuid = ZenToolsKeyGuidTextBox.Text.Trim();
+                string zenToolsKeyHex = ZenToolsKeyHexTextBox.Text.Trim();
+
+                // Save the config to file (pass guid and aesKey separately)
+                _configService.SaveZenToolsConfig(zenToolsKeyGuid, zenToolsKeyHex);
+
+                MessageBox.Show("ZenTools configuration saved successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error saving ZenTools config: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+
+
+
 
         // Start Unpack with Repak (.pak)
         private async Task StartRepakUnpackAsync()
         {
             // Load the AES Key from the config
-            var config = _configService.LoadConfig<dynamic>();
+            var config = _configService.LoadRepakConfig<dynamic>();
             string aesKey = config?.AesKey ?? string.Empty;
 
             if (string.IsNullOrEmpty(aesKey))
@@ -166,6 +204,20 @@ namespace PakMaster
                 RepopulateOutputListBox();
             });
         }
+
+        // Start Unpack with ZenTools (.ucas/.utoc)
+        private async Task StartZenToolsUnpackAsync()
+        {
+            MessageBox.Show("ZenTools unpacking is not yet supported.");
+        }
+
+        // Start Repack with ZenTools (.ucas/.utoc)
+        private async Task StartZenToolsRepackAsync()
+        {
+            MessageBox.Show("ZenTools repacking is not yet supported.");
+        }
+
+
 
         // Browse input folder and populate InputFilesListBox
         private void BrowseInputFolder(object sender, RoutedEventArgs e)
@@ -308,8 +360,7 @@ namespace PakMaster
         {
             if (isZenToolsFormat)
             {
-                MessageBox.Show(" Currently Unsupported");
-                // await StartZenToolsRepackAsync();
+                await StartZenToolsRepackAsync();
             }
             else
             {
@@ -321,14 +372,14 @@ namespace PakMaster
         {
             if (isZenToolsFormat)
             {
-                MessageBox.Show(" Currently Unsupported");
-                // await StartZenToolsUnpackAsync();
+                await StartZenToolsUnpackAsync();
             }
             else
             {
                 await StartRepakUnpackAsync();
             }
         }
+
 
         private void UpdateCommandOutput(string output)
         {
@@ -369,6 +420,7 @@ namespace PakMaster
             if (DataContext is MainWindowViewModel viewModel)
             {
                 viewModel.OpenAesKeysFlyout();
+                LoadAesKeys(); // Load again here in case user changes the values via the config directly.
             }
         }
     }
