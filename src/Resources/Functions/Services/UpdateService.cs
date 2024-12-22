@@ -16,25 +16,52 @@ namespace PakMaster.Resources.Functions.Services
                 {
                     string response = await client.GetStringAsync(jsonUrl);
                     var updateInfo = JsonConvert.DeserializeObject<UpdateInfo>(response);
-                    if (updateInfo.latestVersionPakMaster != currentVersionPakMaster)
+
+                    if (updateInfo == null)
                     {
-                        // New version available, notify the user
+                        MessageBox.Show("Failed to retrieve update information.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                        return;
+                    }
+
+                    var latestVersion = updateInfo.latestVersionPakMaster;
+                    var currentVersion = currentVersionPakMaster;
+
+                    int versionComparison = CompareVersions(currentVersion, latestVersion);
+
+                    if (versionComparison < 0)
+                    {
+                        // New version available
                         var result = MessageBox.Show(
-                            $"A new version is available: {updateInfo.latestVersionPakMaster}\n\nLatest Version: {updateInfo.latestVersionPakMaster}\nYour Version: {currentVersionPakMaster}\nWould you like to download the new version?",
+                            $"A new version is available: {latestVersion}\n\nLatest Version: {latestVersion}\nYour Version: {currentVersion}\n\nWould you like to download the new version?",
                             "Check for updates",
                             MessageBoxButton.YesNo,
                             MessageBoxImage.Information
                         );
 
-                        // Check user's choice
                         if (result == MessageBoxResult.Yes)
                         {
-                            UrlService.OpenUrl(updateInfo.downloadUrlPakMaster); // Use the UrlService to open the update link
+                            UrlService.OpenUrl(updateInfo.downloadUrlPakMaster);
                         }
+                    }
+                    else if (versionComparison > 0)
+                    {
+                        // Easter egg (this shouldn't happen, but I'm dumb)
+                        MessageBox.Show(
+                            $"You're a wizard, harry!\n\nLatest Version: {latestVersion}\nYour Version: {currentVersion}\n\nTell AriesLR he's a goofball and forgot to update the version number.",
+                            "Check for updates",
+                            MessageBoxButton.OK,
+                            MessageBoxImage.Information
+                        );
                     }
                     else
                     {
-                        MessageBox.Show($"You are already using the latest version.\n\nLatest Version: {updateInfo.latestVersionPakMaster}\nYour Version: {currentVersionPakMaster}", "Check for updates", MessageBoxButton.OK, MessageBoxImage.Information);
+                        // Up to date
+                        MessageBox.Show(
+                            $"You are already using the latest version.\n\nLatest Version: {latestVersion}\nYour Version: {currentVersion}",
+                            "Check for updates",
+                            MessageBoxButton.OK,
+                            MessageBoxImage.Information
+                        );
                     }
                 }
             }
@@ -43,6 +70,26 @@ namespace PakMaster.Resources.Functions.Services
                 MessageBox.Show($"Failed to check for updates: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
+
+        private static int CompareVersions(string currentVersion, string latestVersion)
+        {
+            var currentParts = currentVersion.Split('.');
+            var latestParts = latestVersion.Split('.');
+
+            int maxLength = Math.Max(currentParts.Length, latestParts.Length);
+
+            for (int i = 0; i < maxLength; i++)
+            {
+                int currentPart = i < currentParts.Length ? int.Parse(currentParts[i]) : 0;
+                int latestPart = i < latestParts.Length ? int.Parse(latestParts[i]) : 0;
+
+                if (currentPart < latestPart) return -1;
+                if (currentPart > latestPart) return 1;
+            }
+
+            return 0;
+        }
+
 
         public class UpdateInfo
         {

@@ -81,11 +81,9 @@ namespace PakMaster
         {
             try
             {
-                // Get the AES key and GUID from the UI text boxes
                 string zenToolsKeyGuid = ZenToolsKeyGuidTextBox.Text.Trim();
                 string zenToolsKeyHex = ZenToolsKeyHexTextBox.Text.Trim();
 
-                // Save the config to file (pass guid and aesKey separately)
                 _configService.SaveZenToolsConfig(zenToolsKeyGuid, zenToolsKeyHex);
 
                 MessageBox.Show("ZenTools configuration saved successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
