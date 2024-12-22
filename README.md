@@ -5,7 +5,6 @@
 ## Table of Contents
 
 - [How It Works](#how-it-works)
-  - [Tools Used](#tools-used)
 - [Requirements](#requirements)
   - [OS Support](#os-support)
 - [Features](#features)
@@ -17,6 +16,7 @@
     - [Unpacking](#unpacking)
     - [Repacking](#repacking)
 - [Screenshots](#screenshots)
+- [Tools Used](#tools-used)
 - [Acknowledgements](#acknowledgements)
 - [License](#license)
 - [Tips](#tips)
@@ -29,16 +29,6 @@ While these tools handle the core functionality, PakMaster streamlines the user 
 PakMaster does not include Repak or ZenTools. 
 Instead, it automatically downloads the latest supported versions of these tools upon launch. 
 By using PakMaster, users must also adhere to the licenses of Repak and ZenTools in addition to PakMaster's own.
-
-### Tools Used
-
-**Unpacking (.pak)** - [Repak](https://github.com/trumank/repak)
-
-**Repacking (.pak)** - [Repak](https://github.com/trumank/repak)
-
-**Unpacking (.ucas/.utoc)** - [ZenTools](https://github.com/LongerWarrior/ZenTools)
-
-**Repacking (.ucas/.utoc)** - Currently Unsupported
 
 ## Requirements
 
@@ -81,7 +71,7 @@ By using PakMaster, users must also adhere to the licenses of Repak and ZenTools
 
 ## Known Issues
 
-- Packing IoStore Assets is not supported yet.
+- Packing IoStore Files (.ucas/.utoc) is not supported yet.
 
 ## Getting Started
 
@@ -124,6 +114,16 @@ To set your AES Key, open the AES Key Settings and set your key in the "Repak AE
 ![PakMaster Main Window](https://raw.githubusercontent.com/AriesLR/PakMaster/refs/heads/main/docs/images/pakmaster-main.png)
 
 ![PakMaster AES Key Settings](https://raw.githubusercontent.com/AriesLR/PakMaster/refs/heads/main/docs/images/pakmaster-aeskeys.png)
+
+## Tools Used
+
+**Unpacking (.pak)** - [Repak](https://github.com/trumank/repak)
+
+**Repacking (.pak)** - [Repak](https://github.com/trumank/repak)
+
+**Unpacking (.ucas/.utoc)** - [ZenTools](https://github.com/LongerWarrior/ZenTools)
+
+**Repacking (.ucas/.utoc)** - Currently Unsupported
  
 ## Acknowledgements
 - [Repak](https://github.com/trumank/repak) - For the Unreal Engine .pak file library and CLI in rust.
