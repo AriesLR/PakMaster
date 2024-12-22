@@ -13,7 +13,7 @@ namespace PakMaster
     {
         private ConfigService _configService;
 
-        private bool isZenToolsFormat = false;
+        private bool isIoStoreMode = false;
         private string? inputFolderPath;
         private string? outputFolderPath;
 
@@ -46,18 +46,14 @@ namespace PakMaster
         {
             try
             {
-                // Load the Repak config (assuming it's a simple config)
                 var repakConfig = _configService.LoadRepakConfig<dynamic>();
                 string aesKey = repakConfig?.AesKey ?? string.Empty;
 
-                // Load the ZenTools config
-                var zentoolsConfig = _configService.LoadZenToolsConfig<Dictionary<string, string>>();
+                var zentoolsConfig = _configService.LoadZenToolsConfig();
 
-                // Extract the guid and aesKey from the ZenTools config
                 string zenToolsKeyGuid = zentoolsConfig?.Keys.FirstOrDefault() ?? string.Empty; // Guid stored as a key to ensure it's the first value
                 string zenToolsKeyHex = zentoolsConfig?.Values.FirstOrDefault() ?? string.Empty; // Hex stored as a regular value
 
-                // Update the UI
                 AesKeyTextBox.Text = aesKey;
                 ZenToolsKeyGuidTextBox.Text = zenToolsKeyGuid;
                 ZenToolsKeyHexTextBox.Text = zenToolsKeyHex;
@@ -159,7 +155,6 @@ namespace PakMaster
             });
         }
 
-
         // Start Repack with Repak (.pak)
         private async Task StartRepakRepackAsync()
         {
@@ -216,16 +211,78 @@ namespace PakMaster
         // Start Unpack with ZenTools (.ucas/.utoc)
         private async Task StartZenToolsUnpackAsync()
         {
-            MessageBox.Show("ZenTools unpacking is not yet supported.");
+            var zentoolsConfig = _configService.LoadZenToolsConfig();
+
+            if (zentoolsConfig == null || zentoolsConfig.Count == 0)
+            {
+                MessageBox.Show("ZenTools AES Key configuration is missing or empty.");
+                return;
+            }
+
+            string zenToolsKeyGuid = zentoolsConfig.Keys.FirstOrDefault() ?? string.Empty;
+            string zenToolsKeyHex = zentoolsConfig.Values.FirstOrDefault() ?? string.Empty;
+
+            if (string.IsNullOrEmpty(zenToolsKeyGuid) || string.IsNullOrEmpty(zenToolsKeyHex))
+            {
+                MessageBox.Show("ZenTools AES Key (GUID) not found in the config.\n\nThe GUID cannot be left blank.\n\nDefault GUID: 00000000-0000-0000-0000-000000000000");
+                return;
+            }
+            else
+            {
+                Debug.WriteLine($"[DEBUG]: ZenTools AES Key Found:\n[DEBUG]: GUID: {zenToolsKeyGuid}\n[DEBUG]: Hex: {zenToolsKeyHex}");
+            }
+
+            if (string.IsNullOrEmpty(inputFolderPath))
+            {
+                MessageBox.Show("Pleaase select an input folder.");
+            }
+
+            if (string.IsNullOrEmpty(outputFolderPath))
+            {
+                MessageBox.Show("Please select an output folder.");
+                return;
+            }
+
+            string inputPath = inputFolderPath;
+
+            string uniqueGuid = Guid.NewGuid().ToString("N").Substring(0, 8);
+            string outputPath = Path.Combine(outputFolderPath, $"PakMaster_IoStore_{uniqueGuid}");
+
+
+
+            string encryptionKeysPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "configs", "zentools-aeskey.json");
+            string arguments;
+
+            if (!string.IsNullOrEmpty(zenToolsKeyHex))
+            {
+                arguments = $"ExtractPackages \"{inputPath}\" \"{outputPath}\" -EncryptionKeys=\"{encryptionKeysPath}\" -ZenPackageVersion=Initial";
+            }
+            else
+            {
+                arguments = $"ExtractPackages \"{inputPath}\" \"{outputPath}\" -ZenPackageVersion=Initial";
+            }
+
+            await RunToolAsync("zentools", "zentools.exe", arguments, output =>
+            {
+                UpdateCommandOutput(output);
+                RepopulateInputListBox();
+                RepopulateOutputListBox();
+            });
         }
 
-        // Start Repack with ZenTools (.ucas/.utoc)
-        private async Task StartZenToolsRepackAsync()
+        /////////////////////////
+        // UNREALREZEN SECTION //
+        /////////////////////////
+
+        // Start Repack with UnrealReZen (.ucas/.utoc)
+        private async Task StartUnrealReZenRepackAsync()
         {
-            MessageBox.Show("ZenTools repacking is not yet supported.");
+            MessageBox.Show("IoStore file repacking is not supported yet.");
         }
 
-
+        ////////////////////////////
+        // FOLDER BROWSER SECTION //
+        ////////////////////////////
 
         // Browse input folder and populate InputFilesListBox
         private void BrowseInputFolder(object sender, RoutedEventArgs e)
@@ -244,24 +301,41 @@ namespace PakMaster
                 openFileDialog.InitialDirectory = inputFolderPath;
             }
 
+            if (isIoStoreMode)
+            {
+                openFileDialog.Filter = "IoStore Files (*.ucas, *.utoc)|*.ucas;*.utoc";
+            }
+            else
+            {
+                openFileDialog.Filter = "Pak Files (*.pak)|*.pak";
+            }
+
             if (openFileDialog.ShowDialog() == true)
             {
                 inputFolderPath = Path.GetDirectoryName(openFileDialog.FileName);
 
                 if (!string.IsNullOrEmpty(inputFolderPath))
                 {
-                    List<KeyValuePair<string, string>> files = Directory.GetFiles(inputFolderPath, "*.pak")
-                        .Select(filePath => new KeyValuePair<string, string>(Path.GetFileName(filePath), filePath))
-                        .ToList();
+                    List<KeyValuePair<string, string>> files;
+
+                    if (isIoStoreMode)
+                    {
+                        files = Directory.GetFiles(inputFolderPath, "*.ucas")
+                            .Concat(Directory.GetFiles(inputFolderPath, "*.utoc"))
+                            .Select(filePath => new KeyValuePair<string, string>(Path.GetFileName(filePath), filePath))
+                            .ToList();
+                    }
+                    else
+                    {
+                        files = Directory.GetFiles(inputFolderPath, "*.pak")
+                            .Select(filePath => new KeyValuePair<string, string>(Path.GetFileName(filePath), filePath))
+                            .ToList();
+                    }
 
                     InputFilesListBox.ItemsSource = files;
                 }
             }
         }
-
-        ////////////////////////////
-        // FOLDER BROWSER SECTION //
-        ////////////////////////////
 
         // Browse output folder and populate OutputFilesListBox
         private void BrowseOutputFolder(object sender, RoutedEventArgs e)
@@ -359,38 +433,28 @@ namespace PakMaster
         ///////////////////////
 
         // Toggle Switch Event Handler
-        /*
         private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
         {
             if (FileTypeToggleSwitch.IsOn)
             {
                 // .ucas/.utoc format selected
-                isZenToolsFormat = true;
+                isIoStoreMode = true;
+                RepopulateInputListBox();
+                RepopulateOutputListBox();
             }
             else
             {
                 // .pak format selected
-                isZenToolsFormat = false;
+                isIoStoreMode = false;
+                RepopulateInputListBox();
+                RepopulateOutputListBox();
             }
         }
-        */
 
         // Event handlers for unpacking and repacking, checks if toggle is on or off
-        private async void btnRepack_Click(object sender, RoutedEventArgs e)
-        {
-            if (isZenToolsFormat)
-            {
-                await StartZenToolsRepackAsync();
-            }
-            else
-            {
-                await StartRepakRepackAsync();
-            }
-        }
-
         private async void btnUnpack_Click(object sender, RoutedEventArgs e)
         {
-            if (isZenToolsFormat)
+            if (isIoStoreMode)
             {
                 await StartZenToolsUnpackAsync();
             }
@@ -400,6 +464,17 @@ namespace PakMaster
             }
         }
 
+        private async void btnRepack_Click(object sender, RoutedEventArgs e)
+        {
+            if (isIoStoreMode)
+            {
+                await StartUnrealReZenRepackAsync();
+            }
+            else
+            {
+                await StartRepakRepackAsync();
+            }
+        }
 
         private void UpdateCommandOutput(string output)
         {
@@ -414,9 +489,21 @@ namespace PakMaster
         {
             if (!string.IsNullOrEmpty(inputFolderPath))
             {
-                List<KeyValuePair<string, string>> files = Directory.GetFiles(inputFolderPath, "*.pak")
-                    .Select(filePath => new KeyValuePair<string, string>(Path.GetFileName(filePath), filePath))
-                    .ToList();
+                List<KeyValuePair<string, string>> files = new List<KeyValuePair<string, string>>();
+
+                if (isIoStoreMode)
+                {
+                    files.AddRange(Directory.GetFiles(inputFolderPath, "*.ucas")
+                        .Select(filePath => new KeyValuePair<string, string>(Path.GetFileName(filePath), filePath)));
+
+                    files.AddRange(Directory.GetFiles(inputFolderPath, "*.utoc")
+                        .Select(filePath => new KeyValuePair<string, string>(Path.GetFileName(filePath), filePath)));
+                }
+                else
+                {
+                    files.AddRange(Directory.GetFiles(inputFolderPath, "*.pak")
+                        .Select(filePath => new KeyValuePair<string, string>(Path.GetFileName(filePath), filePath)));
+                }
 
                 InputFilesListBox.ItemsSource = files;
             }

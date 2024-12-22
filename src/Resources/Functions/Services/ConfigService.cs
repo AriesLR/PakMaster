@@ -85,9 +85,9 @@ namespace PakMaster.Resources.Functions.Services
         }
 
         // Load ZenTools Config
-        public T LoadZenToolsConfig<T>() where T : new()
+        public Dictionary<string, string> LoadZenToolsConfig()
         {
-            return LoadConfig<T>(_zenToolsConfigFilePath);
+            return LoadConfig<Dictionary<string, string>>(_zenToolsConfigFilePath);
         }
 
         // Create Default ZenTools Config

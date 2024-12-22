@@ -37,9 +37,11 @@ By using PakMaster, users must also adhere to the licenses of repak and ZenTools
 ## Features
 
 - **Pak File Operations**
-  - Ability to **pack** and **unpack** `.pak` files.
-  - Pack folders into a `.pak` file.
-  - Unpack the contents of a `.pak` file into a folder.[^1]
+  - **Unpack** the contents of a `.pak` file into a folder.[^1]
+  - **Pack** folders into a `.pak` file.
+
+- **IoStore File Unpacking**
+  - **Unpack** the contents of `.ucas` & `.utoc` files into a folder.
 
 - **AES Key Support**
   - Support for games that require an AES key to unpack files.
@@ -51,10 +53,11 @@ By using PakMaster, users must also adhere to the licenses of repak and ZenTools
 
 - **CLI Output Display**
   - Since PakMaster is reliant on CLI tools, their outputs are displayed in the GUI so users can troubleshoot issues if they arise.
+    - Please see [notes](#issues) about this.
 
 ## Planned Features
 
-- `.ucas` & `.utoc` support - Currently only `.pak` is supported.
+- `.ucas` & `.utoc` packing, likely via [UnrealReZen](https://github.com/rm-NoobInCoding/UnrealReZen) - Currently only unpacking is supported.
 
 - Ability to choose pak version, currently PakMaster is using V11, possible options are: `V0, V1, V2, V3, V4, V5, V6, V7, V8A, V8B, V9, V10, V11`
 
@@ -70,8 +73,18 @@ To get started with **PakMaster**, download the [Latest Release](https://github.
 2. Select your **input** (Packed) folder.
 3. Select your **output** (Unpacked) folder.
 
+#### AES Key
+Some games require an AES Key to unpack files, if you don't know how to find your AES Key, look into [AESDumpster](https://github.com/GHFear/AESDumpster). 
+
+If you don't require an AES Key you can ignore this section.
+
+To set your AES Key, open the AES Key Settings and set your key in the "Repak AES Key" section and in the "ZenTools AES Key" section, for ZenTools it requires a GUID:Hex format, some games you can just leave the GUID as zeros hence why PakMaster defaults to that, but the hex still needs to be set if the game requires an AES Key.
+
 #### Unpacking
-- Choose a `.pak` file from the **Input** list on the left and click **"Unpack"**.
+- **.pak**
+  - Choose a `.pak` file from the **Input** list on the left and click **"Unpack"**.
+- **.ucas/.utoc**
+  - Make sure you have an **Input** folder selected and click **Unpack**.[^2]
 
 #### Repacking
 - Select the folder you'd like to pack from the **Output** list on the right and click **"Repack"**.
@@ -97,8 +110,13 @@ To get started with **PakMaster**, download the [Latest Release](https://github.
 
 ## Notes
 
-- ZenTools is not implemented yet, this will likely come in v0.0.7 or at the very least in the next release version.
+- Packing IoStore Assets is not supported yet.
+
+## Issues
+If any issues do happen, PLEASE report them here first. It is very likely an issue on my part and if it is not I'll relay the information to the authors of the responsible dependency. Don't bother other authors about PakMaster as I am entirely responsible for it. If you are 100% sure that it's an issue with ZenTools or repak then you can create an issue on their repos, but if you are not sure about it always report it to me.
 
 #
 
 [^1]: From Repak's notes: UnrealPak includes a directory entry in the full directory index for all parent directories back to the pak root for a given file path regardless of whether those directories contain any files or just other directories. repak only includes directories that contain files. So far no functional differences have been observed as a result
+
+[^2]: If unpacking a mod or group of files only have that mod or group's files in the folder - this will unpack all IoStore assets in the folder that you selected. For example, have only ExampleMod.ucas/ExampleMod.utoc in the folder.

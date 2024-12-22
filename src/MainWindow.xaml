@@ -101,7 +101,6 @@
             </StackPanel>
 
             <!-- Repak/ZenTools Toggle -->
-            <!--
             <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5">
 
                 <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5">
@@ -125,7 +124,6 @@
                     <TextBlock Text=".ucas/.utoc" Height="25" FontSize="16" FontWeight="SemiBold" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15" Grid.Column="2" />
                 </Grid>
             </StackPanel>
-            -->
         </Grid>
 
         <!-- Output Section -->
