@@ -1,6 +1,6 @@
 # PakMaster - A GUI Wrapper for Repak and ZenTools
 
-#### Hopefully the ultimate solution to Unreal Engine 5 pak modding (.pak/.ucas/.utoc)
+#### Hopefully the ultimate solution to Unreal Engine 5 modding (.pak/.ucas/.utoc)
 
 ## Readme under construction
 <img src="https://i.imgflip.com/1u2oyu.jpg" alt="Under Construction" width="300">
