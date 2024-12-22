@@ -98,7 +98,10 @@ To set your AES Key, open the AES Key Settings and set your key in the "Repak AE
   - Make sure you have an **Input** folder selected and click **Unpack**.[^2]
 
 #### Repacking
-- Select the folder you'd like to pack from the **Output** list on the right and click **"Repack"**.
+- **.pak**
+  - Select the folder you'd like to pack from the **Output** list on the right and click **"Repack"**.
+- **.ucas/.utoc**
+  - Currently Unsupported.
 
 ## Screenshots
 
