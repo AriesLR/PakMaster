@@ -27,7 +27,8 @@ PakMaster simplifies the process of packing and unpacking files by providing a G
 While these tools handle the core functionality, PakMaster streamlines the user experience, making repetitive tasks quicker and more accessible.
 
 PakMaster does not include Repak or ZenTools. 
-Instead, it automatically downloads the latest supported versions of these tools upon launch. 
+Instead, it automatically downloads the latest supported versions of these tools upon launch. (In the next update this will prompt the user to download, I don't like the idea of it downloading without the user knowing.)
+
 By using PakMaster, users must also adhere to the licenses of Repak and ZenTools in addition to PakMaster's own.
 
 ## Requirements
