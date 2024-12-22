@@ -81,10 +81,13 @@ To get started with **PakMaster**, download the [Latest Release](https://github.
 ### How To Use
 
 1. Open `PakMaster.exe`.
+
 2. Select your **input** (Packed) folder.
+
 3. Select your **output** (Unpacked) folder.
 
 #### AES Key
+
 Some games require an AES Key to unpack files, if you don't know how to find your AES Key, look into [AESDumpster](https://github.com/GHFear/AESDumpster). 
 
 If you don't require an AES Key you can ignore this section.
@@ -92,14 +95,18 @@ If you don't require an AES Key you can ignore this section.
 To set your AES Key, open the AES Key Settings and set your key in the "Repak AES Key" section and in the "ZenTools AES Key" section, for ZenTools it requires a GUID:Hex format, some games you can just leave the GUID as zeros hence why PakMaster defaults to that, but the hex still needs to be set if the game requires an AES Key.
 
 #### Unpacking
+
 - **.pak**
   - Choose a `.pak` file from the **Input** list on the left and click **"Unpack"**.
+
 - **.ucas/.utoc**
   - Make sure you have an **Input** folder selected and click **Unpack**.[^2]
 
 #### Repacking
+
 - **.pak**
   - Select the folder you'd like to pack from the **Output** list on the right and click **"Repack"**.
+
 - **.ucas/.utoc**
   - Currently Unsupported.
 
