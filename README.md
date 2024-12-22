@@ -12,6 +12,7 @@
 - [Known Issues](#known-issues)
 - [Getting Started](#getting-started)
   - [How To Use](#how-to-use)
+    - [AES Key](#aes-key)
     - [Unpacking](#unpacking)
     - [Repacking](#repacking)
 - [Screenshots](#screenshots)
