@@ -9,6 +9,7 @@
 - [OS Support](#os-support)
 - [Features](#features)
 - [Planned Features](#planned-features)
+- [Known Issues](#known-issues)
 - [Getting Started](#getting-started)
   - [How To Use](#how-to-use)
     - [Unpacking](#unpacking)
@@ -17,7 +18,6 @@
 - [Acknowledgements](#acknowledgements)
 - [License](#license)
 - [Tips](#tips)
-- [Notes](#notes)
 
 ## How It Works
 
@@ -70,6 +70,10 @@ By using PakMaster, users must also adhere to the licenses of Repak and ZenTools
 - Ability to choose pak version, currently PakMaster is using V11, possible options are: `V0, V1, V2, V3, V4, V5, V6, V7, V8A, V8B, V9, V10, V11`
 
 - Load Order Editor - if your input folder is set to something like a game's mod folder you could easily modify load orders via PakMaster.
+
+## Known Issues
+
+- Packing IoStore Assets is not supported yet.
 
 ## Getting Started
 
@@ -127,10 +131,6 @@ To set your AES Key, open the AES Key Settings and set your key in the "Repak AE
 
 ## Tips
 [Buy Me a Coffee](https://www.buymeacoffee.com/arieslr)
-
-## Notes
-
-- Packing IoStore Assets is not supported yet.
 
 ## Issues
 If any issues do happen, PLEASE report them here first. It is very likely an issue on my part and if it is not I'll relay the information to the authors of the responsible dependency. Don't bother other authors about PakMaster as I am entirely responsible for it. If you are 100% sure that it's an issue with ZenTools or Repak then you can create an issue on their repos, but if you are not sure about it always report it to me.
