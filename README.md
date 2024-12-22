@@ -1,4 +1,4 @@
-# PakMaster
+# PakMaster - A GUI Wrapper for Repak and ZenTools
 
 #### Hopefully the ultimate solution to unreal engine pak modding (.pak/.ucas/.utoc)
 
@@ -8,6 +8,7 @@
 ## Table of Contents
 
 - [How It Works](#how-it-works)
+  - [Tools Used](#tools-used)
 - [OS Support](#os-support)
 - [Features](#features)
 - [Planned Features](#planned-features)
@@ -23,12 +24,22 @@
 
 ## How It Works
 
-PakMaster simplifies the process of packing and unpacking files by providing a GUI on top of the existing tools [repak](https://github.com/trumank/repak) and [ZenTools](https://github.com/LongerWarrior/ZenTools). 
+PakMaster simplifies the process of packing and unpacking files by providing a GUI on top of the existing tools [Repak](https://github.com/trumank/repak) and [ZenTools](https://github.com/LongerWarrior/ZenTools). 
 While these tools handle the core functionality, PakMaster streamlines the user experience, making repetitive tasks quicker and more accessible.
 
-PakMaster does not include repak or ZenTools. 
+PakMaster does not include Repak or ZenTools. 
 Instead, it automatically downloads the latest supported versions of these tools upon launch. 
-By using PakMaster, users must also adhere to the licenses of repak and ZenTools in addition to PakMaster's own.
+By using PakMaster, users must also adhere to the licenses of Repak and ZenTools in addition to PakMaster's own.
+
+### Tools Used
+
+**Unpacking (.pak)** - [Repak](https://github.com/trumank/repak)
+
+**Repacking (.pak)** - [Repak](https://github.com/trumank/repak)
+
+**Unpacking (.ucas/.utoc)** - [ZenTools](https://github.com/LongerWarrior/ZenTools)
+
+**Repacking (.ucas/.utoc)** - Currently Unsupported
 
 ## OS Support
 - Windows 10/11
@@ -96,10 +107,10 @@ To set your AES Key, open the AES Key Settings and set your key in the "Repak AE
 ![PakMaster AES Key Settings](https://raw.githubusercontent.com/AriesLR/PakMaster/refs/heads/main/docs/images/pakmaster-aeskeys.png)
  
 ## Acknowledgements
-- [repak](https://github.com/trumank/repak) - For the Unreal Engine .pak file library and CLI in rust.
-    - [unpak](https://github.com/bananaturtlesandwich/unpak) - (Used by repak) Original crate featuring read-only pak operations.
-    - [rust-u4pak](https://github.com/bananaturtlesandwich/unpak) - (Used by repak) rust-u4pak's README detailing the pak file layout.
-    - [jieyouxu](https://github.com/jieyouxu) - (Used by repak) for serialization implementation of the significantly more complex V11 index.
+- [Repak](https://github.com/trumank/repak) - For the Unreal Engine .pak file library and CLI in rust.
+    - [unpak](https://github.com/bananaturtlesandwich/unpak) - (Used by Repak) Original crate featuring read-only pak operations.
+    - [rust-u4pak](https://github.com/bananaturtlesandwich/unpak) - (Used by Repak) rust-u4pak's README detailing the pak file layout.
+    - [jieyouxu](https://github.com/jieyouxu) - (Used by Repak) for serialization implementation of the significantly more complex V11 index.
 
 - [ZenTools](https://github.com/LongerWarrior/ZenTools) - For the Tools for extracting cooked packages from the IoStore container files.
 
@@ -115,10 +126,10 @@ To set your AES Key, open the AES Key Settings and set your key in the "Repak AE
 - Packing IoStore Assets is not supported yet.
 
 ## Issues
-If any issues do happen, PLEASE report them here first. It is very likely an issue on my part and if it is not I'll relay the information to the authors of the responsible dependency. Don't bother other authors about PakMaster as I am entirely responsible for it. If you are 100% sure that it's an issue with ZenTools or repak then you can create an issue on their repos, but if you are not sure about it always report it to me.
+If any issues do happen, PLEASE report them here first. It is very likely an issue on my part and if it is not I'll relay the information to the authors of the responsible dependency. Don't bother other authors about PakMaster as I am entirely responsible for it. If you are 100% sure that it's an issue with ZenTools or Repak then you can create an issue on their repos, but if you are not sure about it always report it to me.
 
 #
 
-[^1]: From Repak's notes: UnrealPak includes a directory entry in the full directory index for all parent directories back to the pak root for a given file path regardless of whether those directories contain any files or just other directories. repak only includes directories that contain files. So far no functional differences have been observed as a result
+[^1]: From Repak's notes: UnrealPak includes a directory entry in the full directory index for all parent directories back to the pak root for a given file path regardless of whether those directories contain any files or just other directories. Repak only includes directories that contain files. So far no functional differences have been observed as a result
 
 [^2]: If unpacking a mod or group of files only have that mod or group's files in the folder - this will unpack all IoStore assets in the folder that you selected. For example, have only ExampleMod.ucas/ExampleMod.utoc in the folder.
