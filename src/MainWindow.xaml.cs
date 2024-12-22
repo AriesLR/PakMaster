@@ -222,7 +222,7 @@ namespace PakMaster
             string zenToolsKeyGuid = zentoolsConfig.Keys.FirstOrDefault() ?? string.Empty;
             string zenToolsKeyHex = zentoolsConfig.Values.FirstOrDefault() ?? string.Empty;
 
-            if (string.IsNullOrEmpty(zenToolsKeyGuid) || string.IsNullOrEmpty(zenToolsKeyHex))
+            if (string.IsNullOrEmpty(zenToolsKeyGuid))
             {
                 MessageBox.Show("ZenTools AES Key (GUID) not found in the config.\n\nThe GUID cannot be left blank.\n\nDefault GUID: 00000000-0000-0000-0000-000000000000");
                 return;
