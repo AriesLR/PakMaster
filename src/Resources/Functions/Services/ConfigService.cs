@@ -8,6 +8,8 @@ namespace PakMaster.Resources.Functions.Services
     {
         private readonly string _repakConfigFilePath;
         private readonly string _zenToolsConfigFilePath;
+        private readonly string _unrealpakConfigFilePath;
+        private readonly string _unrealpakCryptoConfigFilePath;
 
         public ConfigService()
         {
@@ -22,30 +24,43 @@ namespace PakMaster.Resources.Functions.Services
             }
 
             // Define the full paths of the config files
-            _repakConfigFilePath = Path.Combine(configsDirectory, "repak-aeskey.json");
-            _zenToolsConfigFilePath = Path.Combine(configsDirectory, "zentools-aeskey.json");
+            _repakConfigFilePath = Path.Combine(configsDirectory, "repak-aeskey.json"); // Repak AES Key
+            _zenToolsConfigFilePath = Path.Combine(configsDirectory, "zentools-aeskey.json"); // ZenTools AES Key
+            _unrealpakConfigFilePath = Path.Combine(configsDirectory, "unrealpak-config.json"); // UnrealPak Config [File/Folder Paths]
+            _unrealpakCryptoConfigFilePath = Path.Combine(configsDirectory, "Crypto.json"); // UnrealPak Crypto File  [Crypto File]
         }
 
-        // Ensure Repak Config Exists
-        public void EnsureRepakConfigExists()
+        //////////////////////////
+        // ENSURE CONFIGS EXIST //
+        ////////////////////////// 
+
+        public void EnsureConfigsExist()
         {
             if (!File.Exists(_repakConfigFilePath))
             {
+                Debug.WriteLine("[DEBUG]: Repak config doesn't exist, creating one now.");
                 CreateDefaultRepakConfig();
+            }
+            if (!File.Exists(_zenToolsConfigFilePath))
+            {
+                Debug.WriteLine("[DEBUG]: ZenTools config doesn't exist, creating one now.");
+                CreateDefaultZenToolsConfig();
+            }
+            if (!File.Exists(_unrealpakConfigFilePath))
+            {
+                Debug.WriteLine("[DEBUG]: UnrealPak config doesn't exist, creating one now.");
+                CreateDefaultUnrealPakConfig();
+            }
+            if (!File.Exists(_unrealpakCryptoConfigFilePath))
+            {
+                Debug.WriteLine("[DEBUG]: UnrealPak Crypto config doesn't exist, creating one now.");
+                CreateDefaultUnrealPakCryptoConfig();
             }
         }
 
-        // Load Repak Config
-        public T LoadRepakConfig<T>() where T : new()
-        {
-            return LoadConfig<T>(_repakConfigFilePath);
-        }
-
-        // Save Repak Config
-        public void SaveRepakConfig<T>(T config)
-        {
-            SaveConfig(_repakConfigFilePath, config);
-        }
+        ////////////////////////////
+        // CREATE DEFAULT CONFIGS //
+        //////////////////////////// 
 
         // Create Default Repak Config
         private void CreateDefaultRepakConfig()
@@ -56,32 +71,77 @@ namespace PakMaster.Resources.Functions.Services
             Debug.WriteLine("[DEBUG]: Default repak config created.");
         }
 
-        // Ensure ZenTools Config Exists
-        public void EnsureZenToolsConfigExists()
+        // Create Default ZenTools Config
+        private void CreateDefaultZenToolsConfig()
         {
-            if (!File.Exists(_zenToolsConfigFilePath))
+            string defaultGuid = "00000000-0000-0000-0000-000000000000";
+            string defaultAesKey = string.Empty;
+
+            var defaultConfig = new Dictionary<string, string>
             {
-                CreateDefaultZenToolsConfig();
-            }
+                { defaultGuid, defaultAesKey }
+            };
+
+            SaveConfig(_zenToolsConfigFilePath, defaultConfig);
+
+            Debug.WriteLine("[DEBUG]: Default ZenTools config created.");
         }
 
-        // Save ZenTools Config
-        public void SaveZenToolsConfig(string guid, string aesKey)
+        // Create Default UnrealPak Config
+        private void CreateDefaultUnrealPakConfig()
         {
-            try
+            var defaultConfig = new
             {
-                var zenToolsConfig = new Dictionary<string, string>
-        {
-            { guid, aesKey }
-        };
+                UnrealPakPath = string.Empty,
+                GlobalOutputPath = string.Empty,
+                CookedFilesPath = string.Empty,
+                PackageStorePath = string.Empty,
+                ScriptObjectsPath = string.Empty,
+                IoStoreCommandsPath = string.Empty
+            };
 
-                string json = JsonConvert.SerializeObject(zenToolsConfig, Formatting.Indented);
-                File.WriteAllText(_zenToolsConfigFilePath, json);
-            }
-            catch (Exception ex)
+            SaveConfig(_unrealpakConfigFilePath, defaultConfig);
+
+            Debug.WriteLine("[DEBUG]: Default UnrealPak config created.");
+        }
+
+        // Create Default UnrealPak Crypto Config
+        private void CreateDefaultUnrealPakCryptoConfig()
+        {
+            var defaultCryptoConfig = new
             {
-                Debug.WriteLine($"[DEBUG]: Error saving ZenTools config: {ex.Message}");
-            }
+                EncryptionKey = new
+                {
+                    Name = (string?)null,
+                    Guid = (string?)null,
+                    Key = (string?)null
+                },
+                SigningKey = (string?)null,
+                bEnablePakSigning = false,
+                bEnablePakIndexEncryption = false,
+                bEnablePakIniEncryption = false,
+                bEnablePakUAssetEncryption = false,
+                bEnablePakFullAssetEncryption = false,
+                bDataCryptoRequired = true,
+                PakEncryptionRequired = true,
+                PakSigningRequired = true,
+                SecondaryEncryptionKeys = (object?)null
+            };
+
+            SaveConfig(_unrealpakCryptoConfigFilePath, defaultCryptoConfig);
+
+            Debug.WriteLine("[DEBUG]: Default UnrealPak Crypto config created.");
+        }
+
+
+        ///////////////////////////
+        // LOAD SPECIFIC CONFIGS //
+        /////////////////////////// 
+
+        // Load Repak Config
+        public T LoadRepakConfig<T>() where T : new()
+        {
+            return LoadConfig<T>(_repakConfigFilePath);
         }
 
         // Load ZenTools Config
@@ -90,24 +150,59 @@ namespace PakMaster.Resources.Functions.Services
             return LoadConfig<Dictionary<string, string>>(_zenToolsConfigFilePath);
         }
 
-        // Create Default ZenTools Config
-        private void CreateDefaultZenToolsConfig()
+        // Load UnrealPak Config
+        public T LoadUnrealPakConfig<T>() where T : new()
         {
-            string defaultGuid = "00000000-0000-0000-0000-000000000000";
-            string defaultAesKey = string.Empty;
-
-            var defaultConfig = new Dictionary<string, string>
-    {
-        { defaultGuid, defaultAesKey }
-    };
-
-            SaveConfig(_zenToolsConfigFilePath, defaultConfig);
-
-            Debug.WriteLine("[DEBUG]: Default ZenTools config created.");
+            return LoadConfig<T>(_unrealpakConfigFilePath);
         }
 
+        // Load UnrealPak Crypto Config
+        public T LoadUnrealPakCryptoConfig<T>() where T : new()
+        {
+            return LoadConfig<T>(_unrealpakCryptoConfigFilePath);
+        }
 
-        // Load Config
+        ///////////////////////////
+        // SAVE SPECIFIC CONFIGS //
+        /////////////////////////// 
+
+        // Save Repak Config
+        public void SaveRepakConfig<T>(T config)
+        {
+            SaveConfig(_repakConfigFilePath, config);
+            Debug.WriteLine("[DEBUG]: Repak config saved.");
+        }
+
+        // Save ZenTools Config
+        public void SaveZenToolsConfig(string guid, string aesKey)
+        {
+            var zenToolsConfig = new Dictionary<string, string>
+            {
+                { guid, aesKey }
+            };
+            SaveConfig(_zenToolsConfigFilePath, zenToolsConfig);
+            Debug.WriteLine("[DEBUG]: ZenTools config saved.");
+        }
+
+        // Save UnrealPak Config
+        public void SaveUnrealPakConfig(object config)
+        {
+            SaveConfig(_unrealpakConfigFilePath, config);
+            Debug.WriteLine("[DEBUG]: UnrealPak config saved.");
+        }
+
+        // Save UnrealPak Crypto Config
+        public void SaveUnrealPakCryptoConfig(object cryptoConfig)
+        {
+            SaveConfig(_unrealpakCryptoConfigFilePath, cryptoConfig);
+            Debug.WriteLine("[DEBUG]: UnrealPak Crypto config saved.");
+        }
+
+        ///////////////////////
+        // SAVE/LOAD HELPERS //
+        ///////////////////////
+
+        // Load Config Helper
         private T LoadConfig<T>(string filePath) where T : new()
         {
             try
@@ -119,7 +214,6 @@ namespace PakMaster.Resources.Functions.Services
                 }
                 else
                 {
-                    Debug.WriteLine($"[DEBUG]: Config file not found at {filePath}. Creating a default one.");
                     return new T();
                 }
             }
@@ -130,7 +224,7 @@ namespace PakMaster.Resources.Functions.Services
             }
         }
 
-        // Save Config
+        // Save Config Helper
         private void SaveConfig<T>(string filePath, T config)
         {
             try

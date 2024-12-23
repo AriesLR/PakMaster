@@ -94,8 +94,6 @@ namespace PakMaster
             }
         }
 
-
-
         ///////////////////
         // REPAK SECTION //
         ///////////////////
