@@ -172,7 +172,7 @@
                         </StackPanel>
 
                         <!-- Output Path -->
-                        <StackPanel Margin="0,0,0,15">
+                        <StackPanel Margin="0,15,0,15">
                             <TextBlock Text="Output path for global.utoc" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
                             <Grid Margin="5">
                                 <TextBox Name="GlobalOutputPathTextBox" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="C:\Path\To\Output" />
@@ -181,7 +181,7 @@
                         </StackPanel>
 
                         <!-- Input Path -->
-                        <StackPanel Margin="0,0,0,15">
+                        <StackPanel Margin="0,15,0,15">
                             <TextBlock Text="Path to cooked files to be packaged" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
                             <Grid Margin="5">
                                 <TextBox Name="CookedFilesPathTextBox" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="C:\Path\To\Cooked" />
@@ -190,7 +190,7 @@
                         </StackPanel>
 
                         <!-- Packagestore.manifest Path -->
-                        <StackPanel Margin="0,0,0,15">
+                        <StackPanel Margin="0,15,0,15">
                             <TextBlock Text="Path to packagestore.manifest" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
                             <Grid Margin="5">
                                 <TextBox Name="PackageStorePathTextBox" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="packagestore.manifest" />
@@ -199,7 +199,7 @@
                         </StackPanel>
 
                         <!-- ScriptObjects.bin Path -->
-                        <StackPanel Margin="0,0,0,15">
+                        <StackPanel Margin="0,15,0,15">
                             <TextBlock Text="Path to ScriptObjects.bin" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
                             <Grid Margin="5">
                                 <TextBox Name="ScriptObjectsPathTextBox" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="ScriptObjects.bin" />
@@ -208,7 +208,7 @@
                         </StackPanel>
 
                         <!-- IoStoreCommands.txt Path -->
-                        <StackPanel Margin="0,0,0,15">
+                        <StackPanel Margin="0,15,0,15">
                             <TextBlock Text="Path to IoStoreCommands.txt" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
                             <Grid Margin="5">
                                 <TextBox Name="IoStoreCommandsPathTextBox" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="IoStoreCommands.txt" />
@@ -217,7 +217,7 @@
                         </StackPanel>
 
                         <!-- Crypto Keys Browser -->
-                        <StackPanel Margin="0,0,0,30">
+                        <StackPanel Margin="0,50,0,0">
                             <Button Content="Edit Crypto.json" Width="200" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center" Click="OpenCryptoKeysFile" />
                         </StackPanel>
                     </StackPanel>
