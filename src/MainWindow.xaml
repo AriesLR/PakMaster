@@ -163,34 +163,63 @@
                     <!-- Left Column -->
                     <StackPanel Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
                         <!-- UnrealPak Path -->
-                        <TextBlock Text="Path to UnrealPak" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
-                        <TextBox Name="UnrealPakPathTextBox" Width="500" Margin="5" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="C:\Program Files\Epic Games\UE_5.1\Engine\Binaries\Win64\UnrealPak.exe" />
-                        <Button Content="Browse" Width="75" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseUnrealPakPath" />
+                        <StackPanel Margin="0,0,0,15">
+                            <TextBlock Text="Path to UnrealPak" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
+                            <Grid Margin="5">
+                                <TextBox Name="UnrealPakPathTextBox" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="C:\Program Files\Epic Games\UE_5.1\Engine\Binaries\Win64\UnrealPak.exe" />
+                                <Button Content="Browse" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseUnrealPakPath" />
+                            </Grid>
+                        </StackPanel>
 
                         <!-- Output Path -->
-                        <TextBlock Text="Output path for global.utoc" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
-                        <TextBox Name="GlobalOutputPathTextBox" Width="500" Margin="5" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="C:\Path\To\Output" />
-                        <Button Content="Browse" Width="75" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseGlobalOutputPath" />
+                        <StackPanel Margin="0,0,0,15">
+                            <TextBlock Text="Output path for global.utoc" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
+                            <Grid Margin="5">
+                                <TextBox Name="GlobalOutputPathTextBox" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="C:\Path\To\Output" />
+                                <Button Content="Browse" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseGlobalOutputPath" />
+                            </Grid>
+                        </StackPanel>
 
                         <!-- Input Path -->
-                        <TextBlock Text="Path to cooked files to be packaged" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
-                        <TextBox Name="CookedFilesPathTextBox" Width="500" Margin="5" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="C:\Path\To\Cooked" />
-                        <Button Content="Browse" Width="75" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseCookedFilesPath" />
+                        <StackPanel Margin="0,0,0,15">
+                            <TextBlock Text="Path to cooked files to be packaged" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
+                            <Grid Margin="5">
+                                <TextBox Name="CookedFilesPathTextBox" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="C:\Path\To\Cooked" />
+                                <Button Content="Browse" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseCookedFilesPath" />
+                            </Grid>
+                        </StackPanel>
 
-                        <!-- Packagestore.manigest Path -->
-                        <TextBlock Text="Path to packagestore.manifest" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
-                        <TextBox Name="PackageStorePathTextBox" Width="500" Margin="5" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="packagestore.manifest" />
-                        <Button Content="Browse" Width="75" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowsePackageStorePath" />
+                        <!-- Packagestore.manifest Path -->
+                        <StackPanel Margin="0,0,0,15">
+                            <TextBlock Text="Path to packagestore.manifest" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
+                            <Grid Margin="5">
+                                <TextBox Name="PackageStorePathTextBox" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="packagestore.manifest" />
+                                <Button Content="Browse" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowsePackageStorePath" />
+                            </Grid>
+                        </StackPanel>
 
                         <!-- ScriptObjects.bin Path -->
-                        <TextBlock Text="Path to ScriptObjects.bin" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
-                        <TextBox Name="ScriptObjectsPathTextBox" Width="500" Margin="5" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="ScriptObjects.bin" />
-                        <Button Content="Browse" Width="75" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseScriptObjectsPath" />
+                        <StackPanel Margin="0,0,0,15">
+                            <TextBlock Text="Path to ScriptObjects.bin" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
+                            <Grid Margin="5">
+                                <TextBox Name="ScriptObjectsPathTextBox" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="ScriptObjects.bin" />
+                                <Button Content="Browse" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseScriptObjectsPath" />
+                            </Grid>
+                        </StackPanel>
 
                         <!-- IoStoreCommands.txt Path -->
-                        <TextBlock Text="Path to IoStoreCommands.txt" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
-                        <TextBox Name="IoStoreCommandsPathTextBox" Width="500" Margin="5" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="IoStoreCommands.txt" />
-                        <Button Content="Browse" Width="75" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseIoStoreCommandsPath" />
+                        <StackPanel Margin="0,0,0,15">
+                            <TextBlock Text="Path to IoStoreCommands.txt" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
+                            <Grid Margin="5">
+                                <TextBox Name="IoStoreCommandsPathTextBox" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="IoStoreCommands.txt" />
+                                <Button Content="Browse" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseIoStoreCommandsPath" />
+                            </Grid>
+                        </StackPanel>
+
+                        <!-- Crypto Keys Browser -->
+                        <StackPanel Margin="0,0,0,30">
+                            <Button Content="Edit Crypto.json" Width="200" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center" Click="OpenCryptoKeysFile" />
+                        </StackPanel>
                     </StackPanel>
 
                     <!-- Middle Column -->

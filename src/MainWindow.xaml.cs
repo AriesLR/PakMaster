@@ -522,11 +522,11 @@ namespace PakMaster
             }
         }
 
-        //////////////////////
-        // RUN TOOL SECTION //
-        //////////////////////
+        ///////////////////////////
+        // START PROCESS SECTION //
+        ///////////////////////////
 
-        // Run the tool and capture output asynchronously
+        // Run the proper tool and capture output
         private async Task RunToolAsync(string toolFolderName, string executableName, string arguments, Action<string> outputCallback)
         {
             try
@@ -580,6 +580,43 @@ namespace PakMaster
                 MessageBox.Show($"Error running command: {ex.Message}");
             }
         }
+
+        // Open Crypto.json in user's default app for .json files
+        private void OpenCryptoKeysFile(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                var result = MessageBox.Show(
+                    "Are you sure you want to open Crypto.json?\n\nOnly edit this file if you know what you're doing.",
+                    "Warning",
+                    MessageBoxButton.YesNo,
+                    MessageBoxImage.Warning);
+
+                if (result == MessageBoxResult.Yes)
+                {
+                    string appDirectory = AppDomain.CurrentDomain.BaseDirectory;
+                    string filePath = Path.Combine(appDirectory, "configs", "Crypto.json");
+
+                    if (File.Exists(filePath))
+                    {
+                        Process.Start(new ProcessStartInfo
+                        {
+                            FileName = filePath,
+                            UseShellExecute = true
+                        });
+                    }
+                    else
+                    {
+                        MessageBox.Show("Crypto.json file not found!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error opening file: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
 
         ///////////////////////
         // UI METHOD SECTION //
