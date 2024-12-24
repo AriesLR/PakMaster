@@ -131,13 +131,13 @@ To set your AES Key, open the AES Key Settings and set your key in the "Repak AE
 
 ## Tools Used
 
-**Unpacking (.pak)** - [Repak](https://github.com/trumank/repak)
+**Unpacking (Pak Files)** - [Repak](https://github.com/trumank/repak)
 
-**Repacking (.pak)** - [Repak](https://github.com/trumank/repak)
+**Repacking (Pak Files)** - [Repak](https://github.com/trumank/repak)
 
-**Unpacking (.ucas/.utoc)** - [ZenTools](https://github.com/LongerWarrior/ZenTools)
+**Unpacking (IoStore Files)** - [ZenTools](https://github.com/LongerWarrior/ZenTools)
 
-**Repacking (.ucas/.utoc)** - UnrealPak (Requires Unreal Engine)
+**Repacking (IoStore Files)** - UnrealPak (Requires Unreal Engine)
  
 ## Acknowledgements
 - [Repak](https://github.com/trumank/repak) - For the Unreal Engine .pak file library and CLI in rust.
