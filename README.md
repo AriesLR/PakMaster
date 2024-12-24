@@ -1,9 +1,9 @@
-# PakMaster - A GUI Wrapper for Repak and ZenTools
+# PakMaster - A GUI Wrapper for Repak, ZenTools, and UnrealPak
 
 #### Hopefully the ultimate solution to Unreal Engine 5 modding (.pak/.ucas/.utoc)
 
 > [!IMPORTANT]
-> PakMaster assumes you have some knowledge about UE5 modding and Unreal Engine. If you are new to Unreal Engine modding, I suggest starting [here](https://github.com/Dmgvol/UE_Modding/#ue45-modding-guides).
+> PakMaster assumes you have some knowledge about UE5 modding and Unreal Engine. If you are new to Unreal Engine modding, I suggest starting [HERE](https://github.com/Dmgvol/UE_Modding/#ue45-modding-guides).
 
 ## Table of Contents
 
@@ -27,13 +27,13 @@
 
 ## How It Works
 
-PakMaster simplifies the process of packing and unpacking files by providing a GUI on top of the existing tools [Repak](https://github.com/trumank/repak) and [ZenTools](https://github.com/LongerWarrior/ZenTools). 
+PakMaster simplifies the process of packing and unpacking files by providing a GUI on top of the existing tools [Repak](https://github.com/trumank/repak), [ZenTools](https://github.com/LongerWarrior/ZenTools), and UnrealPak. 
 While these tools handle the core functionality, PakMaster streamlines the user experience, making repetitive tasks quicker and more accessible.
 
-PakMaster does not include Repak or ZenTools. 
-Instead, it automatically downloads the latest supported versions of these tools upon launch. (In the next update this will prompt the user to download, I don't like the idea of it downloading without the user knowing.)
+PakMaster does not include Repak, ZenTools, or UnrealPak. 
+Instead, it automatically downloads the latest supported versions of Repak and ZenTools upon launch. UnrealPak comes with Unreal Engine, you are required to download this on your own if you require the ability to package cooked assets.
 
-By using PakMaster, users must also adhere to the licenses of Repak and ZenTools in addition to PakMaster's own.
+By using PakMaster, users must also adhere to the licenses of Repak and ZenTools in addition to PakMaster's own. Unreal Engine has their own license.
 
 ## Requirements
 
@@ -56,8 +56,9 @@ By using PakMaster, users must also adhere to the licenses of Repak and ZenTools
   - **Unpack** the contents of a `.pak` file into a folder.[^3]
   - **Pack** folders into a `.pak` file.
 
-- **IoStore File Unpacking**
-  - **Unpack** the contents of `.ucas` & `.utoc` files into a folder.
+- **IoStore File Operations**
+  - **Unpack** the contents of `IoStore` files into a folder.
+  - **Pack** the contents of `IoStore` files into a `.pak`/`.ucas`/`.utoc` stack.
 
 - **AES Key Support**
   - Support for games that require an AES key to unpack files.
@@ -73,15 +74,13 @@ By using PakMaster, users must also adhere to the licenses of Repak and ZenTools
 
 ## Planned Features
 
-- `.ucas` & `.utoc` packing - Currently only unpacking is supported.
-
 - Ability to choose pak version, currently PakMaster is using V11, possible options are: `V0, V1, V2, V3, V4, V5, V6, V7, V8A, V8B, V9, V10, V11`
 
 - Load Order Editor - if your input folder is set to something like a game's mod folder you could easily modify load orders via PakMaster.
 
 ## Known Issues
 
-- Packing IoStore Files (.ucas/.utoc) is not supported yet.
+- None, see [Issues](#issues) if you find any.
 
 ## Getting Started
 
@@ -105,19 +104,20 @@ To set your AES Key, open the AES Key Settings and set your key in the "Repak AE
 
 #### Unpacking
 
-- **.pak**
+- **Pak Files**
   - Choose a `.pak` file from the **Input** list on the left and click **"Unpack"**.
 
-- **.ucas/.utoc**
+- **IoStore Files**
   - Make sure you have an **Input** folder selected and click **Unpack**.[^4]
 
 #### Repacking
 
-- **.pak**
+- **Pak files**
   - Select the folder you'd like to pack from the **Output** list on the right and click **"Repack"**.
 
-- **.ucas/.utoc**
-  - Currently Unsupported.
+- **IoStore Files**[^5]
+  - Switch to IoStore Mode and click **Repack** configure your file paths as needed and then click **Pack**
+    - This will require you to have above average knowledge. [This](https://www.youtube.com/watch?v=89s0akNvpU4) might be a good place to start.
 
 ## Screenshots
 
@@ -133,7 +133,7 @@ To set your AES Key, open the AES Key Settings and set your key in the "Repak AE
 
 **Unpacking (.ucas/.utoc)** - [ZenTools](https://github.com/LongerWarrior/ZenTools)
 
-**Repacking (.ucas/.utoc)** - Currently Unsupported
+**Repacking (.ucas/.utoc)** - UnrealPak (Requires Unreal Engine)
  
 ## Acknowledgements
 - [Repak](https://github.com/trumank/repak) - For the Unreal Engine .pak file library and CLI in rust.
@@ -175,4 +175,6 @@ If any issues do happen, PLEASE report them here first. It is very likely an iss
 
 [^3]: From Repak's notes: UnrealPak includes a directory entry in the full directory index for all parent directories back to the pak root for a given file path regardless of whether those directories contain any files or just other directories. Repak only includes directories that contain files. So far no functional differences have been observed as a result
 
-[^4]: If unpacking a mod or group of files only have that mod or group's files in the folder - this will unpack all IoStore assets in the folder that you selected. For example, have only ExampleMod.pak/ExampleMod.ucas/ExampleMod.utoc in the folder.
+[^4]: If unpacking a mod or group of files only have one mod or group's files in the folder - this will unpack all IoStore assets in the folder that you selected. For example, have only ExampleMod.pak/ExampleMod.ucas/ExampleMod.utoc in the folder.
+
+[^5]: IoStore File Packaging requires Unreal Engine.
