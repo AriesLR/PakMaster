@@ -209,7 +209,7 @@
                         <StackPanel Margin="0,15,0,15">
                             <TextBlock Text="Path to IoStoreCommands.txt" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
                             <Grid Margin="5">
-                                <TextBox Name="IoStoreCommandsPathTextBox" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="IoStoreCommands.txt" />
+                                <TextBox Name="IoStoreCommandsPathTextBox" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="Commands.txt" />
                                 <Button Content="Browse" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseIoStoreCommandsPath" />
                             </Grid>
                         </StackPanel>
@@ -221,11 +221,23 @@
                     </StackPanel>
 
                     <!-- Right Column -->
-                    <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5">
-                        <StackPanel Margin="0,0,0,0">
+                    <Grid Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="200" />
+                            <RowDefinition Height="200" />
+                            <RowDefinition Height="260" />
+                        </Grid.RowDefinitions>
+
+                        <!-- Pack Button -->
+                        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,30">
                             <Button Content="Pack" FontSize="12" FontWeight="SemiBold" Width="180" Height="30" Margin="5" Click="btnIoStorePackage_Click"/>
                         </StackPanel>
-                    </StackPanel>
+
+                        <!-- CLI Output -->
+                        <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,0">
+                            <TextBox x:Name="IoStoreCommandOutputTextBox" Background="#202020" Foreground="White" FontSize="12" IsReadOnly="True" VerticalScrollBarVisibility="Auto" Width="600" Height="250" Margin="5"/>
+                        </StackPanel>
+                    </Grid>
                 </Grid>
             </mah:Flyout>
 

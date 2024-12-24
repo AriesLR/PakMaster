@@ -572,8 +572,8 @@ namespace PakMaster
         {
             var dialog = new OpenFileDialog
             {
-                Filter = "Package Store (*.manifest)|*.manifest|All Files (*.*)|*.*",
-                Title = "Select .manifest File"
+                Filter = "Package Store File (*.manifest, *json)|*.manifest;*.json|All Files (*.*)|*.*",
+                Title = "Select Package Store File"
             };
 
             var config = _configService.LoadUnrealPakConfig<dynamic>();
@@ -621,7 +621,7 @@ namespace PakMaster
             var dialog = new OpenFileDialog
             {
                 Filter = "Commands (*.txt)|*.txt|All Files (*.*)|*.*",
-                Title = "Select IoStoreCommands.txt File"
+                Title = "Select Commands.txt File"
             };
 
             var config = _configService.LoadUnrealPakConfig<dynamic>();
@@ -857,7 +857,8 @@ namespace PakMaster
         {
             Application.Current.Dispatcher.Invoke(() =>
             {
-                CommandOutputTextBox.Text += output + Environment.NewLine;
+                CommandOutputTextBox.Text += output + Environment.NewLine; // Main page output
+                IoStoreCommandOutputTextBox.Text += output + Environment.NewLine; // IoStore Packing output
             });
         }
 
