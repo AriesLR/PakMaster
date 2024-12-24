@@ -37,6 +37,33 @@ namespace PakMaster
             await UpdateService.CheckJsonForUpdates("https://raw.githubusercontent.com/AriesLR/PakMaster/refs/heads/main/docs/version/update.json");
         }
 
+        // Load UnrealPak Config
+        private void LoadUnrealPakConfig()
+        {
+            try
+            {
+                var unrealPakConfig = _configService.LoadUnrealPakConfig<Dictionary<string, string>>();
+
+                string unrealPakPath = unrealPakConfig?.ContainsKey("UnrealPakPath") ?? false ? unrealPakConfig["UnrealPakPath"] : string.Empty;
+                string globalOutputPath = unrealPakConfig?.ContainsKey("GlobalOutputPath") ?? false ? unrealPakConfig["GlobalOutputPath"] : string.Empty;
+                string cookedFilesPath = unrealPakConfig?.ContainsKey("CookedFilesPath") ?? false ? unrealPakConfig["CookedFilesPath"] : string.Empty;
+                string packageStorePath = unrealPakConfig?.ContainsKey("PackageStorePath") ?? false ? unrealPakConfig["PackageStorePath"] : string.Empty;
+                string scriptObjectsPath = unrealPakConfig?.ContainsKey("ScriptObjectsPath") ?? false ? unrealPakConfig["ScriptObjectsPath"] : string.Empty;
+                string ioStoreCommandsPath = unrealPakConfig?.ContainsKey("IoStoreCommandsPath") ?? false ? unrealPakConfig["IoStoreCommandsPath"] : string.Empty;
+
+                UnrealPakPathTextBox.Text = unrealPakPath;
+                GlobalOutputPathTextBox.Text = globalOutputPath;
+                CookedFilesPathTextBox.Text = cookedFilesPath;
+                PackageStorePathTextBox.Text = packageStorePath;
+                ScriptObjectsPathTextBox.Text = scriptObjectsPath;
+                IoStoreCommandsPathTextBox.Text = ioStoreCommandsPath;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading UnrealPak config: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
         /////////////////////
         // AES KEY SECTION //
         /////////////////////
@@ -545,8 +572,8 @@ namespace PakMaster
         {
             var dialog = new OpenFileDialog
             {
-                Filter = "packagestore.manifest|packagestore.manifest|All Files (*.*)|*.*",
-                Title = "Select packagestore.manifest File"
+                Filter = "Package Store (*.manifest)|*.manifest|All Files (*.*)|*.*",
+                Title = "Select .manifest File"
             };
 
             var config = _configService.LoadUnrealPakConfig<dynamic>();
@@ -593,7 +620,7 @@ namespace PakMaster
         {
             var dialog = new OpenFileDialog
             {
-                Filter = "IoStoreCommands.txt|IoStoreCommands.txt|All Files (*.*)|*.*",
+                Filter = "Commands (*.txt)|*.txt|All Files (*.*)|*.*",
                 Title = "Select IoStoreCommands.txt File"
             };
 
@@ -810,6 +837,7 @@ namespace PakMaster
         {
             if (isIoStoreMode)
             {
+                LoadUnrealPakConfig();
                 OpenIoStoreFlyout(sender, e);
             }
             else
