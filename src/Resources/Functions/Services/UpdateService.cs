@@ -5,7 +5,7 @@ using System.Windows;
 
 namespace PakMaster.Resources.Functions.Services
 {
-    public static class UpdateService
+    public class UpdateService
     {
         private static readonly string currentVersionPakMaster = FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).FileVersion;
         public static async Task CheckJsonForUpdates(string jsonUrl)
@@ -68,6 +68,47 @@ namespace PakMaster.Resources.Functions.Services
             catch (Exception ex)
             {
                 MessageBox.Show($"Failed to check for updates: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        public static async Task CheckJsonForUpdatesSilent(string jsonUrl)
+        {
+            try
+            {
+                using (HttpClient client = new HttpClient())
+                {
+                    string response = await client.GetStringAsync(jsonUrl);
+                    var updateInfo = JsonConvert.DeserializeObject<UpdateInfo>(response);
+
+                    if (updateInfo == null)
+                    {
+                        return;
+                    }
+
+                    var latestVersion = updateInfo.latestVersionPakMaster;
+                    var currentVersion = currentVersionPakMaster;
+
+                    int versionComparison = CompareVersions(currentVersion, latestVersion);
+
+                    if (versionComparison < 0)
+                    {
+                        var result = MessageBox.Show(
+                            $"A new version is available: {latestVersion}\n\nLatest Version: {latestVersion}\nYour Version: {currentVersion}\n\nWould you like to download the new version?",
+                            "Check for updates",
+                            MessageBoxButton.YesNo,
+                            MessageBoxImage.Information
+                        );
+
+                        if (result == MessageBoxResult.Yes)
+                        {
+                            UrlService.OpenUrl(updateInfo.downloadUrlPakMaster);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"Failed to check for updates: {ex.Message}");
             }
         }
 

@@ -73,7 +73,6 @@
             <!-- AES Key Flyout Control -->
             <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
                 <Button Content="AES Key Settings" FontSize="12" FontWeight="SemiBold" Width="180" Height="30" Margin="5" Click="OpenAesKeysFlyout"/>
-                <Button Content="TEST" FontSize="12" FontWeight="SemiBold" Width="180" Height="30" Margin="5" Click="OpenIoStoreFlyout"/>
             </StackPanel>
 
             <!-- Pack/Unpack Buttons Section -->
@@ -157,7 +156,6 @@
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="600" />
                         <ColumnDefinition Width="*" />
-                        <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
 
                     <!-- Left Column -->
@@ -222,12 +220,12 @@
                         </StackPanel>
                     </StackPanel>
 
-                    <!-- Middle Column -->
-                    <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
-                    </StackPanel>
-
                     <!-- Right Column -->
-                    <StackPanel Grid.Column="2" Visibility="Collapsed"/>
+                    <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5">
+                        <StackPanel Margin="0,0,0,0">
+                            <Button Content="Pack" FontSize="12" FontWeight="SemiBold" Width="180" Height="30" Margin="5" Click="btnIoStorePackage_Click"/>
+                        </StackPanel>
+                    </StackPanel>
                 </Grid>
             </mah:Flyout>
 

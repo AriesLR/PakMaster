@@ -225,6 +225,11 @@ namespace PakMaster
             }
             else
             {
+                Debug.WriteLine($"[DEBUG]: No ZenTools AES Key Found.");
+            }
+
+            if (!string.IsNullOrEmpty(zenToolsKeyHex))
+            {
                 Debug.WriteLine($"[DEBUG]: ZenTools AES Key Found:\n[DEBUG]: GUID: {zenToolsKeyGuid}\n[DEBUG]: Hex: {zenToolsKeyHex}");
             }
 
@@ -266,15 +271,98 @@ namespace PakMaster
             });
         }
 
-        /////////////////////////
+        ///////////////////////
         // UNREALPAK SECTION //
-        /////////////////////////
+        ///////////////////////
 
-        // Start Repack with UnrealPak (.ucas/.utoc)
+        // Start Packing with UnrealPak
         private async Task StartUnrealPakRepackAsync()
         {
-            //OpenIoStoreFlyout(this, new RoutedEventArgs());
-            //MessageBox.Show("IoStore file repacking is not supported yet.");
+            var unrealPakConfig = _configService.LoadUnrealPakConfig<Dictionary<string, string>>();
+
+            if (unrealPakConfig == null || unrealPakConfig.Count == 0)
+            {
+                MessageBox.Show("UnrealPak configuration is missing or empty.");
+                return;
+            }
+
+            string unrealPakPath = unrealPakConfig.ContainsKey("UnrealPakPath") ? unrealPakConfig["UnrealPakPath"] : string.Empty;
+            string globalOutputPath = unrealPakConfig.ContainsKey("GlobalOutputPath") ? unrealPakConfig["GlobalOutputPath"] : string.Empty;
+            string cookedFilesPath = unrealPakConfig.ContainsKey("CookedFilesPath") ? unrealPakConfig["CookedFilesPath"] : string.Empty;
+            string packageStorePath = unrealPakConfig.ContainsKey("PackageStorePath") ? unrealPakConfig["PackageStorePath"] : string.Empty;
+            string scriptObjectsPath = unrealPakConfig.ContainsKey("ScriptObjectsPath") ? unrealPakConfig["ScriptObjectsPath"] : string.Empty;
+            string ioStoreCommandsPath = unrealPakConfig.ContainsKey("IoStoreCommandsPath") ? unrealPakConfig["IoStoreCommandsPath"] : string.Empty;
+
+            if (string.IsNullOrEmpty(unrealPakPath) || !File.Exists(unrealPakPath))
+            {
+                MessageBox.Show("UnrealPak executable path is missing or invalid.");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(globalOutputPath))
+            {
+                MessageBox.Show("Please specify an output path.");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(cookedFilesPath) || !Directory.Exists(cookedFilesPath))
+            {
+                MessageBox.Show("Cooked files path is missing or invalid.");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(packageStorePath) || !File.Exists(packageStorePath))
+            {
+                MessageBox.Show("PackageStore.manifest path is missing or invalid.");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(scriptObjectsPath) || !File.Exists(scriptObjectsPath))
+            {
+                MessageBox.Show("ScriptObjects.bin path is missing or invalid.");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(ioStoreCommandsPath) || !File.Exists(ioStoreCommandsPath))
+            {
+                MessageBox.Show("IoStoreCommands.txt path is missing or invalid.");
+                return;
+            }
+
+            string cryptoKeysPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "configs", "Crypto.json");
+
+            string finalGlobalOutputPath = Path.Combine(globalOutputPath, "global.utoc");
+
+            string arguments = $"-CreateGlobalContainer=\"{finalGlobalOutputPath}\" " +
+                               $"-CookedDirectory=\"{cookedFilesPath}\" " +
+                               $"-WriteBackMetadataToAssetRegistry=Disabled " +
+                               $"-PackageStoreManifest=\"{packageStorePath}\" " +
+                               $"-Commands=\"{ioStoreCommandsPath}\" " +
+                               $"-ScriptObjects=\"{scriptObjectsPath}\" " +
+                               $"-patchpaddingalign=2048 " +
+                               $"-compressionformats=Oodle " +
+                               $"-compresslevel=4 " +
+                               $"-compressionmethod=Kraken " +
+                               $"-cryptokeys=\"{cryptoKeysPath}\" " +
+                               $"-compressionMinBytesSaved=1024 " +
+                               $"-compressionMinPercentSaved=5";
+
+            Debug.WriteLine($"[DEBUG]: UnrealPak Configuration Loaded:");
+            Debug.WriteLine($"[DEBUG]: UnrealPak Path: {unrealPakPath}");
+            Debug.WriteLine($"[DEBUG]: Output Path: {finalGlobalOutputPath}");
+            Debug.WriteLine($"[DEBUG]: Cooked Files Path: {cookedFilesPath}");
+            Debug.WriteLine($"[DEBUG]: PackageStore Path: {packageStorePath}");
+            Debug.WriteLine($"[DEBUG]: IoStoreCommands Path: {ioStoreCommandsPath}");
+            Debug.WriteLine($"[DEBUG]: ScriptObjects Path: {scriptObjectsPath}");
+            Debug.WriteLine($"[DEBUG]: Crypto Keys Path: {cryptoKeysPath}");
+            Debug.WriteLine($"[DEBUG]: Arguments: {arguments}");
+
+            await RunUnrealPakAsync(unrealPakPath, arguments, output =>
+            {
+                UpdateCommandOutput(output);
+                RepopulateInputListBox();
+                RepopulateOutputListBox();
+            });
         }
 
         ////////////////////////////
@@ -581,6 +669,68 @@ namespace PakMaster
             }
         }
 
+        // Run UnrealPak helper
+        private async Task RunUnrealPakAsync(string unrealPakPath, string arguments, Action<string> outputCallback)
+        {
+            try
+            {
+                if (string.IsNullOrEmpty(unrealPakPath))
+                {
+                    throw new ArgumentException("UnrealPak path is not provided.");
+                }
+
+                if (!File.Exists(unrealPakPath))
+                {
+                    throw new FileNotFoundException($"UnrealPak executable not found: {unrealPakPath}");
+                }
+
+                string workingDirectory = Path.GetDirectoryName(unrealPakPath);
+                if (string.IsNullOrEmpty(workingDirectory))
+                {
+                    throw new DirectoryNotFoundException("Could not determine the working directory for UnrealPak.");
+                }
+
+                ProcessStartInfo processStartInfo = new ProcessStartInfo
+                {
+                    FileName = unrealPakPath,
+                    Arguments = arguments,
+                    RedirectStandardOutput = true,
+                    RedirectStandardError = true,
+                    UseShellExecute = false,
+                    CreateNoWindow = true,
+                    WorkingDirectory = workingDirectory
+                };
+
+                Process process = new Process { StartInfo = processStartInfo };
+
+                StringBuilder outputBuilder = new StringBuilder();
+
+                process.OutputDataReceived += (sender, e) =>
+                {
+                    if (!string.IsNullOrEmpty(e.Data))
+                        outputBuilder.AppendLine(e.Data);
+                };
+
+                process.ErrorDataReceived += (sender, e) =>
+                {
+                    if (!string.IsNullOrEmpty(e.Data))
+                        outputBuilder.AppendLine(e.Data);
+                };
+
+                process.Start();
+                process.BeginOutputReadLine();
+                process.BeginErrorReadLine();
+
+                await Task.Run(() => process.WaitForExit());
+
+                outputCallback?.Invoke(outputBuilder.ToString());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error running command: {ex.Message}");
+            }
+        }
+
         // Open Crypto.json in user's default app for .json files
         private void OpenCryptoKeysFile(object sender, RoutedEventArgs e)
         {
@@ -658,7 +808,7 @@ namespace PakMaster
         {
             if (isIoStoreMode)
             {
-                await StartUnrealPakRepackAsync();
+                OpenIoStoreFlyout(sender, e);
             }
             else
             {
@@ -666,6 +816,13 @@ namespace PakMaster
             }
         }
 
+        // Event handler for UnrealPak packaging
+        private async void btnIoStorePackage_Click(object sender, RoutedEventArgs e)
+        {
+            await StartUnrealPakRepackAsync();
+        }
+
+        // Update CLI Output
         private void UpdateCommandOutput(string output)
         {
             Application.Current.Dispatcher.Invoke(() =>
