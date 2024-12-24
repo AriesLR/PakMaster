@@ -158,6 +158,8 @@ To set your AES Key, open the AES Key Settings and set your key in the "Repak AE
 - [Narknon](https://github.com/narknon) - For helping me understand how UE Modding works regarding IoStore Files.
   - Link may be wrong, our conversations took place on discord, but I think this is their GitHub.
 
+- [1Armageddon1](https://github.com/1armageddon1) - For being the OG tester for the tool as well as helping give insight on how the tool should work. Wouldn't be nearly as far as I am progress-wise without them.
+
 ## FAQ
 - **Q:** Why not just use UnrealPak for everything?
   - **A:** The reason I don't use UnrealPak to handle everything is to keep the majority of PakMaster lightweight, if Unreal Engine was required for everything the tool would be less accessible.
