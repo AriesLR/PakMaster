@@ -2,10 +2,14 @@
 
 #### Hopefully the ultimate solution to Unreal Engine 5 modding (.pak/.ucas/.utoc)
 
+> [!IMPORTANT]
+> PakMaster assumes you have some knowledge about UE5 modding and Unreal Engine. If you are new to Unreal Engine modding, I suggest starting [here](https://github.com/Dmgvol/UE_Modding/#ue45-modding-guides).
+
 ## Table of Contents
 
 - [How It Works](#how-it-works)
 - [Requirements](#requirements)
+  - [Software](#software)
   - [OS Support](#os-support)
 - [Features](#features)
 - [Planned Features](#planned-features)
@@ -33,8 +37,13 @@ By using PakMaster, users must also adhere to the licenses of Repak and ZenTools
 
 ## Requirements
 
+### Software
+
 - [.NET 8.0 Runtime](https://dotnet.microsoft.com/en-us/download/dotnet/8.0)
   - This is probably already installed on your system.
+
+- [Unreal Engine](https://www.unrealengine.com/en-US/download) v4.25+[^1][^2]
+  - This is only required for IoStore **packing**, unpacking works without it.
 
 ### OS Support
 
@@ -44,7 +53,7 @@ By using PakMaster, users must also adhere to the licenses of Repak and ZenTools
 ## Features
 
 - **Pak File Operations**
-  - **Unpack** the contents of a `.pak` file into a folder.[^1]
+  - **Unpack** the contents of a `.pak` file into a folder.[^3]
   - **Pack** folders into a `.pak` file.
 
 - **IoStore File Unpacking**
@@ -100,7 +109,7 @@ To set your AES Key, open the AES Key Settings and set your key in the "Repak AE
   - Choose a `.pak` file from the **Input** list on the left and click **"Unpack"**.
 
 - **.ucas/.utoc**
-  - Make sure you have an **Input** folder selected and click **Unpack**.[^2]
+  - Make sure you have an **Input** folder selected and click **Unpack**.[^4]
 
 #### Repacking
 
@@ -150,6 +159,10 @@ If any issues do happen, PLEASE report them here first. It is very likely an iss
 
 #
 
-[^1]: From Repak's notes: UnrealPak includes a directory entry in the full directory index for all parent directories back to the pak root for a given file path regardless of whether those directories contain any files or just other directories. Repak only includes directories that contain files. So far no functional differences have been observed as a result
+[^1]: Engine version should match game version, if your game is Unreal Engine 5.1, you should install Unreal Engine 5.1. Some games may work on similar versions, for example Stalker 2 at the time of writing this seems to work with either UE 5.1 or UE 5.1.1.
 
-[^2]: If unpacking a mod or group of files only have that mod or group's files in the folder - this will unpack all IoStore assets in the folder that you selected. For example, have only ExampleMod.ucas/ExampleMod.utoc in the folder.
+[^2]: While PakMaster only officially supports UE5+, IoStore packing should work for any engine versions higher than or equal to UE 4.25.
+
+[^3]: From Repak's notes: UnrealPak includes a directory entry in the full directory index for all parent directories back to the pak root for a given file path regardless of whether those directories contain any files or just other directories. Repak only includes directories that contain files. So far no functional differences have been observed as a result
+
+[^4]: If unpacking a mod or group of files only have that mod or group's files in the folder - this will unpack all IoStore assets in the folder that you selected. For example, have only ExampleMod.pak/ExampleMod.ucas/ExampleMod.utoc in the folder.
