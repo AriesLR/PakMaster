@@ -388,7 +388,7 @@ namespace PakMaster
 
             if (isIoStoreMode)
             {
-                openFileDialog.Filter = "IoStore Files (*.ucas, *.utoc)|*.ucas;*.utoc";
+                openFileDialog.Filter = "IoStore Files (*.pak, *.ucas, *.utoc)|*.pak;*.ucas;*.utoc";
             }
             else
             {
@@ -405,10 +405,12 @@ namespace PakMaster
 
                     if (isIoStoreMode)
                     {
-                        files = Directory.GetFiles(inputFolderPath, "*.ucas")
+                        files = Directory.GetFiles(inputFolderPath, "*.pak")
+                            .Concat(Directory.GetFiles(inputFolderPath, "*.ucas"))
                             .Concat(Directory.GetFiles(inputFolderPath, "*.utoc"))
                             .Select(filePath => new KeyValuePair<string, string>(Path.GetFileName(filePath), filePath))
                             .ToList();
+
                     }
                     else
                     {
@@ -840,6 +842,9 @@ namespace PakMaster
 
                 if (isIoStoreMode)
                 {
+                    files.AddRange(Directory.GetFiles(inputFolderPath, "*.pak")
+                        .Select(filePath => new KeyValuePair<string, string>(Path.GetFileName(filePath), filePath)));
+
                     files.AddRange(Directory.GetFiles(inputFolderPath, "*.ucas")
                         .Select(filePath => new KeyValuePair<string, string>(Path.GetFileName(filePath), filePath)));
 
