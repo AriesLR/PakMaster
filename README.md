@@ -122,6 +122,9 @@ To set your AES Key, open the AES Key Settings and set your key in the "Repak AE
 
 ## Screenshots
 
+> [!NOTE]
+> Screenshots are outdated. I will update these in the morning, it's 4:36am at the time of writing this.
+
 ![PakMaster Main Window](https://raw.githubusercontent.com/AriesLR/PakMaster/refs/heads/main/docs/images/pakmaster-main.png)
 
 ![PakMaster AES Key Settings](https://raw.githubusercontent.com/AriesLR/PakMaster/refs/heads/main/docs/images/pakmaster-aeskeys.png)
