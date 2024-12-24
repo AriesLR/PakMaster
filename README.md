@@ -14,11 +14,12 @@
 - [Features](#features)
 - [Planned Features](#planned-features)
 - [Known Issues](#known-issues)
-- [Getting Started](#getting-started)
+- [Installation](#installation)
   - [How To Use](#how-to-use)
     - [AES Key](#aes-key)
     - [Unpacking](#unpacking)
     - [Repacking](#repacking)
+- [Updating](#updating)
 - [Screenshots](#screenshots)
 - [Tools Used](#tools-used)
 - [Acknowledgements](#acknowledgements)
@@ -84,7 +85,7 @@ By using PakMaster, users must also adhere to the licenses of Repak and ZenTools
 
 - None, see [Issues](#issues) if you find any.
 
-## Getting Started
+## Installation
 
 To get started with **PakMaster**, download the [Latest Release](https://github.com/AriesLR/PakMaster/releases/latest). Once downloaded, extract the contents of `PakMaster-x86-windows-portable.zip`. This will create a `PakMaster` folder, which you can place anywhere on your computer.
 
@@ -120,6 +121,16 @@ To set your AES Key, open the AES Key Settings and set your key in the "Repak AE
 - **IoStore Files**[^5]
   - Switch to IoStore Mode and click **Repack** configure your file paths as needed and then click **Pack**
     - This will require you to have above average knowledge. [This](https://www.youtube.com/watch?v=89s0akNvpU4) might be a good place to start.
+
+## Updating
+
+To update **PakMaster**, download the [Latest Release](https://github.com/AriesLR/PakMaster/releases/latest) and follow the same installation steps:
+
+1. Extract the contents of the `PakMaster-x86-windows-portable.zip`.
+2. Replace the existing files in your `PakMaster` folder with the newly downloaded ones.
+
+Your configuration files and settings will be preserved during the update process.
+
 
 ## Screenshots
 
