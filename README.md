@@ -142,6 +142,16 @@ To set your AES Key, open the AES Key Settings and set your key in the "Repak AE
     - [jieyouxu](https://github.com/jieyouxu) - (Used by Repak) for serialization implementation of the significantly more complex V11 index.
 
 - [ZenTools](https://github.com/LongerWarrior/ZenTools) - For the Tools for extracting cooked packages from the IoStore container files.
+  - [LongerWarrior](https://github.com/LongerWarrior/) - Special thanks to LongerWarrior for maintaining ZenTools.
+
+- [Buckminsterfullerene02](https://github.com/Buckminsterfullerene02/) - For the [UE Modding Tools](https://github.com/Buckminsterfullerene02/UE-Modding-Tools/) databank and contributing to the [UE Modding Guide](https://github.com/Dmgvol/UE_Modding#ue45-modding-guides).
+  - [elbadcode](https://github.com/elbadcode) - For contributing to the UE Modding Tools databank.
+  - [spuds](https://github.com/bananaturtlesandwich) - For contributing to the UE Modding Tools databank.
+
+- [Dmgvol](https://github.com/Dmgvol/) - For the [UE Modding Guide](https://github.com/Dmgvol/UE_Modding#ue45-modding-guides).
+
+- [Narknon](https://github.com/narknon) - For helping me understand how UE Modding works regarding IoStore Files.
+  - Link may be wrong, our conversations took place on discord, but I think this is their GitHub.
 
 ## License
 
