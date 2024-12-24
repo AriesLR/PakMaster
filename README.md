@@ -123,12 +123,17 @@ To set your AES Key, open the AES Key Settings and set your key in the "Repak AE
 
 ## Screenshots
 
-> [!NOTE]
-> Screenshots are outdated. I will update these in the morning, it's 4:36am at the time of writing this.
+### Normal Mode Unpacking
+![Normal Mode Unpacking](https://raw.githubusercontent.com/AriesLR/PakMaster/refs/heads/main/docs/images/pakmaster-normal-unpack.png)
 
-![PakMaster Main Window](https://raw.githubusercontent.com/AriesLR/PakMaster/refs/heads/main/docs/images/pakmaster-main.png)
+### Normal Mode Packing
+![Normal Mode Repacking](https://raw.githubusercontent.com/AriesLR/PakMaster/refs/heads/main/docs/images/pakmaster-normal-repack.png)
 
-![PakMaster AES Key Settings](https://raw.githubusercontent.com/AriesLR/PakMaster/refs/heads/main/docs/images/pakmaster-aeskeys.png)
+### IoStore Mode Unpacking
+![IoStore Mode Unpacking](https://raw.githubusercontent.com/AriesLR/PakMaster/refs/heads/main/docs/images/pakmaster-iostore-unpack.png)
+
+### IoStore Mode Packing
+![IoStore Mode Repacking](https://raw.githubusercontent.com/AriesLR/PakMaster/refs/heads/main/docs/images/pakmaster-iostore-repack.png)
 
 ## Tools Used
 
