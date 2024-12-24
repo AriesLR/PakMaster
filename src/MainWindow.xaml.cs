@@ -267,13 +267,14 @@ namespace PakMaster
         }
 
         /////////////////////////
-        // UNREALREZEN SECTION //
+        // UNREALPAK SECTION //
         /////////////////////////
 
-        // Start Repack with UnrealReZen (.ucas/.utoc)
-        private async Task StartUnrealReZenRepackAsync()
+        // Start Repack with UnrealPak (.ucas/.utoc)
+        private async Task StartUnrealPakRepackAsync()
         {
-            MessageBox.Show("IoStore file repacking is not supported yet.");
+            //OpenIoStoreFlyout(this, new RoutedEventArgs());
+            //MessageBox.Show("IoStore file repacking is not supported yet.");
         }
 
         ////////////////////////////
@@ -362,6 +363,162 @@ namespace PakMaster
 
                     OutputFilesListBox.ItemsSource = subdirectories;
                 }
+            }
+        }
+
+        // Browse UnrealPak executable
+        private void BrowseUnrealPakPath(object sender, RoutedEventArgs e)
+        {
+            var dialog = new OpenFileDialog
+            {
+                Filter = "UnrealPak.exe|UnrealPak.exe|All Files (*.*)|*.*",
+                Title = "Select UnrealPak Executable"
+            };
+
+            var config = _configService.LoadUnrealPakConfig<dynamic>();
+            string lastPath = config?.UnrealPakPath ?? string.Empty;
+            if (!string.IsNullOrEmpty(lastPath))
+            {
+                dialog.InitialDirectory = Path.GetDirectoryName(lastPath);
+            }
+
+            if (dialog.ShowDialog() == true)
+            {
+                config.UnrealPakPath = dialog.FileName;
+                _configService.SaveUnrealPakConfig(config);
+                UnrealPakPathTextBox.Text = dialog.FileName;
+            }
+        }
+
+        // Browse global output path
+        private void BrowseGlobalOutputPath(object sender, RoutedEventArgs e)
+        {
+            var dialog = new OpenFileDialog
+            {
+                Title = "Select global.utoc Output Folder",
+                CheckFileExists = false,
+                CheckPathExists = true,
+                FileName = "Folder Selection"
+            };
+
+            var config = _configService.LoadUnrealPakConfig<dynamic>();
+            string lastPath = config?.GlobalOutputPath ?? string.Empty;
+            if (!string.IsNullOrEmpty(lastPath))
+            {
+                dialog.InitialDirectory = lastPath;
+            }
+
+            if (dialog.ShowDialog() == true)
+            {
+                string selectedPath = Path.GetDirectoryName(dialog.FileName);
+                if (!string.IsNullOrEmpty(selectedPath))
+                {
+                    config.GlobalOutputPath = selectedPath;
+                    _configService.SaveUnrealPakConfig(config);
+                    GlobalOutputPathTextBox.Text = selectedPath;
+                }
+            }
+        }
+
+        // Browse cooked files path
+        private void BrowseCookedFilesPath(object sender, RoutedEventArgs e)
+        {
+            var dialog = new OpenFileDialog
+            {
+                Title = "Select Folder Containing Cooked Files",
+                CheckFileExists = false,
+                CheckPathExists = true,
+                FileName = "Folder Selection"
+            };
+
+            var config = _configService.LoadUnrealPakConfig<dynamic>();
+            string lastPath = config?.CookedFilesPath ?? string.Empty;
+            if (!string.IsNullOrEmpty(lastPath))
+            {
+                dialog.InitialDirectory = lastPath;
+            }
+
+            if (dialog.ShowDialog() == true)
+            {
+                string selectedPath = Path.GetDirectoryName(dialog.FileName);
+                if (!string.IsNullOrEmpty(selectedPath))
+                {
+                    config.CookedFilesPath = selectedPath;
+                    _configService.SaveUnrealPakConfig(config);
+                    CookedFilesPathTextBox.Text = selectedPath;
+                }
+            }
+        }
+
+        // Browse packagestore.manifest path
+        private void BrowsePackageStorePath(object sender, RoutedEventArgs e)
+        {
+            var dialog = new OpenFileDialog
+            {
+                Filter = "packagestore.manifest|packagestore.manifest|All Files (*.*)|*.*",
+                Title = "Select packagestore.manifest File"
+            };
+
+            var config = _configService.LoadUnrealPakConfig<dynamic>();
+            string lastPath = config?.PackageStorePath ?? string.Empty;
+            if (!string.IsNullOrEmpty(lastPath))
+            {
+                dialog.InitialDirectory = Path.GetDirectoryName(lastPath);
+            }
+
+            if (dialog.ShowDialog() == true)
+            {
+                config.PackageStorePath = dialog.FileName;
+                _configService.SaveUnrealPakConfig(config);
+                PackageStorePathTextBox.Text = dialog.FileName;
+            }
+        }
+
+        // Browse ScriptObjects.bin path
+        private void BrowseScriptObjectsPath(object sender, RoutedEventArgs e)
+        {
+            var dialog = new OpenFileDialog
+            {
+                Filter = "ScriptObjects.bin|ScriptObjects.bin|All Files (*.*)|*.*",
+                Title = "Select ScriptObjects.bin File"
+            };
+
+            var config = _configService.LoadUnrealPakConfig<dynamic>();
+            string lastPath = config?.ScriptObjectsPath ?? string.Empty;
+            if (!string.IsNullOrEmpty(lastPath))
+            {
+                dialog.InitialDirectory = Path.GetDirectoryName(lastPath);
+            }
+
+            if (dialog.ShowDialog() == true)
+            {
+                config.ScriptObjectsPath = dialog.FileName;
+                _configService.SaveUnrealPakConfig(config);
+                ScriptObjectsPathTextBox.Text = dialog.FileName;
+            }
+        }
+
+        // Browse IoStoreCommands.txt path
+        private void BrowseIoStoreCommandsPath(object sender, RoutedEventArgs e)
+        {
+            var dialog = new OpenFileDialog
+            {
+                Filter = "IoStoreCommands.txt|IoStoreCommands.txt|All Files (*.*)|*.*",
+                Title = "Select IoStoreCommands.txt File"
+            };
+
+            var config = _configService.LoadUnrealPakConfig<dynamic>();
+            string lastPath = config?.IoStoreCommandsPath ?? string.Empty;
+            if (!string.IsNullOrEmpty(lastPath))
+            {
+                dialog.InitialDirectory = Path.GetDirectoryName(lastPath);
+            }
+
+            if (dialog.ShowDialog() == true)
+            {
+                config.IoStoreCommandsPath = dialog.FileName;
+                _configService.SaveUnrealPakConfig(config);
+                IoStoreCommandsPathTextBox.Text = dialog.FileName;
             }
         }
 
@@ -464,7 +621,7 @@ namespace PakMaster
         {
             if (isIoStoreMode)
             {
-                await StartUnrealReZenRepackAsync();
+                await StartUnrealPakRepackAsync();
             }
             else
             {
@@ -514,6 +671,17 @@ namespace PakMaster
                     .ToList();
 
                 OutputFilesListBox.ItemsSource = subdirectories;
+            }
+        }
+
+        // Open IoStore Flyout
+        private void OpenIoStoreFlyout(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is MainWindowViewModel viewModel)
+            {
+                viewModel.OpenIoStoreFlyout();
+                // Load configs related to IoStore, add this logic later.
+                //LoadAesKeys();
             }
         }
 

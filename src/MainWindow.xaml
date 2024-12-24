@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PakMaster"
         Title="PakMaster"
@@ -72,6 +73,7 @@
             <!-- AES Key Flyout Control -->
             <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
                 <Button Content="AES Key Settings" FontSize="12" FontWeight="SemiBold" Width="180" Height="30" Margin="5" Click="OpenAesKeysFlyout"/>
+                <Button Content="TEST" FontSize="12" FontWeight="SemiBold" Width="180" Height="30" Margin="5" Click="OpenIoStoreFlyout"/>
             </StackPanel>
 
             <!-- Pack/Unpack Buttons Section -->
@@ -110,7 +112,7 @@
                         <ColumnDefinition Width="150" />
                     </Grid.ColumnDefinitions>
 
-                    <TextBlock Text=".pak" Height="21" FontSize="16" FontWeight="SemiBold" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="20" Grid.Column="0" />
+                    <TextBlock Text="Normal Mode" Height="21" FontSize="16" FontWeight="SemiBold" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="20" Grid.Column="0" />
 
                     <mah:ToggleSwitch x:Name="FileTypeToggleSwitch"
                           Toggled="ToggleSwitch_Toggled"
@@ -121,7 +123,7 @@
                           Grid.Column="1"
                           FontSize="18"/>
 
-                    <TextBlock Text=".ucas/.utoc" Height="25" FontSize="16" FontWeight="SemiBold" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15" Grid.Column="2" />
+                    <TextBlock Text="IoStore Mode" Height="25" FontSize="16" FontWeight="SemiBold" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15" Grid.Column="2" />
                 </Grid>
             </StackPanel>
         </Grid>
@@ -142,9 +144,65 @@
         </StackPanel>
     </Grid>
 
-    <!-- AES Key Flyout -->
+    <!-- Flyouts Section -->
     <mah:MetroWindow.Flyouts>
         <mah:FlyoutsControl>
+            <!-- IoStore Flyout -->
+            <mah:Flyout x:Name="IoStoreFlyout" 
+            Header="IoStore Packing" 
+            Position="Left"
+            Width="1271"
+            IsOpen="{Binding IsIoStoreFlyoutOpen}">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="600" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Left Column -->
+                    <StackPanel Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
+                        <!-- UnrealPak Path -->
+                        <TextBlock Text="Path to UnrealPak" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
+                        <TextBox Name="UnrealPakPathTextBox" Width="500" Margin="5" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="C:\Program Files\Epic Games\UE_5.1\Engine\Binaries\Win64\UnrealPak.exe" />
+                        <Button Content="Browse" Width="75" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseUnrealPakPath" />
+
+                        <!-- Output Path -->
+                        <TextBlock Text="Output path for global.utoc" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
+                        <TextBox Name="GlobalOutputPathTextBox" Width="500" Margin="5" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="C:\Path\To\Output" />
+                        <Button Content="Browse" Width="75" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseGlobalOutputPath" />
+
+                        <!-- Input Path -->
+                        <TextBlock Text="Path to cooked files to be packaged" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
+                        <TextBox Name="CookedFilesPathTextBox" Width="500" Margin="5" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="C:\Path\To\Cooked" />
+                        <Button Content="Browse" Width="75" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseCookedFilesPath" />
+
+                        <!-- Packagestore.manigest Path -->
+                        <TextBlock Text="Path to packagestore.manifest" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
+                        <TextBox Name="PackageStorePathTextBox" Width="500" Margin="5" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="packagestore.manifest" />
+                        <Button Content="Browse" Width="75" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowsePackageStorePath" />
+
+                        <!-- ScriptObjects.bin Path -->
+                        <TextBlock Text="Path to ScriptObjects.bin" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
+                        <TextBox Name="ScriptObjectsPathTextBox" Width="500" Margin="5" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="ScriptObjects.bin" />
+                        <Button Content="Browse" Width="75" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseScriptObjectsPath" />
+
+                        <!-- IoStoreCommands.txt Path -->
+                        <TextBlock Text="Path to IoStoreCommands.txt" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
+                        <TextBox Name="IoStoreCommandsPathTextBox" Width="500" Margin="5" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="IoStoreCommands.txt" />
+                        <Button Content="Browse" Width="75" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseIoStoreCommandsPath" />
+                    </StackPanel>
+
+                    <!-- Middle Column -->
+                    <StackPanel Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
+                    </StackPanel>
+
+                    <!-- Right Column -->
+                    <StackPanel Grid.Column="2" Visibility="Collapsed"/>
+                </Grid>
+            </mah:Flyout>
+
+            <!-- Aes Keys Flyout -->
             <mah:Flyout x:Name="AesKeysFlyout" 
                     Header="AES Key Settings" 
                     Position="Left"

@@ -6,6 +6,27 @@ namespace PakMaster.Resources.ViewModels
     public class MainWindowViewModel : INotifyPropertyChanged
     {
         private bool _isAesKeysFlyoutOpen;
+        private bool _isIoStoreFlyoutOpen;
+
+        // IoStore Packing Flyout
+        public bool IsIoStoreFlyoutOpen
+        {
+            get => _isIoStoreFlyoutOpen;
+            set
+            {
+                if (_isIoStoreFlyoutOpen != value)
+                {
+                    _isIoStoreFlyoutOpen = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        // Toggle IoStore Packing Flyout to Open (true)
+        public void OpenIoStoreFlyout()
+        {
+            IsIoStoreFlyoutOpen = true;
+        }
 
         // AesKeys Flyout
         public bool IsAesKeysFlyoutOpen

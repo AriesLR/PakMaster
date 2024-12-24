@@ -133,7 +133,6 @@ namespace PakMaster.Resources.Functions.Services
             Debug.WriteLine("[DEBUG]: Default UnrealPak Crypto config created.");
         }
 
-
         ///////////////////////////
         // LOAD SPECIFIC CONFIGS //
         /////////////////////////// 
@@ -199,7 +198,7 @@ namespace PakMaster.Resources.Functions.Services
         }
 
         ///////////////////////
-        // SAVE/LOAD HELPERS //
+        // LOAD/SAVE HELPERS //
         ///////////////////////
 
         // Load Config Helper
