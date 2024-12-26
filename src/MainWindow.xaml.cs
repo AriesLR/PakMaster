@@ -22,27 +22,27 @@ namespace PakMaster
             InitializeComponent();
             DataContext = new MainWindowViewModel();
             _configService = new ConfigService();
-            LoadAesKeys();
+            LoadAesKeysAsync();
         }
 
         // Open PakMaster's GitHub Repo in the user's default browser 
         private void LaunchBrowserGitHubPakMaster(object sender, RoutedEventArgs e)
         {
-            UrlService.OpenUrl("https://github.com/AriesLR/PakMaster");
+            UrlService.OpenUrlAsync("https://github.com/AriesLR/PakMaster");
         }
 
         // Check for updates via json
-        private async void CheckForUpdatesPakMaster(object sender, RoutedEventArgs e)
+        private async void CheckForUpdatesPakMasterAsync(object sender, RoutedEventArgs e)
         {
-            await UpdateService.CheckJsonForUpdates("https://raw.githubusercontent.com/AriesLR/PakMaster/refs/heads/main/docs/version/update.json");
+            await UpdateService.CheckJsonForUpdatesAsync("https://raw.githubusercontent.com/AriesLR/PakMaster/refs/heads/main/docs/version/update.json");
         }
 
         // Load UnrealPak Config
-        private void LoadUnrealPakConfig()
+        private async void LoadUnrealPakConfigAsync()
         {
             try
             {
-                var unrealPakConfig = _configService.LoadUnrealPakConfig<Dictionary<string, string>>();
+                var unrealPakConfig = _configService.LoadUnrealPakConfigAsync<Dictionary<string, string>>();
 
                 string unrealPakPath = unrealPakConfig?.ContainsKey("UnrealPakPath") ?? false ? unrealPakConfig["UnrealPakPath"] : string.Empty;
                 string globalOutputPath = unrealPakConfig?.ContainsKey("GlobalOutputPath") ?? false ? unrealPakConfig["GlobalOutputPath"] : string.Empty;
@@ -60,7 +60,7 @@ namespace PakMaster
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error loading UnrealPak config: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                await MessageService.ShowError($"Error loading UnrealPak config: {ex.Message}");
             }
         }
 
@@ -69,7 +69,7 @@ namespace PakMaster
         /////////////////////
 
         // Load AES Key
-        private void LoadAesKeys()
+        private async void LoadAesKeysAsync()
         {
             try
             {
@@ -87,37 +87,37 @@ namespace PakMaster
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error loading config: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                await MessageService.ShowError($"Error loading config: {ex.Message}");
             }
         }
 
         // Save Repak AES Key
-        private void SaveRepakConfig(object sender, RoutedEventArgs e)
+        private async void SaveRepakConfigAsync(object sender, RoutedEventArgs e)
         {
             string aesKey = AesKeyTextBox.Text.Trim();
 
             var config = new { AesKey = aesKey };
 
-            _configService.SaveRepakConfig(config);
+            _configService.SaveRepakConfigAsync(config);
 
-            MessageBox.Show("Repak configuration saved successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+            await MessageService.ShowInfo("Success", "Repak configuration saved successfully!");
         }
 
         // Save ZenTools AES Key
-        private void SaveZenToolsConfig(object sender, RoutedEventArgs e)
+        private async void SaveZenToolsConfigAsync(object sender, RoutedEventArgs e)
         {
             try
             {
                 string zenToolsKeyGuid = ZenToolsKeyGuidTextBox.Text.Trim();
                 string zenToolsKeyHex = ZenToolsKeyHexTextBox.Text.Trim();
 
-                _configService.SaveZenToolsConfig(zenToolsKeyGuid, zenToolsKeyHex);
+                _configService.SaveZenToolsConfigAsync(zenToolsKeyGuid, zenToolsKeyHex);
 
-                MessageBox.Show("ZenTools configuration saved successfully!", "Success", MessageBoxButton.OK, MessageBoxImage.Information);
+                await MessageService.ShowInfo("Success", "ZenTools configuration saved successfully!");
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error saving ZenTools config: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                await MessageService.ShowError($"Error saving ZenTools config: {ex.Message}");
             }
         }
 
@@ -145,7 +145,7 @@ namespace PakMaster
 
             if (selectedInputFile == null)
             {
-                MessageBox.Show("Please select a file to unpack.");
+                await MessageService.ShowWarning("Please select a file to unpack.");
                 return;
             }
 
@@ -154,13 +154,13 @@ namespace PakMaster
 
             if (string.IsNullOrEmpty(fullInputFilePath))
             {
-                MessageBox.Show("Invalid file path.");
+                await MessageService.ShowWarning("Invalid file path.");
                 return;
             }
 
             if (string.IsNullOrEmpty(outputFolderPath))
             {
-                MessageBox.Show("Please select an output folder.");
+                await MessageService.ShowWarning("Please select an output folder.");
                 return;
             }
 
@@ -185,7 +185,7 @@ namespace PakMaster
 
             if (selectedInputFolder == null)
             {
-                MessageBox.Show("Please select an input folder to repack.");
+                await MessageService.ShowWarning("Please select an input folder to repack.");
                 return;
             }
 
@@ -193,13 +193,13 @@ namespace PakMaster
 
             if (!Directory.Exists(fullInputFolderPath))
             {
-                MessageBox.Show($"The selected folder does not exist: {fullInputFolderPath}");
+                await MessageService.ShowWarning($"The selected folder does not exist: {fullInputFolderPath}");
                 return;
             }
 
             if (string.IsNullOrEmpty(inputFolderPath))
             {
-                MessageBox.Show("Please browse and select an input folder first.");
+                await MessageService.ShowWarning("Please browse and select an input folder first.");
                 return;
             }
 
@@ -207,7 +207,7 @@ namespace PakMaster
 
             if (string.IsNullOrEmpty(folderName))
             {
-                MessageBox.Show("Invalid input folder name.");
+                await MessageService.ShowWarning("Invalid input folder name.");
                 return;
             }
 
@@ -238,7 +238,7 @@ namespace PakMaster
 
             if (zentoolsConfig == null || zentoolsConfig.Count == 0)
             {
-                MessageBox.Show("ZenTools AES Key configuration is missing or empty.");
+                await MessageService.ShowError("ZenTools AES Key configuration is missing or empty.");
                 return;
             }
 
@@ -247,7 +247,7 @@ namespace PakMaster
 
             if (string.IsNullOrEmpty(zenToolsKeyGuid))
             {
-                MessageBox.Show("ZenTools AES Key (GUID) not found in the config.\n\nThe GUID cannot be left blank.\n\nDefault GUID: 00000000-0000-0000-0000-000000000000");
+                await MessageService.ShowError("ZenTools AES Key (GUID) not found in the config.\n\nThe GUID cannot be left blank.\n\nDefault GUID: 00000000-0000-0000-0000-000000000000");
                 return;
             }
             else
@@ -262,12 +262,12 @@ namespace PakMaster
 
             if (string.IsNullOrEmpty(inputFolderPath))
             {
-                MessageBox.Show("Pleaase select an input folder.");
+                await MessageService.ShowWarning("Please select an input folder.");
             }
 
             if (string.IsNullOrEmpty(outputFolderPath))
             {
-                MessageBox.Show("Please select an output folder.");
+                await MessageService.ShowWarning("Please select an output folder.");
                 return;
             }
 
@@ -305,11 +305,11 @@ namespace PakMaster
         // Start Packing with UnrealPak
         private async Task StartUnrealPakRepackAsync()
         {
-            var unrealPakConfig = _configService.LoadUnrealPakConfig<Dictionary<string, string>>();
+            var unrealPakConfig = _configService.LoadUnrealPakConfigAsync<Dictionary<string, string>>();
 
             if (unrealPakConfig == null || unrealPakConfig.Count == 0)
             {
-                MessageBox.Show("UnrealPak configuration is missing or empty.");
+                await MessageService.ShowError("UnrealPak configuration is missing or empty.");
                 return;
             }
 
@@ -322,37 +322,37 @@ namespace PakMaster
 
             if (string.IsNullOrEmpty(unrealPakPath) || !File.Exists(unrealPakPath))
             {
-                MessageBox.Show("UnrealPak executable path is missing or invalid.");
+                await MessageService.ShowWarning("UnrealPak executable path is missing or invalid.");
                 return;
             }
 
             if (string.IsNullOrEmpty(globalOutputPath))
             {
-                MessageBox.Show("Please specify an output path.");
+                await MessageService.ShowWarning("Please specify an output path.");
                 return;
             }
 
             if (string.IsNullOrEmpty(cookedFilesPath) || !Directory.Exists(cookedFilesPath))
             {
-                MessageBox.Show("Cooked files path is missing or invalid.");
+                await MessageService.ShowWarning("Cooked files path is missing or invalid.");
                 return;
             }
 
             if (string.IsNullOrEmpty(packageStorePath) || !File.Exists(packageStorePath))
             {
-                MessageBox.Show("PackageStore.manifest path is missing or invalid.");
+                await MessageService.ShowWarning("PackageStore.manifest path is missing or invalid.");
                 return;
             }
 
             if (string.IsNullOrEmpty(scriptObjectsPath) || !File.Exists(scriptObjectsPath))
             {
-                MessageBox.Show("ScriptObjects.bin path is missing or invalid.");
+                await MessageService.ShowWarning("ScriptObjects.bin path is missing or invalid.");
                 return;
             }
 
             if (string.IsNullOrEmpty(ioStoreCommandsPath) || !File.Exists(ioStoreCommandsPath))
             {
-                MessageBox.Show("IoStoreCommands.txt path is missing or invalid.");
+                await MessageService.ShowWarning("IoStoreCommands.txt path is missing or invalid.");
                 return;
             }
 
@@ -492,7 +492,7 @@ namespace PakMaster
                 Title = "Select UnrealPak Executable"
             };
 
-            var config = _configService.LoadUnrealPakConfig<dynamic>();
+            var config = _configService.LoadUnrealPakConfigAsync<dynamic>();
             string lastPath = config?.UnrealPakPath ?? string.Empty;
             if (!string.IsNullOrEmpty(lastPath))
             {
@@ -518,7 +518,7 @@ namespace PakMaster
                 FileName = "Folder Selection"
             };
 
-            var config = _configService.LoadUnrealPakConfig<dynamic>();
+            var config = _configService.LoadUnrealPakConfigAsync<dynamic>();
             string lastPath = config?.GlobalOutputPath ?? string.Empty;
             if (!string.IsNullOrEmpty(lastPath))
             {
@@ -548,7 +548,7 @@ namespace PakMaster
                 FileName = "Folder Selection"
             };
 
-            var config = _configService.LoadUnrealPakConfig<dynamic>();
+            var config = _configService.LoadUnrealPakConfigAsync<dynamic>();
             string lastPath = config?.CookedFilesPath ?? string.Empty;
             if (!string.IsNullOrEmpty(lastPath))
             {
@@ -576,7 +576,7 @@ namespace PakMaster
                 Title = "Select Package Store File"
             };
 
-            var config = _configService.LoadUnrealPakConfig<dynamic>();
+            var config = _configService.LoadUnrealPakConfigAsync<dynamic>();
             string lastPath = config?.PackageStorePath ?? string.Empty;
             if (!string.IsNullOrEmpty(lastPath))
             {
@@ -600,7 +600,7 @@ namespace PakMaster
                 Title = "Select ScriptObjects.bin File"
             };
 
-            var config = _configService.LoadUnrealPakConfig<dynamic>();
+            var config = _configService.LoadUnrealPakConfigAsync<dynamic>();
             string lastPath = config?.ScriptObjectsPath ?? string.Empty;
             if (!string.IsNullOrEmpty(lastPath))
             {
@@ -624,7 +624,7 @@ namespace PakMaster
                 Title = "Select Commands.txt File"
             };
 
-            var config = _configService.LoadUnrealPakConfig<dynamic>();
+            var config = _configService.LoadUnrealPakConfigAsync<dynamic>();
             string lastPath = config?.IoStoreCommandsPath ?? string.Empty;
             if (!string.IsNullOrEmpty(lastPath))
             {
@@ -694,7 +694,7 @@ namespace PakMaster
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error running command: {ex.Message}");
+                await MessageService.ShowError($"Error running command: {ex.Message}");
             }
         }
 
@@ -756,22 +756,18 @@ namespace PakMaster
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error running command: {ex.Message}");
+                await MessageService.ShowError($"Error running command: {ex.Message}");
             }
         }
 
         // Open Crypto.json in user's default app for .json files
-        private void OpenCryptoKeysFile(object sender, RoutedEventArgs e)
+        private async void OpenCryptoKeysFileAsync(object sender, RoutedEventArgs e)
         {
             try
             {
-                var result = MessageBox.Show(
-                    "Are you sure you want to open Crypto.json?\n\nOnly edit this file if you know what you're doing.",
-                    "Warning",
-                    MessageBoxButton.YesNo,
-                    MessageBoxImage.Warning);
+                bool userConfirmed = await MessageService.ShowYesNo("Warning", "Are you sure you want to open Crypto.json?\n\nOnly edit this file if you know what you're doing.");
 
-                if (result == MessageBoxResult.Yes)
+                if (userConfirmed)
                 {
                     string appDirectory = AppDomain.CurrentDomain.BaseDirectory;
                     string filePath = Path.Combine(appDirectory, "configs", "Crypto.json");
@@ -786,13 +782,13 @@ namespace PakMaster
                     }
                     else
                     {
-                        MessageBox.Show("Crypto.json file not found!", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                        await MessageService.ShowError("Crypto.json file not found!");
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error opening file: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                await MessageService.ShowError($"Error opening file: {ex.Message}");
             }
         }
 
@@ -821,7 +817,7 @@ namespace PakMaster
         }
 
         // Event handlers for unpacking and repacking, checks if toggle is on or off
-        private async void btnUnpack_Click(object sender, RoutedEventArgs e)
+        private async void btnUnpack_ClickAsync(object sender, RoutedEventArgs e)
         {
             if (isIoStoreMode)
             {
@@ -833,11 +829,10 @@ namespace PakMaster
             }
         }
 
-        private async void btnRepack_Click(object sender, RoutedEventArgs e)
+        private async void btnRepack_ClickAsync(object sender, RoutedEventArgs e)
         {
             if (isIoStoreMode)
             {
-                LoadUnrealPakConfig();
                 OpenIoStoreFlyout(sender, e);
             }
             else
@@ -847,7 +842,7 @@ namespace PakMaster
         }
 
         // Event handler for UnrealPak packaging
-        private async void btnIoStorePackage_Click(object sender, RoutedEventArgs e)
+        private async void btnIoStorePackage_ClickAsync(object sender, RoutedEventArgs e)
         {
             await StartUnrealPakRepackAsync();
         }
@@ -908,8 +903,7 @@ namespace PakMaster
             if (DataContext is MainWindowViewModel viewModel)
             {
                 viewModel.OpenIoStoreFlyout();
-                // Load configs related to IoStore, add this logic later.
-                //LoadAesKeys();
+                LoadUnrealPakConfigAsync(); // Load config for unrealpak paths
             }
         }
 
@@ -919,7 +913,17 @@ namespace PakMaster
             if (DataContext is MainWindowViewModel viewModel)
             {
                 viewModel.OpenAesKeysFlyout();
-                LoadAesKeys(); // Load again here in case user changes the values via the config directly.
+                LoadAesKeysAsync(); // Load again here in case user changes the values via the config directly.
+            }
+        }
+
+        // Open Settings Flyout WIP
+        private void OpenSettingsFlyout(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is MainWindowViewModel viewModel)
+            {
+                viewModel.OpenSettingsFlyout();
+                //Probably load some things here
             }
         }
     }

@@ -8,14 +8,14 @@ namespace PakMaster
     {
         private ConfigService _configService;
 
-        private async void AppStartup(object sender, StartupEventArgs e)
+        private async void AppStartupAsync(object sender, StartupEventArgs e)
         {
             _configService = new ConfigService();
             _configService.EnsureConfigsExist();
 
             Debug.WriteLine("[DEBUG]: Checking for updates in the background.");
             await Task.Delay(1500);
-            await UpdateService.CheckJsonForUpdatesSilent("https://raw.githubusercontent.com/AriesLR/PakMaster/refs/heads/main/docs/version/update.json");
+            await UpdateService.CheckJsonForUpdatesAsyncSilent("https://raw.githubusercontent.com/AriesLR/PakMaster/refs/heads/main/docs/version/update.json");
 
             bool repakDownload = false;
             bool repakDownloaded = false;
@@ -26,14 +26,9 @@ namespace PakMaster
             // Check if repak.exe exists in bin/repak
             if (!DependenciesService.CheckIfDependencyExists("repak", "repak.exe"))
             {
-                var result = MessageBox.Show(
-                    "Repak is missing.\n\nWould you like to download it now?",
-                    "Dependency Manager",
-                    MessageBoxButton.YesNo,
-                    MessageBoxImage.Question
-                );
+                bool userConfirmed = await MessageService.ShowYesNo("Dependency Manager", "Repak is missing.\n\nWould you like to download it now?");
 
-                if (result == MessageBoxResult.Yes)
+                if (userConfirmed)
                 {
                     repakDownload = true;
                 }
@@ -50,14 +45,9 @@ namespace PakMaster
             // Check if zentools.exe exists in bin/zentools
             if (!DependenciesService.CheckIfDependencyExists("zentools", "ZenTools.exe"))
             {
-                var result = MessageBox.Show(
-                    "ZenTools is missing.\n\nWould you like to download it now?",
-                    "Dependency Manager",
-                    MessageBoxButton.YesNo,
-                    MessageBoxImage.Question
-                );
+                bool userConfirmed = await MessageService.ShowYesNo("Dependency Manager", "ZenTools is missing.\n\nWould you like to download it now?");
 
-                if (result == MessageBoxResult.Yes)
+                if (userConfirmed)
                 {
                     zentoolsDownload = true;
                 }
@@ -71,34 +61,47 @@ namespace PakMaster
                 Debug.WriteLine("[DEBUG]: ZenTools.exe already exists.");
             }
 
-            if (repakDownload && zentoolsDownload)
+            if (repakDownload && zentoolsDownload) // Loading bars are fake, maybe I'll add actual download tracking in the future.
             {
-                await DependenciesService.DependenciesManagerAsync("https://github.com/trumank/repak/releases/download/v0.2.2/repak_cli-x86_64-pc-windows-msvc.zip", "repak");
-                await Task.Delay(1000);
-                repakDownloaded = true;
-                await DependenciesService.DependenciesManagerAsync("https://github.com/LongerWarrior/ZenTools/releases/download/1.06UE5.1-5.2/ZenTools.exe", "zentools");
-                await Task.Delay(1000);
-                zentoolsDownloaded = true;
+                await MessageService.ShowProgress("Dependency Manager", "Downloading Repak\n\nPlease wait...", async progress =>
+                {
+                    var downloadDependency = DependenciesService.DependenciesManagerAsync("https://github.com/trumank/repak/releases/download/v0.2.2/repak_cli-x86_64-pc-windows-msvc.zip", "repak");
+
+                    for (int i = 0; i <= 100; i++)
+                    {
+                        await Task.Delay(50);
+                        progress.Report(i / 100.0);
+                    }
+
+                    await downloadDependency;
+
+                    repakDownloaded = true;
+                });
+
+                await MessageService.ShowProgress("Dependency Manager", "Downloading ZenTools\n\nPlease wait...", async progress =>
+                {
+                    var downloadDependency = DependenciesService.DependenciesManagerAsync("https://github.com/LongerWarrior/ZenTools/releases/download/1.06UE5.1-5.2/ZenTools.exe", "zentools");
+
+                    for (int i = 0; i <= 100; i++)
+                    {
+                        await Task.Delay(50);
+                        progress.Report(i / 100.0);
+                    }
+
+                    await downloadDependency;
+
+                    zentoolsDownloaded = true;
+                });
             }
 
             if (missingDependencies)
             {
-                MessageBox.Show(
-                    "Missing Dependencies!\n\nPakMaster will not work without the dependencies.",
-                    "Dependency Manager",
-                    MessageBoxButton.OK,
-                    MessageBoxImage.Warning
-                );
+                await MessageService.ShowInfo("Dependency Manager", "Missing Dependencies!\n\nPakMaster will not work without the dependencies.");
                 Application.Current.Shutdown(); // Close the app
             }
             else if (repakDownloaded && zentoolsDownloaded)
             {
-                MessageBox.Show(
-                    "Dependency downloads complete!",
-                    "Dependency Manager",
-                    MessageBoxButton.OK,
-                    MessageBoxImage.Information
-                );
+                await MessageService.ShowInfo("Dependency Manager", "Dependency downloads complete!");
             }
         }
     }

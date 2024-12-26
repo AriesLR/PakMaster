@@ -1,14 +1,13 @@
 ﻿using Newtonsoft.Json;
 using System.Diagnostics;
 using System.Net.Http;
-using System.Windows;
 
 namespace PakMaster.Resources.Functions.Services
 {
     public class UpdateService
     {
         private static readonly string currentVersionPakMaster = FileVersionInfo.GetVersionInfo(System.Reflection.Assembly.GetExecutingAssembly().Location).FileVersion;
-        public static async Task CheckJsonForUpdates(string jsonUrl)
+        public static async Task CheckJsonForUpdatesAsync(string jsonUrl)
         {
             try
             {
@@ -19,7 +18,7 @@ namespace PakMaster.Resources.Functions.Services
 
                     if (updateInfo == null)
                     {
-                        MessageBox.Show("Failed to retrieve update information.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                        await MessageService.ShowError("Failed to retrieve update information.");
                         return;
                     }
 
@@ -31,47 +30,31 @@ namespace PakMaster.Resources.Functions.Services
                     if (versionComparison < 0)
                     {
                         // New version available
-                        var result = MessageBox.Show(
-                            $"A new version is available: {latestVersion}\n\nLatest Version: {latestVersion}\nYour Version: {currentVersion}\n\nWould you like to download the new version?",
-                            "Check for updates",
-                            MessageBoxButton.YesNo,
-                            MessageBoxImage.Information
-                        );
+                        bool userConfirmed = await MessageService.ShowYesNo("Check For Updates", $"A new version is available: {latestVersion}\n\nLatest Version: {latestVersion}\nYour Version: {currentVersion}\n\nWould you like to download the new version?");
 
-                        if (result == MessageBoxResult.Yes)
+                        if (userConfirmed)
                         {
-                            UrlService.OpenUrl(updateInfo.downloadUrlPakMaster);
+                            UrlService.OpenUrlAsync(updateInfo.downloadUrlPakMaster);
                         }
                     }
                     else if (versionComparison > 0)
                     {
                         // Easter egg (this shouldn't happen, but I'm dumb)
-                        MessageBox.Show(
-                            $"You're a wizard, harry!\n\nLatest Version: {latestVersion}\nYour Version: {currentVersion}\n\nTell AriesLR he's a goofball and forgot to update the version number.",
-                            "Check for updates",
-                            MessageBoxButton.OK,
-                            MessageBoxImage.Information
-                        );
+                        await MessageService.ShowInfo("Check For Updates", $"You're a wizard, harry!\n\nLatest Version: {latestVersion}\nYour Version: {currentVersion}\n\nTell AriesLR he's a goofball and forgot to update the version number.");
                     }
                     else
                     {
                         // Up to date
-                        MessageBox.Show(
-                            $"You are already using the latest version.\n\nLatest Version: {latestVersion}\nYour Version: {currentVersion}",
-                            "Check for updates",
-                            MessageBoxButton.OK,
-                            MessageBoxImage.Information
-                        );
+                        await MessageService.ShowInfo("Check For Updates", $"You are already using the latest version.\n\nLatest Version: {latestVersion}\nYour Version: {currentVersion}");
                     }
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Failed to check for updates: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                await MessageService.ShowError($"Failed to check for updates: {ex.Message}");
             }
         }
-
-        public static async Task CheckJsonForUpdatesSilent(string jsonUrl)
+        public static async Task CheckJsonForUpdatesAsyncSilent(string jsonUrl)
         {
             try
             {
@@ -92,16 +75,11 @@ namespace PakMaster.Resources.Functions.Services
 
                     if (versionComparison < 0)
                     {
-                        var result = MessageBox.Show(
-                            $"A new version is available: {latestVersion}\n\nLatest Version: {latestVersion}\nYour Version: {currentVersion}\n\nWould you like to download the new version?",
-                            "Check for updates",
-                            MessageBoxButton.YesNo,
-                            MessageBoxImage.Information
-                        );
+                        bool userConfirmed = await MessageService.ShowYesNo("Check For Updates", $"A new version is available: {latestVersion}\n\nLatest Version: {latestVersion}\nYour Version: {currentVersion}\n\nWould you like to download the new version?");
 
-                        if (result == MessageBoxResult.Yes)
+                        if (userConfirmed)
                         {
-                            UrlService.OpenUrl(updateInfo.downloadUrlPakMaster);
+                            UrlService.OpenUrlAsync(updateInfo.downloadUrlPakMaster);
                         }
                     }
                 }

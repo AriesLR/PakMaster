@@ -7,6 +7,7 @@ namespace PakMaster.Resources.ViewModels
     {
         private bool _isAesKeysFlyoutOpen;
         private bool _isIoStoreFlyoutOpen;
+        private bool _isSettingsFlyoutOpen;
 
         // IoStore Packing Flyout
         public bool IsIoStoreFlyoutOpen
@@ -46,6 +47,26 @@ namespace PakMaster.Resources.ViewModels
         public void OpenAesKeysFlyout()
         {
             IsAesKeysFlyoutOpen = true;
+        }
+
+        // Settings Flyout
+        public bool IsSettingsFlyoutOpen
+        {
+            get => _isSettingsFlyoutOpen;
+            set
+            {
+                if (_isSettingsFlyoutOpen != value)
+                {
+                    _isSettingsFlyoutOpen = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        // Toggle Settings Flyout to Open (true)
+        public void OpenSettingsFlyout()
+        {
+            IsSettingsFlyoutOpen = true;
         }
 
         public event PropertyChangedEventHandler? PropertyChanged;

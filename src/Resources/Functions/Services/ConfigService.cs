@@ -66,7 +66,7 @@ namespace PakMaster.Resources.Functions.Services
         private void CreateDefaultRepakConfig()
         {
             var defaultConfig = new { AesKey = "" };
-            SaveRepakConfig(defaultConfig);
+            SaveRepakConfigAsync(defaultConfig);
 
             Debug.WriteLine("[DEBUG]: Default repak config created.");
         }
@@ -150,7 +150,7 @@ namespace PakMaster.Resources.Functions.Services
         }
 
         // Load UnrealPak Config
-        public T LoadUnrealPakConfig<T>() where T : new()
+        public T LoadUnrealPakConfigAsync<T>() where T : new()
         {
             return LoadConfig<T>(_unrealpakConfigFilePath);
         }
@@ -166,14 +166,14 @@ namespace PakMaster.Resources.Functions.Services
         /////////////////////////// 
 
         // Save Repak Config
-        public void SaveRepakConfig<T>(T config)
+        public void SaveRepakConfigAsync<T>(T config)
         {
             SaveConfig(_repakConfigFilePath, config);
             Debug.WriteLine("[DEBUG]: Repak config saved.");
         }
 
         // Save ZenTools Config
-        public void SaveZenToolsConfig(string guid, string aesKey)
+        public void SaveZenToolsConfigAsync(string guid, string aesKey)
         {
             var zenToolsConfig = new Dictionary<string, string>
             {

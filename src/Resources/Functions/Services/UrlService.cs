@@ -1,10 +1,8 @@
-﻿using System.Windows;
-
-namespace PakMaster.Resources.Functions.Services
+﻿namespace PakMaster.Resources.Functions.Services
 {
     public static class UrlService
     {
-        public static void OpenUrl(string url)
+        public static async void OpenUrlAsync(string url)
         {
             try
             {
@@ -16,7 +14,7 @@ namespace PakMaster.Resources.Functions.Services
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Failed to open URL: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                await MessageService.ShowError($"Failed to open URL: {ex.Message}");
             }
         }
     }

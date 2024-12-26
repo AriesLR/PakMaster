@@ -26,7 +26,7 @@
 
     <mah:MetroWindow.RightWindowCommands>
         <mah:WindowCommands>
-            <Button Click="CheckForUpdatesPakMaster" Content="Check for updates">
+            <Button Click="CheckForUpdatesPakMasterAsync" Content="Check for updates">
                 <Button.ContentTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
@@ -73,11 +73,12 @@
             <!-- AES Key Flyout Control -->
             <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
                 <Button Content="AES Key Settings" FontSize="12" FontWeight="SemiBold" Width="180" Height="30" Margin="5" Click="OpenAesKeysFlyout"/>
+                <!--<Button Content="Settings" FontSize="12" FontWeight="SemiBold" Width="180" Height="30" Margin="5" Click="OpenSettingsFlyout"/>-->
             </StackPanel>
 
             <!-- Pack/Unpack Buttons Section -->
             <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5">
-                <Button Margin="5" Width="150" Height="40" Click="btnUnpack_Click">
+                <Button Margin="5" Width="150" Height="40" Click="btnUnpack_ClickAsync">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="25" />
@@ -88,7 +89,7 @@
                         <TextBlock Grid.Column="2" Text=">>>" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center" />
                     </Grid>
                 </Button>
-                <Button Margin="5" Width="150" Height="40" Click="btnRepack_Click">
+                <Button Margin="5" Width="150" Height="40" Click="btnRepack_ClickAsync">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="25" />
@@ -107,7 +108,7 @@
                 <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="150" />
-                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="45" />
                         <ColumnDefinition Width="150" />
                     </Grid.ColumnDefinitions>
 
@@ -122,7 +123,7 @@
                           Grid.Column="1"
                           FontSize="18"/>
 
-                    <TextBlock Text="IoStore Mode" Height="25" FontSize="16" FontWeight="SemiBold" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="15" Grid.Column="2" />
+                    <TextBlock Text="IoStore Mode" Height="25" FontSize="16" FontWeight="SemiBold" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20" Grid.Column="2" />
                 </Grid>
             </StackPanel>
         </Grid>
@@ -216,7 +217,7 @@
 
                         <!-- Crypto Keys Browser -->
                         <StackPanel Margin="0,50,0,0">
-                            <Button Content="Edit Crypto.json" Width="200" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center" Click="OpenCryptoKeysFile" />
+                            <Button Content="Edit Crypto.json" Width="200" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center" Click="OpenCryptoKeysFileAsync" />
                         </StackPanel>
                     </StackPanel>
 
@@ -230,7 +231,7 @@
 
                         <!-- Pack Button -->
                         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,30">
-                            <Button Content="Pack" FontSize="12" FontWeight="SemiBold" Width="180" Height="30" Margin="5" Click="btnIoStorePackage_Click"/>
+                            <Button Content="Pack" FontSize="12" FontWeight="SemiBold" Width="180" Height="30" Margin="5" Click="btnIoStorePackage_ClickAsync"/>
                         </StackPanel>
 
                         <!-- CLI Output -->
@@ -259,7 +260,7 @@
                     <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
                         <TextBlock Text="Repak AES Key" Foreground="White" FontSize="20" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
                         <TextBox Name="AesKeyTextBox" Width="460" Height="30" Margin="5"/>
-                        <Button Content="Save" FontSize="12" FontWeight="SemiBold" Width="180" Height="30" Margin="5" Click="SaveRepakConfig"/>
+                        <Button Content="Save" FontSize="12" FontWeight="SemiBold" Width="180" Height="30" Margin="5" Click="SaveRepakConfigAsync"/>
                     </StackPanel>
 
                     <!-- Empty Row (Filler) -->
@@ -272,7 +273,72 @@
                         <TextBox Name="ZenToolsKeyGuidTextBox" Width="460" Height="30" Margin="5"/>
                         <TextBlock Text="HEX" Foreground="White" FontSize="12" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
                         <TextBox Name="ZenToolsKeyHexTextBox" Width="460" Height="30" Margin="5"/>
-                        <Button Content="Save" FontSize="12" FontWeight="SemiBold" Width="180" Height="30" Margin="5" Click="SaveZenToolsConfig"/>
+                        <Button Content="Save" FontSize="12" FontWeight="SemiBold" Width="180" Height="30" Margin="5" Click="SaveZenToolsConfigAsync"/>
+                    </StackPanel>
+                </Grid>
+            </mah:Flyout>
+
+            <!-- Settings Flyout WIP -->
+            <mah:Flyout x:Name="SettingsFlyout" 
+            Header="Settings" 
+            Position="Left"
+            Width="500"
+            IsOpen="{Binding IsSettingsFlyoutOpen}">
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="250"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="250"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Repak AES Key Input Section -->
+                    <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
+                        <Controls:Tile Title="Repak AES Key"
+                           Margin="3"
+                           Controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource MahApps.Brushes.ThemeForeground}"
+                           Background="Teal"
+                           HorizontalTitleAlignment="Right">
+                            <iconPacks:PackIconModern Width="40"
+                                          Height="40"
+                                          Kind="Key" />
+                        </Controls:Tile>
+
+                        <Controls:Tile Title="Repak Settings"
+                           Margin="3"
+                           Controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource MahApps.Brushes.ThemeForeground}"
+                           Background="Green"
+                           HorizontalTitleAlignment="Right">
+                            <iconPacks:PackIconModern Width="40"
+                                          Height="40"
+                                          Kind="Settings" />
+                        </Controls:Tile>
+                    </StackPanel>
+
+                    <!-- Empty Row (Filler) -->
+                    <StackPanel Grid.Row="1" Visibility="Collapsed"/>
+
+                    <!-- ZenTools AES Key Input Section -->
+                    <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
+                        <Controls:Tile Title="ZenTools AES Key"
+                           Margin="3"
+                           Controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource MahApps.Brushes.ThemeForeground}"
+                           Background="Blue"
+                           HorizontalTitleAlignment="Right">
+                            <iconPacks:PackIconModern Width="40"
+                                          Height="40"
+                                          Kind="Key" />
+                        </Controls:Tile>
+
+                        <Controls:Tile Title="ZenTools Settings"
+                           Margin="3"
+                           Controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource MahApps.Brushes.ThemeForeground}"
+                           Background="Orange"
+                           HorizontalTitleAlignment="Right">
+                            <iconPacks:PackIconModern Width="40"
+                                          Height="40"
+                                          Kind="Settings" />
+                        </Controls:Tile>
                     </StackPanel>
                 </Grid>
             </mah:Flyout>
