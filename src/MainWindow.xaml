@@ -1,12 +1,15 @@
 ﻿<mah:MetroWindow x:Class="PakMaster.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PakMaster"
+        xmlns:viewmodels="clr-namespace:PakMaster.Resources.ViewModels" 
+        d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowViewModel}"
         Title="PakMaster"
         Width="1366"
         Height="768"
@@ -19,7 +22,7 @@
     <mah:MetroWindow.LeftWindowCommands>
         <mah:WindowCommands>
             <Button Click="LaunchBrowserGitHubPakMaster" ToolTip="Open up the PakMaster GitHub repo">
-                <iconPacks:PackIconModern Width="22" Height="22" Kind="SocialGithubOctocat" />
+                <iconPacks:PackIconMaterial Width="22" Height="22" Kind="Github" />
             </Button>
         </mah:WindowCommands>
     </mah:MetroWindow.LeftWindowCommands>
@@ -30,118 +33,214 @@
                 <Button.ContentTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
-                            <iconPacks:PackIconModern Width="22" Height="22" VerticalAlignment="Center" Kind="Refresh" />
+                            <iconPacks:PackIconMaterial Width="22" Height="22" VerticalAlignment="Center" Kind="Update" />
                             <TextBlock Margin="4 0 0 0" VerticalAlignment="Center" Text="{Binding}" />
                         </StackPanel>
                     </DataTemplate>
                 </Button.ContentTemplate>
             </Button>
+            <!--
+            <Button Click="OpenSettingsFlyout" Content="Settings">
+                <Button.ContentTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <iconPacks:PackIconMaterial Width="22" Height="22" VerticalAlignment="Center" Kind="Cog" />
+                            <TextBlock Margin="4 0 0 0" VerticalAlignment="Center" Text="{Binding}" />
+                        </StackPanel>
+                    </DataTemplate>
+                </Button.ContentTemplate>
+            </Button>
+            -->
         </mah:WindowCommands>
     </mah:MetroWindow.RightWindowCommands>
+    
+    <Grid>
+        <mah:SplitView x:Name="SplitView" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="250" PaneBackground="#1C1C1C">
+            <mah:SplitView.Pane>
+                <!-- Sidebar Navigation -->
+                <mah:HamburgerMenu Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Stretch"
+                                   IsPaneOpen="{Binding IsPaneOpen, ElementName=SplitView, Mode=TwoWay}" CompactPaneLength="50" OpenPaneLength="250" 
+                                   PaneBackground="#1C1C1C" Foreground="White"
+                                   HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" 
+                                   Background="Transparent" Width="250">
 
-    <Grid Background="#2B2B2B">
-        <!-- Define the main layout grid -->
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="1*" />
-            <ColumnDefinition Width="500" />
-            <ColumnDefinition Width="1*" />
-        </Grid.ColumnDefinitions>
+                    <mah:HamburgerMenu.ItemTemplate>
+                        <DataTemplate>
+                            <Button Command="{Binding Command}" 
+                                    HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                    HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
+                                    Background="Transparent" BorderThickness="0">
+                                <Button.Template>
+                                    <ControlTemplate TargetType="Button">
+                                        <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{TemplateBinding Background}">
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="Auto" />
+                                                <ColumnDefinition Width="*" />
+                                            </Grid.ColumnDefinitions>
 
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="Auto" />
-        </Grid.RowDefinitions>
+                                            <!-- MenuItem Icon -->
+                                            <iconPacks:PackIconMaterial Width="25" Height="25" 
+                                                                        Kind="{Binding Icon}" 
+                                                                        VerticalAlignment="Center" HorizontalAlignment="Center" 
+                                                                        Margin="12,10,10,10" Grid.Column="0" />
 
-        <!-- Input Section -->
-        <StackPanel Grid.Column="0" Background="#262626" Margin="10">
-            <TextBlock Text="Files" Foreground="White" FontWeight="Bold" FontSize="24" HorizontalAlignment="Center" />
-            <!-- ListBox to display files -->
-            <ListBox Name="InputFilesListBox" DisplayMemberPath="Key" SelectionMode="Single" Background="Transparent" Margin="5" Height="490" />
-            <Button Content="Browse input folder" FontWeight="Bold" Margin="5" Click="BrowseInputFolder" />
-        </StackPanel>
+                                            <!-- MenuItem Text -->
+                                            <TextBlock Text="{Binding Text}" FontSize="16" FontWeight="Bold" 
+                                                       VerticalAlignment="Center" HorizontalAlignment="Left" 
+                                                       Margin="5,10,10,10" Grid.Column="1" />
+                                        </Grid>
+                                    </ControlTemplate>
+                                </Button.Template>
+                            </Button>
+                        </DataTemplate>
+                    </mah:HamburgerMenu.ItemTemplate>
 
-        <!-- Center Column -->
-        <Grid Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
-            <!-- Define row structure -->
-            <Grid.RowDefinitions>
-                <RowDefinition Height="175" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="175" />
-            </Grid.RowDefinitions>
-            
-            <!-- AES Key Flyout Control -->
-            <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
-                <Button Content="AES Key Settings" FontSize="12" FontWeight="SemiBold" Width="180" Height="30" Margin="5" Click="OpenAesKeysFlyout"/>
-                <!--<Button Content="Settings" FontSize="12" FontWeight="SemiBold" Width="180" Height="30" Margin="5" Click="OpenSettingsFlyout"/>-->
-            </StackPanel>
+                    <mah:HamburgerMenu.ItemContainerStyle>
+                        <Style TargetType="ListBoxItem">
+                            <Setter Property="Background" Value="Transparent" />
+                            <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                            <Setter Property="VerticalContentAlignment" Value="Center" />
+                            <Setter Property="Padding" Value="5" />
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="ListBoxItem">
+                                        <Grid x:Name="RootGrid" Background="{TemplateBinding Background}">
+                                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                                        </Grid>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="RootGrid" Property="Background" Value="{DynamicResource MahApps.Brushes.Accent}" />
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </mah:HamburgerMenu.ItemContainerStyle>
 
-            <!-- Pack/Unpack Buttons Section -->
-            <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5">
-                <Button Margin="5" Width="150" Height="40" Click="btnUnpack_ClickAsync">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="25" />
-                            <ColumnDefinition Width="75" />
-                            <ColumnDefinition Width="25" />
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="1" Text="Unpack" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center" />
-                        <TextBlock Grid.Column="2" Text=">>>" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center" />
-                    </Grid>
-                </Button>
-                <Button Margin="5" Width="150" Height="40" Click="btnRepack_ClickAsync">
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="25" />
-                            <ColumnDefinition Width="75" />
-                            <ColumnDefinition Width="25" />
-                        </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="0" Text="&lt;&lt;&lt;" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Left" />
-                        <TextBlock Grid.Column="1" Text="Repack" FontSize="12" FontWeight="SemiBold" VerticalAlignment="Center" HorizontalAlignment="Center" />
-                    </Grid>
-                </Button>
-            </StackPanel>
+                    <mah:HamburgerMenu.ItemsSource>
+                        <Binding Path="MenuItems" />
+                    </mah:HamburgerMenu.ItemsSource>
+                </mah:HamburgerMenu>
+            </mah:SplitView.Pane>
 
-            <!-- Repak/ZenTools Toggle -->
-            <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5">
-
-                <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5">
+            <mah:SplitView.Content>
+                <!-- Main Content -->
+                <Grid Background="#1F1F1F">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="150" />
-                        <ColumnDefinition Width="45" />
-                        <ColumnDefinition Width="150" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="500" />
+                        <ColumnDefinition Width="1*" />
                     </Grid.ColumnDefinitions>
 
-                    <TextBlock Text="Normal Mode" Height="21" FontSize="16" FontWeight="SemiBold" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="20" Grid.Column="0" />
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
 
-                    <mah:ToggleSwitch x:Name="FileTypeToggleSwitch"
-                          Toggled="ToggleSwitch_Toggled"
-                          OffContent=""
-                          OnContent=""
-                          Width="50"
-                          Height="30"
-                          Grid.Column="1"
-                          FontSize="18"/>
+                    <!-- Input Section -->
+                    <StackPanel Grid.Column="0" Background="#222222" Margin="10">
+                        <TextBlock Text="Files" Foreground="White" FontWeight="Bold" FontSize="24" HorizontalAlignment="Center" />
+                        <!-- ListBox to display files -->
+                        <ListBox Name="InputFilesListBox" DisplayMemberPath="Key" SelectionMode="Single" Background="Transparent" Margin="5" Height="490" />
+                        <Button Content="Browse input folder" Background="#262626" Height="30" FontSize="12" FontWeight="Bold" Click="BrowseInputFolder" />
+                    </StackPanel>
 
-                    <TextBlock Text="IoStore Mode" Height="25" FontSize="16" FontWeight="SemiBold" Foreground="White" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20" Grid.Column="2" />
+                    <!-- Center Column -->
+                    <Grid Grid.Column="1" VerticalAlignment="Center" HorizontalAlignment="Center" Margin="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="175" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="175" />
+                        </Grid.RowDefinitions>
+
+                        <!-- Repak/ZenTools Toggle -->
+                        <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
+
+                            <Grid HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="200" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <!-- Dropdown for Mode Switching -->
+                                <ComboBox x:Name="ModeSwitchDropdown" 
+                                            Width="150" Height="50" 
+                                            SelectedIndex="0" 
+                                            SelectionChanged="ComboBox_ModeSwitch" 
+                                            FontSize="16" FontWeight="Bold"
+                                            VerticalAlignment="Center" HorizontalAlignment="Center" 
+                                            Grid.Column="1">
+                                    <ComboBoxItem Content="Normal Mode" Height="50" />
+                                    <ComboBoxItem Content="IoStore Mode" Height="50" />
+                                </ComboBox>
+                            </Grid>
+                        </StackPanel>
+
+                        <!-- Pack/Unpack Buttons Section -->
+                        <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5">
+                            <Button Margin="5" Width="150" Height="40" Background="#262626" Click="btnUnpack_ClickAsync">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="25" />
+                                        <ColumnDefinition Width="75" />
+                                        <ColumnDefinition Width="25" />
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="1" Text="Unpack" FontSize="14" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                    <TextBlock Grid.Column="2" Text=">>>" FontSize="12" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                </Grid>
+                            </Button>
+                            <Button Margin="5" Width="150" Height="40" Background="#262626" Click="btnRepack_ClickAsync">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="25" />
+                                        <ColumnDefinition Width="75" />
+                                        <ColumnDefinition Width="25" />
+                                    </Grid.ColumnDefinitions>
+                                    <TextBlock Grid.Column="0" Text="&lt;&lt;&lt;" FontSize="12" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Left" />
+                                    <TextBlock Grid.Column="1" Text="Repack" FontSize="14" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                                </Grid>
+                            </Button>
+                        </StackPanel>
+                    </Grid>
+
+                    <!-- Output Section -->
+                    <StackPanel Grid.Column="2" Background="#222222" Margin="10">
+                        <TextBlock Text="Folders" Foreground="White" FontWeight="Bold" FontSize="24" HorizontalAlignment="Center" />
+                        <!-- ListBox to display output files -->
+                        <ListBox Name="OutputFilesListBox" DisplayMemberPath="Key" SelectionMode="Single" Background="Transparent" Margin="5" Height="490" />
+                        <Button Content="Browse output folder" Background="#262626" Height="30" FontSize="12" FontWeight="Bold" Click="BrowseOutputFolder" />
+                    </StackPanel>
+
+                    <!-- Command Line Output -->
+                    <StackPanel Grid.Row="2" Grid.ColumnSpan="3" Background="#262626" Margin="10" Height="125">
+                        <!-- TextBox to display CLI output -->
+                        <TextBox x:Name="CommandOutputTextBox" 
+                                 Background="#202020" 
+                                 Foreground="White" 
+                                 FontSize="12" 
+                                 IsReadOnly="True" 
+                                 VerticalScrollBarVisibility="Auto" 
+                                 Height="125" 
+                                 BorderBrush="#7F7F7F" 
+                                 BorderThickness="1"
+                                 FocusVisualStyle="{x:Null}">
+                            <TextBox.Template>
+                                <ControlTemplate TargetType="TextBox">
+                                    <Border BorderBrush="{TemplateBinding BorderBrush}" 
+                                            BorderThickness="{TemplateBinding BorderThickness}" 
+                                            Background="{TemplateBinding Background}">
+                                        <ScrollViewer x:Name="PART_ContentHost" VerticalScrollBarVisibility="Auto" />
+                                    </Border>
+                                </ControlTemplate>
+                            </TextBox.Template>
+                        </TextBox>
+                    </StackPanel>
                 </Grid>
-            </StackPanel>
-        </Grid>
-
-        <!-- Output Section -->
-        <StackPanel Grid.Column="2" Background="#262626" Margin="10">
-            <TextBlock Text="Folders" Foreground="White" FontWeight="Bold" FontSize="24" HorizontalAlignment="Center" />
-            <!-- ListBox to display output files -->
-            <ListBox Name="OutputFilesListBox" DisplayMemberPath="Key" SelectionMode="Single" Background="Transparent" Margin="5" Height="490" />
-            <Button Content="Browse output folder" FontWeight="Bold" Margin="5" Click="BrowseOutputFolder" />
-        </StackPanel>
-
-        <!-- Command Line Output -->
-        <StackPanel Grid.Row="2" Grid.ColumnSpan="3" Background="#262626" Margin="10" Height="125">
-            <!-- TextBox to display cli output -->
-            <TextBox x:Name="CommandOutputTextBox" Background="#202020" Foreground="White" FontSize="12" 
-         IsReadOnly="True" VerticalScrollBarVisibility="Auto" Height="120" Margin="5"/>
-        </StackPanel>
+            </mah:SplitView.Content>
+        </mah:SplitView>
     </Grid>
 
     <!-- Flyouts Section -->
@@ -149,10 +248,13 @@
         <mah:FlyoutsControl>
             <!-- IoStore Flyout -->
             <mah:Flyout x:Name="IoStoreFlyout" 
-            Header="IoStore Packing" 
-            Position="Left"
-            Width="1271"
-            IsOpen="{Binding IsIoStoreFlyoutOpen}">
+                        Header="IoStore Packing" 
+                        Position="Left"
+                        Width="1271"
+                        Background="#1F1F1F"
+                        BorderBrush="{DynamicResource MahApps.Brushes.Accent}"
+                        BorderThickness="1"
+                        IsOpen="{Binding IsIoStoreFlyoutOpen}">
                 <Grid>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="600" />
@@ -163,61 +265,61 @@
                     <StackPanel Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
                         <!-- UnrealPak Path -->
                         <StackPanel Margin="0,0,0,15">
-                            <TextBlock Text="Path to UnrealPak" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
+                            <TextBlock Text="UnrealPak Path (requires Unreal Engine 4.25+)" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
                             <Grid Margin="5">
-                                <TextBox Name="UnrealPakPathTextBox" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="C:\Program Files\Epic Games\UE_5.1\Engine\Binaries\Win64\UnrealPak.exe" />
-                                <Button Content="Browse" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseUnrealPakPath" />
+                                <TextBox Name="UnrealPakPathTextBox" IsReadOnly="True" Background="Transparent" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="C:\Program Files\Epic Games\UE_5.1\Engine\Binaries\Win64\UnrealPak.exe" />
+                                <Button Content="Browse" Background="#262626" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseUnrealPakPath" />
                             </Grid>
                         </StackPanel>
 
                         <!-- Output Path -->
                         <StackPanel Margin="0,15,0,15">
-                            <TextBlock Text="Output path for global.utoc" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
+                            <TextBlock Text="Output Path (for global.utoc)" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
                             <Grid Margin="5">
-                                <TextBox Name="GlobalOutputPathTextBox" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="C:\Path\To\Output" />
-                                <Button Content="Browse" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseGlobalOutputPath" />
+                                <TextBox Name="GlobalOutputPathTextBox" IsReadOnly="True" Background="Transparent" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="C:\Path\To\Output" />
+                                <Button Content="Browse" Background="#262626" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseGlobalOutputPath" />
                             </Grid>
                         </StackPanel>
 
                         <!-- Input Path -->
                         <StackPanel Margin="0,15,0,15">
-                            <TextBlock Text="Path to cooked files to be packaged" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
+                            <TextBlock Text="Cooked Files Path (cooked files to be packaged)" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
                             <Grid Margin="5">
-                                <TextBox Name="CookedFilesPathTextBox" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="C:\Path\To\Cooked" />
-                                <Button Content="Browse" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseCookedFilesPath" />
+                                <TextBox Name="CookedFilesPathTextBox" IsReadOnly="True" Background="Transparent" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="C:\Path\To\Cooked" />
+                                <Button Content="Browse" Background="#262626" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseCookedFilesPath" />
                             </Grid>
                         </StackPanel>
 
                         <!-- Packagestore.manifest Path -->
                         <StackPanel Margin="0,15,0,15">
-                            <TextBlock Text="Path to packagestore.manifest" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
+                            <TextBlock Text="PackageStore Path" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
                             <Grid Margin="5">
-                                <TextBox Name="PackageStorePathTextBox" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="packagestore.manifest" />
-                                <Button Content="Browse" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowsePackageStorePath" />
+                                <TextBox Name="PackageStorePathTextBox" IsReadOnly="True" Background="Transparent" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="packagestore.manifest / packagestore.json" />
+                                <Button Content="Browse" Background="#262626" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowsePackageStorePath" />
                             </Grid>
                         </StackPanel>
 
                         <!-- ScriptObjects.bin Path -->
                         <StackPanel Margin="0,15,0,15">
-                            <TextBlock Text="Path to ScriptObjects.bin" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
+                            <TextBlock Text="ScriptObjects Path" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
                             <Grid Margin="5">
-                                <TextBox Name="ScriptObjectsPathTextBox" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="ScriptObjects.bin" />
-                                <Button Content="Browse" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseScriptObjectsPath" />
+                                <TextBox Name="ScriptObjectsPathTextBox" IsReadOnly="True" Background="Transparent" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="ScriptObjects.bin" />
+                                <Button Content="Browse" Background="#262626" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseScriptObjectsPath" />
                             </Grid>
                         </StackPanel>
 
                         <!-- IoStoreCommands.txt Path -->
                         <StackPanel Margin="0,15,0,15">
-                            <TextBlock Text="Path to IoStoreCommands.txt" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
+                            <TextBlock Text="Commands Path" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
                             <Grid Margin="5">
-                                <TextBox Name="IoStoreCommandsPathTextBox" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="Commands.txt" />
-                                <Button Content="Browse" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseIoStoreCommandsPath" />
+                                <TextBox Name="IoStoreCommandsPathTextBox" IsReadOnly="True" Background="Transparent" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="IoStoreCommands.txt / Commands.txt" />
+                                <Button Content="Browse" Background="#262626" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseIoStoreCommandsPath" />
                             </Grid>
                         </StackPanel>
 
                         <!-- Crypto Keys Browser -->
                         <StackPanel Margin="0,50,0,0">
-                            <Button Content="Edit Crypto.json" Width="200" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center" Click="OpenCryptoKeysFileAsync" />
+                            <Button Content="Edit Crypto.json" Background="#262626" Width="200" Height="40" FontSize="12" FontWeight="Bold" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center" Click="OpenCryptoKeysFileAsync" />
                         </StackPanel>
                     </StackPanel>
 
@@ -231,12 +333,33 @@
 
                         <!-- Pack Button -->
                         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,30">
-                            <Button Content="Pack" FontSize="12" FontWeight="SemiBold" Width="180" Height="30" Margin="5" Click="btnIoStorePackage_ClickAsync"/>
+                            <Button Content="Pack" Background="#262626" Width="200" Height="40" FontSize="14" FontWeight="Bold" Margin="5" Click="btnIoStorePackage_ClickAsync"/>
                         </StackPanel>
 
                         <!-- CLI Output -->
-                        <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,0">
-                            <TextBox x:Name="IoStoreCommandOutputTextBox" Background="#202020" Foreground="White" FontSize="12" IsReadOnly="True" VerticalScrollBarVisibility="Auto" Width="600" Height="250" Margin="5"/>
+                        <StackPanel Grid.Row="2" Grid.ColumnSpan="3" Background="#262626" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="0,0,0,0">
+                            <!-- TextBox to display CLI output -->
+                            <TextBox x:Name="IoStoreCommandOutputTextBox" 
+                                     Background="#202020" 
+                                     Foreground="White" 
+                                     FontSize="12" 
+                                     IsReadOnly="True" 
+                                     VerticalScrollBarVisibility="Auto" 
+                                     Height="250"
+                                     Width="650"
+                                     BorderBrush="#7F7F7F" 
+                                     BorderThickness="1"
+                                     FocusVisualStyle="{x:Null}">
+                                <TextBox.Template>
+                                    <ControlTemplate TargetType="TextBox">
+                                        <Border BorderBrush="{TemplateBinding BorderBrush}" 
+                                                BorderThickness="{TemplateBinding BorderThickness}" 
+                                                Background="{TemplateBinding Background}">
+                                            <ScrollViewer x:Name="PART_ContentHost" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto"/>
+                                        </Border>
+                                    </ControlTemplate>
+                                </TextBox.Template>
+                            </TextBox>
                         </StackPanel>
                     </Grid>
                 </Grid>
@@ -244,10 +367,13 @@
 
             <!-- Aes Keys Flyout -->
             <mah:Flyout x:Name="AesKeysFlyout" 
-                    Header="AES Key Settings" 
-                    Position="Left"
-                    Width="500"
-                    IsOpen="{Binding IsAesKeysFlyoutOpen}">
+                        Header="AES Key Settings" 
+                        Position="Left"
+                        Width="500"
+                        Background="#1F1F1F"
+                        BorderBrush="{DynamicResource MahApps.Brushes.Accent}"
+                        BorderThickness="1"
+                        IsOpen="{Binding IsAesKeysFlyoutOpen}">
 
                 <Grid>
                     <Grid.RowDefinitions>
@@ -259,8 +385,8 @@
                     <!-- Repak AES Key Input Section -->
                     <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
                         <TextBlock Text="Repak AES Key" Foreground="White" FontSize="20" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
-                        <TextBox Name="AesKeyTextBox" Width="460" Height="30" Margin="5"/>
-                        <Button Content="Save" FontSize="12" FontWeight="SemiBold" Width="180" Height="30" Margin="5" Click="SaveRepakConfigAsync"/>
+                        <TextBox Name="AesKeyTextBox" Background="Transparent" Width="460" Height="30" Margin="5"/>
+                        <Button Content="Save" Background="#262626" FontSize="14" FontWeight="Bold" Width="180" Height="40" Margin="5" Click="SaveRepakConfigAsync"/>
                     </StackPanel>
 
                     <!-- Empty Row (Filler) -->
@@ -270,75 +396,10 @@
                     <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
                         <TextBlock Text="ZenTools AES Key" Foreground="White" FontSize="20" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
                         <TextBlock Text="GUID" Foreground="White" FontSize="12" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
-                        <TextBox Name="ZenToolsKeyGuidTextBox" Width="460" Height="30" Margin="5"/>
+                        <TextBox Name="ZenToolsKeyGuidTextBox" Background="Transparent" Width="460" Height="30" Margin="5"/>
                         <TextBlock Text="HEX" Foreground="White" FontSize="12" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
-                        <TextBox Name="ZenToolsKeyHexTextBox" Width="460" Height="30" Margin="5"/>
-                        <Button Content="Save" FontSize="12" FontWeight="SemiBold" Width="180" Height="30" Margin="5" Click="SaveZenToolsConfigAsync"/>
-                    </StackPanel>
-                </Grid>
-            </mah:Flyout>
-
-            <!-- Settings Flyout WIP -->
-            <mah:Flyout x:Name="SettingsFlyout" 
-            Header="Settings" 
-            Position="Left"
-            Width="500"
-            IsOpen="{Binding IsSettingsFlyoutOpen}">
-
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="250"/>
-                        <RowDefinition Height="*"/>
-                        <RowDefinition Height="250"/>
-                    </Grid.RowDefinitions>
-
-                    <!-- Repak AES Key Input Section -->
-                    <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
-                        <Controls:Tile Title="Repak AES Key"
-                           Margin="3"
-                           Controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource MahApps.Brushes.ThemeForeground}"
-                           Background="Teal"
-                           HorizontalTitleAlignment="Right">
-                            <iconPacks:PackIconModern Width="40"
-                                          Height="40"
-                                          Kind="Key" />
-                        </Controls:Tile>
-
-                        <Controls:Tile Title="Repak Settings"
-                           Margin="3"
-                           Controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource MahApps.Brushes.ThemeForeground}"
-                           Background="Green"
-                           HorizontalTitleAlignment="Right">
-                            <iconPacks:PackIconModern Width="40"
-                                          Height="40"
-                                          Kind="Settings" />
-                        </Controls:Tile>
-                    </StackPanel>
-
-                    <!-- Empty Row (Filler) -->
-                    <StackPanel Grid.Row="1" Visibility="Collapsed"/>
-
-                    <!-- ZenTools AES Key Input Section -->
-                    <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
-                        <Controls:Tile Title="ZenTools AES Key"
-                           Margin="3"
-                           Controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource MahApps.Brushes.ThemeForeground}"
-                           Background="Blue"
-                           HorizontalTitleAlignment="Right">
-                            <iconPacks:PackIconModern Width="40"
-                                          Height="40"
-                                          Kind="Key" />
-                        </Controls:Tile>
-
-                        <Controls:Tile Title="ZenTools Settings"
-                           Margin="3"
-                           Controls:ControlsHelper.MouseOverBorderBrush="{DynamicResource MahApps.Brushes.ThemeForeground}"
-                           Background="Orange"
-                           HorizontalTitleAlignment="Right">
-                            <iconPacks:PackIconModern Width="40"
-                                          Height="40"
-                                          Kind="Settings" />
-                        </Controls:Tile>
+                        <TextBox Name="ZenToolsKeyHexTextBox" Background="Transparent" Width="460" Height="30" Margin="5"/>
+                        <Button Content="Save" Background="#262626" FontSize="14" FontWeight="Bold" Width="180" Height="40" Margin="5" Click="SaveZenToolsConfigAsync"/>
                     </StackPanel>
                 </Grid>
             </mah:Flyout>

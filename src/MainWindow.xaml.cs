@@ -6,6 +6,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Text;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace PakMaster
 {
@@ -797,22 +798,23 @@ namespace PakMaster
         // UI METHOD SECTION //
         ///////////////////////
 
-        // Toggle Switch Event Handler
-        private void ToggleSwitch_Toggled(object sender, RoutedEventArgs e)
+        // Mode Switch Event Handler
+        private void ComboBox_ModeSwitch(object sender, SelectionChangedEventArgs e)
         {
-            if (FileTypeToggleSwitch.IsOn)
+            if (ModeSwitchDropdown.SelectedItem is ComboBoxItem selectedItem)
             {
-                // .ucas/.utoc format selected
-                isIoStoreMode = true;
-                RepopulateInputListBox();
-                RepopulateOutputListBox();
-            }
-            else
-            {
-                // .pak format selected
-                isIoStoreMode = false;
-                RepopulateInputListBox();
-                RepopulateOutputListBox();
+                if (selectedItem.Content.ToString() == "Normal Mode")
+                {
+                    isIoStoreMode = false; // Normal Mode (.pak)
+                    RepopulateInputListBox();
+                    RepopulateOutputListBox();
+                }
+                else if (selectedItem.Content.ToString() == "IoStore Mode")
+                {
+                    isIoStoreMode = true; // IoStore Mode (.ucas/.utoc)
+                    RepopulateInputListBox();
+                    RepopulateOutputListBox();
+                }
             }
         }
 
@@ -914,16 +916,6 @@ namespace PakMaster
             {
                 viewModel.OpenAesKeysFlyout();
                 LoadAesKeysAsync(); // Load again here in case user changes the values via the config directly.
-            }
-        }
-
-        // Open Settings Flyout WIP
-        private void OpenSettingsFlyout(object sender, RoutedEventArgs e)
-        {
-            if (DataContext is MainWindowViewModel viewModel)
-            {
-                viewModel.OpenSettingsFlyout();
-                //Probably load some things here
             }
         }
     }
