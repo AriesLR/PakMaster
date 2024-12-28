@@ -134,6 +134,9 @@ Your configuration files and settings will be preserved during the update proces
 
 ## Screenshots
 
+> [!NOTE]
+> Screenshots out of date as of v0.1.4, I will update them when I wake up.
+
 ### Normal Mode Unpacking
 ![Normal Mode Unpacking](https://raw.githubusercontent.com/AriesLR/PakMaster/refs/heads/main/docs/images/pakmaster-normal-unpack.png)
 
