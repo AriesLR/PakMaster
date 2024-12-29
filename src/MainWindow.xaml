@@ -5,7 +5,6 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
         xmlns:mah="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
-        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:PakMaster"
         xmlns:viewmodels="clr-namespace:PakMaster.Resources.ViewModels" 
@@ -54,6 +53,14 @@
         </mah:WindowCommands>
     </mah:MetroWindow.RightWindowCommands>
     
+    <!-- Resources -->
+    <mah:MetroWindow.Resources>
+        <Style x:Key="CenteredCellStyle" TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+    </mah:MetroWindow.Resources>
+
     <Grid>
         <mah:SplitView x:Name="SplitView" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="250" PaneBackground="#1C1C1C">
             <mah:SplitView.Pane>
@@ -144,7 +151,20 @@
                         <TextBlock Text="Files" Foreground="White" FontWeight="Bold" FontSize="24" HorizontalAlignment="Center" />
                         <!-- ListBox to display files -->
                         <ListBox Name="InputFilesListBox" DisplayMemberPath="Key" SelectionMode="Single" Background="Transparent" Margin="5" Height="490" />
-                        <Button Content="Browse input folder" Background="#262626" Height="30" FontSize="12" FontWeight="Bold" Click="BrowseInputFolder" />
+                        <Grid HorizontalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <Button Content="Browse input folder" Background="#262626" Height="30" FontSize="12" FontWeight="Bold" Click="BrowseInputFolder" Grid.Column="0" />
+
+                            <Button Background="#262626" Height="30" Width="30" FontSize="12" FontWeight="Bold" Click="btnRefreshUI_Click" Grid.Column="1">
+                                <Button.Content>
+                                    <iconPacks:PackIconMaterial Kind="Refresh" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Button.Content>
+                            </Button>
+                        </Grid>
                     </StackPanel>
 
                     <!-- Center Column -->
@@ -165,17 +185,29 @@
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
 
-                                <!-- Dropdown for Mode Switching -->
-                                <ComboBox x:Name="ModeSwitchDropdown" 
-                                            Width="150" Height="50" 
-                                            SelectedIndex="0" 
-                                            SelectionChanged="ComboBox_ModeSwitch" 
-                                            FontSize="16" FontWeight="Bold"
-                                            VerticalAlignment="Center" HorizontalAlignment="Center" 
-                                            Grid.Column="1">
-                                    <ComboBoxItem Content="Normal Mode" Height="50" />
-                                    <ComboBoxItem Content="IoStore Mode" Height="50" />
-                                </ComboBox>
+                                <!-- Toggle Button for Mode Switching -->
+                                <ToggleButton x:Name="ModeSwitchButton" 
+                                              Width="200" Height="40" 
+                                              FontSize="16" FontWeight="Bold"
+                                              VerticalAlignment="Center" HorizontalAlignment="Center" 
+                                              HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                                              Grid.Column="1"
+                                              Checked="btnModeSwitchIoStore_Click"
+                                              Unchecked="btnModeSwitchNormal_Click">
+                                    Normal Mode
+                                    <ToggleButton.Style>
+                                        <Style TargetType="ToggleButton" BasedOn="{StaticResource {x:Type ToggleButton}}">
+                                            <Setter Property="Background" Value="#262626" />
+                                            <Setter Property="Foreground" Value="White" />
+                                            <Style.Triggers>
+                                                <Trigger Property="IsChecked" Value="True">
+                                                    <Setter Property="Background" Value="{DynamicResource MahApps.Brushes.Accent}" />
+                                                    <Setter Property="Foreground" Value="White" />
+                                                </Trigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </ToggleButton.Style>
+                                </ToggleButton>
                             </Grid>
                         </StackPanel>
 
@@ -211,7 +243,20 @@
                         <TextBlock Text="Folders" Foreground="White" FontWeight="Bold" FontSize="24" HorizontalAlignment="Center" />
                         <!-- ListBox to display output files -->
                         <ListBox Name="OutputFilesListBox" DisplayMemberPath="Key" SelectionMode="Single" Background="Transparent" Margin="5" Height="490" />
-                        <Button Content="Browse output folder" Background="#262626" Height="30" FontSize="12" FontWeight="Bold" Click="BrowseOutputFolder" />
+                        <Grid HorizontalAlignment="Stretch">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <Button Content="Browse output folder" Background="#262626" Height="30" FontSize="12" FontWeight="Bold" Click="BrowseOutputFolder" Grid.Column="0" />
+
+                            <Button Background="#262626" Height="30" Width="30" FontSize="12" FontWeight="Bold" Click="btnRefreshUI_Click" Grid.Column="1">
+                                <Button.Content>
+                                    <iconPacks:PackIconMaterial Kind="Refresh" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Button.Content>
+                            </Button>
+                        </Grid>
                     </StackPanel>
 
                     <!-- Command Line Output -->
@@ -267,7 +312,7 @@
                         <StackPanel Margin="0,0,0,15">
                             <TextBlock Text="UnrealPak Path (requires Unreal Engine 4.25+)" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
                             <Grid Margin="5">
-                                <TextBox Name="UnrealPakPathTextBox" IsReadOnly="True" Background="Transparent" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="C:\Program Files\Epic Games\UE_5.1\Engine\Binaries\Win64\UnrealPak.exe" />
+                                <TextBox Name="UnrealPakPathTextBox" IsReadOnly="True" Background="Transparent" Width="500" VerticalContentAlignment="Center" mah:TextBoxHelper.Watermark="C:\Program Files\Epic Games\UE_5.1\Engine\Binaries\Win64\UnrealPak.exe" />
                                 <Button Content="Browse" Background="#262626" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseUnrealPakPath" />
                             </Grid>
                         </StackPanel>
@@ -276,7 +321,7 @@
                         <StackPanel Margin="0,15,0,15">
                             <TextBlock Text="Output Path (for global.utoc)" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
                             <Grid Margin="5">
-                                <TextBox Name="GlobalOutputPathTextBox" IsReadOnly="True" Background="Transparent" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="C:\Path\To\Output" />
+                                <TextBox Name="GlobalOutputPathTextBox" IsReadOnly="True" Background="Transparent" Width="500" VerticalContentAlignment="Center" mah:TextBoxHelper.Watermark="C:\Path\To\Output" />
                                 <Button Content="Browse" Background="#262626" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseGlobalOutputPath" />
                             </Grid>
                         </StackPanel>
@@ -285,7 +330,7 @@
                         <StackPanel Margin="0,15,0,15">
                             <TextBlock Text="Cooked Files Path (cooked files to be packaged)" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
                             <Grid Margin="5">
-                                <TextBox Name="CookedFilesPathTextBox" IsReadOnly="True" Background="Transparent" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="C:\Path\To\Cooked" />
+                                <TextBox Name="CookedFilesPathTextBox" IsReadOnly="True" Background="Transparent" Width="500" VerticalContentAlignment="Center" mah:TextBoxHelper.Watermark="C:\Path\To\Cooked" />
                                 <Button Content="Browse" Background="#262626" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseCookedFilesPath" />
                             </Grid>
                         </StackPanel>
@@ -294,7 +339,7 @@
                         <StackPanel Margin="0,15,0,15">
                             <TextBlock Text="PackageStore Path" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
                             <Grid Margin="5">
-                                <TextBox Name="PackageStorePathTextBox" IsReadOnly="True" Background="Transparent" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="packagestore.manifest / packagestore.json" />
+                                <TextBox Name="PackageStorePathTextBox" IsReadOnly="True" Background="Transparent" Width="500" VerticalContentAlignment="Center" mah:TextBoxHelper.Watermark="packagestore.manifest / packagestore.json" />
                                 <Button Content="Browse" Background="#262626" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowsePackageStorePath" />
                             </Grid>
                         </StackPanel>
@@ -303,7 +348,7 @@
                         <StackPanel Margin="0,15,0,15">
                             <TextBlock Text="ScriptObjects Path" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
                             <Grid Margin="5">
-                                <TextBox Name="ScriptObjectsPathTextBox" IsReadOnly="True" Background="Transparent" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="ScriptObjects.bin" />
+                                <TextBox Name="ScriptObjectsPathTextBox" IsReadOnly="True" Background="Transparent" Width="500" VerticalContentAlignment="Center" mah:TextBoxHelper.Watermark="ScriptObjects.bin" />
                                 <Button Content="Browse" Background="#262626" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseScriptObjectsPath" />
                             </Grid>
                         </StackPanel>
@@ -312,7 +357,7 @@
                         <StackPanel Margin="0,15,0,15">
                             <TextBlock Text="Commands Path" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
                             <Grid Margin="5">
-                                <TextBox Name="IoStoreCommandsPathTextBox" IsReadOnly="True" Background="Transparent" Width="500" VerticalContentAlignment="Center" Controls:TextBoxHelper.Watermark="IoStoreCommands.txt / Commands.txt" />
+                                <TextBox Name="IoStoreCommandsPathTextBox" IsReadOnly="True" Background="Transparent" Width="500" VerticalContentAlignment="Center" mah:TextBoxHelper.Watermark="IoStoreCommands.txt / Commands.txt" />
                                 <Button Content="Browse" Background="#262626" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseIoStoreCommandsPath" />
                             </Grid>
                         </StackPanel>
@@ -369,7 +414,7 @@
             <mah:Flyout x:Name="AesKeysFlyout" 
                         Header="AES Key Settings" 
                         Position="Left"
-                        Width="500"
+                        Width="600"
                         Background="#1F1F1F"
                         BorderBrush="{DynamicResource MahApps.Brushes.Accent}"
                         BorderThickness="1"
@@ -400,6 +445,170 @@
                         <TextBlock Text="HEX" Foreground="White" FontSize="12" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
                         <TextBox Name="ZenToolsKeyHexTextBox" Background="Transparent" Width="460" Height="30" Margin="5"/>
                         <Button Content="Save" Background="#262626" FontSize="14" FontWeight="Bold" Width="180" Height="40" Margin="5" Click="SaveZenToolsConfigAsync"/>
+                    </StackPanel>
+                </Grid>
+            </mah:Flyout>
+
+            <!-- Repak Settings Flyout -->
+            <mah:Flyout x:Name="RepakSettingsFlyout" 
+                        Header="Repak Settings" 
+                        Position="Left"
+                        Width="600"
+                        Background="#1F1F1F"
+                        BorderBrush="{DynamicResource MahApps.Brushes.Accent}"
+                        BorderThickness="1"
+                        IsOpen="{Binding IsRepakSettingsFlyoutOpen}">
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="250"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="350"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- Top -->
+                    <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
+                        <!-- Dropdown for Version Switching -->
+                        <TextBlock Text="Pak Version" Foreground="White" FontSize="20" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="0,5,0,15"/>
+                        <ComboBox x:Name="RepakVersionSwitchDropdown" 
+                                  Width="150" Height="40" 
+                                  SelectedIndex="0" 
+                                  SelectionChanged="ComboBox_RepakVersion" 
+                                  FontSize="16" FontWeight="Bold"
+                                  VerticalAlignment="Center" HorizontalAlignment="Center" 
+                                  Grid.Column="1">
+                            <ComboBoxItem Content="V11" FontSize="14" Height="25" />
+                            <ComboBoxItem Content="V10" FontSize="14" Height="25" />
+                            <ComboBoxItem Content="V9" FontSize="14" Height="25" />
+                            <ComboBoxItem Content="V8B" FontSize="14" Height="25" />
+                            <ComboBoxItem Content="V8A" FontSize="14" Height="25" />
+                            <ComboBoxItem Content="V7" FontSize="14" Height="25" />
+                            <ComboBoxItem Content="V6" FontSize="14" Height="25" />
+                            <ComboBoxItem Content="V5" FontSize="14" Height="25" />
+                            <ComboBoxItem Content="V4" FontSize="14" Height="25" />
+                            <ComboBoxItem Content="V3" FontSize="14" Height="25" />
+                            <ComboBoxItem Content="V2" FontSize="14" Height="25" />
+                            <ComboBoxItem Content="V1" FontSize="14" Height="25" />
+                        </ComboBox>
+                    </StackPanel>
+
+                    <!-- Middle -->
+                    <StackPanel Grid.Row="1" Visibility="Collapsed"/>
+
+                    <!-- Bottom -->
+                    <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
+                        <DataGrid x:Name="RepakDataGrid" 
+                                  AutoGenerateColumns="False" 
+                                  HeadersVisibility="Column" 
+                                  GridLinesVisibility="None"
+                                  CanUserSortColumns="False"
+                                  RowBackground="#202020"
+                                  AlternatingRowBackground="#252525"
+                                  Foreground="White" 
+                                  Background="#262626"
+                                  BorderBrush="#7F7F7F"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"
+                                  Width="580">
+
+                            <!-- Columns -->
+                            <DataGrid.Columns>
+                                <!-- UE Version Column -->
+                                <DataGridTextColumn Header="UE Version" Binding="{Binding UEVersion}" Width="1*" ElementStyle="{StaticResource CenteredCellStyle}">
+                                    <DataGridTextColumn.HeaderStyle>
+                                        <Style TargetType="DataGridColumnHeader">
+                                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                            <Setter Property="VerticalContentAlignment" Value="Center" />
+                                            <Setter Property="Height" Value="30" />
+                                            <Setter Property="FontSize" Value="14" />
+                                            <Setter Property="FontWeight" Value="Bold" />
+                                            <Setter Property="Background" Value="#2A2A2A" />
+                                            <Setter Property="Foreground" Value="White" />
+                                            <Setter Property="BorderBrush" Value="#B9B9B9" />
+                                            <Setter Property="BorderThickness" Value="0,0,2,3" />
+                                        </Style>
+                                    </DataGridTextColumn.HeaderStyle>
+                                </DataGridTextColumn>
+
+                                <!-- Version Column -->
+                                <DataGridTextColumn Header="Version" Binding="{Binding Version}" Width="0.5*" ElementStyle="{StaticResource CenteredCellStyle}">
+                                    <DataGridTextColumn.HeaderStyle>
+                                        <Style TargetType="DataGridColumnHeader">
+                                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                            <Setter Property="VerticalContentAlignment" Value="Center" />
+                                            <Setter Property="Height" Value="30" />
+                                            <Setter Property="FontSize" Value="14" />
+                                            <Setter Property="FontWeight" Value="Bold" />
+                                            <Setter Property="Background" Value="#2A2A2A" />
+                                            <Setter Property="Foreground" Value="White" />
+                                            <Setter Property="BorderBrush" Value="#B9B9B9" />
+                                            <Setter Property="BorderThickness" Value="0,0,2,3" />
+                                        </Style>
+                                    </DataGridTextColumn.HeaderStyle>
+                                </DataGridTextColumn>
+
+                                <!-- Version Feature Column -->
+                                <DataGridTextColumn Header="Version Feature" Binding="{Binding VersionFeature}" Width="1.5*" ElementStyle="{StaticResource CenteredCellStyle}">
+                                    <DataGridTextColumn.HeaderStyle>
+                                        <Style TargetType="DataGridColumnHeader">
+                                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                            <Setter Property="VerticalContentAlignment" Value="Center" />
+                                            <Setter Property="Height" Value="30" />
+                                            <Setter Property="FontSize" Value="14" />
+                                            <Setter Property="FontWeight" Value="Bold" />
+                                            <Setter Property="Background" Value="#2A2A2A" />
+                                            <Setter Property="Foreground" Value="White" />
+                                            <Setter Property="BorderBrush" Value="#B9B9B9" />
+                                            <Setter Property="BorderThickness" Value="0,0,2,3" />
+                                        </Style>
+                                    </DataGridTextColumn.HeaderStyle>
+                                </DataGridTextColumn>
+
+                                <!-- Read Column -->
+                                <DataGridTemplateColumn Header="Read" Width="0.5*">
+                                    <DataGridTemplateColumn.HeaderStyle>
+                                        <Style TargetType="DataGridColumnHeader">
+                                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                            <Setter Property="VerticalContentAlignment" Value="Center" />
+                                            <Setter Property="Height" Value="30" />
+                                            <Setter Property="FontSize" Value="14" />
+                                            <Setter Property="FontWeight" Value="Bold" />
+                                            <Setter Property="Background" Value="#2A2A2A" />
+                                            <Setter Property="Foreground" Value="White" />
+                                            <Setter Property="BorderBrush" Value="#B9B9B9" />
+                                            <Setter Property="BorderThickness" Value="0,0,2,3" />
+                                        </Style>
+                                    </DataGridTemplateColumn.HeaderStyle>
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Read}" HorizontalAlignment="Center" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+
+                                <!-- Write Column -->
+                                <DataGridTemplateColumn Header="Write" Width="0.5*">
+                                    <DataGridTemplateColumn.HeaderStyle>
+                                        <Style TargetType="DataGridColumnHeader">
+                                            <Setter Property="HorizontalContentAlignment" Value="Center" />
+                                            <Setter Property="VerticalContentAlignment" Value="Center" />
+                                            <Setter Property="Height" Value="30" />
+                                            <Setter Property="FontSize" Value="14" />
+                                            <Setter Property="FontWeight" Value="Bold" />
+                                            <Setter Property="Background" Value="#2A2A2A" />
+                                            <Setter Property="Foreground" Value="White" />
+                                            <Setter Property="BorderBrush" Value="#B9B9B9" />
+                                            <Setter Property="BorderThickness" Value="0,0,0,3" />
+                                        </Style>
+                                    </DataGridTemplateColumn.HeaderStyle>
+                                    <DataGridTemplateColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <TextBlock Text="{Binding Write}" HorizontalAlignment="Center" />
+                                        </DataTemplate>
+                                    </DataGridTemplateColumn.CellTemplate>
+                                </DataGridTemplateColumn>
+                            </DataGrid.Columns>
+                        </DataGrid>
                     </StackPanel>
                 </Grid>
             </mah:Flyout>

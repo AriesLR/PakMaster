@@ -3,6 +3,7 @@ using Microsoft.Win32;
 using PakMaster.Resources.Functions.Services;
 using PakMaster.Resources.ViewModels;
 using System.Diagnostics;
+using System.Dynamic;
 using System.IO;
 using System.Text;
 using System.Windows;
@@ -14,6 +15,7 @@ namespace PakMaster
     {
         private ConfigService _configService;
 
+        private bool _isInitialized = false;
         private bool isIoStoreMode = false;
         private string? inputFolderPath;
         private string? outputFolderPath;
@@ -21,9 +23,16 @@ namespace PakMaster
         public MainWindow()
         {
             InitializeComponent();
+            _isInitialized = true;
             DataContext = new MainWindowViewModel();
             _configService = new ConfigService();
+
+            LoadRepakVersionInfo();
+
+            // Load Configs
             LoadAesKeysAsync();
+            LoadGeneralConfigAsync();
+            LoadUnrealPakConfigAsync();
         }
 
         // Open PakMaster's GitHub Repo in the user's default browser 
@@ -38,12 +47,71 @@ namespace PakMaster
             await UpdateService.CheckJsonForUpdatesAsync("https://raw.githubusercontent.com/AriesLR/PakMaster/refs/heads/main/docs/version/update.json");
         }
 
+        // Load General Config
+        private async void LoadGeneralConfigAsync()
+        {
+            try
+            {
+                var generalConfig = _configService.LoadGeneralConfig<dynamic>();
+
+                string repakVersion = generalConfig?.ContainsKey("RepakVersion") ?? false ? generalConfig["RepakVersion"] : string.Empty;
+
+                if (!string.IsNullOrEmpty(repakVersion))
+                {
+                    if (repakVersion == "V11")
+                        RepakVersionSwitchDropdown.SelectedIndex = 0;
+                    else if (repakVersion == "V10")
+                        RepakVersionSwitchDropdown.SelectedIndex = 1;
+                    else if (repakVersion == "V9")
+                        RepakVersionSwitchDropdown.SelectedIndex = 2;
+                    else if (repakVersion == "V8B")
+                        RepakVersionSwitchDropdown.SelectedIndex = 3;
+                    else if (repakVersion == "V8A")
+                        RepakVersionSwitchDropdown.SelectedIndex = 4;
+                    else if (repakVersion == "V7")
+                        RepakVersionSwitchDropdown.SelectedIndex = 5;
+                    else if (repakVersion == "V6")
+                        RepakVersionSwitchDropdown.SelectedIndex = 6;
+                    else if (repakVersion == "V5")
+                        RepakVersionSwitchDropdown.SelectedIndex = 7;
+                    else if (repakVersion == "V4")
+                        RepakVersionSwitchDropdown.SelectedIndex = 8;
+                    else if (repakVersion == "V3")
+                        RepakVersionSwitchDropdown.SelectedIndex = 9;
+                    else if (repakVersion == "V2")
+                        RepakVersionSwitchDropdown.SelectedIndex = 10;
+                    else if (repakVersion == "V1")
+                        RepakVersionSwitchDropdown.SelectedIndex = 11;
+                }
+                Debug.WriteLine($"[DEBUG]: General Config Loaded\n[DEBUG]: RepakVersion: {repakVersion}");
+            }
+            catch (Exception ex)
+            {
+                await MessageService.ShowError($"Error loading General config: {ex.Message}");
+            }
+        }
+
+        private async void SaveGeneralConfigAsync(string version)
+        {
+            try
+            {
+                var config = _configService.LoadGeneralConfig<dynamic>() ?? new ExpandoObject();
+                config.RepakVersion = version;
+                _configService.SaveGeneralConfig(config);
+                Debug.WriteLine($"[DEBUG]: Repak Version Set To {version}");
+            }
+            catch (Exception ex)
+            {
+                await MessageService.ShowError($"Error saving General config: {ex.Message}");
+            }
+        }
+
         // Load UnrealPak Config
         private async void LoadUnrealPakConfigAsync()
         {
             try
             {
-                var unrealPakConfig = _configService.LoadUnrealPakConfigAsync<Dictionary<string, string>>();
+                var unrealPakConfig = _configService.LoadUnrealPakConfig<Dictionary<string, string>>();
 
                 string unrealPakPath = unrealPakConfig?.ContainsKey("UnrealPakPath") ?? false ? unrealPakConfig["UnrealPakPath"] : string.Empty;
                 string globalOutputPath = unrealPakConfig?.ContainsKey("GlobalOutputPath") ?? false ? unrealPakConfig["GlobalOutputPath"] : string.Empty;
@@ -95,13 +163,20 @@ namespace PakMaster
         // Save Repak AES Key
         private async void SaveRepakConfigAsync(object sender, RoutedEventArgs e)
         {
-            string aesKey = AesKeyTextBox.Text.Trim();
+            try
+            {
+                string aesKey = AesKeyTextBox.Text.Trim();
 
-            var config = new { AesKey = aesKey };
+                var config = new { AesKey = aesKey };
 
-            _configService.SaveRepakConfigAsync(config);
+                _configService.SaveRepakConfig(config);
 
-            await MessageService.ShowInfo("Success", "Repak configuration saved successfully!");
+                await MessageService.ShowInfo("Success", "Repak configuration saved successfully!");
+            }
+            catch (Exception ex)
+            {
+                await MessageService.ShowError($"Error saving Repak AES Keys config: {ex.Message}");
+            }
         }
 
         // Save ZenTools AES Key
@@ -112,13 +187,13 @@ namespace PakMaster
                 string zenToolsKeyGuid = ZenToolsKeyGuidTextBox.Text.Trim();
                 string zenToolsKeyHex = ZenToolsKeyHexTextBox.Text.Trim();
 
-                _configService.SaveZenToolsConfigAsync(zenToolsKeyGuid, zenToolsKeyHex);
+                _configService.SaveZenToolsConfig(zenToolsKeyGuid, zenToolsKeyHex);
 
                 await MessageService.ShowInfo("Success", "ZenTools configuration saved successfully!");
             }
             catch (Exception ex)
             {
-                await MessageService.ShowError($"Error saving ZenTools config: {ex.Message}");
+                await MessageService.ShowError($"Error saving ZenTools AES Keys config: {ex.Message}");
             }
         }
 
@@ -174,8 +249,7 @@ namespace PakMaster
             await RunToolAsync("repak", "repak.exe", arguments, output =>
             {
                 UpdateCommandOutput(output);
-                RepopulateInputListBox();
-                RepopulateOutputListBox();
+                RefreshUI();
             });
         }
 
@@ -183,6 +257,10 @@ namespace PakMaster
         private async Task StartRepakRepackAsync()
         {
             var selectedInputFolder = OutputFilesListBox.SelectedItem as KeyValuePair<string, string>?;
+
+            var generalConfig = _configService.LoadGeneralConfig<dynamic>();
+
+            string repakVersion = generalConfig?.ContainsKey("RepakVersion") ?? false ? generalConfig["RepakVersion"] : string.Empty;
 
             if (selectedInputFolder == null)
             {
@@ -218,13 +296,12 @@ namespace PakMaster
 
             string outputFilePath = Path.Combine(inputFolderPath, outputPakName);
 
-            string arguments = $"pack --version V11 \"{fullInputFolderPath}\" \"{outputFilePath}\"";
+            string arguments = $"pack --version {repakVersion} \"{fullInputFolderPath}\" \"{outputFilePath}\"";
 
             await RunToolAsync("repak", "repak.exe", arguments, output =>
             {
                 UpdateCommandOutput(output);
-                RepopulateInputListBox();
-                RepopulateOutputListBox();
+                RefreshUI();
             });
         }
 
@@ -294,8 +371,7 @@ namespace PakMaster
             await RunToolAsync("zentools", "zentools.exe", arguments, output =>
             {
                 UpdateCommandOutput(output);
-                RepopulateInputListBox();
-                RepopulateOutputListBox();
+                RefreshUI();
             });
         }
 
@@ -306,7 +382,7 @@ namespace PakMaster
         // Start Packing with UnrealPak
         private async Task StartUnrealPakRepackAsync()
         {
-            var unrealPakConfig = _configService.LoadUnrealPakConfigAsync<Dictionary<string, string>>();
+            var unrealPakConfig = _configService.LoadUnrealPakConfig<Dictionary<string, string>>();
 
             if (unrealPakConfig == null || unrealPakConfig.Count == 0)
             {
@@ -388,8 +464,7 @@ namespace PakMaster
             await RunUnrealPakAsync(unrealPakPath, arguments, output =>
             {
                 UpdateCommandOutput(output);
-                RepopulateInputListBox();
-                RepopulateOutputListBox();
+                RefreshUI();
             });
         }
 
@@ -493,7 +568,7 @@ namespace PakMaster
                 Title = "Select UnrealPak Executable"
             };
 
-            var config = _configService.LoadUnrealPakConfigAsync<dynamic>();
+            var config = _configService.LoadUnrealPakConfig<dynamic>();
             string lastPath = config?.UnrealPakPath ?? string.Empty;
             if (!string.IsNullOrEmpty(lastPath))
             {
@@ -519,7 +594,7 @@ namespace PakMaster
                 FileName = "Folder Selection"
             };
 
-            var config = _configService.LoadUnrealPakConfigAsync<dynamic>();
+            var config = _configService.LoadUnrealPakConfig<dynamic>();
             string lastPath = config?.GlobalOutputPath ?? string.Empty;
             if (!string.IsNullOrEmpty(lastPath))
             {
@@ -549,7 +624,7 @@ namespace PakMaster
                 FileName = "Folder Selection"
             };
 
-            var config = _configService.LoadUnrealPakConfigAsync<dynamic>();
+            var config = _configService.LoadUnrealPakConfig<dynamic>();
             string lastPath = config?.CookedFilesPath ?? string.Empty;
             if (!string.IsNullOrEmpty(lastPath))
             {
@@ -577,7 +652,7 @@ namespace PakMaster
                 Title = "Select Package Store File"
             };
 
-            var config = _configService.LoadUnrealPakConfigAsync<dynamic>();
+            var config = _configService.LoadUnrealPakConfig<dynamic>();
             string lastPath = config?.PackageStorePath ?? string.Empty;
             if (!string.IsNullOrEmpty(lastPath))
             {
@@ -601,7 +676,7 @@ namespace PakMaster
                 Title = "Select ScriptObjects.bin File"
             };
 
-            var config = _configService.LoadUnrealPakConfigAsync<dynamic>();
+            var config = _configService.LoadUnrealPakConfig<dynamic>();
             string lastPath = config?.ScriptObjectsPath ?? string.Empty;
             if (!string.IsNullOrEmpty(lastPath))
             {
@@ -625,7 +700,7 @@ namespace PakMaster
                 Title = "Select Commands.txt File"
             };
 
-            var config = _configService.LoadUnrealPakConfigAsync<dynamic>();
+            var config = _configService.LoadUnrealPakConfig<dynamic>();
             string lastPath = config?.IoStoreCommandsPath ?? string.Empty;
             if (!string.IsNullOrEmpty(lastPath))
             {
@@ -793,32 +868,46 @@ namespace PakMaster
             }
         }
 
+        ////////////////////////
+        // UI ELEMENT SECTION //
+        ////////////////////////
 
-        ///////////////////////
-        // UI METHOD SECTION //
-        ///////////////////////
-
-        // Mode Switch Event Handler
-        private void ComboBox_ModeSwitch(object sender, SelectionChangedEventArgs e)
+        // Refresh Button
+        private void btnRefreshUI_Click(object sender, RoutedEventArgs e)
         {
-            if (ModeSwitchDropdown.SelectedItem is ComboBoxItem selectedItem)
+            RepopulateInputListBox();
+            RepopulateOutputListBox();
+        }
+
+        // Mode Switch Button - Normal
+        private void btnModeSwitchNormal_Click(object sender, RoutedEventArgs e)
+        {
+            ModeSwitchButton.Content = "Normal Mode";
+            isIoStoreMode = false; // Normal Mode (.pak)
+            RefreshUI();
+        }
+
+        // Mode Switch Button - IoStore
+        private void btnModeSwitchIoStore_Click(object sender, RoutedEventArgs e)
+        {
+            ModeSwitchButton.Content = "IoStore Mode";
+            isIoStoreMode = true; // IoStore Mode (.ucas/.utoc)
+            RefreshUI();
+        }
+
+        // Repak Version Switch Dropdown
+        private void ComboBox_RepakVersion(object sender, SelectionChangedEventArgs e)
+        {
+            if (!_isInitialized) return;
+
+            if (RepakVersionSwitchDropdown.SelectedItem is ComboBoxItem selectedItem)
             {
-                if (selectedItem.Content.ToString() == "Normal Mode")
-                {
-                    isIoStoreMode = false; // Normal Mode (.pak)
-                    RepopulateInputListBox();
-                    RepopulateOutputListBox();
-                }
-                else if (selectedItem.Content.ToString() == "IoStore Mode")
-                {
-                    isIoStoreMode = true; // IoStore Mode (.ucas/.utoc)
-                    RepopulateInputListBox();
-                    RepopulateOutputListBox();
-                }
+                string selectedVersion = selectedItem.Content.ToString();
+                SaveGeneralConfigAsync(selectedVersion);
             }
         }
 
-        // Event handlers for unpacking and repacking, checks if toggle is on or off
+        // Unpack Button
         private async void btnUnpack_ClickAsync(object sender, RoutedEventArgs e)
         {
             if (isIoStoreMode)
@@ -831,6 +920,7 @@ namespace PakMaster
             }
         }
 
+        // Repack Button
         private async void btnRepack_ClickAsync(object sender, RoutedEventArgs e)
         {
             if (isIoStoreMode)
@@ -843,10 +933,41 @@ namespace PakMaster
             }
         }
 
-        // Event handler for UnrealPak packaging
+        // IoStore Package Button
         private async void btnIoStorePackage_ClickAsync(object sender, RoutedEventArgs e)
         {
             await StartUnrealPakRepackAsync();
+        }
+
+        // Open IoStore Flyout
+        private void OpenIoStoreFlyout(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is MainWindowViewModel viewModel)
+            {
+                viewModel.OpenIoStoreFlyout();
+                LoadUnrealPakConfigAsync(); // Load config for unrealpak paths
+            }
+        }
+
+        // Open AesKeys Flyout (Settings/Config)
+        private void OpenAesKeysFlyout(object sender, RoutedEventArgs e)
+        {
+            if (DataContext is MainWindowViewModel viewModel)
+            {
+                viewModel.OpenAesKeysFlyout();
+                LoadAesKeysAsync(); // Load again here in case user changes the values via the config directly.
+            }
+        }
+
+        ///////////////////////
+        // UI METHOD SECTION //
+        ///////////////////////
+
+        // Refresh UI Elements
+        private void RefreshUI()
+        {
+            RepopulateInputListBox();
+            RepopulateOutputListBox();
         }
 
         // Update CLI Output
@@ -859,7 +980,7 @@ namespace PakMaster
             });
         }
 
-        // Methods for repopulating listboxes after unpacking or repacking
+        // Repopulate Input ListBox
         private void RepopulateInputListBox()
         {
             if (!string.IsNullOrEmpty(inputFolderPath))
@@ -887,6 +1008,7 @@ namespace PakMaster
             }
         }
 
+        // Repopulate Output ListBox
         private void RepopulateOutputListBox()
         {
             if (!string.IsNullOrEmpty(outputFolderPath))
@@ -899,24 +1021,26 @@ namespace PakMaster
             }
         }
 
-        // Open IoStore Flyout
-        private void OpenIoStoreFlyout(object sender, RoutedEventArgs e)
+        // Repak Settings Version Info
+        public void LoadRepakVersionInfo()
         {
-            if (DataContext is MainWindowViewModel viewModel)
+            List<RepakVersionInfo> repakVersionInfo = new List<RepakVersionInfo>
             {
-                viewModel.OpenIoStoreFlyout();
-                LoadUnrealPakConfigAsync(); // Load config for unrealpak paths
-            }
-        }
+                new RepakVersionInfo { UEVersion = "", Version = "1", VersionFeature = "Initial", Read = "?", Write = "?" },
+                new RepakVersionInfo { UEVersion = "4.0-4.2", Version = "2", VersionFeature = "NoTimestamps", Read = "✔", Write = "✔" },
+                new RepakVersionInfo { UEVersion = "4.3-4.15", Version = "3", VersionFeature = "CompressionEncryption", Read = "✔", Write = "✔" },
+                new RepakVersionInfo { UEVersion = "4.16-4.19", Version = "4", VersionFeature = "IndexEncryption", Read = "✔", Write = "✔" },
+                new RepakVersionInfo { UEVersion = "4.20", Version = "5", VersionFeature = "RelativeChunkOffsets", Read = "✔", Write = "✔" },
+                new RepakVersionInfo { UEVersion = "", Version = "6", VersionFeature = "DeleteRecords", Read = "?", Write = "?" },
+                new RepakVersionInfo { UEVersion = "4.21", Version = "7", VersionFeature = "EncryptionKeyGuid", Read = "✔", Write = "✔" },
+                new RepakVersionInfo { UEVersion = "4.22", Version = "8A", VersionFeature = "FNameBasedCompression", Read = "✔", Write = "✔" },
+                new RepakVersionInfo { UEVersion = "4.23-4.24", Version = "8B", VersionFeature = "FNameBasedCompression", Read = "✔", Write = "✔" },
+                new RepakVersionInfo { UEVersion = "4.25", Version = "9", VersionFeature = "FrozenIndex", Read = "✔", Write = "✔" },
+                new RepakVersionInfo { UEVersion = "", Version = "10", VersionFeature = "PathHashIndex", Read = "?", Write = "?" },
+                new RepakVersionInfo { UEVersion = "4.26-5.3", Version = "11", VersionFeature = "Fnv64BugFix", Read = "✔", Write = "✔" }
+            };
 
-        // Open AesKeys Flyout (Settings/Config)
-        private void OpenAesKeysFlyout(object sender, RoutedEventArgs e)
-        {
-            if (DataContext is MainWindowViewModel viewModel)
-            {
-                viewModel.OpenAesKeysFlyout();
-                LoadAesKeysAsync(); // Load again here in case user changes the values via the config directly.
-            }
+            RepakDataGrid.ItemsSource = repakVersionInfo;
         }
     }
 }

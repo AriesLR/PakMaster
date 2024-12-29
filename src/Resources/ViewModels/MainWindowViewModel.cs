@@ -13,6 +13,7 @@ namespace PakMaster.Resources.ViewModels
         private bool _isAesKeysFlyoutOpen;
         private bool _isIoStoreFlyoutOpen;
         private bool _isSettingsFlyoutOpen;
+        private bool _isRepakSettingsFlyoutOpen;
 
         public ObservableCollection<MenuItem> MenuItems { get; set; }
 
@@ -47,9 +48,9 @@ namespace PakMaster.Resources.ViewModels
             OpenAesKeysFlyout();
         }
 
-        private async void btnSidebarRepakSettings_Click(object sender, RoutedEventArgs e)
+        private void btnSidebarRepakSettings_Click(object sender, RoutedEventArgs e)
         {
-            await MessageService.ShowInfo("Work In Progress", "This feature is not finished.");
+            OpenRepakSettingsFlyout();
         }
 
         private async void btnSidebarZenToolsSettings_Click(object sender, RoutedEventArgs e)
@@ -105,6 +106,30 @@ namespace PakMaster.Resources.ViewModels
             IsAesKeysFlyoutOpen = true;
         }
 
+        // Repak Settings Flyout
+        public bool IsRepakSettingsFlyoutOpen
+        {
+            get => _isRepakSettingsFlyoutOpen;
+            set
+            {
+                if (_isRepakSettingsFlyoutOpen != value)
+                {
+                    _isRepakSettingsFlyoutOpen = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        // Toggle Repak Settings Flyout to Open (true)
+        public void OpenRepakSettingsFlyout()
+        {
+            if (IsRepakSettingsFlyoutOpen)
+            {
+                IsRepakSettingsFlyoutOpen = false;
+            }
+            IsRepakSettingsFlyoutOpen = true;
+        }
+
         public event PropertyChangedEventHandler? PropertyChanged;
 
         protected virtual void OnPropertyChanged([CallerMemberName] string? propertyName = null)
@@ -135,11 +160,21 @@ namespace PakMaster.Resources.ViewModels
         }
     }
 
-
     public class MenuItem
     {
         public string Text { get; set; }
         public string Icon { get; set; }
         public ICommand Command { get; set; }
     }
+
+    // Repak DataGrid
+    public class RepakVersionInfo
+    {
+        public string UEVersion { get; set; }
+        public string Version { get; set; }
+        public string VersionFeature { get; set; }
+        public string Read { get; set; }
+        public string Write { get; set; }
+    }
+
 }
