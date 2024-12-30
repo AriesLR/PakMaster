@@ -76,14 +76,14 @@ By using PakMaster, users must also adhere to the licenses of Repak and ZenTools
 
 ## Planned Features
 
-- Ability to choose pak version, currently PakMaster is using V11, possible options are: `V0, V1, V2, V3, V4, V5, V6, V7, V8A, V8B, V9, V10, V11`
+- IoStore Packing config presets.
 
 - ~~Load Order Editor - if your input folder is set to something like a game's mod folder you could easily modify load orders via PakMaster.~~
   - This is outside the scope of this project, maybe once I'm satisfied with the state of PakMaster I'll make something like that as a stanadlone app.
 
 ## Known Issues
 
-- None, see [Issues](#issues) if you find any.
+- IoStore Mode Unpacking creates a folder called "Engine" on your desktop - This is something to do with how ZenTools works, I'm looking into it.
 
 ## Installation
 
@@ -133,9 +133,6 @@ Your configuration files and settings will be preserved during the update proces
 
 
 ## Screenshots
-
-> [!NOTE]
-> Screenshots out of date as of v0.1.4, I will update them when I wake up.
 
 ### Normal Mode Unpacking
 ![Normal Mode Unpacking](https://raw.githubusercontent.com/AriesLR/PakMaster/refs/heads/main/docs/images/pakmaster-normal-unpack.png)
