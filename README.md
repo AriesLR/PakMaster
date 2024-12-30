@@ -83,7 +83,7 @@ By using PakMaster, users must also adhere to the licenses of Repak and ZenTools
 
 ## Known Issues
 
-- IoStore Mode Unpacking creates a folder called "Engine" on your desktop - This is something to do with how ZenTools works, I'm looking into it.
+- IoStore Mode Unpacking creates folders called "Engine" and "ZenTools" outside of the PakMaster folder - This is something to do with how ZenTools works, I'm looking into it.
 
 ## Installation
 
