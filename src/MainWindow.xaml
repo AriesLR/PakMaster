@@ -339,7 +339,7 @@
                         <StackPanel Margin="0,15,0,15">
                             <TextBlock Text="PackageStore Path" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5"/>
                             <Grid Margin="5">
-                                <TextBox Name="PackageStorePathTextBox" IsReadOnly="True" Background="Transparent" Width="500" VerticalContentAlignment="Center" mah:TextBoxHelper.Watermark="packagestore.manifest / packagestore.json" />
+                                <TextBox Name="PackageStorePathTextBox" IsReadOnly="True" Background="Transparent" Width="500" VerticalContentAlignment="Center" mah:TextBoxHelper.Watermark="packagestore.manifest / PackageStoreManifest.json" />
                                 <Button Content="Browse" Background="#262626" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowsePackageStorePath" />
                             </Grid>
                         </StackPanel>
@@ -375,6 +375,50 @@
                             <RowDefinition Height="200" />
                             <RowDefinition Height="260" />
                         </Grid.RowDefinitions>
+                        
+                        <!-- Config Selection -->
+                        <!--
+                        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,0">
+                            <Grid HorizontalAlignment="Stretch">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Button Background="#262626" Height="30" Width="30" FontSize="12" FontWeight="Bold" Click="btnIoStoreNewConfig_Click" ToolTip="Add New Config" Grid.Column="0">
+                                    <Button.Content>
+                                        <iconPacks:PackIconMaterial Kind="PlusBox" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Button.Content>
+                                </Button>
+
+                                <Button Background="#262626" Height="30" Width="30" FontSize="12" FontWeight="Bold" Click="btnIoStoreDeleteConfig_Click" ToolTip="Delete Selected Config" Grid.Column="1">
+                                    <Button.Content>
+                                        <iconPacks:PackIconMaterial Kind="MinusBox" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Button.Content>
+                                </Button>
+
+                                <Button Background="#262626" Height="30" Width="30" FontSize="12" FontWeight="Bold" Click="btnIoStoreRenameConfig_Click" ToolTip="Rename Selected Config" Grid.Column="2">
+                                    <Button.Content>
+                                        <iconPacks:PackIconMaterial Kind="RenameBox" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Button.Content>
+                                </Button>
+
+                                <ComboBox Name="ConfigSelectionComboBox" 
+                                          Background="Transparent" 
+                                          Height="30" 
+                                          Width="200" 
+                                          VerticalContentAlignment="Center" 
+                                          Margin="5,0,0,0" 
+                                          Grid.Column="3" 
+                                          ItemsSource="{Binding Configurations}" 
+                                          SelectedItem="{Binding SelectedConfiguration, Mode=TwoWay}" 
+                                          SelectionChanged="ConfigSelectionComboBox_SelectionChanged">
+                                </ComboBox>
+                            </Grid>
+                        </StackPanel>
+                        -->
 
                         <!-- Pack Button -->
                         <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,30">

@@ -354,8 +354,6 @@ namespace PakMaster
             string uniqueGuid = Guid.NewGuid().ToString("N").Substring(0, 8);
             string outputPath = Path.Combine(outputFolderPath, $"PakMaster_IoStore_{uniqueGuid}");
 
-
-
             string encryptionKeysPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "configs", "zentools-aeskey.json");
             string arguments;
 
@@ -373,6 +371,29 @@ namespace PakMaster
                 UpdateCommandOutput(output);
                 RefreshUI();
             });
+
+            string appDirectory = Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory.TrimEnd(Path.DirectorySeparatorChar));
+            string engineFolderPath = Path.Combine(appDirectory, "Engine");
+            string zenToolsFolderPath = Path.Combine(appDirectory, "ZenTools");
+
+            try
+            {
+                if (Directory.Exists(engineFolderPath))
+                {
+                    Directory.Delete(engineFolderPath, true);
+                    Debug.WriteLine($"[DEBUG]: Deleted folder: {engineFolderPath}");
+                }
+
+                if (Directory.Exists(zenToolsFolderPath))
+                {
+                    Directory.Delete(zenToolsFolderPath, true);
+                    Debug.WriteLine($"[DEBUG]: Deleted folder: {zenToolsFolderPath}");
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine($"[ERROR]: Failed to delete folders: {ex.Message}");
+            }
         }
 
         ///////////////////////
