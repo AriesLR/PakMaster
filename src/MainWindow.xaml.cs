@@ -1001,6 +1001,14 @@ namespace PakMaster
             });
         }
 
+        // Scroll CLI Outputs
+        private void CliOutput_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            CommandOutputTextBox.ScrollToEnd();
+            IoStoreCommandOutputTextBox.ScrollToEnd();
+        }
+
+
         // Repopulate Input ListBox
         private void RepopulateInputListBox()
         {

@@ -271,7 +271,8 @@
                                  Height="125" 
                                  BorderBrush="#7F7F7F" 
                                  BorderThickness="1"
-                                 FocusVisualStyle="{x:Null}">
+                                 FocusVisualStyle="{x:Null}"
+                                 TextChanged="CliOutput_TextChanged">
                             <TextBox.Template>
                                 <ControlTemplate TargetType="TextBox">
                                     <Border BorderBrush="{TemplateBinding BorderBrush}" 
@@ -438,7 +439,8 @@
                                      Width="650"
                                      BorderBrush="#7F7F7F" 
                                      BorderThickness="1"
-                                     FocusVisualStyle="{x:Null}">
+                                     FocusVisualStyle="{x:Null}"
+                                     TextChanged="CliOutput_TextChanged">
                                 <TextBox.Template>
                                     <ControlTemplate TargetType="TextBox">
                                         <Border BorderBrush="{TemplateBinding BorderBrush}" 
