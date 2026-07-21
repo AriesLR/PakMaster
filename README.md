@@ -2,6 +2,9 @@
 
 #### Hopefully the ultimate solution to Unreal Engine 5 modding (.pak/.ucas/.utoc)
 
+> [!CAUTION]
+> PakMaster has been outdated for quite some time. In the (hopefully) near feature I plan on rewriting PakMaster to replace Repak with Retoc. It is 7/21/2026 (US format) at the time of writing this. Expect updates soonish.
+
 > [!IMPORTANT]
 > PakMaster assumes you have some knowledge about UE5 modding and Unreal Engine. If you are new to Unreal Engine modding, I suggest starting [HERE](https://github.com/Dmgvol/UE_Modding/#ue45-modding-guides).
 
