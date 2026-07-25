@@ -302,6 +302,6 @@ namespace PakMaster.UI.Views.Flyouts
             LanguageDropdown.SelectedItem = LanguageManager.SupportedLanguages.FirstOrDefault(lang => string.Equals(lang.CultureCode, settings.Language, StringComparison.OrdinalIgnoreCase)) ?? LanguageManager.SupportedLanguages[0];
         }
 
-        // ============ Misc Helpers ============
+        // ============ TEMP ============
     }
 }
