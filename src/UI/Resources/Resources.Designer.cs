@@ -8,10 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using System;
-
-namespace PakMaster.UI.Resources
-{
+namespace PakMaster.UI.Resources {
+    using System;
+    
+    
     /// <summary>
     ///   A strongly-typed resource class, for looking up localized strings, etc.
     /// </summary>
@@ -22,184 +22,152 @@ namespace PakMaster.UI.Resources
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    public class Resources
-    {
-
+    public class Resources {
+        
         private static global::System.Resources.ResourceManager resourceMan;
-
+        
         private static global::System.Globalization.CultureInfo resourceCulture;
-
+        
         [global::System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1811:AvoidUncalledPrivateCode")]
-        internal Resources()
-        {
+        internal Resources() {
         }
-
+        
         /// <summary>
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Resources.ResourceManager ResourceManager
-        {
-            get
-            {
-                if (object.ReferenceEquals(resourceMan, null))
-                {
+        public static global::System.Resources.ResourceManager ResourceManager {
+            get {
+                if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("PakMaster.UI.Resources.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
             }
         }
-
+        
         /// <summary>
         ///   Overrides the current thread's CurrentUICulture property for all
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        public static global::System.Globalization.CultureInfo Culture
-        {
-            get
-            {
+        public static global::System.Globalization.CultureInfo Culture {
+            get {
                 return resourceCulture;
             }
-            set
-            {
+            set {
                 resourceCulture = value;
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to DEVELOPER.
         /// </summary>
-        public static string About_Lbl_Developer
-        {
-            get
-            {
+        public static string About_Lbl_Developer {
+            get {
                 return ResourceManager.GetString("About_Lbl_Developer", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to LICENSE.
         /// </summary>
-        public static string About_Lbl_License
-        {
-            get
-            {
+        public static string About_Lbl_License {
+            get {
                 return ResourceManager.GetString("About_Lbl_License", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to NAME.
         /// </summary>
-        public static string About_Lbl_Name
-        {
-            get
-            {
+        public static string About_Lbl_Name {
+            get {
                 return ResourceManager.GetString("About_Lbl_Name", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to OS ARCHITECTURE.
         /// </summary>
-        public static string About_Lbl_OsArchitecture
-        {
-            get
-            {
+        public static string About_Lbl_OsArchitecture {
+            get {
                 return ResourceManager.GetString("About_Lbl_OsArchitecture", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to TARGET FRAMEWORK.
         /// </summary>
-        public static string About_Lbl_TargetFramework
-        {
-            get
-            {
+        public static string About_Lbl_TargetFramework {
+            get {
                 return ResourceManager.GetString("About_Lbl_TargetFramework", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to VERSION.
         /// </summary>
-        public static string About_Lbl_Version
-        {
-            get
-            {
+        public static string About_Lbl_Version {
+            get {
                 return ResourceManager.GetString("About_Lbl_Version", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Application Information.
         /// </summary>
-        public static string About_Section_ApplicationInformation
-        {
-            get
-            {
+        public static string About_Section_ApplicationInformation {
+            get {
                 return ResourceManager.GetString("About_Section_ApplicationInformation", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Support the Developer.
         /// </summary>
-        public static string About_Section_SupportTheDeveloper
-        {
-            get
-            {
+        public static string About_Section_SupportTheDeveloper {
+            get {
                 return ResourceManager.GetString("About_Section_SupportTheDeveloper", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to If this app has helped you out, or if you&apos;re just feeling generous today, any tips are appreciated. I don&apos;t have a company paying me to build these tools; I do all of this in my free time. Because of that, any support I get comes entirely from the great people who use my apps..
         /// </summary>
-        public static string About_Section_SupportTheDeveloper_Desc
-        {
-            get
-            {
+        public static string About_Section_SupportTheDeveloper_Desc {
+            get {
                 return ResourceManager.GetString("About_Section_SupportTheDeveloper_Desc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to About.
         /// </summary>
-        public static string About_Title
-        {
-            get
-            {
+        public static string About_Title {
+            get {
                 return ResourceManager.GetString("About_Title", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to An instance of this application is already running..
         /// </summary>
-        public static string App_Msg_AlreadyRunning_Desc
-        {
-            get
-            {
+        public static string App_Msg_AlreadyRunning_Desc {
+            get {
                 return ResourceManager.GetString("App_Msg_AlreadyRunning_Desc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Application Already Running.
         /// </summary>
-        public static string App_Msg_AlreadyRunning_Title
-        {
-            get
-            {
+        public static string App_Msg_AlreadyRunning_Title {
+            get {
                 return ResourceManager.GetString("App_Msg_AlreadyRunning_Title", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to A critical error occurred and the crash reporter could not be started.
         ///
@@ -207,652 +175,534 @@ namespace PakMaster.UI.Resources
         ///
         ///Launch Error: {1}.
         /// </summary>
-        public static string App_Msg_CrashReporterError_Desc
-        {
-            get
-            {
+        public static string App_Msg_CrashReporterError_Desc {
+            get {
                 return ResourceManager.GetString("App_Msg_CrashReporterError_Desc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Fatal Application Crash.
         /// </summary>
-        public static string App_Msg_CrashReporterError_Title
-        {
-            get
-            {
+        public static string App_Msg_CrashReporterError_Title {
+            get {
                 return ResourceManager.GetString("App_Msg_CrashReporterError_Title", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to A critical setup error occurred during startup..
         /// </summary>
-        public static string App_Msg_StartupError_Desc
-        {
-            get
-            {
+        public static string App_Msg_StartupError_Desc {
+            get {
                 return ResourceManager.GetString("App_Msg_StartupError_Desc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Initialization Error.
         /// </summary>
-        public static string App_Msg_StartupError_Title
-        {
-            get
-            {
+        public static string App_Msg_StartupError_Title {
+            get {
                 return ResourceManager.GetString("App_Msg_StartupError_Title", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Applying final touches....
         /// </summary>
-        public static string App_ReportProgress_Final
-        {
-            get
-            {
+        public static string App_ReportProgress_Final {
+            get {
                 return ResourceManager.GetString("App_ReportProgress_Final", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Initializing application settings....
         /// </summary>
-        public static string App_ReportProgress_InitAppSettings
-        {
-            get
-            {
+        public static string App_ReportProgress_InitAppSettings {
+            get {
                 return ResourceManager.GetString("App_ReportProgress_InitAppSettings", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Initializing dependency service....
         /// </summary>
-        public static string App_ReportProgress_InitDepedencyService
-        {
-            get
-            {
+        public static string App_ReportProgress_InitDepedencyService {
+            get {
                 return ResourceManager.GetString("App_ReportProgress_InitDepedencyService", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Initializing language manager....
         /// </summary>
-        public static string App_ReportProgress_InitLanguageService
-        {
-            get
-            {
+        public static string App_ReportProgress_InitLanguageService {
+            get {
                 return ResourceManager.GetString("App_ReportProgress_InitLanguageService", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Initializing diagnostics....
         /// </summary>
-        public static string App_ReportProgress_InitLogging
-        {
-            get
-            {
+        public static string App_ReportProgress_InitLogging {
+            get {
                 return ResourceManager.GetString("App_ReportProgress_InitLogging", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Initializing telemetry service....
         /// </summary>
-        public static string App_ReportProgress_InitTelemetryService
-        {
-            get
-            {
+        public static string App_ReportProgress_InitTelemetryService {
+            get {
                 return ResourceManager.GetString("App_ReportProgress_InitTelemetryService", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Initializing theme builder....
         /// </summary>
-        public static string App_ReportProgress_InitThemeService
-        {
-            get
-            {
+        public static string App_ReportProgress_InitThemeService {
+            get {
                 return ResourceManager.GetString("App_ReportProgress_InitThemeService", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Check for Updates.
         /// </summary>
-        public static string AppSettings_Btn_CheckForUpdates
-        {
-            get
-            {
+        public static string AppSettings_Btn_CheckForUpdates {
+            get {
                 return ResourceManager.GetString("AppSettings_Btn_CheckForUpdates", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Open App Config Folder.
         /// </summary>
-        public static string AppSettings_Btn_OpenAppConfigFolder
-        {
-            get
-            {
+        public static string AppSettings_Btn_OpenAppConfigFolder {
+            get {
                 return ResourceManager.GetString("AppSettings_Btn_OpenAppConfigFolder", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Open Logs Folder.
         /// </summary>
-        public static string AppSettings_Btn_OpenLogsFolder
-        {
-            get
-            {
+        public static string AppSettings_Btn_OpenLogsFolder {
+            get {
                 return ResourceManager.GetString("AppSettings_Btn_OpenLogsFolder", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Reset Position.
         /// </summary>
-        public static string AppSettings_Btn_ResetPosition
-        {
-            get
-            {
+        public static string AppSettings_Btn_ResetPosition {
+            get {
                 return ResourceManager.GetString("AppSettings_Btn_ResetPosition", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Reset Settings.
         /// </summary>
-        public static string AppSettings_Btn_ResetSettings
-        {
-            get
-            {
+        public static string AppSettings_Btn_ResetSettings {
+            get {
                 return ResourceManager.GetString("AppSettings_Btn_ResetSettings", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Choose the accent color utilized across the application..
         /// </summary>
-        public static string AppSettings_Desc_AccentColor
-        {
-            get
-            {
+        public static string AppSettings_Desc_AccentColor {
+            get {
                 return ResourceManager.GetString("AppSettings_Desc_AccentColor", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Keep the application window pinned above all other open windows..
         /// </summary>
-        public static string AppSettings_Desc_AlwaysOnTop
-        {
-            get
-            {
+        public static string AppSettings_Desc_AlwaysOnTop {
+            get {
                 return ResourceManager.GetString("AppSettings_Desc_AlwaysOnTop", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Manually check for the latest version immediately..
         /// </summary>
-        public static string AppSettings_Desc_CheckForUpdates
-        {
-            get
-            {
+        public static string AppSettings_Desc_CheckForUpdates {
+            get {
                 return ResourceManager.GetString("AppSettings_Desc_CheckForUpdates", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Keep the application up to date by checking for updates on startup..
         /// </summary>
-        public static string AppSettings_Desc_CheckForUpdatesOnStartup
-        {
-            get
-            {
+        public static string AppSettings_Desc_CheckForUpdatesOnStartup {
+            get {
                 return ResourceManager.GetString("AppSettings_Desc_CheckForUpdatesOnStartup", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Generate a log file to help track down application issues..
         /// </summary>
-        public static string AppSettings_Desc_EnableDebugLogging
-        {
-            get
-            {
+        public static string AppSettings_Desc_EnableDebugLogging {
+            get {
                 return ResourceManager.GetString("AppSettings_Desc_EnableDebugLogging", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Adjust the visual size of the user interface. Useful for high-resolution displays or improving readability..
         /// </summary>
-        public static string AppSettings_Desc_InterfaceScale
-        {
-            get
-            {
+        public static string AppSettings_Desc_InterfaceScale {
+            get {
                 return ResourceManager.GetString("AppSettings_Desc_InterfaceScale", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Choose the language utilized across the application..
         /// </summary>
-        public static string AppSettings_Desc_Language
-        {
-            get
-            {
+        public static string AppSettings_Desc_Language {
+            get {
                 return ResourceManager.GetString("AppSettings_Desc_Language", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to When minimized, the application will be hidden in the system tray instead of remaining on the taskbar..
         /// </summary>
-        public static string AppSettings_Desc_MinimizeToTray
-        {
-            get
-            {
+        public static string AppSettings_Desc_MinimizeToTray {
+            get {
                 return ResourceManager.GetString("AppSettings_Desc_MinimizeToTray", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Delete the application&apos;s current settings and replace them with the factory defaults..
         /// </summary>
-        public static string AppSettings_Desc_ResetToFactorySettings
-        {
-            get
-            {
+        public static string AppSettings_Desc_ResetToFactorySettings {
+            get {
                 return ResourceManager.GetString("AppSettings_Desc_ResetToFactorySettings", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Restores the main window to its default dimensions and snaps it back to the center of your primary monitor..
         /// </summary>
-        public static string AppSettings_Desc_ResetWindowPosition
-        {
-            get
-            {
+        public static string AppSettings_Desc_ResetWindowPosition {
+            get {
                 return ResourceManager.GetString("AppSettings_Desc_ResetWindowPosition", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Automatically launch the application when Windows starts..
         /// </summary>
-        public static string AppSettings_Desc_StartWithWindows
-        {
-            get
-            {
+        public static string AppSettings_Desc_StartWithWindows {
+            get {
                 return ResourceManager.GetString("AppSettings_Desc_StartWithWindows", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Your changes are saved automatically..
         /// </summary>
-        public static string AppSettings_Footer_YourChangesAreSavedAutomatically
-        {
-            get
-            {
+        public static string AppSettings_Footer_YourChangesAreSavedAutomatically {
+            get {
                 return ResourceManager.GetString("AppSettings_Footer_YourChangesAreSavedAutomatically", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Accent color.
         /// </summary>
-        public static string AppSettings_Lbl_AccentColor
-        {
-            get
-            {
+        public static string AppSettings_Lbl_AccentColor {
+            get {
                 return ResourceManager.GetString("AppSettings_Lbl_AccentColor", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Always on top.
         /// </summary>
-        public static string AppSettings_Lbl_AlwaysOnTop
-        {
-            get
-            {
+        public static string AppSettings_Lbl_AlwaysOnTop {
+            get {
                 return ResourceManager.GetString("AppSettings_Lbl_AlwaysOnTop", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Check for updates.
         /// </summary>
-        public static string AppSettings_Lbl_CheckForUpdates
-        {
-            get
-            {
+        public static string AppSettings_Lbl_CheckForUpdates {
+            get {
                 return ResourceManager.GetString("AppSettings_Lbl_CheckForUpdates", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Check for updates on startup.
         /// </summary>
-        public static string AppSettings_Lbl_CheckForUpdatesOnStartup
-        {
-            get
-            {
+        public static string AppSettings_Lbl_CheckForUpdatesOnStartup {
+            get {
                 return ResourceManager.GetString("AppSettings_Lbl_CheckForUpdatesOnStartup", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Enable debug logging.
         /// </summary>
-        public static string AppSettings_Lbl_EnableDebugLogging
-        {
-            get
-            {
+        public static string AppSettings_Lbl_EnableDebugLogging {
+            get {
                 return ResourceManager.GetString("AppSettings_Lbl_EnableDebugLogging", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Interface scale.
         /// </summary>
-        public static string AppSettings_Lbl_InterfaceScale
-        {
-            get
-            {
+        public static string AppSettings_Lbl_InterfaceScale {
+            get {
                 return ResourceManager.GetString("AppSettings_Lbl_InterfaceScale", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Language.
         /// </summary>
-        public static string AppSettings_Lbl_Language
-        {
-            get
-            {
+        public static string AppSettings_Lbl_Language {
+            get {
                 return ResourceManager.GetString("AppSettings_Lbl_Language", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Minimize to tray.
         /// </summary>
-        public static string AppSettings_Lbl_MinimizeToTray
-        {
-            get
-            {
+        public static string AppSettings_Lbl_MinimizeToTray {
+            get {
                 return ResourceManager.GetString("AppSettings_Lbl_MinimizeToTray", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Reset to factory settings.
         /// </summary>
-        public static string AppSettings_Lbl_ResetToFactorySettings
-        {
-            get
-            {
+        public static string AppSettings_Lbl_ResetToFactorySettings {
+            get {
                 return ResourceManager.GetString("AppSettings_Lbl_ResetToFactorySettings", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Reset window position.
         /// </summary>
-        public static string AppSettings_Lbl_ResetWindowPosition
-        {
-            get
-            {
+        public static string AppSettings_Lbl_ResetWindowPosition {
+            get {
                 return ResourceManager.GetString("AppSettings_Lbl_ResetWindowPosition", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Start with Windows.
         /// </summary>
-        public static string AppSettings_Lbl_StartWithWindows
-        {
-            get
-            {
+        public static string AppSettings_Lbl_StartWithWindows {
+            get {
                 return ResourceManager.GetString("AppSettings_Lbl_StartWithWindows", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Appearance.
         /// </summary>
-        public static string AppSettings_Section_Appearance
-        {
-            get
-            {
+        public static string AppSettings_Section_Appearance {
+            get {
                 return ResourceManager.GetString("AppSettings_Section_Appearance", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Application Behavior.
         /// </summary>
-        public static string AppSettings_Section_ApplicationBehavior
-        {
-            get
-            {
+        public static string AppSettings_Section_ApplicationBehavior {
+            get {
                 return ResourceManager.GetString("AppSettings_Section_ApplicationBehavior", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Logging.
         /// </summary>
-        public static string AppSettings_Section_Logging
-        {
-            get
-            {
+        public static string AppSettings_Section_Logging {
+            get {
                 return ResourceManager.GetString("AppSettings_Section_Logging", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Maintenance.
         /// </summary>
-        public static string AppSettings_Section_Maintenance
-        {
-            get
-            {
+        public static string AppSettings_Section_Maintenance {
+            get {
                 return ResourceManager.GetString("AppSettings_Section_Maintenance", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Updates.
         /// </summary>
-        public static string AppSettings_Section_Updates
-        {
-            get
-            {
+        public static string AppSettings_Section_Updates {
+            get {
                 return ResourceManager.GetString("AppSettings_Section_Updates", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to App Settings.
         /// </summary>
-        public static string AppSettings_Title
-        {
-            get
-            {
+        public static string AppSettings_Title {
+            get {
                 return ResourceManager.GetString("AppSettings_Title", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Browse.
         /// </summary>
-        public static string Btn_Browse
-        {
-            get
-            {
+        public static string Btn_Browse {
+            get {
                 return ResourceManager.GetString("Btn_Browse", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Cancel.
         /// </summary>
-        public static string Btn_Cancel
-        {
-            get
-            {
+        public static string Btn_Cancel {
+            get {
                 return ResourceManager.GetString("Btn_Cancel", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to No.
         /// </summary>
-        public static string Btn_No
-        {
-            get
-            {
+        public static string Btn_No {
+            get {
                 return ResourceManager.GetString("Btn_No", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Ok.
         /// </summary>
-        public static string Btn_Ok
-        {
-            get
-            {
+        public static string Btn_Ok {
+            get {
                 return ResourceManager.GetString("Btn_Ok", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Yes.
         /// </summary>
-        public static string Btn_Yes
-        {
-            get
-            {
+        public static string Btn_Yes {
+            get {
                 return ResourceManager.GetString("Btn_Yes", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Close.
         /// </summary>
-        public static string CrashReportWindow_Btn_Close
-        {
-            get
-            {
+        public static string CrashReportWindow_Btn_Close {
+            get {
                 return ResourceManager.GetString("CrashReportWindow_Btn_Close", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Send Crash Report.
         /// </summary>
-        public static string CrashReportWindow_Btn_SendCrashReport
-        {
-            get
-            {
+        public static string CrashReportWindow_Btn_SendCrashReport {
+            get {
                 return ResourceManager.GetString("CrashReportWindow_Btn_SendCrashReport", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to An unexpected error caused the application to crash..
         /// </summary>
-        public static string CrashReportWindow_Desc
-        {
-            get
-            {
+        public static string CrashReportWindow_Desc {
+            get {
                 return ResourceManager.GetString("CrashReportWindow_Desc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Something went wrong.
         /// </summary>
-        public static string CrashReportWindow_Header_SomethingWentWrong
-        {
-            get
-            {
+        public static string CrashReportWindow_Header_SomethingWentWrong {
+            get {
                 return ResourceManager.GetString("CrashReportWindow_Header_SomethingWentWrong", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Details.
         /// </summary>
-        public static string CrashReportWindow_Lbl_Details
-        {
-            get
-            {
+        public static string CrashReportWindow_Lbl_Details {
+            get {
                 return ResourceManager.GetString("CrashReportWindow_Lbl_Details", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to [Details Placeholder].
         /// </summary>
-        public static string CrashReportWindow_Lbl_DetailsPlaceholder
-        {
-            get
-            {
+        public static string CrashReportWindow_Lbl_DetailsPlaceholder {
+            get {
                 return ResourceManager.GetString("CrashReportWindow_Lbl_DetailsPlaceholder", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Exception:.
         /// </summary>
-        public static string CrashReportWindow_Lbl_Exception
-        {
-            get
-            {
+        public static string CrashReportWindow_Lbl_Exception {
+            get {
                 return ResourceManager.GetString("CrashReportWindow_Lbl_Exception", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to [Exception Message].
         /// </summary>
-        public static string CrashReportWindow_Lbl_ExceptionPlaceholder
-        {
-            get
-            {
+        public static string CrashReportWindow_Lbl_ExceptionPlaceholder {
+            get {
                 return ResourceManager.GetString("CrashReportWindow_Lbl_ExceptionPlaceholder", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Log File Location:.
         /// </summary>
-        public static string CrashReportWindow_Lbl_LogFileLocation
-        {
-            get
-            {
+        public static string CrashReportWindow_Lbl_LogFileLocation {
+            get {
                 return ResourceManager.GetString("CrashReportWindow_Lbl_LogFileLocation", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Unable to launch the report pipeline automatically.
         ///
@@ -862,324 +712,266 @@ namespace PakMaster.UI.Resources
         ///
         ///Error details: {1}.
         /// </summary>
-        public static string CrashReportWindow_Msg_SubmitError_Desc
-        {
-            get
-            {
+        public static string CrashReportWindow_Msg_SubmitError_Desc {
+            get {
                 return ResourceManager.GetString("CrashReportWindow_Msg_SubmitError_Desc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to {0} | Crash Reporter.
         /// </summary>
-        public static string CrashReportWindow_Title
-        {
-            get
-            {
+        public static string CrashReportWindow_Title {
+            get {
                 return ResourceManager.GetString("CrashReportWindow_Title", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to This application requires additional components to function correctly. Do you want to download and install them now?.
         /// </summary>
-        public static string DependencyService_Msg_DepsFound_Desc
-        {
-            get
-            {
+        public static string DependencyService_Msg_DepsFound_Desc {
+            get {
                 return ResourceManager.GetString("DependencyService_Msg_DepsFound_Desc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Dependencies Found.
         /// </summary>
-        public static string DependencyService_Msg_DepsFound_Title
-        {
-            get
-            {
+        public static string DependencyService_Msg_DepsFound_Title {
+            get {
                 return ResourceManager.GetString("DependencyService_Msg_DepsFound_Title", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to The required dependency &apos;{0}&apos; is completely unsupported on this machine&apos;s operating platform or architecture..
         /// </summary>
-        public static string DependencyService_Msg_IncompatibleDependency_Desc
-        {
-            get
-            {
+        public static string DependencyService_Msg_IncompatibleDependency_Desc {
+            get {
                 return ResourceManager.GetString("DependencyService_Msg_IncompatibleDependency_Desc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Incompatible Dependency.
         /// </summary>
-        public static string DependencyService_Msg_IncompatibleDependency_Title
-        {
-            get
-            {
+        public static string DependencyService_Msg_IncompatibleDependency_Title {
+            get {
                 return ResourceManager.GetString("DependencyService_Msg_IncompatibleDependency_Title", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Another installation is currently running on your computer. Please complete or close other installers, then restart {0}..
         /// </summary>
-        public static string DependencyService_Msg_InstallationBlocked_Desc
-        {
-            get
-            {
+        public static string DependencyService_Msg_InstallationBlocked_Desc {
+            get {
                 return ResourceManager.GetString("DependencyService_Msg_InstallationBlocked_Desc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Installation Blocked.
         /// </summary>
-        public static string DependencyService_Msg_InstallationBlocked_Title
-        {
-            get
-            {
+        public static string DependencyService_Msg_InstallationBlocked_Title {
+            get {
                 return ResourceManager.GetString("DependencyService_Msg_InstallationBlocked_Title", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to One or more installations require a system reboot to function properly. Would you like to restart your computer now?.
         /// </summary>
-        public static string DependencyService_Msg_RestartRequired_Desc
-        {
-            get
-            {
+        public static string DependencyService_Msg_RestartRequired_Desc {
+            get {
                 return ResourceManager.GetString("DependencyService_Msg_RestartRequired_Desc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Restart Required.
         /// </summary>
-        public static string DependencyService_Msg_RestartRequired_Title
-        {
-            get
-            {
+        public static string DependencyService_Msg_RestartRequired_Title {
+            get {
                 return ResourceManager.GetString("DependencyService_Msg_RestartRequired_Title", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to The target directory does not exist.
         ///
         ///Path: {0}.
         /// </summary>
-        public static string FolderService_Msg_DoesNotExist_Desc
-        {
-            get
-            {
+        public static string FolderService_Msg_DoesNotExist_Desc {
+            get {
                 return ResourceManager.GetString("FolderService_Msg_DoesNotExist_Desc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Failed to open folder: {0}.
         /// </summary>
-        public static string FolderService_Msg_FailedToOpen_Desc
-        {
-            get
-            {
+        public static string FolderService_Msg_FailedToOpen_Desc {
+            get {
                 return ResourceManager.GetString("FolderService_Msg_FailedToOpen_Desc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Open the GitHub repository in your browser..
         /// </summary>
-        public static string MainWindow_Btn_OpenTheGitHubRepo
-        {
-            get
-            {
+        public static string MainWindow_Btn_OpenTheGitHubRepo {
+            get {
                 return ResourceManager.GetString("MainWindow_Btn_OpenTheGitHubRepo", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Are you absolutely sure you want to reset all application settings back to factory defaults? This action cannot be undone..
         /// </summary>
-        public static string MainWindowFlyoutsView_Msg_ResetToFactorySettings_Desc
-        {
-            get
-            {
+        public static string MainWindowFlyoutsView_Msg_ResetToFactorySettings_Desc {
+            get {
                 return ResourceManager.GetString("MainWindowFlyoutsView_Msg_ResetToFactorySettings_Desc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Factory Reset Settings.
         /// </summary>
-        public static string MainWindowFlyoutsView_Msg_ResetToFactorySettings_Title
-        {
-            get
-            {
+        public static string MainWindowFlyoutsView_Msg_ResetToFactorySettings_Title {
+            get {
                 return ResourceManager.GetString("MainWindowFlyoutsView_Msg_ResetToFactorySettings_Title", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to All application settings have been restored to factory defaults successfully..
         /// </summary>
-        public static string MainWindowFlyoutsView_Msg_ResetToFactorySettingsComplete_Desc
-        {
-            get
-            {
+        public static string MainWindowFlyoutsView_Msg_ResetToFactorySettingsComplete_Desc {
+            get {
                 return ResourceManager.GetString("MainWindowFlyoutsView_Msg_ResetToFactorySettingsComplete_Desc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Reset Complete.
         /// </summary>
-        public static string MainWindowFlyoutsView_Msg_ResetToFactorySettingsComplete_Title
-        {
-            get
-            {
+        public static string MainWindowFlyoutsView_Msg_ResetToFactorySettingsComplete_Title {
+            get {
                 return ResourceManager.GetString("MainWindowFlyoutsView_Msg_ResetToFactorySettingsComplete_Title", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to An unexpected error occurred while attempting to wipe your configuration profile..
         /// </summary>
-        public static string MainWindowFlyoutsView_Msg_ResetToFactorySettingsError_Desc
-        {
-            get
-            {
+        public static string MainWindowFlyoutsView_Msg_ResetToFactorySettingsError_Desc {
+            get {
                 return ResourceManager.GetString("MainWindowFlyoutsView_Msg_ResetToFactorySettingsError_Desc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Failed to update registry startup key: {0}.
         /// </summary>
-        public static string MainWindowFlyoutsView_Msg_StartWithWindowsToggleError_Desc
-        {
-            get
-            {
+        public static string MainWindowFlyoutsView_Msg_StartWithWindowsToggleError_Desc {
+            get {
                 return ResourceManager.GetString("MainWindowFlyoutsView_Msg_StartWithWindowsToggleError_Desc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Error.
         /// </summary>
-        public static string Msg_Error_Title
-        {
-            get
-            {
+        public static string Msg_Error_Title {
+            get {
                 return ResourceManager.GetString("Msg_Error_Title", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to 450.
         /// </summary>
-        public static string Num_About_Flyout_Width
-        {
-            get
-            {
+        public static string Num_About_Flyout_Width {
+            get {
                 return ResourceManager.GetString("Num_About_Flyout_Width", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to 180.
         /// </summary>
-        public static string Num_AppSettings_Btn_CheckForUpdates_Width
-        {
-            get
-            {
+        public static string Num_AppSettings_Btn_CheckForUpdates_Width {
+            get {
                 return ResourceManager.GetString("Num_AppSettings_Btn_CheckForUpdates_Width", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to 180.
         /// </summary>
-        public static string Num_AppSettings_Btn_ResetToFactorySettings_Width
-        {
-            get
-            {
+        public static string Num_AppSettings_Btn_ResetToFactorySettings_Width {
+            get {
                 return ResourceManager.GetString("Num_AppSettings_Btn_ResetToFactorySettings_Width", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to 450.
         /// </summary>
-        public static string Num_AppSettings_Flyout_Width
-        {
-            get
-            {
+        public static string Num_AppSettings_Flyout_Width {
+            get {
                 return ResourceManager.GetString("Num_AppSettings_Flyout_Width", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Changes applied successfully..
         /// </summary>
-        public static string Toast_Desc_ConfigurationSaved
-        {
-            get
-            {
+        public static string Toast_Desc_ConfigurationSaved {
+            get {
                 return ResourceManager.GetString("Toast_Desc_ConfigurationSaved", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Configuration Saved.
         /// </summary>
-        public static string Toast_Title_ConfigurationSaved
-        {
-            get
-            {
+        public static string Toast_Title_ConfigurationSaved {
+            get {
                 return ResourceManager.GetString("Toast_Title_ConfigurationSaved", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Exit.
         /// </summary>
-        public static string TrayIcon_Header_Exit
-        {
-            get
-            {
+        public static string TrayIcon_Header_Exit {
+            get {
                 return ResourceManager.GetString("TrayIcon_Header_Exit", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Show Application.
         /// </summary>
-        public static string TrayIcon_Header_ShowApplication
-        {
-            get
-            {
+        public static string TrayIcon_Header_ShowApplication {
+            get {
                 return ResourceManager.GetString("TrayIcon_Header_ShowApplication", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Check For Updates.
         /// </summary>
-        public static string UpdateService_Msg_CheckForUpdates_Title
-        {
-            get
-            {
+        public static string UpdateService_Msg_CheckForUpdates_Title {
+            get {
                 return ResourceManager.GetString("UpdateService_Msg_CheckForUpdates_Title", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to You&apos;re a wizard, harry!
         ///
@@ -1188,36 +980,30 @@ namespace PakMaster.UI.Resources
         ///
         ///Tell the author they forgot to update the version number..
         /// </summary>
-        public static string UpdateService_Msg_EasterEgg_Desc
-        {
-            get
-            {
+        public static string UpdateService_Msg_EasterEgg_Desc {
+            get {
                 return ResourceManager.GetString("UpdateService_Msg_EasterEgg_Desc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Failed to check for updates: {0}.
         /// </summary>
-        public static string UpdateService_Msg_FailedToCheck_Desc
-        {
-            get
-            {
+        public static string UpdateService_Msg_FailedToCheck_Desc {
+            get {
                 return ResourceManager.GetString("UpdateService_Msg_FailedToCheck_Desc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Failed to retrieve valid update information..
         /// </summary>
-        public static string UpdateService_Msg_FailedToRetrieve_Desc
-        {
-            get
-            {
+        public static string UpdateService_Msg_FailedToRetrieve_Desc {
+            get {
                 return ResourceManager.GetString("UpdateService_Msg_FailedToRetrieve_Desc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to A new version is available.
         ///
@@ -1226,35 +1012,29 @@ namespace PakMaster.UI.Resources
         ///
         ///Would you like to download the new version?.
         /// </summary>
-        public static string UpdateService_Msg_NewVersion_Desc
-        {
-            get
-            {
+        public static string UpdateService_Msg_NewVersion_Desc {
+            get {
                 return ResourceManager.GetString("UpdateService_Msg_NewVersion_Desc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to You are already using the latest version.
         ///
         ///Latest Version: {0}
         ///Your Version: {1}.
         /// </summary>
-        public static string UpdateService_Msg_UpToDate_Desc
-        {
-            get
-            {
+        public static string UpdateService_Msg_UpToDate_Desc {
+            get {
                 return ResourceManager.GetString("UpdateService_Msg_UpToDate_Desc", resourceCulture);
             }
         }
-
+        
         /// <summary>
         ///   Looks up a localized string similar to Failed to open URL: {0}.
         /// </summary>
-        public static string UrlService_Msg_FailedToOpenURL_Desc
-        {
-            get
-            {
+        public static string UrlService_Msg_FailedToOpenURL_Desc {
+            get {
                 return ResourceManager.GetString("UrlService_Msg_FailedToOpenURL_Desc", resourceCulture);
             }
         }
