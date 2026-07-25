@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppSettings_Title" xml:space="preserve">
+    <value>إعدادات التطبيق</value>
+  </data>
+  <data name="AppSettings_Section_Appearance" xml:space="preserve">
+    <value>المظهر</value>
+  </data>
+  <data name="AppSettings_Lbl_Language" xml:space="preserve">
+    <value>اللغة</value>
+  </data>
+  <data name="AppSettings_Desc_Language" xml:space="preserve">
+    <value>اختر اللغة المستخدمة في التطبيق.</value>
+  </data>
+  <data name="AppSettings_Lbl_AccentColor" xml:space="preserve">
+    <value>اللون التمييزي</value>
+  </data>
+  <data name="AppSettings_Desc_AccentColor" xml:space="preserve">
+    <value>اختر لون التمييز المستخدم في جميع أنحاء التطبيق.</value>
+  </data>
+  <data name="AppSettings_Lbl_InterfaceScale" xml:space="preserve">
+    <value>مقياس الواجهة</value>
+  </data>
+  <data name="AppSettings_Desc_InterfaceScale" xml:space="preserve">
+    <value>اضبط الحجم المرئي لواجهة المستخدم. مفيد للشاشات عالية الدقة أو لتحسين سهولة القراءة.</value>
+  </data>
+  <data name="AppSettings_Section_ApplicationBehavior" xml:space="preserve">
+    <value>سلوك التطبيق</value>
+  </data>
+  <data name="AppSettings_Lbl_StartWithWindows" xml:space="preserve">
+    <value>ابدأ باستخدام Windows</value>
+  </data>
+  <data name="AppSettings_Desc_StartWithWindows" xml:space="preserve">
+    <value>تشغيل التطبيق تلقائيًا عند بدء تشغيل Windows.</value>
+  </data>
+  <data name="AppSettings_Lbl_AlwaysOnTop" xml:space="preserve">
+    <value>دائمًا في الصدارة</value>
+  </data>
+  <data name="AppSettings_Desc_AlwaysOnTop" xml:space="preserve">
+    <value>اجعل نافذة التطبيق مثبتة فوق جميع النوافذ المفتوحة الأخرى.</value>
+  </data>
+  <data name="AppSettings_Lbl_MinimizeToTray" xml:space="preserve">
+    <value>تصغير إلى علبة النظام</value>
+  </data>
+  <data name="AppSettings_Desc_MinimizeToTray" xml:space="preserve">
+    <value>عند تصغير التطبيق، سيتم إخفاؤه في علبة النظام بدلاً من أن يظل معروضاً على شريط المهام.</value>
+  </data>
+  <data name="AppSettings_Section_Updates" xml:space="preserve">
+    <value>التحديثات</value>
+  </data>
+  <data name="AppSettings_Lbl_CheckForUpdatesOnStartup" xml:space="preserve">
+    <value>التحقق من وجود تحديثات عند بدء التشغيل</value>
+  </data>
+  <data name="AppSettings_Desc_CheckForUpdatesOnStartup" xml:space="preserve">
+    <value>احرص على تحديث التطبيق باستمرار من خلال البحث عن التحديثات عند بدء التشغيل.</value>
+  </data>
+  <data name="AppSettings_Lbl_CheckForUpdates" xml:space="preserve">
+    <value>تحقق من وجود تحديثات</value>
+  </data>
+  <data name="AppSettings_Desc_CheckForUpdates" xml:space="preserve">
+    <value>تحقق يدويًّا من وجود أحدث إصدار على الفور.</value>
+  </data>
+  <data name="AppSettings_Btn_CheckForUpdates" xml:space="preserve">
+    <value>التحقق من وجود تحديثات</value>
+  </data>
+  <data name="AppSettings_Section_Logging" xml:space="preserve">
+    <value>تسجيل</value>
+  </data>
+  <data name="AppSettings_Lbl_EnableDebugLogging" xml:space="preserve">
+    <value>تمكين تسجيل معلومات التصحيح</value>
+  </data>
+  <data name="AppSettings_Desc_EnableDebugLogging" xml:space="preserve">
+    <value>إنشاء ملف سجل للمساعدة في تحديد مشكلات التطبيق.</value>
+  </data>
+  <data name="AppSettings_Btn_OpenLogsFolder" xml:space="preserve">
+    <value>فتح مجلد السجلات</value>
+  </data>
+  <data name="AppSettings_Section_Maintenance" xml:space="preserve">
+    <value>الصيانة</value>
+  </data>
+  <data name="AppSettings_Lbl_ResetToFactorySettings" xml:space="preserve">
+    <value>إعادة الضبط إلى إعدادات المصنع</value>
+  </data>
+  <data name="AppSettings_Desc_ResetToFactorySettings" xml:space="preserve">
+    <value>احذف الإعدادات الحالية للتطبيق واستبدلها بالإعدادات الافتراضية للمصنع.</value>
+  </data>
+  <data name="AppSettings_Btn_ResetSettings" xml:space="preserve">
+    <value>إعادة ضبط الإعدادات</value>
+  </data>
+  <data name="AppSettings_Lbl_ResetWindowPosition" xml:space="preserve">
+    <value>إعادة ضبط موضع النافذة</value>
+  </data>
+  <data name="AppSettings_Desc_ResetWindowPosition" xml:space="preserve">
+    <value>يعيد النافذة الرئيسية إلى أبعادها الافتراضية ويضعها في منتصف الشاشة الرئيسية.</value>
+  </data>
+  <data name="AppSettings_Btn_ResetPosition" xml:space="preserve">
+    <value>إعادة ضبط الموضع</value>
+  </data>
+  <data name="AppSettings_Btn_OpenAppConfigFolder" xml:space="preserve">
+    <value>فتح مجلد إعدادات التطبيق</value>
+  </data>
+  <data name="AppSettings_Footer_YourChangesAreSavedAutomatically" xml:space="preserve">
+    <value>يتم حفظ التغييرات التي أجريتها تلقائيًا.</value>
+  </data>
+  <data name="About_Title" xml:space="preserve">
+    <value>نبذة عن</value>
+  </data>
+  <data name="About_Section_SupportTheDeveloper" xml:space="preserve">
+    <value>ادعم المطور</value>
+  </data>
+  <data name="About_Section_SupportTheDeveloper_Desc" xml:space="preserve">
+    <value>إذا كان هذا التطبيق قد ساعدك، أو إذا كنت تشعر بالكرم اليوم، فأنا أقدر أي تبرعات. لا توجد شركة تدفع لي مقابل تطوير هذه الأدوات؛ فأنا أقوم بكل هذا في أوقات فراغي. ولهذا السبب، فإن أي دعم أحصل عليه يأتي بالكامل من الأشخاص الرائعين الذين يستخدمون تطبيقاتي.</value>
+  </data>
+  <data name="About_Section_ApplicationInformation" xml:space="preserve">
+    <value>معلومات عن التقديم</value>
+  </data>
+  <data name="About_Lbl_Name" xml:space="preserve">
+    <value>الاسم</value>
+  </data>
+  <data name="About_Lbl_Version" xml:space="preserve">
+    <value>الإصدار</value>
+  </data>
+  <data name="About_Lbl_Developer" xml:space="preserve">
+    <value>المطور</value>
+  </data>
+  <data name="About_Lbl_License" xml:space="preserve">
+    <value>الترخيص</value>
+  </data>
+  <data name="About_Lbl_TargetFramework" xml:space="preserve">
+    <value>إطار العمل المستهدف</value>
+  </data>
+  <data name="About_Lbl_OsArchitecture" xml:space="preserve">
+    <value>بنية نظام التشغيل</value>
+  </data>
+  <data name="Num_AppSettings_Flyout_Width" xml:space="preserve">
+    <value>450</value>
+  </data>
+  <data name="Num_AppSettings_Btn_CheckForUpdates_Width" xml:space="preserve">
+    <value>180</value>
+  </data>
+  <data name="Num_AppSettings_Btn_ResetToFactorySettings_Width" xml:space="preserve">
+    <value>180</value>
+  </data>
+  <data name="Toast_Title_ConfigurationSaved" xml:space="preserve">
+    <value>تم حفظ الإعدادات</value>
+  </data>
+  <data name="Toast_Desc_ConfigurationSaved" xml:space="preserve">
+    <value>تم تطبيق التغييرات بنجاح.</value>
+  </data>
+  <data name="MainWindow_Btn_OpenTheGitHubRepo" xml:space="preserve">
+    <value>افتح مستودع GitHub في متصفحك.</value>
+  </data>
+  <data name="App_ReportProgress_InitLogging" xml:space="preserve">
+    <value>البدء في إجراء التشخيص...</value>
+  </data>
+  <data name="App_ReportProgress_InitAppSettings" xml:space="preserve">
+    <value>جاري تهيئة إعدادات التطبيق...</value>
+  </data>
+  <data name="App_ReportProgress_InitDepedencyService" xml:space="preserve">
+    <value>جاري تهيئة خدمة التبعيات...</value>
+  </data>
+  <data name="App_ReportProgress_InitTelemetryService" xml:space="preserve">
+    <value>جاري تهيئة خدمة القياس عن بُعد...</value>
+  </data>
+  <data name="App_ReportProgress_Final" xml:space="preserve">
+    <value>وضع اللمسات الأخيرة...</value>
+  </data>
+  <data name="CrashReportWindow_Title" xml:space="preserve">
+    <value>{0} | أداة الإبلاغ عن الأعطال</value>
+  </data>
+  <data name="CrashReportWindow_Header_SomethingWentWrong" xml:space="preserve">
+    <value>حدث خطأ ما</value>
+  </data>
+  <data name="CrashReportWindow_Desc" xml:space="preserve">
+    <value>تسبب خطأ غير متوقع في تعطل التطبيق.</value>
+  </data>
+  <data name="CrashReportWindow_Lbl_Exception" xml:space="preserve">
+    <value>استثناء:</value>
+  </data>
+  <data name="CrashReportWindow_Lbl_ExceptionPlaceholder" xml:space="preserve">
+    <value>[رسالة استثناء]</value>
+  </data>
+  <data name="CrashReportWindow_Lbl_LogFileLocation" xml:space="preserve">
+    <value>موقع ملف السجل:</value>
+  </data>
+  <data name="CrashReportWindow_Lbl_Details" xml:space="preserve">
+    <value>التفاصيل</value>
+  </data>
+  <data name="CrashReportWindow_Lbl_DetailsPlaceholder" xml:space="preserve">
+    <value>[مكان مخصص للتفاصيل]</value>
+  </data>
+  <data name="CrashReportWindow_Btn_Close" xml:space="preserve">
+    <value>إغلاق</value>
+  </data>
+  <data name="CrashReportWindow_Btn_SendCrashReport" xml:space="preserve">
+    <value>إرسال تقرير عن الأعطال</value>
+  </data>
+  <data name="TrayIcon_Header_ShowApplication" xml:space="preserve">
+    <value>عرض التطبيق</value>
+  </data>
+  <data name="TrayIcon_Header_Exit" xml:space="preserve">
+    <value>خروج</value>
+  </data>
+  <data name="Num_About_Flyout_Width" xml:space="preserve">
+    <value>450</value>
+  </data>
+  <data name="Btn_Yes" xml:space="preserve">
+    <value>نعم</value>
+  </data>
+  <data name="Btn_No" xml:space="preserve">
+    <value>لا</value>
+  </data>
+  <data name="Btn_Cancel" xml:space="preserve">
+    <value>إلغاء</value>
+  </data>
+  <data name="Btn_Ok" xml:space="preserve">
+    <value>حسنًا</value>
+  </data>
+  <data name="Btn_Browse" xml:space="preserve">
+    <value>تصفح</value>
+  </data>
+  <data name="App_Msg_StartupError_Desc" xml:space="preserve">
+    <value>حدث خطأ فادح في الإعداد أثناء بدء التشغيل.</value>
+  </data>
+  <data name="App_Msg_StartupError_Title" xml:space="preserve">
+    <value>خطأ في التهيئة</value>
+  </data>
+  <data name="App_Msg_CrashReporterError_Desc" xml:space="preserve">
+    <value>حدث خطأ فادح ولم يتمكن برنامج الإبلاغ عن الأعطال من التشغيل.
+
+الخطأ الأصلي: {0}
+
+خطأ التشغيل: {1}</value>
+  </data>
+  <data name="App_Msg_CrashReporterError_Title" xml:space="preserve">
+    <value>تعطل التطبيق المؤدي إلى فقدان البيانات</value>
+  </data>
+  <data name="App_Msg_AlreadyRunning_Desc" xml:space="preserve">
+    <value>هناك نسخة من هذا التطبيق قيد التشغيل بالفعل.</value>
+  </data>
+  <data name="App_Msg_AlreadyRunning_Title" xml:space="preserve">
+    <value>التطبيق قيد التشغيل بالفعل</value>
+  </data>
+  <data name="Msg_Error_Title" xml:space="preserve">
+    <value>خطأ</value>
+  </data>
+  <data name="CrashReportWindow_Msg_SubmitError_Desc" xml:space="preserve">
+    <value>تعذر تشغيل مسار التقرير تلقائيًا.
+
+يرجى إنشاء تقرير مشكلة يدويًّا وإرفاق ملف السجل الخاص بك.
+
+مسار السجل: {0}
+
+تفاصيل الخطأ: {1}</value>
+  </data>
+  <data name="UpdateService_Msg_FailedToRetrieve_Desc" xml:space="preserve">
+    <value>فشل استرداد معلومات تحديث صالحة.</value>
+  </data>
+  <data name="UpdateService_Msg_CheckForUpdates_Title" xml:space="preserve">
+    <value>التحقق من وجود تحديثات</value>
+  </data>
+  <data name="UpdateService_Msg_NewVersion_Desc" xml:space="preserve">
+    <value>يتوفر إصدار جديد.
+
+أحدث إصدار: {0}
+الإصدار الذي تستخدمه: {1}
+
+هل ترغب في تنزيل الإصدار الجديد؟</value>
+  </data>
+  <data name="UpdateService_Msg_EasterEgg_Desc" xml:space="preserve">
+    <value>أنت ساحر يا هاري!
+
+أحدث إصدار: {0}
+الإصدار الذي تستخدمه: {1}
+
+أخبر المؤلف أنه نسي تحديث رقم الإصدار.</value>
+  </data>
+  <data name="UpdateService_Msg_UpToDate_Desc" xml:space="preserve">
+    <value>أنت تستخدم أحدث إصدار بالفعل.
+
+أحدث إصدار: {0}
+الإصدار الذي تستخدمه: {1}</value>
+  </data>
+  <data name="UpdateService_Msg_FailedToCheck_Desc" xml:space="preserve">
+    <value>فشل التحقق من وجود تحديثات: {0}</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_ResetToFactorySettings_Title" xml:space="preserve">
+    <value>إعادة ضبط الإعدادات إلى إعدادات المصنع</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_ResetToFactorySettings_Desc" xml:space="preserve">
+    <value>هل أنت متأكد تمامًا من رغبتك في إعادة ضبط جميع إعدادات التطبيق إلى الإعدادات الافتراضية للمصنع؟ لا يمكن التراجع عن هذا الإجراء.</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_ResetToFactorySettingsComplete_Title" xml:space="preserve">
+    <value>اكتملت عملية إعادة الضبط</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_ResetToFactorySettingsComplete_Desc" xml:space="preserve">
+    <value>تمت إعادة ضبط جميع إعدادات التطبيق إلى الإعدادات الافتراضية للمصنع بنجاح.</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_ResetToFactorySettingsError_Desc" xml:space="preserve">
+    <value>حدث خطأ غير متوقع أثناء محاولة مسح ملف تعريف الإعدادات الخاص بك.</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_StartWithWindowsToggleError_Desc" xml:space="preserve">
+    <value>فشل تحديث مفتاح بدء التشغيل في السجل: {0}</value>
+  </data>
+  <data name="DependencyService_Msg_DepsFound_Title" xml:space="preserve">
+    <value>تم العثور على التبعيات</value>
+  </data>
+  <data name="DependencyService_Msg_DepsFound_Desc" xml:space="preserve">
+    <value>يتطلب هذا التطبيق مكونات إضافية ليعمل بشكل صحيح. هل تريد تنزيلها وتثبيتها الآن؟</value>
+  </data>
+  <data name="DependencyService_Msg_InstallationBlocked_Title" xml:space="preserve">
+    <value>تم حظر التثبيت</value>
+  </data>
+  <data name="DependencyService_Msg_InstallationBlocked_Desc" xml:space="preserve">
+    <value>هناك برنامج تثبيت آخر قيد التشغيل حاليًا على جهاز الكمبيوتر الخاص بك. يرجى إكمال أو إغلاق برامج التثبيت الأخرى، ثم إعادة تشغيل {0}.</value>
+  </data>
+  <data name="DependencyService_Msg_IncompatibleDependency_Title" xml:space="preserve">
+    <value>تبعيات غير متوافقة</value>
+  </data>
+  <data name="DependencyService_Msg_IncompatibleDependency_Desc" xml:space="preserve">
+    <value>التبعية المطلوبة «{0}» غير مدعومة على الإطلاق على نظام التشغيل أو بنية هذا الجهاز.</value>
+  </data>
+  <data name="DependencyService_Msg_RestartRequired_Title" xml:space="preserve">
+    <value>يلزم إعادة التشغيل</value>
+  </data>
+  <data name="DependencyService_Msg_RestartRequired_Desc" xml:space="preserve">
+    <value>تتطلب إحدى عمليات التثبيت أو أكثر إعادة تشغيل النظام لتعمل بشكل صحيح. هل ترغب في إعادة تشغيل جهاز الكمبيوتر الآن؟</value>
+  </data>
+  <data name="FolderService_Msg_DoesNotExist_Desc" xml:space="preserve">
+    <value>الدليل المستهدف غير موجود.
+
+المسار: {0}</value>
+  </data>
+  <data name="FolderService_Msg_FailedToOpen_Desc" xml:space="preserve">
+    <value>فشل فتح المجلد: {0}</value>
+  </data>
+  <data name="UrlService_Msg_FailedToOpenURL_Desc" xml:space="preserve">
+    <value>فشل فتح عنوان URL: {0}</value>
+  </data>
+  <data name="App_ReportProgress_InitThemeService" xml:space="preserve">
+    <value>جاري تهيئة أداة إنشاء السمات...</value>
+  </data>
+  <data name="App_ReportProgress_InitLanguageService" xml:space="preserve">
+    <value>جاري تهيئة مدير اللغة...</value>
+  </data>
+</root>

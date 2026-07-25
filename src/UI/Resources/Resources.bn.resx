@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppSettings_Title" xml:space="preserve">
+    <value>অ্যাপ সেটিংস</value>
+  </data>
+  <data name="AppSettings_Section_Appearance" xml:space="preserve">
+    <value>দৃষ্টি</value>
+  </data>
+  <data name="AppSettings_Lbl_Language" xml:space="preserve">
+    <value>ভাষা</value>
+  </data>
+  <data name="AppSettings_Desc_Language" xml:space="preserve">
+    <value>অ্যাপ্লিকেশন জুড়ে ব্যবহৃত ভাষা নির্বাচন করুন।</value>
+  </data>
+  <data name="AppSettings_Lbl_AccentColor" xml:space="preserve">
+    <value>হাইলাইট রঙ</value>
+  </data>
+  <data name="AppSettings_Desc_AccentColor" xml:space="preserve">
+    <value>অ্যাপ্লিকেশন জুড়ে ব্যবহৃত অ্যাকসেন্ট রঙটি নির্বাচন করুন।</value>
+  </data>
+  <data name="AppSettings_Lbl_InterfaceScale" xml:space="preserve">
+    <value>ইন্টারফেস স্কেল</value>
+  </data>
+  <data name="AppSettings_Desc_InterfaceScale" xml:space="preserve">
+    <value>ব্যবহারকারী ইন্টারফেসের দৃশ্যমান আকার সামঞ্জস্য করুন। উচ্চ-রেজোলিউশন ডিসপ্লে বা পাঠযোগ্যতা উন্নত করার জন্য এটি উপযোগী।</value>
+  </data>
+  <data name="AppSettings_Section_ApplicationBehavior" xml:space="preserve">
+    <value>আবেদন আচরণ</value>
+  </data>
+  <data name="AppSettings_Lbl_StartWithWindows" xml:space="preserve">
+    <value>উইন্ডোজ দিয়ে শুরু করুন</value>
+  </data>
+  <data name="AppSettings_Desc_StartWithWindows" xml:space="preserve">
+    <value>Windows চালু হলে স্বয়ংক্রিয়ভাবে অ্যাপ্লিকেশনটি চালু করুন।</value>
+  </data>
+  <data name="AppSettings_Lbl_AlwaysOnTop" xml:space="preserve">
+    <value>সর্বদা শীর্ষে</value>
+  </data>
+  <data name="AppSettings_Desc_AlwaysOnTop" xml:space="preserve">
+    <value>আবেদন উইন্ডোটি সব অন্যান্য খোলা উইন্ডোর উপরে পিন করে রাখুন।</value>
+  </data>
+  <data name="AppSettings_Lbl_MinimizeToTray" xml:space="preserve">
+    <value>ট্রেতে মিনিমাইজ করুন</value>
+  </data>
+  <data name="AppSettings_Desc_MinimizeToTray" xml:space="preserve">
+    <value>সর্বনিম্ন করা হলে, অ্যাপ্লিকেশনটি টাস্কবারের পরিবর্তে সিস্টেম ট্রেতে লুকানো থাকবে।</value>
+  </data>
+  <data name="AppSettings_Section_Updates" xml:space="preserve">
+    <value>আপডেটসমূহ</value>
+  </data>
+  <data name="AppSettings_Lbl_CheckForUpdatesOnStartup" xml:space="preserve">
+    <value>স্টার্টআপের আপডেট পরীক্ষা করুন</value>
+  </data>
+  <data name="AppSettings_Desc_CheckForUpdatesOnStartup" xml:space="preserve">
+    <value>স্টার্টআপে আপডেট পরীক্ষা করে অ্যাপ্লিকেশনটি সর্বদা হালনাগাদ রাখুন।</value>
+  </data>
+  <data name="AppSettings_Lbl_CheckForUpdates" xml:space="preserve">
+    <value>আপডেটের জন্য পরীক্ষা করুন</value>
+  </data>
+  <data name="AppSettings_Desc_CheckForUpdates" xml:space="preserve">
+    <value>তাত্ক্ষণিকভাবে ম্যানুয়ালি সর্বশেষ সংস্করণ পরীক্ষা করুন।</value>
+  </data>
+  <data name="AppSettings_Btn_CheckForUpdates" xml:space="preserve">
+    <value>আপডেটের জন্য পরীক্ষা করুন</value>
+  </data>
+  <data name="AppSettings_Section_Logging" xml:space="preserve">
+    <value>লগিং</value>
+  </data>
+  <data name="AppSettings_Lbl_EnableDebugLogging" xml:space="preserve">
+    <value>ডিবাগ লগিং সক্ষম করুন</value>
+  </data>
+  <data name="AppSettings_Desc_EnableDebugLogging" xml:space="preserve">
+    <value>অ্যাপ্লিকেশন সংক্রান্ত সমস্যা খুঁজে বের করতে সাহায্য করার জন্য একটি লগ ফাইল তৈরি করুন।</value>
+  </data>
+  <data name="AppSettings_Btn_OpenLogsFolder" xml:space="preserve">
+    <value>লগ ফোল্ডার খুলুন</value>
+  </data>
+  <data name="AppSettings_Section_Maintenance" xml:space="preserve">
+    <value>রক্ষণাবেক্ষণ</value>
+  </data>
+  <data name="AppSettings_Lbl_ResetToFactorySettings" xml:space="preserve">
+    <value>কারখানা সেটিংসে রিসেট করুন</value>
+  </data>
+  <data name="AppSettings_Desc_ResetToFactorySettings" xml:space="preserve">
+    <value>অ্যাপ্লিকেশনের বর্তমান সেটিংস মুছে ফেলে সেগুলোকে ফ্যাক্টরি ডিফল্ট দিয়ে প্রতিস্থাপন করুন।</value>
+  </data>
+  <data name="AppSettings_Btn_ResetSettings" xml:space="preserve">
+    <value>সেটিংস রিসেট করুন</value>
+  </data>
+  <data name="AppSettings_Lbl_ResetWindowPosition" xml:space="preserve">
+    <value>উইন্ডোর অবস্থান রিসেট করুন</value>
+  </data>
+  <data name="AppSettings_Desc_ResetWindowPosition" xml:space="preserve">
+    <value>প্রধান উইন্ডোটিকে তার ডিফল্ট আকারে পুনরুদ্ধার করে এবং এটিকে আপনার প্রধান মনিটরের কেন্দ্রে ফিরিয়ে আনে।</value>
+  </data>
+  <data name="AppSettings_Btn_ResetPosition" xml:space="preserve">
+    <value>অবস্থান রিসেট করুন</value>
+  </data>
+  <data name="AppSettings_Btn_OpenAppConfigFolder" xml:space="preserve">
+    <value>অ্যাপ কনফিগারেশন ফোল্ডার খুলুন</value>
+  </data>
+  <data name="AppSettings_Footer_YourChangesAreSavedAutomatically" xml:space="preserve">
+    <value>আপনার পরিবর্তনগুলি স্বয়ংক্রিয়ভাবে সংরক্ষিত হয়েছে।</value>
+  </data>
+  <data name="About_Title" xml:space="preserve">
+    <value>সম্পর্কে</value>
+  </data>
+  <data name="About_Section_SupportTheDeveloper" xml:space="preserve">
+    <value>ডেভেলপারকে সমর্থন করুন</value>
+  </data>
+  <data name="About_Section_SupportTheDeveloper_Desc" xml:space="preserve">
+    <value>যদি এই অ্যাপটি আপনাকে সাহায্য করে থাকে, অথবা আজ আপনি উদার বোধ করছেন, যেকোনো টিপস আমি কৃতজ্ঞচিত্তে গ্রহণ করব। কোনো কোম্পানি আমাকে এই টুলগুলো তৈরি করার জন্য বেতন দেয় না; আমি এগুলো সবই আমার অবসর সময়ে করি। সেই কারণে আমি যে কোনো সমর্থন পাই, তা সম্পূর্ণভাবে আমার অ্যাপ ব্যবহারকারী অসাধারণ মানুষদের কাছ থেকেই আসে।</value>
+  </data>
+  <data name="About_Section_ApplicationInformation" xml:space="preserve">
+    <value>আবেদন সংক্রান্ত তথ্য</value>
+  </data>
+  <data name="About_Lbl_Name" xml:space="preserve">
+    <value>নাম</value>
+  </data>
+  <data name="About_Lbl_Version" xml:space="preserve">
+    <value>সংস্করণ</value>
+  </data>
+  <data name="About_Lbl_Developer" xml:space="preserve">
+    <value>ডেভেলপার</value>
+  </data>
+  <data name="About_Lbl_License" xml:space="preserve">
+    <value>লাইসেন্স</value>
+  </data>
+  <data name="About_Lbl_TargetFramework" xml:space="preserve">
+    <value>লক্ষ্য কাঠামো</value>
+  </data>
+  <data name="About_Lbl_OsArchitecture" xml:space="preserve">
+    <value>ওএস আর্কিটেকচার</value>
+  </data>
+  <data name="Num_AppSettings_Flyout_Width" xml:space="preserve">
+    <value>625</value>
+  </data>
+  <data name="Num_AppSettings_Btn_CheckForUpdates_Width" xml:space="preserve">
+    <value>250</value>
+  </data>
+  <data name="Num_AppSettings_Btn_ResetToFactorySettings_Width" xml:space="preserve">
+    <value>225</value>
+  </data>
+  <data name="Toast_Title_ConfigurationSaved" xml:space="preserve">
+    <value>কনফিগারেশন সংরক্ষিত</value>
+  </data>
+  <data name="Toast_Desc_ConfigurationSaved" xml:space="preserve">
+    <value>পরিবর্তনগুলি সফলভাবে প্রয়োগ করা হয়েছে।</value>
+  </data>
+  <data name="MainWindow_Btn_OpenTheGitHubRepo" xml:space="preserve">
+    <value>আপনার ব্রাউজারে GitHub রিপোজিটরিটি খুলুন।</value>
+  </data>
+  <data name="App_ReportProgress_InitLogging" xml:space="preserve">
+    <value>ডায়াগনস্টিকস ইনিশিয়ালাইজ করা হচ্ছে...</value>
+  </data>
+  <data name="App_ReportProgress_InitAppSettings" xml:space="preserve">
+    <value>অ্যাপ্লিকেশন সেটিংস প্রাথমিককরণ...</value>
+  </data>
+  <data name="App_ReportProgress_InitDepedencyService" xml:space="preserve">
+    <value>নির্ভরতা পরিষেবা ইনিশিয়ালাইজ করা হচ্ছে...</value>
+  </data>
+  <data name="App_ReportProgress_InitTelemetryService" xml:space="preserve">
+    <value>টেলিমেট্রি সেবা শুরু হচ্ছে...</value>
+  </data>
+  <data name="App_ReportProgress_Final" xml:space="preserve">
+    <value>চূড়ান্ত স্পর্শ দিচ্ছি...</value>
+  </data>
+  <data name="CrashReportWindow_Title" xml:space="preserve">
+    <value>{0} | ক্র্যাশ রিপোর্টার</value>
+  </data>
+  <data name="CrashReportWindow_Header_SomethingWentWrong" xml:space="preserve">
+    <value>কিছু একটা ভুল হয়ে গেছে</value>
+  </data>
+  <data name="CrashReportWindow_Desc" xml:space="preserve">
+    <value>একটি অপ্রত্যাশিত ত্রুটির কারণে অ্যাপ্লিকেশনটি ক্র্যাশ হয়ে গেছে।</value>
+  </data>
+  <data name="CrashReportWindow_Lbl_Exception" xml:space="preserve">
+    <value>ব্যতিক্রম:</value>
+  </data>
+  <data name="CrashReportWindow_Lbl_ExceptionPlaceholder" xml:space="preserve">
+    <value>[ব্যতিক্রম বার্তা]</value>
+  </data>
+  <data name="CrashReportWindow_Lbl_LogFileLocation" xml:space="preserve">
+    <value>লগ ফাইলের অবস্থান:</value>
+  </data>
+  <data name="CrashReportWindow_Lbl_Details" xml:space="preserve">
+    <value>বিবরণ</value>
+  </data>
+  <data name="CrashReportWindow_Lbl_DetailsPlaceholder" xml:space="preserve">
+    <value>[বিবরণ প্লেসহোল্ডার]</value>
+  </data>
+  <data name="CrashReportWindow_Btn_Close" xml:space="preserve">
+    <value>বন্ধ করুন</value>
+  </data>
+  <data name="CrashReportWindow_Btn_SendCrashReport" xml:space="preserve">
+    <value>ক্র্যাশ রিপোর্ট পাঠান</value>
+  </data>
+  <data name="TrayIcon_Header_ShowApplication" xml:space="preserve">
+    <value>আবেদন দেখান</value>
+  </data>
+  <data name="TrayIcon_Header_Exit" xml:space="preserve">
+    <value>বহির্গমন</value>
+  </data>
+  <data name="Num_About_Flyout_Width" xml:space="preserve">
+    <value>500</value>
+  </data>
+  <data name="Btn_Yes" xml:space="preserve">
+    <value>হ্যাঁ</value>
+  </data>
+  <data name="Btn_No" xml:space="preserve">
+    <value>না</value>
+  </data>
+  <data name="Btn_Cancel" xml:space="preserve">
+    <value>বাতিল করুন</value>
+  </data>
+  <data name="Btn_Ok" xml:space="preserve">
+    <value>ঠিক আছে</value>
+  </data>
+  <data name="Btn_Browse" xml:space="preserve">
+    <value>ব্রাউজ করুন</value>
+  </data>
+  <data name="App_Msg_StartupError_Desc" xml:space="preserve">
+    <value>শুরু করার সময় একটি গুরুতর সেটআপ ত্রুটি ঘটেছে।</value>
+  </data>
+  <data name="App_Msg_StartupError_Title" xml:space="preserve">
+    <value>প্রারম্ভিক ত্রুটি</value>
+  </data>
+  <data name="App_Msg_CrashReporterError_Desc" xml:space="preserve">
+    <value>একটি মারাত্মক ত্রুটি ঘটেছে এবং ক্র্যাশ রিপোর্টার শুরু করা যায়নি।
+
+মূল ত্রুটি: {0}
+
+লঞ্চ ত্রুটি: {1}</value>
+  </data>
+  <data name="App_Msg_CrashReporterError_Title" xml:space="preserve">
+    <value>প্রাণঘাতী অ্যাপ্লিকেশন ক্র্যাশ</value>
+  </data>
+  <data name="App_Msg_AlreadyRunning_Desc" xml:space="preserve">
+    <value>এই অ্যাপ্লিকেশনের একটি ইনস্ট্যান্স ইতিমধ্যেই চলছে।</value>
+  </data>
+  <data name="App_Msg_AlreadyRunning_Title" xml:space="preserve">
+    <value>আবেদন ইতিমধ্যেই চলছে</value>
+  </data>
+  <data name="Msg_Error_Title" xml:space="preserve">
+    <value>ত্রুটি</value>
+  </data>
+  <data name="CrashReportWindow_Msg_SubmitError_Desc" xml:space="preserve">
+    <value>রিপোর্ট পাইপলাইন স্বয়ংক্রিয়ভাবে চালু করা যায়নি।
+
+অনুগ্রহ করে ম্যানুয়ালি একটি ইস্যু তৈরি করুন এবং আপনার লগ ফাইল সংযুক্ত করুন।
+
+লগ পথ: {0}
+
+ত্রুটির বিবরণ: {1}</value>
+  </data>
+  <data name="UpdateService_Msg_FailedToRetrieve_Desc" xml:space="preserve">
+    <value>বৈধ আপডেট তথ্য পুনরুদ্ধার করতে ব্যর্থ হয়েছে।</value>
+  </data>
+  <data name="UpdateService_Msg_CheckForUpdates_Title" xml:space="preserve">
+    <value>আপডেটের জন্য পরীক্ষা করুন</value>
+  </data>
+  <data name="UpdateService_Msg_NewVersion_Desc" xml:space="preserve">
+    <value>নতুন একটি সংস্করণ উপলব্ধ।
+
+সর্বশেষ সংস্করণ: {0}
+আপনার সংস্করণ: {1}
+
+আপনি কি নতুন সংস্করণটি ডাউনলোড করতে চান?</value>
+  </data>
+  <data name="UpdateService_Msg_EasterEgg_Desc" xml:space="preserve">
+    <value>তুমি একজন জাদুকর, হ্যারি!
+
+সর্বশেষ সংস্করণ: {0}
+আপনার সংস্করণ: {1}
+
+লেখককে বলুন যে তিনি সংস্করণ নম্বর আপডেট করতে ভুলে গেছেন।</value>
+  </data>
+  <data name="UpdateService_Msg_UpToDate_Desc" xml:space="preserve">
+    <value>আপনি ইতিমধ্যেই সর্বশেষ সংস্করণ ব্যবহার করছেন।
+
+সর্বশেষ সংস্করণ: {0}
+আপনার সংস্করণ: {1}</value>
+  </data>
+  <data name="UpdateService_Msg_FailedToCheck_Desc" xml:space="preserve">
+    <value>আপডেট পরীক্ষা করতে ব্যর্থ: {0}</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_ResetToFactorySettings_Title" xml:space="preserve">
+    <value>ফ্যাক্টরি রিসেট সেটিংস</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_ResetToFactorySettings_Desc" xml:space="preserve">
+    <value>আপনি কি সম্পূর্ণ নিশ্চিত যে আপনি সমস্ত অ্যাপ্লিকেশন সেটিংস কারখানার ডিফল্টে রিসেট করতে চান? এই কাজটি আর পূর্বাবস্থায় ফেরানো যাবে না।</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_ResetToFactorySettingsComplete_Title" xml:space="preserve">
+    <value>রিসেট সম্পন্ন</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_ResetToFactorySettingsComplete_Desc" xml:space="preserve">
+    <value>সমস্ত অ্যাপ্লিকেশন সেটিংস সফলভাবে কারখানার ডিফল্টে পুনরুদ্ধার করা হয়েছে।</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_ResetToFactorySettingsError_Desc" xml:space="preserve">
+    <value>আপনার কনফিগারেশন প্রোফাইল মুছে ফেলার সময় একটি অপ্রত্যাশিত ত্রুটি ঘটেছে।</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_StartWithWindowsToggleError_Desc" xml:space="preserve">
+    <value>রেজিস্ট্রি স্টার্টআপ কী আপডেট করতে ব্যর্থ: {0}</value>
+  </data>
+  <data name="DependencyService_Msg_DepsFound_Title" xml:space="preserve">
+    <value>নির্ভরতাগুলি পাওয়া গেছে</value>
+  </data>
+  <data name="DependencyService_Msg_DepsFound_Desc" xml:space="preserve">
+    <value>এই অ্যাপ্লিকেশনটি সঠিকভাবে কাজ করার জন্য অতিরিক্ত উপাদান প্রয়োজন। আপনি কি এখন সেগুলো ডাউনলোড ও ইনস্টল করতে চান?</value>
+  </data>
+  <data name="DependencyService_Msg_InstallationBlocked_Title" xml:space="preserve">
+    <value>ইনস্টলেশন ব্লক করা হয়েছে</value>
+  </data>
+  <data name="DependencyService_Msg_InstallationBlocked_Desc" xml:space="preserve">
+    <value>আপনার কম্পিউটারে বর্তমানে আরেকটি ইনস্টলেশন চলছে। অনুগ্রহ করে অন্যান্য ইনস্টলারগুলো সম্পূর্ণ করুন বা বন্ধ করুন, তারপর {0} পুনরায় চালু করুন।</value>
+  </data>
+  <data name="DependencyService_Msg_IncompatibleDependency_Title" xml:space="preserve">
+    <value>অসামঞ্জস্যপূর্ণ নির্ভরতা</value>
+  </data>
+  <data name="DependencyService_Msg_IncompatibleDependency_Desc" xml:space="preserve">
+    <value>প্রয়োজনীয় নির্ভরতা '{0}' এই মেশিনের অপারেটিং প্ল্যাটফর্ম বা আর্কিটেকচারে সম্পূর্ণরূপে সমর্থিত নয়।</value>
+  </data>
+  <data name="DependencyService_Msg_RestartRequired_Title" xml:space="preserve">
+    <value>পুনরায় শুরু করা প্রয়োজন</value>
+  </data>
+  <data name="DependencyService_Msg_RestartRequired_Desc" xml:space="preserve">
+    <value>এক বা একাধিক ইনস্টলেশন সঠিকভাবে কাজ করার জন্য সিস্টেম রিবুট প্রয়োজন। আপনি কি এখনই আপনার কম্পিউটার রিস্টার্ট করতে চান?</value>
+  </data>
+  <data name="FolderService_Msg_DoesNotExist_Desc" xml:space="preserve">
+    <value>লক্ষ্য ডিরেক্টরিটি নেই।
+
+পথ: {0}</value>
+  </data>
+  <data name="FolderService_Msg_FailedToOpen_Desc" xml:space="preserve">
+    <value>ফোল্ডার খুলতে ব্যর্থ: {0}</value>
+  </data>
+  <data name="UrlService_Msg_FailedToOpenURL_Desc" xml:space="preserve">
+    <value>URL খুলতে ব্যর্থ: {0}</value>
+  </data>
+  <data name="App_ReportProgress_InitThemeService" xml:space="preserve">
+    <value>থিম বিল্ডার ইনিশিয়ালাইজ করা হচ্ছে...</value>
+  </data>
+  <data name="App_ReportProgress_InitLanguageService" xml:space="preserve">
+    <value>ভাষা ম্যানেজার ইনিশিয়ালাইজ করা হচ্ছে...</value>
+  </data>
+</root>

@@ -1,0 +1,156 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:options="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    mc:Ignorable="options">
+
+    <!-- Lime 100% Opacity -->
+    <Color x:Key="Alr.Colors.Lime50">#FFF9FBE7</Color>
+    <Color x:Key="Alr.Colors.Lime100">#FFF0F4C3</Color>
+    <Color x:Key="Alr.Colors.Lime200">#FFE6EE9C</Color>
+    <Color x:Key="Alr.Colors.Lime300">#FFDCE775</Color>
+    <Color x:Key="Alr.Colors.Lime400">#FFD4E157</Color>
+    <Color x:Key="Alr.Colors.Lime500">#FFCDDC39</Color>
+    <Color x:Key="Alr.Colors.Lime600">#FFC0CA33</Color>
+    <Color x:Key="Alr.Colors.Lime700">#FFAFB42B</Color>
+    <Color x:Key="Alr.Colors.Lime800">#FF9E9D24</Color>
+    <Color x:Key="Alr.Colors.Lime900">#FF827717</Color>
+    <Color x:Key="Alr.Colors.LimeA100">#FFF4FF81</Color>
+    <Color x:Key="Alr.Colors.LimeA200">#FFEEFF41</Color>
+    <Color x:Key="Alr.Colors.LimeA400">#FFC6FF00</Color>
+    <Color x:Key="Alr.Colors.LimeA700">#FFAEEA00</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Lime50" Color="{StaticResource Alr.Colors.Lime50}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime100" Color="{StaticResource Alr.Colors.Lime100}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime200" Color="{StaticResource Alr.Colors.Lime200}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime300" Color="{StaticResource Alr.Colors.Lime300}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime400" Color="{StaticResource Alr.Colors.Lime400}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime500" Color="{StaticResource Alr.Colors.Lime500}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime600" Color="{StaticResource Alr.Colors.Lime600}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime700" Color="{StaticResource Alr.Colors.Lime700}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime800" Color="{StaticResource Alr.Colors.Lime800}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime900" Color="{StaticResource Alr.Colors.Lime900}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LimeA100" Color="{StaticResource Alr.Colors.LimeA100}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LimeA200" Color="{StaticResource Alr.Colors.LimeA200}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LimeA400" Color="{StaticResource Alr.Colors.LimeA400}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LimeA700" Color="{StaticResource Alr.Colors.LimeA700}" options:Freeze="True" />
+
+    <!-- Lime 80% Opacity -->
+    <Color x:Key="Alr.Colors.Lime50.O80">#CCF9FBE7</Color>
+    <Color x:Key="Alr.Colors.Lime100.O80">#CCF0F4C3</Color>
+    <Color x:Key="Alr.Colors.Lime200.O80">#CCE6EE9C</Color>
+    <Color x:Key="Alr.Colors.Lime300.O80">#CCDCE775</Color>
+    <Color x:Key="Alr.Colors.Lime400.O80">#CCD4E157</Color>
+    <Color x:Key="Alr.Colors.Lime500.O80">#CCCDDC39</Color>
+    <Color x:Key="Alr.Colors.Lime600.O80">#CCC0CA33</Color>
+    <Color x:Key="Alr.Colors.Lime700.O80">#CCAFB42B</Color>
+    <Color x:Key="Alr.Colors.Lime800.O80">#CC9E9D24</Color>
+    <Color x:Key="Alr.Colors.Lime900.O80">#CC827717</Color>
+    <Color x:Key="Alr.Colors.LimeA100.O80">#CCF4FF81</Color>
+    <Color x:Key="Alr.Colors.LimeA200.O80">#CCEEFF41</Color>
+    <Color x:Key="Alr.Colors.LimeA400.O80">#CCC6FF00</Color>
+    <Color x:Key="Alr.Colors.LimeA700.O80">#CCAEEA00</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Lime50.O80" Color="{StaticResource Alr.Colors.Lime50.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime100.O80" Color="{StaticResource Alr.Colors.Lime100.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime200.O80" Color="{StaticResource Alr.Colors.Lime200.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime300.O80" Color="{StaticResource Alr.Colors.Lime300.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime400.O80" Color="{StaticResource Alr.Colors.Lime400.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime500.O80" Color="{StaticResource Alr.Colors.Lime500.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime600.O80" Color="{StaticResource Alr.Colors.Lime600.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime700.O80" Color="{StaticResource Alr.Colors.Lime700.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime800.O80" Color="{StaticResource Alr.Colors.Lime800.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime900.O80" Color="{StaticResource Alr.Colors.Lime900.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LimeA100.O80" Color="{StaticResource Alr.Colors.LimeA100.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LimeA200.O80" Color="{StaticResource Alr.Colors.LimeA200.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LimeA400.O80" Color="{StaticResource Alr.Colors.LimeA400.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LimeA700.O80" Color="{StaticResource Alr.Colors.LimeA700.O80}" options:Freeze="True" />
+
+    <!-- Lime 60% Opacity -->
+    <Color x:Key="Alr.Colors.Lime50.O60">#99F9FBE7</Color>
+    <Color x:Key="Alr.Colors.Lime100.O60">#99F0F4C3</Color>
+    <Color x:Key="Alr.Colors.Lime200.O60">#99E6EE9C</Color>
+    <Color x:Key="Alr.Colors.Lime300.O60">#99DCE775</Color>
+    <Color x:Key="Alr.Colors.Lime400.O60">#99D4E157</Color>
+    <Color x:Key="Alr.Colors.Lime500.O60">#99CDDC39</Color>
+    <Color x:Key="Alr.Colors.Lime600.O60">#99C0CA33</Color>
+    <Color x:Key="Alr.Colors.Lime700.O60">#99AFB42B</Color>
+    <Color x:Key="Alr.Colors.Lime800.O60">#999E9D24</Color>
+    <Color x:Key="Alr.Colors.Lime900.O60">#99827717</Color>
+    <Color x:Key="Alr.Colors.LimeA100.O60">#99F4FF81</Color>
+    <Color x:Key="Alr.Colors.LimeA200.O60">#99EEFF41</Color>
+    <Color x:Key="Alr.Colors.LimeA400.O60">#99C6FF00</Color>
+    <Color x:Key="Alr.Colors.LimeA700.O60">#99AEEA00</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Lime50.O60" Color="{StaticResource Alr.Colors.Lime50.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime100.O60" Color="{StaticResource Alr.Colors.Lime100.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime200.O60" Color="{StaticResource Alr.Colors.Lime200.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime300.O60" Color="{StaticResource Alr.Colors.Lime300.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime400.O60" Color="{StaticResource Alr.Colors.Lime400.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime500.O60" Color="{StaticResource Alr.Colors.Lime500.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime600.O60" Color="{StaticResource Alr.Colors.Lime600.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime700.O60" Color="{StaticResource Alr.Colors.Lime700.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime800.O60" Color="{StaticResource Alr.Colors.Lime800.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime900.O60" Color="{StaticResource Alr.Colors.Lime900.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LimeA100.O60" Color="{StaticResource Alr.Colors.LimeA100.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LimeA200.O60" Color="{StaticResource Alr.Colors.LimeA200.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LimeA400.O60" Color="{StaticResource Alr.Colors.LimeA400.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LimeA700.O60" Color="{StaticResource Alr.Colors.LimeA700.O60}" options:Freeze="True" />
+
+    <!-- Lime 40% Opacity -->
+    <Color x:Key="Alr.Colors.Lime50.O40">#66F9FBE7</Color>
+    <Color x:Key="Alr.Colors.Lime100.O40">#66F0F4C3</Color>
+    <Color x:Key="Alr.Colors.Lime200.O40">#66E6EE9C</Color>
+    <Color x:Key="Alr.Colors.Lime300.O40">#66DCE775</Color>
+    <Color x:Key="Alr.Colors.Lime400.O40">#66D4E157</Color>
+    <Color x:Key="Alr.Colors.Lime500.O40">#66CDDC39</Color>
+    <Color x:Key="Alr.Colors.Lime600.O40">#66C0CA33</Color>
+    <Color x:Key="Alr.Colors.Lime700.O40">#66AFB42B</Color>
+    <Color x:Key="Alr.Colors.Lime800.O40">#669E9D24</Color>
+    <Color x:Key="Alr.Colors.Lime900.O40">#66827717</Color>
+    <Color x:Key="Alr.Colors.LimeA100.O40">#66F4FF81</Color>
+    <Color x:Key="Alr.Colors.LimeA200.O40">#66EEFF41</Color>
+    <Color x:Key="Alr.Colors.LimeA400.O40">#66C6FF00</Color>
+    <Color x:Key="Alr.Colors.LimeA700.O40">#66AEEA00</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Lime50.O40" Color="{StaticResource Alr.Colors.Lime50.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime100.O40" Color="{StaticResource Alr.Colors.Lime100.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime200.O40" Color="{StaticResource Alr.Colors.Lime200.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime300.O40" Color="{StaticResource Alr.Colors.Lime300.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime400.O40" Color="{StaticResource Alr.Colors.Lime400.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime500.O40" Color="{StaticResource Alr.Colors.Lime500.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime600.O40" Color="{StaticResource Alr.Colors.Lime600.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime700.O40" Color="{StaticResource Alr.Colors.Lime700.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime800.O40" Color="{StaticResource Alr.Colors.Lime800.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime900.O40" Color="{StaticResource Alr.Colors.Lime900.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LimeA100.O40" Color="{StaticResource Alr.Colors.LimeA100.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LimeA200.O40" Color="{StaticResource Alr.Colors.LimeA200.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LimeA400.O40" Color="{StaticResource Alr.Colors.LimeA400.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LimeA700.O40" Color="{StaticResource Alr.Colors.LimeA700.O40}" options:Freeze="True" />
+
+    <!-- Lime 20% Opacity -->
+    <Color x:Key="Alr.Colors.Lime50.O20">#33F9FBE7</Color>
+    <Color x:Key="Alr.Colors.Lime100.O20">#33F0F4C3</Color>
+    <Color x:Key="Alr.Colors.Lime200.O20">#33E6EE9C</Color>
+    <Color x:Key="Alr.Colors.Lime300.O20">#33DCE775</Color>
+    <Color x:Key="Alr.Colors.Lime400.O20">#33D4E157</Color>
+    <Color x:Key="Alr.Colors.Lime500.O20">#33CDDC39</Color>
+    <Color x:Key="Alr.Colors.Lime600.O20">#33C0CA33</Color>
+    <Color x:Key="Alr.Colors.Lime700.O20">#33AFB42B</Color>
+    <Color x:Key="Alr.Colors.Lime800.O20">#339E9D24</Color>
+    <Color x:Key="Alr.Colors.Lime900.O20">#33827717</Color>
+    <Color x:Key="Alr.Colors.LimeA100.O20">#33F4FF81</Color>
+    <Color x:Key="Alr.Colors.LimeA200.O20">#33EEFF41</Color>
+    <Color x:Key="Alr.Colors.LimeA400.O20">#33C6FF00</Color>
+    <Color x:Key="Alr.Colors.LimeA700.O20">#33AEEA00</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Lime50.O20" Color="{StaticResource Alr.Colors.Lime50.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime100.O20" Color="{StaticResource Alr.Colors.Lime100.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime200.O20" Color="{StaticResource Alr.Colors.Lime200.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime300.O20" Color="{StaticResource Alr.Colors.Lime300.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime400.O20" Color="{StaticResource Alr.Colors.Lime400.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime500.O20" Color="{StaticResource Alr.Colors.Lime500.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime600.O20" Color="{StaticResource Alr.Colors.Lime600.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime700.O20" Color="{StaticResource Alr.Colors.Lime700.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime800.O20" Color="{StaticResource Alr.Colors.Lime800.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Lime900.O20" Color="{StaticResource Alr.Colors.Lime900.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LimeA100.O20" Color="{StaticResource Alr.Colors.LimeA100.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LimeA200.O20" Color="{StaticResource Alr.Colors.LimeA200.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LimeA400.O20" Color="{StaticResource Alr.Colors.LimeA400.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LimeA700.O20" Color="{StaticResource Alr.Colors.LimeA700.O20}" options:Freeze="True" />
+</ResourceDictionary>

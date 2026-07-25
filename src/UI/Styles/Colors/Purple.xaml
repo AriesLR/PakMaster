@@ -1,0 +1,156 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:options="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    mc:Ignorable="options">
+
+    <!-- Purple 100% Opacity -->
+    <Color x:Key="Alr.Colors.Purple50">#FFF3E5F5</Color>
+    <Color x:Key="Alr.Colors.Purple100">#FFE1BEE7</Color>
+    <Color x:Key="Alr.Colors.Purple200">#FFCE93D8</Color>
+    <Color x:Key="Alr.Colors.Purple300">#FFBA68C8</Color>
+    <Color x:Key="Alr.Colors.Purple400">#FFAB47BC</Color>
+    <Color x:Key="Alr.Colors.Purple500">#FF9C27B0</Color>
+    <Color x:Key="Alr.Colors.Purple600">#FF8E24AA</Color>
+    <Color x:Key="Alr.Colors.Purple700">#FF7B1FA2</Color>
+    <Color x:Key="Alr.Colors.Purple800">#FF6A1B9A</Color>
+    <Color x:Key="Alr.Colors.Purple900">#FF4A148C</Color>
+    <Color x:Key="Alr.Colors.PurpleA100">#FFEA80FC</Color>
+    <Color x:Key="Alr.Colors.PurpleA200">#FFE040FB</Color>
+    <Color x:Key="Alr.Colors.PurpleA400">#FFD500F9</Color>
+    <Color x:Key="Alr.Colors.PurpleA700">#FFAA00FF</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Purple50" Color="{StaticResource Alr.Colors.Purple50}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple100" Color="{StaticResource Alr.Colors.Purple100}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple200" Color="{StaticResource Alr.Colors.Purple200}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple300" Color="{StaticResource Alr.Colors.Purple300}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple400" Color="{StaticResource Alr.Colors.Purple400}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple500" Color="{StaticResource Alr.Colors.Purple500}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple600" Color="{StaticResource Alr.Colors.Purple600}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple700" Color="{StaticResource Alr.Colors.Purple700}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple800" Color="{StaticResource Alr.Colors.Purple800}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple900" Color="{StaticResource Alr.Colors.Purple900}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PurpleA100" Color="{StaticResource Alr.Colors.PurpleA100}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PurpleA200" Color="{StaticResource Alr.Colors.PurpleA200}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PurpleA400" Color="{StaticResource Alr.Colors.PurpleA400}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PurpleA700" Color="{StaticResource Alr.Colors.PurpleA700}" options:Freeze="True" />
+
+    <!-- Purple 80% Opacity -->
+    <Color x:Key="Alr.Colors.Purple50.O80">#CCF3E5F5</Color>
+    <Color x:Key="Alr.Colors.Purple100.O80">#CCE1BEE7</Color>
+    <Color x:Key="Alr.Colors.Purple200.O80">#CCCE93D8</Color>
+    <Color x:Key="Alr.Colors.Purple300.O80">#CCBA68C8</Color>
+    <Color x:Key="Alr.Colors.Purple400.O80">#CCAB47BC</Color>
+    <Color x:Key="Alr.Colors.Purple500.O80">#CC9C27B0</Color>
+    <Color x:Key="Alr.Colors.Purple600.O80">#CC8E24AA</Color>
+    <Color x:Key="Alr.Colors.Purple700.O80">#CC7B1FA2</Color>
+    <Color x:Key="Alr.Colors.Purple800.O80">#CC6A1B9A</Color>
+    <Color x:Key="Alr.Colors.Purple900.O80">#CC4A148C</Color>
+    <Color x:Key="Alr.Colors.PurpleA100.O80">#CCEA80FC</Color>
+    <Color x:Key="Alr.Colors.PurpleA200.O80">#CCE040FB</Color>
+    <Color x:Key="Alr.Colors.PurpleA400.O80">#CCD500F9</Color>
+    <Color x:Key="Alr.Colors.PurpleA700.O80">#CCAA00FF</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Purple50.O80" Color="{StaticResource Alr.Colors.Purple50.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple100.O80" Color="{StaticResource Alr.Colors.Purple100.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple200.O80" Color="{StaticResource Alr.Colors.Purple200.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple300.O80" Color="{StaticResource Alr.Colors.Purple300.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple400.O80" Color="{StaticResource Alr.Colors.Purple400.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple500.O80" Color="{StaticResource Alr.Colors.Purple500.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple600.O80" Color="{StaticResource Alr.Colors.Purple600.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple700.O80" Color="{StaticResource Alr.Colors.Purple700.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple800.O80" Color="{StaticResource Alr.Colors.Purple800.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple900.O80" Color="{StaticResource Alr.Colors.Purple900.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PurpleA100.O80" Color="{StaticResource Alr.Colors.PurpleA100.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PurpleA200.O80" Color="{StaticResource Alr.Colors.PurpleA200.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PurpleA400.O80" Color="{StaticResource Alr.Colors.PurpleA400.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PurpleA700.O80" Color="{StaticResource Alr.Colors.PurpleA700.O80}" options:Freeze="True" />
+
+    <!-- Purple 60% Opacity -->
+    <Color x:Key="Alr.Colors.Purple50.O60">#99F3E5F5</Color>
+    <Color x:Key="Alr.Colors.Purple100.O60">#99E1BEE7</Color>
+    <Color x:Key="Alr.Colors.Purple200.O60">#99CE93D8</Color>
+    <Color x:Key="Alr.Colors.Purple300.O60">#99BA68C8</Color>
+    <Color x:Key="Alr.Colors.Purple400.O60">#99AB47BC</Color>
+    <Color x:Key="Alr.Colors.Purple500.O60">#999C27B0</Color>
+    <Color x:Key="Alr.Colors.Purple600.O60">#998E24AA</Color>
+    <Color x:Key="Alr.Colors.Purple700.O60">#997B1FA2</Color>
+    <Color x:Key="Alr.Colors.Purple800.O60">#996A1B9A</Color>
+    <Color x:Key="Alr.Colors.Purple900.O60">#994A148C</Color>
+    <Color x:Key="Alr.Colors.PurpleA100.O60">#99EA80FC</Color>
+    <Color x:Key="Alr.Colors.PurpleA200.O60">#99E040FB</Color>
+    <Color x:Key="Alr.Colors.PurpleA400.O60">#99D500F9</Color>
+    <Color x:Key="Alr.Colors.PurpleA700.O60">#99AA00FF</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Purple50.O60" Color="{StaticResource Alr.Colors.Purple50.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple100.O60" Color="{StaticResource Alr.Colors.Purple100.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple200.O60" Color="{StaticResource Alr.Colors.Purple200.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple300.O60" Color="{StaticResource Alr.Colors.Purple300.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple400.O60" Color="{StaticResource Alr.Colors.Purple400.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple500.O60" Color="{StaticResource Alr.Colors.Purple500.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple600.O60" Color="{StaticResource Alr.Colors.Purple600.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple700.O60" Color="{StaticResource Alr.Colors.Purple700.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple800.O60" Color="{StaticResource Alr.Colors.Purple800.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple900.O60" Color="{StaticResource Alr.Colors.Purple900.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PurpleA100.O60" Color="{StaticResource Alr.Colors.PurpleA100.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PurpleA200.O60" Color="{StaticResource Alr.Colors.PurpleA200.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PurpleA400.O60" Color="{StaticResource Alr.Colors.PurpleA400.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PurpleA700.O60" Color="{StaticResource Alr.Colors.PurpleA700.O60}" options:Freeze="True" />
+
+    <!-- Purple 40% Opacity -->
+    <Color x:Key="Alr.Colors.Purple50.O40">#66F3E5F5</Color>
+    <Color x:Key="Alr.Colors.Purple100.O40">#66E1BEE7</Color>
+    <Color x:Key="Alr.Colors.Purple200.O40">#66CE93D8</Color>
+    <Color x:Key="Alr.Colors.Purple300.O40">#66BA68C8</Color>
+    <Color x:Key="Alr.Colors.Purple400.O40">#66AB47BC</Color>
+    <Color x:Key="Alr.Colors.Purple500.O40">#669C27B0</Color>
+    <Color x:Key="Alr.Colors.Purple600.O40">#668E24AA</Color>
+    <Color x:Key="Alr.Colors.Purple700.O40">#667B1FA2</Color>
+    <Color x:Key="Alr.Colors.Purple800.O40">#666A1B9A</Color>
+    <Color x:Key="Alr.Colors.Purple900.O40">#664A148C</Color>
+    <Color x:Key="Alr.Colors.PurpleA100.O40">#66EA80FC</Color>
+    <Color x:Key="Alr.Colors.PurpleA200.O40">#66E040FB</Color>
+    <Color x:Key="Alr.Colors.PurpleA400.O40">#66D500F9</Color>
+    <Color x:Key="Alr.Colors.PurpleA700.O40">#66AA00FF</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Purple50.O40" Color="{StaticResource Alr.Colors.Purple50.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple100.O40" Color="{StaticResource Alr.Colors.Purple100.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple200.O40" Color="{StaticResource Alr.Colors.Purple200.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple300.O40" Color="{StaticResource Alr.Colors.Purple300.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple400.O40" Color="{StaticResource Alr.Colors.Purple400.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple500.O40" Color="{StaticResource Alr.Colors.Purple500.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple600.O40" Color="{StaticResource Alr.Colors.Purple600.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple700.O40" Color="{StaticResource Alr.Colors.Purple700.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple800.O40" Color="{StaticResource Alr.Colors.Purple800.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple900.O40" Color="{StaticResource Alr.Colors.Purple900.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PurpleA100.O40" Color="{StaticResource Alr.Colors.PurpleA100.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PurpleA200.O40" Color="{StaticResource Alr.Colors.PurpleA200.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PurpleA400.O40" Color="{StaticResource Alr.Colors.PurpleA400.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PurpleA700.O40" Color="{StaticResource Alr.Colors.PurpleA700.O40}" options:Freeze="True" />
+
+    <!-- Purple 20% Opacity -->
+    <Color x:Key="Alr.Colors.Purple50.O20">#33F3E5F5</Color>
+    <Color x:Key="Alr.Colors.Purple100.O20">#33E1BEE7</Color>
+    <Color x:Key="Alr.Colors.Purple200.O20">#33CE93D8</Color>
+    <Color x:Key="Alr.Colors.Purple300.O20">#33BA68C8</Color>
+    <Color x:Key="Alr.Colors.Purple400.O20">#33AB47BC</Color>
+    <Color x:Key="Alr.Colors.Purple500.O20">#339C27B0</Color>
+    <Color x:Key="Alr.Colors.Purple600.O20">#338E24AA</Color>
+    <Color x:Key="Alr.Colors.Purple700.O20">#337B1FA2</Color>
+    <Color x:Key="Alr.Colors.Purple800.O20">#336A1B9A</Color>
+    <Color x:Key="Alr.Colors.Purple900.O20">#334A148C</Color>
+    <Color x:Key="Alr.Colors.PurpleA100.O20">#33EA80FC</Color>
+    <Color x:Key="Alr.Colors.PurpleA200.O20">#33E040FB</Color>
+    <Color x:Key="Alr.Colors.PurpleA400.O20">#33D500F9</Color>
+    <Color x:Key="Alr.Colors.PurpleA700.O20">#33AA00FF</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Purple50.O20" Color="{StaticResource Alr.Colors.Purple50.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple100.O20" Color="{StaticResource Alr.Colors.Purple100.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple200.O20" Color="{StaticResource Alr.Colors.Purple200.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple300.O20" Color="{StaticResource Alr.Colors.Purple300.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple400.O20" Color="{StaticResource Alr.Colors.Purple400.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple500.O20" Color="{StaticResource Alr.Colors.Purple500.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple600.O20" Color="{StaticResource Alr.Colors.Purple600.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple700.O20" Color="{StaticResource Alr.Colors.Purple700.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple800.O20" Color="{StaticResource Alr.Colors.Purple800.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Purple900.O20" Color="{StaticResource Alr.Colors.Purple900.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PurpleA100.O20" Color="{StaticResource Alr.Colors.PurpleA100.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PurpleA200.O20" Color="{StaticResource Alr.Colors.PurpleA200.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PurpleA400.O20" Color="{StaticResource Alr.Colors.PurpleA400.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PurpleA700.O20" Color="{StaticResource Alr.Colors.PurpleA700.O20}" options:Freeze="True" />
+</ResourceDictionary>

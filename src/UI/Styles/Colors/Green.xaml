@@ -1,0 +1,156 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:options="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    mc:Ignorable="options">
+
+    <!-- Green 100% Opacity -->
+    <Color x:Key="Alr.Colors.Green50">#FFE8F5E9</Color>
+    <Color x:Key="Alr.Colors.Green100">#FFC8E6C9</Color>
+    <Color x:Key="Alr.Colors.Green200">#FFA5D6A7</Color>
+    <Color x:Key="Alr.Colors.Green300">#FF81C784</Color>
+    <Color x:Key="Alr.Colors.Green400">#FF66BB6A</Color>
+    <Color x:Key="Alr.Colors.Green500">#FF4CAF50</Color>
+    <Color x:Key="Alr.Colors.Green600">#FF43A047</Color>
+    <Color x:Key="Alr.Colors.Green700">#FF388E3C</Color>
+    <Color x:Key="Alr.Colors.Green800">#FF2E7D32</Color>
+    <Color x:Key="Alr.Colors.Green900">#FF1B5E20</Color>
+    <Color x:Key="Alr.Colors.GreenA100">#FFB9F6CA</Color>
+    <Color x:Key="Alr.Colors.GreenA200">#FF69F0AE</Color>
+    <Color x:Key="Alr.Colors.GreenA400">#FF00E676</Color>
+    <Color x:Key="Alr.Colors.GreenA700">#FF00C853</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Green50" Color="{StaticResource Alr.Colors.Green50}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green100" Color="{StaticResource Alr.Colors.Green100}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green200" Color="{StaticResource Alr.Colors.Green200}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green300" Color="{StaticResource Alr.Colors.Green300}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green400" Color="{StaticResource Alr.Colors.Green400}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green500" Color="{StaticResource Alr.Colors.Green500}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green600" Color="{StaticResource Alr.Colors.Green600}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green700" Color="{StaticResource Alr.Colors.Green700}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green800" Color="{StaticResource Alr.Colors.Green800}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green900" Color="{StaticResource Alr.Colors.Green900}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.GreenA100" Color="{StaticResource Alr.Colors.GreenA100}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.GreenA200" Color="{StaticResource Alr.Colors.GreenA200}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.GreenA400" Color="{StaticResource Alr.Colors.GreenA400}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.GreenA700" Color="{StaticResource Alr.Colors.GreenA700}" options:Freeze="True" />
+
+    <!-- Green 80% Opacity -->
+    <Color x:Key="Alr.Colors.Green50.O80">#CCE8F5E9</Color>
+    <Color x:Key="Alr.Colors.Green100.O80">#CCC8E6C9</Color>
+    <Color x:Key="Alr.Colors.Green200.O80">#CCA5D6A7</Color>
+    <Color x:Key="Alr.Colors.Green300.O80">#CC81C784</Color>
+    <Color x:Key="Alr.Colors.Green400.O80">#CC66BB6A</Color>
+    <Color x:Key="Alr.Colors.Green500.O80">#CC4CAF50</Color>
+    <Color x:Key="Alr.Colors.Green600.O80">#CC43A047</Color>
+    <Color x:Key="Alr.Colors.Green700.O80">#CC388E3C</Color>
+    <Color x:Key="Alr.Colors.Green800.O80">#CC2E7D32</Color>
+    <Color x:Key="Alr.Colors.Green900.O80">#CC1B5E20</Color>
+    <Color x:Key="Alr.Colors.GreenA100.O80">#CCB9F6CA</Color>
+    <Color x:Key="Alr.Colors.GreenA200.O80">#CC69F0AE</Color>
+    <Color x:Key="Alr.Colors.GreenA400.O80">#CC00E676</Color>
+    <Color x:Key="Alr.Colors.GreenA700.O80">#CC00C853</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Green50.O80" Color="{StaticResource Alr.Colors.Green50.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green100.O80" Color="{StaticResource Alr.Colors.Green100.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green200.O80" Color="{StaticResource Alr.Colors.Green200.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green300.O80" Color="{StaticResource Alr.Colors.Green300.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green400.O80" Color="{StaticResource Alr.Colors.Green400.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green500.O80" Color="{StaticResource Alr.Colors.Green500.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green600.O80" Color="{StaticResource Alr.Colors.Green600.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green700.O80" Color="{StaticResource Alr.Colors.Green700.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green800.O80" Color="{StaticResource Alr.Colors.Green800.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green900.O80" Color="{StaticResource Alr.Colors.Green900.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.GreenA100.O80" Color="{StaticResource Alr.Colors.GreenA100.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.GreenA200.O80" Color="{StaticResource Alr.Colors.GreenA200.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.GreenA400.O80" Color="{StaticResource Alr.Colors.GreenA400.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.GreenA700.O80" Color="{StaticResource Alr.Colors.GreenA700.O80}" options:Freeze="True" />
+
+    <!-- Green 60% Opacity -->
+    <Color x:Key="Alr.Colors.Green50.O60">#99E8F5E9</Color>
+    <Color x:Key="Alr.Colors.Green100.O60">#99C8E6C9</Color>
+    <Color x:Key="Alr.Colors.Green200.O60">#99A5D6A7</Color>
+    <Color x:Key="Alr.Colors.Green300.O60">#9981C784</Color>
+    <Color x:Key="Alr.Colors.Green400.O60">#9966BB6A</Color>
+    <Color x:Key="Alr.Colors.Green500.O60">#994CAF50</Color>
+    <Color x:Key="Alr.Colors.Green600.O60">#9943A047</Color>
+    <Color x:Key="Alr.Colors.Green700.O60">#99388E3C</Color>
+    <Color x:Key="Alr.Colors.Green800.O60">#992E7D32</Color>
+    <Color x:Key="Alr.Colors.Green900.O60">#991B5E20</Color>
+    <Color x:Key="Alr.Colors.GreenA100.O60">#99B9F6CA</Color>
+    <Color x:Key="Alr.Colors.GreenA200.O60">#9969F0AE</Color>
+    <Color x:Key="Alr.Colors.GreenA400.O60">#9900E676</Color>
+    <Color x:Key="Alr.Colors.GreenA700.O60">#9900C853</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Green50.O60" Color="{StaticResource Alr.Colors.Green50.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green100.O60" Color="{StaticResource Alr.Colors.Green100.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green200.O60" Color="{StaticResource Alr.Colors.Green200.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green300.O60" Color="{StaticResource Alr.Colors.Green300.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green400.O60" Color="{StaticResource Alr.Colors.Green400.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green500.O60" Color="{StaticResource Alr.Colors.Green500.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green600.O60" Color="{StaticResource Alr.Colors.Green600.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green700.O60" Color="{StaticResource Alr.Colors.Green700.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green800.O60" Color="{StaticResource Alr.Colors.Green800.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green900.O60" Color="{StaticResource Alr.Colors.Green900.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.GreenA100.O60" Color="{StaticResource Alr.Colors.GreenA100.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.GreenA200.O60" Color="{StaticResource Alr.Colors.GreenA200.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.GreenA400.O60" Color="{StaticResource Alr.Colors.GreenA400.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.GreenA700.O60" Color="{StaticResource Alr.Colors.GreenA700.O60}" options:Freeze="True" />
+
+    <!-- Green 40% Opacity -->
+    <Color x:Key="Alr.Colors.Green50.O40">#66E8F5E9</Color>
+    <Color x:Key="Alr.Colors.Green100.O40">#66C8E6C9</Color>
+    <Color x:Key="Alr.Colors.Green200.O40">#66A5D6A7</Color>
+    <Color x:Key="Alr.Colors.Green300.O40">#6681C784</Color>
+    <Color x:Key="Alr.Colors.Green400.O40">#66BB6A</Color>
+    <Color x:Key="Alr.Colors.Green500.O40">#664CAF50</Color>
+    <Color x:Key="Alr.Colors.Green600.O40">#6643A047</Color>
+    <Color x:Key="Alr.Colors.Green700.O40">#66388E3C</Color>
+    <Color x:Key="Alr.Colors.Green800.O40">#662E7D32</Color>
+    <Color x:Key="Alr.Colors.Green900.O40">#661B5E20</Color>
+    <Color x:Key="Alr.Colors.GreenA100.O40">#66B9F6CA</Color>
+    <Color x:Key="Alr.Colors.GreenA200.O40">#6669F0AE</Color>
+    <Color x:Key="Alr.Colors.GreenA400.O40">#6600E676</Color>
+    <Color x:Key="Alr.Colors.GreenA700.O40">#6600C853</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Green50.O40" Color="{StaticResource Alr.Colors.Green50.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green100.O40" Color="{StaticResource Alr.Colors.Green100.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green200.O40" Color="{StaticResource Alr.Colors.Green200.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green300.O40" Color="{StaticResource Alr.Colors.Green300.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green400.O40" Color="{StaticResource Alr.Colors.Green400.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green500.O40" Color="{StaticResource Alr.Colors.Green500.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green600.O40" Color="{StaticResource Alr.Colors.Green600.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green700.O40" Color="{StaticResource Alr.Colors.Green700.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green800.O40" Color="{StaticResource Alr.Colors.Green800.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green900.O40" Color="{StaticResource Alr.Colors.Green900.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.GreenA100.O40" Color="{StaticResource Alr.Colors.GreenA100.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.GreenA200.O40" Color="{StaticResource Alr.Colors.GreenA200.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.GreenA400.O40" Color="{StaticResource Alr.Colors.GreenA400.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.GreenA700.O40" Color="{StaticResource Alr.Colors.GreenA700.O40}" options:Freeze="True" />
+
+    <!-- Green 20% Opacity -->
+    <Color x:Key="Alr.Colors.Green50.O20">#33E8F5E9</Color>
+    <Color x:Key="Alr.Colors.Green100.O20">#33C8E6C9</Color>
+    <Color x:Key="Alr.Colors.Green200.O20">#33A5D6A7</Color>
+    <Color x:Key="Alr.Colors.Green300.O20">#3381C784</Color>
+    <Color x:Key="Alr.Colors.Green400.O20">#3366BB6A</Color>
+    <Color x:Key="Alr.Colors.Green500.O20">#334CAF50</Color>
+    <Color x:Key="Alr.Colors.Green600.O20">#3343A047</Color>
+    <Color x:Key="Alr.Colors.Green700.O20">#33388E3C</Color>
+    <Color x:Key="Alr.Colors.Green800.O20">#332E7D32</Color>
+    <Color x:Key="Alr.Colors.Green900.O20">#331B5E20</Color>
+    <Color x:Key="Alr.Colors.GreenA100.O20">#33B9F6CA</Color>
+    <Color x:Key="Alr.Colors.GreenA200.O20">#3369F0AE</Color>
+    <Color x:Key="Alr.Colors.GreenA400.O20">#3300E676</Color>
+    <Color x:Key="Alr.Colors.GreenA700.O20">#3300C853</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Green50.O20" Color="{StaticResource Alr.Colors.Green50.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green100.O20" Color="{StaticResource Alr.Colors.Green100.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green200.O20" Color="{StaticResource Alr.Colors.Green200.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green300.O20" Color="{StaticResource Alr.Colors.Green300.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green400.O20" Color="{StaticResource Alr.Colors.Green400.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green500.O20" Color="{StaticResource Alr.Colors.Green500.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green600.O20" Color="{StaticResource Alr.Colors.Green600.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green700.O20" Color="{StaticResource Alr.Colors.Green700.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green800.O20" Color="{StaticResource Alr.Colors.Green800.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Green900.O20" Color="{StaticResource Alr.Colors.Green900.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.GreenA100.O20" Color="{StaticResource Alr.Colors.GreenA100.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.GreenA200.O20" Color="{StaticResource Alr.Colors.GreenA200.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.GreenA400.O20" Color="{StaticResource Alr.Colors.GreenA400.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.GreenA700.O20" Color="{StaticResource Alr.Colors.GreenA700.O20}" options:Freeze="True" />
+</ResourceDictionary>

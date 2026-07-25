@@ -1,0 +1,156 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:options="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    mc:Ignorable="options">
+
+    <!-- Light Blue 100% Opacity -->
+    <Color x:Key="Alr.Colors.LightBlue50">#FFE1F5FE</Color>
+    <Color x:Key="Alr.Colors.LightBlue100">#FFB3E5FC</Color>
+    <Color x:Key="Alr.Colors.LightBlue200">#FF81D4FA</Color>
+    <Color x:Key="Alr.Colors.LightBlue300">#FF4FC3F7</Color>
+    <Color x:Key="Alr.Colors.LightBlue400">#FF29B6F6</Color>
+    <Color x:Key="Alr.Colors.LightBlue500">#FF03A9F4</Color>
+    <Color x:Key="Alr.Colors.LightBlue600">#FF039BE5</Color>
+    <Color x:Key="Alr.Colors.LightBlue700">#FF0288D1</Color>
+    <Color x:Key="Alr.Colors.LightBlue800">#FF0277BD</Color>
+    <Color x:Key="Alr.Colors.LightBlue900">#FF01579B</Color>
+    <Color x:Key="Alr.Colors.LightBlueA100">#FF80D8FF</Color>
+    <Color x:Key="Alr.Colors.LightBlueA200">#FF40C4FF</Color>
+    <Color x:Key="Alr.Colors.LightBlueA400">#FF00B0FF</Color>
+    <Color x:Key="Alr.Colors.LightBlueA700">#FF0091EA</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue50" Color="{StaticResource Alr.Colors.LightBlue50}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue100" Color="{StaticResource Alr.Colors.LightBlue100}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue200" Color="{StaticResource Alr.Colors.LightBlue200}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue300" Color="{StaticResource Alr.Colors.LightBlue300}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue400" Color="{StaticResource Alr.Colors.LightBlue400}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue500" Color="{StaticResource Alr.Colors.LightBlue500}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue600" Color="{StaticResource Alr.Colors.LightBlue600}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue700" Color="{StaticResource Alr.Colors.LightBlue700}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue800" Color="{StaticResource Alr.Colors.LightBlue800}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue900" Color="{StaticResource Alr.Colors.LightBlue900}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlueA100" Color="{StaticResource Alr.Colors.LightBlueA100}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlueA200" Color="{StaticResource Alr.Colors.LightBlueA200}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlueA400" Color="{StaticResource Alr.Colors.LightBlueA400}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlueA700" Color="{StaticResource Alr.Colors.LightBlueA700}" options:Freeze="True" />
+
+    <!-- Light Blue 80% Opacity -->
+    <Color x:Key="Alr.Colors.LightBlue50.O80">#CCE1F5FE</Color>
+    <Color x:Key="Alr.Colors.LightBlue100.O80">#CCB3E5FC</Color>
+    <Color x:Key="Alr.Colors.LightBlue200.O80">#CC81D4FA</Color>
+    <Color x:Key="Alr.Colors.LightBlue300.O80">#CC4FC3F7</Color>
+    <Color x:Key="Alr.Colors.LightBlue400.O80">#CC29B6F6</Color>
+    <Color x:Key="Alr.Colors.LightBlue500.O80">#CC03A9F4</Color>
+    <Color x:Key="Alr.Colors.LightBlue600.O80">#CC039BE5</Color>
+    <Color x:Key="Alr.Colors.LightBlue700.O80">#CC0288D1</Color>
+    <Color x:Key="Alr.Colors.LightBlue800.O80">#CC0277BD</Color>
+    <Color x:Key="Alr.Colors.LightBlue900.O80">#CC01579B</Color>
+    <Color x:Key="Alr.Colors.LightBlueA100.O80">#CC80D8FF</Color>
+    <Color x:Key="Alr.Colors.LightBlueA200.O80">#CC40C4FF</Color>
+    <Color x:Key="Alr.Colors.LightBlueA400.O80">#CC00B0FF</Color>
+    <Color x:Key="Alr.Colors.LightBlueA700.O80">#CC0091EA</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue50.O80" Color="{StaticResource Alr.Colors.LightBlue50.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue100.O80" Color="{StaticResource Alr.Colors.LightBlue100.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue200.O80" Color="{StaticResource Alr.Colors.LightBlue200.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue300.O80" Color="{StaticResource Alr.Colors.LightBlue300.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue400.O80" Color="{StaticResource Alr.Colors.LightBlue400.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue500.O80" Color="{StaticResource Alr.Colors.LightBlue500.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue600.O80" Color="{StaticResource Alr.Colors.LightBlue600.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue700.O80" Color="{StaticResource Alr.Colors.LightBlue700.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue800.O80" Color="{StaticResource Alr.Colors.LightBlue800.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue900.O80" Color="{StaticResource Alr.Colors.LightBlue900.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlueA100.O80" Color="{StaticResource Alr.Colors.LightBlueA100.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlueA200.O80" Color="{StaticResource Alr.Colors.LightBlueA200.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlueA400.O80" Color="{StaticResource Alr.Colors.LightBlueA400.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlueA700.O80" Color="{StaticResource Alr.Colors.LightBlueA700.O80}" options:Freeze="True" />
+
+    <!-- Light Blue 60% Opacity -->
+    <Color x:Key="Alr.Colors.LightBlue50.O60">#99E1F5FE</Color>
+    <Color x:Key="Alr.Colors.LightBlue100.O60">#99B3E5FC</Color>
+    <Color x:Key="Alr.Colors.LightBlue200.O60">#9981D4FA</Color>
+    <Color x:Key="Alr.Colors.LightBlue300.O60">#994FC3F7</Color>
+    <Color x:Key="Alr.Colors.LightBlue400.O60">#9929B6F6</Color>
+    <Color x:Key="Alr.Colors.LightBlue500.O60">#9903A9F4</Color>
+    <Color x:Key="Alr.Colors.LightBlue600.O60">#99039BE5</Color>
+    <Color x:Key="Alr.Colors.LightBlue700.O60">#990288D1</Color>
+    <Color x:Key="Alr.Colors.LightBlue800.O60">#990277BD</Color>
+    <Color x:Key="Alr.Colors.LightBlue900.O60">#9901579B</Color>
+    <Color x:Key="Alr.Colors.LightBlueA100.O60">#9980D8FF</Color>
+    <Color x:Key="Alr.Colors.LightBlueA200.O60">#9940C4FF</Color>
+    <Color x:Key="Alr.Colors.LightBlueA400.O60">#9900B0FF</Color>
+    <Color x:Key="Alr.Colors.LightBlueA700.O60">#990091EA</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue50.O60" Color="{StaticResource Alr.Colors.LightBlue50.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue100.O60" Color="{StaticResource Alr.Colors.LightBlue100.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue200.O60" Color="{StaticResource Alr.Colors.LightBlue200.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue300.O60" Color="{StaticResource Alr.Colors.LightBlue300.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue400.O60" Color="{StaticResource Alr.Colors.LightBlue400.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue500.O60" Color="{StaticResource Alr.Colors.LightBlue500.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue600.O60" Color="{StaticResource Alr.Colors.LightBlue600.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue700.O60" Color="{StaticResource Alr.Colors.LightBlue700.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue800.O60" Color="{StaticResource Alr.Colors.LightBlue800.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue900.O60" Color="{StaticResource Alr.Colors.LightBlue900.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlueA100.O60" Color="{StaticResource Alr.Colors.LightBlueA100.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlueA200.O60" Color="{StaticResource Alr.Colors.LightBlueA200.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlueA400.O60" Color="{StaticResource Alr.Colors.LightBlueA400.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlueA700.O60" Color="{StaticResource Alr.Colors.LightBlueA700.O60}" options:Freeze="True" />
+
+    <!-- Light Blue 40% Opacity -->
+    <Color x:Key="Alr.Colors.LightBlue50.O40">#66E1F5FE</Color>
+    <Color x:Key="Alr.Colors.LightBlue100.O40">#66B3E5FC</Color>
+    <Color x:Key="Alr.Colors.LightBlue200.O40">#6681D4FA</Color>
+    <Color x:Key="Alr.Colors.LightBlue300.O40">#664FC3F7</Color>
+    <Color x:Key="Alr.Colors.LightBlue400.O40">#6629B6F6</Color>
+    <Color x:Key="Alr.Colors.LightBlue500.O40">#6603A9F4</Color>
+    <Color x:Key="Alr.Colors.LightBlue600.O40">#66039BE5</Color>
+    <Color x:Key="Alr.Colors.LightBlue700.O40">#660288D1</Color>
+    <Color x:Key="Alr.Colors.LightBlue800.O40">#660277BD</Color>
+    <Color x:Key="Alr.Colors.LightBlue900.O40">#6601579B</Color>
+    <Color x:Key="Alr.Colors.LightBlueA100.O40">#6680D8FF</Color>
+    <Color x:Key="Alr.Colors.LightBlueA200.O40">#6640C4FF</Color>
+    <Color x:Key="Alr.Colors.LightBlueA400.O40">#6600B0FF</Color>
+    <Color x:Key="Alr.Colors.LightBlueA700.O40">#660091EA</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue50.O40" Color="{StaticResource Alr.Colors.LightBlue50.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue100.O40" Color="{StaticResource Alr.Colors.LightBlue100.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue200.O40" Color="{StaticResource Alr.Colors.LightBlue200.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue300.O40" Color="{StaticResource Alr.Colors.LightBlue300.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue400.O40" Color="{StaticResource Alr.Colors.LightBlue400.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue500.O40" Color="{StaticResource Alr.Colors.LightBlue500.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue600.O40" Color="{StaticResource Alr.Colors.LightBlue600.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue700.O40" Color="{StaticResource Alr.Colors.LightBlue700.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue800.O40" Color="{StaticResource Alr.Colors.LightBlue800.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue900.O40" Color="{StaticResource Alr.Colors.LightBlue900.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlueA100.O40" Color="{StaticResource Alr.Colors.LightBlueA100.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlueA200.O40" Color="{StaticResource Alr.Colors.LightBlueA200.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlueA400.O40" Color="{StaticResource Alr.Colors.LightBlueA400.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlueA700.O40" Color="{StaticResource Alr.Colors.LightBlueA700.O40}" options:Freeze="True" />
+
+    <!-- Light Blue 20% Opacity -->
+    <Color x:Key="Alr.Colors.LightBlue50.O20">#33E1F5FE</Color>
+    <Color x:Key="Alr.Colors.LightBlue100.O20">#33B3E5FC</Color>
+    <Color x:Key="Alr.Colors.LightBlue200.O20">#3381D4FA</Color>
+    <Color x:Key="Alr.Colors.LightBlue300.O20">#334FC3F7</Color>
+    <Color x:Key="Alr.Colors.LightBlue400.O20">#3329B6F6</Color>
+    <Color x:Key="Alr.Colors.LightBlue500.O20">#3303A9F4</Color>
+    <Color x:Key="Alr.Colors.LightBlue600.O20">#33039BE5</Color>
+    <Color x:Key="Alr.Colors.LightBlue700.O20">#330288D1</Color>
+    <Color x:Key="Alr.Colors.LightBlue800.O20">#330277BD</Color>
+    <Color x:Key="Alr.Colors.LightBlue900.O20">#3301579B</Color>
+    <Color x:Key="Alr.Colors.LightBlueA100.O20">#3380D8FF</Color>
+    <Color x:Key="Alr.Colors.LightBlueA200.O20">#3340C4FF</Color>
+    <Color x:Key="Alr.Colors.LightBlueA400.O20">#3300B0FF</Color>
+    <Color x:Key="Alr.Colors.LightBlueA700.O20">#330091EA</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue50.O20" Color="{StaticResource Alr.Colors.LightBlue50.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue100.O20" Color="{StaticResource Alr.Colors.LightBlue100.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue200.O20" Color="{StaticResource Alr.Colors.LightBlue200.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue300.O20" Color="{StaticResource Alr.Colors.LightBlue300.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue400.O20" Color="{StaticResource Alr.Colors.LightBlue400.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue500.O20" Color="{StaticResource Alr.Colors.LightBlue500.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue600.O20" Color="{StaticResource Alr.Colors.LightBlue600.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue700.O20" Color="{StaticResource Alr.Colors.LightBlue700.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue800.O20" Color="{StaticResource Alr.Colors.LightBlue800.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlue900.O20" Color="{StaticResource Alr.Colors.LightBlue900.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlueA100.O20" Color="{StaticResource Alr.Colors.LightBlueA100.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlueA200.O20" Color="{StaticResource Alr.Colors.LightBlueA200.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlueA400.O20" Color="{StaticResource Alr.Colors.LightBlueA400.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.LightBlueA700.O20" Color="{StaticResource Alr.Colors.LightBlueA700.O20}" options:Freeze="True" />
+</ResourceDictionary>

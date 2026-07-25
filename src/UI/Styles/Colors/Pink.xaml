@@ -1,0 +1,156 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:options="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    mc:Ignorable="options">
+
+    <!-- Pink 100% Opacity -->
+    <Color x:Key="Alr.Colors.Pink50">#FFFCE4EC</Color>
+    <Color x:Key="Alr.Colors.Pink100">#FFF8BBD0</Color>
+    <Color x:Key="Alr.Colors.Pink200">#FFF48FB1</Color>
+    <Color x:Key="Alr.Colors.Pink300">#FFF06292</Color>
+    <Color x:Key="Alr.Colors.Pink400">#FFEC407A</Color>
+    <Color x:Key="Alr.Colors.Pink500">#FFE91E63</Color>
+    <Color x:Key="Alr.Colors.Pink600">#FFD81B60</Color>
+    <Color x:Key="Alr.Colors.Pink700">#FFC2185B</Color>
+    <Color x:Key="Alr.Colors.Pink800">#FFAD1457</Color>
+    <Color x:Key="Alr.Colors.Pink900">#FF880E4F</Color>
+    <Color x:Key="Alr.Colors.PinkA100">#FFFF80AB</Color>
+    <Color x:Key="Alr.Colors.PinkA200">#FFFF4081</Color>
+    <Color x:Key="Alr.Colors.PinkA400">#FFF50057</Color>
+    <Color x:Key="Alr.Colors.PinkA700">#FFC51162</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Pink50" Color="{StaticResource Alr.Colors.Pink50}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink100" Color="{StaticResource Alr.Colors.Pink100}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink200" Color="{StaticResource Alr.Colors.Pink200}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink300" Color="{StaticResource Alr.Colors.Pink300}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink400" Color="{StaticResource Alr.Colors.Pink400}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink500" Color="{StaticResource Alr.Colors.Pink500}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink600" Color="{StaticResource Alr.Colors.Pink600}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink700" Color="{StaticResource Alr.Colors.Pink700}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink800" Color="{StaticResource Alr.Colors.Pink800}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink900" Color="{StaticResource Alr.Colors.Pink900}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PinkA100" Color="{StaticResource Alr.Colors.PinkA100}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PinkA200" Color="{StaticResource Alr.Colors.PinkA200}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PinkA400" Color="{StaticResource Alr.Colors.PinkA400}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PinkA700" Color="{StaticResource Alr.Colors.PinkA700}" options:Freeze="True" />
+
+    <!-- Pink 80% Opacity -->
+    <Color x:Key="Alr.Colors.Pink50.O80">#CCFCE4EC</Color>
+    <Color x:Key="Alr.Colors.Pink100.O80">#CCF8BBD0</Color>
+    <Color x:Key="Alr.Colors.Pink200.O80">#CCF48FB1</Color>
+    <Color x:Key="Alr.Colors.Pink300.O80">#CCF06292</Color>
+    <Color x:Key="Alr.Colors.Pink400.O80">#CCEC407A</Color>
+    <Color x:Key="Alr.Colors.Pink500.O80">#CCE91E63</Color>
+    <Color x:Key="Alr.Colors.Pink600.O80">#CCD81B60</Color>
+    <Color x:Key="Alr.Colors.Pink700.O80">#CCC2185B</Color>
+    <Color x:Key="Alr.Colors.Pink800.O80">#CCAD1457</Color>
+    <Color x:Key="Alr.Colors.Pink900.O80">#CC880E4F</Color>
+    <Color x:Key="Alr.Colors.PinkA100.O80">#CCFF80AB</Color>
+    <Color x:Key="Alr.Colors.PinkA200.O80">#CCFF4081</Color>
+    <Color x:Key="Alr.Colors.PinkA400.O80">#CCF50057</Color>
+    <Color x:Key="Alr.Colors.PinkA700.O80">#CCC51162</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Pink50.O80" Color="{StaticResource Alr.Colors.Pink50.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink100.O80" Color="{StaticResource Alr.Colors.Pink100.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink200.O80" Color="{StaticResource Alr.Colors.Pink200.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink300.O80" Color="{StaticResource Alr.Colors.Pink300.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink400.O80" Color="{StaticResource Alr.Colors.Pink400.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink500.O80" Color="{StaticResource Alr.Colors.Pink500.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink600.O80" Color="{StaticResource Alr.Colors.Pink600.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink700.O80" Color="{StaticResource Alr.Colors.Pink700.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink800.O80" Color="{StaticResource Alr.Colors.Pink800.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink900.O80" Color="{StaticResource Alr.Colors.Pink900.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PinkA100.O80" Color="{StaticResource Alr.Colors.PinkA100.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PinkA200.O80" Color="{StaticResource Alr.Colors.PinkA200.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PinkA400.O80" Color="{StaticResource Alr.Colors.PinkA400.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PinkA700.O80" Color="{StaticResource Alr.Colors.PinkA700.O80}" options:Freeze="True" />
+
+    <!-- Pink 60% Opacity -->
+    <Color x:Key="Alr.Colors.Pink50.O60">#99FCE4EC</Color>
+    <Color x:Key="Alr.Colors.Pink100.O60">#99F8BBD0</Color>
+    <Color x:Key="Alr.Colors.Pink200.O60">#99F48FB1</Color>
+    <Color x:Key="Alr.Colors.Pink300.O60">#99F06292</Color>
+    <Color x:Key="Alr.Colors.Pink400.O60">#99EC407A</Color>
+    <Color x:Key="Alr.Colors.Pink500.O60">#99E91E63</Color>
+    <Color x:Key="Alr.Colors.Pink600.O60">#99D81B60</Color>
+    <Color x:Key="Alr.Colors.Pink700.O60">#99C2185B</Color>
+    <Color x:Key="Alr.Colors.Pink800.O60">#99AD1457</Color>
+    <Color x:Key="Alr.Colors.Pink900.O60">#99880E4F</Color>
+    <Color x:Key="Alr.Colors.PinkA100.O60">#99FF80AB</Color>
+    <Color x:Key="Alr.Colors.PinkA200.O60">#99FF4081</Color>
+    <Color x:Key="Alr.Colors.PinkA400.O60">#99F50057</Color>
+    <Color x:Key="Alr.Colors.PinkA700.O60">#99C51162</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Pink50.O60" Color="{StaticResource Alr.Colors.Pink50.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink100.O60" Color="{StaticResource Alr.Colors.Pink100.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink200.O60" Color="{StaticResource Alr.Colors.Pink200.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink300.O60" Color="{StaticResource Alr.Colors.Pink300.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink400.O60" Color="{StaticResource Alr.Colors.Pink400.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink500.O60" Color="{StaticResource Alr.Colors.Pink500.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink600.O60" Color="{StaticResource Alr.Colors.Pink600.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink700.O60" Color="{StaticResource Alr.Colors.Pink700.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink800.O60" Color="{StaticResource Alr.Colors.Pink800.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink900.O60" Color="{StaticResource Alr.Colors.Pink900.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PinkA100.O60" Color="{StaticResource Alr.Colors.PinkA100.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PinkA200.O60" Color="{StaticResource Alr.Colors.PinkA200.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PinkA400.O60" Color="{StaticResource Alr.Colors.PinkA400.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PinkA700.O60" Color="{StaticResource Alr.Colors.PinkA700.O60}" options:Freeze="True" />
+
+    <!-- Pink 40% Opacity -->
+    <Color x:Key="Alr.Colors.Pink50.O40">#66FCE4EC</Color>
+    <Color x:Key="Alr.Colors.Pink100.O40">#66F8BBD0</Color>
+    <Color x:Key="Alr.Colors.Pink200.O40">#66F48FB1</Color>
+    <Color x:Key="Alr.Colors.Pink300.O40">#66F06292</Color>
+    <Color x:Key="Alr.Colors.Pink400.O40">#66EC407A</Color>
+    <Color x:Key="Alr.Colors.Pink500.O40">#66E91E63</Color>
+    <Color x:Key="Alr.Colors.Pink600.O40">#66D81B60</Color>
+    <Color x:Key="Alr.Colors.Pink700.O40">#66C2185B</Color>
+    <Color x:Key="Alr.Colors.Pink800.O40">#66AD1457</Color>
+    <Color x:Key="Alr.Colors.Pink900.O40">#66880E4F</Color>
+    <Color x:Key="Alr.Colors.PinkA100.O40">#66FF80AB</Color>
+    <Color x:Key="Alr.Colors.PinkA200.O40">#66FF4081</Color>
+    <Color x:Key="Alr.Colors.PinkA400.O40">#66F50057</Color>
+    <Color x:Key="Alr.Colors.PinkA700.O40">#66C51162</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Pink50.O40" Color="{StaticResource Alr.Colors.Pink50.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink100.O40" Color="{StaticResource Alr.Colors.Pink100.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink200.O40" Color="{StaticResource Alr.Colors.Pink200.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink300.O40" Color="{StaticResource Alr.Colors.Pink300.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink400.O40" Color="{StaticResource Alr.Colors.Pink400.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink500.O40" Color="{StaticResource Alr.Colors.Pink500.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink600.O40" Color="{StaticResource Alr.Colors.Pink600.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink700.O40" Color="{StaticResource Alr.Colors.Pink700.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink800.O40" Color="{StaticResource Alr.Colors.Pink800.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink900.O40" Color="{StaticResource Alr.Colors.Pink900.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PinkA100.O40" Color="{StaticResource Alr.Colors.PinkA100.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PinkA200.O40" Color="{StaticResource Alr.Colors.PinkA200.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PinkA400.O40" Color="{StaticResource Alr.Colors.PinkA400.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PinkA700.O40" Color="{StaticResource Alr.Colors.PinkA700.O40}" options:Freeze="True" />
+
+    <!-- Pink 20% Opacity -->
+    <Color x:Key="Alr.Colors.Pink50.O20">#33FCE4EC</Color>
+    <Color x:Key="Alr.Colors.Pink100.O20">#33F8BBD0</Color>
+    <Color x:Key="Alr.Colors.Pink200.O20">#33F48FB1</Color>
+    <Color x:Key="Alr.Colors.Pink300.O20">#33F06292</Color>
+    <Color x:Key="Alr.Colors.Pink400.O20">#33EC407A</Color>
+    <Color x:Key="Alr.Colors.Pink500.O20">#33E91E63</Color>
+    <Color x:Key="Alr.Colors.Pink600.O20">#33D81B60</Color>
+    <Color x:Key="Alr.Colors.Pink700.O20">#33C2185B</Color>
+    <Color x:Key="Alr.Colors.Pink800.O20">#33AD1457</Color>
+    <Color x:Key="Alr.Colors.Pink900.O20">#33880E4F</Color>
+    <Color x:Key="Alr.Colors.PinkA100.O20">#33FF80AB</Color>
+    <Color x:Key="Alr.Colors.PinkA200.O20">#33FF4081</Color>
+    <Color x:Key="Alr.Colors.PinkA400.O20">#33F50057</Color>
+    <Color x:Key="Alr.Colors.PinkA700.O20">#33C51162</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Pink50.O20" Color="{StaticResource Alr.Colors.Pink50.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink100.O20" Color="{StaticResource Alr.Colors.Pink100.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink200.O20" Color="{StaticResource Alr.Colors.Pink200.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink300.O20" Color="{StaticResource Alr.Colors.Pink300.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink400.O20" Color="{StaticResource Alr.Colors.Pink400.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink500.O20" Color="{StaticResource Alr.Colors.Pink500.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink600.O20" Color="{StaticResource Alr.Colors.Pink600.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink700.O20" Color="{StaticResource Alr.Colors.Pink700.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink800.O20" Color="{StaticResource Alr.Colors.Pink800.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Pink900.O20" Color="{StaticResource Alr.Colors.Pink900.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PinkA100.O20" Color="{StaticResource Alr.Colors.PinkA100.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PinkA200.O20" Color="{StaticResource Alr.Colors.PinkA200.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PinkA400.O20" Color="{StaticResource Alr.Colors.PinkA400.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.PinkA700.O20" Color="{StaticResource Alr.Colors.PinkA700.O20}" options:Freeze="True" />
+</ResourceDictionary>

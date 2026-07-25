@@ -1,0 +1,156 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:options="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    mc:Ignorable="options">
+
+    <!-- Cyan 100% Opacity -->
+    <Color x:Key="Alr.Colors.Cyan50">#FFE0F7FA</Color>
+    <Color x:Key="Alr.Colors.Cyan100">#FFB2EBF2</Color>
+    <Color x:Key="Alr.Colors.Cyan200">#FF80DEEA</Color>
+    <Color x:Key="Alr.Colors.Cyan300">#FF4DD0E1</Color>
+    <Color x:Key="Alr.Colors.Cyan400">#FF26C6DA</Color>
+    <Color x:Key="Alr.Colors.Cyan500">#FF00BCD4</Color>
+    <Color x:Key="Alr.Colors.Cyan600">#FF00ACC1</Color>
+    <Color x:Key="Alr.Colors.Cyan700">#FF0097A7</Color>
+    <Color x:Key="Alr.Colors.Cyan800">#FF00838F</Color>
+    <Color x:Key="Alr.Colors.Cyan900">#FF006064</Color>
+    <Color x:Key="Alr.Colors.CyanA100">#FF84FFFF</Color>
+    <Color x:Key="Alr.Colors.CyanA200">#FF18FFFF</Color>
+    <Color x:Key="Alr.Colors.CyanA400">#FF00E5FF</Color>
+    <Color x:Key="Alr.Colors.CyanA700">#FF00B8D4</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan50" Color="{StaticResource Alr.Colors.Cyan50}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan100" Color="{StaticResource Alr.Colors.Cyan100}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan200" Color="{StaticResource Alr.Colors.Cyan200}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan300" Color="{StaticResource Alr.Colors.Cyan300}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan400" Color="{StaticResource Alr.Colors.Cyan400}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan500" Color="{StaticResource Alr.Colors.Cyan500}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan600" Color="{StaticResource Alr.Colors.Cyan600}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan700" Color="{StaticResource Alr.Colors.Cyan700}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan800" Color="{StaticResource Alr.Colors.Cyan800}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan900" Color="{StaticResource Alr.Colors.Cyan900}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.CyanA100" Color="{StaticResource Alr.Colors.CyanA100}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.CyanA200" Color="{StaticResource Alr.Colors.CyanA200}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.CyanA400" Color="{StaticResource Alr.Colors.CyanA400}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.CyanA700" Color="{StaticResource Alr.Colors.CyanA700}" options:Freeze="True" />
+
+    <!-- Cyan 80% Opacity -->
+    <Color x:Key="Alr.Colors.Cyan50.O80">#CCE0F7FA</Color>
+    <Color x:Key="Alr.Colors.Cyan100.O80">#CCB2EBF2</Color>
+    <Color x:Key="Alr.Colors.Cyan200.O80">#CC80DEEA</Color>
+    <Color x:Key="Alr.Colors.Cyan300.O80">#CC4DD0E1</Color>
+    <Color x:Key="Alr.Colors.Cyan400.O80">#CC26C6DA</Color>
+    <Color x:Key="Alr.Colors.Cyan500.O80">#CC00BCD4</Color>
+    <Color x:Key="Alr.Colors.Cyan600.O80">#CC00ACC1</Color>
+    <Color x:Key="Alr.Colors.Cyan700.O80">#CC0097A7</Color>
+    <Color x:Key="Alr.Colors.Cyan800.O80">#CC00838F</Color>
+    <Color x:Key="Alr.Colors.Cyan900.O80">#CC006064</Color>
+    <Color x:Key="Alr.Colors.CyanA100.O80">#CC84FFFF</Color>
+    <Color x:Key="Alr.Colors.CyanA200.O80">#CC18FFFF</Color>
+    <Color x:Key="Alr.Colors.CyanA400.O80">#CC00E5FF</Color>
+    <Color x:Key="Alr.Colors.CyanA700.O80">#CC00B8D4</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan50.O80" Color="{StaticResource Alr.Colors.Cyan50.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan100.O80" Color="{StaticResource Alr.Colors.Cyan100.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan200.O80" Color="{StaticResource Alr.Colors.Cyan200.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan300.O80" Color="{StaticResource Alr.Colors.Cyan300.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan400.O80" Color="{StaticResource Alr.Colors.Cyan400.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan500.O80" Color="{StaticResource Alr.Colors.Cyan500.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan600.O80" Color="{StaticResource Alr.Colors.Cyan600.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan700.O80" Color="{StaticResource Alr.Colors.Cyan700.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan800.O80" Color="{StaticResource Alr.Colors.Cyan800.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan900.O80" Color="{StaticResource Alr.Colors.Cyan900.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.CyanA100.O80" Color="{StaticResource Alr.Colors.CyanA100.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.CyanA200.O80" Color="{StaticResource Alr.Colors.CyanA200.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.CyanA400.O80" Color="{StaticResource Alr.Colors.CyanA400.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.CyanA700.O80" Color="{StaticResource Alr.Colors.CyanA700.O80}" options:Freeze="True" />
+
+    <!-- Cyan 60% Opacity -->
+    <Color x:Key="Alr.Colors.Cyan50.O60">#99E0F7FA</Color>
+    <Color x:Key="Alr.Colors.Cyan100.O60">#99B2EBF2</Color>
+    <Color x:Key="Alr.Colors.Cyan200.O60">#9980DEEA</Color>
+    <Color x:Key="Alr.Colors.Cyan300.O60">#994DD0E1</Color>
+    <Color x:Key="Alr.Colors.Cyan400.O60">#9926C6DA</Color>
+    <Color x:Key="Alr.Colors.Cyan500.O60">#9900BCD4</Color>
+    <Color x:Key="Alr.Colors.Cyan600.O60">#9900ACC1</Color>
+    <Color x:Key="Alr.Colors.Cyan700.O60">#990097A7</Color>
+    <Color x:Key="Alr.Colors.Cyan800.O60">#9900838F</Color>
+    <Color x:Key="Alr.Colors.Cyan900.O60">#99006064</Color>
+    <Color x:Key="Alr.Colors.CyanA100.O60">#9984FFFF</Color>
+    <Color x:Key="Alr.Colors.CyanA200.O60">#9918FFFF</Color>
+    <Color x:Key="Alr.Colors.CyanA400.O60">#9900E5FF</Color>
+    <Color x:Key="Alr.Colors.CyanA700.O60">#9900B8D4</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan50.O60" Color="{StaticResource Alr.Colors.Cyan50.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan100.O60" Color="{StaticResource Alr.Colors.Cyan100.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan200.O60" Color="{StaticResource Alr.Colors.Cyan200.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan300.O60" Color="{StaticResource Alr.Colors.Cyan300.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan400.O60" Color="{StaticResource Alr.Colors.Cyan400.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan500.O60" Color="{StaticResource Alr.Colors.Cyan500.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan600.O60" Color="{StaticResource Alr.Colors.Cyan600.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan700.O60" Color="{StaticResource Alr.Colors.Cyan700.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan800.O60" Color="{StaticResource Alr.Colors.Cyan800.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan900.O60" Color="{StaticResource Alr.Colors.Cyan900.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.CyanA100.O60" Color="{StaticResource Alr.Colors.CyanA100.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.CyanA200.O60" Color="{StaticResource Alr.Colors.CyanA200.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.CyanA400.O60" Color="{StaticResource Alr.Colors.CyanA400.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.CyanA700.O60" Color="{StaticResource Alr.Colors.CyanA700.O60}" options:Freeze="True" />
+
+    <!-- Cyan 40% Opacity -->
+    <Color x:Key="Alr.Colors.Cyan50.O40">#66E0F7FA</Color>
+    <Color x:Key="Alr.Colors.Cyan100.O40">#66B2EBF2</Color>
+    <Color x:Key="Alr.Colors.Cyan200.O40">#6680DEEA</Color>
+    <Color x:Key="Alr.Colors.Cyan300.O40">#664DD0E1</Color>
+    <Color x:Key="Alr.Colors.Cyan400.O40">#6626C6DA</Color>
+    <Color x:Key="Alr.Colors.Cyan500.O40">#6600BCD4</Color>
+    <Color x:Key="Alr.Colors.Cyan600.O40">#6600ACC1</Color>
+    <Color x:Key="Alr.Colors.Cyan700.O40">#660097A7</Color>
+    <Color x:Key="Alr.Colors.Cyan800.O40">#6600838F</Color>
+    <Color x:Key="Alr.Colors.Cyan900.O40">#66006064</Color>
+    <Color x:Key="Alr.Colors.CyanA100.O40">#6684FFFF</Color>
+    <Color x:Key="Alr.Colors.CyanA200.O40">#6618FFFF</Color>
+    <Color x:Key="Alr.Colors.CyanA400.O40">#6600E5FF</Color>
+    <Color x:Key="Alr.Colors.CyanA700.O40">#6600B8D4</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan50.O40" Color="{StaticResource Alr.Colors.Cyan50.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan100.O40" Color="{StaticResource Alr.Colors.Cyan100.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan200.O40" Color="{StaticResource Alr.Colors.Cyan200.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan300.O40" Color="{StaticResource Alr.Colors.Cyan300.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan400.O40" Color="{StaticResource Alr.Colors.Cyan400.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan500.O40" Color="{StaticResource Alr.Colors.Cyan500.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan600.O40" Color="{StaticResource Alr.Colors.Cyan600.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan700.O40" Color="{StaticResource Alr.Colors.Cyan700.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan800.O40" Color="{StaticResource Alr.Colors.Cyan800.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan900.O40" Color="{StaticResource Alr.Colors.Cyan900.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.CyanA100.O40" Color="{StaticResource Alr.Colors.CyanA100.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.CyanA200.O40" Color="{StaticResource Alr.Colors.CyanA200.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.CyanA400.O40" Color="{StaticResource Alr.Colors.CyanA400.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.CyanA700.O40" Color="{StaticResource Alr.Colors.CyanA700.O40}" options:Freeze="True" />
+
+    <!-- Cyan 20% Opacity -->
+    <Color x:Key="Alr.Colors.Cyan50.O20">#33E0F7FA</Color>
+    <Color x:Key="Alr.Colors.Cyan100.O20">#33B2EBF2</Color>
+    <Color x:Key="Alr.Colors.Cyan200.O20">#3380DEEA</Color>
+    <Color x:Key="Alr.Colors.Cyan300.O20">#334DD0E1</Color>
+    <Color x:Key="Alr.Colors.Cyan400.O20">#3326C6DA</Color>
+    <Color x:Key="Alr.Colors.Cyan500.O20">#3300BCD4</Color>
+    <Color x:Key="Alr.Colors.Cyan600.O20">#3300ACC1</Color>
+    <Color x:Key="Alr.Colors.Cyan700.O20">#330097A7</Color>
+    <Color x:Key="Alr.Colors.Cyan800.O20">#3300838F</Color>
+    <Color x:Key="Alr.Colors.Cyan900.O20">#33006064</Color>
+    <Color x:Key="Alr.Colors.CyanA100.O20">#3384FFFF</Color>
+    <Color x:Key="Alr.Colors.CyanA200.O20">#3318FFFF</Color>
+    <Color x:Key="Alr.Colors.CyanA400.O20">#3300E5FF</Color>
+    <Color x:Key="Alr.Colors.CyanA700.O20">#3300B8D4</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan50.O20" Color="{StaticResource Alr.Colors.Cyan50.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan100.O20" Color="{StaticResource Alr.Colors.Cyan100.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan200.O20" Color="{StaticResource Alr.Colors.Cyan200.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan300.O20" Color="{StaticResource Alr.Colors.Cyan300.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan400.O20" Color="{StaticResource Alr.Colors.Cyan400.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan500.O20" Color="{StaticResource Alr.Colors.Cyan500.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan600.O20" Color="{StaticResource Alr.Colors.Cyan600.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan700.O20" Color="{StaticResource Alr.Colors.Cyan700.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan800.O20" Color="{StaticResource Alr.Colors.Cyan800.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Cyan900.O20" Color="{StaticResource Alr.Colors.Cyan900.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.CyanA100.O20" Color="{StaticResource Alr.Colors.CyanA100.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.CyanA200.O20" Color="{StaticResource Alr.Colors.CyanA200.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.CyanA400.O20" Color="{StaticResource Alr.Colors.CyanA400.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.CyanA700.O20" Color="{StaticResource Alr.Colors.CyanA700.O20}" options:Freeze="True" />
+</ResourceDictionary>

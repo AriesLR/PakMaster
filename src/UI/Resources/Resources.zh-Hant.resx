@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppSettings_Title" xml:space="preserve">
+    <value>应用设置</value>
+  </data>
+  <data name="AppSettings_Section_Appearance" xml:space="preserve">
+    <value>外观</value>
+  </data>
+  <data name="AppSettings_Lbl_Language" xml:space="preserve">
+    <value>语言</value>
+  </data>
+  <data name="AppSettings_Desc_Language" xml:space="preserve">
+    <value>请选择应用程序中使用的语言。</value>
+  </data>
+  <data name="AppSettings_Lbl_AccentColor" xml:space="preserve">
+    <value>点缀色</value>
+  </data>
+  <data name="AppSettings_Desc_AccentColor" xml:space="preserve">
+    <value>选择在整个应用程序中使用的点缀色。</value>
+  </data>
+  <data name="AppSettings_Lbl_InterfaceScale" xml:space="preserve">
+    <value>接口比例</value>
+  </data>
+  <data name="AppSettings_Desc_InterfaceScale" xml:space="preserve">
+    <value>调整用户界面的显示尺寸。适用于高分辨率显示器或提高可读性。</value>
+  </data>
+  <data name="AppSettings_Section_ApplicationBehavior" xml:space="preserve">
+    <value>应用程序行为</value>
+  </data>
+  <data name="AppSettings_Lbl_StartWithWindows" xml:space="preserve">
+    <value>从 Windows 开始</value>
+  </data>
+  <data name="AppSettings_Desc_StartWithWindows" xml:space="preserve">
+    <value>Windows 启动时自动启动该应用程序。</value>
+  </data>
+  <data name="AppSettings_Lbl_AlwaysOnTop" xml:space="preserve">
+    <value>始终处于领先地位</value>
+  </data>
+  <data name="AppSettings_Desc_AlwaysOnTop" xml:space="preserve">
+    <value>将应用程序窗口固定在所有其他打开的窗口之上。</value>
+  </data>
+  <data name="AppSettings_Lbl_MinimizeToTray" xml:space="preserve">
+    <value>缩小到任务栏</value>
+  </data>
+  <data name="AppSettings_Desc_MinimizeToTray" xml:space="preserve">
+    <value>最小化后，该应用程序将隐藏在系统托盘中，而不是留在任务栏上。</value>
+  </data>
+  <data name="AppSettings_Section_Updates" xml:space="preserve">
+    <value>更新</value>
+  </data>
+  <data name="AppSettings_Lbl_CheckForUpdatesOnStartup" xml:space="preserve">
+    <value>启动时检查更新</value>
+  </data>
+  <data name="AppSettings_Desc_CheckForUpdatesOnStartup" xml:space="preserve">
+    <value>在启动时检查更新，以确保应用程序保持最新状态。</value>
+  </data>
+  <data name="AppSettings_Lbl_CheckForUpdates" xml:space="preserve">
+    <value>检查是否有更新</value>
+  </data>
+  <data name="AppSettings_Desc_CheckForUpdates" xml:space="preserve">
+    <value>请立即手动检查是否有最新版本。</value>
+  </data>
+  <data name="AppSettings_Btn_CheckForUpdates" xml:space="preserve">
+    <value>检查更新</value>
+  </data>
+  <data name="AppSettings_Section_Logging" xml:space="preserve">
+    <value>日志记录</value>
+  </data>
+  <data name="AppSettings_Lbl_EnableDebugLogging" xml:space="preserve">
+    <value>启用调试日志记录</value>
+  </data>
+  <data name="AppSettings_Desc_EnableDebugLogging" xml:space="preserve">
+    <value>生成日志文件，以帮助排查应用程序问题。</value>
+  </data>
+  <data name="AppSettings_Btn_OpenLogsFolder" xml:space="preserve">
+    <value>打开日志文件夹</value>
+  </data>
+  <data name="AppSettings_Section_Maintenance" xml:space="preserve">
+    <value>维护</value>
+  </data>
+  <data name="AppSettings_Lbl_ResetToFactorySettings" xml:space="preserve">
+    <value>恢复出厂设置</value>
+  </data>
+  <data name="AppSettings_Desc_ResetToFactorySettings" xml:space="preserve">
+    <value>删除该应用程序的当前设置，并将其恢复为出厂默认设置。</value>
+  </data>
+  <data name="AppSettings_Btn_ResetSettings" xml:space="preserve">
+    <value>重置设置</value>
+  </data>
+  <data name="AppSettings_Lbl_ResetWindowPosition" xml:space="preserve">
+    <value>重置窗口位置</value>
+  </data>
+  <data name="AppSettings_Desc_ResetWindowPosition" xml:space="preserve">
+    <value>将主窗口恢复为默认尺寸，并将其对齐到主显示器的中心位置。</value>
+  </data>
+  <data name="AppSettings_Btn_ResetPosition" xml:space="preserve">
+    <value>重置位置</value>
+  </data>
+  <data name="AppSettings_Btn_OpenAppConfigFolder" xml:space="preserve">
+    <value>打开应用配置文件夹</value>
+  </data>
+  <data name="AppSettings_Footer_YourChangesAreSavedAutomatically" xml:space="preserve">
+    <value>您的更改会自动保存。</value>
+  </data>
+  <data name="About_Title" xml:space="preserve">
+    <value>关于</value>
+  </data>
+  <data name="About_Section_SupportTheDeveloper" xml:space="preserve">
+    <value>支持开发者</value>
+  </data>
+  <data name="About_Section_SupportTheDeveloper_Desc" xml:space="preserve">
+    <value>如果这款应用对您有所帮助，或者您今天心情好想慷慨解囊，任何小费我都非常感激。我并没有公司付钱让我开发这些工具；这一切都是我在业余时间完成的。正因如此，我所获得的支持完全来自使用我应用的各位好心人。</value>
+  </data>
+  <data name="About_Section_ApplicationInformation" xml:space="preserve">
+    <value>申请信息</value>
+  </data>
+  <data name="About_Lbl_Name" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="About_Lbl_Version" xml:space="preserve">
+    <value>版本</value>
+  </data>
+  <data name="About_Lbl_Developer" xml:space="preserve">
+    <value>开发者</value>
+  </data>
+  <data name="About_Lbl_License" xml:space="preserve">
+    <value>许可协议</value>
+  </data>
+  <data name="About_Lbl_TargetFramework" xml:space="preserve">
+    <value>目标框架</value>
+  </data>
+  <data name="About_Lbl_OsArchitecture" xml:space="preserve">
+    <value>操作系统架构</value>
+  </data>
+  <data name="Num_AppSettings_Flyout_Width" xml:space="preserve">
+    <value>450</value>
+  </data>
+  <data name="Num_AppSettings_Btn_CheckForUpdates_Width" xml:space="preserve">
+    <value>180</value>
+  </data>
+  <data name="Num_AppSettings_Btn_ResetToFactorySettings_Width" xml:space="preserve">
+    <value>180</value>
+  </data>
+  <data name="Toast_Title_ConfigurationSaved" xml:space="preserve">
+    <value>配置已保存</value>
+  </data>
+  <data name="Toast_Desc_ConfigurationSaved" xml:space="preserve">
+    <value>更改已成功应用。</value>
+  </data>
+  <data name="MainWindow_Btn_OpenTheGitHubRepo" xml:space="preserve">
+    <value>在浏览器中打开该 GitHub 仓库。</value>
+  </data>
+  <data name="App_ReportProgress_InitLogging" xml:space="preserve">
+    <value>正在初始化诊断功能…</value>
+  </data>
+  <data name="App_ReportProgress_InitAppSettings" xml:space="preserve">
+    <value>正在初始化应用程序设置...</value>
+  </data>
+  <data name="App_ReportProgress_InitDepedencyService" xml:space="preserve">
+    <value>正在初始化依赖服务...</value>
+  </data>
+  <data name="App_ReportProgress_InitTelemetryService" xml:space="preserve">
+    <value>正在初始化遥测服务…</value>
+  </data>
+  <data name="App_ReportProgress_Final" xml:space="preserve">
+    <value>正在做最后的收尾工作…</value>
+  </data>
+  <data name="CrashReportWindow_Title" xml:space="preserve">
+    <value>{0} | 崩溃报告工具</value>
+  </data>
+  <data name="CrashReportWindow_Header_SomethingWentWrong" xml:space="preserve">
+    <value>出现了一些问题</value>
+  </data>
+  <data name="CrashReportWindow_Desc" xml:space="preserve">
+    <value>由于发生了一个意外错误，应用程序崩溃了。</value>
+  </data>
+  <data name="CrashReportWindow_Lbl_Exception" xml:space="preserve">
+    <value>异常：</value>
+  </data>
+  <data name="CrashReportWindow_Lbl_ExceptionPlaceholder" xml:space="preserve">
+    <value>[异常消息]</value>
+  </data>
+  <data name="CrashReportWindow_Lbl_LogFileLocation" xml:space="preserve">
+    <value>日志文件位置：</value>
+  </data>
+  <data name="CrashReportWindow_Lbl_Details" xml:space="preserve">
+    <value>详情</value>
+  </data>
+  <data name="CrashReportWindow_Lbl_DetailsPlaceholder" xml:space="preserve">
+    <value>[详细信息占位符]</value>
+  </data>
+  <data name="CrashReportWindow_Btn_Close" xml:space="preserve">
+    <value>关闭</value>
+  </data>
+  <data name="CrashReportWindow_Btn_SendCrashReport" xml:space="preserve">
+    <value>发送崩溃报告</value>
+  </data>
+  <data name="TrayIcon_Header_ShowApplication" xml:space="preserve">
+    <value>显示应用程序</value>
+  </data>
+  <data name="TrayIcon_Header_Exit" xml:space="preserve">
+    <value>退出</value>
+  </data>
+  <data name="Num_About_Flyout_Width" xml:space="preserve">
+    <value>450</value>
+  </data>
+  <data name="Btn_Yes" xml:space="preserve">
+    <value>是</value>
+  </data>
+  <data name="Btn_No" xml:space="preserve">
+    <value>不</value>
+  </data>
+  <data name="Btn_Cancel" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="Btn_Ok" xml:space="preserve">
+    <value>好的</value>
+  </data>
+  <data name="Btn_Browse" xml:space="preserve">
+    <value>浏览</value>
+  </data>
+  <data name="App_Msg_StartupError_Desc" xml:space="preserve">
+    <value>启动过程中发生了一个严重的配置错误。</value>
+  </data>
+  <data name="App_Msg_StartupError_Title" xml:space="preserve">
+    <value>初始化错误</value>
+  </data>
+  <data name="App_Msg_CrashReporterError_Desc" xml:space="preserve">
+    <value>发生了一个严重错误，无法启动崩溃报告程序。
+
+原始错误：{0}
+
+启动错误：{1}</value>
+  </data>
+  <data name="App_Msg_CrashReporterError_Title" xml:space="preserve">
+    <value>应用程序致命崩溃</value>
+  </data>
+  <data name="App_Msg_AlreadyRunning_Desc" xml:space="preserve">
+    <value>该应用程序的一个实例正在运行。</value>
+  </data>
+  <data name="App_Msg_AlreadyRunning_Title" xml:space="preserve">
+    <value>应用程序已正在运行</value>
+  </data>
+  <data name="Msg_Error_Title" xml:space="preserve">
+    <value>错误</value>
+  </data>
+  <data name="CrashReportWindow_Msg_SubmitError_Desc" xml:space="preserve">
+    <value>无法自动启动报告管道。
+
+请手动创建一个问题，并附上您的日志文件。
+
+日志路径：{0}
+
+错误详情：{1}</value>
+  </data>
+  <data name="UpdateService_Msg_FailedToRetrieve_Desc" xml:space="preserve">
+    <value>无法获取有效的更新信息。</value>
+  </data>
+  <data name="UpdateService_Msg_CheckForUpdates_Title" xml:space="preserve">
+    <value>检查更新</value>
+  </data>
+  <data name="UpdateService_Msg_NewVersion_Desc" xml:space="preserve">
+    <value>已有新版本可用。
+
+最新版本：{0}
+您的版本：{1}
+
+您要下载新版本吗？</value>
+  </data>
+  <data name="UpdateService_Msg_EasterEgg_Desc" xml:space="preserve">
+    <value>哈利，你真是个巫师！
+
+最新版本：{0}
+您的版本：{1}
+
+请告知作者，他们忘记更新版本号了。</value>
+  </data>
+  <data name="UpdateService_Msg_UpToDate_Desc" xml:space="preserve">
+    <value>您已使用最新版本。
+
+最新版本：{0}
+您的版本：{1}</value>
+  </data>
+  <data name="UpdateService_Msg_FailedToCheck_Desc" xml:space="preserve">
+    <value>检查更新失败：{0}</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_ResetToFactorySettings_Title" xml:space="preserve">
+    <value>恢复出厂设置</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_ResetToFactorySettings_Desc" xml:space="preserve">
+    <value>您是否确定要将所有应用程序设置重置为出厂默认值？此操作无法撤销。</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_ResetToFactorySettingsComplete_Title" xml:space="preserve">
+    <value>重置完成</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_ResetToFactorySettingsComplete_Desc" xml:space="preserve">
+    <value>所有应用程序设置已成功恢复为出厂默认设置。</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_ResetToFactorySettingsError_Desc" xml:space="preserve">
+    <value>在尝试清除您的配置文件时，发生了一个意外错误。</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_StartWithWindowsToggleError_Desc" xml:space="preserve">
+    <value>无法更新注册表启动键：{0}</value>
+  </data>
+  <data name="DependencyService_Msg_DepsFound_Title" xml:space="preserve">
+    <value>已找到依赖项</value>
+  </data>
+  <data name="DependencyService_Msg_DepsFound_Desc" xml:space="preserve">
+    <value>该应用程序需要其他组件才能正常运行。您现在要下载并安装这些组件吗？</value>
+  </data>
+  <data name="DependencyService_Msg_InstallationBlocked_Title" xml:space="preserve">
+    <value>安装受阻</value>
+  </data>
+  <data name="DependencyService_Msg_InstallationBlocked_Desc" xml:space="preserve">
+    <value>您的计算机上目前正在运行另一个安装程序。请完成或关闭其他安装程序，然后重新启动 {0}。</value>
+  </data>
+  <data name="DependencyService_Msg_IncompatibleDependency_Title" xml:space="preserve">
+    <value>不兼容的依赖关系</value>
+  </data>
+  <data name="DependencyService_Msg_IncompatibleDependency_Desc" xml:space="preserve">
+    <value>所需依赖项“{0}”在此机器的操作系统平台或架构上完全不被支持。</value>
+  </data>
+  <data name="DependencyService_Msg_RestartRequired_Title" xml:space="preserve">
+    <value>需要重启</value>
+  </data>
+  <data name="DependencyService_Msg_RestartRequired_Desc" xml:space="preserve">
+    <value>一个或多个安装项目需要重新启动系统才能正常运行。您现在要重启计算机吗？</value>
+  </data>
+  <data name="FolderService_Msg_DoesNotExist_Desc" xml:space="preserve">
+    <value>目标目录不存在。
+
+路径：{0}</value>
+  </data>
+  <data name="FolderService_Msg_FailedToOpen_Desc" xml:space="preserve">
+    <value>无法打开文件夹：{0}</value>
+  </data>
+  <data name="UrlService_Msg_FailedToOpenURL_Desc" xml:space="preserve">
+    <value>无法打开 URL：{0}</value>
+  </data>
+  <data name="App_ReportProgress_InitThemeService" xml:space="preserve">
+    <value>正在初始化主题生成器...</value>
+  </data>
+  <data name="App_ReportProgress_InitLanguageService" xml:space="preserve">
+    <value>正在初始化语言管理器...</value>
+  </data>
+</root>

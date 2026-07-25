@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppSettings_Title" xml:space="preserve">
+    <value>Configuración</value>
+  </data>
+  <data name="AppSettings_Section_Appearance" xml:space="preserve">
+    <value>Aspecto</value>
+  </data>
+  <data name="AppSettings_Lbl_Language" xml:space="preserve">
+    <value>Idioma</value>
+  </data>
+  <data name="AppSettings_Desc_Language" xml:space="preserve">
+    <value>Elige el idioma que se utilizará en toda la aplicación.</value>
+  </data>
+  <data name="AppSettings_Lbl_AccentColor" xml:space="preserve">
+    <value>Color de contraste</value>
+  </data>
+  <data name="AppSettings_Desc_AccentColor" xml:space="preserve">
+    <value>Elige el color de contraste que se utilizará en toda la aplicación.</value>
+  </data>
+  <data name="AppSettings_Lbl_InterfaceScale" xml:space="preserve">
+    <value>Escala de interfaz</value>
+  </data>
+  <data name="AppSettings_Desc_InterfaceScale" xml:space="preserve">
+    <value>Ajusta el tamaño visual de la interfaz de usuario. Resulta útil para pantallas de alta resolución o para mejorar la legibilidad.</value>
+  </data>
+  <data name="AppSettings_Section_ApplicationBehavior" xml:space="preserve">
+    <value>Comportamiento de la aplicación</value>
+  </data>
+  <data name="AppSettings_Lbl_StartWithWindows" xml:space="preserve">
+    <value>Empieza con Windows</value>
+  </data>
+  <data name="AppSettings_Desc_StartWithWindows" xml:space="preserve">
+    <value>Iniciar automáticamente la aplicación al arrancar Windows.</value>
+  </data>
+  <data name="AppSettings_Lbl_AlwaysOnTop" xml:space="preserve">
+    <value>Siempre a la cabeza</value>
+  </data>
+  <data name="AppSettings_Desc_AlwaysOnTop" xml:space="preserve">
+    <value>Mantén la ventana de la aplicación fijada por encima de todas las demás ventanas abiertas.</value>
+  </data>
+  <data name="AppSettings_Lbl_MinimizeToTray" xml:space="preserve">
+    <value>Minimizar a la bandeja</value>
+  </data>
+  <data name="AppSettings_Desc_MinimizeToTray" xml:space="preserve">
+    <value>Cuando se minimice, la aplicación se ocultará en la bandeja del sistema en lugar de permanecer en la barra de tareas.</value>
+  </data>
+  <data name="AppSettings_Section_Updates" xml:space="preserve">
+    <value>Actualizaciones</value>
+  </data>
+  <data name="AppSettings_Lbl_CheckForUpdatesOnStartup" xml:space="preserve">
+    <value>Comprobar si hay actualizaciones al iniciar el sistema</value>
+  </data>
+  <data name="AppSettings_Desc_CheckForUpdatesOnStartup" xml:space="preserve">
+    <value>Mantén la aplicación actualizada comprobando si hay actualizaciones al iniciarla.</value>
+  </data>
+  <data name="AppSettings_Lbl_CheckForUpdates" xml:space="preserve">
+    <value>Comprueba si hay actualizaciones</value>
+  </data>
+  <data name="AppSettings_Desc_CheckForUpdates" xml:space="preserve">
+    <value>Comprueba manualmente si hay una versión más reciente de inmediato.</value>
+  </data>
+  <data name="AppSettings_Btn_CheckForUpdates" xml:space="preserve">
+    <value>Comprobar si hay actualizaciones</value>
+  </data>
+  <data name="AppSettings_Section_Logging" xml:space="preserve">
+    <value>Tala de árboles</value>
+  </data>
+  <data name="AppSettings_Lbl_EnableDebugLogging" xml:space="preserve">
+    <value>Activar el registro de depuración</value>
+  </data>
+  <data name="AppSettings_Desc_EnableDebugLogging" xml:space="preserve">
+    <value>Genera un archivo de registro para facilitar la localización de problemas en la aplicación.</value>
+  </data>
+  <data name="AppSettings_Btn_OpenLogsFolder" xml:space="preserve">
+    <value>Abrir la carpeta «Logs»</value>
+  </data>
+  <data name="AppSettings_Section_Maintenance" xml:space="preserve">
+    <value>Mantenimiento</value>
+  </data>
+  <data name="AppSettings_Lbl_ResetToFactorySettings" xml:space="preserve">
+    <value>Restablecer la configuración de fábrica</value>
+  </data>
+  <data name="AppSettings_Desc_ResetToFactorySettings" xml:space="preserve">
+    <value>Elimina la configuración actual de la aplicación y sustitúyela por los valores predeterminados de fábrica.</value>
+  </data>
+  <data name="AppSettings_Btn_ResetSettings" xml:space="preserve">
+    <value>Restablecer la configuración</value>
+  </data>
+  <data name="AppSettings_Lbl_ResetWindowPosition" xml:space="preserve">
+    <value>Restablecer la posición de la ventana</value>
+  </data>
+  <data name="AppSettings_Desc_ResetWindowPosition" xml:space="preserve">
+    <value>Restablece las dimensiones predeterminadas de la ventana principal y la vuelve a alinear en el centro de tu monitor principal.</value>
+  </data>
+  <data name="AppSettings_Btn_ResetPosition" xml:space="preserve">
+    <value>Restablecer posición</value>
+  </data>
+  <data name="AppSettings_Btn_OpenAppConfigFolder" xml:space="preserve">
+    <value>Abrir la carpeta de configuración de la aplicación</value>
+  </data>
+  <data name="AppSettings_Footer_YourChangesAreSavedAutomatically" xml:space="preserve">
+    <value>Tus cambios se guardan automáticamente.</value>
+  </data>
+  <data name="About_Title" xml:space="preserve">
+    <value>Acerca de</value>
+  </data>
+  <data name="About_Section_SupportTheDeveloper" xml:space="preserve">
+    <value>Apoya al desarrollador</value>
+  </data>
+  <data name="About_Section_SupportTheDeveloper_Desc" xml:space="preserve">
+    <value>Si esta aplicación te ha sido de ayuda, o si simplemente te sientes generoso hoy, cualquier contribución será bienvenida. No hay ninguna empresa que me pague por crear estas herramientas; lo hago todo en mi tiempo libre. Por eso, todo el apoyo que recibo proviene exclusivamente de la gente estupenda que utiliza mis aplicaciones.</value>
+  </data>
+  <data name="About_Section_ApplicationInformation" xml:space="preserve">
+    <value>Información sobre la solicitud</value>
+  </data>
+  <data name="About_Lbl_Name" xml:space="preserve">
+    <value>NOMBRE</value>
+  </data>
+  <data name="About_Lbl_Version" xml:space="preserve">
+    <value>VERSIÓN</value>
+  </data>
+  <data name="About_Lbl_Developer" xml:space="preserve">
+    <value>DESARROLLADOR</value>
+  </data>
+  <data name="About_Lbl_License" xml:space="preserve">
+    <value>LICENCIA</value>
+  </data>
+  <data name="About_Lbl_TargetFramework" xml:space="preserve">
+    <value>MARCO DE OBJETIVOS</value>
+  </data>
+  <data name="About_Lbl_OsArchitecture" xml:space="preserve">
+    <value>ARQUITECTURA DEL SISTEMA OPERATIVO</value>
+  </data>
+  <data name="Num_AppSettings_Flyout_Width" xml:space="preserve">
+    <value>625</value>
+  </data>
+  <data name="Num_AppSettings_Btn_CheckForUpdates_Width" xml:space="preserve">
+    <value>250</value>
+  </data>
+  <data name="Num_AppSettings_Btn_ResetToFactorySettings_Width" xml:space="preserve">
+    <value>225</value>
+  </data>
+  <data name="Toast_Title_ConfigurationSaved" xml:space="preserve">
+    <value>Configuración guardada</value>
+  </data>
+  <data name="Toast_Desc_ConfigurationSaved" xml:space="preserve">
+    <value>Los cambios se han aplicado correctamente.</value>
+  </data>
+  <data name="MainWindow_Btn_OpenTheGitHubRepo" xml:space="preserve">
+    <value>Abre el repositorio de GitHub en tu navegador.</value>
+  </data>
+  <data name="App_ReportProgress_InitLogging" xml:space="preserve">
+    <value>Inicializando el diagnóstico...</value>
+  </data>
+  <data name="App_ReportProgress_InitAppSettings" xml:space="preserve">
+    <value>Inicializando la configuración de la aplicación...</value>
+  </data>
+  <data name="App_ReportProgress_InitDepedencyService" xml:space="preserve">
+    <value>Inicializando el servicio de dependencias...</value>
+  </data>
+  <data name="App_ReportProgress_InitTelemetryService" xml:space="preserve">
+    <value>Inicializando el servicio de telemetría...</value>
+  </data>
+  <data name="App_ReportProgress_Final" xml:space="preserve">
+    <value>Dando los últimos retoques...</value>
+  </data>
+  <data name="CrashReportWindow_Title" xml:space="preserve">
+    <value>{0} | Reportador de errores</value>
+  </data>
+  <data name="CrashReportWindow_Header_SomethingWentWrong" xml:space="preserve">
+    <value>Ha surgido un problema</value>
+  </data>
+  <data name="CrashReportWindow_Desc" xml:space="preserve">
+    <value>Un error inesperado ha provocado que la aplicación se haya bloqueado.</value>
+  </data>
+  <data name="CrashReportWindow_Lbl_Exception" xml:space="preserve">
+    <value>Excepción:</value>
+  </data>
+  <data name="CrashReportWindow_Lbl_ExceptionPlaceholder" xml:space="preserve">
+    <value>[Mensaje de excepción]</value>
+  </data>
+  <data name="CrashReportWindow_Lbl_LogFileLocation" xml:space="preserve">
+    <value>Ubicación del archivo de registro:</value>
+  </data>
+  <data name="CrashReportWindow_Lbl_Details" xml:space="preserve">
+    <value>Detalles</value>
+  </data>
+  <data name="CrashReportWindow_Lbl_DetailsPlaceholder" xml:space="preserve">
+    <value>[Espacio reservado para los detalles]</value>
+  </data>
+  <data name="CrashReportWindow_Btn_Close" xml:space="preserve">
+    <value>Cerrar</value>
+  </data>
+  <data name="CrashReportWindow_Btn_SendCrashReport" xml:space="preserve">
+    <value>Enviar informe de error</value>
+  </data>
+  <data name="TrayIcon_Header_ShowApplication" xml:space="preserve">
+    <value>Mostrar solicitud</value>
+  </data>
+  <data name="TrayIcon_Header_Exit" xml:space="preserve">
+    <value>Salir</value>
+  </data>
+  <data name="Num_About_Flyout_Width" xml:space="preserve">
+    <value>500</value>
+  </data>
+  <data name="Btn_Yes" xml:space="preserve">
+    <value>Sí</value>
+  </data>
+  <data name="Btn_No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Btn_Cancel" xml:space="preserve">
+    <value>Cancelar</value>
+  </data>
+  <data name="Btn_Ok" xml:space="preserve">
+    <value>Vale</value>
+  </data>
+  <data name="Btn_Browse" xml:space="preserve">
+    <value>Explorar</value>
+  </data>
+  <data name="App_Msg_StartupError_Desc" xml:space="preserve">
+    <value>Se ha producido un error grave de configuración durante el arranque.</value>
+  </data>
+  <data name="App_Msg_StartupError_Title" xml:space="preserve">
+    <value>Error de inicialización</value>
+  </data>
+  <data name="App_Msg_CrashReporterError_Desc" xml:space="preserve">
+    <value>Se ha producido un error grave y no se ha podido iniciar el programa de notificación de fallos.
+
+Error original: {0}
+
+Error de inicio: {1}</value>
+  </data>
+  <data name="App_Msg_CrashReporterError_Title" xml:space="preserve">
+    <value>Fallo grave de la aplicación</value>
+  </data>
+  <data name="App_Msg_AlreadyRunning_Desc" xml:space="preserve">
+    <value>Ya hay una instancia de esta aplicación en ejecución.</value>
+  </data>
+  <data name="App_Msg_AlreadyRunning_Title" xml:space="preserve">
+    <value>La aplicación ya se está ejecutando</value>
+  </data>
+  <data name="Msg_Error_Title" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="CrashReportWindow_Msg_SubmitError_Desc" xml:space="preserve">
+    <value>No se ha podido iniciar automáticamente el proceso de generación de informes.
+
+Crea una incidencia manualmente y adjunta tu archivo de registro.
+
+Ruta del registro: {0}
+
+Detalles del error: {1}</value>
+  </data>
+  <data name="UpdateService_Msg_FailedToRetrieve_Desc" xml:space="preserve">
+    <value>No se ha podido recuperar información de actualización válida.</value>
+  </data>
+  <data name="UpdateService_Msg_CheckForUpdates_Title" xml:space="preserve">
+    <value>Comprobar si hay actualizaciones</value>
+  </data>
+  <data name="UpdateService_Msg_NewVersion_Desc" xml:space="preserve">
+    <value>Hay una nueva versión disponible.
+
+Última versión: {0}
+Tu versión: {1}
+
+¿Quieres descargar la nueva versión?</value>
+  </data>
+  <data name="UpdateService_Msg_EasterEgg_Desc" xml:space="preserve">
+    <value>¡Eres un genio, Harry!
+
+Última versión: {0}
+Tu versión: {1}
+
+Dile al autor que se ha olvidado de actualizar el número de versión.</value>
+  </data>
+  <data name="UpdateService_Msg_UpToDate_Desc" xml:space="preserve">
+    <value>Ya estás utilizando la última versión.
+
+Última versión: {0}
+Tu versión: {1}</value>
+  </data>
+  <data name="UpdateService_Msg_FailedToCheck_Desc" xml:space="preserve">
+    <value>No se han podido buscar actualizaciones: {0}</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_ResetToFactorySettings_Title" xml:space="preserve">
+    <value>Restablecer la configuración de fábrica</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_ResetToFactorySettings_Desc" xml:space="preserve">
+    <value>¿Estás totalmente seguro de que quieres restablecer todos los ajustes de la aplicación a los valores predeterminados de fábrica? Esta acción no se puede deshacer.</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_ResetToFactorySettingsComplete_Title" xml:space="preserve">
+    <value>Restablecimiento completado</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_ResetToFactorySettingsComplete_Desc" xml:space="preserve">
+    <value>Todos los ajustes de la aplicación se han restablecido correctamente a los valores predeterminados de fábrica.</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_ResetToFactorySettingsError_Desc" xml:space="preserve">
+    <value>Se ha producido un error inesperado al intentar borrar tu perfil de configuración.</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_StartWithWindowsToggleError_Desc" xml:space="preserve">
+    <value>No se ha podido actualizar la clave de inicio del Registro: {0}</value>
+  </data>
+  <data name="DependencyService_Msg_DepsFound_Title" xml:space="preserve">
+    <value>Se han encontrado dependencias</value>
+  </data>
+  <data name="DependencyService_Msg_DepsFound_Desc" xml:space="preserve">
+    <value>Esta aplicación necesita componentes adicionales para funcionar correctamente. ¿Quieres descargarlos e instalarlos ahora?</value>
+  </data>
+  <data name="DependencyService_Msg_InstallationBlocked_Title" xml:space="preserve">
+    <value>Instalación bloqueada</value>
+  </data>
+  <data name="DependencyService_Msg_InstallationBlocked_Desc" xml:space="preserve">
+    <value>Actualmente hay otra instalación en curso en tu ordenador. Finaliza o cierra los demás programas de instalación y, a continuación, reinicia {0}.</value>
+  </data>
+  <data name="DependencyService_Msg_IncompatibleDependency_Title" xml:space="preserve">
+    <value>Dependencia incompatible</value>
+  </data>
+  <data name="DependencyService_Msg_IncompatibleDependency_Desc" xml:space="preserve">
+    <value>La dependencia necesaria «{0}» no es compatible en absoluto con la plataforma o la arquitectura de este equipo.</value>
+  </data>
+  <data name="DependencyService_Msg_RestartRequired_Title" xml:space="preserve">
+    <value>Es necesario reiniciar</value>
+  </data>
+  <data name="DependencyService_Msg_RestartRequired_Desc" xml:space="preserve">
+    <value>Una o varias instalaciones requieren que se reinicie el sistema para funcionar correctamente. ¿Deseas reiniciar el ordenador ahora?</value>
+  </data>
+  <data name="FolderService_Msg_DoesNotExist_Desc" xml:space="preserve">
+    <value>El directorio de destino no existe.
+
+Ruta: {0}</value>
+  </data>
+  <data name="FolderService_Msg_FailedToOpen_Desc" xml:space="preserve">
+    <value>No se ha podido abrir la carpeta: {0}</value>
+  </data>
+  <data name="UrlService_Msg_FailedToOpenURL_Desc" xml:space="preserve">
+    <value>No se ha podido abrir la URL: {0}</value>
+  </data>
+  <data name="App_ReportProgress_InitThemeService" xml:space="preserve">
+    <value>Inicializando el generador de temas...</value>
+  </data>
+  <data name="App_ReportProgress_InitLanguageService" xml:space="preserve">
+    <value>Inicializando el gestor de idiomas...</value>
+  </data>
+</root>

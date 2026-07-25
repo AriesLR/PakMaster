@@ -1,0 +1,12 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:options="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    mc:Ignorable="options">
+
+    <!-- ======== Flyout Styles ======== -->
+    <Color x:Key="Alr.Colors.Flyout.Background">#FF2F2F2F</Color>
+    <Color x:Key="Alr.Colors.Flyout.Footer.Background">#FF252525</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Flyout.Background" Color="{StaticResource Alr.Colors.Flyout.Background}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Flyout.Footer.Background" Color="{StaticResource Alr.Colors.Flyout.Footer.Background}" options:Freeze="True" />
+</ResourceDictionary>

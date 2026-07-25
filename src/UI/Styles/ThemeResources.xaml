@@ -1,0 +1,84 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <!-- Order matters, colors/brushes first -->
+
+        <!--  ************* COLOR STYLES START *************  -->
+
+        <!-- Amber -->
+        <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Colors/Amber.xaml" />
+
+        <!-- Black -->
+        <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Colors/Black.xaml" />
+
+        <!-- Blue -->
+        <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Colors/Blue.xaml" />
+
+        <!-- Blue Gray -->
+        <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Colors/BlueGray.xaml" />
+
+        <!-- Brown -->
+        <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Colors/Brown.xaml" />
+
+        <!-- Cyan -->
+        <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Colors/Cyan.xaml" />
+
+        <!-- Deep Orange -->
+        <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Colors/DeepOrange.xaml" />
+
+        <!-- Deep Purple -->
+        <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Colors/DeepPurple.xaml" />
+
+        <!-- Gray -->
+        <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Colors/Gray.xaml" />
+
+        <!-- Green -->
+        <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Colors/Green.xaml" />
+
+        <!-- Indigo -->
+        <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Colors/Indigo.xaml" />
+
+        <!-- Light Blue -->
+        <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Colors/LightBlue.xaml" />
+
+        <!-- Light Green -->
+        <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Colors/LightGreen.xaml" />
+
+        <!-- Lime -->
+        <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Colors/Lime.xaml" />
+
+        <!-- Orange -->
+        <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Colors/Orange.xaml" />
+
+        <!-- Pink -->
+        <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Colors/Pink.xaml" />
+
+        <!-- Purple -->
+        <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Colors/Purple.xaml" />
+
+        <!-- Red -->
+        <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Colors/Red.xaml" />
+
+        <!-- Teal -->
+        <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Colors/Teal.xaml" />
+
+        <!-- White -->
+        <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Colors/White.xaml" />
+
+        <!-- Yellow -->
+        <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Colors/Yellow.xaml" />
+
+        <!--  ************* COLOR STYLES END *************  -->
+
+        <!--  ************* CONTROL STYLES START *************  -->
+
+        <!-- Flyout -->
+        <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Controls/Flyout.xaml" />
+
+        <!-- Crash Reporter -->
+        <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Controls/CrashReporter.xaml" />
+
+        <!--  ************* CONTROL STYLES END *************  -->
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>

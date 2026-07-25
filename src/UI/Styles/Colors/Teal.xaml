@@ -1,0 +1,156 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:options="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    mc:Ignorable="options">
+
+    <!-- Teal 100% Opacity -->
+    <Color x:Key="Alr.Colors.Teal50">#FFE0F2F1</Color>
+    <Color x:Key="Alr.Colors.Teal100">#FFB2DFDB</Color>
+    <Color x:Key="Alr.Colors.Teal200">#FF80CBC4</Color>
+    <Color x:Key="Alr.Colors.Teal300">#FF4DB6AC</Color>
+    <Color x:Key="Alr.Colors.Teal400">#FF26A69A</Color>
+    <Color x:Key="Alr.Colors.Teal500">#FF009688</Color>
+    <Color x:Key="Alr.Colors.Teal600">#FF00897B</Color>
+    <Color x:Key="Alr.Colors.Teal700">#FF00796B</Color>
+    <Color x:Key="Alr.Colors.Teal800">#FF00695C</Color>
+    <Color x:Key="Alr.Colors.Teal900">#FF004D40</Color>
+    <Color x:Key="Alr.Colors.TealA100">#FFA7FFEB</Color>
+    <Color x:Key="Alr.Colors.TealA200">#FF64FFDA</Color>
+    <Color x:Key="Alr.Colors.TealA400">#FF1DE9B6</Color>
+    <Color x:Key="Alr.Colors.TealA700">#FF00BFA5</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Teal50" Color="{StaticResource Alr.Colors.Teal50}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal100" Color="{StaticResource Alr.Colors.Teal100}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal200" Color="{StaticResource Alr.Colors.Teal200}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal300" Color="{StaticResource Alr.Colors.Teal300}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal400" Color="{StaticResource Alr.Colors.Teal400}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal500" Color="{StaticResource Alr.Colors.Teal500}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal600" Color="{StaticResource Alr.Colors.Teal600}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal700" Color="{StaticResource Alr.Colors.Teal700}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal800" Color="{StaticResource Alr.Colors.Teal800}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal900" Color="{StaticResource Alr.Colors.Teal900}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.TealA100" Color="{StaticResource Alr.Colors.TealA100}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.TealA200" Color="{StaticResource Alr.Colors.TealA200}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.TealA400" Color="{StaticResource Alr.Colors.TealA400}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.TealA700" Color="{StaticResource Alr.Colors.TealA700}" options:Freeze="True" />
+
+    <!-- Teal 80% Opacity -->
+    <Color x:Key="Alr.Colors.Teal50.O80">#CCE0F2F1</Color>
+    <Color x:Key="Alr.Colors.Teal100.O80">#CCB2DFDB</Color>
+    <Color x:Key="Alr.Colors.Teal200.O80">#CC80CBC4</Color>
+    <Color x:Key="Alr.Colors.Teal300.O80">#CC4DB6AC</Color>
+    <Color x:Key="Alr.Colors.Teal400.O80">#CC26A69A</Color>
+    <Color x:Key="Alr.Colors.Teal500.O80">#CC009688</Color>
+    <Color x:Key="Alr.Colors.Teal600.O80">#CC00897B</Color>
+    <Color x:Key="Alr.Colors.Teal700.O80">#CC00796B</Color>
+    <Color x:Key="Alr.Colors.Teal800.O80">#CC00695C</Color>
+    <Color x:Key="Alr.Colors.Teal900.O80">#CC004D40</Color>
+    <Color x:Key="Alr.Colors.TealA100.O80">#CCA7FFEB</Color>
+    <Color x:Key="Alr.Colors.TealA200.O80">#CC64FFDA</Color>
+    <Color x:Key="Alr.Colors.TealA400.O80">#CC1DE9B6</Color>
+    <Color x:Key="Alr.Colors.TealA700.O80">#CC00BFA5</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Teal50.O80" Color="{StaticResource Alr.Colors.Teal50.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal100.O80" Color="{StaticResource Alr.Colors.Teal100.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal200.O80" Color="{StaticResource Alr.Colors.Teal200.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal300.O80" Color="{StaticResource Alr.Colors.Teal300.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal400.O80" Color="{StaticResource Alr.Colors.Teal400.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal500.O80" Color="{StaticResource Alr.Colors.Teal500.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal600.O80" Color="{StaticResource Alr.Colors.Teal600.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal700.O80" Color="{StaticResource Alr.Colors.Teal700.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal800.O80" Color="{StaticResource Alr.Colors.Teal800.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal900.O80" Color="{StaticResource Alr.Colors.Teal900.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.TealA100.O80" Color="{StaticResource Alr.Colors.TealA100.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.TealA200.O80" Color="{StaticResource Alr.Colors.TealA200.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.TealA400.O80" Color="{StaticResource Alr.Colors.TealA400.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.TealA700.O80" Color="{StaticResource Alr.Colors.TealA700.O80}" options:Freeze="True" />
+
+    <!-- Teal 60% Opacity -->
+    <Color x:Key="Alr.Colors.Teal50.O60">#99E0F2F1</Color>
+    <Color x:Key="Alr.Colors.Teal100.O60">#99B2DFDB</Color>
+    <Color x:Key="Alr.Colors.Teal200.O60">#9980CBC4</Color>
+    <Color x:Key="Alr.Colors.Teal300.O60">#994DB6AC</Color>
+    <Color x:Key="Alr.Colors.Teal400.O60">#9926A69A</Color>
+    <Color x:Key="Alr.Colors.Teal500.O60">#99009688</Color>
+    <Color x:Key="Alr.Colors.Teal600.O60">#9900897B</Color>
+    <Color x:Key="Alr.Colors.Teal700.O60">#9900796B</Color>
+    <Color x:Key="Alr.Colors.Teal800.O60">#9900695C</Color>
+    <Color x:Key="Alr.Colors.Teal900.O60">#99004D40</Color>
+    <Color x:Key="Alr.Colors.TealA100.O60">#99A7FFEB</Color>
+    <Color x:Key="Alr.Colors.TealA200.O60">#9964FFDA</Color>
+    <Color x:Key="Alr.Colors.TealA400.O60">#991DE9B6</Color>
+    <Color x:Key="Alr.Colors.TealA700.O60">#9900BFA5</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Teal50.O60" Color="{StaticResource Alr.Colors.Teal50.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal100.O60" Color="{StaticResource Alr.Colors.Teal100.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal200.O60" Color="{StaticResource Alr.Colors.Teal200.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal300.O60" Color="{StaticResource Alr.Colors.Teal300.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal400.O60" Color="{StaticResource Alr.Colors.Teal400.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal500.O60" Color="{StaticResource Alr.Colors.Teal500.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal600.O60" Color="{StaticResource Alr.Colors.Teal600.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal700.O60" Color="{StaticResource Alr.Colors.Teal700.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal800.O60" Color="{StaticResource Alr.Colors.Teal800.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal900.O60" Color="{StaticResource Alr.Colors.Teal900.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.TealA100.O60" Color="{StaticResource Alr.Colors.TealA100.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.TealA200.O60" Color="{StaticResource Alr.Colors.TealA200.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.TealA400.O60" Color="{StaticResource Alr.Colors.TealA400.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.TealA700.O60" Color="{StaticResource Alr.Colors.TealA700.O60}" options:Freeze="True" />
+
+    <!-- Teal 40% Opacity -->
+    <Color x:Key="Alr.Colors.Teal50.O40">#66E0F2F1</Color>
+    <Color x:Key="Alr.Colors.Teal100.O40">#66B2DFDB</Color>
+    <Color x:Key="Alr.Colors.Teal200.O40">#6680CBC4</Color>
+    <Color x:Key="Alr.Colors.Teal300.O40">#664DB6AC</Color>
+    <Color x:Key="Alr.Colors.Teal400.O40">#6626A69A</Color>
+    <Color x:Key="Alr.Colors.Teal500.O40">#66009688</Color>
+    <Color x:Key="Alr.Colors.Teal600.O40">#6600897B</Color>
+    <Color x:Key="Alr.Colors.Teal700.O40">#6600796B</Color>
+    <Color x:Key="Alr.Colors.Teal800.O40">#6600695C</Color>
+    <Color x:Key="Alr.Colors.Teal900.O40">#66004D40</Color>
+    <Color x:Key="Alr.Colors.TealA100.O40">#66A7FFEB</Color>
+    <Color x:Key="Alr.Colors.TealA200.O40">#6664FFDA</Color>
+    <Color x:Key="Alr.Colors.TealA400.O40">#661DE9B6</Color>
+    <Color x:Key="Alr.Colors.TealA700.O40">#6600BFA5</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Teal50.O40" Color="{StaticResource Alr.Colors.Teal50.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal100.O40" Color="{StaticResource Alr.Colors.Teal100.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal200.O40" Color="{StaticResource Alr.Colors.Teal200.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal300.O40" Color="{StaticResource Alr.Colors.Teal300.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal400.O40" Color="{StaticResource Alr.Colors.Teal400.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal500.O40" Color="{StaticResource Alr.Colors.Teal500.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal600.O40" Color="{StaticResource Alr.Colors.Teal600.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal700.O40" Color="{StaticResource Alr.Colors.Teal700.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal800.O40" Color="{StaticResource Alr.Colors.Teal800.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal900.O40" Color="{StaticResource Alr.Colors.Teal900.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.TealA100.O40" Color="{StaticResource Alr.Colors.TealA100.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.TealA200.O40" Color="{StaticResource Alr.Colors.TealA200.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.TealA400.O40" Color="{StaticResource Alr.Colors.TealA400.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.TealA700.O40" Color="{StaticResource Alr.Colors.TealA700.O40}" options:Freeze="True" />
+
+    <!-- Teal 20% Opacity -->
+    <Color x:Key="Alr.Colors.Teal50.O20">#33E0F2F1</Color>
+    <Color x:Key="Alr.Colors.Teal100.O20">#33B2DFDB</Color>
+    <Color x:Key="Alr.Colors.Teal200.O20">#3380CBC4</Color>
+    <Color x:Key="Alr.Colors.Teal300.O20">#334DB6AC</Color>
+    <Color x:Key="Alr.Colors.Teal400.O20">#3326A69A</Color>
+    <Color x:Key="Alr.Colors.Teal500.O20">#33009688</Color>
+    <Color x:Key="Alr.Colors.Teal600.O20">#3300897B</Color>
+    <Color x:Key="Alr.Colors.Teal700.O20">#3300796B</Color>
+    <Color x:Key="Alr.Colors.Teal800.O20">#3300695C</Color>
+    <Color x:Key="Alr.Colors.Teal900.O20">#33004D40</Color>
+    <Color x:Key="Alr.Colors.TealA100.O20">#33A7FFEB</Color>
+    <Color x:Key="Alr.Colors.TealA200.O20">#3364FFDA</Color>
+    <Color x:Key="Alr.Colors.TealA400.O20">#331DE9B6</Color>
+    <Color x:Key="Alr.Colors.TealA700.O20">#3300BFA5</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Teal50.O20" Color="{StaticResource Alr.Colors.Teal50.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal100.O20" Color="{StaticResource Alr.Colors.Teal100.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal200.O20" Color="{StaticResource Alr.Colors.Teal200.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal300.O20" Color="{StaticResource Alr.Colors.Teal300.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal400.O20" Color="{StaticResource Alr.Colors.Teal400.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal500.O20" Color="{StaticResource Alr.Colors.Teal500.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal600.O20" Color="{StaticResource Alr.Colors.Teal600.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal700.O20" Color="{StaticResource Alr.Colors.Teal700.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal800.O20" Color="{StaticResource Alr.Colors.Teal800.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Teal900.O20" Color="{StaticResource Alr.Colors.Teal900.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.TealA100.O20" Color="{StaticResource Alr.Colors.TealA100.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.TealA200.O20" Color="{StaticResource Alr.Colors.TealA200.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.TealA400.O20" Color="{StaticResource Alr.Colors.TealA400.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.TealA700.O20" Color="{StaticResource Alr.Colors.TealA700.O20}" options:Freeze="True" />
+</ResourceDictionary>

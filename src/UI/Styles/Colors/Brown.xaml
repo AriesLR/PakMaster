@@ -1,0 +1,116 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:options="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    mc:Ignorable="options">
+
+    <!-- Brown 100% Opacity -->
+    <Color x:Key="Alr.Colors.Brown50">#FFEFEBE9</Color>
+    <Color x:Key="Alr.Colors.Brown100">#FFD7CCC8</Color>
+    <Color x:Key="Alr.Colors.Brown200">#FFBCAAA4</Color>
+    <Color x:Key="Alr.Colors.Brown300">#FFA1887F</Color>
+    <Color x:Key="Alr.Colors.Brown400">#FF8D6E63</Color>
+    <Color x:Key="Alr.Colors.Brown500">#FF795548</Color>
+    <Color x:Key="Alr.Colors.Brown600">#FF6D4C41</Color>
+    <Color x:Key="Alr.Colors.Brown700">#FF5D4037</Color>
+    <Color x:Key="Alr.Colors.Brown800">#FF4E342E</Color>
+    <Color x:Key="Alr.Colors.Brown900">#FF3E2723</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Brown50" Color="{StaticResource Alr.Colors.Brown50}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown100" Color="{StaticResource Alr.Colors.Brown100}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown200" Color="{StaticResource Alr.Colors.Brown200}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown300" Color="{StaticResource Alr.Colors.Brown300}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown400" Color="{StaticResource Alr.Colors.Brown400}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown500" Color="{StaticResource Alr.Colors.Brown500}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown600" Color="{StaticResource Alr.Colors.Brown600}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown700" Color="{StaticResource Alr.Colors.Brown700}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown800" Color="{StaticResource Alr.Colors.Brown800}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown900" Color="{StaticResource Alr.Colors.Brown900}" options:Freeze="True" />
+
+    <!-- Brown 80% Opacity -->
+    <Color x:Key="Alr.Colors.Brown50.O80">#CCEFEBE9</Color>
+    <Color x:Key="Alr.Colors.Brown100.O80">#CCD7CCC8</Color>
+    <Color x:Key="Alr.Colors.Brown200.O80">#CCBCAAA4</Color>
+    <Color x:Key="Alr.Colors.Brown300.O80">#CCA1887F</Color>
+    <Color x:Key="Alr.Colors.Brown400.O80">#CC8D6E63</Color>
+    <Color x:Key="Alr.Colors.Brown500.O80">#CC795548</Color>
+    <Color x:Key="Alr.Colors.Brown600.O80">#CC6D4C41</Color>
+    <Color x:Key="Alr.Colors.Brown700.O80">#CC5D4037</Color>
+    <Color x:Key="Alr.Colors.Brown800.O80">#CC4E342E</Color>
+    <Color x:Key="Alr.Colors.Brown900.O80">#CC3E2723</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Brown50.O80" Color="{StaticResource Alr.Colors.Brown50.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown100.O80" Color="{StaticResource Alr.Colors.Brown100.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown200.O80" Color="{StaticResource Alr.Colors.Brown200.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown300.O80" Color="{StaticResource Alr.Colors.Brown300.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown400.O80" Color="{StaticResource Alr.Colors.Brown400.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown500.O80" Color="{StaticResource Alr.Colors.Brown500.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown600.O80" Color="{StaticResource Alr.Colors.Brown600.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown700.O80" Color="{StaticResource Alr.Colors.Brown700.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown800.O80" Color="{StaticResource Alr.Colors.Brown800.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown900.O80" Color="{StaticResource Alr.Colors.Brown900.O80}" options:Freeze="True" />
+
+    <!-- Brown 60% Opacity -->
+    <Color x:Key="Alr.Colors.Brown50.O60">#99EFEBE9</Color>
+    <Color x:Key="Alr.Colors.Brown100.O60">#99D7CCC8</Color>
+    <Color x:Key="Alr.Colors.Brown200.O60">#99BCAAA4</Color>
+    <Color x:Key="Alr.Colors.Brown300.O60">#99A1887F</Color>
+    <Color x:Key="Alr.Colors.Brown400.O60">#998D6E63</Color>
+    <Color x:Key="Alr.Colors.Brown500.O60">#99795548</Color>
+    <Color x:Key="Alr.Colors.Brown600.O60">#996D4C41</Color>
+    <Color x:Key="Alr.Colors.Brown700.O60">#995D4037</Color>
+    <Color x:Key="Alr.Colors.Brown800.O60">#994E342E</Color>
+    <Color x:Key="Alr.Colors.Brown900.O60">#993E2723</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Brown50.O60" Color="{StaticResource Alr.Colors.Brown50.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown100.O60" Color="{StaticResource Alr.Colors.Brown100.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown200.O60" Color="{StaticResource Alr.Colors.Brown200.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown300.O60" Color="{StaticResource Alr.Colors.Brown300.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown400.O60" Color="{StaticResource Alr.Colors.Brown400.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown500.O60" Color="{StaticResource Alr.Colors.Brown500.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown600.O60" Color="{StaticResource Alr.Colors.Brown600.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown700.O60" Color="{StaticResource Alr.Colors.Brown700.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown800.O60" Color="{StaticResource Alr.Colors.Brown800.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown900.O60" Color="{StaticResource Alr.Colors.Brown900.O60}" options:Freeze="True" />
+
+    <!-- Brown 40% Opacity -->
+    <Color x:Key="Alr.Colors.Brown50.O40">#66EFEBE9</Color>
+    <Color x:Key="Alr.Colors.Brown100.O40">#66D7CCC8</Color>
+    <Color x:Key="Alr.Colors.Brown200.O40">#66BCAAA4</Color>
+    <Color x:Key="Alr.Colors.Brown300.O40">#66A1887F</Color>
+    <Color x:Key="Alr.Colors.Brown400.O40">#668D6E63</Color>
+    <Color x:Key="Alr.Colors.Brown500.O40">#66795548</Color>
+    <Color x:Key="Alr.Colors.Brown600.O40">#666D4C41</Color>
+    <Color x:Key="Alr.Colors.Brown700.O40">#665D4037</Color>
+    <Color x:Key="Alr.Colors.Brown800.O40">#664E342E</Color>
+    <Color x:Key="Alr.Colors.Brown900.O40">#663E2723</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Brown50.O40" Color="{StaticResource Alr.Colors.Brown50.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown100.O40" Color="{StaticResource Alr.Colors.Brown100.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown200.O40" Color="{StaticResource Alr.Colors.Brown200.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown300.O40" Color="{StaticResource Alr.Colors.Brown300.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown400.O40" Color="{StaticResource Alr.Colors.Brown400.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown500.O40" Color="{StaticResource Alr.Colors.Brown500.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown600.O40" Color="{StaticResource Alr.Colors.Brown600.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown700.O40" Color="{StaticResource Alr.Colors.Brown700.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown800.O40" Color="{StaticResource Alr.Colors.Brown800.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown900.O40" Color="{StaticResource Alr.Colors.Brown900.O40}" options:Freeze="True" />
+
+    <!-- Brown 20% Opacity -->
+    <Color x:Key="Alr.Colors.Brown50.O20">#33EFEBE9</Color>
+    <Color x:Key="Alr.Colors.Brown100.O20">#33D7CCC8</Color>
+    <Color x:Key="Alr.Colors.Brown200.O20">#33BCAAA4</Color>
+    <Color x:Key="Alr.Colors.Brown300.O20">#33A1887F</Color>
+    <Color x:Key="Alr.Colors.Brown400.O20">#338D6E63</Color>
+    <Color x:Key="Alr.Colors.Brown500.O20">#33795548</Color>
+    <Color x:Key="Alr.Colors.Brown600.O20">#336D4C41</Color>
+    <Color x:Key="Alr.Colors.Brown700.O20">#335D4037</Color>
+    <Color x:Key="Alr.Colors.Brown800.O20">#334E342E</Color>
+    <Color x:Key="Alr.Colors.Brown900.O20">#333E2723</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Brown50.O20" Color="{StaticResource Alr.Colors.Brown50.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown100.O20" Color="{StaticResource Alr.Colors.Brown100.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown200.O20" Color="{StaticResource Alr.Colors.Brown200.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown300.O20" Color="{StaticResource Alr.Colors.Brown300.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown400.O20" Color="{StaticResource Alr.Colors.Brown400.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown500.O20" Color="{StaticResource Alr.Colors.Brown500.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown600.O20" Color="{StaticResource Alr.Colors.Brown600.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown700.O20" Color="{StaticResource Alr.Colors.Brown700.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown800.O20" Color="{StaticResource Alr.Colors.Brown800.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Brown900.O20" Color="{StaticResource Alr.Colors.Brown900.O20}" options:Freeze="True" />
+</ResourceDictionary>

@@ -1,0 +1,156 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:options="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    mc:Ignorable="options">
+
+    <!-- Indigo 100% Opacity -->
+    <Color x:Key="Alr.Colors.Indigo50">#FFE8EAF6</Color>
+    <Color x:Key="Alr.Colors.Indigo100">#FFC5CAE9</Color>
+    <Color x:Key="Alr.Colors.Indigo200">#FF9FA8DA</Color>
+    <Color x:Key="Alr.Colors.Indigo300">#FF7986CB</Color>
+    <Color x:Key="Alr.Colors.Indigo400">#FF5C6BC0</Color>
+    <Color x:Key="Alr.Colors.Indigo500">#FF3F51B5</Color>
+    <Color x:Key="Alr.Colors.Indigo600">#FF3949AB</Color>
+    <Color x:Key="Alr.Colors.Indigo700">#FF303F9F</Color>
+    <Color x:Key="Alr.Colors.Indigo800">#FF283593</Color>
+    <Color x:Key="Alr.Colors.Indigo900">#FF1A237E</Color>
+    <Color x:Key="Alr.Colors.IndigoA100">#FF8C9EFF</Color>
+    <Color x:Key="Alr.Colors.IndigoA200">#FF536DFE</Color>
+    <Color x:Key="Alr.Colors.IndigoA400">#FF3D5AFE</Color>
+    <Color x:Key="Alr.Colors.IndigoA700">#FF304FFE</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo50" Color="{StaticResource Alr.Colors.Indigo50}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo100" Color="{StaticResource Alr.Colors.Indigo100}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo200" Color="{StaticResource Alr.Colors.Indigo200}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo300" Color="{StaticResource Alr.Colors.Indigo300}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo400" Color="{StaticResource Alr.Colors.Indigo400}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo500" Color="{StaticResource Alr.Colors.Indigo500}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo600" Color="{StaticResource Alr.Colors.Indigo600}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo700" Color="{StaticResource Alr.Colors.Indigo700}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo800" Color="{StaticResource Alr.Colors.Indigo800}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo900" Color="{StaticResource Alr.Colors.Indigo900}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.IndigoA100" Color="{StaticResource Alr.Colors.IndigoA100}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.IndigoA200" Color="{StaticResource Alr.Colors.IndigoA200}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.IndigoA400" Color="{StaticResource Alr.Colors.IndigoA400}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.IndigoA700" Color="{StaticResource Alr.Colors.IndigoA700}" options:Freeze="True" />
+
+    <!-- Indigo 80% Opacity -->
+    <Color x:Key="Alr.Colors.Indigo50.O80">#CCE8EAF6</Color>
+    <Color x:Key="Alr.Colors.Indigo100.O80">#CCC5CAE9</Color>
+    <Color x:Key="Alr.Colors.Indigo200.O80">#CC9FA8DA</Color>
+    <Color x:Key="Alr.Colors.Indigo300.O80">#CC7986CB</Color>
+    <Color x:Key="Alr.Colors.Indigo400.O80">#CC5C6BC0</Color>
+    <Color x:Key="Alr.Colors.Indigo500.O80">#CC3F51B5</Color>
+    <Color x:Key="Alr.Colors.Indigo600.O80">#CC3949AB</Color>
+    <Color x:Key="Alr.Colors.Indigo700.O80">#CC303F9F</Color>
+    <Color x:Key="Alr.Colors.Indigo800.O80">#CC283593</Color>
+    <Color x:Key="Alr.Colors.Indigo900.O80">#CC1A237E</Color>
+    <Color x:Key="Alr.Colors.IndigoA100.O80">#CC8C9EFF</Color>
+    <Color x:Key="Alr.Colors.IndigoA200.O80">#CC536DFE</Color>
+    <Color x:Key="Alr.Colors.IndigoA400.O80">#CC3D5AFE</Color>
+    <Color x:Key="Alr.Colors.IndigoA700.O80">#CC304FFE</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo50.O80" Color="{StaticResource Alr.Colors.Indigo50.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo100.O80" Color="{StaticResource Alr.Colors.Indigo100.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo200.O80" Color="{StaticResource Alr.Colors.Indigo200.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo300.O80" Color="{StaticResource Alr.Colors.Indigo300.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo400.O80" Color="{StaticResource Alr.Colors.Indigo400.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo500.O80" Color="{StaticResource Alr.Colors.Indigo500.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo600.O80" Color="{StaticResource Alr.Colors.Indigo600.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo700.O80" Color="{StaticResource Alr.Colors.Indigo700.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo800.O80" Color="{StaticResource Alr.Colors.Indigo800.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo900.O80" Color="{StaticResource Alr.Colors.Indigo900.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.IndigoA100.O80" Color="{StaticResource Alr.Colors.IndigoA100.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.IndigoA200.O80" Color="{StaticResource Alr.Colors.IndigoA200.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.IndigoA400.O80" Color="{StaticResource Alr.Colors.IndigoA400.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.IndigoA700.O80" Color="{StaticResource Alr.Colors.IndigoA700.O80}" options:Freeze="True" />
+
+    <!-- Indigo 60% Opacity -->
+    <Color x:Key="Alr.Colors.Indigo50.O60">#99E8EAF6</Color>
+    <Color x:Key="Alr.Colors.Indigo100.O60">#99C5CAE9</Color>
+    <Color x:Key="Alr.Colors.Indigo200.O60">#999FA8DA</Color>
+    <Color x:Key="Alr.Colors.Indigo300.O60">#997986CB</Color>
+    <Color x:Key="Alr.Colors.Indigo400.O60">#995C6BC0</Color>
+    <Color x:Key="Alr.Colors.Indigo500.O60">#993F51B5</Color>
+    <Color x:Key="Alr.Colors.Indigo600.O60">#993949AB</Color>
+    <Color x:Key="Alr.Colors.Indigo700.O60">#99303F9F</Color>
+    <Color x:Key="Alr.Colors.Indigo800.O60">#99283593</Color>
+    <Color x:Key="Alr.Colors.Indigo900.O60">#991A237E</Color>
+    <Color x:Key="Alr.Colors.IndigoA100.O60">#998C9EFF</Color>
+    <Color x:Key="Alr.Colors.IndigoA200.O60">#99536DFE</Color>
+    <Color x:Key="Alr.Colors.IndigoA400.O60">#993D5AFE</Color>
+    <Color x:Key="Alr.Colors.IndigoA700.O60">#99304FFE</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo50.O60" Color="{StaticResource Alr.Colors.Indigo50.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo100.O60" Color="{StaticResource Alr.Colors.Indigo100.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo200.O60" Color="{StaticResource Alr.Colors.Indigo200.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo300.O60" Color="{StaticResource Alr.Colors.Indigo300.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo400.O60" Color="{StaticResource Alr.Colors.Indigo400.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo500.O60" Color="{StaticResource Alr.Colors.Indigo500.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo600.O60" Color="{StaticResource Alr.Colors.Indigo600.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo700.O60" Color="{StaticResource Alr.Colors.Indigo700.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo800.O60" Color="{StaticResource Alr.Colors.Indigo800.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo900.O60" Color="{StaticResource Alr.Colors.Indigo900.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.IndigoA100.O60" Color="{StaticResource Alr.Colors.IndigoA100.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.IndigoA200.O60" Color="{StaticResource Alr.Colors.IndigoA200.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.IndigoA400.O60" Color="{StaticResource Alr.Colors.IndigoA400.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.IndigoA700.O60" Color="{StaticResource Alr.Colors.IndigoA700.O60}" options:Freeze="True" />
+
+    <!-- Indigo 40% Opacity -->
+    <Color x:Key="Alr.Colors.Indigo50.O40">#66E8EAF6</Color>
+    <Color x:Key="Alr.Colors.Indigo100.O40">#66C5CAE9</Color>
+    <Color x:Key="Alr.Colors.Indigo200.O40">#669FA8DA</Color>
+    <Color x:Key="Alr.Colors.Indigo300.O40">#667986CB</Color>
+    <Color x:Key="Alr.Colors.Indigo400.O40">#665C6BC0</Color>
+    <Color x:Key="Alr.Colors.Indigo500.O40">#663F51B5</Color>
+    <Color x:Key="Alr.Colors.Indigo600.O40">#663949AB</Color>
+    <Color x:Key="Alr.Colors.Indigo700.O40">#66303F9F</Color>
+    <Color x:Key="Alr.Colors.Indigo800.O40">#66283593</Color>
+    <Color x:Key="Alr.Colors.Indigo900.O40">#661A237E</Color>
+    <Color x:Key="Alr.Colors.IndigoA100.O40">#668C9EFF</Color>
+    <Color x:Key="Alr.Colors.IndigoA200.O40">#66536DFE</Color>
+    <Color x:Key="Alr.Colors.IndigoA400.O40">#663D5AFE</Color>
+    <Color x:Key="Alr.Colors.IndigoA700.O40">#66304FFE</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo50.O40" Color="{StaticResource Alr.Colors.Indigo50.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo100.O40" Color="{StaticResource Alr.Colors.Indigo100.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo200.O40" Color="{StaticResource Alr.Colors.Indigo200.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo300.O40" Color="{StaticResource Alr.Colors.Indigo300.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo400.O40" Color="{StaticResource Alr.Colors.Indigo400.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo500.O40" Color="{StaticResource Alr.Colors.Indigo500.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo600.O40" Color="{StaticResource Alr.Colors.Indigo600.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo700.O40" Color="{StaticResource Alr.Colors.Indigo700.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo800.O40" Color="{StaticResource Alr.Colors.Indigo800.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo900.O40" Color="{StaticResource Alr.Colors.Indigo900.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.IndigoA100.O40" Color="{StaticResource Alr.Colors.IndigoA100.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.IndigoA200.O40" Color="{StaticResource Alr.Colors.IndigoA200.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.IndigoA400.O40" Color="{StaticResource Alr.Colors.IndigoA400.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.IndigoA700.O40" Color="{StaticResource Alr.Colors.IndigoA700.O40}" options:Freeze="True" />
+
+    <!-- Indigo 20% Opacity -->
+    <Color x:Key="Alr.Colors.Indigo50.O20">#33E8EAF6</Color>
+    <Color x:Key="Alr.Colors.Indigo100.O20">#33C5CAE9</Color>
+    <Color x:Key="Alr.Colors.Indigo200.O20">#339FA8DA</Color>
+    <Color x:Key="Alr.Colors.Indigo300.O20">#337986CB</Color>
+    <Color x:Key="Alr.Colors.Indigo400.O20">#335C6BC0</Color>
+    <Color x:Key="Alr.Colors.Indigo500.O20">#333F51B5</Color>
+    <Color x:Key="Alr.Colors.Indigo600.O20">#333949AB</Color>
+    <Color x:Key="Alr.Colors.Indigo700.O20">#33303F9F</Color>
+    <Color x:Key="Alr.Colors.Indigo800.O20">#33283593</Color>
+    <Color x:Key="Alr.Colors.Indigo900.O20">#331A237E</Color>
+    <Color x:Key="Alr.Colors.IndigoA100.O20">#338C9EFF</Color>
+    <Color x:Key="Alr.Colors.IndigoA200.O20">#33536DFE</Color>
+    <Color x:Key="Alr.Colors.IndigoA400.O20">#333D5AFE</Color>
+    <Color x:Key="Alr.Colors.IndigoA700.O20">#33304FFE</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo50.O20" Color="{StaticResource Alr.Colors.Indigo50.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo100.O20" Color="{StaticResource Alr.Colors.Indigo100.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo200.O20" Color="{StaticResource Alr.Colors.Indigo200.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo300.O20" Color="{StaticResource Alr.Colors.Indigo300.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo400.O20" Color="{StaticResource Alr.Colors.Indigo400.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo500.O20" Color="{StaticResource Alr.Colors.Indigo500.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo600.O20" Color="{StaticResource Alr.Colors.Indigo600.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo700.O20" Color="{StaticResource Alr.Colors.Indigo700.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo800.O20" Color="{StaticResource Alr.Colors.Indigo800.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Indigo900.O20" Color="{StaticResource Alr.Colors.Indigo900.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.IndigoA100.O20" Color="{StaticResource Alr.Colors.IndigoA100.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.IndigoA200.O20" Color="{StaticResource Alr.Colors.IndigoA200.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.IndigoA400.O20" Color="{StaticResource Alr.Colors.IndigoA400.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.IndigoA700.O20" Color="{StaticResource Alr.Colors.IndigoA700.O20}" options:Freeze="True" />
+</ResourceDictionary>

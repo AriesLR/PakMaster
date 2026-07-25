@@ -1,0 +1,116 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:options="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    mc:Ignorable="options">
+
+    <!-- Blue Gray 100% Opacity -->
+    <Color x:Key="Alr.Colors.BlueGray50">#FFECEFF1</Color>
+    <Color x:Key="Alr.Colors.BlueGray100">#FFCFD8DC</Color>
+    <Color x:Key="Alr.Colors.BlueGray200">#FFB0BEC5</Color>
+    <Color x:Key="Alr.Colors.BlueGray300">#FF90A4AE</Color>
+    <Color x:Key="Alr.Colors.BlueGray400">#FF78909C</Color>
+    <Color x:Key="Alr.Colors.BlueGray500">#FF607D8B</Color>
+    <Color x:Key="Alr.Colors.BlueGray600">#FF546E7A</Color>
+    <Color x:Key="Alr.Colors.BlueGray700">#FF455A64</Color>
+    <Color x:Key="Alr.Colors.BlueGray800">#FF37474F</Color>
+    <Color x:Key="Alr.Colors.BlueGray900">#FF263238</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray50" Color="{StaticResource Alr.Colors.BlueGray50}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray100" Color="{StaticResource Alr.Colors.BlueGray100}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray200" Color="{StaticResource Alr.Colors.BlueGray200}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray300" Color="{StaticResource Alr.Colors.BlueGray300}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray400" Color="{StaticResource Alr.Colors.BlueGray400}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray500" Color="{StaticResource Alr.Colors.BlueGray500}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray600" Color="{StaticResource Alr.Colors.BlueGray600}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray700" Color="{StaticResource Alr.Colors.BlueGray700}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray800" Color="{StaticResource Alr.Colors.BlueGray800}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray900" Color="{StaticResource Alr.Colors.BlueGray900}" options:Freeze="True" />
+
+    <!-- Blue Gray 80% Opacity -->
+    <Color x:Key="Alr.Colors.BlueGray50.O80">#CCECEFF1</Color>
+    <Color x:Key="Alr.Colors.BlueGray100.O80">#CCCFD8DC</Color>
+    <Color x:Key="Alr.Colors.BlueGray200.O80">#CCB0BEC5</Color>
+    <Color x:Key="Alr.Colors.BlueGray300.O80">#CC90A4AE</Color>
+    <Color x:Key="Alr.Colors.BlueGray400.O80">#CC78909C</Color>
+    <Color x:Key="Alr.Colors.BlueGray500.O80">#CC607D8B</Color>
+    <Color x:Key="Alr.Colors.BlueGray600.O80">#CC546E7A</Color>
+    <Color x:Key="Alr.Colors.BlueGray700.O80">#CC455A64</Color>
+    <Color x:Key="Alr.Colors.BlueGray800.O80">#CC37474F</Color>
+    <Color x:Key="Alr.Colors.BlueGray900.O80">#CC263238</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray50.O80" Color="{StaticResource Alr.Colors.BlueGray50.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray100.O80" Color="{StaticResource Alr.Colors.BlueGray100.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray200.O80" Color="{StaticResource Alr.Colors.BlueGray200.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray300.O80" Color="{StaticResource Alr.Colors.BlueGray300.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray400.O80" Color="{StaticResource Alr.Colors.BlueGray400.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray500.O80" Color="{StaticResource Alr.Colors.BlueGray500.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray600.O80" Color="{StaticResource Alr.Colors.BlueGray600.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray700.O80" Color="{StaticResource Alr.Colors.BlueGray700.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray800.O80" Color="{StaticResource Alr.Colors.BlueGray800.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray900.O80" Color="{StaticResource Alr.Colors.BlueGray900.O80}" options:Freeze="True" />
+
+    <!-- Blue Gray 60% Opacity -->
+    <Color x:Key="Alr.Colors.BlueGray50.O60">#99ECEFF1</Color>
+    <Color x:Key="Alr.Colors.BlueGray100.O60">#99CFD8DC</Color>
+    <Color x:Key="Alr.Colors.BlueGray200.O60">#99B0BEC5</Color>
+    <Color x:Key="Alr.Colors.BlueGray300.O60">#9990A4AE</Color>
+    <Color x:Key="Alr.Colors.BlueGray400.O60">#9978909C</Color>
+    <Color x:Key="Alr.Colors.BlueGray500.O60">#99607D8B</Color>
+    <Color x:Key="Alr.Colors.BlueGray600.O60">#99546E7A</Color>
+    <Color x:Key="Alr.Colors.BlueGray700.O60">#99455A64</Color>
+    <Color x:Key="Alr.Colors.BlueGray800.O60">#9937474F</Color>
+    <Color x:Key="Alr.Colors.BlueGray900.O60">#99263238</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray50.O60" Color="{StaticResource Alr.Colors.BlueGray50.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray100.O60" Color="{StaticResource Alr.Colors.BlueGray100.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray200.O60" Color="{StaticResource Alr.Colors.BlueGray200.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray300.O60" Color="{StaticResource Alr.Colors.BlueGray300.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray400.O60" Color="{StaticResource Alr.Colors.BlueGray400.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray500.O60" Color="{StaticResource Alr.Colors.BlueGray500.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray600.O60" Color="{StaticResource Alr.Colors.BlueGray600.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray700.O60" Color="{StaticResource Alr.Colors.BlueGray700.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray800.O60" Color="{StaticResource Alr.Colors.BlueGray800.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray900.O60" Color="{StaticResource Alr.Colors.BlueGray900.O60}" options:Freeze="True" />
+
+    <!-- Blue Gray 40% Opacity -->
+    <Color x:Key="Alr.Colors.BlueGray50.O40">#66ECEFF1</Color>
+    <Color x:Key="Alr.Colors.BlueGray100.O40">#66CFD8DC</Color>
+    <Color x:Key="Alr.Colors.BlueGray200.O40">#66B0BEC5</Color>
+    <Color x:Key="Alr.Colors.BlueGray300.O40">#6690A4AE</Color>
+    <Color x:Key="Alr.Colors.BlueGray400.O40">#6678909C</Color>
+    <Color x:Key="Alr.Colors.BlueGray500.O40">#66607D8B</Color>
+    <Color x:Key="Alr.Colors.BlueGray600.O40">#66546E7A</Color>
+    <Color x:Key="Alr.Colors.BlueGray700.O40">#66455A64</Color>
+    <Color x:Key="Alr.Colors.BlueGray800.O40">#6637474F</Color>
+    <Color x:Key="Alr.Colors.BlueGray900.O40">#66263238</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray50.O40" Color="{StaticResource Alr.Colors.BlueGray50.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray100.O40" Color="{StaticResource Alr.Colors.BlueGray100.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray200.O40" Color="{StaticResource Alr.Colors.BlueGray200.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray300.O40" Color="{StaticResource Alr.Colors.BlueGray300.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray400.O40" Color="{StaticResource Alr.Colors.BlueGray400.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray500.O40" Color="{StaticResource Alr.Colors.BlueGray500.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray600.O40" Color="{StaticResource Alr.Colors.BlueGray600.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray700.O40" Color="{StaticResource Alr.Colors.BlueGray700.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray800.O40" Color="{StaticResource Alr.Colors.BlueGray800.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray900.O40" Color="{StaticResource Alr.Colors.BlueGray900.O40}" options:Freeze="True" />
+
+    <!-- Blue Gray 20% Opacity -->
+    <Color x:Key="Alr.Colors.BlueGray50.O20">#33ECEFF1</Color>
+    <Color x:Key="Alr.Colors.BlueGray100.O20">#33CFD8DC</Color>
+    <Color x:Key="Alr.Colors.BlueGray200.O20">#33B0BEC5</Color>
+    <Color x:Key="Alr.Colors.BlueGray300.O20">#3390A4AE</Color>
+    <Color x:Key="Alr.Colors.BlueGray400.O20">#3378909C</Color>
+    <Color x:Key="Alr.Colors.BlueGray500.O20">#33607D8B</Color>
+    <Color x:Key="Alr.Colors.BlueGray600.O20">#33546E7A</Color>
+    <Color x:Key="Alr.Colors.BlueGray700.O20">#33455A64</Color>
+    <Color x:Key="Alr.Colors.BlueGray800.O20">#3337474F</Color>
+    <Color x:Key="Alr.Colors.BlueGray900.O20">#33263238</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray50.O20" Color="{StaticResource Alr.Colors.BlueGray50.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray100.O20" Color="{StaticResource Alr.Colors.BlueGray100.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray200.O20" Color="{StaticResource Alr.Colors.BlueGray200.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray300.O20" Color="{StaticResource Alr.Colors.BlueGray300.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray400.O20" Color="{StaticResource Alr.Colors.BlueGray400.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray500.O20" Color="{StaticResource Alr.Colors.BlueGray500.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray600.O20" Color="{StaticResource Alr.Colors.BlueGray600.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray700.O20" Color="{StaticResource Alr.Colors.BlueGray700.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray800.O20" Color="{StaticResource Alr.Colors.BlueGray800.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.BlueGray900.O20" Color="{StaticResource Alr.Colors.BlueGray900.O20}" options:Freeze="True" />
+</ResourceDictionary>

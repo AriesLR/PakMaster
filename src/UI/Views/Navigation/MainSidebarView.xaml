@@ -1,0 +1,97 @@
+<UserControl x:Class="PakMaster.UI.Views.Navigation.MainSidebarView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:local="clr-namespace:PakMaster.UI.Views.Navigation"
+             xmlns:viewmodels="clr-namespace:PakMaster.UI.State"
+             xmlns:lex="http://wpflocalizeextension.codeplex.com"
+             lex:LocalizeDictionary.DesignCulture="en"
+             lex:ResxLocalizationProvider.DefaultAssembly="PakMaster"
+             lex:ResxLocalizationProvider.DefaultDictionary="PakMaster.UI.Resources.Resources"
+             xmlns:extensions="clr-namespace:PakMaster.Core.Extensions"
+             FlowDirection="{extensions:FlowDirection}"
+             d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowState}"
+             mc:Ignorable="d"
+             d:DesignHeight="750" d:DesignWidth="250">
+
+    <Border BorderBrush="{DynamicResource MahApps.Brushes.Accent3}" BorderThickness="0 0 1 0">
+        <!-- To enable the top sidebar items replace ItemsSource="{x:Null}" with ItemsSource="{Binding MenuItems}" -->
+        <mah:HamburgerMenu Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Stretch"
+                                       IsPaneOpen="{Binding IsPaneOpen, RelativeSource={RelativeSource AncestorType=mah:SplitView}, Mode=TwoWay}"
+                                       CompactPaneLength="50" OpenPaneLength="250"
+                                       PaneBackground="{DynamicResource MahApps.Brushes.Accent}" Foreground="{DynamicResource MahApps.Brushes.Gray1}"
+                                       HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
+                                       Background="Transparent" Width="250"
+
+                                       ItemTemplate="{DynamicResource MenuTemplate}"
+                                       ItemContainerStyle="{DynamicResource ItemStyle}"
+                                       ItemsSource="{x:Null}"
+
+                                       OptionsItemTemplate="{DynamicResource MenuTemplate}"
+                                       OptionsItemContainerStyle="{DynamicResource ItemStyle}"
+                                       OptionsItemsSource="{Binding OptionsMenuItems}">
+
+            <mah:HamburgerMenu.Resources>
+                <SolidColorBrush x:Key="MahApps.HamburgerMenu.Pane.Foreground" Color="{DynamicResource MahApps.Colors.Gray1}" />
+
+                <DataTemplate x:Key="MenuTemplate">
+                    <Button Command="{Binding Command}"
+                                        HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+                                        HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch"
+                                        Background="Transparent" BorderThickness="0">
+                        <Button.Template>
+                            <ControlTemplate TargetType="Button">
+                                <Grid HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="{TemplateBinding Background}">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="Auto" />
+                                        <ColumnDefinition Width="*" />
+                                    </Grid.ColumnDefinitions>
+
+                                    <iconPacks:PackIconMaterial Width="25" Height="25"
+                                                                            Foreground="{DynamicResource MahApps.Brushes.Gray1}"
+                                                                            Kind="{Binding Icon}"
+                                                                            VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                                            Margin="12,10,10,10" Grid.Column="0">
+                                        <iconPacks:PackIconMaterial.ToolTip>
+                                            <TextBlock><Run Text="{Binding Text}" /></TextBlock>
+                                        </iconPacks:PackIconMaterial.ToolTip>
+                                    </iconPacks:PackIconMaterial>
+
+                                    <TextBlock Text="{Binding Text}"
+                                                           Foreground="{DynamicResource MahApps.Brushes.Gray1}"
+                                                           FontSize="16" FontWeight="Bold"
+                                                           VerticalAlignment="Center" HorizontalAlignment="Left"
+                                                           Margin="5,10,10,10" Grid.Column="1" />
+                                </Grid>
+                            </ControlTemplate>
+                        </Button.Template>
+                    </Button>
+                </DataTemplate>
+
+                <Style x:Key="ItemStyle" TargetType="ListBoxItem">
+                    <Setter Property="Background" Value="Transparent" />
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                    <Setter Property="VerticalContentAlignment" Value="Center" />
+                    <Setter Property="Padding" Value="5" />
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="ListBoxItem">
+                                <Grid x:Name="RootGrid" Background="{TemplateBinding Background}">
+                                    <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                                </Grid>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsMouseOver" Value="True">
+                                        <Setter TargetName="RootGrid" Property="Background" Value="{DynamicResource MahApps.Brushes.Accent}" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </mah:HamburgerMenu.Resources>
+        </mah:HamburgerMenu>
+    </Border>
+</UserControl>

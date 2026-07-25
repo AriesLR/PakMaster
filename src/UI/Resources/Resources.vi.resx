@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppSettings_Title" xml:space="preserve">
+    <value>Cài đặt ứng dụng</value>
+  </data>
+  <data name="AppSettings_Section_Appearance" xml:space="preserve">
+    <value>Hình thức</value>
+  </data>
+  <data name="AppSettings_Lbl_Language" xml:space="preserve">
+    <value>Ngôn ngữ</value>
+  </data>
+  <data name="AppSettings_Desc_Language" xml:space="preserve">
+    <value>Chọn ngôn ngữ được sử dụng trong toàn bộ ứng dụng.</value>
+  </data>
+  <data name="AppSettings_Lbl_AccentColor" xml:space="preserve">
+    <value>Màu nhấn</value>
+  </data>
+  <data name="AppSettings_Desc_AccentColor" xml:space="preserve">
+    <value>Chọn màu nhấn được sử dụng trong toàn bộ ứng dụng.</value>
+  </data>
+  <data name="AppSettings_Lbl_InterfaceScale" xml:space="preserve">
+    <value>Tỷ lệ giao diện</value>
+  </data>
+  <data name="AppSettings_Desc_InterfaceScale" xml:space="preserve">
+    <value>Điều chỉnh kích thước hiển thị của giao diện người dùng. Tính năng này rất hữu ích khi sử dụng trên các màn hình có độ phân giải cao hoặc để cải thiện khả năng đọc.</value>
+  </data>
+  <data name="AppSettings_Section_ApplicationBehavior" xml:space="preserve">
+    <value>Hành vi của ứng dụng</value>
+  </data>
+  <data name="AppSettings_Lbl_StartWithWindows" xml:space="preserve">
+    <value>Bắt đầu với Windows</value>
+  </data>
+  <data name="AppSettings_Desc_StartWithWindows" xml:space="preserve">
+    <value>Tự động khởi chạy ứng dụng khi Windows khởi động.</value>
+  </data>
+  <data name="AppSettings_Lbl_AlwaysOnTop" xml:space="preserve">
+    <value>Luôn ở trên cùng</value>
+  </data>
+  <data name="AppSettings_Desc_AlwaysOnTop" xml:space="preserve">
+    <value>Luôn giữ cửa sổ ứng dụng ở trên cùng so với tất cả các cửa sổ đang mở khác.</value>
+  </data>
+  <data name="AppSettings_Lbl_MinimizeToTray" xml:space="preserve">
+    <value>Thu nhỏ xuống khay hệ thống</value>
+  </data>
+  <data name="AppSettings_Desc_MinimizeToTray" xml:space="preserve">
+    <value>Khi thu nhỏ, ứng dụng sẽ được ẩn trong khay hệ thống thay vì vẫn hiển thị trên thanh tác vụ.</value>
+  </data>
+  <data name="AppSettings_Section_Updates" xml:space="preserve">
+    <value>Cập nhật</value>
+  </data>
+  <data name="AppSettings_Lbl_CheckForUpdatesOnStartup" xml:space="preserve">
+    <value>Kiểm tra các bản cập nhật khi khởi động</value>
+  </data>
+  <data name="AppSettings_Desc_CheckForUpdatesOnStartup" xml:space="preserve">
+    <value>Hãy đảm bảo ứng dụng luôn được cập nhật bằng cách kiểm tra các bản cập nhật khi khởi động.</value>
+  </data>
+  <data name="AppSettings_Lbl_CheckForUpdates" xml:space="preserve">
+    <value>Kiểm tra các bản cập nhật</value>
+  </data>
+  <data name="AppSettings_Desc_CheckForUpdates" xml:space="preserve">
+    <value>Hãy kiểm tra ngay phiên bản mới nhất theo cách thủ công.</value>
+  </data>
+  <data name="AppSettings_Btn_CheckForUpdates" xml:space="preserve">
+    <value>Kiểm tra các bản cập nhật</value>
+  </data>
+  <data name="AppSettings_Section_Logging" xml:space="preserve">
+    <value>Ghi nhật ký</value>
+  </data>
+  <data name="AppSettings_Lbl_EnableDebugLogging" xml:space="preserve">
+    <value>Bật ghi nhật ký gỡ lỗi</value>
+  </data>
+  <data name="AppSettings_Desc_EnableDebugLogging" xml:space="preserve">
+    <value>Tạo tệp nhật ký để hỗ trợ việc xác định các sự cố của ứng dụng.</value>
+  </data>
+  <data name="AppSettings_Btn_OpenLogsFolder" xml:space="preserve">
+    <value>Mở thư mục Logs</value>
+  </data>
+  <data name="AppSettings_Section_Maintenance" xml:space="preserve">
+    <value>Bảo trì</value>
+  </data>
+  <data name="AppSettings_Lbl_ResetToFactorySettings" xml:space="preserve">
+    <value>Khôi phục cài đặt gốc</value>
+  </data>
+  <data name="AppSettings_Desc_ResetToFactorySettings" xml:space="preserve">
+    <value>Xóa các cài đặt hiện tại của ứng dụng và khôi phục về cài đặt mặc định ban đầu.</value>
+  </data>
+  <data name="AppSettings_Btn_ResetSettings" xml:space="preserve">
+    <value>Đặt lại cài đặt</value>
+  </data>
+  <data name="AppSettings_Lbl_ResetWindowPosition" xml:space="preserve">
+    <value>Đặt lại vị trí cửa sổ</value>
+  </data>
+  <data name="AppSettings_Desc_ResetWindowPosition" xml:space="preserve">
+    <value>Khôi phục kích thước mặc định của cửa sổ chính và căn chỉnh lại cửa sổ đó về vị trí chính giữa màn hình chính của bạn.</value>
+  </data>
+  <data name="AppSettings_Btn_ResetPosition" xml:space="preserve">
+    <value>Đặt lại vị trí</value>
+  </data>
+  <data name="AppSettings_Btn_OpenAppConfigFolder" xml:space="preserve">
+    <value>Mở thư mục cấu hình ứng dụng</value>
+  </data>
+  <data name="AppSettings_Footer_YourChangesAreSavedAutomatically" xml:space="preserve">
+    <value>Các thay đổi của bạn sẽ được lưu tự động.</value>
+  </data>
+  <data name="About_Title" xml:space="preserve">
+    <value>Giới thiệu</value>
+  </data>
+  <data name="About_Section_SupportTheDeveloper" xml:space="preserve">
+    <value>Hỗ trợ nhà phát triển</value>
+  </data>
+  <data name="About_Section_SupportTheDeveloper_Desc" xml:space="preserve">
+    <value>Nếu ứng dụng này đã giúp ích cho bạn, hoặc đơn giản là hôm nay bạn cảm thấy hào phóng, tôi rất biết ơn mọi khoản đóng góp. Tôi không có công ty nào trả lương để phát triển những công cụ này; tôi làm tất cả những việc này trong thời gian rảnh rỗi. Chính vì vậy, mọi sự ủng hộ mà tôi nhận được đều hoàn toàn đến từ những người dùng tuyệt vời của các ứng dụng này.</value>
+  </data>
+  <data name="About_Section_ApplicationInformation" xml:space="preserve">
+    <value>Thông tin về đơn đăng ký</value>
+  </data>
+  <data name="About_Lbl_Name" xml:space="preserve">
+    <value>TÊN</value>
+  </data>
+  <data name="About_Lbl_Version" xml:space="preserve">
+    <value>PHIÊN BẢN</value>
+  </data>
+  <data name="About_Lbl_Developer" xml:space="preserve">
+    <value>NHÀ PHÁT TRIỂN</value>
+  </data>
+  <data name="About_Lbl_License" xml:space="preserve">
+    <value>GIẤY PHÉP</value>
+  </data>
+  <data name="About_Lbl_TargetFramework" xml:space="preserve">
+    <value>KHUNG MỤC TIÊU</value>
+  </data>
+  <data name="About_Lbl_OsArchitecture" xml:space="preserve">
+    <value>KIẾN TRÚC HỆ ĐIỀU HÀNH</value>
+  </data>
+  <data name="Num_AppSettings_Flyout_Width" xml:space="preserve">
+    <value>500</value>
+  </data>
+  <data name="Num_AppSettings_Btn_CheckForUpdates_Width" xml:space="preserve">
+    <value>215</value>
+  </data>
+  <data name="Num_AppSettings_Btn_ResetToFactorySettings_Width" xml:space="preserve">
+    <value>200</value>
+  </data>
+  <data name="Toast_Title_ConfigurationSaved" xml:space="preserve">
+    <value>Đã lưu cấu hình</value>
+  </data>
+  <data name="Toast_Desc_ConfigurationSaved" xml:space="preserve">
+    <value>Các thay đổi đã được áp dụng thành công.</value>
+  </data>
+  <data name="MainWindow_Btn_OpenTheGitHubRepo" xml:space="preserve">
+    <value>Mở kho lưu trữ GitHub trong trình duyệt của bạn.</value>
+  </data>
+  <data name="App_ReportProgress_InitLogging" xml:space="preserve">
+    <value>Đang khởi tạo chẩn đoán...</value>
+  </data>
+  <data name="App_ReportProgress_InitAppSettings" xml:space="preserve">
+    <value>Đang khởi tạo cài đặt ứng dụng...</value>
+  </data>
+  <data name="App_ReportProgress_InitDepedencyService" xml:space="preserve">
+    <value>Đang khởi tạo dịch vụ phụ thuộc...</value>
+  </data>
+  <data name="App_ReportProgress_InitTelemetryService" xml:space="preserve">
+    <value>Đang khởi tạo dịch vụ đo từ xa...</value>
+  </data>
+  <data name="App_ReportProgress_Final" xml:space="preserve">
+    <value>Đang hoàn thiện những chi tiết cuối cùng...</value>
+  </data>
+  <data name="CrashReportWindow_Title" xml:space="preserve">
+    <value>{0} | Trình báo lỗi</value>
+  </data>
+  <data name="CrashReportWindow_Header_SomethingWentWrong" xml:space="preserve">
+    <value>Đã xảy ra sự cố</value>
+  </data>
+  <data name="CrashReportWindow_Desc" xml:space="preserve">
+    <value>Một lỗi không mong muốn đã khiến ứng dụng bị treo.</value>
+  </data>
+  <data name="CrashReportWindow_Lbl_Exception" xml:space="preserve">
+    <value>Trường hợp ngoại lệ:</value>
+  </data>
+  <data name="CrashReportWindow_Lbl_ExceptionPlaceholder" xml:space="preserve">
+    <value>[Thông báo lỗi]</value>
+  </data>
+  <data name="CrashReportWindow_Lbl_LogFileLocation" xml:space="preserve">
+    <value>Vị trí tệp nhật ký:</value>
+  </data>
+  <data name="CrashReportWindow_Lbl_Details" xml:space="preserve">
+    <value>Chi tiết</value>
+  </data>
+  <data name="CrashReportWindow_Lbl_DetailsPlaceholder" xml:space="preserve">
+    <value>[Chỗ trống dành cho thông tin chi tiết]</value>
+  </data>
+  <data name="CrashReportWindow_Btn_Close" xml:space="preserve">
+    <value>Đóng</value>
+  </data>
+  <data name="CrashReportWindow_Btn_SendCrashReport" xml:space="preserve">
+    <value>Gửi báo cáo sự cố</value>
+  </data>
+  <data name="TrayIcon_Header_ShowApplication" xml:space="preserve">
+    <value>Hiển thị ứng dụng</value>
+  </data>
+  <data name="TrayIcon_Header_Exit" xml:space="preserve">
+    <value>Thoát</value>
+  </data>
+  <data name="Num_About_Flyout_Width" xml:space="preserve">
+    <value>450</value>
+  </data>
+  <data name="Btn_Yes" xml:space="preserve">
+    <value>Đúng vậy</value>
+  </data>
+  <data name="Btn_No" xml:space="preserve">
+    <value>Không</value>
+  </data>
+  <data name="Btn_Cancel" xml:space="preserve">
+    <value>Hủy</value>
+  </data>
+  <data name="Btn_Ok" xml:space="preserve">
+    <value>Được rồi</value>
+  </data>
+  <data name="Btn_Browse" xml:space="preserve">
+    <value>Duyệt qua</value>
+  </data>
+  <data name="App_Msg_StartupError_Desc" xml:space="preserve">
+    <value>Đã xảy ra một lỗi cấu hình nghiêm trọng trong quá trình khởi động.</value>
+  </data>
+  <data name="App_Msg_StartupError_Title" xml:space="preserve">
+    <value>Lỗi khởi tạo</value>
+  </data>
+  <data name="App_Msg_CrashReporterError_Desc" xml:space="preserve">
+    <value>Đã xảy ra một lỗi nghiêm trọng và không thể khởi động trình báo cáo sự cố.
+
+Lỗi ban đầu: {0}
+
+Lỗi khởi động: {1}</value>
+  </data>
+  <data name="App_Msg_CrashReporterError_Title" xml:space="preserve">
+    <value>Sự cố ứng dụng nghiêm trọng dẫn đến treo máy</value>
+  </data>
+  <data name="App_Msg_AlreadyRunning_Desc" xml:space="preserve">
+    <value>Một phiên bản của ứng dụng này hiện đang chạy.</value>
+  </data>
+  <data name="App_Msg_AlreadyRunning_Title" xml:space="preserve">
+    <value>Ứng dụng đang chạy</value>
+  </data>
+  <data name="Msg_Error_Title" xml:space="preserve">
+    <value>Lỗi</value>
+  </data>
+  <data name="CrashReportWindow_Msg_SubmitError_Desc" xml:space="preserve">
+    <value>Không thể tự động khởi chạy quy trình tạo báo cáo.
+
+Vui lòng tạo một vấn đề thủ công và đính kèm tệp nhật ký của bạn.
+
+Đường dẫn tệp nhật ký: {0}
+
+Chi tiết lỗi: {1}</value>
+  </data>
+  <data name="UpdateService_Msg_FailedToRetrieve_Desc" xml:space="preserve">
+    <value>Không thể lấy được thông tin cập nhật hợp lệ.</value>
+  </data>
+  <data name="UpdateService_Msg_CheckForUpdates_Title" xml:space="preserve">
+    <value>Kiểm tra các bản cập nhật</value>
+  </data>
+  <data name="UpdateService_Msg_NewVersion_Desc" xml:space="preserve">
+    <value>Đã có phiên bản mới.
+
+Phiên bản mới nhất: {0}
+Phiên bản của bạn: {1}
+
+Bạn có muốn tải xuống phiên bản mới không?</value>
+  </data>
+  <data name="UpdateService_Msg_EasterEgg_Desc" xml:space="preserve">
+    <value>Cậu thật là một pháp sư, Harry!
+
+Phiên bản mới nhất: {0}
+Phiên bản của bạn: {1}
+
+Hãy báo cho tác giả biết rằng họ đã quên cập nhật số phiên bản.</value>
+  </data>
+  <data name="UpdateService_Msg_UpToDate_Desc" xml:space="preserve">
+    <value>Bạn đang sử dụng phiên bản mới nhất.
+
+Phiên bản mới nhất: {0}
+Phiên bản của bạn: {1}</value>
+  </data>
+  <data name="UpdateService_Msg_FailedToCheck_Desc" xml:space="preserve">
+    <value>Không thể kiểm tra các bản cập nhật: {0}</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_ResetToFactorySettings_Title" xml:space="preserve">
+    <value>Khôi phục cài đặt gốc</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_ResetToFactorySettings_Desc" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn khôi phục tất cả cài đặt ứng dụng về mặc định ban đầu không? Hành động này không thể hoàn tác được.</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_ResetToFactorySettingsComplete_Title" xml:space="preserve">
+    <value>Quá trình khôi phục cài đặt gốc đã hoàn tất</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_ResetToFactorySettingsComplete_Desc" xml:space="preserve">
+    <value>Tất cả các cài đặt của ứng dụng đã được khôi phục thành công về mặc định ban đầu.</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_ResetToFactorySettingsError_Desc" xml:space="preserve">
+    <value>Đã xảy ra một lỗi không mong muốn trong khi cố gắng xóa hồ sơ cấu hình của bạn.</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_StartWithWindowsToggleError_Desc" xml:space="preserve">
+    <value>Không thể cập nhật khóa khởi động trong sổ đăng ký: {0}</value>
+  </data>
+  <data name="DependencyService_Msg_DepsFound_Title" xml:space="preserve">
+    <value>Đã tìm thấy các phụ thuộc</value>
+  </data>
+  <data name="DependencyService_Msg_DepsFound_Desc" xml:space="preserve">
+    <value>Ứng dụng này cần có các thành phần bổ sung để hoạt động bình thường. Bạn có muốn tải xuống và cài đặt chúng ngay bây giờ không?</value>
+  </data>
+  <data name="DependencyService_Msg_InstallationBlocked_Title" xml:space="preserve">
+    <value>Quá trình cài đặt bị chặn</value>
+  </data>
+  <data name="DependencyService_Msg_InstallationBlocked_Desc" xml:space="preserve">
+    <value>Hiện tại có một chương trình cài đặt khác đang chạy trên máy tính của bạn. Vui lòng hoàn tất hoặc đóng các chương trình cài đặt khác, sau đó khởi động lại {0}.</value>
+  </data>
+  <data name="DependencyService_Msg_IncompatibleDependency_Title" xml:space="preserve">
+    <value>Phụ thuộc không tương thích</value>
+  </data>
+  <data name="DependencyService_Msg_IncompatibleDependency_Desc" xml:space="preserve">
+    <value>Tùy thuộc bắt buộc '{0}' hoàn toàn không được hỗ trợ trên nền tảng hệ điều hành hoặc kiến trúc của máy này.</value>
+  </data>
+  <data name="DependencyService_Msg_RestartRequired_Title" xml:space="preserve">
+    <value>Cần khởi động lại</value>
+  </data>
+  <data name="DependencyService_Msg_RestartRequired_Desc" xml:space="preserve">
+    <value>Một hoặc nhiều chương trình cài đặt cần khởi động lại hệ thống để hoạt động bình thường. Bạn có muốn khởi động lại máy tính ngay bây giờ không?</value>
+  </data>
+  <data name="FolderService_Msg_DoesNotExist_Desc" xml:space="preserve">
+    <value>Thư mục đích không tồn tại.
+
+Đường dẫn: {0}</value>
+  </data>
+  <data name="FolderService_Msg_FailedToOpen_Desc" xml:space="preserve">
+    <value>Không thể mở thư mục: {0}</value>
+  </data>
+  <data name="UrlService_Msg_FailedToOpenURL_Desc" xml:space="preserve">
+    <value>Không thể mở URL: {0}</value>
+  </data>
+  <data name="App_ReportProgress_InitThemeService" xml:space="preserve">
+    <value>Đang khởi tạo công cụ tạo chủ đề...</value>
+  </data>
+  <data name="App_ReportProgress_InitLanguageService" xml:space="preserve">
+    <value>Đang khởi tạo trình quản lý ngôn ngữ...</value>
+  </data>
+</root>

@@ -1,0 +1,542 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AppSettings_Title" xml:space="preserve">
+    <value>App Settings</value>
+    <comment>App settings header</comment>
+  </data>
+  <data name="AppSettings_Section_Appearance" xml:space="preserve">
+    <value>Appearance</value>
+    <comment>Appearance section</comment>
+  </data>
+  <data name="AppSettings_Lbl_Language" xml:space="preserve">
+    <value>Language</value>
+    <comment>Language dropdown label</comment>
+  </data>
+  <data name="AppSettings_Desc_Language" xml:space="preserve">
+    <value>Choose the language utilized across the application.</value>
+    <comment>Language dropdown description</comment>
+  </data>
+  <data name="AppSettings_Lbl_AccentColor" xml:space="preserve">
+    <value>Accent color</value>
+    <comment>Accent color dropdown label</comment>
+  </data>
+  <data name="AppSettings_Desc_AccentColor" xml:space="preserve">
+    <value>Choose the accent color utilized across the application.</value>
+    <comment>Accent color dropdown description</comment>
+  </data>
+  <data name="AppSettings_Lbl_InterfaceScale" xml:space="preserve">
+    <value>Interface scale</value>
+    <comment>Interface scale slider label</comment>
+  </data>
+  <data name="AppSettings_Desc_InterfaceScale" xml:space="preserve">
+    <value>Adjust the visual size of the user interface. Useful for high-resolution displays or improving readability.</value>
+    <comment>Interface scale slider desc</comment>
+  </data>
+  <data name="AppSettings_Section_ApplicationBehavior" xml:space="preserve">
+    <value>Application Behavior</value>
+    <comment>Application behavior section</comment>
+  </data>
+  <data name="AppSettings_Lbl_StartWithWindows" xml:space="preserve">
+    <value>Start with Windows</value>
+    <comment>Start with windows toggle label</comment>
+  </data>
+  <data name="AppSettings_Desc_StartWithWindows" xml:space="preserve">
+    <value>Automatically launch the application when Windows starts.</value>
+    <comment>Start with windows toggle desc</comment>
+  </data>
+  <data name="AppSettings_Lbl_AlwaysOnTop" xml:space="preserve">
+    <value>Always on top</value>
+    <comment>Always on top toggle label</comment>
+  </data>
+  <data name="AppSettings_Desc_AlwaysOnTop" xml:space="preserve">
+    <value>Keep the application window pinned above all other open windows.</value>
+    <comment>Always on top toggle desc</comment>
+  </data>
+  <data name="AppSettings_Lbl_MinimizeToTray" xml:space="preserve">
+    <value>Minimize to tray</value>
+    <comment>Minimize to tray toggle label</comment>
+  </data>
+  <data name="AppSettings_Desc_MinimizeToTray" xml:space="preserve">
+    <value>When minimized, the application will be hidden in the system tray instead of remaining on the taskbar.</value>
+    <comment>Minimize to tray toggle desc</comment>
+  </data>
+  <data name="AppSettings_Section_Updates" xml:space="preserve">
+    <value>Updates</value>
+    <comment>Updates section</comment>
+  </data>
+  <data name="AppSettings_Lbl_CheckForUpdatesOnStartup" xml:space="preserve">
+    <value>Check for updates on startup</value>
+    <comment>Check for updates on startup toggle label</comment>
+  </data>
+  <data name="AppSettings_Desc_CheckForUpdatesOnStartup" xml:space="preserve">
+    <value>Keep the application up to date by checking for updates on startup.</value>
+    <comment>Check for updates on startup toggle desc</comment>
+  </data>
+  <data name="AppSettings_Lbl_CheckForUpdates" xml:space="preserve">
+    <value>Check for updates</value>
+    <comment>Check for updates button label</comment>
+  </data>
+  <data name="AppSettings_Desc_CheckForUpdates" xml:space="preserve">
+    <value>Manually check for the latest version immediately.</value>
+    <comment>Check for updates button desc</comment>
+  </data>
+  <data name="AppSettings_Btn_CheckForUpdates" xml:space="preserve">
+    <value>Check for Updates</value>
+    <comment>Check for updates button</comment>
+  </data>
+  <data name="AppSettings_Section_Logging" xml:space="preserve">
+    <value>Logging</value>
+    <comment>Logging section</comment>
+  </data>
+  <data name="AppSettings_Lbl_EnableDebugLogging" xml:space="preserve">
+    <value>Enable debug logging</value>
+    <comment>Enable debug logging toggle label</comment>
+  </data>
+  <data name="AppSettings_Desc_EnableDebugLogging" xml:space="preserve">
+    <value>Generate a log file to help track down application issues.</value>
+    <comment>Enable debug logging toggle desc</comment>
+  </data>
+  <data name="AppSettings_Btn_OpenLogsFolder" xml:space="preserve">
+    <value>Open Logs Folder</value>
+    <comment>Open logs folder button</comment>
+  </data>
+  <data name="AppSettings_Section_Maintenance" xml:space="preserve">
+    <value>Maintenance</value>
+    <comment>Maintenance section</comment>
+  </data>
+  <data name="AppSettings_Lbl_ResetToFactorySettings" xml:space="preserve">
+    <value>Reset to factory settings</value>
+    <comment>Reset to factory settings button label</comment>
+  </data>
+  <data name="AppSettings_Desc_ResetToFactorySettings" xml:space="preserve">
+    <value>Delete the application's current settings and replace them with the factory defaults.</value>
+    <comment>Reset to factory settings button desc</comment>
+  </data>
+  <data name="AppSettings_Btn_ResetSettings" xml:space="preserve">
+    <value>Reset Settings</value>
+    <comment>Reset settings button</comment>
+  </data>
+  <data name="AppSettings_Lbl_ResetWindowPosition" xml:space="preserve">
+    <value>Reset window position</value>
+    <comment>Reset window position button label</comment>
+  </data>
+  <data name="AppSettings_Desc_ResetWindowPosition" xml:space="preserve">
+    <value>Restores the main window to its default dimensions and snaps it back to the center of your primary monitor.</value>
+    <comment>Reset window position button desc</comment>
+  </data>
+  <data name="AppSettings_Btn_ResetPosition" xml:space="preserve">
+    <value>Reset Position</value>
+    <comment>Reset position button</comment>
+  </data>
+  <data name="AppSettings_Btn_OpenAppConfigFolder" xml:space="preserve">
+    <value>Open App Config Folder</value>
+    <comment>Open app config folder button</comment>
+  </data>
+  <data name="AppSettings_Footer_YourChangesAreSavedAutomatically" xml:space="preserve">
+    <value>Your changes are saved automatically.</value>
+    <comment>App settings footer text</comment>
+  </data>
+  <data name="About_Title" xml:space="preserve">
+    <value>About</value>
+    <comment>About flyout title</comment>
+  </data>
+  <data name="About_Section_SupportTheDeveloper" xml:space="preserve">
+    <value>Support the Developer</value>
+    <comment>Support the dev section</comment>
+  </data>
+  <data name="About_Section_SupportTheDeveloper_Desc" xml:space="preserve">
+    <value>If this app has helped you out, or if you're just feeling generous today, any tips are appreciated. I don't have a company paying me to build these tools; I do all of this in my free time. Because of that, any support I get comes entirely from the great people who use my apps.</value>
+    <comment>Support the dev section desc</comment>
+  </data>
+  <data name="About_Section_ApplicationInformation" xml:space="preserve">
+    <value>Application Information</value>
+    <comment>App information section</comment>
+  </data>
+  <data name="About_Lbl_Name" xml:space="preserve">
+    <value>NAME</value>
+    <comment>Appinfo name label</comment>
+  </data>
+  <data name="About_Lbl_Version" xml:space="preserve">
+    <value>VERSION</value>
+    <comment>Appinfo version label</comment>
+  </data>
+  <data name="About_Lbl_Developer" xml:space="preserve">
+    <value>DEVELOPER</value>
+    <comment>Appinfo developer label</comment>
+  </data>
+  <data name="About_Lbl_License" xml:space="preserve">
+    <value>LICENSE</value>
+    <comment>Appinfo license label</comment>
+  </data>
+  <data name="About_Lbl_TargetFramework" xml:space="preserve">
+    <value>TARGET FRAMEWORK</value>
+    <comment>Appinfo target framework label</comment>
+  </data>
+  <data name="About_Lbl_OsArchitecture" xml:space="preserve">
+    <value>OS ARCHITECTURE</value>
+    <comment>Appinfo OS architecture label</comment>
+  </data>
+  <data name="Num_AppSettings_Flyout_Width" xml:space="preserve">
+    <value>450</value>
+    <comment>AppSettings flyout width</comment>
+  </data>
+  <data name="Num_AppSettings_Btn_CheckForUpdates_Width" xml:space="preserve">
+    <value>180</value>
+    <comment>Check for updates button width</comment>
+  </data>
+  <data name="Num_AppSettings_Btn_ResetToFactorySettings_Width" xml:space="preserve">
+    <value>180</value>
+    <comment>Reset to factory settings button width</comment>
+  </data>
+  <data name="Toast_Title_ConfigurationSaved" xml:space="preserve">
+    <value>Configuration Saved</value>
+    <comment>Config saved toast title</comment>
+  </data>
+  <data name="Toast_Desc_ConfigurationSaved" xml:space="preserve">
+    <value>Changes applied successfully.</value>
+    <comment>Config saved toast desc</comment>
+  </data>
+  <data name="MainWindow_Btn_OpenTheGitHubRepo" xml:space="preserve">
+    <value>Open the GitHub repository in your browser.</value>
+    <comment>Open GitHub repo button</comment>
+  </data>
+  <data name="App_ReportProgress_InitLogging" xml:space="preserve">
+    <value>Initializing diagnostics...</value>
+    <comment>Init Logging</comment>
+  </data>
+  <data name="App_ReportProgress_InitAppSettings" xml:space="preserve">
+    <value>Initializing application settings...</value>
+    <comment>Init App Settings</comment>
+  </data>
+  <data name="App_ReportProgress_InitDepedencyService" xml:space="preserve">
+    <value>Initializing dependency service...</value>
+    <comment>Init DependencyService</comment>
+  </data>
+  <data name="App_ReportProgress_InitThemeService" xml:space="preserve">
+    <value>Initializing theme builder...</value>
+    <comment>Init ThemeBuilder</comment>
+  </data>
+  <data name="App_ReportProgress_InitTelemetryService" xml:space="preserve">
+    <value>Initializing telemetry service...</value>
+    <comment>Init TelemetryService</comment>
+  </data>
+  <data name="App_ReportProgress_Final" xml:space="preserve">
+    <value>Applying final touches...</value>
+    <comment>Final splash message</comment>
+  </data>
+  <data name="CrashReportWindow_Title" xml:space="preserve">
+    <value>{0} | Crash Reporter</value>
+    <comment>Crash reporter window title</comment>
+  </data>
+  <data name="CrashReportWindow_Header_SomethingWentWrong" xml:space="preserve">
+    <value>Something went wrong</value>
+    <comment>Crash report window header</comment>
+  </data>
+  <data name="CrashReportWindow_Desc" xml:space="preserve">
+    <value>An unexpected error caused the application to crash.</value>
+    <comment>Crash report window desc</comment>
+  </data>
+  <data name="CrashReportWindow_Lbl_Exception" xml:space="preserve">
+    <value>Exception:</value>
+    <comment>Exception label</comment>
+  </data>
+  <data name="CrashReportWindow_Lbl_ExceptionPlaceholder" xml:space="preserve">
+    <value>[Exception Message]</value>
+    <comment>Exception message placeholder</comment>
+  </data>
+  <data name="CrashReportWindow_Lbl_LogFileLocation" xml:space="preserve">
+    <value>Log File Location:</value>
+    <comment>Log file location label</comment>
+  </data>
+  <data name="CrashReportWindow_Lbl_Details" xml:space="preserve">
+    <value>Details</value>
+    <comment>Details label</comment>
+  </data>
+  <data name="CrashReportWindow_Lbl_DetailsPlaceholder" xml:space="preserve">
+    <value>[Details Placeholder]</value>
+    <comment>Details section placeholder</comment>
+  </data>
+  <data name="CrashReportWindow_Btn_Close" xml:space="preserve">
+    <value>Close</value>
+    <comment>Close button</comment>
+  </data>
+  <data name="CrashReportWindow_Btn_SendCrashReport" xml:space="preserve">
+    <value>Send Crash Report</value>
+    <comment>Send crash report button</comment>
+  </data>
+  <data name="TrayIcon_Header_ShowApplication" xml:space="preserve">
+    <value>Show Application</value>
+    <comment>Show app header</comment>
+  </data>
+  <data name="TrayIcon_Header_Exit" xml:space="preserve">
+    <value>Exit</value>
+    <comment>Exit header</comment>
+  </data>
+  <data name="Num_About_Flyout_Width" xml:space="preserve">
+    <value>450</value>
+    <comment>About flyout width</comment>
+  </data>
+  <data name="Btn_Yes" xml:space="preserve">
+    <value>Yes</value>
+    <comment>Btn text</comment>
+  </data>
+  <data name="Btn_No" xml:space="preserve">
+    <value>No</value>
+    <comment>Btn text</comment>
+  </data>
+  <data name="Btn_Cancel" xml:space="preserve">
+    <value>Cancel</value>
+    <comment>Btn text</comment>
+  </data>
+  <data name="Btn_Ok" xml:space="preserve">
+    <value>Ok</value>
+    <comment>Btn text</comment>
+  </data>
+  <data name="Btn_Browse" xml:space="preserve">
+    <value>Browse</value>
+    <comment>Btn text</comment>
+  </data>
+  <data name="App_Msg_StartupError_Desc" xml:space="preserve">
+    <value>A critical setup error occurred during startup.</value>
+    <comment>App messagebox startup error desc</comment>
+  </data>
+  <data name="App_Msg_StartupError_Title" xml:space="preserve">
+    <value>Initialization Error</value>
+    <comment>App message startup error title</comment>
+  </data>
+  <data name="App_Msg_CrashReporterError_Desc" xml:space="preserve">
+    <value>A critical error occurred and the crash reporter could not be started.
+
+Original Error: {0}
+
+Launch Error: {1}</value>
+    <comment>App message crash reporter error desc</comment>
+  </data>
+  <data name="App_Msg_CrashReporterError_Title" xml:space="preserve">
+    <value>Fatal Application Crash</value>
+    <comment>App msg crash reporter error title</comment>
+  </data>
+  <data name="App_Msg_AlreadyRunning_Desc" xml:space="preserve">
+    <value>An instance of this application is already running.</value>
+    <comment>App msg already running desc</comment>
+  </data>
+  <data name="App_Msg_AlreadyRunning_Title" xml:space="preserve">
+    <value>Application Already Running</value>
+  </data>
+  <data name="Msg_Error_Title" xml:space="preserve">
+    <value>Error</value>
+  </data>
+  <data name="CrashReportWindow_Msg_SubmitError_Desc" xml:space="preserve">
+    <value>Unable to launch the report pipeline automatically.
+
+Please create an issue manually and attach your log file.
+
+Log Path: {0}
+
+Error details: {1}</value>
+  </data>
+  <data name="App_ReportProgress_InitLanguageService" xml:space="preserve">
+    <value>Initializing language manager...</value>
+  </data>
+  <data name="UpdateService_Msg_FailedToRetrieve_Desc" xml:space="preserve">
+    <value>Failed to retrieve valid update information.</value>
+  </data>
+  <data name="UpdateService_Msg_CheckForUpdates_Title" xml:space="preserve">
+    <value>Check For Updates</value>
+  </data>
+  <data name="UpdateService_Msg_NewVersion_Desc" xml:space="preserve">
+    <value>A new version is available.
+
+Latest Version: {0}
+Your Version: {1}
+
+Would you like to download the new version?</value>
+  </data>
+  <data name="UpdateService_Msg_EasterEgg_Desc" xml:space="preserve">
+    <value>You're a wizard, harry!
+
+Latest Version: {0}
+Your Version: {1}
+
+Tell the author they forgot to update the version number.</value>
+  </data>
+  <data name="UpdateService_Msg_UpToDate_Desc" xml:space="preserve">
+    <value>You are already using the latest version.
+
+Latest Version: {0}
+Your Version: {1}</value>
+  </data>
+  <data name="UpdateService_Msg_FailedToCheck_Desc" xml:space="preserve">
+    <value>Failed to check for updates: {0}</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_ResetToFactorySettings_Title" xml:space="preserve">
+    <value>Factory Reset Settings</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_ResetToFactorySettings_Desc" xml:space="preserve">
+    <value>Are you absolutely sure you want to reset all application settings back to factory defaults? This action cannot be undone.</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_ResetToFactorySettingsComplete_Title" xml:space="preserve">
+    <value>Reset Complete</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_ResetToFactorySettingsComplete_Desc" xml:space="preserve">
+    <value>All application settings have been restored to factory defaults successfully.</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_ResetToFactorySettingsError_Desc" xml:space="preserve">
+    <value>An unexpected error occurred while attempting to wipe your configuration profile.</value>
+  </data>
+  <data name="MainWindowFlyoutsView_Msg_StartWithWindowsToggleError_Desc" xml:space="preserve">
+    <value>Failed to update registry startup key: {0}</value>
+  </data>
+  <data name="DependencyService_Msg_DepsFound_Title" xml:space="preserve">
+    <value>Dependencies Found</value>
+  </data>
+  <data name="DependencyService_Msg_DepsFound_Desc" xml:space="preserve">
+    <value>This application requires additional components to function correctly. Do you want to download and install them now?</value>
+  </data>
+  <data name="DependencyService_Msg_InstallationBlocked_Title" xml:space="preserve">
+    <value>Installation Blocked</value>
+  </data>
+  <data name="DependencyService_Msg_InstallationBlocked_Desc" xml:space="preserve">
+    <value>Another installation is currently running on your computer. Please complete or close other installers, then restart {0}.</value>
+  </data>
+  <data name="DependencyService_Msg_IncompatibleDependency_Title" xml:space="preserve">
+    <value>Incompatible Dependency</value>
+  </data>
+  <data name="DependencyService_Msg_IncompatibleDependency_Desc" xml:space="preserve">
+    <value>The required dependency '{0}' is completely unsupported on this machine's operating platform or architecture.</value>
+  </data>
+  <data name="DependencyService_Msg_RestartRequired_Title" xml:space="preserve">
+    <value>Restart Required</value>
+  </data>
+  <data name="DependencyService_Msg_RestartRequired_Desc" xml:space="preserve">
+    <value>One or more installations require a system reboot to function properly. Would you like to restart your computer now?</value>
+  </data>
+  <data name="FolderService_Msg_DoesNotExist_Desc" xml:space="preserve">
+    <value>The target directory does not exist.
+
+Path: {0}</value>
+  </data>
+  <data name="FolderService_Msg_FailedToOpen_Desc" xml:space="preserve">
+    <value>Failed to open folder: {0}</value>
+  </data>
+  <data name="UrlService_Msg_FailedToOpenURL_Desc" xml:space="preserve">
+    <value>Failed to open URL: {0}</value>
+  </data>
+</root>

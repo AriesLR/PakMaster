@@ -1,0 +1,156 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:options="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    mc:Ignorable="options">
+
+    <!-- Deep Orange 100% Opacity -->
+    <Color x:Key="Alr.Colors.DeepOrange50">#FFFBE9E7</Color>
+    <Color x:Key="Alr.Colors.DeepOrange100">#FFFFCCBC</Color>
+    <Color x:Key="Alr.Colors.DeepOrange200">#FFFFAB91</Color>
+    <Color x:Key="Alr.Colors.DeepOrange300">#FFFF8A65</Color>
+    <Color x:Key="Alr.Colors.DeepOrange400">#FFFF7043</Color>
+    <Color x:Key="Alr.Colors.DeepOrange500">#FFFF5722</Color>
+    <Color x:Key="Alr.Colors.DeepOrange600">#FFF4511E</Color>
+    <Color x:Key="Alr.Colors.DeepOrange700">#FFE64A19</Color>
+    <Color x:Key="Alr.Colors.DeepOrange800">#FFD84315</Color>
+    <Color x:Key="Alr.Colors.DeepOrange900">#FFBF360C</Color>
+    <Color x:Key="Alr.Colors.DeepOrangeA100">#FFFF9E80</Color>
+    <Color x:Key="Alr.Colors.DeepOrangeA200">#FFFF6E40</Color>
+    <Color x:Key="Alr.Colors.DeepOrangeA400">#FFFF3D00</Color>
+    <Color x:Key="Alr.Colors.DeepOrangeA700">#FFDD2C00</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange50" Color="{StaticResource Alr.Colors.DeepOrange50}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange100" Color="{StaticResource Alr.Colors.DeepOrange100}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange200" Color="{StaticResource Alr.Colors.DeepOrange200}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange300" Color="{StaticResource Alr.Colors.DeepOrange300}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange400" Color="{StaticResource Alr.Colors.DeepOrange400}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange500" Color="{StaticResource Alr.Colors.DeepOrange500}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange600" Color="{StaticResource Alr.Colors.DeepOrange600}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange700" Color="{StaticResource Alr.Colors.DeepOrange700}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange800" Color="{StaticResource Alr.Colors.DeepOrange800}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange900" Color="{StaticResource Alr.Colors.DeepOrange900}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrangeA100" Color="{StaticResource Alr.Colors.DeepOrangeA100}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrangeA200" Color="{StaticResource Alr.Colors.DeepOrangeA200}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrangeA400" Color="{StaticResource Alr.Colors.DeepOrangeA400}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrangeA700" Color="{StaticResource Alr.Colors.DeepOrangeA700}" options:Freeze="True" />
+
+    <!-- Deep Orange 80% Opacity -->
+    <Color x:Key="Alr.Colors.DeepOrange50.O80">#CCFBE9E7</Color>
+    <Color x:Key="Alr.Colors.DeepOrange100.O80">#CCFFCCBC</Color>
+    <Color x:Key="Alr.Colors.DeepOrange200.O80">#CCFFAB91</Color>
+    <Color x:Key="Alr.Colors.DeepOrange300.O80">#CCFF8A65</Color>
+    <Color x:Key="Alr.Colors.DeepOrange400.O80">#CCFF7043</Color>
+    <Color x:Key="Alr.Colors.DeepOrange500.O80">#CCFF5722</Color>
+    <Color x:Key="Alr.Colors.DeepOrange600.O80">#CCF4511E</Color>
+    <Color x:Key="Alr.Colors.DeepOrange700.O80">#CCE64A19</Color>
+    <Color x:Key="Alr.Colors.DeepOrange800.O80">#CCD84315</Color>
+    <Color x:Key="Alr.Colors.DeepOrange900.O80">#CCBF360C</Color>
+    <Color x:Key="Alr.Colors.DeepOrangeA100.O80">#CCFF9E80</Color>
+    <Color x:Key="Alr.Colors.DeepOrangeA200.O80">#CCFF6E40</Color>
+    <Color x:Key="Alr.Colors.DeepOrangeA400.O80">#CCFF3D00</Color>
+    <Color x:Key="Alr.Colors.DeepOrangeA700.O80">#CCDD2C00</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange50.O80" Color="{StaticResource Alr.Colors.DeepOrange50.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange100.O80" Color="{StaticResource Alr.Colors.DeepOrange100.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange200.O80" Color="{StaticResource Alr.Colors.DeepOrange200.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange300.O80" Color="{StaticResource Alr.Colors.DeepOrange300.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange400.O80" Color="{StaticResource Alr.Colors.DeepOrange400.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange500.O80" Color="{StaticResource Alr.Colors.DeepOrange500.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange600.O80" Color="{StaticResource Alr.Colors.DeepOrange600.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange700.O80" Color="{StaticResource Alr.Colors.DeepOrange700.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange800.O80" Color="{StaticResource Alr.Colors.DeepOrange800.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange900.O80" Color="{StaticResource Alr.Colors.DeepOrange900.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrangeA100.O80" Color="{StaticResource Alr.Colors.DeepOrangeA100.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrangeA200.O80" Color="{StaticResource Alr.Colors.DeepOrangeA200.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrangeA400.O80" Color="{StaticResource Alr.Colors.DeepOrangeA400.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrangeA700.O80" Color="{StaticResource Alr.Colors.DeepOrangeA700.O80}" options:Freeze="True" />
+
+    <!-- Deep Orange 60% Opacity -->
+    <Color x:Key="Alr.Colors.DeepOrange50.O60">#99FBE9E7</Color>
+    <Color x:Key="Alr.Colors.DeepOrange100.O60">#99FFCCBC</Color>
+    <Color x:Key="Alr.Colors.DeepOrange200.O60">#99FFAB91</Color>
+    <Color x:Key="Alr.Colors.DeepOrange300.O60">#99FF8A65</Color>
+    <Color x:Key="Alr.Colors.DeepOrange400.O60">#99FF7043</Color>
+    <Color x:Key="Alr.Colors.DeepOrange500.O60">#99FF5722</Color>
+    <Color x:Key="Alr.Colors.DeepOrange600.O60">#99F4511E</Color>
+    <Color x:Key="Alr.Colors.DeepOrange700.O60">#99E64A19</Color>
+    <Color x:Key="Alr.Colors.DeepOrange800.O60">#99D84315</Color>
+    <Color x:Key="Alr.Colors.DeepOrange900.O60">#99BF360C</Color>
+    <Color x:Key="Alr.Colors.DeepOrangeA100.O60">#99FF9E80</Color>
+    <Color x:Key="Alr.Colors.DeepOrangeA200.O60">#99FF6E40</Color>
+    <Color x:Key="Alr.Colors.DeepOrangeA400.O60">#99FF3D00</Color>
+    <Color x:Key="Alr.Colors.DeepOrangeA700.O60">#99DD2C00</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange50.O60" Color="{StaticResource Alr.Colors.DeepOrange50.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange100.O60" Color="{StaticResource Alr.Colors.DeepOrange100.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange200.O60" Color="{StaticResource Alr.Colors.DeepOrange200.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange300.O60" Color="{StaticResource Alr.Colors.DeepOrange300.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange400.O60" Color="{StaticResource Alr.Colors.DeepOrange400.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange500.O60" Color="{StaticResource Alr.Colors.DeepOrange500.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange600.O60" Color="{StaticResource Alr.Colors.DeepOrange600.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange700.O60" Color="{StaticResource Alr.Colors.DeepOrange700.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange800.O60" Color="{StaticResource Alr.Colors.DeepOrange800.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange900.O60" Color="{StaticResource Alr.Colors.DeepOrange900.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrangeA100.O60" Color="{StaticResource Alr.Colors.DeepOrangeA100.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrangeA200.O60" Color="{StaticResource Alr.Colors.DeepOrangeA200.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrangeA400.O60" Color="{StaticResource Alr.Colors.DeepOrangeA400.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrangeA700.O60" Color="{StaticResource Alr.Colors.DeepOrangeA700.O60}" options:Freeze="True" />
+
+    <!-- Deep Orange 40% Opacity -->
+    <Color x:Key="Alr.Colors.DeepOrange50.O40">#66FBE9E7</Color>
+    <Color x:Key="Alr.Colors.DeepOrange100.O40">#66FFCCBC</Color>
+    <Color x:Key="Alr.Colors.DeepOrange200.O40">#66FFAB91</Color>
+    <Color x:Key="Alr.Colors.DeepOrange300.O40">#66FF8A65</Color>
+    <Color x:Key="Alr.Colors.DeepOrange400.O40">#66FF7043</Color>
+    <Color x:Key="Alr.Colors.DeepOrange500.O40">#66FF5722</Color>
+    <Color x:Key="Alr.Colors.DeepOrange600.O40">#66F4511E</Color>
+    <Color x:Key="Alr.Colors.DeepOrange700.O40">#66E64A19</Color>
+    <Color x:Key="Alr.Colors.DeepOrange800.O40">#66D84315</Color>
+    <Color x:Key="Alr.Colors.DeepOrange900.O40">#66BF360C</Color>
+    <Color x:Key="Alr.Colors.DeepOrangeA100.O40">#66FF9E80</Color>
+    <Color x:Key="Alr.Colors.DeepOrangeA200.O40">#66FF6E40</Color>
+    <Color x:Key="Alr.Colors.DeepOrangeA400.O40">#66FF3D00</Color>
+    <Color x:Key="Alr.Colors.DeepOrangeA700.O40">#66DD2C00</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange50.O40" Color="{StaticResource Alr.Colors.DeepOrange50.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange100.O40" Color="{StaticResource Alr.Colors.DeepOrange100.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange200.O40" Color="{StaticResource Alr.Colors.DeepOrange200.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange300.O40" Color="{StaticResource Alr.Colors.DeepOrange300.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange400.O40" Color="{StaticResource Alr.Colors.DeepOrange400.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange500.O40" Color="{StaticResource Alr.Colors.DeepOrange500.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange600.O40" Color="{StaticResource Alr.Colors.DeepOrange600.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange700.O40" Color="{StaticResource Alr.Colors.DeepOrange700.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange800.O40" Color="{StaticResource Alr.Colors.DeepOrange800.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange900.O40" Color="{StaticResource Alr.Colors.DeepOrange900.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrangeA100.O40" Color="{StaticResource Alr.Colors.DeepOrangeA100.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrangeA200.O40" Color="{StaticResource Alr.Colors.DeepOrangeA200.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrangeA400.O40" Color="{StaticResource Alr.Colors.DeepOrangeA400.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrangeA700.O40" Color="{StaticResource Alr.Colors.DeepOrangeA700.O40}" options:Freeze="True" />
+
+    <!-- Deep Orange 20% Opacity -->
+    <Color x:Key="Alr.Colors.DeepOrange50.O20">#33FBE9E7</Color>
+    <Color x:Key="Alr.Colors.DeepOrange100.O20">#33FFCCBC</Color>
+    <Color x:Key="Alr.Colors.DeepOrange200.O20">#33FFAB91</Color>
+    <Color x:Key="Alr.Colors.DeepOrange300.O20">#33FF8A65</Color>
+    <Color x:Key="Alr.Colors.DeepOrange400.O20">#33FF7043</Color>
+    <Color x:Key="Alr.Colors.DeepOrange500.O20">#33FF5722</Color>
+    <Color x:Key="Alr.Colors.DeepOrange600.O20">#33F4511E</Color>
+    <Color x:Key="Alr.Colors.DeepOrange700.O20">#33E64A19</Color>
+    <Color x:Key="Alr.Colors.DeepOrange800.O20">#33D84315</Color>
+    <Color x:Key="Alr.Colors.DeepOrange900.O20">#33BF360C</Color>
+    <Color x:Key="Alr.Colors.DeepOrangeA100.O20">#33FF9E80</Color>
+    <Color x:Key="Alr.Colors.DeepOrangeA200.O20">#33FF6E40</Color>
+    <Color x:Key="Alr.Colors.DeepOrangeA400.O20">#33FF3D00</Color>
+    <Color x:Key="Alr.Colors.DeepOrangeA700.O20">#33DD2C00</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange50.O20" Color="{StaticResource Alr.Colors.DeepOrange50.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange100.O20" Color="{StaticResource Alr.Colors.DeepOrange100.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange200.O20" Color="{StaticResource Alr.Colors.DeepOrange200.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange300.O20" Color="{StaticResource Alr.Colors.DeepOrange300.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange400.O20" Color="{StaticResource Alr.Colors.DeepOrange400.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange500.O20" Color="{StaticResource Alr.Colors.DeepOrange500.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange600.O20" Color="{StaticResource Alr.Colors.DeepOrange600.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange700.O20" Color="{StaticResource Alr.Colors.DeepOrange700.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange800.O20" Color="{StaticResource Alr.Colors.DeepOrange800.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrange900.O20" Color="{StaticResource Alr.Colors.DeepOrange900.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrangeA100.O20" Color="{StaticResource Alr.Colors.DeepOrangeA100.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrangeA200.O20" Color="{StaticResource Alr.Colors.DeepOrangeA200.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrangeA400.O20" Color="{StaticResource Alr.Colors.DeepOrangeA400.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.DeepOrangeA700.O20" Color="{StaticResource Alr.Colors.DeepOrangeA700.O20}" options:Freeze="True" />
+</ResourceDictionary>

@@ -1,0 +1,156 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:options="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    mc:Ignorable="options">
+
+    <!-- Yellow 100% Opacity -->
+    <Color x:Key="Alr.Colors.Yellow50">#FFFFFDE7</Color>
+    <Color x:Key="Alr.Colors.Yellow100">#FFFFF9C4</Color>
+    <Color x:Key="Alr.Colors.Yellow200">#FFFFF59D</Color>
+    <Color x:Key="Alr.Colors.Yellow300">#FFFFF176</Color>
+    <Color x:Key="Alr.Colors.Yellow400">#FFFFEE58</Color>
+    <Color x:Key="Alr.Colors.Yellow500">#FFFFFFEB</Color>
+    <Color x:Key="Alr.Colors.Yellow600">#FFFDD835</Color>
+    <Color x:Key="Alr.Colors.Yellow700">#FFFBC02D</Color>
+    <Color x:Key="Alr.Colors.Yellow800">#FFF9A825</Color>
+    <Color x:Key="Alr.Colors.Yellow900">#FFF57F17</Color>
+    <Color x:Key="Alr.Colors.YellowA100">#FFFFFF8D</Color>
+    <Color x:Key="Alr.Colors.YellowA200">#FFFFFF00</Color>
+    <Color x:Key="Alr.Colors.YellowA400">#FFFFEA00</Color>
+    <Color x:Key="Alr.Colors.YellowA700">#FFFFD600</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow50" Color="{StaticResource Alr.Colors.Yellow50}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow100" Color="{StaticResource Alr.Colors.Yellow100}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow200" Color="{StaticResource Alr.Colors.Yellow200}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow300" Color="{StaticResource Alr.Colors.Yellow300}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow400" Color="{StaticResource Alr.Colors.Yellow400}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow500" Color="{StaticResource Alr.Colors.Yellow500}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow600" Color="{StaticResource Alr.Colors.Yellow600}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow700" Color="{StaticResource Alr.Colors.Yellow700}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow800" Color="{StaticResource Alr.Colors.Yellow800}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow900" Color="{StaticResource Alr.Colors.Yellow900}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.YellowA100" Color="{StaticResource Alr.Colors.YellowA100}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.YellowA200" Color="{StaticResource Alr.Colors.YellowA200}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.YellowA400" Color="{StaticResource Alr.Colors.YellowA400}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.YellowA700" Color="{StaticResource Alr.Colors.YellowA700}" options:Freeze="True" />
+
+    <!-- Yellow 80% Opacity -->
+    <Color x:Key="Alr.Colors.Yellow50.O80">#CCFFFDE7</Color>
+    <Color x:Key="Alr.Colors.Yellow100.O80">#CCFFF9C4</Color>
+    <Color x:Key="Alr.Colors.Yellow200.O80">#CCFFF59D</Color>
+    <Color x:Key="Alr.Colors.Yellow300.O80">#CCFFF176</Color>
+    <Color x:Key="Alr.Colors.Yellow400.O80">#CCFFEE58</Color>
+    <Color x:Key="Alr.Colors.Yellow500.O80">#CCFFEB3B</Color>
+    <Color x:Key="Alr.Colors.Yellow600.O80">#CCFDD835</Color>
+    <Color x:Key="Alr.Colors.Yellow700.O80">#CCFBC02D</Color>
+    <Color x:Key="Alr.Colors.Yellow800.O80">#CCF9A825</Color>
+    <Color x:Key="Alr.Colors.Yellow900.O80">#CCF57F17</Color>
+    <Color x:Key="Alr.Colors.YellowA100.O80">#CCFFFF8D</Color>
+    <Color x:Key="Alr.Colors.YellowA200.O80">#CCFFFF00</Color>
+    <Color x:Key="Alr.Colors.YellowA400.O80">#CCFFEA00</Color>
+    <Color x:Key="Alr.Colors.YellowA700.O80">#CCFFD600</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow50.O80" Color="{StaticResource Alr.Colors.Yellow50.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow100.O80" Color="{StaticResource Alr.Colors.Yellow100.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow200.O80" Color="{StaticResource Alr.Colors.Yellow200.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow300.O80" Color="{StaticResource Alr.Colors.Yellow300.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow400.O80" Color="{StaticResource Alr.Colors.Yellow400.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow500.O80" Color="{StaticResource Alr.Colors.Yellow500.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow600.O80" Color="{StaticResource Alr.Colors.Yellow600.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow700.O80" Color="{StaticResource Alr.Colors.Yellow700.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow800.O80" Color="{StaticResource Alr.Colors.Yellow800.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow900.O80" Color="{StaticResource Alr.Colors.Yellow900.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.YellowA100.O80" Color="{StaticResource Alr.Colors.YellowA100.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.YellowA200.O80" Color="{StaticResource Alr.Colors.YellowA200.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.YellowA400.O80" Color="{StaticResource Alr.Colors.YellowA400.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.YellowA700.O80" Color="{StaticResource Alr.Colors.YellowA700.O80}" options:Freeze="True" />
+
+    <!-- Yellow 60% Opacity -->
+    <Color x:Key="Alr.Colors.Yellow50.O60">#99FFFDE7</Color>
+    <Color x:Key="Alr.Colors.Yellow100.O60">#99FFF9C4</Color>
+    <Color x:Key="Alr.Colors.Yellow200.O60">#99FFF59D</Color>
+    <Color x:Key="Alr.Colors.Yellow300.O60">#99FFF176</Color>
+    <Color x:Key="Alr.Colors.Yellow400.O60">#99FFEE58</Color>
+    <Color x:Key="Alr.Colors.Yellow500.O60">#99FFEB3B</Color>
+    <Color x:Key="Alr.Colors.Yellow600.O60">#99FDD835</Color>
+    <Color x:Key="Alr.Colors.Yellow700.O60">#99FBC02D</Color>
+    <Color x:Key="Alr.Colors.Yellow800.O60">#99F9A825</Color>
+    <Color x:Key="Alr.Colors.Yellow900.O60">#99F57F17</Color>
+    <Color x:Key="Alr.Colors.YellowA100.O60">#99FFFF8D</Color>
+    <Color x:Key="Alr.Colors.YellowA200.O60">#99FFFF00</Color>
+    <Color x:Key="Alr.Colors.YellowA400.O60">#99FFEA00</Color>
+    <Color x:Key="Alr.Colors.YellowA700.O60">#99FFD600</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow50.O60" Color="{StaticResource Alr.Colors.Yellow50.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow100.O60" Color="{StaticResource Alr.Colors.Yellow100.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow200.O60" Color="{StaticResource Alr.Colors.Yellow200.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow300.O60" Color="{StaticResource Alr.Colors.Yellow300.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow400.O60" Color="{StaticResource Alr.Colors.Yellow400.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow500.O60" Color="{StaticResource Alr.Colors.Yellow500.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow600.O60" Color="{StaticResource Alr.Colors.Yellow600.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow700.O60" Color="{StaticResource Alr.Colors.Yellow700.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow800.O60" Color="{StaticResource Alr.Colors.Yellow800.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow900.O60" Color="{StaticResource Alr.Colors.Yellow900.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.YellowA100.O60" Color="{StaticResource Alr.Colors.YellowA100.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.YellowA200.O60" Color="{StaticResource Alr.Colors.YellowA200.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.YellowA400.O60" Color="{StaticResource Alr.Colors.YellowA400.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.YellowA700.O60" Color="{StaticResource Alr.Colors.YellowA700.O60}" options:Freeze="True" />
+
+    <!-- Yellow 40% Opacity -->
+    <Color x:Key="Alr.Colors.Yellow50.O40">#66FFFDE7</Color>
+    <Color x:Key="Alr.Colors.Yellow100.O40">#66FFF9C4</Color>
+    <Color x:Key="Alr.Colors.Yellow200.O40">#66FFF59D</Color>
+    <Color x:Key="Alr.Colors.Yellow300.O40">#66FFF176</Color>
+    <Color x:Key="Alr.Colors.Yellow400.O40">#66FFEE58</Color>
+    <Color x:Key="Alr.Colors.Yellow500.O40">#66FFEB3B</Color>
+    <Color x:Key="Alr.Colors.Yellow600.O40">#66FDD835</Color>
+    <Color x:Key="Alr.Colors.Yellow700.O40">#66FBC02D</Color>
+    <Color x:Key="Alr.Colors.Yellow800.O40">#66F9A825</Color>
+    <Color x:Key="Alr.Colors.Yellow900.O40">#66F57F17</Color>
+    <Color x:Key="Alr.Colors.YellowA100.O40">#66FFFF8D</Color>
+    <Color x:Key="Alr.Colors.YellowA200.O40">#66FFFF00</Color>
+    <Color x:Key="Alr.Colors.YellowA400.O40">#66FFEA00</Color>
+    <Color x:Key="Alr.Colors.YellowA700.O40">#66FFD600</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow50.O40" Color="{StaticResource Alr.Colors.Yellow50.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow100.O40" Color="{StaticResource Alr.Colors.Yellow100.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow200.O40" Color="{StaticResource Alr.Colors.Yellow200.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow300.O40" Color="{StaticResource Alr.Colors.Yellow300.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow400.O40" Color="{StaticResource Alr.Colors.Yellow400.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow500.O40" Color="{StaticResource Alr.Colors.Yellow500.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow600.O40" Color="{StaticResource Alr.Colors.Yellow600.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow700.O40" Color="{StaticResource Alr.Colors.Yellow700.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow800.O40" Color="{StaticResource Alr.Colors.Yellow800.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow900.O40" Color="{StaticResource Alr.Colors.Yellow900.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.YellowA100.O40" Color="{StaticResource Alr.Colors.YellowA100.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.YellowA200.O40" Color="{StaticResource Alr.Colors.YellowA200.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.YellowA400.O40" Color="{StaticResource Alr.Colors.YellowA400.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.YellowA700.O40" Color="{StaticResource Alr.Colors.YellowA700.O40}" options:Freeze="True" />
+
+    <!-- Yellow 20% Opacity -->
+    <Color x:Key="Alr.Colors.Yellow50.O20">#33FFFDE7</Color>
+    <Color x:Key="Alr.Colors.Yellow100.O20">#33FFF9C4</Color>
+    <Color x:Key="Alr.Colors.Yellow200.O20">#33FFF59D</Color>
+    <Color x:Key="Alr.Colors.Yellow300.O20">#33FFF176</Color>
+    <Color x:Key="Alr.Colors.Yellow400.O20">#33FFEE58</Color>
+    <Color x:Key="Alr.Colors.Yellow500.O20">#33FFEB3B</Color>
+    <Color x:Key="Alr.Colors.Yellow600.O20">#33FDD835</Color>
+    <Color x:Key="Alr.Colors.Yellow700.O20">#33FBC02D</Color>
+    <Color x:Key="Alr.Colors.Yellow800.O20">#33F9A825</Color>
+    <Color x:Key="Alr.Colors.Yellow900.O20">#33F57F17</Color>
+    <Color x:Key="Alr.Colors.YellowA100.O20">#33FFFF8D</Color>
+    <Color x:Key="Alr.Colors.YellowA200.O20">#33FFFF00</Color>
+    <Color x:Key="Alr.Colors.YellowA400.O20">#33FFEA00</Color>
+    <Color x:Key="Alr.Colors.YellowA700.O20">#33FFD600</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow50.O20" Color="{StaticResource Alr.Colors.Yellow50.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow100.O20" Color="{StaticResource Alr.Colors.Yellow100.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow200.O20" Color="{StaticResource Alr.Colors.Yellow200.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow300.O20" Color="{StaticResource Alr.Colors.Yellow300.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow400.O20" Color="{StaticResource Alr.Colors.Yellow400.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow500.O20" Color="{StaticResource Alr.Colors.Yellow500.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow600.O20" Color="{StaticResource Alr.Colors.Yellow600.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow700.O20" Color="{StaticResource Alr.Colors.Yellow700.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow800.O20" Color="{StaticResource Alr.Colors.Yellow800.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Yellow900.O20" Color="{StaticResource Alr.Colors.Yellow900.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.YellowA100.O20" Color="{StaticResource Alr.Colors.YellowA100.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.YellowA200.O20" Color="{StaticResource Alr.Colors.YellowA200.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.YellowA400.O20" Color="{StaticResource Alr.Colors.YellowA400.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.YellowA700.O20" Color="{StaticResource Alr.Colors.YellowA700.O20}" options:Freeze="True" />
+</ResourceDictionary>

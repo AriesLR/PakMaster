@@ -1,0 +1,95 @@
+<mah:MetroWindow x:Class="PakMaster.SplashWindow"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                 xmlns:constants="clr-namespace:PakMaster.Core.Constants"
+                 xmlns:local="clr-namespace:PakMaster"
+                 xmlns:extensions="clr-namespace:PakMaster.Core.Extensions"
+                 FlowDirection="{extensions:FlowDirection}"
+                 mc:Ignorable="d"
+                 Title="SplashWindow"
+                 Height="340" Width="560"
+                 WindowStartupLocation="CenterScreen"
+                 WindowStyle="None"
+                 ResizeMode="NoResize"
+                 AllowsTransparency="True"
+                 Background="Transparent"
+                 ShowTitleBar="False"
+                 ShowCloseButton="False"
+                 UseNoneWindowStyle="True"
+                 BorderThickness="0"
+                 GlowBrush="{x:Null}">
+
+    <Border Margin="12"
+            CornerRadius="12"
+            BorderThickness="1"
+            BorderBrush="#333338">
+
+            <Border.Background>
+                <ImageBrush ImageSource="pack://application:,,,/Assets/Img/Splash_Bg.png"
+                    Stretch="Fill"
+                    RenderOptions.BitmapScalingMode="HighQuality" />
+            </Border.Background>
+
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="20" ShadowDepth="4" Direction="270" Color="Black" Opacity="0.5" />
+            </Border.Effect>
+
+            <Grid Margin="32">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+
+                    <Grid Width="48" Height="48" Margin="0,0,0,16" HorizontalAlignment="Center">
+                        <Image x:Name="AppIconImage"
+                               Width="48" Height="48"
+                               Stretch="Uniform"
+                               RenderOptions.BitmapScalingMode="HighQuality"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center" />
+                    </Grid>
+
+                    <TextBlock Text="{x:Static constants:AppConfig.DisplayAppNameUppercase}"
+                               Foreground="#FFFFFF"
+                               FontSize="26"
+                               FontWeight="Bold"
+                               HorizontalAlignment="Center" />
+
+                    <TextBlock Text="{x:Static constants:AppConfig.DisplayAppVersion}"
+                               Foreground="#808088"
+                               FontSize="11"
+                               FontWeight="SemiBold"
+                               Margin="0,4,0,0"
+                               HorizontalAlignment="Center" />
+                </StackPanel>
+
+                <Grid Grid.Row="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock x:Name="StatusTextBlock"
+                               Grid.Row="0"
+                               Text="Initializing application..."
+                               Foreground="#A0A0A8"
+                               FontSize="12"
+                               Margin="0,0,0,10"
+                               HorizontalAlignment="Center"
+                               TextTrimming="CharacterEllipsis" />
+
+                    <mah:MetroProgressBar x:Name="LoadingProgressBar"
+                                          Grid.Row="1"
+                                          Height="4"
+                                          Foreground="{StaticResource MahApps.Brushes.Accent}"
+                                          BorderThickness="0"
+                                          IsIndeterminate="True" />
+                </Grid>
+            </Grid>
+        </Border>
+</mah:MetroWindow>

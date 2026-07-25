@@ -1,0 +1,156 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:options="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    mc:Ignorable="options">
+
+    <!-- Amber 100% Opacity -->
+    <Color x:Key="Alr.Colors.Amber50">#FFFFF8E1</Color>
+    <Color x:Key="Alr.Colors.Amber100">#FFFFECB3</Color>
+    <Color x:Key="Alr.Colors.Amber200">#FFFFE082</Color>
+    <Color x:Key="Alr.Colors.Amber300">#FFFFD54F</Color>
+    <Color x:Key="Alr.Colors.Amber400">#FFFFCA28</Color>
+    <Color x:Key="Alr.Colors.Amber500">#FFFFC107</Color>
+    <Color x:Key="Alr.Colors.Amber600">#FFFFB300</Color>
+    <Color x:Key="Alr.Colors.Amber700">#FFFFA000</Color>
+    <Color x:Key="Alr.Colors.Amber800">#FFFF8F00</Color>
+    <Color x:Key="Alr.Colors.Amber900">#FFFF6F00</Color>
+    <Color x:Key="Alr.Colors.AmberA100">#FFFFE57F</Color>
+    <Color x:Key="Alr.Colors.AmberA200">#FFFFD740</Color>
+    <Color x:Key="Alr.Colors.AmberA400">#FFFFC400</Color>
+    <Color x:Key="Alr.Colors.AmberA700">#FFFFAB00</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Amber50" Color="{StaticResource Alr.Colors.Amber50}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber100" Color="{StaticResource Alr.Colors.Amber100}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber200" Color="{StaticResource Alr.Colors.Amber200}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber300" Color="{StaticResource Alr.Colors.Amber300}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber400" Color="{StaticResource Alr.Colors.Amber400}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber500" Color="{StaticResource Alr.Colors.Amber500}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber600" Color="{StaticResource Alr.Colors.Amber600}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber700" Color="{StaticResource Alr.Colors.Amber700}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber800" Color="{StaticResource Alr.Colors.Amber800}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber900" Color="{StaticResource Alr.Colors.Amber900}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.AmberA100" Color="{StaticResource Alr.Colors.AmberA100}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.AmberA200" Color="{StaticResource Alr.Colors.AmberA200}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.AmberA400" Color="{StaticResource Alr.Colors.AmberA400}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.AmberA700" Color="{StaticResource Alr.Colors.AmberA700}" options:Freeze="True" />
+
+    <!-- Amber 80% Opacity -->
+    <Color x:Key="Alr.Colors.Amber50.O80">#CCFFF8E1</Color>
+    <Color x:Key="Alr.Colors.Amber100.O80">#CCFFECB3</Color>
+    <Color x:Key="Alr.Colors.Amber200.O80">#CCFFE082</Color>
+    <Color x:Key="Alr.Colors.Amber300.O80">#CCFFD54F</Color>
+    <Color x:Key="Alr.Colors.Amber400.O80">#CCFFCA28</Color>
+    <Color x:Key="Alr.Colors.Amber500.O80">#CCFFC107</Color>
+    <Color x:Key="Alr.Colors.Amber600.O80">#CCFFB300</Color>
+    <Color x:Key="Alr.Colors.Amber700.O80">#CCFFA000</Color>
+    <Color x:Key="Alr.Colors.Amber800.O80">#CCFF8F00</Color>
+    <Color x:Key="Alr.Colors.Amber900.O80">#CCFF6F00</Color>
+    <Color x:Key="Alr.Colors.AmberA100.O80">#CCFFE57F</Color>
+    <Color x:Key="Alr.Colors.AmberA200.O80">#CCFFD740</Color>
+    <Color x:Key="Alr.Colors.AmberA400.O80">#CCFFC400</Color>
+    <Color x:Key="Alr.Colors.AmberA700.O80">#CCFFAB00</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Amber50.O80" Color="{StaticResource Alr.Colors.Amber50.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber100.O80" Color="{StaticResource Alr.Colors.Amber100.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber200.O80" Color="{StaticResource Alr.Colors.Amber200.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber300.O80" Color="{StaticResource Alr.Colors.Amber300.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber400.O80" Color="{StaticResource Alr.Colors.Amber400.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber500.O80" Color="{StaticResource Alr.Colors.Amber500.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber600.O80" Color="{StaticResource Alr.Colors.Amber600.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber700.O80" Color="{StaticResource Alr.Colors.Amber700.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber800.O80" Color="{StaticResource Alr.Colors.Amber800.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber900.O80" Color="{StaticResource Alr.Colors.Amber900.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.AmberA100.O80" Color="{StaticResource Alr.Colors.AmberA100.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.AmberA200.O80" Color="{StaticResource Alr.Colors.AmberA200.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.AmberA400.O80" Color="{StaticResource Alr.Colors.AmberA400.O80}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.AmberA700.O80" Color="{StaticResource Alr.Colors.AmberA700.O80}" options:Freeze="True" />
+
+    <!-- Amber 60% Opacity -->
+    <Color x:Key="Alr.Colors.Amber50.O60">#99FFF8E1</Color>
+    <Color x:Key="Alr.Colors.Amber100.O60">#99FFECB3</Color>
+    <Color x:Key="Alr.Colors.Amber200.O60">#99FFE082</Color>
+    <Color x:Key="Alr.Colors.Amber300.O60">#99FFD54F</Color>
+    <Color x:Key="Alr.Colors.Amber400.O60">#99FFCA28</Color>
+    <Color x:Key="Alr.Colors.Amber500.O60">#99FFC107</Color>
+    <Color x:Key="Alr.Colors.Amber600.O60">#99FFB300</Color>
+    <Color x:Key="Alr.Colors.Amber700.O60">#99FFA000</Color>
+    <Color x:Key="Alr.Colors.Amber800.O60">#99FF8F00</Color>
+    <Color x:Key="Alr.Colors.Amber900.O60">#99FF6F00</Color>
+    <Color x:Key="Alr.Colors.AmberA100.O60">#99FFE57F</Color>
+    <Color x:Key="Alr.Colors.AmberA200.O60">#99FFD740</Color>
+    <Color x:Key="Alr.Colors.AmberA400.O60">#99FFC400</Color>
+    <Color x:Key="Alr.Colors.AmberA700.O60">#99FFAB00</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Amber50.O60" Color="{StaticResource Alr.Colors.Amber50.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber100.O60" Color="{StaticResource Alr.Colors.Amber100.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber200.O60" Color="{StaticResource Alr.Colors.Amber200.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber300.O60" Color="{StaticResource Alr.Colors.Amber300.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber400.O60" Color="{StaticResource Alr.Colors.Amber400.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber500.O60" Color="{StaticResource Alr.Colors.Amber500.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber600.O60" Color="{StaticResource Alr.Colors.Amber600.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber700.O60" Color="{StaticResource Alr.Colors.Amber700.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber800.O60" Color="{StaticResource Alr.Colors.Amber800.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber900.O60" Color="{StaticResource Alr.Colors.Amber900.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.AmberA100.O60" Color="{StaticResource Alr.Colors.AmberA100.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.AmberA200.O60" Color="{StaticResource Alr.Colors.AmberA200.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.AmberA400.O60" Color="{StaticResource Alr.Colors.AmberA400.O60}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.AmberA700.O60" Color="{StaticResource Alr.Colors.AmberA700.O60}" options:Freeze="True" />
+
+    <!-- Amber 40% Opacity -->
+    <Color x:Key="Alr.Colors.Amber50.O40">#66FFF8E1</Color>
+    <Color x:Key="Alr.Colors.Amber100.O40">#66FFECB3</Color>
+    <Color x:Key="Alr.Colors.Amber200.O40">#66FFE082</Color>
+    <Color x:Key="Alr.Colors.Amber300.O40">#66FFD54F</Color>
+    <Color x:Key="Alr.Colors.Amber400.O40">#66FFCA28</Color>
+    <Color x:Key="Alr.Colors.Amber500.O40">#66FFC107</Color>
+    <Color x:Key="Alr.Colors.Amber600.O40">#66FFB300</Color>
+    <Color x:Key="Alr.Colors.Amber700.O40">#66FFA000</Color>
+    <Color x:Key="Alr.Colors.Amber800.O40">#66FF8F00</Color>
+    <Color x:Key="Alr.Colors.Amber900.O40">#66FF6F00</Color>
+    <Color x:Key="Alr.Colors.AmberA100.O40">#66FFE57F</Color>
+    <Color x:Key="Alr.Colors.AmberA200.O40">#66FFD740</Color>
+    <Color x:Key="Alr.Colors.AmberA400.O40">#66FFC400</Color>
+    <Color x:Key="Alr.Colors.AmberA700.O40">#66FFAB00</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Amber50.O40" Color="{StaticResource Alr.Colors.Amber50.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber100.O40" Color="{StaticResource Alr.Colors.Amber100.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber200.O40" Color="{StaticResource Alr.Colors.Amber200.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber300.O40" Color="{StaticResource Alr.Colors.Amber300.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber400.O40" Color="{StaticResource Alr.Colors.Amber400.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber500.O40" Color="{StaticResource Alr.Colors.Amber500.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber600.O40" Color="{StaticResource Alr.Colors.Amber600.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber700.O40" Color="{StaticResource Alr.Colors.Amber700.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber800.O40" Color="{StaticResource Alr.Colors.Amber800.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber900.O40" Color="{StaticResource Alr.Colors.Amber900.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.AmberA100.O40" Color="{StaticResource Alr.Colors.AmberA100.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.AmberA200.O40" Color="{StaticResource Alr.Colors.AmberA200.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.AmberA400.O40" Color="{StaticResource Alr.Colors.AmberA400.O40}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.AmberA700.O40" Color="{StaticResource Alr.Colors.AmberA700.O40}" options:Freeze="True" />
+
+    <!-- Amber 20% Opacity -->
+    <Color x:Key="Alr.Colors.Amber50.O20">#33FFF8E1</Color>
+    <Color x:Key="Alr.Colors.Amber100.O20">#33FFECB3</Color>
+    <Color x:Key="Alr.Colors.Amber200.O20">#33FFE082</Color>
+    <Color x:Key="Alr.Colors.Amber300.O20">#33FFD54F</Color>
+    <Color x:Key="Alr.Colors.Amber400.O20">#33FFCA28</Color>
+    <Color x:Key="Alr.Colors.Amber500.O20">#33FFC107</Color>
+    <Color x:Key="Alr.Colors.Amber600.O20">#33FFB300</Color>
+    <Color x:Key="Alr.Colors.Amber700.O20">#33FFA000</Color>
+    <Color x:Key="Alr.Colors.Amber800.O20">#33FF8F00</Color>
+    <Color x:Key="Alr.Colors.Amber900.O20">#33FF6F00</Color>
+    <Color x:Key="Alr.Colors.AmberA100.O20">#33FFE57F</Color>
+    <Color x:Key="Alr.Colors.AmberA200.O20">#33FFD740</Color>
+    <Color x:Key="Alr.Colors.AmberA400.O20">#33FFC400</Color>
+    <Color x:Key="Alr.Colors.AmberA700.O20">#33FFAB00</Color>
+    <SolidColorBrush x:Key="Alr.Brushes.Amber50.O20" Color="{StaticResource Alr.Colors.Amber50.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber100.O20" Color="{StaticResource Alr.Colors.Amber100.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber200.O20" Color="{StaticResource Alr.Colors.Amber200.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber300.O20" Color="{StaticResource Alr.Colors.Amber300.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber400.O20" Color="{StaticResource Alr.Colors.Amber400.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber500.O20" Color="{StaticResource Alr.Colors.Amber500.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber600.O20" Color="{StaticResource Alr.Colors.Amber600.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber700.O20" Color="{StaticResource Alr.Colors.Amber700.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber800.O20" Color="{StaticResource Alr.Colors.Amber800.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.Amber900.O20" Color="{StaticResource Alr.Colors.Amber900.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.AmberA100.O20" Color="{StaticResource Alr.Colors.AmberA100.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.AmberA200.O20" Color="{StaticResource Alr.Colors.AmberA200.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.AmberA400.O20" Color="{StaticResource Alr.Colors.AmberA400.O20}" options:Freeze="True" />
+    <SolidColorBrush x:Key="Alr.Brushes.AmberA700.O20" Color="{StaticResource Alr.Colors.AmberA700.O20}" options:Freeze="True" />
+</ResourceDictionary>

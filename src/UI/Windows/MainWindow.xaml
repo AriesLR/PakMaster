@@ -1,0 +1,110 @@
+<mah:MetroWindow x:Class="PakMaster.MainWindow"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+                 xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:constants="clr-namespace:PakMaster.Core.Constants"
+                 xmlns:converters="clr-namespace:PakMaster.UI.Converters"
+                 xmlns:viewmodels="clr-namespace:PakMaster.UI.State"
+                 xmlns:flyouts="clr-namespace:PakMaster.UI.Views.Flyouts"
+                 xmlns:navigation="clr-namespace:PakMaster.UI.Views.Navigation"
+                 xmlns:taskbar="clr-namespace:PakMaster.UI.Views.Taskbar"
+                 xmlns:views="clr-namespace:PakMaster.UI.Views"
+                 xmlns:lex="http://wpflocalizeextension.codeplex.com"
+                 lex:LocalizeDictionary.DesignCulture="en"
+                 lex:ResxLocalizationProvider.DefaultAssembly="PakMaster"
+                 lex:ResxLocalizationProvider.DefaultDictionary="PakMaster.UI.Resources.Resources"
+                 xmlns:extensions="clr-namespace:PakMaster.Core.Extensions"
+                 FlowDirection="{extensions:FlowDirection}"
+                 d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowState}"
+                 Width="1200"
+                 Height="750"
+                 MinWidth="1200"
+                 MinHeight="750"
+                 FontFamily="Segoe UI"
+                 GlowBrush="{DynamicResource MahApps.Brushes.Accent}"
+                 NonActiveGlowBrush="{DynamicResource MahApps.Brushes.Accent}"
+                 WindowStyle="SingleBorderWindow"
+                 ResizeMode="CanResizeWithGrip"
+                 WindowStartupLocation="Manual"
+                 mc:Ignorable="d">
+
+    <Window.Title>
+        <MultiBinding StringFormat="{}{0} v{1}">
+            <Binding Source="{x:Static constants:AppConfig.DisplayAppName}" />
+            <Binding Source="{x:Static constants:AppConfig.DisplayAppVersion}" />
+        </MultiBinding>
+    </Window.Title>
+
+    <mah:MetroWindow.Resources>
+        <SolidColorBrush x:Key="MahApps.Brushes.WindowTitle" Color="{DynamicResource MahApps.Colors.Accent}" />
+        <SolidColorBrush x:Key="MahApps.Brushes.WindowTitle.NonActive" Color="{DynamicResource MahApps.Colors.Accent}" />
+        <SolidColorBrush x:Key="MahApps.Brushes.Border.NonActive" Color="{DynamicResource MahApps.Colors.Accent}" />
+    </mah:MetroWindow.Resources>
+
+    <!-- ================ Title Bar START ================ -->
+
+    <!-- Left Title Bar Button(s) -->
+    <mah:MetroWindow.LeftWindowCommands>
+        <mah:WindowCommands>
+            <Button Click="OpenGithubRepo_Click" ToolTip="{lex:Loc MainWindow_Btn_OpenTheGitHubRepo}">
+                <iconPacks:PackIconSimpleIcons Width="22" Height="22" Kind="GitHub" />
+            </Button>
+        </mah:WindowCommands>
+    </mah:MetroWindow.LeftWindowCommands>
+
+    <!-- Right Title Bar Button(s) -->
+    <!--
+    <mah:MetroWindow.RightWindowCommands>
+        <mah:WindowCommands>
+            <Button Click="AppInfoFlyout_Click">
+                <iconPacks:PackIconMaterial Width="22" Height="22" Kind="InformationOutline">
+                    <iconPacks:PackIconMaterial.ToolTip>
+                        <TextBlock>
+                            <Run Text="Application Information" Foreground="{DynamicResource MahApps.Brushes.Gray.SemiTransparent}" />
+                            <LineBreak />
+                            <Run Text="Open the application information menu." />
+                        </TextBlock>
+                    </iconPacks:PackIconMaterial.ToolTip>
+                </iconPacks:PackIconMaterial>
+            </Button>
+        </mah:WindowCommands>
+    </mah:MetroWindow.RightWindowCommands>
+    -->
+
+    <!-- ================ Title Bar END ================ -->
+
+    <Grid>
+        <Grid.LayoutTransform>
+            <ScaleTransform x:Name="MainLayoutScale" x:FieldModifier="public" ScaleX="1.0" ScaleY="1.0" />
+        </Grid.LayoutTransform>
+
+        <!-- Taskbar Icon -->
+        <taskbar:TrayIcon />
+
+        <mah:SplitView x:Name="SplitView" DisplayMode="CompactOverlay" IsPaneOpen="False" CompactPaneLength="50" OpenPaneLength="250" PaneBackground="Transparent">
+            <!-- ================ Sidebar Navigation START ================ -->
+            <mah:SplitView.Pane>
+                <navigation:MainSidebarView />
+            </mah:SplitView.Pane>
+            <!-- ================ Sidebar Navigation END ================ -->
+
+            <!-- ================  Main Content START ================ -->
+            <mah:SplitView.Content>
+                <Grid>
+                    <views:TemplateView />
+                    <!-- Main Content Goes HERE -->
+                </Grid>
+            </mah:SplitView.Content>
+            <!-- ================  Main Content END ================ -->
+        </mah:SplitView>
+    </Grid>
+
+    <!-- ================  Flyouts START ================ -->
+    <mah:MetroWindow.Flyouts>
+        <flyouts:MainWindowFlyoutsView x:Name="FlyoutsContainer" x:FieldModifier="public" />
+    </mah:MetroWindow.Flyouts>
+    <!-- ================  Flyouts END ================ -->
+</mah:MetroWindow>
