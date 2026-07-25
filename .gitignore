@@ -2,4 +2,5 @@ src/bin/
 src/obj/
 src/.vs/
 src/Properties/
-src/PakMaster.csproj.user
+src/*.csproj.user
+src/ResXManager.config.xml
