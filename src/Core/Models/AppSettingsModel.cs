@@ -11,7 +11,7 @@ namespace PakMaster.Core.Models
         public string BaseTheme { get; set; } = "Dark"; // Light theme will work, but it won't look the best without changes to the current UI. I don't have plans to actually support light themes.
 
         // Accent Color (Amber/Blue/Brown/Cobalt/etc)
-        public string AccentColor { get; set; } = "Lime";
+        public string AccentColor { get; set; } = "Indigo";
 
         // Combined Theme Name
         public string CombinedThemeName => $"{BaseTheme}.{AccentColor}";
@@ -30,7 +30,7 @@ namespace PakMaster.Core.Models
         public bool CheckForUpdatesOnStartup { get; set; } = true;
 
         // ================ Logging ================
-        public bool EnableDebugLogging { get; set; } = false;
+        public bool EnableDebugLogging { get; set; } = true;
 
         // ================ Window Settings ================
         public string DisplayName { get; set; } = "Primary";

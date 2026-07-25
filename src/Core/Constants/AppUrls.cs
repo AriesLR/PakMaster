@@ -37,5 +37,11 @@ namespace PakMaster.Core.Constants
 
         // App License Uri Helper
         public static Uri? AppLicenseUri => Uri.TryCreate(AppLicenseUrl, UriKind.Absolute, out var uri) ? uri : null;
+
+        // ============ PakMaster Dependencies ============
+
+        public const string RepakUrl = "https://github.com/trumank/repak/releases/download/v0.2.3/repak_cli-x86_64-pc-windows-msvc.zip";
+
+        public const string ZenToolsUrl = "https://github.com/LongerWarrior/ZenTools/releases/download/1.06UE5.1-5.2/ZenTools.exe";
     }
 }

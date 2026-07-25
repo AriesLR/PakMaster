@@ -18,7 +18,6 @@
              d:DesignHeight="750" d:DesignWidth="250">
 
     <Border BorderBrush="{DynamicResource MahApps.Brushes.Accent3}" BorderThickness="0 0 1 0">
-        <!-- To enable the top sidebar items replace ItemsSource="{x:Null}" with ItemsSource="{Binding MenuItems}" -->
         <mah:HamburgerMenu Grid.Column="0" HorizontalAlignment="Left" VerticalAlignment="Stretch"
                                        IsPaneOpen="{Binding IsPaneOpen, RelativeSource={RelativeSource AncestorType=mah:SplitView}, Mode=TwoWay}"
                                        CompactPaneLength="50" OpenPaneLength="250"
@@ -28,7 +27,7 @@
 
                                        ItemTemplate="{DynamicResource MenuTemplate}"
                                        ItemContainerStyle="{DynamicResource ItemStyle}"
-                                       ItemsSource="{x:Null}"
+                                       ItemsSource="{Binding MenuItems}"
 
                                        OptionsItemTemplate="{DynamicResource MenuTemplate}"
                                        OptionsItemContainerStyle="{DynamicResource ItemStyle}"

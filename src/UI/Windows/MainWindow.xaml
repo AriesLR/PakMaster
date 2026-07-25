@@ -19,10 +19,10 @@
                  xmlns:extensions="clr-namespace:PakMaster.Core.Extensions"
                  FlowDirection="{extensions:FlowDirection}"
                  d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowState}"
-                 Width="1200"
-                 Height="750"
-                 MinWidth="1200"
-                 MinHeight="750"
+                 Width="1366"
+                 Height="768"
+                 MinWidth="1366"
+                 MinHeight="768"
                  FontFamily="Segoe UI"
                  GlowBrush="{DynamicResource MahApps.Brushes.Accent}"
                  NonActiveGlowBrush="{DynamicResource MahApps.Brushes.Accent}"
@@ -94,7 +94,7 @@
             <!-- ================  Main Content START ================ -->
             <mah:SplitView.Content>
                 <Grid>
-                    <views:TemplateView />
+                    <views:MainView />
                     <!-- Main Content Goes HERE -->
                 </Grid>
             </mah:SplitView.Content>

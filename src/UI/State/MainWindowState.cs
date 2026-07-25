@@ -4,6 +4,9 @@ namespace PakMaster.UI.State
     {
         private bool _isAppSettingsFlyoutOpen;
         private bool _isAboutFlyoutOpen;
+        private bool _isAesKeysFlyoutOpen;
+        private bool _isIoStoreFlyoutOpen;
+        private bool _isRepakSettingsFlyoutOpen;
 
         public ObservableCollection<SidebarModel> MenuItems { get; set; }
         public ObservableCollection<SidebarModel> OptionsMenuItems { get; set; }
@@ -17,9 +20,21 @@ namespace PakMaster.UI.State
             [
                 new SidebarModel
                 {
-                    TextGetter = () => Lang.About_Title,
-                    Icon = "Information",
-                    Command = new RelayCommand((sender, e) => SidebarAppSettings_Click(sender, e))
+                    TextGetter = () => "AES Keys",
+                    Icon = "ShieldKey",
+                    Command = new RelayCommand((sender, e) => SidebarAESKeys_Click(sender, e))
+                },
+                new SidebarModel
+                {
+                    TextGetter = () => "Repak Settings",
+                    Icon = "AlphaRBox",
+                    Command = new RelayCommand((sender, e) => SidebarRepakSettings_Click(sender, e))
+                },
+                new SidebarModel
+                {
+                    TextGetter = () => "ZenTools Settings",
+                    Icon = "AlphaZBox",
+                    Command = new RelayCommand((sender, e) => SidebarZenToolsSettings_Click(sender, e))
                 }
             ];
 
@@ -39,6 +54,79 @@ namespace PakMaster.UI.State
                     Command = new RelayCommand((sender, e) => SidebarAbout_Click(sender, e))
                 }
             ];
+        }
+
+        // ============ Legacy Flyouts ============
+        private void SidebarAESKeys_Click(object? sender, RoutedEventArgs e)
+        {
+            OpenAesKeysFlyout();
+        }
+
+        private void SidebarRepakSettings_Click(object? sender, RoutedEventArgs e)
+        {
+            OpenRepakSettingsFlyout();
+        }
+
+        private void SidebarZenToolsSettings_Click(object? sender, RoutedEventArgs e)
+        {
+            System.Windows.MessageBox.Show("This feature is not finished.", "Work In Progress", System.Windows.MessageBoxButton.OK, System.Windows.MessageBoxImage.Information);
+        }
+
+        public bool IsAesKeysFlyoutOpen
+        {
+            get => _isAesKeysFlyoutOpen;
+            set
+            {
+                if (_isAesKeysFlyoutOpen != value)
+                {
+                    _isAesKeysFlyoutOpen = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        public void OpenAesKeysFlyout()
+        {
+            if (IsAesKeysFlyoutOpen) IsAesKeysFlyoutOpen = false;
+            IsAesKeysFlyoutOpen = true;
+        }
+
+        public bool IsIoStoreFlyoutOpen
+        {
+            get => _isIoStoreFlyoutOpen;
+            set
+            {
+                if (_isIoStoreFlyoutOpen != value)
+                {
+                    _isIoStoreFlyoutOpen = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        public void OpenIoStoreFlyout()
+        {
+            if (IsIoStoreFlyoutOpen) IsIoStoreFlyoutOpen = false;
+            IsIoStoreFlyoutOpen = true;
+        }
+
+        public bool IsRepakSettingsFlyoutOpen
+        {
+            get => _isRepakSettingsFlyoutOpen;
+            set
+            {
+                if (_isRepakSettingsFlyoutOpen != value)
+                {
+                    _isRepakSettingsFlyoutOpen = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        public void OpenRepakSettingsFlyout()
+        {
+            if (IsRepakSettingsFlyoutOpen) IsRepakSettingsFlyoutOpen = false;
+            IsRepakSettingsFlyoutOpen = true;
         }
 
         // ============ App Settings Flyout ============

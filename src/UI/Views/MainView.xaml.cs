@@ -1,12 +1,7 @@
-﻿using PakMaster.Resources.Functions.Services;
-using System.Dynamic;
-
 namespace PakMaster.UI.Views
 {
     public partial class MainView : UserControl
     {
-        private ConfigService _configService;
-
         private bool _isInitialized = false;
         private bool isIoStoreMode = false;
         private string? inputFolderPath;
@@ -17,20 +12,12 @@ namespace PakMaster.UI.Views
             InitializeComponent();
             _isInitialized = true;
             DataContext = new MainWindowState();
-            _configService = new ConfigService();
-
-            LoadRepakVersionInfo();
-
-            // Load Configs
-            LoadAesKeysAsync();
-            LoadGeneralConfigAsync();
-            LoadUnrealPakConfigAsync();
         }
 
         // Open PakMaster's GitHub Repo in the user's default browser
         private void LaunchBrowserGitHubPakMaster(object sender, RoutedEventArgs e)
         {
-            UrlOperations.OpenUrlAsync("https://github.com/AriesLR/PakMaster");
+            UrlOperations.OpenUrlAsync(AppUrls.GithubRepoUrl);
         }
 
         // Check for updates via json
@@ -39,155 +26,9 @@ namespace PakMaster.UI.Views
             await UpdateManager.CheckForUpdatesAsync(AppUrls.UpdateUrl);
         }
 
-        // Load General Config
-        private async void LoadGeneralConfigAsync()
-        {
-            try
-            {
-                var generalConfig = _configService.LoadGeneralConfig<dynamic>();
-
-                string repakVersion = generalConfig?.ContainsKey("RepakVersion") ?? false ? generalConfig["RepakVersion"] : string.Empty;
-
-                if (!string.IsNullOrEmpty(repakVersion))
-                {
-                    if (repakVersion == "V11")
-                        RepakVersionSwitchDropdown.SelectedIndex = 0;
-                    else if (repakVersion == "V10")
-                        RepakVersionSwitchDropdown.SelectedIndex = 1;
-                    else if (repakVersion == "V9")
-                        RepakVersionSwitchDropdown.SelectedIndex = 2;
-                    else if (repakVersion == "V8B")
-                        RepakVersionSwitchDropdown.SelectedIndex = 3;
-                    else if (repakVersion == "V8A")
-                        RepakVersionSwitchDropdown.SelectedIndex = 4;
-                    else if (repakVersion == "V7")
-                        RepakVersionSwitchDropdown.SelectedIndex = 5;
-                    else if (repakVersion == "V6")
-                        RepakVersionSwitchDropdown.SelectedIndex = 6;
-                    else if (repakVersion == "V5")
-                        RepakVersionSwitchDropdown.SelectedIndex = 7;
-                    else if (repakVersion == "V4")
-                        RepakVersionSwitchDropdown.SelectedIndex = 8;
-                    else if (repakVersion == "V3")
-                        RepakVersionSwitchDropdown.SelectedIndex = 9;
-                    else if (repakVersion == "V2")
-                        RepakVersionSwitchDropdown.SelectedIndex = 10;
-                    else if (repakVersion == "V1")
-                        RepakVersionSwitchDropdown.SelectedIndex = 11;
-                }
-                Debug.WriteLine($"[DEBUG]: General Config Loaded\n[DEBUG]: RepakVersion: {repakVersion}");
-            }
-            catch (Exception ex)
-            {
-                await MessageManager.ShowError($"Error loading General config: {ex.Message}");
-            }
-        }
-
-        private async void SaveGeneralConfigAsync(string version)
-        {
-            try
-            {
-                var config = _configService.LoadGeneralConfig<dynamic>() ?? new ExpandoObject();
-                config.RepakVersion = version;
-                _configService.SaveGeneralConfig(config);
-                Debug.WriteLine($"[DEBUG]: Repak Version Set To {version}");
-            }
-            catch (Exception ex)
-            {
-                await MessageManager.ShowError($"Error saving General config: {ex.Message}");
-            }
-        }
-
-        // Load UnrealPak Config
-        private async void LoadUnrealPakConfigAsync()
-        {
-            try
-            {
-                var unrealPakConfig = _configService.LoadUnrealPakConfig<Dictionary<string, string>>();
-
-                string unrealPakPath = unrealPakConfig?.ContainsKey("UnrealPakPath") ?? false ? unrealPakConfig["UnrealPakPath"] : string.Empty;
-                string globalOutputPath = unrealPakConfig?.ContainsKey("GlobalOutputPath") ?? false ? unrealPakConfig["GlobalOutputPath"] : string.Empty;
-                string cookedFilesPath = unrealPakConfig?.ContainsKey("CookedFilesPath") ?? false ? unrealPakConfig["CookedFilesPath"] : string.Empty;
-                string packageStorePath = unrealPakConfig?.ContainsKey("PackageStorePath") ?? false ? unrealPakConfig["PackageStorePath"] : string.Empty;
-                string scriptObjectsPath = unrealPakConfig?.ContainsKey("ScriptObjectsPath") ?? false ? unrealPakConfig["ScriptObjectsPath"] : string.Empty;
-                string ioStoreCommandsPath = unrealPakConfig?.ContainsKey("IoStoreCommandsPath") ?? false ? unrealPakConfig["IoStoreCommandsPath"] : string.Empty;
-
-                UnrealPakPathTextBox.Text = unrealPakPath;
-                GlobalOutputPathTextBox.Text = globalOutputPath;
-                CookedFilesPathTextBox.Text = cookedFilesPath;
-                PackageStorePathTextBox.Text = packageStorePath;
-                ScriptObjectsPathTextBox.Text = scriptObjectsPath;
-                IoStoreCommandsPathTextBox.Text = ioStoreCommandsPath;
-            }
-            catch (Exception ex)
-            {
-                await MessageManager.ShowError($"Error loading UnrealPak config: {ex.Message}");
-            }
-        }
-
         /////////////////////
         // AES KEY SECTION //
         /////////////////////
-
-        // Load AES Key
-        private async void LoadAesKeysAsync()
-        {
-            try
-            {
-                var repakConfig = _configService.LoadRepakConfig<dynamic>();
-                string aesKey = repakConfig?.AesKey ?? string.Empty;
-
-                var zentoolsConfig = _configService.LoadZenToolsConfig();
-
-                string zenToolsKeyGuid = zentoolsConfig?.Keys.FirstOrDefault() ?? string.Empty; // Guid stored as a key to ensure it's the first value
-                string zenToolsKeyHex = zentoolsConfig?.Values.FirstOrDefault() ?? string.Empty; // Hex stored as a regular value
-
-                AesKeyTextBox.Text = aesKey;
-                ZenToolsKeyGuidTextBox.Text = zenToolsKeyGuid;
-                ZenToolsKeyHexTextBox.Text = zenToolsKeyHex;
-            }
-            catch (Exception ex)
-            {
-                await MessageManager.ShowError($"Error loading config: {ex.Message}");
-            }
-        }
-
-        // Save Repak AES Key
-        private async void SaveRepakConfigAsync(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                string aesKey = AesKeyTextBox.Text.Trim();
-
-                var config = new { AesKey = aesKey };
-
-                _configService.SaveRepakConfig(config);
-
-                await MessageManager.ShowInfo("Success", "Repak configuration saved successfully!");
-            }
-            catch (Exception ex)
-            {
-                await MessageManager.ShowError($"Error saving Repak AES Keys config: {ex.Message}");
-            }
-        }
-
-        // Save ZenTools AES Key
-        private async void SaveZenToolsConfigAsync(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                string zenToolsKeyGuid = ZenToolsKeyGuidTextBox.Text.Trim();
-                string zenToolsKeyHex = ZenToolsKeyHexTextBox.Text.Trim();
-
-                _configService.SaveZenToolsConfig(zenToolsKeyGuid, zenToolsKeyHex);
-
-                await MessageManager.ShowInfo("Success", "ZenTools configuration saved successfully!");
-            }
-            catch (Exception ex)
-            {
-                await MessageManager.ShowError($"Error saving ZenTools AES Keys config: {ex.Message}");
-            }
-        }
 
         ///////////////////
         // REPAK SECTION //
@@ -197,8 +38,8 @@ namespace PakMaster.UI.Views
         private async Task StartRepakUnpackAsync()
         {
             // Load the AES Key from the config
-            var config = _configService.LoadRepakConfig<dynamic>();
-            string aesKey = config?.AesKey ?? string.Empty;
+            var config = ConfigManager.CurrentSettings;
+            string aesKey = config.Repak.AesKey;
 
             if (string.IsNullOrEmpty(aesKey))
             {
@@ -250,9 +91,8 @@ namespace PakMaster.UI.Views
         {
             var selectedInputFolder = OutputFilesListBox.SelectedItem as KeyValuePair<string, string>?;
 
-            var generalConfig = _configService.LoadGeneralConfig<dynamic>();
-
-            string repakVersion = generalConfig?.ContainsKey("RepakVersion") ?? false ? generalConfig["RepakVersion"] : string.Empty;
+            var repakConfig = ConfigManager.CurrentSettings.Repak;
+            string repakVersion = repakConfig.RepakVersion;
 
             if (selectedInputFolder == null)
             {
@@ -304,28 +144,30 @@ namespace PakMaster.UI.Views
         // Start Unpack with ZenTools (.ucas/.utoc)
         private async Task StartZenToolsUnpackAsync()
         {
-            var zentoolsConfig = _configService.LoadZenToolsConfig();
-
-            if (zentoolsConfig == null || zentoolsConfig.Count == 0)
+            var zentoolsConfig = ConfigManager.LoadZenToolsConfig();
+            string zenToolsKeyGuid = string.Empty;
+            string zenToolsKeyHex = string.Empty;
+            if (zentoolsConfig != null)
             {
-                await MessageManager.ShowError("ZenTools AES Key configuration is missing or empty.");
-                return;
+                foreach (var kvp in zentoolsConfig)
+                {
+                    zenToolsKeyGuid = kvp.Key;
+                    zenToolsKeyHex = kvp.Value;
+                    break;
+                }
             }
-
-            string zenToolsKeyGuid = zentoolsConfig.Keys.FirstOrDefault() ?? string.Empty;
-            string zenToolsKeyHex = zentoolsConfig.Values.FirstOrDefault() ?? string.Empty;
 
             if (string.IsNullOrEmpty(zenToolsKeyGuid))
             {
                 await MessageManager.ShowError("ZenTools AES Key (GUID) not found in the config.\n\nThe GUID cannot be left blank.\n\nDefault GUID: 00000000-0000-0000-0000-000000000000");
                 return;
             }
-            else
-            {
-                Debug.WriteLine($"[DEBUG]: No ZenTools AES Key Found.");
-            }
 
-            if (!string.IsNullOrEmpty(zenToolsKeyHex))
+            if (string.IsNullOrEmpty(zenToolsKeyHex))
+            {
+                Debug.WriteLine($"[DEBUG]: No ZenTools AES Key Hex Found.");
+            }
+            else
             {
                 Debug.WriteLine($"[DEBUG]: ZenTools AES Key Found:\n[DEBUG]: GUID: {zenToolsKeyGuid}\n[DEBUG]: Hex: {zenToolsKeyHex}");
             }
@@ -333,6 +175,7 @@ namespace PakMaster.UI.Views
             if (string.IsNullOrEmpty(inputFolderPath))
             {
                 await MessageManager.ShowWarning("Please select an input folder.");
+                return;
             }
 
             if (string.IsNullOrEmpty(outputFolderPath))
@@ -395,20 +238,13 @@ namespace PakMaster.UI.Views
         // Start Packing with UnrealPak
         private async Task StartUnrealPakRepackAsync()
         {
-            var unrealPakConfig = _configService.LoadUnrealPakConfig<Dictionary<string, string>>();
-
-            if (unrealPakConfig == null || unrealPakConfig.Count == 0)
-            {
-                await MessageManager.ShowError("UnrealPak configuration is missing or empty.");
-                return;
-            }
-
-            string unrealPakPath = unrealPakConfig.ContainsKey("UnrealPakPath") ? unrealPakConfig["UnrealPakPath"] : string.Empty;
-            string globalOutputPath = unrealPakConfig.ContainsKey("GlobalOutputPath") ? unrealPakConfig["GlobalOutputPath"] : string.Empty;
-            string cookedFilesPath = unrealPakConfig.ContainsKey("CookedFilesPath") ? unrealPakConfig["CookedFilesPath"] : string.Empty;
-            string packageStorePath = unrealPakConfig.ContainsKey("PackageStorePath") ? unrealPakConfig["PackageStorePath"] : string.Empty;
-            string scriptObjectsPath = unrealPakConfig.ContainsKey("ScriptObjectsPath") ? unrealPakConfig["ScriptObjectsPath"] : string.Empty;
-            string ioStoreCommandsPath = unrealPakConfig.ContainsKey("IoStoreCommandsPath") ? unrealPakConfig["IoStoreCommandsPath"] : string.Empty;
+            var unrealPakConfig = ConfigManager.CurrentSettings.UnrealPak;
+            string unrealPakPath = unrealPakConfig.UnrealPakPath;
+            string globalOutputPath = unrealPakConfig.GlobalOutputPath;
+            string cookedFilesPath = unrealPakConfig.CookedFilesPath;
+            string packageStorePath = unrealPakConfig.PackageStorePath;
+            string scriptObjectsPath = unrealPakConfig.ScriptObjectsPath;
+            string ioStoreCommandsPath = unrealPakConfig.IoStoreCommandsPath;
 
             if (string.IsNullOrEmpty(unrealPakPath) || !File.Exists(unrealPakPath))
             {
@@ -571,161 +407,7 @@ namespace PakMaster.UI.Views
             }
         }
 
-        // Browse UnrealPak executable
-        private void BrowseUnrealPakPath(object sender, RoutedEventArgs e)
-        {
-            var dialog = new OpenFileDialog
-            {
-                Filter = "UnrealPak.exe|UnrealPak.exe|All Files (*.*)|*.*",
-                Title = "Select UnrealPak Executable"
-            };
 
-            var config = _configService.LoadUnrealPakConfig<dynamic>();
-            string lastPath = config?.UnrealPakPath ?? string.Empty;
-            if (!string.IsNullOrEmpty(lastPath))
-            {
-                dialog.InitialDirectory = Path.GetDirectoryName(lastPath);
-            }
-
-            if (dialog.ShowDialog() == true)
-            {
-                config.UnrealPakPath = dialog.FileName;
-                _configService.SaveUnrealPakConfig(config);
-                UnrealPakPathTextBox.Text = dialog.FileName;
-            }
-        }
-
-        // Browse global output path
-        private void BrowseGlobalOutputPath(object sender, RoutedEventArgs e)
-        {
-            var dialog = new OpenFileDialog
-            {
-                Title = "Select global.utoc Output Folder",
-                CheckFileExists = false,
-                CheckPathExists = true,
-                FileName = "Folder Selection"
-            };
-
-            var config = _configService.LoadUnrealPakConfig<dynamic>();
-            string lastPath = config?.GlobalOutputPath ?? string.Empty;
-            if (!string.IsNullOrEmpty(lastPath))
-            {
-                dialog.InitialDirectory = lastPath;
-            }
-
-            if (dialog.ShowDialog() == true)
-            {
-                string selectedPath = Path.GetDirectoryName(dialog.FileName);
-                if (!string.IsNullOrEmpty(selectedPath))
-                {
-                    config.GlobalOutputPath = selectedPath;
-                    _configService.SaveUnrealPakConfig(config);
-                    GlobalOutputPathTextBox.Text = selectedPath;
-                }
-            }
-        }
-
-        // Browse cooked files path
-        private void BrowseCookedFilesPath(object sender, RoutedEventArgs e)
-        {
-            var dialog = new OpenFileDialog
-            {
-                Title = "Select Folder Containing Cooked Files",
-                CheckFileExists = false,
-                CheckPathExists = true,
-                FileName = "Folder Selection"
-            };
-
-            var config = _configService.LoadUnrealPakConfig<dynamic>();
-            string lastPath = config?.CookedFilesPath ?? string.Empty;
-            if (!string.IsNullOrEmpty(lastPath))
-            {
-                dialog.InitialDirectory = lastPath;
-            }
-
-            if (dialog.ShowDialog() == true)
-            {
-                string selectedPath = Path.GetDirectoryName(dialog.FileName);
-                if (!string.IsNullOrEmpty(selectedPath))
-                {
-                    config.CookedFilesPath = selectedPath;
-                    _configService.SaveUnrealPakConfig(config);
-                    CookedFilesPathTextBox.Text = selectedPath;
-                }
-            }
-        }
-
-        // Browse packagestore.manifest path
-        private void BrowsePackageStorePath(object sender, RoutedEventArgs e)
-        {
-            var dialog = new OpenFileDialog
-            {
-                Filter = "Package Store File (*.manifest, *json)|*.manifest;*.json|All Files (*.*)|*.*",
-                Title = "Select Package Store File"
-            };
-
-            var config = _configService.LoadUnrealPakConfig<dynamic>();
-            string lastPath = config?.PackageStorePath ?? string.Empty;
-            if (!string.IsNullOrEmpty(lastPath))
-            {
-                dialog.InitialDirectory = Path.GetDirectoryName(lastPath);
-            }
-
-            if (dialog.ShowDialog() == true)
-            {
-                config.PackageStorePath = dialog.FileName;
-                _configService.SaveUnrealPakConfig(config);
-                PackageStorePathTextBox.Text = dialog.FileName;
-            }
-        }
-
-        // Browse ScriptObjects.bin path
-        private void BrowseScriptObjectsPath(object sender, RoutedEventArgs e)
-        {
-            var dialog = new OpenFileDialog
-            {
-                Filter = "ScriptObjects.bin|ScriptObjects.bin|All Files (*.*)|*.*",
-                Title = "Select ScriptObjects.bin File"
-            };
-
-            var config = _configService.LoadUnrealPakConfig<dynamic>();
-            string lastPath = config?.ScriptObjectsPath ?? string.Empty;
-            if (!string.IsNullOrEmpty(lastPath))
-            {
-                dialog.InitialDirectory = Path.GetDirectoryName(lastPath);
-            }
-
-            if (dialog.ShowDialog() == true)
-            {
-                config.ScriptObjectsPath = dialog.FileName;
-                _configService.SaveUnrealPakConfig(config);
-                ScriptObjectsPathTextBox.Text = dialog.FileName;
-            }
-        }
-
-        // Browse IoStoreCommands.txt path
-        private void BrowseIoStoreCommandsPath(object sender, RoutedEventArgs e)
-        {
-            var dialog = new OpenFileDialog
-            {
-                Filter = "Commands (*.txt)|*.txt|All Files (*.*)|*.*",
-                Title = "Select Commands.txt File"
-            };
-
-            var config = _configService.LoadUnrealPakConfig<dynamic>();
-            string lastPath = config?.IoStoreCommandsPath ?? string.Empty;
-            if (!string.IsNullOrEmpty(lastPath))
-            {
-                dialog.InitialDirectory = Path.GetDirectoryName(lastPath);
-            }
-
-            if (dialog.ShowDialog() == true)
-            {
-                config.IoStoreCommandsPath = dialog.FileName;
-                _configService.SaveUnrealPakConfig(config);
-                IoStoreCommandsPathTextBox.Text = dialog.FileName;
-            }
-        }
 
         ///////////////////////////
         // START PROCESS SECTION //
@@ -849,36 +531,6 @@ namespace PakMaster.UI.Views
         }
 
         // Open Crypto.json in user's default app for .json files
-        private async void OpenCryptoKeysFileAsync(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-                bool userConfirmed = await MessageManager.ShowYesNo("Warning", "Are you sure you want to open Crypto.json?\n\nOnly edit this file if you know what you're doing.");
-
-                if (userConfirmed)
-                {
-                    string appDirectory = AppDomain.CurrentDomain.BaseDirectory;
-                    string filePath = Path.Combine(appDirectory, "configs", "Crypto.json");
-
-                    if (File.Exists(filePath))
-                    {
-                        Process.Start(new ProcessStartInfo
-                        {
-                            FileName = filePath,
-                            UseShellExecute = true
-                        });
-                    }
-                    else
-                    {
-                        await MessageManager.ShowError("Crypto.json file not found!");
-                    }
-                }
-            }
-            catch (Exception ex)
-            {
-                await MessageManager.ShowError($"Error opening file: {ex.Message}");
-            }
-        }
 
         ////////////////////////
         // UI ELEMENT SECTION //
@@ -907,18 +559,6 @@ namespace PakMaster.UI.Views
             RefreshUI();
         }
 
-        // Repak Version Switch Dropdown
-        private void ComboBox_RepakVersion(object sender, SelectionChangedEventArgs e)
-        {
-            if (!_isInitialized) return;
-
-            if (RepakVersionSwitchDropdown.SelectedItem is ComboBoxItem selectedItem)
-            {
-                string selectedVersion = selectedItem.Content.ToString();
-                SaveGeneralConfigAsync(selectedVersion);
-            }
-        }
-
         // Unpack Button
         private async void btnUnpack_ClickAsync(object sender, RoutedEventArgs e)
         {
@@ -937,7 +577,10 @@ namespace PakMaster.UI.Views
         {
             if (isIoStoreMode)
             {
-                OpenIoStoreFlyout(sender, e);
+                if (System.Windows.Application.Current.MainWindow.DataContext is MainWindowState state)
+                {
+                    state.OpenIoStoreFlyout();
+                }
             }
             else
             {
@@ -951,23 +594,13 @@ namespace PakMaster.UI.Views
             await StartUnrealPakRepackAsync();
         }
 
-        // Open IoStore Flyout
-        private void OpenIoStoreFlyout(object sender, RoutedEventArgs e)
-        {
-            if (DataContext is MainWindowViewModel viewModel)
-            {
-                viewModel.OpenIoStoreFlyout();
-                LoadUnrealPakConfigAsync(); // Load config for unrealpak paths
-            }
-        }
-
         // Open AesKeys Flyout (Settings/Config)
         private void OpenAesKeysFlyout(object sender, RoutedEventArgs e)
         {
-            if (DataContext is MainWindowViewModel viewModel)
+            if (DataContext is MainWindowState viewModel)
             {
                 viewModel.OpenAesKeysFlyout();
-                LoadAesKeysAsync(); // Load again here in case user changes the values via the config directly.
+                // Load again here in case user changes the values via the config directly.
             }
         }
 
@@ -988,7 +621,7 @@ namespace PakMaster.UI.Views
             Application.Current.Dispatcher.Invoke(() =>
             {
                 CommandOutputTextBox.Text += output + Environment.NewLine; // Main page output
-                IoStoreCommandOutputTextBox.Text += output + Environment.NewLine; // IoStore Packing output
+
             });
         }
 
@@ -996,7 +629,7 @@ namespace PakMaster.UI.Views
         private void CliOutput_TextChanged(object sender, TextChangedEventArgs e)
         {
             CommandOutputTextBox.ScrollToEnd();
-            IoStoreCommandOutputTextBox.ScrollToEnd();
+
         }
 
         // Repopulate Input ListBox
@@ -1038,28 +671,6 @@ namespace PakMaster.UI.Views
 
                 OutputFilesListBox.ItemsSource = subdirectories;
             }
-        }
-
-        // Repak Settings Version Info
-        public void LoadRepakVersionInfo()
-        {
-            List<RepakVersionInfo> repakVersionInfo = new List<RepakVersionInfo>
-            {
-                new RepakVersionInfo { UEVersion = "", Version = "1", VersionFeature = "Initial", Read = "?", Write = "?" },
-                new RepakVersionInfo { UEVersion = "4.0-4.2", Version = "2", VersionFeature = "NoTimestamps", Read = "✔", Write = "✔" },
-                new RepakVersionInfo { UEVersion = "4.3-4.15", Version = "3", VersionFeature = "CompressionEncryption", Read = "✔", Write = "✔" },
-                new RepakVersionInfo { UEVersion = "4.16-4.19", Version = "4", VersionFeature = "IndexEncryption", Read = "✔", Write = "✔" },
-                new RepakVersionInfo { UEVersion = "4.20", Version = "5", VersionFeature = "RelativeChunkOffsets", Read = "✔", Write = "✔" },
-                new RepakVersionInfo { UEVersion = "", Version = "6", VersionFeature = "DeleteRecords", Read = "?", Write = "?" },
-                new RepakVersionInfo { UEVersion = "4.21", Version = "7", VersionFeature = "EncryptionKeyGuid", Read = "✔", Write = "✔" },
-                new RepakVersionInfo { UEVersion = "4.22", Version = "8A", VersionFeature = "FNameBasedCompression", Read = "✔", Write = "✔" },
-                new RepakVersionInfo { UEVersion = "4.23-4.24", Version = "8B", VersionFeature = "FNameBasedCompression", Read = "✔", Write = "✔" },
-                new RepakVersionInfo { UEVersion = "4.25", Version = "9", VersionFeature = "FrozenIndex", Read = "✔", Write = "✔" },
-                new RepakVersionInfo { UEVersion = "", Version = "10", VersionFeature = "PathHashIndex", Read = "?", Write = "?" },
-                new RepakVersionInfo { UEVersion = "4.26-5.3", Version = "11", VersionFeature = "Fnv64BugFix", Read = "✔", Write = "✔" }
-            };
-
-            RepakDataGrid.ItemsSource = repakVersionInfo;
         }
     }
 }

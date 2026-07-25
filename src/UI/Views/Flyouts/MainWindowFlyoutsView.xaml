@@ -16,6 +16,12 @@
                     d:DataContext="{d:DesignInstance Type=viewmodels:MainWindowState}"
                     mc:Ignorable="d">
 
+    <mah:FlyoutsControl.Resources>
+        <Style x:Key="CenteredCellStyle" TargetType="TextBlock">
+            <Setter Property="HorizontalAlignment" Value="Center" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+        </Style>
+    </mah:FlyoutsControl.Resources>
     <!-- ============ App Settings Flyout START ============ -->
     <mah:Flyout x:Name="AppSettingsFlyout"
                 Header="{lex:Loc AppSettings_Title}"
@@ -849,19 +855,19 @@
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
 
-                                <Button Background="#262626" Height="30" Width="30" FontSize="12" FontWeight="Bold" Click="btnIoStoreNewConfig_Click" ToolTip="Add New Config" Grid.Column="0">
+                                <Button Background="#262626" Height="30" Width="30" FontSize="12" FontWeight="Bold" ToolTip="Add New Config" Grid.Column="0">
                                     <Button.Content>
                                         <iconPacks:PackIconMaterial Kind="PlusBox" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
                                     </Button.Content>
                                 </Button>
 
-                                <Button Background="#262626" Height="30" Width="30" FontSize="12" FontWeight="Bold" Click="btnIoStoreDeleteConfig_Click" ToolTip="Delete Selected Config" Grid.Column="1">
+                                <Button Background="#262626" Height="30" Width="30" FontSize="12" FontWeight="Bold" ToolTip="Delete Selected Config" Grid.Column="1">
                                     <Button.Content>
                                         <iconPacks:PackIconMaterial Kind="MinusBox" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
                                     </Button.Content>
                                 </Button>
 
-                                <Button Background="#262626" Height="30" Width="30" FontSize="12" FontWeight="Bold" Click="btnIoStoreRenameConfig_Click" ToolTip="Rename Selected Config" Grid.Column="2">
+                                <Button Background="#262626" Height="30" Width="30" FontSize="12" FontWeight="Bold" ToolTip="Rename Selected Config" Grid.Column="2">
                                     <Button.Content>
                                         <iconPacks:PackIconMaterial Kind="RenameBox" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
                                     </Button.Content>
@@ -884,7 +890,7 @@
 
                 <!-- Pack Button -->
                 <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,30">
-                    <Button Content="Pack" Background="#262626" Width="200" Height="40" FontSize="14" FontWeight="Bold" Margin="5" Click="btnIoStorePackage_ClickAsync" />
+                    <Button Content="Pack" Background="#262626" Width="200" Height="40" FontSize="14" FontWeight="Bold" Margin="5"  />
                 </StackPanel>
 
                 <!-- CLI Output -->

@@ -97,6 +97,10 @@ namespace PakMaster
                     await ReportProgressAsync(Lang.App_ReportProgress_InitAppSettings);
                     AppSettingsManager.Initialize();
 
+                    // Init Tool Configs
+                    await ReportProgressAsync("Loading tool configurations...");
+                    ConfigManager.Initialize();
+
                     // Init Language Manager
                     await ReportProgressAsync(Lang.App_ReportProgress_InitLanguageService);
                     LanguageManager.Initialize(AppSettingsManager.CurrentSettings);
@@ -129,7 +133,7 @@ namespace PakMaster
                     splashScreen.LoadingComplete();
 
                     // Small delay before MainWindow gets created
-                    await ReportProgressAsync("You shouldn't see this, but if you do... Hi.");
+                    await ReportProgressAsync("You should not see this, but if you do... Hi...");
                 });
 
                 // Create MainWindow
@@ -155,6 +159,8 @@ namespace PakMaster
 
                 // Init Update Service
                 await UpdateManager.InitializeAsync();
+
+                await PakMaster.Core.Managers.ToolDependencyManager.CheckAndDownloadToolDependenciesAsync();
             }
             catch (Exception ex)
             {
