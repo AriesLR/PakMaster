@@ -276,6 +276,9 @@
   <data name="App_ReportProgress_InitDepedencyService" xml:space="preserve">
     <value>依存関係サービスの初期化中...</value>
   </data>
+  <data name="App_ReportProgress_InitThemeService" xml:space="preserve">
+    <value>テーマビルダーの初期化中...</value>
+  </data>
   <data name="App_ReportProgress_InitTelemetryService" xml:space="preserve">
     <value>テレメトリサービスの初期化中...</value>
   </data>
@@ -370,6 +373,9 @@
 
 エラーの詳細: {1}</value>
   </data>
+  <data name="App_ReportProgress_InitLanguageService" xml:space="preserve">
+    <value>言語マネージャーの初期化中...</value>
+  </data>
   <data name="UpdateService_Msg_FailedToRetrieve_Desc" xml:space="preserve">
     <value>有効な更新情報を取得できませんでした。</value>
   </data>
@@ -454,10 +460,100 @@
   <data name="UrlService_Msg_FailedToOpenURL_Desc" xml:space="preserve">
     <value>URL {0} を開くことができませんでした</value>
   </data>
-  <data name="App_ReportProgress_InitThemeService" xml:space="preserve">
-    <value>テーマビルダーの初期化中...</value>
+  <data name="App_ReportProgress_InitToolConfigs" xml:space="preserve">
+    <value>ツールの設定を読み込んでいます...</value>
   </data>
-  <data name="App_ReportProgress_InitLanguageService" xml:space="preserve">
-    <value>言語マネージャーの初期化中...</value>
+  <data name="MainView_Files" xml:space="preserve">
+    <value>ファイル</value>
+  </data>
+  <data name="MainView_BrowseInputFolder" xml:space="preserve">
+    <value>入力フォルダを参照</value>
+  </data>
+  <data name="MainView_ModeSwitch_NormalMode" xml:space="preserve">
+    <value>通常モード</value>
+  </data>
+  <data name="MainView_ModeSwitch_IoStoreMode" xml:space="preserve">
+    <value>IoStoreモード</value>
+  </data>
+  <data name="MainView_Unpack" xml:space="preserve">
+    <value>解凍</value>
+  </data>
+  <data name="MainView_Repack" xml:space="preserve">
+    <value>再梱包</value>
+  </data>
+  <data name="MainView_Folders" xml:space="preserve">
+    <value>フォルダ</value>
+  </data>
+  <data name="MainView_BrowseOutputFolder" xml:space="preserve">
+    <value>出力フォルダを参照する</value>
+  </data>
+  <data name="AESKeys_Title" xml:space="preserve">
+    <value>AES鍵</value>
+  </data>
+  <data name="RepakSettings_Title" xml:space="preserve">
+    <value>Repakの設定</value>
+  </data>
+  <data name="ZenToolsSettings_Title" xml:space="preserve">
+    <value>ZenTools の設定</value>
+  </data>
+  <data name="IoStorePacking_Title" xml:space="preserve">
+    <value>IoStoreの梱包</value>
+  </data>
+  <data name="IoStorePacking_UnrealPakPathRequiresUnrealEngine425" xml:space="preserve">
+    <value>UnrealPak のパス（Unreal Engine 4.25 以降が必要）</value>
+  </data>
+  <data name="IoStorePacking_OutputPathForGlobalUtoc" xml:space="preserve">
+    <value>出力パス（global.utoc 用）</value>
+  </data>
+  <data name="IoStorePacking_CookedFilesPathCookedFilesToBePackaged" xml:space="preserve">
+    <value>処理済みファイルのパス（パッケージ化する処理済みファイル）</value>
+  </data>
+  <data name="IoStorePacking_PackageStorePath" xml:space="preserve">
+    <value>PackageStoreのパス</value>
+  </data>
+  <data name="IoStorePacking_ScriptObjectsPath" xml:space="preserve">
+    <value>ScriptObjects のパス</value>
+  </data>
+  <data name="IoStorePacking_CommandsPath" xml:space="preserve">
+    <value>コマンドのパス</value>
+  </data>
+  <data name="IoStorePacking_EditCryptoJson" xml:space="preserve">
+    <value>Crypto.json を編集する</value>
+  </data>
+  <data name="IoStorePacking_Pack" xml:space="preserve">
+    <value>パック</value>
+  </data>
+  <data name="AESKeys_RepakAESKey" xml:space="preserve">
+    <value>Repak AES キー</value>
+  </data>
+  <data name="AESKeys_Save" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="AESKeys_ZenToolsAESKey" xml:space="preserve">
+    <value>ZenTools AES キー</value>
+  </data>
+  <data name="AESKeys_GUID" xml:space="preserve">
+    <value>GUID</value>
+  </data>
+  <data name="AESKeys_HEX" xml:space="preserve">
+    <value>HEX</value>
+  </data>
+  <data name="RepakSettings_UEVersion" xml:space="preserve">
+    <value>UEバージョン</value>
+  </data>
+  <data name="RepakSettings_Version" xml:space="preserve">
+    <value>バージョン</value>
+  </data>
+  <data name="RepakSettings_VersionFeature" xml:space="preserve">
+    <value>バージョン 機能</value>
+  </data>
+  <data name="RepakSettings_Read" xml:space="preserve">
+    <value>読む</value>
+  </data>
+  <data name="RepakSettings_Write" xml:space="preserve">
+    <value>書く</value>
+  </data>
+  <data name="RepakSettings_PakVersion" xml:space="preserve">
+    <value>Pakファイルのバージョン</value>
   </data>
 </root>

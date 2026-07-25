@@ -276,6 +276,9 @@
   <data name="App_ReportProgress_InitDepedencyService" xml:space="preserve">
     <value>Đang khởi tạo dịch vụ phụ thuộc...</value>
   </data>
+  <data name="App_ReportProgress_InitThemeService" xml:space="preserve">
+    <value>Đang khởi tạo công cụ tạo chủ đề...</value>
+  </data>
   <data name="App_ReportProgress_InitTelemetryService" xml:space="preserve">
     <value>Đang khởi tạo dịch vụ đo từ xa...</value>
   </data>
@@ -370,6 +373,9 @@ Vui lòng tạo một vấn đề thủ công và đính kèm tệp nhật ký c
 
 Chi tiết lỗi: {1}</value>
   </data>
+  <data name="App_ReportProgress_InitLanguageService" xml:space="preserve">
+    <value>Đang khởi tạo trình quản lý ngôn ngữ...</value>
+  </data>
   <data name="UpdateService_Msg_FailedToRetrieve_Desc" xml:space="preserve">
     <value>Không thể lấy được thông tin cập nhật hợp lệ.</value>
   </data>
@@ -454,10 +460,100 @@ Phiên bản của bạn: {1}</value>
   <data name="UrlService_Msg_FailedToOpenURL_Desc" xml:space="preserve">
     <value>Không thể mở URL: {0}</value>
   </data>
-  <data name="App_ReportProgress_InitThemeService" xml:space="preserve">
-    <value>Đang khởi tạo công cụ tạo chủ đề...</value>
+  <data name="App_ReportProgress_InitToolConfigs" xml:space="preserve">
+    <value>Đang tải cấu hình công cụ...</value>
   </data>
-  <data name="App_ReportProgress_InitLanguageService" xml:space="preserve">
-    <value>Đang khởi tạo trình quản lý ngôn ngữ...</value>
+  <data name="MainView_Files" xml:space="preserve">
+    <value>Tệp tin</value>
+  </data>
+  <data name="MainView_BrowseInputFolder" xml:space="preserve">
+    <value>Duyệt thư mục đầu vào</value>
+  </data>
+  <data name="MainView_ModeSwitch_NormalMode" xml:space="preserve">
+    <value>Chế độ bình thường</value>
+  </data>
+  <data name="MainView_ModeSwitch_IoStoreMode" xml:space="preserve">
+    <value>Chế độ IoStore</value>
+  </data>
+  <data name="MainView_Unpack" xml:space="preserve">
+    <value>Giải nén</value>
+  </data>
+  <data name="MainView_Repack" xml:space="preserve">
+    <value>Đóng gói lại</value>
+  </data>
+  <data name="MainView_Folders" xml:space="preserve">
+    <value>Thư mục</value>
+  </data>
+  <data name="MainView_BrowseOutputFolder" xml:space="preserve">
+    <value>Duyệt thư mục đầu ra</value>
+  </data>
+  <data name="AESKeys_Title" xml:space="preserve">
+    <value>Khóa AES</value>
+  </data>
+  <data name="RepakSettings_Title" xml:space="preserve">
+    <value>Cài đặt Repak</value>
+  </data>
+  <data name="ZenToolsSettings_Title" xml:space="preserve">
+    <value>Cài đặt ZenTools</value>
+  </data>
+  <data name="IoStorePacking_Title" xml:space="preserve">
+    <value>Đóng gói IoStore</value>
+  </data>
+  <data name="IoStorePacking_UnrealPakPathRequiresUnrealEngine425" xml:space="preserve">
+    <value>Đường dẫn UnrealPak (yêu cầu Unreal Engine 4.25 trở lên)</value>
+  </data>
+  <data name="IoStorePacking_OutputPathForGlobalUtoc" xml:space="preserve">
+    <value>Đường dẫn đầu ra (dành cho global.utoc)</value>
+  </data>
+  <data name="IoStorePacking_CookedFilesPathCookedFilesToBePackaged" xml:space="preserve">
+    <value>Đường dẫn đến các tệp đã xử lý (các tệp đã xử lý cần được đóng gói)</value>
+  </data>
+  <data name="IoStorePacking_PackageStorePath" xml:space="preserve">
+    <value>Đường dẫn đến PackageStore</value>
+  </data>
+  <data name="IoStorePacking_ScriptObjectsPath" xml:space="preserve">
+    <value>Đường dẫn của ScriptObjects</value>
+  </data>
+  <data name="IoStorePacking_CommandsPath" xml:space="preserve">
+    <value>Đường dẫn lệnh</value>
+  </data>
+  <data name="IoStorePacking_EditCryptoJson" xml:space="preserve">
+    <value>Chỉnh sửa tệp Crypto.json</value>
+  </data>
+  <data name="IoStorePacking_Pack" xml:space="preserve">
+    <value>Gói</value>
+  </data>
+  <data name="AESKeys_RepakAESKey" xml:space="preserve">
+    <value>Khóa AES của Repak</value>
+  </data>
+  <data name="AESKeys_Save" xml:space="preserve">
+    <value>Lưu</value>
+  </data>
+  <data name="AESKeys_ZenToolsAESKey" xml:space="preserve">
+    <value>Khóa AES của ZenTools</value>
+  </data>
+  <data name="AESKeys_GUID" xml:space="preserve">
+    <value>GUID</value>
+  </data>
+  <data name="AESKeys_HEX" xml:space="preserve">
+    <value>HEX</value>
+  </data>
+  <data name="RepakSettings_UEVersion" xml:space="preserve">
+    <value>Phiên bản UE</value>
+  </data>
+  <data name="RepakSettings_Version" xml:space="preserve">
+    <value>Phiên bản</value>
+  </data>
+  <data name="RepakSettings_VersionFeature" xml:space="preserve">
+    <value>Phiên bản Tính năng</value>
+  </data>
+  <data name="RepakSettings_Read" xml:space="preserve">
+    <value>Đọc</value>
+  </data>
+  <data name="RepakSettings_Write" xml:space="preserve">
+    <value>Viết</value>
+  </data>
+  <data name="RepakSettings_PakVersion" xml:space="preserve">
+    <value>Phiên bản tệp Pak</value>
   </data>
 </root>

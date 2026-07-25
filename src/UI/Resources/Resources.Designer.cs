@@ -151,6 +151,60 @@ namespace PakMaster.UI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to GUID.
+        /// </summary>
+        public static string AESKeys_GUID {
+            get {
+                return ResourceManager.GetString("AESKeys_GUID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to HEX.
+        /// </summary>
+        public static string AESKeys_HEX {
+            get {
+                return ResourceManager.GetString("AESKeys_HEX", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Repak AES Key.
+        /// </summary>
+        public static string AESKeys_RepakAESKey {
+            get {
+                return ResourceManager.GetString("AESKeys_RepakAESKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Save.
+        /// </summary>
+        public static string AESKeys_Save {
+            get {
+                return ResourceManager.GetString("AESKeys_Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to AES Keys.
+        /// </summary>
+        public static string AESKeys_Title {
+            get {
+                return ResourceManager.GetString("AESKeys_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ZenTools AES Key.
+        /// </summary>
+        public static string AESKeys_ZenToolsAESKey {
+            get {
+                return ResourceManager.GetString("AESKeys_ZenToolsAESKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An instance of this application is already running..
         /// </summary>
         public static string App_Msg_AlreadyRunning_Desc {
@@ -268,6 +322,15 @@ namespace PakMaster.UI.Resources {
         public static string App_ReportProgress_InitThemeService {
             get {
                 return ResourceManager.GetString("App_ReportProgress_InitThemeService", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Loading tool configurations....
+        /// </summary>
+        public static string App_ReportProgress_InitToolConfigs {
+            get {
+                return ResourceManager.GetString("App_ReportProgress_InitToolConfigs", resourceCulture);
             }
         }
         
@@ -820,6 +883,159 @@ namespace PakMaster.UI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Commands Path.
+        /// </summary>
+        public static string IoStorePacking_CommandsPath {
+            get {
+                return ResourceManager.GetString("IoStorePacking_CommandsPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cooked Files Path (cooked files to be packaged).
+        /// </summary>
+        public static string IoStorePacking_CookedFilesPathCookedFilesToBePackaged {
+            get {
+                return ResourceManager.GetString("IoStorePacking_CookedFilesPathCookedFilesToBePackaged", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Edit Crypto.json.
+        /// </summary>
+        public static string IoStorePacking_EditCryptoJson {
+            get {
+                return ResourceManager.GetString("IoStorePacking_EditCryptoJson", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Output Path (for global.utoc).
+        /// </summary>
+        public static string IoStorePacking_OutputPathForGlobalUtoc {
+            get {
+                return ResourceManager.GetString("IoStorePacking_OutputPathForGlobalUtoc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pack.
+        /// </summary>
+        public static string IoStorePacking_Pack {
+            get {
+                return ResourceManager.GetString("IoStorePacking_Pack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PackageStore Path.
+        /// </summary>
+        public static string IoStorePacking_PackageStorePath {
+            get {
+                return ResourceManager.GetString("IoStorePacking_PackageStorePath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ScriptObjects Path.
+        /// </summary>
+        public static string IoStorePacking_ScriptObjectsPath {
+            get {
+                return ResourceManager.GetString("IoStorePacking_ScriptObjectsPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to IoStore Packing.
+        /// </summary>
+        public static string IoStorePacking_Title {
+            get {
+                return ResourceManager.GetString("IoStorePacking_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UnrealPak Path (requires Unreal Engine 4.25+).
+        /// </summary>
+        public static string IoStorePacking_UnrealPakPathRequiresUnrealEngine425 {
+            get {
+                return ResourceManager.GetString("IoStorePacking_UnrealPakPathRequiresUnrealEngine425", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Browse input folder.
+        /// </summary>
+        public static string MainView_BrowseInputFolder {
+            get {
+                return ResourceManager.GetString("MainView_BrowseInputFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Browse output folder.
+        /// </summary>
+        public static string MainView_BrowseOutputFolder {
+            get {
+                return ResourceManager.GetString("MainView_BrowseOutputFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Files.
+        /// </summary>
+        public static string MainView_Files {
+            get {
+                return ResourceManager.GetString("MainView_Files", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Folders.
+        /// </summary>
+        public static string MainView_Folders {
+            get {
+                return ResourceManager.GetString("MainView_Folders", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to IoStore Mode.
+        /// </summary>
+        public static string MainView_ModeSwitch_IoStoreMode {
+            get {
+                return ResourceManager.GetString("MainView_ModeSwitch_IoStoreMode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Normal Mode.
+        /// </summary>
+        public static string MainView_ModeSwitch_NormalMode {
+            get {
+                return ResourceManager.GetString("MainView_ModeSwitch_NormalMode", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Repack.
+        /// </summary>
+        public static string MainView_Repack {
+            get {
+                return ResourceManager.GetString("MainView_Repack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Unpack.
+        /// </summary>
+        public static string MainView_Unpack {
+            get {
+                return ResourceManager.GetString("MainView_Unpack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Open the GitHub repository in your browser..
         /// </summary>
         public static string MainWindow_Btn_OpenTheGitHubRepo {
@@ -924,6 +1140,69 @@ namespace PakMaster.UI.Resources {
         public static string Num_AppSettings_Flyout_Width {
             get {
                 return ResourceManager.GetString("Num_AppSettings_Flyout_Width", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Pak File Version.
+        /// </summary>
+        public static string RepakSettings_PakVersion {
+            get {
+                return ResourceManager.GetString("RepakSettings_PakVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Read.
+        /// </summary>
+        public static string RepakSettings_Read {
+            get {
+                return ResourceManager.GetString("RepakSettings_Read", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Repak Settings.
+        /// </summary>
+        public static string RepakSettings_Title {
+            get {
+                return ResourceManager.GetString("RepakSettings_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to UE Version.
+        /// </summary>
+        public static string RepakSettings_UEVersion {
+            get {
+                return ResourceManager.GetString("RepakSettings_UEVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Version.
+        /// </summary>
+        public static string RepakSettings_Version {
+            get {
+                return ResourceManager.GetString("RepakSettings_Version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Version Feature.
+        /// </summary>
+        public static string RepakSettings_VersionFeature {
+            get {
+                return ResourceManager.GetString("RepakSettings_VersionFeature", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Write.
+        /// </summary>
+        public static string RepakSettings_Write {
+            get {
+                return ResourceManager.GetString("RepakSettings_Write", resourceCulture);
             }
         }
         
@@ -1036,6 +1315,15 @@ namespace PakMaster.UI.Resources {
         public static string UrlService_Msg_FailedToOpenURL_Desc {
             get {
                 return ResourceManager.GetString("UrlService_Msg_FailedToOpenURL_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ZenTools Settings.
+        /// </summary>
+        public static string ZenToolsSettings_Title {
+            get {
+                return ResourceManager.GetString("ZenToolsSettings_Title", resourceCulture);
             }
         }
     }

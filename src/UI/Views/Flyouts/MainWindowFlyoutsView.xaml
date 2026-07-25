@@ -667,8 +667,7 @@
 
                         <TextBlock Text="{lex:Loc About_Section_SupportTheDeveloper}" HorizontalAlignment="Center" Foreground="{DynamicResource MahApps.Brushes.Accent}" FontSize="15" FontWeight="SemiBold" Margin="0,0,0,20" />
 
-                        <TextBlock Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontSize="12" TextAlignment="Center" TextWrapping="Wrap" Margin="0,0,0,40" Padding="20,0,20,0"
-                               Text="{lex:Loc About_Section_SupportTheDeveloper_Desc}" />
+                        <TextBlock Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontSize="12" TextAlignment="Center" TextWrapping="Wrap" Margin="0,0,0,40" Padding="20,0,20,0" Text="{lex:Loc About_Section_SupportTheDeveloper_Desc}" />
 
                         <StackPanel Orientation="Vertical">
                             <Button x:Name="BuyMeACoffeeButton" Visibility="{Binding Source={x:Static constants:AppUrls.BuyMeACoffeeUrl}, Converter={StaticResource StringToVisibilityConverter}}" Width="180" Height="35" Margin="0,0,0,12" HorizontalAlignment="Center" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="OpenBuyMeACoffee_Click">
@@ -761,16 +760,16 @@
 
     <!-- IoStore Flyout -->
     <mah:Flyout x:Name="IoStoreFlyout"
-                        Header="IoStore Packing"
+                        Header="{lex:Loc IoStorePacking_Title}"
                         Position="Left"
-                        Width="1271"
+                        Width="1366"
                         Background="#1F1F1F"
                         BorderBrush="{DynamicResource MahApps.Brushes.Accent}"
                         BorderThickness="1"
                         IsOpen="{Binding IsIoStoreFlyoutOpen}">
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="600" />
+                <ColumnDefinition Width="800" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
 
@@ -778,61 +777,61 @@
             <StackPanel Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
                 <!-- UnrealPak Path -->
                 <StackPanel Margin="0,0,0,15">
-                    <TextBlock Text="UnrealPak Path (requires Unreal Engine 4.25+)" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5" />
+                    <TextBlock Text="{lex:Loc IoStorePacking_UnrealPakPathRequiresUnrealEngine425}" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5" />
                     <Grid Margin="5">
                         <TextBox Name="UnrealPakPathTextBox" IsReadOnly="True" Background="Transparent" Width="500" VerticalContentAlignment="Center" mah:TextBoxHelper.Watermark="C:\Program Files\Epic Games\UE_5.1\Engine\Binaries\Win64\UnrealPak.exe" />
-                        <Button Content="Browse" Background="#262626" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseUnrealPakPath" />
+                        <Button Content="{lex:Loc Btn_Browse}" Background="#262626" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseUnrealPakPath" />
                     </Grid>
                 </StackPanel>
 
                 <!-- Output Path -->
                 <StackPanel Margin="0,15,0,15">
-                    <TextBlock Text="Output Path (for global.utoc)" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5" />
+                    <TextBlock Text="{lex:Loc IoStorePacking_OutputPathForGlobalUtoc}" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5" />
                     <Grid Margin="5">
                         <TextBox Name="GlobalOutputPathTextBox" IsReadOnly="True" Background="Transparent" Width="500" VerticalContentAlignment="Center" mah:TextBoxHelper.Watermark="C:\Path\To\Output" />
-                        <Button Content="Browse" Background="#262626" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseGlobalOutputPath" />
+                        <Button Content="{lex:Loc Btn_Browse}" Background="#262626" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseGlobalOutputPath" />
                     </Grid>
                 </StackPanel>
 
                 <!-- Input Path -->
                 <StackPanel Margin="0,15,0,15">
-                    <TextBlock Text="Cooked Files Path (cooked files to be packaged)" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5" />
+                    <TextBlock Text="{lex:Loc IoStorePacking_CookedFilesPathCookedFilesToBePackaged}" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5" />
                     <Grid Margin="5">
                         <TextBox Name="CookedFilesPathTextBox" IsReadOnly="True" Background="Transparent" Width="500" VerticalContentAlignment="Center" mah:TextBoxHelper.Watermark="C:\Path\To\Cooked" />
-                        <Button Content="Browse" Background="#262626" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseCookedFilesPath" />
+                        <Button Content="{lex:Loc Btn_Browse}" Background="#262626" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseCookedFilesPath" />
                     </Grid>
                 </StackPanel>
 
                 <!-- Packagestore.manifest Path -->
                 <StackPanel Margin="0,15,0,15">
-                    <TextBlock Text="PackageStore Path" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5" />
+                    <TextBlock Text="{lex:Loc IoStorePacking_PackageStorePath}" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5" />
                     <Grid Margin="5">
                         <TextBox Name="PackageStorePathTextBox" IsReadOnly="True" Background="Transparent" Width="500" VerticalContentAlignment="Center" mah:TextBoxHelper.Watermark="packagestore.manifest / PackageStoreManifest.json" />
-                        <Button Content="Browse" Background="#262626" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowsePackageStorePath" />
+                        <Button Content="{lex:Loc Btn_Browse}" Background="#262626" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowsePackageStorePath" />
                     </Grid>
                 </StackPanel>
 
                 <!-- ScriptObjects.bin Path -->
                 <StackPanel Margin="0,15,0,15">
-                    <TextBlock Text="ScriptObjects Path" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5" />
+                    <TextBlock Text="{lex:Loc IoStorePacking_ScriptObjectsPath}" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5" />
                     <Grid Margin="5">
                         <TextBox Name="ScriptObjectsPathTextBox" IsReadOnly="True" Background="Transparent" Width="500" VerticalContentAlignment="Center" mah:TextBoxHelper.Watermark="ScriptObjects.bin" />
-                        <Button Content="Browse" Background="#262626" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseScriptObjectsPath" />
+                        <Button Content="{lex:Loc Btn_Browse}" Background="#262626" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseScriptObjectsPath" />
                     </Grid>
                 </StackPanel>
 
                 <!-- IoStoreCommands.txt Path -->
                 <StackPanel Margin="0,15,0,15">
-                    <TextBlock Text="Commands Path" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5" />
+                    <TextBlock Text="{lex:Loc IoStorePacking_CommandsPath}" Foreground="White" FontSize="16" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5" />
                     <Grid Margin="5">
                         <TextBox Name="IoStoreCommandsPathTextBox" IsReadOnly="True" Background="Transparent" Width="500" VerticalContentAlignment="Center" mah:TextBoxHelper.Watermark="IoStoreCommands.txt / Commands.txt" />
-                        <Button Content="Browse" Background="#262626" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseIoStoreCommandsPath" />
+                        <Button Content="{lex:Loc Btn_Browse}" Background="#262626" Width="75" VerticalAlignment="Center" HorizontalAlignment="Right" Click="BrowseIoStoreCommandsPath" />
                     </Grid>
                 </StackPanel>
 
                 <!-- Crypto Keys Browser -->
                 <StackPanel Margin="0,50,0,0">
-                    <Button Content="Edit Crypto.json" Background="#262626" Width="200" Height="40" FontSize="12" FontWeight="Bold" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center" Click="OpenCryptoKeysFileAsync" />
+                    <Button Content="{lex:Loc IoStorePacking_EditCryptoJson}" Background="#262626" Width="300" Height="40" FontSize="12" FontWeight="Bold" Margin="5" VerticalAlignment="Center" HorizontalAlignment="Center" Click="OpenCryptoKeysFileAsync" />
                 </StackPanel>
             </StackPanel>
 
@@ -890,7 +889,7 @@
 
                 <!-- Pack Button -->
                 <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,30">
-                    <Button Content="Pack" Background="#262626" Width="200" Height="40" FontSize="14" FontWeight="Bold" Margin="5"  />
+                    <Button Content="{lex:Loc IoStorePacking_Pack}" Background="#262626" Width="200" Height="40" FontSize="14" FontWeight="Bold" Margin="5" />
                 </StackPanel>
 
                 <!-- CLI Output -->
@@ -903,7 +902,7 @@
                                      IsReadOnly="True"
                                      VerticalScrollBarVisibility="Auto"
                                      Height="250"
-                                     Width="650"
+                                     Width="525"
                                      BorderBrush="#7F7F7F"
                                      BorderThickness="1"
                                      FocusVisualStyle="{x:Null}"
@@ -911,8 +910,8 @@
                         <TextBox.Template>
                             <ControlTemplate TargetType="TextBox">
                                 <Border BorderBrush="{TemplateBinding BorderBrush}"
-                                                BorderThickness="{TemplateBinding BorderThickness}"
-                                                Background="{TemplateBinding Background}">
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        Background="{TemplateBinding Background}">
                                     <ScrollViewer x:Name="PART_ContentHost" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" />
                                 </Border>
                             </ControlTemplate>
@@ -925,13 +924,13 @@
 
     <!-- Aes Keys Flyout -->
     <mah:Flyout x:Name="AesKeysFlyout"
-                        Header="AES Key Settings"
-                        Position="Left"
-                        Width="600"
-                        Background="#1F1F1F"
-                        BorderBrush="{DynamicResource MahApps.Brushes.Accent}"
-                        BorderThickness="1"
-                        IsOpen="{Binding IsAesKeysFlyoutOpen}">
+                Header="{lex:Loc AESKeys_Title}"
+                Position="Left"
+                Width="600"
+                Background="#1F1F1F"
+                BorderBrush="{DynamicResource MahApps.Brushes.Accent}"
+                BorderThickness="1"
+                IsOpen="{Binding IsAesKeysFlyoutOpen}">
 
         <Grid>
             <Grid.RowDefinitions>
@@ -942,9 +941,9 @@
 
             <!-- Repak AES Key Input Section -->
             <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
-                <TextBlock Text="Repak AES Key" Foreground="White" FontSize="20" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5" />
+                <TextBlock Text="{lex:Loc AESKeys_RepakAESKey}" Foreground="White" FontSize="20" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5" />
                 <TextBox Name="AesKeyTextBox" Background="Transparent" Width="460" Height="30" Margin="5" />
-                <Button Content="Save" Background="#262626" FontSize="14" FontWeight="Bold" Width="180" Height="40" Margin="5" Click="SaveRepakConfigAsync" />
+                <Button Content="{lex:Loc AESKeys_Save}" Background="#262626" FontSize="14" FontWeight="Bold" Width="180" Height="40" Margin="5" Click="SaveRepakConfigAsync" />
             </StackPanel>
 
             <!-- Empty Row (Filler) -->
@@ -952,21 +951,21 @@
 
             <!-- ZenTools AES Key Input Section -->
             <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
-                <TextBlock Text="ZenTools AES Key" Foreground="White" FontSize="20" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5" />
-                <TextBlock Text="GUID" Foreground="White" FontSize="12" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5" />
+                <TextBlock Text="{lex:Loc AESKeys_ZenToolsAESKey}" Foreground="White" FontSize="20" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5" />
+                <TextBlock Text="{lex:Loc AESKeys_GUID}" Foreground="White" FontSize="12" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5" />
                 <TextBox Name="ZenToolsKeyGuidTextBox" Background="Transparent" Width="460" Height="30" Margin="5" />
-                <TextBlock Text="HEX" Foreground="White" FontSize="12" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5" />
+                <TextBlock Text="{lex:Loc AESKeys_HEX}" Foreground="White" FontSize="12" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="5" />
                 <TextBox Name="ZenToolsKeyHexTextBox" Background="Transparent" Width="460" Height="30" Margin="5" />
-                <Button Content="Save" Background="#262626" FontSize="14" FontWeight="Bold" Width="180" Height="40" Margin="5" Click="SaveZenToolsConfigAsync" />
+                <Button Content="{lex:Loc AESKeys_Save}" Background="#262626" FontSize="14" FontWeight="Bold" Width="180" Height="40" Margin="5" Click="SaveZenToolsConfigAsync" />
             </StackPanel>
         </Grid>
     </mah:Flyout>
 
     <!-- Repak Settings Flyout -->
     <mah:Flyout x:Name="RepakSettingsFlyout"
-                        Header="Repak Settings"
+                        Header="{lex:Loc RepakSettings_Title}"
                         Position="Left"
-                        Width="600"
+                        Width="800"
                         Background="#1F1F1F"
                         BorderBrush="{DynamicResource MahApps.Brushes.Accent}"
                         BorderThickness="1"
@@ -982,7 +981,7 @@
             <!-- Top -->
             <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
                 <!-- Dropdown for Version Switching -->
-                <TextBlock Text="Pak Version" Foreground="White" FontSize="20" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="0,5,0,15" />
+                <TextBlock Text="{lex:Loc RepakSettings_PakVersion}" Foreground="White" FontSize="20" FontWeight="Bold" FontFamily="Segoe UI" HorizontalAlignment="Center" Margin="0,5,0,15" />
                 <ComboBox x:Name="RepakVersionSwitchDropdown"
                                   Width="150" Height="40"
                                   SelectedIndex="0"
@@ -1011,23 +1010,23 @@
             <!-- Bottom -->
             <StackPanel Grid.Row="2" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="5">
                 <DataGrid x:Name="RepakDataGrid"
-                                  AutoGenerateColumns="False"
-                                  HeadersVisibility="Column"
-                                  GridLinesVisibility="None"
-                                  CanUserSortColumns="False"
-                                  RowBackground="#202020"
-                                  AlternatingRowBackground="#252525"
-                                  Foreground="White"
-                                  Background="#262626"
-                                  BorderBrush="#7F7F7F"
-                                  HorizontalAlignment="Center"
-                                  VerticalAlignment="Center"
-                                  Width="580">
+                          AutoGenerateColumns="False"
+                          HeadersVisibility="Column"
+                          GridLinesVisibility="None"
+                          CanUserSortColumns="False"
+                          RowBackground="#202020"
+                          AlternatingRowBackground="#252525"
+                          Foreground="White"
+                          Background="#262626"
+                          BorderBrush="#7F7F7F"
+                          HorizontalAlignment="Center"
+                          VerticalAlignment="Center"
+                          Width="Auto">
 
                     <!-- Columns -->
                     <DataGrid.Columns>
                         <!-- UE Version Column -->
-                        <DataGridTextColumn Header="UE Version" Binding="{Binding UEVersion}" Width="1*" ElementStyle="{StaticResource CenteredCellStyle}">
+                        <DataGridTextColumn Header="{lex:Loc RepakSettings_UEVersion}" Binding="{Binding UEVersion}" Width="1*" ElementStyle="{StaticResource CenteredCellStyle}">
                             <DataGridTextColumn.HeaderStyle>
                                 <Style TargetType="DataGridColumnHeader">
                                     <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -1044,7 +1043,7 @@
                         </DataGridTextColumn>
 
                         <!-- Version Column -->
-                        <DataGridTextColumn Header="Version" Binding="{Binding Version}" Width="0.5*" ElementStyle="{StaticResource CenteredCellStyle}">
+                        <DataGridTextColumn Header="{lex:Loc RepakSettings_Version}" Binding="{Binding Version}" Width="0.5*" ElementStyle="{StaticResource CenteredCellStyle}">
                             <DataGridTextColumn.HeaderStyle>
                                 <Style TargetType="DataGridColumnHeader">
                                     <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -1061,7 +1060,7 @@
                         </DataGridTextColumn>
 
                         <!-- Version Feature Column -->
-                        <DataGridTextColumn Header="Version Feature" Binding="{Binding VersionFeature}" Width="1.5*" ElementStyle="{StaticResource CenteredCellStyle}">
+                        <DataGridTextColumn Header="{lex:Loc RepakSettings_VersionFeature}" Binding="{Binding VersionFeature}" Width="1.5*" ElementStyle="{StaticResource CenteredCellStyle}">
                             <DataGridTextColumn.HeaderStyle>
                                 <Style TargetType="DataGridColumnHeader">
                                     <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -1078,7 +1077,7 @@
                         </DataGridTextColumn>
 
                         <!-- Read Column -->
-                        <DataGridTemplateColumn Header="Read" Width="0.5*">
+                        <DataGridTemplateColumn Header="{lex:Loc RepakSettings_Read}" Width="0.5*">
                             <DataGridTemplateColumn.HeaderStyle>
                                 <Style TargetType="DataGridColumnHeader">
                                     <Setter Property="HorizontalContentAlignment" Value="Center" />
@@ -1100,7 +1099,7 @@
                         </DataGridTemplateColumn>
 
                         <!-- Write Column -->
-                        <DataGridTemplateColumn Header="Write" Width="0.5*">
+                        <DataGridTemplateColumn Header="{lex:Loc RepakSettings_Write}" Width="0.5*">
                             <DataGridTemplateColumn.HeaderStyle>
                                 <Style TargetType="DataGridColumnHeader">
                                     <Setter Property="HorizontalContentAlignment" Value="Center" />

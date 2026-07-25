@@ -276,6 +276,9 @@
   <data name="App_ReportProgress_InitDepedencyService" xml:space="preserve">
     <value>নির্ভরতা পরিষেবা ইনিশিয়ালাইজ করা হচ্ছে...</value>
   </data>
+  <data name="App_ReportProgress_InitThemeService" xml:space="preserve">
+    <value>থিম বিল্ডার ইনিশিয়ালাইজ করা হচ্ছে...</value>
+  </data>
   <data name="App_ReportProgress_InitTelemetryService" xml:space="preserve">
     <value>টেলিমেট্রি সেবা শুরু হচ্ছে...</value>
   </data>
@@ -370,6 +373,9 @@
 
 ত্রুটির বিবরণ: {1}</value>
   </data>
+  <data name="App_ReportProgress_InitLanguageService" xml:space="preserve">
+    <value>ভাষা ম্যানেজার ইনিশিয়ালাইজ করা হচ্ছে...</value>
+  </data>
   <data name="UpdateService_Msg_FailedToRetrieve_Desc" xml:space="preserve">
     <value>বৈধ আপডেট তথ্য পুনরুদ্ধার করতে ব্যর্থ হয়েছে।</value>
   </data>
@@ -454,10 +460,100 @@
   <data name="UrlService_Msg_FailedToOpenURL_Desc" xml:space="preserve">
     <value>URL খুলতে ব্যর্থ: {0}</value>
   </data>
-  <data name="App_ReportProgress_InitThemeService" xml:space="preserve">
-    <value>থিম বিল্ডার ইনিশিয়ালাইজ করা হচ্ছে...</value>
+  <data name="App_ReportProgress_InitToolConfigs" xml:space="preserve">
+    <value>টুল কনফিগারেশন লোড হচ্ছে...</value>
   </data>
-  <data name="App_ReportProgress_InitLanguageService" xml:space="preserve">
-    <value>ভাষা ম্যানেজার ইনিশিয়ালাইজ করা হচ্ছে...</value>
+  <data name="MainView_Files" xml:space="preserve">
+    <value>ফাইলসমূহ</value>
+  </data>
+  <data name="MainView_BrowseInputFolder" xml:space="preserve">
+    <value>ইনপুট ফোল্ডার ব্রাউজ করুন</value>
+  </data>
+  <data name="MainView_ModeSwitch_NormalMode" xml:space="preserve">
+    <value>সাধারণ মোড</value>
+  </data>
+  <data name="MainView_ModeSwitch_IoStoreMode" xml:space="preserve">
+    <value>আইওস্টোর মোড</value>
+  </data>
+  <data name="MainView_Unpack" xml:space="preserve">
+    <value>আনপ্যাক করুন</value>
+  </data>
+  <data name="MainView_Repack" xml:space="preserve">
+    <value>পুনরায় প্যাক করুন</value>
+  </data>
+  <data name="MainView_Folders" xml:space="preserve">
+    <value>ফোল্ডারসমূহ</value>
+  </data>
+  <data name="MainView_BrowseOutputFolder" xml:space="preserve">
+    <value>আউটপুট ফোল্ডার ব্রাউজ করুন</value>
+  </data>
+  <data name="AESKeys_Title" xml:space="preserve">
+    <value>AES কীসমূহ</value>
+  </data>
+  <data name="RepakSettings_Title" xml:space="preserve">
+    <value>রিপ্যাক সেটিংস</value>
+  </data>
+  <data name="ZenToolsSettings_Title" xml:space="preserve">
+    <value>জেনটুলস সেটিংস</value>
+  </data>
+  <data name="IoStorePacking_Title" xml:space="preserve">
+    <value>আইওস্টোর প্যাকিং</value>
+  </data>
+  <data name="IoStorePacking_UnrealPakPathRequiresUnrealEngine425" xml:space="preserve">
+    <value>আনরিয়ালপ্যাক পাথ (আনরিয়াল ইঞ্জিন ৪.২৫+ প্রয়োজন)</value>
+  </data>
+  <data name="IoStorePacking_OutputPathForGlobalUtoc" xml:space="preserve">
+    <value>আউটপুট পথ (global.utoc-এর জন্য)</value>
+  </data>
+  <data name="IoStorePacking_CookedFilesPathCookedFilesToBePackaged" xml:space="preserve">
+    <value>রান্নাকৃত ফাইল পথ (প্যাকেজ করার জন্য রান্নাকৃত ফাইলসমূহ)</value>
+  </data>
+  <data name="IoStorePacking_PackageStorePath" xml:space="preserve">
+    <value>প্যাকেজস্টোর পথ</value>
+  </data>
+  <data name="IoStorePacking_ScriptObjectsPath" xml:space="preserve">
+    <value>স্ক্রিপ্ট অবজেক্টস পথ</value>
+  </data>
+  <data name="IoStorePacking_CommandsPath" xml:space="preserve">
+    <value>কমান্ডের পথ</value>
+  </data>
+  <data name="IoStorePacking_EditCryptoJson" xml:space="preserve">
+    <value>Crypto.json সম্পাদনা করুন</value>
+  </data>
+  <data name="IoStorePacking_Pack" xml:space="preserve">
+    <value>প্যাক</value>
+  </data>
+  <data name="AESKeys_RepakAESKey" xml:space="preserve">
+    <value>রিপ্যাক এইএস কী</value>
+  </data>
+  <data name="AESKeys_Save" xml:space="preserve">
+    <value>সংরক্ষণ করুন</value>
+  </data>
+  <data name="AESKeys_ZenToolsAESKey" xml:space="preserve">
+    <value>জেনটুলস AES কী</value>
+  </data>
+  <data name="AESKeys_GUID" xml:space="preserve">
+    <value>গ্লোবাল ইউনিক আইডেন্টিফায়ার</value>
+  </data>
+  <data name="AESKeys_HEX" xml:space="preserve">
+    <value>হেক্স</value>
+  </data>
+  <data name="RepakSettings_UEVersion" xml:space="preserve">
+    <value>ইউই সংস্করণ</value>
+  </data>
+  <data name="RepakSettings_Version" xml:space="preserve">
+    <value>সংস্করণ</value>
+  </data>
+  <data name="RepakSettings_VersionFeature" xml:space="preserve">
+    <value>সংস্করণ বৈশিষ্ট্য</value>
+  </data>
+  <data name="RepakSettings_Read" xml:space="preserve">
+    <value>পড়ুন</value>
+  </data>
+  <data name="RepakSettings_Write" xml:space="preserve">
+    <value>লিখুন</value>
+  </data>
+  <data name="RepakSettings_PakVersion" xml:space="preserve">
+    <value>পাক ফাইল সংস্করণ</value>
   </data>
 </root>

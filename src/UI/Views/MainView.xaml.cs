@@ -546,7 +546,7 @@ namespace PakMaster.UI.Views
         // Mode Switch Button - Normal
         private void btnModeSwitchNormal_Click(object sender, RoutedEventArgs e)
         {
-            ModeSwitchButton.Content = "Normal Mode";
+            ModeSwitchButton.Content = Lang.MainView_ModeSwitch_NormalMode;
             isIoStoreMode = false; // Normal Mode (.pak)
             RefreshUI();
         }
@@ -554,7 +554,7 @@ namespace PakMaster.UI.Views
         // Mode Switch Button - IoStore
         private void btnModeSwitchIoStore_Click(object sender, RoutedEventArgs e)
         {
-            ModeSwitchButton.Content = "IoStore Mode";
+            ModeSwitchButton.Content = Lang.MainView_ModeSwitch_IoStoreMode;
             isIoStoreMode = true; // IoStore Mode (.ucas/.utoc)
             RefreshUI();
         }

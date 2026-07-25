@@ -20,19 +20,19 @@ namespace PakMaster.UI.State
             [
                 new SidebarModel
                 {
-                    TextGetter = () => "AES Keys",
+                    TextGetter = () => Lang.AESKeys_Title,
                     Icon = "ShieldKey",
                     Command = new RelayCommand((sender, e) => SidebarAESKeys_Click(sender, e))
                 },
                 new SidebarModel
                 {
-                    TextGetter = () => "Repak Settings",
+                    TextGetter = () => Lang.RepakSettings_Title,
                     Icon = "AlphaRBox",
                     Command = new RelayCommand((sender, e) => SidebarRepakSettings_Click(sender, e))
                 },
                 new SidebarModel
                 {
-                    TextGetter = () => "ZenTools Settings",
+                    TextGetter = () => Lang.ZenToolsSettings_Title,
                     Icon = "AlphaZBox",
                     Command = new RelayCommand((sender, e) => SidebarZenToolsSettings_Click(sender, e))
                 }

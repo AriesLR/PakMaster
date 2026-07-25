@@ -276,6 +276,9 @@
   <data name="App_ReportProgress_InitDepedencyService" xml:space="preserve">
     <value>निर्भरता सेवा आरंभ हो रही है...</value>
   </data>
+  <data name="App_ReportProgress_InitThemeService" xml:space="preserve">
+    <value>थीम बिल्डर प्रारंभ हो रहा है...</value>
+  </data>
   <data name="App_ReportProgress_InitTelemetryService" xml:space="preserve">
     <value>टेलिमेट्री सेवा आरंभ हो रही है...</value>
   </data>
@@ -370,6 +373,9 @@
 
 त्रुटि विवरण: {1}</value>
   </data>
+  <data name="App_ReportProgress_InitLanguageService" xml:space="preserve">
+    <value>भाषा प्रबंधक आरंभ हो रहा है...</value>
+  </data>
   <data name="UpdateService_Msg_FailedToRetrieve_Desc" xml:space="preserve">
     <value>वैध अपडेट जानकारी प्राप्त करने में असफल।</value>
   </data>
@@ -454,10 +460,100 @@
   <data name="UrlService_Msg_FailedToOpenURL_Desc" xml:space="preserve">
     <value>यूआरएल खोलने में असफल: {0}</value>
   </data>
-  <data name="App_ReportProgress_InitThemeService" xml:space="preserve">
-    <value>थीम बिल्डर प्रारंभ हो रहा है...</value>
+  <data name="App_ReportProgress_InitToolConfigs" xml:space="preserve">
+    <value>टूल विन्यास लोड हो रहे हैं...</value>
   </data>
-  <data name="App_ReportProgress_InitLanguageService" xml:space="preserve">
-    <value>भाषा प्रबंधक आरंभ हो रहा है...</value>
+  <data name="MainView_Files" xml:space="preserve">
+    <value>फ़ाइलें</value>
+  </data>
+  <data name="MainView_BrowseInputFolder" xml:space="preserve">
+    <value>इनपुट फ़ोल्डर ब्राउज़ करें</value>
+  </data>
+  <data name="MainView_ModeSwitch_NormalMode" xml:space="preserve">
+    <value>सामान्य मोड</value>
+  </data>
+  <data name="MainView_ModeSwitch_IoStoreMode" xml:space="preserve">
+    <value>आईओस्टोर मोड</value>
+  </data>
+  <data name="MainView_Unpack" xml:space="preserve">
+    <value>अनपैक करें</value>
+  </data>
+  <data name="MainView_Repack" xml:space="preserve">
+    <value>दोबारा पैक करें</value>
+  </data>
+  <data name="MainView_Folders" xml:space="preserve">
+    <value>फ़ोल्डर</value>
+  </data>
+  <data name="MainView_BrowseOutputFolder" xml:space="preserve">
+    <value>आउटपुट फ़ोल्डर ब्राउज़ करें</value>
+  </data>
+  <data name="AESKeys_Title" xml:space="preserve">
+    <value>AES कुंजी</value>
+  </data>
+  <data name="RepakSettings_Title" xml:space="preserve">
+    <value>रिपैक सेटिंग्स</value>
+  </data>
+  <data name="ZenToolsSettings_Title" xml:space="preserve">
+    <value>ज़ेनटूल्स सेटिंग्स</value>
+  </data>
+  <data name="IoStorePacking_Title" xml:space="preserve">
+    <value>आईओस्टोर पैकिंग</value>
+  </data>
+  <data name="IoStorePacking_UnrealPakPathRequiresUnrealEngine425" xml:space="preserve">
+    <value>UnrealPak Path (Unreal Engine 4.25+ की आवश्यकता है)</value>
+  </data>
+  <data name="IoStorePacking_OutputPathForGlobalUtoc" xml:space="preserve">
+    <value>आउटपुट पथ (global.utoc के लिए)</value>
+  </data>
+  <data name="IoStorePacking_CookedFilesPathCookedFilesToBePackaged" xml:space="preserve">
+    <value>पकाई गई फ़ाइलों का पथ (पैकेज की जाने वाली पकाई गई फ़ाइलें)</value>
+  </data>
+  <data name="IoStorePacking_PackageStorePath" xml:space="preserve">
+    <value>पैकेजस्टोर पथ</value>
+  </data>
+  <data name="IoStorePacking_ScriptObjectsPath" xml:space="preserve">
+    <value>स्क्रिप्टऑब्जेक्ट्स पथ</value>
+  </data>
+  <data name="IoStorePacking_CommandsPath" xml:space="preserve">
+    <value>कमांड्स पथ</value>
+  </data>
+  <data name="IoStorePacking_EditCryptoJson" xml:space="preserve">
+    <value>Crypto.json संपादित करें</value>
+  </data>
+  <data name="IoStorePacking_Pack" xml:space="preserve">
+    <value>पैक</value>
+  </data>
+  <data name="AESKeys_RepakAESKey" xml:space="preserve">
+    <value>रिपैक AES कुंजी</value>
+  </data>
+  <data name="AESKeys_Save" xml:space="preserve">
+    <value>बचाएँ</value>
+  </data>
+  <data name="AESKeys_ZenToolsAESKey" xml:space="preserve">
+    <value>ज़ेनटूल्स AES कुंजी</value>
+  </data>
+  <data name="AESKeys_GUID" xml:space="preserve">
+    <value>ग्लोबली अनन्य पहचानकर्ता</value>
+  </data>
+  <data name="AESKeys_HEX" xml:space="preserve">
+    <value>हेक्स</value>
+  </data>
+  <data name="RepakSettings_UEVersion" xml:space="preserve">
+    <value>यूई संस्करण</value>
+  </data>
+  <data name="RepakSettings_Version" xml:space="preserve">
+    <value>संस्करण</value>
+  </data>
+  <data name="RepakSettings_VersionFeature" xml:space="preserve">
+    <value>संस्करण सुविधा</value>
+  </data>
+  <data name="RepakSettings_Read" xml:space="preserve">
+    <value>पढ़ें</value>
+  </data>
+  <data name="RepakSettings_Write" xml:space="preserve">
+    <value>लिखें</value>
+  </data>
+  <data name="RepakSettings_PakVersion" xml:space="preserve">
+    <value>पैक फ़ाइल संस्करण</value>
   </data>
 </root>

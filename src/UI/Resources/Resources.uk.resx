@@ -276,6 +276,9 @@
   <data name="App_ReportProgress_InitDepedencyService" xml:space="preserve">
     <value>Ініціалізація служби залежностей...</value>
   </data>
+  <data name="App_ReportProgress_InitThemeService" xml:space="preserve">
+    <value>Початок ініціалізації конструктора тем...</value>
+  </data>
   <data name="App_ReportProgress_InitTelemetryService" xml:space="preserve">
     <value>Ініціалізація служби телеметрії...</value>
   </data>
@@ -370,6 +373,9 @@
 
 Деталі помилки: {1}</value>
   </data>
+  <data name="App_ReportProgress_InitLanguageService" xml:space="preserve">
+    <value>Ініціалізація менеджера мов...</value>
+  </data>
   <data name="UpdateService_Msg_FailedToRetrieve_Desc" xml:space="preserve">
     <value>Не вдалося отримати дійсну інформацію про оновлення.</value>
   </data>
@@ -454,10 +460,100 @@
   <data name="UrlService_Msg_FailedToOpenURL_Desc" xml:space="preserve">
     <value>Не вдалося відкрити URL-адресу: {0}</value>
   </data>
-  <data name="App_ReportProgress_InitThemeService" xml:space="preserve">
-    <value>Початок ініціалізації конструктора тем...</value>
+  <data name="App_ReportProgress_InitToolConfigs" xml:space="preserve">
+    <value>Завантаження конфігурацій інструментів...</value>
   </data>
-  <data name="App_ReportProgress_InitLanguageService" xml:space="preserve">
-    <value>Ініціалізація менеджера мов...</value>
+  <data name="MainView_Files" xml:space="preserve">
+    <value>Файли</value>
+  </data>
+  <data name="MainView_BrowseInputFolder" xml:space="preserve">
+    <value>Огляд папки вхідних даних</value>
+  </data>
+  <data name="MainView_ModeSwitch_NormalMode" xml:space="preserve">
+    <value>Звичайний режим</value>
+  </data>
+  <data name="MainView_ModeSwitch_IoStoreMode" xml:space="preserve">
+    <value>Режим IoStore</value>
+  </data>
+  <data name="MainView_Unpack" xml:space="preserve">
+    <value>Розпакувати</value>
+  </data>
+  <data name="MainView_Repack" xml:space="preserve">
+    <value>Перепакувати</value>
+  </data>
+  <data name="MainView_Folders" xml:space="preserve">
+    <value>Папки</value>
+  </data>
+  <data name="MainView_BrowseOutputFolder" xml:space="preserve">
+    <value>Переглянути папку з результатами</value>
+  </data>
+  <data name="AESKeys_Title" xml:space="preserve">
+    <value>Ключі AES</value>
+  </data>
+  <data name="RepakSettings_Title" xml:space="preserve">
+    <value>Налаштування Repak</value>
+  </data>
+  <data name="ZenToolsSettings_Title" xml:space="preserve">
+    <value>Налаштування ZenTools</value>
+  </data>
+  <data name="IoStorePacking_Title" xml:space="preserve">
+    <value>Упаковка IoStore</value>
+  </data>
+  <data name="IoStorePacking_UnrealPakPathRequiresUnrealEngine425" xml:space="preserve">
+    <value>Шлях до UnrealPak (потрібна версія Unreal Engine 4.25 або новіша)</value>
+  </data>
+  <data name="IoStorePacking_OutputPathForGlobalUtoc" xml:space="preserve">
+    <value>Шлях виводу (для global.utoc)</value>
+  </data>
+  <data name="IoStorePacking_CookedFilesPathCookedFilesToBePackaged" xml:space="preserve">
+    <value>Шлях до готових файлів (готові файли, які потрібно упакувати)</value>
+  </data>
+  <data name="IoStorePacking_PackageStorePath" xml:space="preserve">
+    <value>Шлях до PackageStore</value>
+  </data>
+  <data name="IoStorePacking_ScriptObjectsPath" xml:space="preserve">
+    <value>Шлях до ScriptObjects</value>
+  </data>
+  <data name="IoStorePacking_CommandsPath" xml:space="preserve">
+    <value>Шлях до команд</value>
+  </data>
+  <data name="IoStorePacking_EditCryptoJson" xml:space="preserve">
+    <value>Редагувати файл Crypto.json</value>
+  </data>
+  <data name="IoStorePacking_Pack" xml:space="preserve">
+    <value>Упаковка</value>
+  </data>
+  <data name="AESKeys_RepakAESKey" xml:space="preserve">
+    <value>Ключ Repak AES</value>
+  </data>
+  <data name="AESKeys_Save" xml:space="preserve">
+    <value>Зберегти</value>
+  </data>
+  <data name="AESKeys_ZenToolsAESKey" xml:space="preserve">
+    <value>Ключ ZenTools AES</value>
+  </data>
+  <data name="AESKeys_GUID" xml:space="preserve">
+    <value>GUID</value>
+  </data>
+  <data name="AESKeys_HEX" xml:space="preserve">
+    <value>HEX</value>
+  </data>
+  <data name="RepakSettings_UEVersion" xml:space="preserve">
+    <value>Версія UE</value>
+  </data>
+  <data name="RepakSettings_Version" xml:space="preserve">
+    <value>Версія</value>
+  </data>
+  <data name="RepakSettings_VersionFeature" xml:space="preserve">
+    <value>Версія Функція</value>
+  </data>
+  <data name="RepakSettings_Read" xml:space="preserve">
+    <value>Читати</value>
+  </data>
+  <data name="RepakSettings_Write" xml:space="preserve">
+    <value>Написати</value>
+  </data>
+  <data name="RepakSettings_PakVersion" xml:space="preserve">
+    <value>Версія файлу Pak</value>
   </data>
 </root>

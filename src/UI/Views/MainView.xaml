@@ -5,6 +5,10 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
              xmlns:local="clr-namespace:PakMaster.UI.Views"
+             xmlns:lex="http://wpflocalizeextension.codeplex.com"
+             lex:LocalizeDictionary.DesignCulture="en"
+             lex:ResxLocalizationProvider.DefaultAssembly="PakMaster"
+             lex:ResxLocalizationProvider.DefaultDictionary="PakMaster.UI.Resources.Resources"
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="#1F1F1F">
@@ -22,7 +26,7 @@
 
         <!-- Input Section -->
         <StackPanel Grid.Column="0" Background="#222222" Margin="10">
-            <TextBlock Text="Files" Foreground="White" FontWeight="Bold" FontSize="24" HorizontalAlignment="Center" />
+            <TextBlock Text="{lex:Loc MainView_Files}" Foreground="White" FontWeight="Bold" FontSize="24" HorizontalAlignment="Center" />
             <!-- ListBox to display files -->
             <ListBox Name="InputFilesListBox" DisplayMemberPath="Key" SelectionMode="Single" Background="Transparent" Margin="5" Height="490" />
             <Grid HorizontalAlignment="Stretch">
@@ -31,7 +35,7 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
 
-                <Button Content="Browse input folder" Background="#262626" Height="30" FontSize="12" FontWeight="Bold" Click="BrowseInputFolder" Grid.Column="0" />
+                <Button Content="{lex:Loc MainView_BrowseInputFolder}" Background="#262626" Height="30" FontSize="12" FontWeight="Bold" Click="BrowseInputFolder" Grid.Column="0" />
 
                 <Button Background="#262626" Height="30" Width="30" FontSize="12" FontWeight="Bold" Click="btnRefreshUI_Click" Grid.Column="1">
                     <Button.Content>
@@ -61,14 +65,14 @@
 
                     <!-- Toggle Button for Mode Switching -->
                     <ToggleButton x:Name="ModeSwitchButton"
-                                              Width="200" Height="40"
-                                              FontSize="16" FontWeight="Bold"
-                                              VerticalAlignment="Center" HorizontalAlignment="Center"
-                                              HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
-                                              Grid.Column="1"
-                                              Checked="btnModeSwitchIoStore_Click"
-                                              Unchecked="btnModeSwitchNormal_Click">
-                        Normal Mode
+                                  Width="200" Height="40"
+                                  FontSize="16" FontWeight="Bold"
+                                  VerticalAlignment="Center" HorizontalAlignment="Center"
+                                  HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+                                  Grid.Column="1"
+                                  Checked="btnModeSwitchIoStore_Click"
+                                  Unchecked="btnModeSwitchNormal_Click"
+                                  Content="Normal Mode">
                         <ToggleButton.Style>
                             <Style TargetType="ToggleButton" BasedOn="{StaticResource {x:Type ToggleButton}}">
                                 <Setter Property="Background" Value="#262626" />
@@ -87,26 +91,26 @@
 
             <!-- Pack/Unpack Buttons Section -->
             <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5">
-                <Button Margin="5" Width="150" Height="40" Background="#262626" Click="btnUnpack_ClickAsync">
+                <Button Margin="5" Width="250" Height="40" Background="#262626" Click="btnUnpack_ClickAsync">
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="25" />
-                            <ColumnDefinition Width="75" />
-                            <ColumnDefinition Width="25" />
+                            <ColumnDefinition Width="50" />
+                            <ColumnDefinition Width="150" />
+                            <ColumnDefinition Width="50" />
                         </Grid.ColumnDefinitions>
-                        <TextBlock Grid.Column="1" Text="Unpack" FontSize="14" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        <TextBlock Grid.Column="1" Text="{lex:Loc MainView_Unpack}" FontSize="14" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" />
                         <TextBlock Grid.Column="2" Text=">>>" FontSize="12" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" />
                     </Grid>
                 </Button>
-                <Button Margin="5" Width="150" Height="40" Background="#262626" Click="btnRepack_ClickAsync">
+                <Button Margin="5" Width="250" Height="40" Background="#262626" Click="btnRepack_ClickAsync">
                     <Grid>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="25" />
-                            <ColumnDefinition Width="75" />
-                            <ColumnDefinition Width="25" />
+                            <ColumnDefinition Width="50" />
+                            <ColumnDefinition Width="150" />
+                            <ColumnDefinition Width="50" />
                         </Grid.ColumnDefinitions>
                         <TextBlock Grid.Column="0" Text="&lt;&lt;&lt;" FontSize="12" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Left" />
-                        <TextBlock Grid.Column="1" Text="Repack" FontSize="14" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" />
+                        <TextBlock Grid.Column="1" Text="{lex:Loc MainView_Repack}" FontSize="14" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" />
                     </Grid>
                 </Button>
             </StackPanel>
@@ -114,7 +118,7 @@
 
         <!-- Output Section -->
         <StackPanel Grid.Column="2" Background="#222222" Margin="10">
-            <TextBlock Text="Folders" Foreground="White" FontWeight="Bold" FontSize="24" HorizontalAlignment="Center" />
+            <TextBlock Text="{lex:Loc MainView_Folders}" Foreground="White" FontWeight="Bold" FontSize="24" HorizontalAlignment="Center" />
             <!-- ListBox to display output files -->
             <ListBox Name="OutputFilesListBox" DisplayMemberPath="Key" SelectionMode="Single" Background="Transparent" Margin="5" Height="490" />
             <Grid HorizontalAlignment="Stretch">
@@ -123,7 +127,7 @@
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
 
-                <Button Content="Browse output folder" Background="#262626" Height="30" FontSize="12" FontWeight="Bold" Click="BrowseOutputFolder" Grid.Column="0" />
+                <Button Content="{lex:Loc MainView_BrowseOutputFolder}" Background="#262626" Height="30" FontSize="12" FontWeight="Bold" Click="BrowseOutputFolder" Grid.Column="0" />
 
                 <Button Background="#262626" Height="30" Width="30" FontSize="12" FontWeight="Bold" Click="btnRefreshUI_Click" Grid.Column="1">
                     <Button.Content>

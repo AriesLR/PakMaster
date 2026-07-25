@@ -539,4 +539,100 @@ Path: {0}</value>
   <data name="UrlService_Msg_FailedToOpenURL_Desc" xml:space="preserve">
     <value>Failed to open URL: {0}</value>
   </data>
+  <data name="App_ReportProgress_InitToolConfigs" xml:space="preserve">
+    <value>Loading tool configurations...</value>
+  </data>
+  <data name="MainView_Files" xml:space="preserve">
+    <value>Files</value>
+  </data>
+  <data name="MainView_BrowseInputFolder" xml:space="preserve">
+    <value>Browse input folder</value>
+  </data>
+  <data name="MainView_ModeSwitch_NormalMode" xml:space="preserve">
+    <value>Normal Mode</value>
+  </data>
+  <data name="MainView_ModeSwitch_IoStoreMode" xml:space="preserve">
+    <value>IoStore Mode</value>
+  </data>
+  <data name="MainView_Unpack" xml:space="preserve">
+    <value>Unpack</value>
+  </data>
+  <data name="MainView_Repack" xml:space="preserve">
+    <value>Repack</value>
+  </data>
+  <data name="MainView_Folders" xml:space="preserve">
+    <value>Folders</value>
+  </data>
+  <data name="MainView_BrowseOutputFolder" xml:space="preserve">
+    <value>Browse output folder</value>
+  </data>
+  <data name="AESKeys_Title" xml:space="preserve">
+    <value>AES Keys</value>
+  </data>
+  <data name="RepakSettings_Title" xml:space="preserve">
+    <value>Repak Settings</value>
+  </data>
+  <data name="ZenToolsSettings_Title" xml:space="preserve">
+    <value>ZenTools Settings</value>
+  </data>
+  <data name="IoStorePacking_Title" xml:space="preserve">
+    <value>IoStore Packing</value>
+  </data>
+  <data name="IoStorePacking_UnrealPakPathRequiresUnrealEngine425" xml:space="preserve">
+    <value>UnrealPak Path (requires Unreal Engine 4.25+)</value>
+  </data>
+  <data name="IoStorePacking_OutputPathForGlobalUtoc" xml:space="preserve">
+    <value>Output Path (for global.utoc)</value>
+  </data>
+  <data name="IoStorePacking_CookedFilesPathCookedFilesToBePackaged" xml:space="preserve">
+    <value>Cooked Files Path (cooked files to be packaged)</value>
+  </data>
+  <data name="IoStorePacking_PackageStorePath" xml:space="preserve">
+    <value>PackageStore Path</value>
+  </data>
+  <data name="IoStorePacking_ScriptObjectsPath" xml:space="preserve">
+    <value>ScriptObjects Path</value>
+  </data>
+  <data name="IoStorePacking_CommandsPath" xml:space="preserve">
+    <value>Commands Path</value>
+  </data>
+  <data name="IoStorePacking_EditCryptoJson" xml:space="preserve">
+    <value>Edit Crypto.json</value>
+  </data>
+  <data name="IoStorePacking_Pack" xml:space="preserve">
+    <value>Pack</value>
+  </data>
+  <data name="AESKeys_RepakAESKey" xml:space="preserve">
+    <value>Repak AES Key</value>
+  </data>
+  <data name="AESKeys_Save" xml:space="preserve">
+    <value>Save</value>
+  </data>
+  <data name="AESKeys_ZenToolsAESKey" xml:space="preserve">
+    <value>ZenTools AES Key</value>
+  </data>
+  <data name="AESKeys_GUID" xml:space="preserve">
+    <value>GUID</value>
+  </data>
+  <data name="AESKeys_HEX" xml:space="preserve">
+    <value>HEX</value>
+  </data>
+  <data name="RepakSettings_PakVersion" xml:space="preserve">
+    <value>Pak File Version</value>
+  </data>
+  <data name="RepakSettings_UEVersion" xml:space="preserve">
+    <value>UE Version</value>
+  </data>
+  <data name="RepakSettings_Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="RepakSettings_VersionFeature" xml:space="preserve">
+    <value>Version Feature</value>
+  </data>
+  <data name="RepakSettings_Read" xml:space="preserve">
+    <value>Read</value>
+  </data>
+  <data name="RepakSettings_Write" xml:space="preserve">
+    <value>Write</value>
+  </data>
 </root>

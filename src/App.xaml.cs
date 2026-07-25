@@ -98,7 +98,7 @@ namespace PakMaster
                     AppSettingsManager.Initialize();
 
                     // Init Tool Configs
-                    await ReportProgressAsync("Loading tool configurations...");
+                    await ReportProgressAsync(Lang.App_ReportProgress_InitToolConfigs);
                     ConfigManager.Initialize();
 
                     // Init Language Manager
