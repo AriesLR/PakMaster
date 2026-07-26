@@ -1,9 +1,3 @@
-using System;
-using System.IO;
-using System.Text.Json;
-using PakMaster.Core.Models;
-using PakMaster.Infrastructure.Diagnostics;
-
 namespace PakMaster.Core.Settings
 {
     public static class ConfigManager
@@ -12,10 +6,6 @@ namespace PakMaster.Core.Settings
         private static readonly System.Threading.SemaphoreSlim _saveLock = new(1, 1);
 
         public static ToolConfigModel CurrentSettings { get; set; } = new ToolConfigModel();
-        
-        public static string ToolConfigPath { get; } = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "configs", "pakmaster-tools-config.json");
-        public static string ZenToolsConfigPath { get; } = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "configs", "zentools-aeskey.json");
-        public static string CryptoConfigPath { get; } = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "configs", "Crypto.json");
 
         public static void Initialize()
         {
@@ -27,13 +17,13 @@ namespace PakMaster.Core.Settings
         {
             try
             {
-                string? directory = Path.GetDirectoryName(CryptoConfigPath);
+                string? directory = Path.GetDirectoryName(AppConfig.CryptoConfigPath);
                 if (directory != null && !Directory.Exists(directory))
                 {
                     Directory.CreateDirectory(directory);
                 }
 
-                if (!File.Exists(CryptoConfigPath))
+                if (!File.Exists(AppConfig.CryptoConfigPath))
                 {
                     var defaultCrypto = new UnrealPakCryptoModel
                     {
@@ -50,7 +40,7 @@ namespace PakMaster.Core.Settings
                         SecondaryEncryptionKeys = null
                     };
                     string json = JsonSerializer.Serialize(defaultCrypto, JsonOptions);
-                    File.WriteAllText(CryptoConfigPath, json);
+                    File.WriteAllText(AppConfig.CryptoConfigPath, json);
                 }
             }
             catch (Exception ex)
@@ -60,17 +50,17 @@ namespace PakMaster.Core.Settings
 
             try
             {
-                string? directory = Path.GetDirectoryName(ZenToolsConfigPath);
+                string? directory = Path.GetDirectoryName(AppConfig.ZenToolsConfigPath);
                 if (directory != null && !Directory.Exists(directory))
                 {
                     Directory.CreateDirectory(directory);
                 }
 
-                if (!File.Exists(ZenToolsConfigPath))
+                if (!File.Exists(AppConfig.ZenToolsConfigPath))
                 {
                     var defaultZen = new System.Collections.Generic.Dictionary<string, string> { { "00000000-0000-0000-0000-000000000000", "" } };
                     string json = JsonSerializer.Serialize(defaultZen, JsonOptions);
-                    File.WriteAllText(ZenToolsConfigPath, json);
+                    File.WriteAllText(AppConfig.ZenToolsConfigPath, json);
                 }
             }
             catch (Exception ex)
@@ -81,7 +71,7 @@ namespace PakMaster.Core.Settings
 
         public static ToolConfigModel? LoadConfig(string? customPath = null)
         {
-            string path = customPath ?? ToolConfigPath;
+            string path = customPath ?? AppConfig.ToolConfigPath;
             if (!File.Exists(path))
             {
                 GLogger.Here().Warning("Tool config file not found at path: {Path}. Using default.", path);
@@ -103,7 +93,7 @@ namespace PakMaster.Core.Settings
 
         public static void SaveConfig(ToolConfigModel settings, string? customPath = null)
         {
-            string path = customPath ?? ToolConfigPath;
+            string path = customPath ?? AppConfig.ToolConfigPath;
             string json;
             try
             {
@@ -136,14 +126,14 @@ namespace PakMaster.Core.Settings
                 _saveLock.Release();
             }
         }
-    
+
         public static System.Collections.Generic.Dictionary<string, string>? LoadZenToolsConfig()
         {
             try
             {
-                if (File.Exists(ZenToolsConfigPath))
+                if (File.Exists(AppConfig.ZenToolsConfigPath))
                 {
-                    string json = File.ReadAllText(ZenToolsConfigPath);
+                    string json = File.ReadAllText(AppConfig.ZenToolsConfigPath);
                     return JsonSerializer.Deserialize<System.Collections.Generic.Dictionary<string, string>>(json);
                 }
             }
@@ -160,7 +150,7 @@ namespace PakMaster.Core.Settings
             {
                 var dict = new System.Collections.Generic.Dictionary<string, string> { { guid, hex } };
                 string json = JsonSerializer.Serialize(dict, JsonOptions);
-                File.WriteAllText(ZenToolsConfigPath, json);
+                File.WriteAllText(AppConfig.ZenToolsConfigPath, json);
             }
             catch (Exception ex)
             {
@@ -172,9 +162,9 @@ namespace PakMaster.Core.Settings
         {
             try
             {
-                if (File.Exists(CryptoConfigPath))
+                if (File.Exists(AppConfig.CryptoConfigPath))
                 {
-                    string json = File.ReadAllText(CryptoConfigPath);
+                    string json = File.ReadAllText(AppConfig.CryptoConfigPath);
                     return JsonSerializer.Deserialize<UnrealPakCryptoModel>(json);
                 }
             }
@@ -190,12 +180,12 @@ namespace PakMaster.Core.Settings
             try
             {
                 string json = JsonSerializer.Serialize(model, JsonOptions);
-                File.WriteAllText(CryptoConfigPath, json);
+                File.WriteAllText(AppConfig.CryptoConfigPath, json);
             }
             catch (Exception ex)
             {
                 GLogger.Here().Error(ex, "Error saving UnrealPak crypto config");
             }
         }
-}
+    }
 }
