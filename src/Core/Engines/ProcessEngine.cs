@@ -6,8 +6,7 @@ namespace PakMaster.Core.Engines
         {
             try
             {
-                string currentDirectory = Directory.GetCurrentDirectory();
-                string toolDirectory = Path.Combine(currentDirectory, "bin", toolFolderName);
+                string toolDirectory = Path.Combine(AppConfig.PakMasterDependencyFolder, toolFolderName);
                 string executablePath = Path.Combine(toolDirectory, executableName);
 
                 if (!Directory.Exists(toolDirectory))
@@ -15,7 +14,7 @@ namespace PakMaster.Core.Engines
                     throw new DirectoryNotFoundException($"Tool directory not found: {toolDirectory}");
                 }
 
-                ProcessStartInfo processStartInfo = new ProcessStartInfo
+                ProcessStartInfo processStartInfo = new()
                 {
                     FileName = executablePath,
                     Arguments = arguments,
@@ -54,7 +53,7 @@ namespace PakMaster.Core.Engines
                     throw new DirectoryNotFoundException("Could not determine the working directory for UnrealPak.");
                 }
 
-                ProcessStartInfo processStartInfo = new ProcessStartInfo
+                ProcessStartInfo processStartInfo = new()
                 {
                     FileName = unrealPakPath,
                     Arguments = arguments,
@@ -75,30 +74,29 @@ namespace PakMaster.Core.Engines
 
         private static async Task RunProcessCoreAsync(ProcessStartInfo processStartInfo, Action<string> outputCallback)
         {
-            using (Process process = new Process { StartInfo = processStartInfo })
+            using Process process = new()
+            { StartInfo = processStartInfo };
+            StringBuilder outputBuilder = new();
+
+            process.OutputDataReceived += (sender, e) =>
             {
-                StringBuilder outputBuilder = new StringBuilder();
+                if (!string.IsNullOrEmpty(e.Data))
+                    outputBuilder.AppendLine(e.Data);
+            };
 
-                process.OutputDataReceived += (sender, e) =>
-                {
-                    if (!string.IsNullOrEmpty(e.Data))
-                        outputBuilder.AppendLine(e.Data);
-                };
+            process.ErrorDataReceived += (sender, e) =>
+            {
+                if (!string.IsNullOrEmpty(e.Data))
+                    outputBuilder.AppendLine(e.Data);
+            };
 
-                process.ErrorDataReceived += (sender, e) =>
-                {
-                    if (!string.IsNullOrEmpty(e.Data))
-                        outputBuilder.AppendLine(e.Data);
-                };
+            process.Start();
+            process.BeginOutputReadLine();
+            process.BeginErrorReadLine();
 
-                process.Start();
-                process.BeginOutputReadLine();
-                process.BeginErrorReadLine();
+            await Task.Run(() => process.WaitForExit());
 
-                await Task.Run(() => process.WaitForExit());
-
-                outputCallback?.Invoke(outputBuilder.ToString());
-            }
+            outputCallback?.Invoke(outputBuilder.ToString());
         }
     }
 }
