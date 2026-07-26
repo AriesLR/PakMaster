@@ -1,6 +1,22 @@
-# PakMaster - A GUI Wrapper for Repak, ZenTools, and UnrealPak
+<div align="center">
 
-#### Hopefully the ultimate solution to Unreal Engine 5 modding (.pak/.ucas/.utoc)
+  # PakMaster - A GUI Wrapper for Repak, ZenTools, and UnrealPak
+
+  #### Hopefully the ultimate solution to Unreal Engine 5 modding (.pak/.ucas/.utoc)
+
+  <a href="https://github.com/AriesLR/PakMaster/releases"><img src="https://img.shields.io/github/v/release/AriesLR/PakMaster?color=emerald" align="center"></a>
+  <a href="docs/version/CHANGELOG.md"><img src="https://img.shields.io/badge/changelog-latest-blue" align="center"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/AriesLR/PakMaster?color=orange" align="center"></a>
+  <a href="https://github.com/AriesLR/PakMaster/releases"><img src="https://img.shields.io/github/downloads/AriesLR/PakMaster/total" align="center"></a>
+
+  <br/>
+
+  <a href="https://www.patreon.com/c/arieslr/membership"><img src="https://img.shields.io/badge/Patreon-F96854?style=flat&logo=patreon&logoColor=white" align="center"></a>
+  <a href="https://www.buymeacoffee.com/arieslr"><img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-FFDD00?style=flat&logo=buy-me-a-coffee&logoColor=black" align="center"></a>
+
+  <br/>
+
+</div>
 
 > [!CAUTION]
 > PakMaster has been outdated for quite some time. In the (hopefully) near feature I plan on rewriting PakMaster to replace ZenTools with Retoc. It is 7/21/2026 (US format) at the time of writing this. Expect updates soonish.
@@ -79,14 +95,13 @@ By using PakMaster, users must also adhere to the licenses of Repak and ZenTools
 
 ## Planned Features
 
-- IoStore Packing config presets.
-
-- ~~Load Order Editor - if your input folder is set to something like a game's mod folder you could easily modify load orders via PakMaster.~~
-  - This is outside the scope of this project, maybe once I'm satisfied with the state of PakMaster I'll make something like that as a stanadlone app.
+- ~~IoStore Packing config presets.~~
+  - It's been too long since starting this project to commit to new features right now.
 
 ## Known Issues
 
-- IoStore Mode Unpacking creates folders called "Engine" and "ZenTools" outside of the PakMaster folder - This is something to do with how ZenTools works, I'm looking into it.
+- ~~IoStore Mode Unpacking creates folders called "Engine" and "ZenTools" outside of the PakMaster folder - This is something to do with how ZenTools works, I'm looking into it.~~
+  - I think I solved this years ago and never updated this section. I'll give it some time before fully removing this.
 
 ## Installation
 
