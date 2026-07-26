@@ -160,7 +160,7 @@ namespace PakMaster
                 // Init Update Service
                 await UpdateManager.InitializeAsync();
 
-                await PakMaster.Core.Managers.ToolDependencyManager.CheckAndDownloadToolDependenciesAsync();
+                await ToolDependencyEngine.CheckAndDownloadToolDependenciesAsync();
             }
             catch (Exception ex)
             {
