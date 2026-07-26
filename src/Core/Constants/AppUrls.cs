@@ -5,27 +5,21 @@ namespace PakMaster.Core.Constants
         // ============ Edit This Section ============
 
         // Update Tracking URL
-        // https://raw.githubusercontent.com/AriesLR/PakMaster-Public/refs/heads/main/docs/version/update.json
-        public const string UpdateUrl = "https://raw.githubusercontent.com/AriesLR/PakMaster/refs/heads/main/docs/version/update.json";
+        public const string UpdateUrl = "https://raw.githubusercontent.com/AriesLR/PakMaster/refs/heads/main/docs/version/update-new.json";
 
         // App License URL
-        // https://github.com/AriesLR/PakMaster-Public/blob/main/LICENSE
         private static string _appLicenseUrl = "https://github.com/AriesLR/PakMaster/blob/main/LICENSE";
 
         // GitHub Repo URL
-        // https://github.com/AriesLR/PakMaster-Public
         public const string GithubRepoUrl = "https://github.com/AriesLR/PakMaster";
 
         // GitHub Issues URL
-        // https://github.com/AriesLR/PakMaster-Public/issues/new?template=issue---project-velocity.md
         public const string GithubIssuesUrl = "https://github.com/AriesLR/Project-Velocity-Public/issues/new?template=issue---project-velocity.md";
 
         // BuyMeACoffee URL
-        // https://buymeacoffee.com/arieslr
         public const string BuyMeACoffeeUrl = "https://buymeacoffee.com/arieslr";
 
         // Patreon URL
-        // https://www.patreon.com/c/arieslr/membership
         public const string PatreonUrl = "https://www.patreon.com/c/arieslr/membership";
 
         // ============ Only Edit Below If Necessary ============
