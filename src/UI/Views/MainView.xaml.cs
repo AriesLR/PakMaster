@@ -126,7 +126,7 @@ namespace PakMaster.UI.Views
         {
             if (isIoStoreMode)
             {
-                await PakMaster.Core.Engines.ZenToolsEngine.UnpackAsync(inputFolderPath ?? string.Empty, outputFolderPath ?? string.Empty, output =>
+                await ZenToolsEngine.UnpackAsync(inputFolderPath ?? string.Empty, outputFolderPath ?? string.Empty, output =>
                 {
                     UpdateCommandOutput(output);
                     RefreshUI();
@@ -137,7 +137,7 @@ namespace PakMaster.UI.Views
                 var selectedInputFile = InputFilesListBox.SelectedItem as System.Collections.Generic.KeyValuePair<string, string>?;
                 string fullInputFilePath = selectedInputFile.HasValue ? selectedInputFile.Value.Value : string.Empty;
 
-                await PakMaster.Core.Engines.RepakEngine.UnpackAsync(fullInputFilePath, outputFolderPath ?? string.Empty, output =>
+                await RepakEngine.UnpackAsync(fullInputFilePath, outputFolderPath ?? string.Empty, output =>
                 {
                     UpdateCommandOutput(output);
                     RefreshUI();
@@ -160,7 +160,7 @@ namespace PakMaster.UI.Views
                 var selectedInputFolder = OutputFilesListBox.SelectedItem as System.Collections.Generic.KeyValuePair<string, string>?;
                 string fullInputFolderPath = selectedInputFolder.HasValue ? selectedInputFolder.Value.Value : string.Empty;
 
-                await PakMaster.Core.Engines.RepakEngine.RepackAsync(fullInputFolderPath, inputFolderPath ?? string.Empty, output =>
+                await RepakEngine.RepackAsync(fullInputFolderPath, inputFolderPath ?? string.Empty, output =>
                 {
                     UpdateCommandOutput(output);
                     RefreshUI();
