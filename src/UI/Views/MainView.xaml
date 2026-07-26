@@ -72,7 +72,7 @@
                                   Grid.Column="1"
                                   Checked="btnModeSwitchIoStore_Click"
                                   Unchecked="btnModeSwitchNormal_Click"
-                                  Content="Normal Mode">
+                                  Content="{lex:Loc MainView_ModeSwitch_NormalMode}">
                         <ToggleButton.Style>
                             <Style TargetType="ToggleButton" BasedOn="{StaticResource {x:Type ToggleButton}}">
                                 <Setter Property="Background" Value="#262626" />
