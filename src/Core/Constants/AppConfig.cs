@@ -55,6 +55,23 @@ namespace PakMaster.Core.Constants
         // App Dependency File Path
         public static string AppDependencyTrackingPath { get; } = Path.Combine(AppDependencyTrackingFolder, "Installed_Dependencies.json");
 
+        // ============ PakMaster File/Folder Paths ============
+
+        // PakMaster Dependency Folder
+        public static string PakMasterDependencyFolder { get; } = Path.Combine(AppConfigFolder, "bin");
+
+        // PakMaster Configs Folder
+        public static string PakMasterConfigsFolder { get; } = Path.Combine(AppConfigFolder, "configs");
+
+        // PakMaster Tool Config Path
+        public static string ToolConfigPath { get; } = Path.Combine(PakMasterConfigsFolder, "tools-config.json");
+
+        // PakMaster ZenTools Config Path
+        public static string ZenToolsConfigPath { get; } = Path.Combine(PakMasterConfigsFolder, "zentools-aeskey.json");
+
+        // PakMaster Crypto Config Path
+        public static string CryptoConfigPath { get; } = Path.Combine(PakMasterConfigsFolder, "Crypto.json");
+
         // ============ Helpers ============
 
         // App Version Helper
