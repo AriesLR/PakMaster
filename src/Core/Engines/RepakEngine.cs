@@ -9,11 +9,11 @@ namespace PakMaster.Core.Engines
 
             if (string.IsNullOrEmpty(aesKey))
             {
-                GLogger.Here().Debug("[DEBUG]: AES Key is empty");
+                GLogger.Here().Debug("AES Key is empty");
             }
             else
             {
-                GLogger.Here().Debug($"[DEBUG]: AES Key found.\n[DEBUG]: AES Key: {aesKey}");
+                GLogger.Here().Debug($"AES Key found.\nAES Key: {aesKey}");
             }
 
             if (string.IsNullOrEmpty(fullInputFilePath))

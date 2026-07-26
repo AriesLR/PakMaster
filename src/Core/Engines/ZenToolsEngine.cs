@@ -25,11 +25,11 @@ namespace PakMaster.Core.Engines
 
             if (string.IsNullOrEmpty(zenToolsKeyHex))
             {
-                GLogger.Here().Debug($"[DEBUG]: No ZenTools AES Key Hex Found.");
+                GLogger.Here().Debug($"No ZenTools AES Key Hex Found.");
             }
             else
             {
-                GLogger.Here().Debug($"[DEBUG]: ZenTools AES Key Found:\n[DEBUG]: GUID: {zenToolsKeyGuid}\n[DEBUG]: Hex: {zenToolsKeyHex}");
+                GLogger.Here().Debug($"ZenTools AES Key Found:\nGUID: {zenToolsKeyGuid}\nHex: {zenToolsKeyHex}");
             }
 
             if (string.IsNullOrEmpty(inputFolderPath))
@@ -72,18 +72,18 @@ namespace PakMaster.Core.Engines
                 if (Directory.Exists(engineFolderPath))
                 {
                     Directory.Delete(engineFolderPath, true);
-                    GLogger.Here().Debug($"[DEBUG]: Deleted folder: {engineFolderPath}");
+                    GLogger.Here().Debug($"Deleted folder: {engineFolderPath}");
                 }
 
                 if (Directory.Exists(zenToolsFolderPath))
                 {
                     Directory.Delete(zenToolsFolderPath, true);
-                    GLogger.Here().Debug($"[DEBUG]: Deleted folder: {zenToolsFolderPath}");
+                    GLogger.Here().Debug($"Deleted folder: {zenToolsFolderPath}");
                 }
             }
             catch (Exception ex)
             {
-                GLogger.Here().Debug($"[ERROR]: Failed to delete folders: {ex.Message}");
+                GLogger.Here().Debug($"Failed to delete folders: {ex.Message}");
             }
         }
     }

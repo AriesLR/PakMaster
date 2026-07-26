@@ -66,15 +66,15 @@ namespace PakMaster.Core.Engines
                                $"-compressionMinBytesSaved=1024 " +
                                $"-compressionMinPercentSaved=5";
 
-            GLogger.Here().Debug($"[DEBUG]: UnrealPak Configuration Loaded:");
-            GLogger.Here().Debug($"[DEBUG]: UnrealPak Path: {unrealPakPath}");
-            GLogger.Here().Debug($"[DEBUG]: Output Path: {finalGlobalOutputPath}");
-            GLogger.Here().Debug($"[DEBUG]: Cooked Files Path: {cookedFilesPath}");
-            GLogger.Here().Debug($"[DEBUG]: PackageStore Path: {packageStorePath}");
-            GLogger.Here().Debug($"[DEBUG]: IoStoreCommands Path: {ioStoreCommandsPath}");
-            GLogger.Here().Debug($"[DEBUG]: ScriptObjects Path: {scriptObjectsPath}");
-            GLogger.Here().Debug($"[DEBUG]: Crypto Keys Path: {cryptoKeysPath}");
-            GLogger.Here().Debug($"[DEBUG]: Arguments: {arguments}");
+            GLogger.Here().Debug($"UnrealPak Configuration Loaded:");
+            GLogger.Here().Debug($"UnrealPak Path: {unrealPakPath}");
+            GLogger.Here().Debug($"Output Path: {finalGlobalOutputPath}");
+            GLogger.Here().Debug($"Cooked Files Path: {cookedFilesPath}");
+            GLogger.Here().Debug($"PackageStore Path: {packageStorePath}");
+            GLogger.Here().Debug($"IoStoreCommands Path: {ioStoreCommandsPath}");
+            GLogger.Here().Debug($"ScriptObjects Path: {scriptObjectsPath}");
+            GLogger.Here().Debug($"Crypto Keys Path: {cryptoKeysPath}");
+            GLogger.Here().Debug($"Arguments: {arguments}");
 
             await ProcessEngine.RunUnrealPakAsync(unrealPakPath, arguments, outputCallback);
         }
