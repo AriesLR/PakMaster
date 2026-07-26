@@ -29,13 +29,13 @@ namespace PakMaster.UI.State
                     TextGetter = () => Lang.RepakSettings_Title,
                     Icon = "AlphaRBox",
                     Command = new RelayCommand((sender, e) => SidebarRepakSettings_Click(sender, e))
-                },
+                }/*,
                 new SidebarModel
                 {
                     TextGetter = () => Lang.ZenToolsSettings_Title,
                     Icon = "AlphaZBox",
                     Command = new RelayCommand((sender, e) => SidebarZenToolsSettings_Click(sender, e))
-                }
+                }*/
             ];
 
             // Bottom Menu Items
