@@ -165,7 +165,7 @@ namespace PakMaster
             catch (Exception ex)
             {
                 // Not using logger here because this exception would likely be caused by it not loading properly
-                Debug.WriteLine($"Critical startup crash: {ex}");
+                GLogger.Here().Debug($"Critical startup crash: {ex}");
                 MessageBox.Show(Lang.App_Msg_StartupError_Desc, Lang.App_Msg_StartupError_Title, MessageBoxButton.OK, MessageBoxImage.Error);
 
                 splashScreen.Close();

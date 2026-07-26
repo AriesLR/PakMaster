@@ -22,6 +22,7 @@
             <Setter Property="VerticalAlignment" Value="Center" />
         </Style>
     </mah:FlyoutsControl.Resources>
+
     <!-- ============ App Settings Flyout START ============ -->
     <mah:Flyout x:Name="AppSettingsFlyout"
                 Header="{lex:Loc AppSettings_Title}"
@@ -889,7 +890,7 @@
 
                 <!-- Pack Button -->
                 <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,0,0,30">
-                    <Button Content="{lex:Loc IoStorePacking_Pack}" Background="#262626" Width="200" Height="40" FontSize="14" FontWeight="Bold" Margin="5" />
+                    <Button Content="{lex:Loc IoStorePacking_Pack}" Background="#262626" Width="200" Height="40" FontSize="14" FontWeight="Bold" Margin="5" Click="IoStorePackage_Click" />
                 </StackPanel>
 
                 <!-- CLI Output -->

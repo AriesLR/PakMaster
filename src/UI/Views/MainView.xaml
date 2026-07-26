@@ -37,7 +37,7 @@
 
                 <Button Content="{lex:Loc MainView_BrowseInputFolder}" Background="#262626" Height="30" FontSize="12" FontWeight="Bold" Click="BrowseInputFolder" Grid.Column="0" />
 
-                <Button Background="#262626" Height="30" Width="30" FontSize="12" FontWeight="Bold" Click="btnRefreshUI_Click" Grid.Column="1">
+                <Button Background="#262626" Height="30" Width="30" FontSize="12" FontWeight="Bold" Click="RefreshUI_Click" Grid.Column="1">
                     <Button.Content>
                         <iconPacks:PackIconMaterial Kind="Refresh" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </Button.Content>
@@ -70,8 +70,8 @@
                                   VerticalAlignment="Center" HorizontalAlignment="Center"
                                   HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
                                   Grid.Column="1"
-                                  Checked="btnModeSwitchIoStore_Click"
-                                  Unchecked="btnModeSwitchNormal_Click"
+                                  Checked="ModeSwitchIoStore_Click"
+                                  Unchecked="ModeSwitchNormal_Click"
                                   Content="{lex:Loc MainView_ModeSwitch_NormalMode}">
                         <ToggleButton.Style>
                             <Style TargetType="ToggleButton" BasedOn="{StaticResource {x:Type ToggleButton}}">
@@ -91,7 +91,7 @@
 
             <!-- Pack/Unpack Buttons Section -->
             <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5">
-                <Button Margin="5" Width="250" Height="40" Background="#262626" Click="btnUnpack_ClickAsync">
+                <Button Margin="5" Width="250" Height="40" Background="#262626" Click="Unpack_Click">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="50" />
@@ -102,7 +102,7 @@
                         <TextBlock Grid.Column="2" Text=">>>" FontSize="12" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" />
                     </Grid>
                 </Button>
-                <Button Margin="5" Width="250" Height="40" Background="#262626" Click="btnRepack_ClickAsync">
+                <Button Margin="5" Width="250" Height="40" Background="#262626" Click="Repack_Click">
                     <Grid>
                         <Grid.ColumnDefinitions>
                             <ColumnDefinition Width="50" />
@@ -129,7 +129,7 @@
 
                 <Button Content="{lex:Loc MainView_BrowseOutputFolder}" Background="#262626" Height="30" FontSize="12" FontWeight="Bold" Click="BrowseOutputFolder" Grid.Column="0" />
 
-                <Button Background="#262626" Height="30" Width="30" FontSize="12" FontWeight="Bold" Click="btnRefreshUI_Click" Grid.Column="1">
+                <Button Background="#262626" Height="30" Width="30" FontSize="12" FontWeight="Bold" Click="RefreshUI_Click" Grid.Column="1">
                     <Button.Content>
                         <iconPacks:PackIconMaterial Kind="Refresh" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" />
                     </Button.Content>

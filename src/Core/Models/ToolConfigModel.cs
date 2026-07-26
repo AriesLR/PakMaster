@@ -8,11 +8,11 @@ namespace PakMaster.Core.Models
 
     public class RepakVersionInfoModel
     {
-        public string UEVersion { get; set; }
-        public string Version { get; set; }
-        public string VersionFeature { get; set; }
-        public string Read { get; set; }
-        public string Write { get; set; }
+        public string UEVersion { get; set; } = string.Empty;
+        public string Version { get; set; } = string.Empty;
+        public string VersionFeature { get; set; } = string.Empty;
+        public string Read { get; set; } = string.Empty;
+        public string Write { get; set; } = string.Empty;
     }
 
     public class RepakSettingsModel

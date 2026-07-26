@@ -115,6 +115,18 @@ namespace PakMaster.UI.Views.Flyouts
             WindowPositionManager.ResetWindowPosition();
         }
 
+        // IoStore Package Button
+        private async void IoStorePackage_Click(object sender, RoutedEventArgs e)
+        {
+            await PakMaster.Core.Engines.UnrealPakEngine.RepackAsync(output =>
+            {
+                System.Windows.Application.Current.Dispatcher.Invoke(() =>
+                {
+                    IoStoreCommandOutputTextBox.Text += output + Environment.NewLine;
+                });
+            });
+        }
+
         // ============ Event Handlers ============
 
         // Check App Updates Toggled
@@ -426,7 +438,7 @@ namespace PakMaster.UI.Views.Flyouts
 
             if (dialog.ShowDialog() == true)
             {
-                string selectedPath = Path.GetDirectoryName(dialog.FileName);
+                string selectedPath = Path.GetDirectoryName(dialog.FileName) ?? string.Empty;
                 if (!string.IsNullOrEmpty(selectedPath))
                 {
                     config.UnrealPak.GlobalOutputPath = selectedPath;
@@ -456,7 +468,7 @@ namespace PakMaster.UI.Views.Flyouts
 
             if (dialog.ShowDialog() == true)
             {
-                string selectedPath = Path.GetDirectoryName(dialog.FileName);
+                string selectedPath = Path.GetDirectoryName(dialog.FileName) ?? string.Empty;
                 if (!string.IsNullOrEmpty(selectedPath))
                 {
                     config.UnrealPak.CookedFilesPath = selectedPath;
@@ -578,7 +590,7 @@ namespace PakMaster.UI.Views.Flyouts
             if (RepakVersionSwitchDropdown.SelectedItem is ComboBoxItem selectedItem)
             {
                 var config = ConfigManager.CurrentSettings;
-                config.Repak.RepakVersion = selectedItem.Content.ToString();
+                config.Repak.RepakVersion = selectedItem.Content?.ToString() ?? string.Empty;
                 ConfigManager.SaveConfig(config);
             }
         }
@@ -586,8 +598,8 @@ namespace PakMaster.UI.Views.Flyouts
         // Repak Settings Version Info
         public void LoadRepakVersionInfo()
         {
-            List<RepakVersionInfoModel> repakVersionInfo = new List<RepakVersionInfoModel>
-            {
+            List<RepakVersionInfoModel> repakVersionInfo =
+            [
                 new RepakVersionInfoModel { UEVersion = "", Version = "1", VersionFeature = "Initial", Read = "?", Write = "?" },
                 new RepakVersionInfoModel { UEVersion = "4.0-4.2", Version = "2", VersionFeature = "NoTimestamps", Read = "✔", Write = "✔" },
                 new RepakVersionInfoModel { UEVersion = "4.3-4.15", Version = "3", VersionFeature = "CompressionEncryption", Read = "✔", Write = "✔" },
@@ -600,7 +612,7 @@ namespace PakMaster.UI.Views.Flyouts
                 new RepakVersionInfoModel { UEVersion = "4.25", Version = "9", VersionFeature = "FrozenIndex", Read = "✔", Write = "✔" },
                 new RepakVersionInfoModel { UEVersion = "", Version = "10", VersionFeature = "PathHashIndex", Read = "?", Write = "?" },
                 new RepakVersionInfoModel { UEVersion = "4.26-5.3", Version = "11", VersionFeature = "Fnv64BugFix", Read = "✔", Write = "✔" }
-            };
+            ];
 
             RepakDataGrid.ItemsSource = repakVersionInfo;
 
