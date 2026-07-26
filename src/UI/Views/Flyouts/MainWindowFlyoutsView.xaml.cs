@@ -1,5 +1,3 @@
-using PakMaster.UI.Taskbar;
-
 namespace PakMaster.UI.Views.Flyouts
 {
     public partial class MainWindowFlyoutsView : FlyoutsControl
@@ -118,7 +116,7 @@ namespace PakMaster.UI.Views.Flyouts
         // IoStore Package Button
         private async void IoStorePackage_Click(object sender, RoutedEventArgs e)
         {
-            await PakMaster.Core.Engines.UnrealPakEngine.RepackAsync(output =>
+            await UnrealPakEngine.RepackAsync(output =>
             {
                 System.Windows.Application.Current.Dispatcher.Invoke(() =>
                 {
