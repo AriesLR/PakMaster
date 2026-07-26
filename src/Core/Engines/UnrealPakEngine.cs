@@ -2,7 +2,7 @@ namespace PakMaster.Core.Engines
 {
     public static class UnrealPakEngine
     {
-        public static async Task RepackAsync(Action<string> outputCallback)
+        public static async Task RepackAsync(Action<string> outputCallback, CancellationToken ct = default)
         {
             var unrealPakConfig = ConfigManager.CurrentSettings.UnrealPak;
             string unrealPakPath = unrealPakConfig.UnrealPakPath;
@@ -52,19 +52,22 @@ namespace PakMaster.Core.Engines
 
             string finalGlobalOutputPath = Path.Combine(globalOutputPath, "global.utoc");
 
-            string arguments = $"-CreateGlobalContainer=\"{finalGlobalOutputPath}\" " +
-                               $"-CookedDirectory=\"{cookedFilesPath}\" " +
-                               $"-WriteBackMetadataToAssetRegistry=Disabled " +
-                               $"-PackageStoreManifest=\"{packageStorePath}\" " +
-                               $"-Commands=\"{ioStoreCommandsPath}\" " +
-                               $"-ScriptObjects=\"{scriptObjectsPath}\" " +
-                               $"-patchpaddingalign=2048 " +
-                               $"-compressionformats=Oodle " +
-                               $"-compresslevel=4 " +
-                               $"-compressionmethod=Kraken " +
-                               $"-cryptokeys=\"{cryptoKeysPath}\" " +
-                               $"-compressionMinBytesSaved=1024 " +
-                               $"-compressionMinPercentSaved=5";
+            var arguments = new List<string>
+            {
+                $"-CreateGlobalContainer={finalGlobalOutputPath}",
+                $"-CookedDirectory={cookedFilesPath}",
+                "-WriteBackMetadataToAssetRegistry=Disabled",
+                $"-PackageStoreManifest={packageStorePath}",
+                $"-Commands={ioStoreCommandsPath}",
+                $"-ScriptObjects={scriptObjectsPath}",
+                "-patchpaddingalign=2048",
+                "-compressionformats=Oodle",
+                "-compresslevel=4",
+                "-compressionmethod=Kraken",
+                $"-cryptokeys={cryptoKeysPath}",
+                "-compressionMinBytesSaved=1024",
+                "-compressionMinPercentSaved=5"
+            };
 
             GLogger.Here().Debug($"UnrealPak Configuration Loaded:");
             GLogger.Here().Debug($"UnrealPak Path: {unrealPakPath}");
@@ -74,9 +77,10 @@ namespace PakMaster.Core.Engines
             GLogger.Here().Debug($"IoStoreCommands Path: {ioStoreCommandsPath}");
             GLogger.Here().Debug($"ScriptObjects Path: {scriptObjectsPath}");
             GLogger.Here().Debug($"Crypto Keys Path: {cryptoKeysPath}");
-            GLogger.Here().Debug($"Arguments: {arguments}");
+            string argsStr = string.Join(" ", arguments);
+            GLogger.Here().Debug($"Arguments: {argsStr}");
 
-            await ProcessEngine.RunUnrealPakAsync(unrealPakPath, arguments, outputCallback);
+            await ProcessEngine.RunUnrealPakAsync(unrealPakPath, arguments, outputCallback, ct);
         }
     }
 }

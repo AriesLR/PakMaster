@@ -2,7 +2,7 @@ namespace PakMaster.Core.Engines
 {
     public static class RepakEngine
     {
-        public static async Task UnpackAsync(string fullInputFilePath, string outputFolderPath, Action<string> outputCallback)
+        public static async Task UnpackAsync(string fullInputFilePath, string outputFolderPath, Action<string> outputCallback, CancellationToken ct = default)
         {
             var config = ConfigManager.CurrentSettings;
             string aesKey = config.Repak.AesKey;
@@ -32,14 +32,21 @@ namespace PakMaster.Core.Engines
 
             string outputPath = Path.Combine(outputFolderPath, fileNameWithoutExtension);
 
-            string arguments = string.IsNullOrEmpty(aesKey)
-                ? $"unpack -o \"{outputPath}\" \"{fullInputFilePath}\""
-                : $"-a {aesKey} unpack -o \"{outputPath}\" \"{fullInputFilePath}\"";
+            var arguments = new List<string>();
+            if (!string.IsNullOrEmpty(aesKey))
+            {
+                arguments.Add("-a");
+                arguments.Add(aesKey);
+            }
+            arguments.Add("unpack");
+            arguments.Add("-o");
+            arguments.Add(outputPath);
+            arguments.Add(fullInputFilePath);
 
-            await ProcessEngine.RunToolAsync("repak", "repak.exe", arguments, outputCallback);
+            await ProcessEngine.RunToolAsync("repak", "repak.exe", arguments, outputCallback, ct);
         }
 
-        public static async Task RepackAsync(string fullInputFolderPath, string inputFolderPath, Action<string> outputCallback)
+        public static async Task RepackAsync(string fullInputFolderPath, string inputFolderPath, Action<string> outputCallback, CancellationToken ct = default)
         {
             var repakConfig = ConfigManager.CurrentSettings.Repak;
             string repakVersion = repakConfig.RepakVersion;
@@ -70,9 +77,16 @@ namespace PakMaster.Core.Engines
 
             string outputFilePath = Path.Combine(inputFolderPath, outputPakName);
 
-            string arguments = $"pack --version {repakVersion} \"{fullInputFolderPath}\" \"{outputFilePath}\"";
+            var arguments = new List<string>
+            {
+                "pack",
+                "--version",
+                repakVersion,
+                fullInputFolderPath,
+                outputFilePath
+            };
 
-            await ProcessEngine.RunToolAsync("repak", "repak.exe", arguments, outputCallback);
+            await ProcessEngine.RunToolAsync("repak", "repak.exe", arguments, outputCallback, ct);
         }
     }
 }

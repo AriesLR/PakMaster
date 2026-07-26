@@ -664,7 +664,7 @@ namespace PakMaster.UI.Views.Flyouts
             string lastPath = config.UnrealPak.UnrealPakPath;
             if (!string.IsNullOrEmpty(lastPath))
             {
-                dialog.InitialDirectory = System.IO.Path.GetDirectoryName(lastPath);
+                dialog.InitialDirectory = Path.GetDirectoryName(lastPath);
             }
 
             if (dialog.ShowDialog() == true)
@@ -675,7 +675,7 @@ namespace PakMaster.UI.Views.Flyouts
             }
         }
 
-        private void CliOutput_TextChanged(object sender, System.Windows.Controls.TextChangedEventArgs e)
+        private void CliOutput_TextChanged(object sender, TextChangedEventArgs e)
         {
             IoStoreCommandOutputTextBox.ScrollToEnd();
         }

@@ -134,7 +134,7 @@ namespace PakMaster.UI.Views
             }
             else
             {
-                var selectedInputFile = InputFilesListBox.SelectedItem as System.Collections.Generic.KeyValuePair<string, string>?;
+                var selectedInputFile = InputFilesListBox.SelectedItem as KeyValuePair<string, string>?;
                 string fullInputFilePath = selectedInputFile.HasValue ? selectedInputFile.Value.Value : string.Empty;
 
                 await RepakEngine.UnpackAsync(fullInputFilePath, outputFolderPath ?? string.Empty, output =>
@@ -150,14 +150,14 @@ namespace PakMaster.UI.Views
         {
             if (isIoStoreMode)
             {
-                if (System.Windows.Application.Current.MainWindow.DataContext is MainWindowState state)
+                if (Application.Current.MainWindow.DataContext is MainWindowState state)
                 {
                     state.OpenIoStoreFlyout();
                 }
             }
             else
             {
-                var selectedInputFolder = OutputFilesListBox.SelectedItem as System.Collections.Generic.KeyValuePair<string, string>?;
+                var selectedInputFolder = OutputFilesListBox.SelectedItem as KeyValuePair<string, string>?;
                 string fullInputFolderPath = selectedInputFolder.HasValue ? selectedInputFolder.Value.Value : string.Empty;
 
                 await RepakEngine.RepackAsync(fullInputFolderPath, inputFolderPath ?? string.Empty, output =>

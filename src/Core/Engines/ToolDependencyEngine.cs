@@ -1,5 +1,3 @@
-using System.IO.Compression;
-
 namespace PakMaster.Core.Engines
 {
     public static class ToolDependencyEngine

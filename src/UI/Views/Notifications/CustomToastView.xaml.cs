@@ -1,5 +1,3 @@
-using System.Windows.Controls;
-
 namespace PakMaster.UI.Views
 {
     public partial class CustomToastView : UserControl

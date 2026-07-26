@@ -272,7 +272,7 @@ namespace PakMaster
 
             if (_appMutex != null)
             {
-                if (!System.Environment.HasShutdownStarted && _ownsMutex)
+                if (!Environment.HasShutdownStarted && _ownsMutex)
                 {
                     try
                     {

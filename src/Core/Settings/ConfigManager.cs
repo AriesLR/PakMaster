@@ -3,7 +3,7 @@ namespace PakMaster.Core.Settings
     public static class ConfigManager
     {
         private static readonly JsonSerializerOptions JsonOptions = new() { WriteIndented = true };
-        private static readonly System.Threading.SemaphoreSlim _saveLock = new(1, 1);
+        private static readonly SemaphoreSlim _saveLock = new(1, 1);
 
         public static ToolConfigModel CurrentSettings { get; set; } = new ToolConfigModel();
 
@@ -58,7 +58,7 @@ namespace PakMaster.Core.Settings
 
                 if (!File.Exists(AppConfig.ZenToolsConfigPath))
                 {
-                    var defaultZen = new System.Collections.Generic.Dictionary<string, string> { { "00000000-0000-0000-0000-000000000000", "" } };
+                    var defaultZen = new Dictionary<string, string> { { "00000000-0000-0000-0000-000000000000", "" } };
                     string json = JsonSerializer.Serialize(defaultZen, JsonOptions);
                     File.WriteAllText(AppConfig.ZenToolsConfigPath, json);
                 }
@@ -127,14 +127,14 @@ namespace PakMaster.Core.Settings
             }
         }
 
-        public static System.Collections.Generic.Dictionary<string, string>? LoadZenToolsConfig()
+        public static Dictionary<string, string>? LoadZenToolsConfig()
         {
             try
             {
                 if (File.Exists(AppConfig.ZenToolsConfigPath))
                 {
                     string json = File.ReadAllText(AppConfig.ZenToolsConfigPath);
-                    return JsonSerializer.Deserialize<System.Collections.Generic.Dictionary<string, string>>(json);
+                    return JsonSerializer.Deserialize<Dictionary<string, string>>(json);
                 }
             }
             catch (Exception ex)
@@ -148,7 +148,7 @@ namespace PakMaster.Core.Settings
         {
             try
             {
-                var dict = new System.Collections.Generic.Dictionary<string, string> { { guid, hex } };
+                var dict = new Dictionary<string, string> { { guid, hex } };
                 string json = JsonSerializer.Serialize(dict, JsonOptions);
                 File.WriteAllText(AppConfig.ZenToolsConfigPath, json);
             }

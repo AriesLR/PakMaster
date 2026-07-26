@@ -2,7 +2,7 @@ namespace PakMaster.Core.Engines
 {
     public static class ProcessEngine
     {
-        public static async Task RunToolAsync(string toolFolderName, string executableName, string arguments, Action<string> outputCallback)
+        public static async Task RunToolAsync(string toolFolderName, string executableName, IEnumerable<string> arguments, Action<string> outputCallback, CancellationToken ct = default)
         {
             try
             {
@@ -14,18 +14,7 @@ namespace PakMaster.Core.Engines
                     throw new DirectoryNotFoundException($"Tool directory not found: {toolDirectory}");
                 }
 
-                ProcessStartInfo processStartInfo = new()
-                {
-                    FileName = executablePath,
-                    Arguments = arguments,
-                    RedirectStandardOutput = true,
-                    RedirectStandardError = true,
-                    UseShellExecute = false,
-                    CreateNoWindow = true,
-                    WorkingDirectory = toolDirectory
-                };
-
-                await RunProcessCoreAsync(processStartInfo, outputCallback);
+                await RunProcessCoreAsync(executablePath, toolDirectory, arguments, outputCallback, ct);
             }
             catch (Exception ex)
             {
@@ -33,7 +22,7 @@ namespace PakMaster.Core.Engines
             }
         }
 
-        public static async Task RunUnrealPakAsync(string unrealPakPath, string arguments, Action<string> outputCallback)
+        public static async Task RunUnrealPakAsync(string unrealPakPath, IEnumerable<string> arguments, Action<string> outputCallback, CancellationToken ct = default)
         {
             try
             {
@@ -53,18 +42,7 @@ namespace PakMaster.Core.Engines
                     throw new DirectoryNotFoundException("Could not determine the working directory for UnrealPak.");
                 }
 
-                ProcessStartInfo processStartInfo = new()
-                {
-                    FileName = unrealPakPath,
-                    Arguments = arguments,
-                    RedirectStandardOutput = true,
-                    RedirectStandardError = true,
-                    UseShellExecute = false,
-                    CreateNoWindow = true,
-                    WorkingDirectory = workingDirectory
-                };
-
-                await RunProcessCoreAsync(processStartInfo, outputCallback);
+                await RunProcessCoreAsync(unrealPakPath, workingDirectory, arguments, outputCallback, ct);
             }
             catch (Exception ex)
             {
@@ -72,29 +50,29 @@ namespace PakMaster.Core.Engines
             }
         }
 
-        private static async Task RunProcessCoreAsync(ProcessStartInfo processStartInfo, Action<string> outputCallback)
+        private static async Task RunProcessCoreAsync(string executablePath, string workingDirectory, IEnumerable<string> arguments, Action<string> outputCallback, CancellationToken ct)
         {
-            using Process process = new()
-            { StartInfo = processStartInfo };
             StringBuilder outputBuilder = new();
+            object lockObj = new();
 
-            process.OutputDataReceived += (sender, e) =>
-            {
-                if (!string.IsNullOrEmpty(e.Data))
-                    outputBuilder.AppendLine(e.Data);
-            };
+            var pipeTarget = PipeTarget.ToDelegate(
+                line =>
+                {
+                    lock (lockObj)
+                    {
+                        outputBuilder.AppendLine(line);
+                    }
+                }
+            );
 
-            process.ErrorDataReceived += (sender, e) =>
-            {
-                if (!string.IsNullOrEmpty(e.Data))
-                    outputBuilder.AppendLine(e.Data);
-            };
+            var cmd = Cli.Wrap(executablePath)
+                .WithWorkingDirectory(workingDirectory)
+                .WithArguments(arguments)
+                .WithValidation(CommandResultValidation.None)
+                .WithStandardOutputPipe(pipeTarget)
+                .WithStandardErrorPipe(pipeTarget);
 
-            process.Start();
-            process.BeginOutputReadLine();
-            process.BeginErrorReadLine();
-
-            await Task.Run(() => process.WaitForExit());
+            await cmd.ExecuteAsync(ct);
 
             outputCallback?.Invoke(outputBuilder.ToString());
         }

@@ -2,7 +2,7 @@ namespace PakMaster.Core.Engines
 {
     public static class ZenToolsEngine
     {
-        public static async Task UnpackAsync(string inputFolderPath, string outputFolderPath, Action<string> outputCallback)
+        public static async Task UnpackAsync(string inputFolderPath, string outputFolderPath, Action<string> outputCallback, CancellationToken ct = default)
         {
             var zentoolsConfig = ConfigManager.LoadZenToolsConfig();
             string zenToolsKeyGuid = string.Empty;
@@ -49,19 +49,21 @@ namespace PakMaster.Core.Engines
             string uniqueGuid = Guid.NewGuid().ToString("N").Substring(0, 8);
             string outputPath = Path.Combine(outputFolderPath, $"PakMaster_IoStore_{uniqueGuid}");
 
-            string encryptionKeysPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "configs", "zentools-aeskey.json");
-            string arguments;
+            var arguments = new List<string>
+            {
+                "ExtractPackages",
+                inputPath,
+                outputPath
+            };
 
             if (!string.IsNullOrEmpty(zenToolsKeyHex))
             {
-                arguments = $"ExtractPackages \"{inputPath}\" \"{outputPath}\" -EncryptionKeys=\"{encryptionKeysPath}\" -ZenPackageVersion=Initial";
-            }
-            else
-            {
-                arguments = $"ExtractPackages \"{inputPath}\" \"{outputPath}\" -ZenPackageVersion=Initial";
+                arguments.Add($"-EncryptionKeys={AppConfig.ZenToolsConfigPath}");
             }
 
-            await ProcessEngine.RunToolAsync("zentools", "zentools.exe", arguments, outputCallback);
+            arguments.Add("-ZenPackageVersion=Initial");
+
+            await ProcessEngine.RunToolAsync("zentools", "zentools.exe", arguments, outputCallback, ct);
 
             string appDirectory = Path.GetDirectoryName(AppDomain.CurrentDomain.BaseDirectory.TrimEnd(Path.DirectorySeparatorChar)) ?? string.Empty;
             string engineFolderPath = Path.Combine(appDirectory, "Engine");

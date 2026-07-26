@@ -1,3 +1,4 @@
+global using CliWrap;
 global using ControlzEx.Theming;
 global using H.NotifyIcon;
 global using MahApps.Metro.Controls;
@@ -32,6 +33,7 @@ global using System.ComponentModel;
 global using System.Diagnostics;
 global using System.Globalization;
 global using System.IO;
+global using System.IO.Compression;
 global using System.Linq;
 global using System.Net.Http;
 global using System.Net.Http.Json;

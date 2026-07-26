@@ -44,7 +44,7 @@ namespace PakMaster.Core.Settings
             }
         }
 
-        private static readonly System.Threading.SemaphoreSlim _saveLock = new(1, 1);
+        private static readonly SemaphoreSlim _saveLock = new(1, 1);
 
         // Save AppSettings.json
         public static void SaveAppSettings(AppSettingsModel settings)
