@@ -18,35 +18,27 @@ namespace PakMaster.Core.Engines
             }
             catch (Exception ex)
             {
-                await MessageManager.ShowError($"Error running command: {ex.Message}");
+                GLogger.Here().Error(ex, "Error running command"); await MessageManager.ShowError($"Error running command: {ex.Message}");
             }
         }
 
-        public static async Task RunUnrealPakAsync(string unrealPakPath, IEnumerable<string> arguments, Action<string> outputCallback, CancellationToken ct = default)
+        public static async Task RunToolAsync(string toolFolderName, string executableName, string arguments, Action<string> outputCallback, CancellationToken ct = default)
         {
             try
             {
-                if (string.IsNullOrEmpty(unrealPakPath))
+                string toolDirectory = Path.Combine(AppConfig.PakMasterDependencyFolder, toolFolderName);
+                string executablePath = Path.Combine(toolDirectory, executableName);
+
+                if (!Directory.Exists(toolDirectory))
                 {
-                    throw new ArgumentException("UnrealPak path is not provided.");
+                    throw new DirectoryNotFoundException($"Tool directory not found: {toolDirectory}");
                 }
 
-                if (!File.Exists(unrealPakPath))
-                {
-                    throw new FileNotFoundException($"UnrealPak executable not found: {unrealPakPath}");
-                }
-
-                string workingDirectory = Path.GetDirectoryName(unrealPakPath) ?? string.Empty;
-                if (string.IsNullOrEmpty(workingDirectory))
-                {
-                    throw new DirectoryNotFoundException("Could not determine the working directory for UnrealPak.");
-                }
-
-                await RunProcessCoreAsync(unrealPakPath, workingDirectory, arguments, outputCallback, ct);
+                await RunProcessCoreAsync(executablePath, toolDirectory, arguments, outputCallback, ct);
             }
             catch (Exception ex)
             {
-                await MessageManager.ShowError($"Error running command: {ex.Message}");
+                GLogger.Here().Error(ex, "Error running command"); await MessageManager.ShowError($"Error running command: {ex.Message}");
             }
         }
 
@@ -55,12 +47,12 @@ namespace PakMaster.Core.Engines
             StringBuilder outputBuilder = new();
             object lockObj = new();
 
-            var pipeTarget = PipeTarget.ToDelegate(
+            GLogger.Here().Debug("Initializing command execution process"); var pipeTarget = PipeTarget.ToDelegate(
                 line =>
                 {
                     lock (lockObj)
                     {
-                        outputBuilder.AppendLine(line);
+                        outputBuilder.AppendLine(line); GLogger.Here().Information("[{0}]: {1}", Path.GetFileName(executablePath), line);
                     }
                 }
             );
@@ -72,7 +64,34 @@ namespace PakMaster.Core.Engines
                 .WithStandardOutputPipe(pipeTarget)
                 .WithStandardErrorPipe(pipeTarget);
 
-            await cmd.ExecuteAsync(ct);
+            await cmd.ExecuteAsync(ct); GLogger.Here().Information("Command execution finished successfully");
+
+            outputCallback?.Invoke(outputBuilder.ToString());
+        }
+
+        private static async Task RunProcessCoreAsync(string executablePath, string workingDirectory, string arguments, Action<string> outputCallback, CancellationToken ct)
+        {
+            StringBuilder outputBuilder = new();
+            object lockObj = new();
+
+            GLogger.Here().Debug("Initializing command execution process"); var pipeTarget = PipeTarget.ToDelegate(
+                line =>
+                {
+                    lock (lockObj)
+                    {
+                        outputBuilder.AppendLine(line); GLogger.Here().Information("[{0}]: {1}", Path.GetFileName(executablePath), line);
+                    }
+                }
+            );
+
+            var cmd = Cli.Wrap(executablePath)
+                .WithWorkingDirectory(workingDirectory)
+                .WithArguments(arguments)
+                .WithValidation(CommandResultValidation.None)
+                .WithStandardOutputPipe(pipeTarget)
+                .WithStandardErrorPipe(pipeTarget);
+
+            await cmd.ExecuteAsync(ct); GLogger.Here().Information("Command execution finished successfully");
 
             outputCallback?.Invoke(outputBuilder.ToString());
         }
