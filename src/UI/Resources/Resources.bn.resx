@@ -126,9 +126,6 @@
   <data name="AppSettings_Lbl_Language" xml:space="preserve">
     <value>ভাষা</value>
   </data>
-  <data name="AppSettings_Desc_Language" xml:space="preserve">
-    <value>অ্যাপ্লিকেশন জুড়ে ব্যবহৃত ভাষা নির্বাচন করুন।</value>
-  </data>
   <data name="AppSettings_Lbl_AccentColor" xml:space="preserve">
     <value>হাইলাইট রঙ</value>
   </data>
@@ -538,6 +535,9 @@
   <data name="AESKeys_HEX" xml:space="preserve">
     <value>হেক্স</value>
   </data>
+  <data name="RepakSettings_PakVersion" xml:space="preserve">
+    <value>পাক ফাইল সংস্করণ</value>
+  </data>
   <data name="RepakSettings_UEVersion" xml:space="preserve">
     <value>ইউই সংস্করণ</value>
   </data>
@@ -553,7 +553,279 @@
   <data name="RepakSettings_Write" xml:space="preserve">
     <value>লিখুন</value>
   </data>
-  <data name="RepakSettings_PakVersion" xml:space="preserve">
-    <value>পাক ফাইল সংস্করণ</value>
+  <data name="CliLogs_Title" xml:space="preserve">
+    <value>ক্লি লগস</value>
+  </data>
+  <data name="CliLogs_ClearLogs" xml:space="preserve">
+    <value>লগসমূহ মুছুন</value>
+  </data>
+  <data name="RetocView_Command" xml:space="preserve">
+    <value>আদেশ</value>
+  </data>
+  <data name="RetocView_SelectCommand" xml:space="preserve">
+    <value>কমান্ড নির্বাচন করুন</value>
+  </data>
+  <data name="RetocView_FileFolderPaths" xml:space="preserve">
+    <value>ফাইল/ফোল্ডার পথসমূহ</value>
+  </data>
+  <data name="RetocView_InputPath" xml:space="preserve">
+    <value>ইনপুট পথ</value>
+  </data>
+  <data name="RetocView_File" xml:space="preserve">
+    <value>ফাইল</value>
+  </data>
+  <data name="RetocView_Folder" xml:space="preserve">
+    <value>ফোল্ডার</value>
+  </data>
+  <data name="RetocView_OutputPath" xml:space="preserve">
+    <value>আউটপুট পথ</value>
+  </data>
+  <data name="RetocView_Options" xml:space="preserve">
+    <value>বিকল্পসমূহ</value>
+  </data>
+  <data name="RetocView_ID" xml:space="preserve">
+    <value>আইডি</value>
+  </data>
+  <data name="RetocView_Clear" xml:space="preserve">
+    <value>স্বচ্ছ</value>
+  </data>
+  <data name="RetocRepak_AESKey" xml:space="preserve">
+    <value>মূল</value>
+  </data>
+  <data name="RetocView_OverrideContainerHeaderVersion" xml:space="preserve">
+    <value>কন্টেইনার হেডার সংস্করণ ওভাররাইড করুন</value>
+  </data>
+  <data name="RetocView_OverrideTOCVersion" xml:space="preserve">
+    <value>TOC সংস্করণ ওভাররাইড করুন</value>
+  </data>
+  <data name="RetocView_EngineVersion" xml:space="preserve">
+    <value>ইঞ্জিন সংস্করণ</value>
+  </data>
+  <data name="RetocView_AssetFilter" xml:space="preserve">
+    <value>সম্পদ ফিল্টার</value>
+  </data>
+  <data name="RetocView_AllChunks" xml:space="preserve">
+    <value>সমস্ত টুকরো</value>
+  </data>
+  <data name="RetocView_ShowHash" xml:space="preserve">
+    <value>হ্যাশ দেখান</value>
+  </data>
+  <data name="RetocView_ShowPackage" xml:space="preserve">
+    <value>প্যাকেজ দেখান</value>
+  </data>
+  <data name="RetocView_ShowSize" xml:space="preserve">
+    <value>আকার দেখান</value>
+  </data>
+  <data name="RetocView_ShowPath" xml:space="preserve">
+    <value>পথ দেখান</value>
+  </data>
+  <data name="RetocView_ShowStore" xml:space="preserve">
+    <value>স্টোর দেখান</value>
+  </data>
+  <data name="RetocView_NoAssets" xml:space="preserve">
+    <value>কোনও সম্পদ নেই</value>
+  </data>
+  <data name="RetocView_NoShaders" xml:space="preserve">
+    <value>শ্যাডার নেই</value>
+  </data>
+  <data name="RetocView_NoScriptObjects" xml:space="preserve">
+    <value>কোনো স্ক্রিপ্ট অবজেক্ট নেই</value>
+  </data>
+  <data name="RetocView_NoCompressShaders" xml:space="preserve">
+    <value>কোনও কম্প্রেস শেডার নেই</value>
+  </data>
+  <data name="RetocView_ScriptCell" xml:space="preserve">
+    <value>স্ক্রিপ্ট সেল</value>
+  </data>
+  <data name="RetocView_Verbose" xml:space="preserve">
+    <value>বিস্তারিত</value>
+  </data>
+  <data name="RetocView_Debug" xml:space="preserve">
+    <value>ত্রুটি নির্মূল</value>
+  </data>
+  <data name="RetocView_NoParallel" xml:space="preserve">
+    <value>কোনও সমান্তরাল নেই</value>
+  </data>
+  <data name="RetocRepak_CommandPreview" xml:space="preserve">
+    <value>কমান্ডের পূর্বরূপ</value>
+  </data>
+  <data name="RetocRepak_ExecuteCommand" xml:space="preserve">
+    <value>কমান্ড কার্যকর করুন</value>
+  </data>
+  <data name="RetocView_DoNotRunInParallelUsefulForDebugging" xml:space="preserve">
+    <value>সমান্তরালে চালাবেন না। ডিবাগিংয়ের জন্য উপকারী।</value>
+  </data>
+  <data name="RetocView_DebugLogging" xml:space="preserve">
+    <value>ত্রুটি লগিং</value>
+  </data>
+  <data name="RetocView_VerboseLogging" xml:space="preserve">
+    <value>বিস্তারিত লগিং</value>
+  </data>
+  <data name="RetocView_SkipCompressionOfShaderLibraries" xml:space="preserve">
+    <value>শেডার লাইব্রেরির কম্প্রেশন এড়িয়ে যান</value>
+  </data>
+  <data name="RetocView_SkipExtractionOfScriptObjects" xml:space="preserve">
+    <value>স্ক্রিপ্ট অবজেক্টগুলির এক্সট্র্যাকশন এড়িয়ে যান</value>
+  </data>
+  <data name="RetocView_SkipConversionOfShaderLibraries" xml:space="preserve">
+    <value>শেডার লাইব্রেরিগুলির রূপান্তর এড়িয়ে যান</value>
+  </data>
+  <data name="RetocView_SkipConversionOfAssets" xml:space="preserve">
+    <value>সম্পদের রূপান্তর এড়িয়ে চলুন</value>
+  </data>
+  <data name="RetocView_DoNotOutputAnyFilesDryRunUsefulForTestingConversion" xml:space="preserve">
+    <value>কোনও ফাইল আউটপুট করবেন না (শুধুমাত্র পরীক্ষা)। রূপান্তরের পরীক্ষায় কার্যকর।</value>
+  </data>
+  <data name="RetocView_ShowPackageStoreEntry" xml:space="preserve">
+    <value>প্যাকেজ স্টোর এন্ট্রি দেখান</value>
+  </data>
+  <data name="RetocView_ShowChunkPath" xml:space="preserve">
+    <value>চঙ্ক পথ দেখান</value>
+  </data>
+  <data name="RetocView_ShowChunkSize" xml:space="preserve">
+    <value>চঙ্ক সাইজ দেখান</value>
+  </data>
+  <data name="RetocView_ShowPackageID" xml:space="preserve">
+    <value>প্যাকেজ আইডি দেখান</value>
+  </data>
+  <data name="RetocView_ShowChunkContentHash" xml:space="preserve">
+    <value>টুকরো বিষয়বস্তুর হ্যাশ দেখান</value>
+  </data>
+  <data name="RetocView_ByDefaultOnlyUniqueChunksWillBeListedAllWillAlsoListChunksOverridenByPatchContainers" xml:space="preserve">
+    <value>ডিফল্টভাবে শুধুমাত্র অনন্য অংশগুলো তালিকাভুক্ত হবে। --all ব্যবহার করলে প্যাচ কন্টেইনার দ্বারা ওভাররাইড করা অংশগুলোও তালিকাভুক্ত হবে।</value>
+  </data>
+  <data name="RetocView_AssetFileNameFilter" xml:space="preserve">
+    <value>অ্যাসেট ফাইলের নামের ফিল্টার</value>
+  </data>
+  <data name="RetocView_LtAES_KEYGt" xml:space="preserve">
+    <value>এইএসকি</value>
+  </data>
+  <data name="RetocView_DryRun" xml:space="preserve">
+    <value>শুষ্ক অনুশীলন</value>
+  </data>
+  <data name="UTOC" xml:space="preserve">
+    <value>&lt;ইউটিওসি&gt;</value>
+  </data>
+  <data name="PATH" xml:space="preserve">
+    <value>&lt;পথ&gt;</value>
+  </data>
+  <data name="InputUtocFileContainingScriptObjects" xml:space="preserve">
+    <value>স্ক্রিপ্ট অবজেক্টসমূহ ধারণকারী .utoc ফাইল ইনপুট করুন</value>
+  </data>
+  <data name="InputAssetRegistryBinFile" xml:space="preserve">
+    <value>AssetRegistry.bin ফাইল ইনপুট করুন</value>
+  </data>
+  <data name="OUTPUT" xml:space="preserve">
+    <value>&lt;আউটপুট&gt;</value>
+  </data>
+  <data name="InputUtocOrDirectoryWithMultipleUtocEGContentPaks" xml:space="preserve">
+    <value>একটি .utoc ফাইল বা একাধিক .utoc সহ ডিরেক্টরি ইনপুট করুন (যেমন Content/Paks/)</value>
+  </data>
+  <data name="OutputDirectoryOrPak" xml:space="preserve">
+    <value>আউটপুট ডিরেক্টরি বা .pak</value>
+  </data>
+  <data name="INPUT" xml:space="preserve">
+    <value>ইনপুট</value>
+  </data>
+  <data name="OUTPUT_DIR" xml:space="preserve">
+    <value>&lt;আউটপুটডির&gt;</value>
+  </data>
+  <data name="InputReflectionDataJmapDump" xml:space="preserve">
+    <value>ইনপুট রিফ্লেকশন ডেটা .jmap ডাম্প</value>
+  </data>
+  <data name="OutputUtocFile" xml:space="preserve">
+    <value>আউটপুট .utoc ফাইল</value>
+  </data>
+  <data name="InputDirectoryOrPak" xml:space="preserve">
+    <value>ইনপুট ডিরেক্টরি বা .pak</value>
+  </data>
+  <data name="OutputUtoc" xml:space="preserve">
+    <value>আউটপুট .utoc</value>
+  </data>
+  <data name="OptionalOutputPathOrStdoutIfOrOmitted" xml:space="preserve">
+    <value>ঐচ্ছিক আউটপুট পথ বা স্ট্যান্ডার্ড আউটপুট, যদি "-" বা বাদ দেওয়া হয়</value>
+  </data>
+  <data name="SelectInputFolder" xml:space="preserve">
+    <value>ইনপুট ফোল্ডার নির্বাচন করুন</value>
+  </data>
+  <data name="SelectOutputFolder" xml:space="preserve">
+    <value>আউটপুট ফোল্ডার নির্বাচন করুন</value>
+  </data>
+  <data name="SelectInputFile" xml:space="preserve">
+    <value>ইনপুট ফাইল নির্বাচন করুন</value>
+  </data>
+  <data name="SelectOutputFile" xml:space="preserve">
+    <value>আউটপুট ফাইল নির্বাচন করুন</value>
+  </data>
+  <data name="RepakView_RepakBranch" xml:space="preserve">
+    <value>রিপ্যাক শাখা</value>
+  </data>
+  <data name="RepakView_PathToFileToReadToStdout" xml:space="preserve">
+    <value>স্ট্যান্ডার্ড আউটপুটে পড়ার জন্য ফাইলের পথ</value>
+  </data>
+  <data name="RepakView_StripPrefix" xml:space="preserve">
+    <value>স্ট্রিপ প্রিফিক্স</value>
+  </data>
+  <data name="RepakView_Include" xml:space="preserve">
+    <value>নকশা অন্তর্ভুক্ত করুন</value>
+  </data>
+  <data name="RepakView_MountPoint" xml:space="preserve">
+    <value>মাউন্ট পয়েন্ট</value>
+  </data>
+  <data name="RepakView_Compression" xml:space="preserve">
+    <value>সংকোচন</value>
+  </data>
+  <data name="RepakView_PathHashSeed" xml:space="preserve">
+    <value>পথ হ্যাশ বীজ</value>
+  </data>
+  <data name="RepakView_Version" xml:space="preserve">
+    <value>সংস্করণ</value>
+  </data>
+  <data name="RepakView_Verbose" xml:space="preserve">
+    <value>বিস্তারিত</value>
+  </data>
+  <data name="RepakView_Quiet" xml:space="preserve">
+    <value>নীরব</value>
+  </data>
+  <data name="RepakView_ForceOverwrite" xml:space="preserve">
+    <value>জোরপূর্বক ওভাররাইট</value>
+  </data>
+  <data name="RepakView_256BitAESEncryptionKeyAsBase64OrHexStringIfThePakIsEncrypted" xml:space="preserve">
+    <value>যদি প্যাকটি এনক্রিপ্ট করা থাকে, তাহলে 256-বিট AES এনক্রিপশন কী base64 বা হেক্স স্ট্রিং হিসেবে।</value>
+  </data>
+  <data name="RepakView_PrefixToStripFromEntryPathDefault" xml:space="preserve">
+    <value>এন্ট্রি পাথ থেকে স্ট্রিপ করার প্রিফিক্স (ডিফল্ট: ../../../)</value>
+  </data>
+  <data name="RepakView_ForceOverwriteExistingFilesDirectories" xml:space="preserve">
+    <value>বিদ্যমান ফাইল/ডিরেক্টরিগুলো জোরপূর্বক ওভাররাইট করুন</value>
+  </data>
+  <data name="RepakView_FilesOrDirectoriesToIncludeCanBeSpecifiedMultipleTimesIfNotSpecifiedEverythingIsExtracted" xml:space="preserve">
+    <value>অন্তর্ভুক্ত করার জন্য ফাইল বা ডিরেক্টরি। একাধিকবার নির্দিষ্ট করা যেতে পারে। যদি নির্দিষ্ট না করা হয়, তাহলে সবকিছুই বেরিয়ে আসে।</value>
+  </data>
+  <data name="RepakView_MountPointDefault" xml:space="preserve">
+    <value>মাউন্ট পয়েন্ট (ডিফল্ট: ../../../)</value>
+  </data>
+  <data name="RepakView_PathHashSeedForV10Default0" xml:space="preserve">
+    <value>পাথ হ্যাশ বীজ &gt;= V10 এর জন্য (ডিফল্ট: 0)</value>
+  </data>
+  <data name="RepakView_HidesNormalOutputSuchAsProgressBarAndCompletionStatus" xml:space="preserve">
+    <value>প্রগ্রেস বার এবং সম্পন্নতার স্থিতি-এর মতো স্বাভাবিক আউটপুট লুকায়।</value>
+  </data>
+  <data name="SelectAFolderToPack" xml:space="preserve">
+    <value>প্যাক করার জন্য একটি ফোল্ডার নির্বাচন করুন</value>
+  </data>
+  <data name="SelectAPakFile" xml:space="preserve">
+    <value>একটি .pak ফাইল নির্বাচন করুন</value>
+  </data>
+  <data name="SelectOutputPakFile" xml:space="preserve">
+    <value>আউটপুট .pak ফাইল নির্বাচন করুন</value>
+  </data>
+  <data name="SelectAFolderForOutput" xml:space="preserve">
+    <value>আউটপুটের জন্য একটি ফোল্ডার নির্বাচন করুন</value>
+  </data>
+  <data name="AppSettings_Desc_Language" xml:space="preserve">
+    <value>অ্যাপ্লিকেশন জুড়ে ব্যবহৃত ভাষা নির্বাচন করুন।
+
+*অনুবাদগুলি সঠিক নাও হতে পারে, ইংরেজিই একমাত্র আনুষ্ঠানিকভাবে সমর্থিত ভাষা।</value>
   </data>
 </root>

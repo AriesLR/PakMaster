@@ -126,9 +126,6 @@
   <data name="AppSettings_Lbl_Language" xml:space="preserve">
     <value>اللغة</value>
   </data>
-  <data name="AppSettings_Desc_Language" xml:space="preserve">
-    <value>اختر اللغة المستخدمة في التطبيق.</value>
-  </data>
   <data name="AppSettings_Lbl_AccentColor" xml:space="preserve">
     <value>اللون التمييزي</value>
   </data>
@@ -538,6 +535,9 @@
   <data name="AESKeys_HEX" xml:space="preserve">
     <value>HEX</value>
   </data>
+  <data name="RepakSettings_PakVersion" xml:space="preserve">
+    <value>إصدار ملف Pak</value>
+  </data>
   <data name="RepakSettings_UEVersion" xml:space="preserve">
     <value>إصدار UE</value>
   </data>
@@ -553,7 +553,279 @@
   <data name="RepakSettings_Write" xml:space="preserve">
     <value>اكتب</value>
   </data>
-  <data name="RepakSettings_PakVersion" xml:space="preserve">
-    <value>إصدار ملف Pak</value>
+  <data name="CliLogs_Title" xml:space="preserve">
+    <value>سجلات Cli</value>
+  </data>
+  <data name="CliLogs_ClearLogs" xml:space="preserve">
+    <value>مسح السجلات</value>
+  </data>
+  <data name="RetocView_Command" xml:space="preserve">
+    <value>الأمر</value>
+  </data>
+  <data name="RetocView_SelectCommand" xml:space="preserve">
+    <value>اختر الأمر</value>
+  </data>
+  <data name="RetocView_FileFolderPaths" xml:space="preserve">
+    <value>مسارات الملفات/المجلدات</value>
+  </data>
+  <data name="RetocView_InputPath" xml:space="preserve">
+    <value>مسار الإدخال</value>
+  </data>
+  <data name="RetocView_File" xml:space="preserve">
+    <value>ملف</value>
+  </data>
+  <data name="RetocView_Folder" xml:space="preserve">
+    <value>مجلد</value>
+  </data>
+  <data name="RetocView_OutputPath" xml:space="preserve">
+    <value>مسار الإخراج</value>
+  </data>
+  <data name="RetocView_Options" xml:space="preserve">
+    <value>خيارات</value>
+  </data>
+  <data name="RetocView_ID" xml:space="preserve">
+    <value>رقم التعريف</value>
+  </data>
+  <data name="RetocView_Clear" xml:space="preserve">
+    <value>مسح</value>
+  </data>
+  <data name="RetocRepak_AESKey" xml:space="preserve">
+    <value>المفتاح</value>
+  </data>
+  <data name="RetocView_OverrideContainerHeaderVersion" xml:space="preserve">
+    <value>تجاوز إصدار رأس الحاوية</value>
+  </data>
+  <data name="RetocView_OverrideTOCVersion" xml:space="preserve">
+    <value>تجاوز إصدار جدول المحتويات</value>
+  </data>
+  <data name="RetocView_EngineVersion" xml:space="preserve">
+    <value>إصدار المحرك</value>
+  </data>
+  <data name="RetocView_AssetFilter" xml:space="preserve">
+    <value>مرشح الأصول</value>
+  </data>
+  <data name="RetocView_AllChunks" xml:space="preserve">
+    <value>جميع المقاطع</value>
+  </data>
+  <data name="RetocView_ShowHash" xml:space="preserve">
+    <value>إظهار التجزئة</value>
+  </data>
+  <data name="RetocView_ShowPackage" xml:space="preserve">
+    <value>عرض الحزمة</value>
+  </data>
+  <data name="RetocView_ShowSize" xml:space="preserve">
+    <value>إظهار الحجم</value>
+  </data>
+  <data name="RetocView_ShowPath" xml:space="preserve">
+    <value>إظهار المسار</value>
+  </data>
+  <data name="RetocView_ShowStore" xml:space="preserve">
+    <value>عرض المتجر</value>
+  </data>
+  <data name="RetocView_NoAssets" xml:space="preserve">
+    <value>لا توجد أصول</value>
+  </data>
+  <data name="RetocView_NoShaders" xml:space="preserve">
+    <value>لا توجد أدوات تظليل</value>
+  </data>
+  <data name="RetocView_NoScriptObjects" xml:space="preserve">
+    <value>لا توجد كائنات سكريبت</value>
+  </data>
+  <data name="RetocView_NoCompressShaders" xml:space="preserve">
+    <value>لا توجد شادرات ضغط</value>
+  </data>
+  <data name="RetocView_ScriptCell" xml:space="preserve">
+    <value>خلية النص</value>
+  </data>
+  <data name="RetocView_Verbose" xml:space="preserve">
+    <value>مفصل</value>
+  </data>
+  <data name="RetocView_Debug" xml:space="preserve">
+    <value>تصحيح الأخطاء</value>
+  </data>
+  <data name="RetocView_NoParallel" xml:space="preserve">
+    <value>لا يوجد ما يماثله</value>
+  </data>
+  <data name="RetocRepak_CommandPreview" xml:space="preserve">
+    <value>معاينة الأمر</value>
+  </data>
+  <data name="RetocRepak_ExecuteCommand" xml:space="preserve">
+    <value>تنفيذ الأمر</value>
+  </data>
+  <data name="RetocView_DoNotRunInParallelUsefulForDebugging" xml:space="preserve">
+    <value>لا تقم بالتشغيل بالتوازي. مفيد في تصحيح الأخطاء</value>
+  </data>
+  <data name="RetocView_DebugLogging" xml:space="preserve">
+    <value>تسجيل أخطاء التصحيح</value>
+  </data>
+  <data name="RetocView_VerboseLogging" xml:space="preserve">
+    <value>التسجيل التفصيلي</value>
+  </data>
+  <data name="RetocView_SkipCompressionOfShaderLibraries" xml:space="preserve">
+    <value>تخطي ضغط مكتبات الشادرات</value>
+  </data>
+  <data name="RetocView_SkipExtractionOfScriptObjects" xml:space="preserve">
+    <value>تخطي استخراج كائنات البرامج النصية</value>
+  </data>
+  <data name="RetocView_SkipConversionOfShaderLibraries" xml:space="preserve">
+    <value>تخطي تحويل مكتبات الشادر</value>
+  </data>
+  <data name="RetocView_SkipConversionOfAssets" xml:space="preserve">
+    <value>تخطي تحويل الأصول</value>
+  </data>
+  <data name="RetocView_DoNotOutputAnyFilesDryRunUsefulForTestingConversion" xml:space="preserve">
+    <value>لا تقم بإخراج أي ملفات (تشغيل تجريبي). مفيد لاختبار عملية التحويل</value>
+  </data>
+  <data name="RetocView_ShowPackageStoreEntry" xml:space="preserve">
+    <value>عرض سجل الحزمة في المخزن</value>
+  </data>
+  <data name="RetocView_ShowChunkPath" xml:space="preserve">
+    <value>إظهار مسار المقطع</value>
+  </data>
+  <data name="RetocView_ShowChunkSize" xml:space="preserve">
+    <value>إظهار حجم المقطع</value>
+  </data>
+  <data name="RetocView_ShowPackageID" xml:space="preserve">
+    <value>إظهار معرّف الحزمة</value>
+  </data>
+  <data name="RetocView_ShowChunkContentHash" xml:space="preserve">
+    <value>إظهار تجزئة محتوى المقطع</value>
+  </data>
+  <data name="RetocView_ByDefaultOnlyUniqueChunksWillBeListedAllWillAlsoListChunksOverridenByPatchContainers" xml:space="preserve">
+    <value>بشكل افتراضي، سيتم سرد القطع الفريدة فقط. كما ستعرض الخيار --all القطع التي تم استبدالها بواسطة حاويات التصحيح</value>
+  </data>
+  <data name="RetocView_AssetFileNameFilter" xml:space="preserve">
+    <value>مرشح اسم ملف الموارد</value>
+  </data>
+  <data name="RetocView_LtAES_KEYGt" xml:space="preserve">
+    <value>&lt;AESKEY&gt;</value>
+  </data>
+  <data name="RetocView_DryRun" xml:space="preserve">
+    <value>تجربة تجريبية</value>
+  </data>
+  <data name="UTOC" xml:space="preserve">
+    <value>&lt;UTOC&gt;</value>
+  </data>
+  <data name="PATH" xml:space="preserve">
+    <value>&lt;PATH&gt;</value>
+  </data>
+  <data name="InputUtocFileContainingScriptObjects" xml:space="preserve">
+    <value>ملف .utoc المدخلات الذي يحتوي على كائنات البرامج النصية</value>
+  </data>
+  <data name="InputAssetRegistryBinFile" xml:space="preserve">
+    <value>أدخل ملف AssetRegistry.bin</value>
+  </data>
+  <data name="OUTPUT" xml:space="preserve">
+    <value>&lt;OUTPUT&gt;</value>
+  </data>
+  <data name="InputUtocOrDirectoryWithMultipleUtocEGContentPaks" xml:space="preserve">
+    <value>أدخل ملف .utoc أو دليلًا يحتوي على عدة ملفات .utoc (مثل Content/Paks/)</value>
+  </data>
+  <data name="OutputDirectoryOrPak" xml:space="preserve">
+    <value>دليل الإخراج أو ملف .pak</value>
+  </data>
+  <data name="INPUT" xml:space="preserve">
+    <value>&lt;INPUT&gt;</value>
+  </data>
+  <data name="OUTPUT_DIR" xml:space="preserve">
+    <value>&lt;OUTPUTDIR&gt;</value>
+  </data>
+  <data name="InputReflectionDataJmapDump" xml:space="preserve">
+    <value>إدخال بيانات الانعكاس من ملف .jmap dump</value>
+  </data>
+  <data name="OutputUtocFile" xml:space="preserve">
+    <value>إخراج ملف .utoc</value>
+  </data>
+  <data name="InputDirectoryOrPak" xml:space="preserve">
+    <value>أدخل الدليل أو ملف .pak</value>
+  </data>
+  <data name="OutputUtoc" xml:space="preserve">
+    <value>ملف الإخراج .utoc</value>
+  </data>
+  <data name="OptionalOutputPathOrStdoutIfOrOmitted" xml:space="preserve">
+    <value>مسار الإخراج الاختياري أو stdout إذا كان "-" أو تم حذفه</value>
+  </data>
+  <data name="SelectInputFolder" xml:space="preserve">
+    <value>اختر مجلد الإدخال</value>
+  </data>
+  <data name="SelectOutputFolder" xml:space="preserve">
+    <value>اختر مجلد الإخراج</value>
+  </data>
+  <data name="SelectInputFile" xml:space="preserve">
+    <value>اختر ملف الإدخال</value>
+  </data>
+  <data name="SelectOutputFile" xml:space="preserve">
+    <value>اختر ملف الإخراج</value>
+  </data>
+  <data name="RepakView_RepakBranch" xml:space="preserve">
+    <value>فرع ريباك</value>
+  </data>
+  <data name="RepakView_PathToFileToReadToStdout" xml:space="preserve">
+    <value>مسار الملف المراد قراءته إلى stdout</value>
+  </data>
+  <data name="RepakView_StripPrefix" xml:space="preserve">
+    <value>بادئة الشريط</value>
+  </data>
+  <data name="RepakView_Include" xml:space="preserve">
+    <value>تضمين النمط</value>
+  </data>
+  <data name="RepakView_MountPoint" xml:space="preserve">
+    <value>نقطة التثبيت</value>
+  </data>
+  <data name="RepakView_Compression" xml:space="preserve">
+    <value>الضغط</value>
+  </data>
+  <data name="RepakView_PathHashSeed" xml:space="preserve">
+    <value>بذرة تجزئة المسار</value>
+  </data>
+  <data name="RepakView_Version" xml:space="preserve">
+    <value>الإصدار</value>
+  </data>
+  <data name="RepakView_Verbose" xml:space="preserve">
+    <value>مفصل</value>
+  </data>
+  <data name="RepakView_Quiet" xml:space="preserve">
+    <value>هدوء</value>
+  </data>
+  <data name="RepakView_ForceOverwrite" xml:space="preserve">
+    <value>الكتابة القسرية</value>
+  </data>
+  <data name="RepakView_256BitAESEncryptionKeyAsBase64OrHexStringIfThePakIsEncrypted" xml:space="preserve">
+    <value>مفتاح تشفير AES 256 بت على شكل سلسلة Base64 أو سداسية عشرية إذا كان ملف pak مشفرًا</value>
+  </data>
+  <data name="RepakView_PrefixToStripFromEntryPathDefault" xml:space="preserve">
+    <value>البادئة المراد حذفها من مسار الإدخال (الافتراضي: ../../../)</value>
+  </data>
+  <data name="RepakView_ForceOverwriteExistingFilesDirectories" xml:space="preserve">
+    <value>فرض الكتابة فوق الملفات/المجلدات الموجودة</value>
+  </data>
+  <data name="RepakView_FilesOrDirectoriesToIncludeCanBeSpecifiedMultipleTimesIfNotSpecifiedEverythingIsExtracted" xml:space="preserve">
+    <value>الملفات أو المجلدات المراد تضمينها. يمكن تحديدها عدة مرات. إذا لم يتم تحديدها، فسيتم استخراج كل شيء</value>
+  </data>
+  <data name="RepakView_MountPointDefault" xml:space="preserve">
+    <value>نقطة التثبيت (الافتراضية: ../../../)</value>
+  </data>
+  <data name="RepakView_PathHashSeedForV10Default0" xml:space="preserve">
+    <value>بذرة تجزئة المسار للإصدارات التي تساوي أو تزيد عن V10 (القيمة الافتراضية: 0)</value>
+  </data>
+  <data name="RepakView_HidesNormalOutputSuchAsProgressBarAndCompletionStatus" xml:space="preserve">
+    <value>يخفي العناصر العادية التي تظهر على الشاشة، مثل شريط التقدم وحالة الإنجاز</value>
+  </data>
+  <data name="SelectAFolderToPack" xml:space="preserve">
+    <value>اختر مجلدًا لتعبئته</value>
+  </data>
+  <data name="SelectAPakFile" xml:space="preserve">
+    <value>اختر ملف .pak</value>
+  </data>
+  <data name="SelectOutputPakFile" xml:space="preserve">
+    <value>اختر ملف .pak الناتج</value>
+  </data>
+  <data name="SelectAFolderForOutput" xml:space="preserve">
+    <value>اختر مجلدًا لحفظ الملفات فيه</value>
+  </data>
+  <data name="AppSettings_Desc_Language" xml:space="preserve">
+    <value>اختر اللغة المستخدمة في التطبيق.
+
+*قد تكون الترجمات غير دقيقة، واللغة الإنجليزية هي اللغة الوحيدة المدعومة رسميًا.</value>
   </data>
 </root>

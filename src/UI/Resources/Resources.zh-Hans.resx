@@ -126,9 +126,6 @@
   <data name="AppSettings_Lbl_Language" xml:space="preserve">
     <value>语言</value>
   </data>
-  <data name="AppSettings_Desc_Language" xml:space="preserve">
-    <value>请选择应用程序中使用的语言。</value>
-  </data>
   <data name="AppSettings_Lbl_AccentColor" xml:space="preserve">
     <value>点缀色</value>
   </data>
@@ -538,6 +535,9 @@
   <data name="AESKeys_HEX" xml:space="preserve">
     <value>HEX</value>
   </data>
+  <data name="RepakSettings_PakVersion" xml:space="preserve">
+    <value>Pak 文件版本</value>
+  </data>
   <data name="RepakSettings_UEVersion" xml:space="preserve">
     <value>UE 版本</value>
   </data>
@@ -553,7 +553,279 @@
   <data name="RepakSettings_Write" xml:space="preserve">
     <value>写</value>
   </data>
-  <data name="RepakSettings_PakVersion" xml:space="preserve">
-    <value>Pak 文件版本</value>
+  <data name="CliLogs_Title" xml:space="preserve">
+    <value>Cli 日志</value>
+  </data>
+  <data name="CliLogs_ClearLogs" xml:space="preserve">
+    <value>清除日志</value>
+  </data>
+  <data name="RetocView_Command" xml:space="preserve">
+    <value>命令</value>
+  </data>
+  <data name="RetocView_SelectCommand" xml:space="preserve">
+    <value>选择命令</value>
+  </data>
+  <data name="RetocView_FileFolderPaths" xml:space="preserve">
+    <value>文件/文件夹路径</value>
+  </data>
+  <data name="RetocView_InputPath" xml:space="preserve">
+    <value>输入路径</value>
+  </data>
+  <data name="RetocView_File" xml:space="preserve">
+    <value>文件</value>
+  </data>
+  <data name="RetocView_Folder" xml:space="preserve">
+    <value>文件夹</value>
+  </data>
+  <data name="RetocView_OutputPath" xml:space="preserve">
+    <value>输出路径</value>
+  </data>
+  <data name="RetocView_Options" xml:space="preserve">
+    <value>选项</value>
+  </data>
+  <data name="RetocView_ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RetocView_Clear" xml:space="preserve">
+    <value>清除</value>
+  </data>
+  <data name="RetocRepak_AESKey" xml:space="preserve">
+    <value>关键</value>
+  </data>
+  <data name="RetocView_OverrideContainerHeaderVersion" xml:space="preserve">
+    <value>覆盖容器头版本</value>
+  </data>
+  <data name="RetocView_OverrideTOCVersion" xml:space="preserve">
+    <value>覆盖目录版本</value>
+  </data>
+  <data name="RetocView_EngineVersion" xml:space="preserve">
+    <value>发动机版本</value>
+  </data>
+  <data name="RetocView_AssetFilter" xml:space="preserve">
+    <value>资产筛选器</value>
+  </data>
+  <data name="RetocView_AllChunks" xml:space="preserve">
+    <value>所有片段</value>
+  </data>
+  <data name="RetocView_ShowHash" xml:space="preserve">
+    <value>显示哈希值</value>
+  </data>
+  <data name="RetocView_ShowPackage" xml:space="preserve">
+    <value>显示包</value>
+  </data>
+  <data name="RetocView_ShowSize" xml:space="preserve">
+    <value>显示尺寸</value>
+  </data>
+  <data name="RetocView_ShowPath" xml:space="preserve">
+    <value>显示路径</value>
+  </data>
+  <data name="RetocView_ShowStore" xml:space="preserve">
+    <value>显示商店</value>
+  </data>
+  <data name="RetocView_NoAssets" xml:space="preserve">
+    <value>无资产</value>
+  </data>
+  <data name="RetocView_NoShaders" xml:space="preserve">
+    <value>无着色器</value>
+  </data>
+  <data name="RetocView_NoScriptObjects" xml:space="preserve">
+    <value>无脚本对象</value>
+  </data>
+  <data name="RetocView_NoCompressShaders" xml:space="preserve">
+    <value>无压缩着色器</value>
+  </data>
+  <data name="RetocView_ScriptCell" xml:space="preserve">
+    <value>脚本单元格</value>
+  </data>
+  <data name="RetocView_Verbose" xml:space="preserve">
+    <value>详细</value>
+  </data>
+  <data name="RetocView_Debug" xml:space="preserve">
+    <value>调试</value>
+  </data>
+  <data name="RetocView_NoParallel" xml:space="preserve">
+    <value>无可比拟</value>
+  </data>
+  <data name="RetocRepak_CommandPreview" xml:space="preserve">
+    <value>命令预览</value>
+  </data>
+  <data name="RetocRepak_ExecuteCommand" xml:space="preserve">
+    <value>执行命令</value>
+  </data>
+  <data name="RetocView_DoNotRunInParallelUsefulForDebugging" xml:space="preserve">
+    <value>请勿并行运行。有助于调试</value>
+  </data>
+  <data name="RetocView_DebugLogging" xml:space="preserve">
+    <value>调试日志</value>
+  </data>
+  <data name="RetocView_VerboseLogging" xml:space="preserve">
+    <value>详细日志记录</value>
+  </data>
+  <data name="RetocView_SkipCompressionOfShaderLibraries" xml:space="preserve">
+    <value>跳过着色器库的压缩</value>
+  </data>
+  <data name="RetocView_SkipExtractionOfScriptObjects" xml:space="preserve">
+    <value>跳过脚本对象的提取</value>
+  </data>
+  <data name="RetocView_SkipConversionOfShaderLibraries" xml:space="preserve">
+    <value>跳过着色器库的转换</value>
+  </data>
+  <data name="RetocView_SkipConversionOfAssets" xml:space="preserve">
+    <value>跳过资产转换</value>
+  </data>
+  <data name="RetocView_DoNotOutputAnyFilesDryRunUsefulForTestingConversion" xml:space="preserve">
+    <value>不输出任何文件（干跑）。适用于测试转换</value>
+  </data>
+  <data name="RetocView_ShowPackageStoreEntry" xml:space="preserve">
+    <value>显示软件包商店条目</value>
+  </data>
+  <data name="RetocView_ShowChunkPath" xml:space="preserve">
+    <value>显示片段路径</value>
+  </data>
+  <data name="RetocView_ShowChunkSize" xml:space="preserve">
+    <value>显示块大小</value>
+  </data>
+  <data name="RetocView_ShowPackageID" xml:space="preserve">
+    <value>显示包 ID</value>
+  </data>
+  <data name="RetocView_ShowChunkContentHash" xml:space="preserve">
+    <value>显示片段内容哈希值</value>
+  </data>
+  <data name="RetocView_ByDefaultOnlyUniqueChunksWillBeListedAllWillAlsoListChunksOverridenByPatchContainers" xml:space="preserve">
+    <value>默认情况下，仅会列出唯一的块。--all 选项还会列出被补丁容器覆盖的块。</value>
+  </data>
+  <data name="RetocView_AssetFileNameFilter" xml:space="preserve">
+    <value>资源文件名过滤器</value>
+  </data>
+  <data name="RetocView_LtAES_KEYGt" xml:space="preserve">
+    <value>&lt;AESKEY&gt;</value>
+  </data>
+  <data name="RetocView_DryRun" xml:space="preserve">
+    <value>预演</value>
+  </data>
+  <data name="UTOC" xml:space="preserve">
+    <value>&lt;UTOC&gt;</value>
+  </data>
+  <data name="PATH" xml:space="preserve">
+    <value>&lt;PATH&gt;</value>
+  </data>
+  <data name="InputUtocFileContainingScriptObjects" xml:space="preserve">
+    <value>输入包含脚本对象的 .utoc 文件</value>
+  </data>
+  <data name="InputAssetRegistryBinFile" xml:space="preserve">
+    <value>输入 AssetRegistry.bin 文件</value>
+  </data>
+  <data name="OUTPUT" xml:space="preserve">
+    <value>&lt;OUTPUT&gt;</value>
+  </data>
+  <data name="InputUtocOrDirectoryWithMultipleUtocEGContentPaks" xml:space="preserve">
+    <value>输入 .utoc 文件或包含多个 .utoc 文件的目录（例如 Content/Paks/）</value>
+  </data>
+  <data name="OutputDirectoryOrPak" xml:space="preserve">
+    <value>输出目录或 .pak</value>
+  </data>
+  <data name="INPUT" xml:space="preserve">
+    <value>&lt;INPUT&gt;</value>
+  </data>
+  <data name="OUTPUT_DIR" xml:space="preserve">
+    <value>&lt;OUTPUTDIR&gt;</value>
+  </data>
+  <data name="InputReflectionDataJmapDump" xml:space="preserve">
+    <value>输入反射数据 .jmap 转储</value>
+  </data>
+  <data name="OutputUtocFile" xml:space="preserve">
+    <value>生成 .utoc 文件</value>
+  </data>
+  <data name="InputDirectoryOrPak" xml:space="preserve">
+    <value>输入目录或 .pak 文件</value>
+  </data>
+  <data name="OutputUtoc" xml:space="preserve">
+    <value>输出 .utoc</value>
+  </data>
+  <data name="OptionalOutputPathOrStdoutIfOrOmitted" xml:space="preserve">
+    <value>可选输出路径；若为“-”或省略，则使用标准输出（stdout）</value>
+  </data>
+  <data name="SelectInputFolder" xml:space="preserve">
+    <value>选择输入文件夹</value>
+  </data>
+  <data name="SelectOutputFolder" xml:space="preserve">
+    <value>选择输出文件夹</value>
+  </data>
+  <data name="SelectInputFile" xml:space="preserve">
+    <value>选择输入文件</value>
+  </data>
+  <data name="SelectOutputFile" xml:space="preserve">
+    <value>选择输出文件</value>
+  </data>
+  <data name="RepakView_RepakBranch" xml:space="preserve">
+    <value>Repak 分公司</value>
+  </data>
+  <data name="RepakView_PathToFileToReadToStdout" xml:space="preserve">
+    <value>要读取并输出到标准输出的文件的路径</value>
+  </data>
+  <data name="RepakView_StripPrefix" xml:space="preserve">
+    <value>剥离前缀</value>
+  </data>
+  <data name="RepakView_Include" xml:space="preserve">
+    <value>包含模式</value>
+  </data>
+  <data name="RepakView_MountPoint" xml:space="preserve">
+    <value>挂载点</value>
+  </data>
+  <data name="RepakView_Compression" xml:space="preserve">
+    <value>压缩</value>
+  </data>
+  <data name="RepakView_PathHashSeed" xml:space="preserve">
+    <value>路径哈希种子</value>
+  </data>
+  <data name="RepakView_Version" xml:space="preserve">
+    <value>版本</value>
+  </data>
+  <data name="RepakView_Verbose" xml:space="preserve">
+    <value>详细</value>
+  </data>
+  <data name="RepakView_Quiet" xml:space="preserve">
+    <value>安静</value>
+  </data>
+  <data name="RepakView_ForceOverwrite" xml:space="preserve">
+    <value>强制覆盖</value>
+  </data>
+  <data name="RepakView_256BitAESEncryptionKeyAsBase64OrHexStringIfThePakIsEncrypted" xml:space="preserve">
+    <value>如果 pak 文件经过加密，则以 base64 或十六进制字符串形式表示的 256 位 AES 加密密钥</value>
+  </data>
+  <data name="RepakView_PrefixToStripFromEntryPathDefault" xml:space="preserve">
+    <value>要从条目路径中去除的前缀（默认：../../../）</value>
+  </data>
+  <data name="RepakView_ForceOverwriteExistingFilesDirectories" xml:space="preserve">
+    <value>强制覆盖现有文件/目录</value>
+  </data>
+  <data name="RepakView_FilesOrDirectoriesToIncludeCanBeSpecifiedMultipleTimesIfNotSpecifiedEverythingIsExtracted" xml:space="preserve">
+    <value>要包含的文件或目录。可以多次指定。如果未指定，则全部解压</value>
+  </data>
+  <data name="RepakView_MountPointDefault" xml:space="preserve">
+    <value>挂载点（默认：../../../）</value>
+  </data>
+  <data name="RepakView_PathHashSeedForV10Default0" xml:space="preserve">
+    <value>V10 及以上版本的路径哈希种子（默认值：0）</value>
+  </data>
+  <data name="RepakView_HidesNormalOutputSuchAsProgressBarAndCompletionStatus" xml:space="preserve">
+    <value>隐藏进度条和完成状态等常规显示内容</value>
+  </data>
+  <data name="SelectAFolderToPack" xml:space="preserve">
+    <value>选择要打包的文件夹</value>
+  </data>
+  <data name="SelectAPakFile" xml:space="preserve">
+    <value>选择一个 .pak 文件</value>
+  </data>
+  <data name="SelectOutputPakFile" xml:space="preserve">
+    <value>选择输出 .pak 文件</value>
+  </data>
+  <data name="SelectAFolderForOutput" xml:space="preserve">
+    <value>选择一个输出文件夹</value>
+  </data>
+  <data name="AppSettings_Desc_Language" xml:space="preserve">
+    <value>请选择应用程序中使用的语言。
+
+*翻译内容可能不准确，英语是唯一官方支持的语言。</value>
   </data>
 </root>

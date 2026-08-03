@@ -130,7 +130,9 @@
     <comment>Language dropdown label</comment>
   </data>
   <data name="AppSettings_Desc_Language" xml:space="preserve">
-    <value>Choose the language utilized across the application.</value>
+    <value>Choose the language utilized across the application.
+
+*Translations may be inaccurate, English is the only officially supported language.</value>
     <comment>Language dropdown description</comment>
   </data>
   <data name="AppSettings_Lbl_AccentColor" xml:space="preserve">
@@ -634,5 +636,275 @@ Path: {0}</value>
   </data>
   <data name="RepakSettings_Write" xml:space="preserve">
     <value>Write</value>
+  </data>
+  <data name="CliLogs_Title" xml:space="preserve">
+    <value>Cli Logs</value>
+  </data>
+  <data name="CliLogs_ClearLogs" xml:space="preserve">
+    <value>Clear Logs</value>
+  </data>
+  <data name="RetocView_Command" xml:space="preserve">
+    <value>Command</value>
+  </data>
+  <data name="RetocView_SelectCommand" xml:space="preserve">
+    <value>Select Command</value>
+  </data>
+  <data name="RetocView_FileFolderPaths" xml:space="preserve">
+    <value>File/Folder Paths</value>
+  </data>
+  <data name="RetocView_InputPath" xml:space="preserve">
+    <value>Input Path</value>
+  </data>
+  <data name="RetocView_File" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="RetocView_Folder" xml:space="preserve">
+    <value>Folder</value>
+  </data>
+  <data name="RetocView_OutputPath" xml:space="preserve">
+    <value>Output Path</value>
+  </data>
+  <data name="RetocView_Options" xml:space="preserve">
+    <value>Options</value>
+  </data>
+  <data name="RetocView_ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RetocView_Clear" xml:space="preserve">
+    <value>Clear</value>
+  </data>
+  <data name="RetocRepak_AESKey" xml:space="preserve">
+    <value>Key</value>
+  </data>
+  <data name="RetocView_OverrideContainerHeaderVersion" xml:space="preserve">
+    <value>Override Container Header Version</value>
+  </data>
+  <data name="RetocView_OverrideTOCVersion" xml:space="preserve">
+    <value>Override TOC Version</value>
+  </data>
+  <data name="RetocView_EngineVersion" xml:space="preserve">
+    <value>Engine Version</value>
+  </data>
+  <data name="RetocView_AssetFilter" xml:space="preserve">
+    <value>Asset Filter</value>
+  </data>
+  <data name="RetocView_AllChunks" xml:space="preserve">
+    <value>All Chunks</value>
+  </data>
+  <data name="RetocView_ShowHash" xml:space="preserve">
+    <value>Show Hash</value>
+  </data>
+  <data name="RetocView_ShowPackage" xml:space="preserve">
+    <value>Show Package</value>
+  </data>
+  <data name="RetocView_ShowSize" xml:space="preserve">
+    <value>Show Size</value>
+  </data>
+  <data name="RetocView_ShowPath" xml:space="preserve">
+    <value>Show Path</value>
+  </data>
+  <data name="RetocView_ShowStore" xml:space="preserve">
+    <value>Show Store</value>
+  </data>
+  <data name="RetocView_NoAssets" xml:space="preserve">
+    <value>No Assets</value>
+  </data>
+  <data name="RetocView_NoShaders" xml:space="preserve">
+    <value>No Shaders</value>
+  </data>
+  <data name="RetocView_NoScriptObjects" xml:space="preserve">
+    <value>No Script Objects</value>
+  </data>
+  <data name="RetocView_NoCompressShaders" xml:space="preserve">
+    <value>No Compress Shaders</value>
+  </data>
+  <data name="RetocView_ScriptCell" xml:space="preserve">
+    <value>Script Cell</value>
+  </data>
+  <data name="RetocView_Verbose" xml:space="preserve">
+    <value>Verbose</value>
+  </data>
+  <data name="RetocView_Debug" xml:space="preserve">
+    <value>Debug</value>
+  </data>
+  <data name="RetocView_NoParallel" xml:space="preserve">
+    <value>No Parallel</value>
+  </data>
+  <data name="RetocRepak_CommandPreview" xml:space="preserve">
+    <value>Command Preview</value>
+  </data>
+  <data name="RetocRepak_ExecuteCommand" xml:space="preserve">
+    <value>Execute Command</value>
+  </data>
+  <data name="RetocView_DoNotRunInParallelUsefulForDebugging" xml:space="preserve">
+    <value>Do not run in parallel. Useful for debugging</value>
+  </data>
+  <data name="RetocView_DebugLogging" xml:space="preserve">
+    <value>Debug logging</value>
+  </data>
+  <data name="RetocView_VerboseLogging" xml:space="preserve">
+    <value>Verbose logging</value>
+  </data>
+  <data name="RetocView_SkipCompressionOfShaderLibraries" xml:space="preserve">
+    <value>Skip compression of shader libraries</value>
+  </data>
+  <data name="RetocView_SkipExtractionOfScriptObjects" xml:space="preserve">
+    <value>Skip extraction of script objects</value>
+  </data>
+  <data name="RetocView_SkipConversionOfShaderLibraries" xml:space="preserve">
+    <value>Skip conversion of shader libraries</value>
+  </data>
+  <data name="RetocView_SkipConversionOfAssets" xml:space="preserve">
+    <value>Skip conversion of assets</value>
+  </data>
+  <data name="RetocView_DoNotOutputAnyFilesDryRunUsefulForTestingConversion" xml:space="preserve">
+    <value>Do not output any files (dry run). Useful for testing conversion</value>
+  </data>
+  <data name="RetocView_ShowPackageStoreEntry" xml:space="preserve">
+    <value>Show package store entry</value>
+  </data>
+  <data name="RetocView_ShowChunkPath" xml:space="preserve">
+    <value>Show chunk path</value>
+  </data>
+  <data name="RetocView_ShowChunkSize" xml:space="preserve">
+    <value>Show chunk size</value>
+  </data>
+  <data name="RetocView_ShowPackageID" xml:space="preserve">
+    <value>Show package ID</value>
+  </data>
+  <data name="RetocView_ShowChunkContentHash" xml:space="preserve">
+    <value>Show chunk content hash</value>
+  </data>
+  <data name="RetocView_ByDefaultOnlyUniqueChunksWillBeListedAllWillAlsoListChunksOverridenByPatchContainers" xml:space="preserve">
+    <value>By default only unique chunks will be listed. --all will also list chunks overriden by patch containers</value>
+  </data>
+  <data name="RetocView_AssetFileNameFilter" xml:space="preserve">
+    <value>Asset file name filter</value>
+  </data>
+  <data name="RetocView_LtAES_KEYGt" xml:space="preserve">
+    <value>&lt;AES_KEY&gt;</value>
+  </data>
+  <data name="RetocView_DryRun" xml:space="preserve">
+    <value>Dry Run</value>
+  </data>
+  <data name="UTOC" xml:space="preserve">
+    <value>&lt;UTOC&gt;</value>
+  </data>
+  <data name="PATH" xml:space="preserve">
+    <value>&lt;PATH&gt;</value>
+  </data>
+  <data name="InputUtocFileContainingScriptObjects" xml:space="preserve">
+    <value>Input .utoc file containing script objects</value>
+  </data>
+  <data name="InputAssetRegistryBinFile" xml:space="preserve">
+    <value>Input AssetRegistry.bin file</value>
+  </data>
+  <data name="OUTPUT" xml:space="preserve">
+    <value>&lt;OUTPUT&gt;</value>
+  </data>
+  <data name="InputUtocOrDirectoryWithMultipleUtocEGContentPaks" xml:space="preserve">
+    <value>Input .utoc or directory with multiple .utoc (e.g. Content/Paks/)</value>
+  </data>
+  <data name="OutputDirectoryOrPak" xml:space="preserve">
+    <value>Output directory or .pak</value>
+  </data>
+  <data name="INPUT" xml:space="preserve">
+    <value>&lt;INPUT&gt;</value>
+  </data>
+  <data name="OUTPUT_DIR" xml:space="preserve">
+    <value>&lt;OUTPUT_DIR&gt;</value>
+  </data>
+  <data name="InputReflectionDataJmapDump" xml:space="preserve">
+    <value>Input reflection data .jmap dump</value>
+  </data>
+  <data name="OutputUtocFile" xml:space="preserve">
+    <value>Output .utoc file</value>
+  </data>
+  <data name="InputDirectoryOrPak" xml:space="preserve">
+    <value>Input directory or .pak</value>
+  </data>
+  <data name="OutputUtoc" xml:space="preserve">
+    <value>Output .utoc</value>
+  </data>
+  <data name="OptionalOutputPathOrStdoutIfOrOmitted" xml:space="preserve">
+    <value>Optional output path or stdout if "-" or omitted</value>
+  </data>
+  <data name="SelectInputFolder" xml:space="preserve">
+    <value>Select Input Folder</value>
+  </data>
+  <data name="SelectOutputFolder" xml:space="preserve">
+    <value>Select Output Folder</value>
+  </data>
+  <data name="SelectInputFile" xml:space="preserve">
+    <value>Select Input File</value>
+  </data>
+  <data name="SelectOutputFile" xml:space="preserve">
+    <value>Select Output File</value>
+  </data>
+  <data name="RepakView_RepakBranch" xml:space="preserve">
+    <value>Repak Branch</value>
+  </data>
+  <data name="RepakView_PathToFileToReadToStdout" xml:space="preserve">
+    <value>Path to file to read to stdout</value>
+  </data>
+  <data name="RepakView_StripPrefix" xml:space="preserve">
+    <value>Strip Prefix</value>
+  </data>
+  <data name="RepakView_Include" xml:space="preserve">
+    <value>Include Pattern</value>
+  </data>
+  <data name="RepakView_MountPoint" xml:space="preserve">
+    <value>Mount Point</value>
+  </data>
+  <data name="RepakView_Compression" xml:space="preserve">
+    <value>Compression</value>
+  </data>
+  <data name="RepakView_PathHashSeed" xml:space="preserve">
+    <value>Path Hash Seed</value>
+  </data>
+  <data name="RepakView_Version" xml:space="preserve">
+    <value>Version</value>
+  </data>
+  <data name="RepakView_Verbose" xml:space="preserve">
+    <value>Verbose</value>
+  </data>
+  <data name="RepakView_Quiet" xml:space="preserve">
+    <value>Quiet</value>
+  </data>
+  <data name="RepakView_ForceOverwrite" xml:space="preserve">
+    <value>Force Overwrite</value>
+  </data>
+  <data name="RepakView_256BitAESEncryptionKeyAsBase64OrHexStringIfThePakIsEncrypted" xml:space="preserve">
+    <value>256 bit AES encryption key as base64 or hex string if the pak is encrypted</value>
+  </data>
+  <data name="RepakView_PrefixToStripFromEntryPathDefault" xml:space="preserve">
+    <value>Prefix to strip from entry path (default: ../../../)</value>
+  </data>
+  <data name="RepakView_ForceOverwriteExistingFilesDirectories" xml:space="preserve">
+    <value>Force overwrite existing files/directories</value>
+  </data>
+  <data name="RepakView_FilesOrDirectoriesToIncludeCanBeSpecifiedMultipleTimesIfNotSpecifiedEverythingIsExtracted" xml:space="preserve">
+    <value>Files or directories to include. Can be specified multiple times. If not specified, everything is extracted</value>
+  </data>
+  <data name="RepakView_MountPointDefault" xml:space="preserve">
+    <value>Mount point (default: ../../../)</value>
+  </data>
+  <data name="RepakView_PathHashSeedForV10Default0" xml:space="preserve">
+    <value>Path hash seed for &gt;= V10 (default: 0)</value>
+  </data>
+  <data name="RepakView_HidesNormalOutputSuchAsProgressBarAndCompletionStatus" xml:space="preserve">
+    <value>Hides normal output such as progress bar and completion status</value>
+  </data>
+  <data name="SelectAFolderToPack" xml:space="preserve">
+    <value>Select a Folder to Pack</value>
+  </data>
+  <data name="SelectAPakFile" xml:space="preserve">
+    <value>Select a .pak File</value>
+  </data>
+  <data name="SelectOutputPakFile" xml:space="preserve">
+    <value>Select Output .pak File</value>
+  </data>
+  <data name="SelectAFolderForOutput" xml:space="preserve">
+    <value>Select a Folder for Output</value>
   </data>
 </root>

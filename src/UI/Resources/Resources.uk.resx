@@ -126,9 +126,6 @@
   <data name="AppSettings_Lbl_Language" xml:space="preserve">
     <value>Мова</value>
   </data>
-  <data name="AppSettings_Desc_Language" xml:space="preserve">
-    <value>Виберіть мову, яка використовується в усьому додатку.</value>
-  </data>
   <data name="AppSettings_Lbl_AccentColor" xml:space="preserve">
     <value>Акцентний колір</value>
   </data>
@@ -538,6 +535,9 @@
   <data name="AESKeys_HEX" xml:space="preserve">
     <value>HEX</value>
   </data>
+  <data name="RepakSettings_PakVersion" xml:space="preserve">
+    <value>Версія файлу Pak</value>
+  </data>
   <data name="RepakSettings_UEVersion" xml:space="preserve">
     <value>Версія UE</value>
   </data>
@@ -553,7 +553,279 @@
   <data name="RepakSettings_Write" xml:space="preserve">
     <value>Написати</value>
   </data>
-  <data name="RepakSettings_PakVersion" xml:space="preserve">
-    <value>Версія файлу Pak</value>
+  <data name="CliLogs_Title" xml:space="preserve">
+    <value>Журнали Cli</value>
+  </data>
+  <data name="CliLogs_ClearLogs" xml:space="preserve">
+    <value>Очистити журнали</value>
+  </data>
+  <data name="RetocView_Command" xml:space="preserve">
+    <value>Команда</value>
+  </data>
+  <data name="RetocView_SelectCommand" xml:space="preserve">
+    <value>Вибрати команду</value>
+  </data>
+  <data name="RetocView_FileFolderPaths" xml:space="preserve">
+    <value>Шляхи до файлів/папок</value>
+  </data>
+  <data name="RetocView_InputPath" xml:space="preserve">
+    <value>Шлях введення</value>
+  </data>
+  <data name="RetocView_File" xml:space="preserve">
+    <value>Файл</value>
+  </data>
+  <data name="RetocView_Folder" xml:space="preserve">
+    <value>Папка</value>
+  </data>
+  <data name="RetocView_OutputPath" xml:space="preserve">
+    <value>Шлях виведення</value>
+  </data>
+  <data name="RetocView_Options" xml:space="preserve">
+    <value>Параметри</value>
+  </data>
+  <data name="RetocView_ID" xml:space="preserve">
+    <value>Ідентифікатор</value>
+  </data>
+  <data name="RetocView_Clear" xml:space="preserve">
+    <value>Очистити</value>
+  </data>
+  <data name="RetocRepak_AESKey" xml:space="preserve">
+    <value>Ключ</value>
+  </data>
+  <data name="RetocView_OverrideContainerHeaderVersion" xml:space="preserve">
+    <value>Перезаписати версію заголовка контейнера</value>
+  </data>
+  <data name="RetocView_OverrideTOCVersion" xml:space="preserve">
+    <value>Перезаписати версію змісту</value>
+  </data>
+  <data name="RetocView_EngineVersion" xml:space="preserve">
+    <value>Версія двигуна</value>
+  </data>
+  <data name="RetocView_AssetFilter" xml:space="preserve">
+    <value>Фільтр активів</value>
+  </data>
+  <data name="RetocView_AllChunks" xml:space="preserve">
+    <value>Усі фрагменти</value>
+  </data>
+  <data name="RetocView_ShowHash" xml:space="preserve">
+    <value>Показати хеш</value>
+  </data>
+  <data name="RetocView_ShowPackage" xml:space="preserve">
+    <value>Показати пакет</value>
+  </data>
+  <data name="RetocView_ShowSize" xml:space="preserve">
+    <value>Показати розмір</value>
+  </data>
+  <data name="RetocView_ShowPath" xml:space="preserve">
+    <value>Показати шлях</value>
+  </data>
+  <data name="RetocView_ShowStore" xml:space="preserve">
+    <value>Показати магазин</value>
+  </data>
+  <data name="RetocView_NoAssets" xml:space="preserve">
+    <value>Активів немає</value>
+  </data>
+  <data name="RetocView_NoShaders" xml:space="preserve">
+    <value>Без шейдерів</value>
+  </data>
+  <data name="RetocView_NoScriptObjects" xml:space="preserve">
+    <value>Відсутність об’єктів скрипту</value>
+  </data>
+  <data name="RetocView_NoCompressShaders" xml:space="preserve">
+    <value>Шейдери без стиснення</value>
+  </data>
+  <data name="RetocView_ScriptCell" xml:space="preserve">
+    <value>Комірка скрипту</value>
+  </data>
+  <data name="RetocView_Verbose" xml:space="preserve">
+    <value>Детальний</value>
+  </data>
+  <data name="RetocView_Debug" xml:space="preserve">
+    <value>Налагодження</value>
+  </data>
+  <data name="RetocView_NoParallel" xml:space="preserve">
+    <value>Немає аналогів</value>
+  </data>
+  <data name="RetocRepak_CommandPreview" xml:space="preserve">
+    <value>Попередній перегляд команди</value>
+  </data>
+  <data name="RetocRepak_ExecuteCommand" xml:space="preserve">
+    <value>Виконати команду</value>
+  </data>
+  <data name="RetocView_DoNotRunInParallelUsefulForDebugging" xml:space="preserve">
+    <value>Не запускайте паралельно. Корисно для налагодження</value>
+  </data>
+  <data name="RetocView_DebugLogging" xml:space="preserve">
+    <value>Журнал налагодження</value>
+  </data>
+  <data name="RetocView_VerboseLogging" xml:space="preserve">
+    <value>Детальне ведення журналу</value>
+  </data>
+  <data name="RetocView_SkipCompressionOfShaderLibraries" xml:space="preserve">
+    <value>Пропустити стиснення бібліотек шейдерів</value>
+  </data>
+  <data name="RetocView_SkipExtractionOfScriptObjects" xml:space="preserve">
+    <value>Пропустити вилучення об’єктів скрипту</value>
+  </data>
+  <data name="RetocView_SkipConversionOfShaderLibraries" xml:space="preserve">
+    <value>Пропустити конвертацію бібліотек шейдерів</value>
+  </data>
+  <data name="RetocView_SkipConversionOfAssets" xml:space="preserve">
+    <value>Пропустити конвертацію активів</value>
+  </data>
+  <data name="RetocView_DoNotOutputAnyFilesDryRunUsefulForTestingConversion" xml:space="preserve">
+    <value>Не створювати жодних файлів (пробний запуск). Корисно для тестування конвертації</value>
+  </data>
+  <data name="RetocView_ShowPackageStoreEntry" xml:space="preserve">
+    <value>Показати запис у магазині пакетів</value>
+  </data>
+  <data name="RetocView_ShowChunkPath" xml:space="preserve">
+    <value>Показати шлях до фрагмента</value>
+  </data>
+  <data name="RetocView_ShowChunkSize" xml:space="preserve">
+    <value>Показати розмір блоку</value>
+  </data>
+  <data name="RetocView_ShowPackageID" xml:space="preserve">
+    <value>Показати ідентифікатор пакета</value>
+  </data>
+  <data name="RetocView_ShowChunkContentHash" xml:space="preserve">
+    <value>Показати хеш вмісту фрагмента</value>
+  </data>
+  <data name="RetocView_ByDefaultOnlyUniqueChunksWillBeListedAllWillAlsoListChunksOverridenByPatchContainers" xml:space="preserve">
+    <value>За замовчуванням у списку відображатимуться лише унікальні блоки. Параметр --all також дозволить відобразити блоки, які були замінені контейнерами патчів</value>
+  </data>
+  <data name="RetocView_AssetFileNameFilter" xml:space="preserve">
+    <value>Фільтр за назвою файлу ресурсів</value>
+  </data>
+  <data name="RetocView_LtAES_KEYGt" xml:space="preserve">
+    <value>&lt;AESKEY&gt;</value>
+  </data>
+  <data name="RetocView_DryRun" xml:space="preserve">
+    <value>Пробний запуск</value>
+  </data>
+  <data name="UTOC" xml:space="preserve">
+    <value>&lt;UTOC&gt;</value>
+  </data>
+  <data name="PATH" xml:space="preserve">
+    <value>&lt;PATH&gt;</value>
+  </data>
+  <data name="InputUtocFileContainingScriptObjects" xml:space="preserve">
+    <value>Введіть файл .utoc, що містить об’єкти скрипту</value>
+  </data>
+  <data name="InputAssetRegistryBinFile" xml:space="preserve">
+    <value>Введіть файл AssetRegistry.bin</value>
+  </data>
+  <data name="OUTPUT" xml:space="preserve">
+    <value>&lt;OUTPUT&gt;</value>
+  </data>
+  <data name="InputUtocOrDirectoryWithMultipleUtocEGContentPaks" xml:space="preserve">
+    <value>Вкажіть файл .utoc або каталог, що містить кілька файлів .utoc (наприклад, Content/Paks/)</value>
+  </data>
+  <data name="OutputDirectoryOrPak" xml:space="preserve">
+    <value>Каталог виводу або .pak</value>
+  </data>
+  <data name="INPUT" xml:space="preserve">
+    <value>&lt;INPUT&gt;</value>
+  </data>
+  <data name="OUTPUT_DIR" xml:space="preserve">
+    <value>&lt;OUTPUTDIR&gt;</value>
+  </data>
+  <data name="InputReflectionDataJmapDump" xml:space="preserve">
+    <value>Введіть дані відбиття у форматі .jmap dump</value>
+  </data>
+  <data name="OutputUtocFile" xml:space="preserve">
+    <value>Вихідний файл .utoc</value>
+  </data>
+  <data name="InputDirectoryOrPak" xml:space="preserve">
+    <value>Вкажіть каталог або файл .pak</value>
+  </data>
+  <data name="OutputUtoc" xml:space="preserve">
+    <value>Вихідний файл .utoc</value>
+  </data>
+  <data name="OptionalOutputPathOrStdoutIfOrOmitted" xml:space="preserve">
+    <value>Додатковий шлях виведення або stdout, якщо вказано «-» або цей параметр пропущено</value>
+  </data>
+  <data name="SelectInputFolder" xml:space="preserve">
+    <value>Вибрати папку для вхідних даних</value>
+  </data>
+  <data name="SelectOutputFolder" xml:space="preserve">
+    <value>Вибрати папку для збереження</value>
+  </data>
+  <data name="SelectInputFile" xml:space="preserve">
+    <value>Вибрати вхідний файл</value>
+  </data>
+  <data name="SelectOutputFile" xml:space="preserve">
+    <value>Вибрати файл для збереження</value>
+  </data>
+  <data name="RepakView_RepakBranch" xml:space="preserve">
+    <value>Філія «Репак»</value>
+  </data>
+  <data name="RepakView_PathToFileToReadToStdout" xml:space="preserve">
+    <value>Шлях до файлу, який потрібно прочитати у stdout</value>
+  </data>
+  <data name="RepakView_StripPrefix" xml:space="preserve">
+    <value>Префікс смуги</value>
+  </data>
+  <data name="RepakView_Include" xml:space="preserve">
+    <value>Включити шаблон</value>
+  </data>
+  <data name="RepakView_MountPoint" xml:space="preserve">
+    <value>Точка монтування</value>
+  </data>
+  <data name="RepakView_Compression" xml:space="preserve">
+    <value>Стиснення</value>
+  </data>
+  <data name="RepakView_PathHashSeed" xml:space="preserve">
+    <value>Початкове значення хешу шляху</value>
+  </data>
+  <data name="RepakView_Version" xml:space="preserve">
+    <value>Версія</value>
+  </data>
+  <data name="RepakView_Verbose" xml:space="preserve">
+    <value>Детальний</value>
+  </data>
+  <data name="RepakView_Quiet" xml:space="preserve">
+    <value>Тихо</value>
+  </data>
+  <data name="RepakView_ForceOverwrite" xml:space="preserve">
+    <value>Примусове перезаписування</value>
+  </data>
+  <data name="RepakView_256BitAESEncryptionKeyAsBase64OrHexStringIfThePakIsEncrypted" xml:space="preserve">
+    <value>256-бітний ключ шифрування AES у вигляді рядка у форматі base64 або у шістнадцятковому форматі, якщо пакет зашифровано</value>
+  </data>
+  <data name="RepakView_PrefixToStripFromEntryPathDefault" xml:space="preserve">
+    <value>Префікс, який слід видалити зі шляху до запису (за замовчуванням: ../../../)</value>
+  </data>
+  <data name="RepakView_ForceOverwriteExistingFilesDirectories" xml:space="preserve">
+    <value>Примусово перезаписати існуючі файли/каталоги</value>
+  </data>
+  <data name="RepakView_FilesOrDirectoriesToIncludeCanBeSpecifiedMultipleTimesIfNotSpecifiedEverythingIsExtracted" xml:space="preserve">
+    <value>Файли або каталоги, які потрібно включити. Можна вказати кілька разів. Якщо не вказано, розпаковується все</value>
+  </data>
+  <data name="RepakView_MountPointDefault" xml:space="preserve">
+    <value>Точка монтування (за замовчуванням: ../../../)</value>
+  </data>
+  <data name="RepakView_PathHashSeedForV10Default0" xml:space="preserve">
+    <value>Початкове значення хешу шляху для версій &gt;= V10 (за замовчуванням: 0)</value>
+  </data>
+  <data name="RepakView_HidesNormalOutputSuchAsProgressBarAndCompletionStatus" xml:space="preserve">
+    <value>Приховує стандартні елементи інтерфейсу, такі як індикатор прогресу та статус виконання</value>
+  </data>
+  <data name="SelectAFolderToPack" xml:space="preserve">
+    <value>Виберіть папку для упаковки</value>
+  </data>
+  <data name="SelectAPakFile" xml:space="preserve">
+    <value>Виберіть файл .pak</value>
+  </data>
+  <data name="SelectOutputPakFile" xml:space="preserve">
+    <value>Вибрати вихідний файл .pak</value>
+  </data>
+  <data name="SelectAFolderForOutput" xml:space="preserve">
+    <value>Виберіть папку для збереження</value>
+  </data>
+  <data name="AppSettings_Desc_Language" xml:space="preserve">
+    <value>Виберіть мову, яка використовується в додатку.
+
+*Переклади можуть бути неточними; англійська — єдина офіційно підтримувана мова.</value>
   </data>
 </root>

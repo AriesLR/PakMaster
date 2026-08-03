@@ -19,7 +19,7 @@ namespace PakMaster.UI.Resources {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "17.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "18.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     public class Resources {
@@ -434,7 +434,9 @@ namespace PakMaster.UI.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Choose the language utilized across the application..
+        ///   Looks up a localized string similar to Choose the language utilized across the application.
+        ///
+        ///*Translations may be inaccurate, English is the only officially supported language..
         /// </summary>
         public static string AppSettings_Desc_Language {
             get {
@@ -686,6 +688,24 @@ namespace PakMaster.UI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Clear Logs.
+        /// </summary>
+        public static string CliLogs_ClearLogs {
+            get {
+                return ResourceManager.GetString("CliLogs_ClearLogs", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cli Logs.
+        /// </summary>
+        public static string CliLogs_Title {
+            get {
+                return ResourceManager.GetString("CliLogs_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Close.
         /// </summary>
         public static string CrashReportWindow_Btn_Close {
@@ -879,6 +899,60 @@ namespace PakMaster.UI.Resources {
         public static string FolderService_Msg_FailedToOpen_Desc {
             get {
                 return ResourceManager.GetString("FolderService_Msg_FailedToOpen_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;INPUT&gt;.
+        /// </summary>
+        public static string INPUT {
+            get {
+                return ResourceManager.GetString("INPUT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Input AssetRegistry.bin file.
+        /// </summary>
+        public static string InputAssetRegistryBinFile {
+            get {
+                return ResourceManager.GetString("InputAssetRegistryBinFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Input directory or .pak.
+        /// </summary>
+        public static string InputDirectoryOrPak {
+            get {
+                return ResourceManager.GetString("InputDirectoryOrPak", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Input reflection data .jmap dump.
+        /// </summary>
+        public static string InputReflectionDataJmapDump {
+            get {
+                return ResourceManager.GetString("InputReflectionDataJmapDump", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Input .utoc file containing script objects.
+        /// </summary>
+        public static string InputUtocFileContainingScriptObjects {
+            get {
+                return ResourceManager.GetString("InputUtocFileContainingScriptObjects", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Input .utoc or directory with multiple .utoc (e.g. Content/Paks/).
+        /// </summary>
+        public static string InputUtocOrDirectoryWithMultipleUtocEGContentPaks {
+            get {
+                return ResourceManager.GetString("InputUtocOrDirectoryWithMultipleUtocEGContentPaks", resourceCulture);
             }
         }
         
@@ -1144,6 +1218,69 @@ namespace PakMaster.UI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Optional output path or stdout if &quot;-&quot; or omitted.
+        /// </summary>
+        public static string OptionalOutputPathOrStdoutIfOrOmitted {
+            get {
+                return ResourceManager.GetString("OptionalOutputPathOrStdoutIfOrOmitted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;OUTPUT&gt;.
+        /// </summary>
+        public static string OUTPUT {
+            get {
+                return ResourceManager.GetString("OUTPUT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;OUTPUT_DIR&gt;.
+        /// </summary>
+        public static string OUTPUT_DIR {
+            get {
+                return ResourceManager.GetString("OUTPUT_DIR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Output directory or .pak.
+        /// </summary>
+        public static string OutputDirectoryOrPak {
+            get {
+                return ResourceManager.GetString("OutputDirectoryOrPak", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Output .utoc.
+        /// </summary>
+        public static string OutputUtoc {
+            get {
+                return ResourceManager.GetString("OutputUtoc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Output .utoc file.
+        /// </summary>
+        public static string OutputUtocFile {
+            get {
+                return ResourceManager.GetString("OutputUtocFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;PATH&gt;.
+        /// </summary>
+        public static string PATH {
+            get {
+                return ResourceManager.GetString("PATH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Pak File Version.
         /// </summary>
         public static string RepakSettings_PakVersion {
@@ -1203,6 +1340,674 @@ namespace PakMaster.UI.Resources {
         public static string RepakSettings_Write {
             get {
                 return ResourceManager.GetString("RepakSettings_Write", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 256 bit AES encryption key as base64 or hex string if the pak is encrypted.
+        /// </summary>
+        public static string RepakView_256BitAESEncryptionKeyAsBase64OrHexStringIfThePakIsEncrypted {
+            get {
+                return ResourceManager.GetString("RepakView_256BitAESEncryptionKeyAsBase64OrHexStringIfThePakIsEncrypted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Compression.
+        /// </summary>
+        public static string RepakView_Compression {
+            get {
+                return ResourceManager.GetString("RepakView_Compression", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Files or directories to include. Can be specified multiple times. If not specified, everything is extracted.
+        /// </summary>
+        public static string RepakView_FilesOrDirectoriesToIncludeCanBeSpecifiedMultipleTimesIfNotSpecifiedEverythingIsExtracted {
+            get {
+                return ResourceManager.GetString("RepakView_FilesOrDirectoriesToIncludeCanBeSpecifiedMultipleTimesIfNotSpecifiedEve" +
+                        "rythingIsExtracted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Force Overwrite.
+        /// </summary>
+        public static string RepakView_ForceOverwrite {
+            get {
+                return ResourceManager.GetString("RepakView_ForceOverwrite", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Force overwrite existing files/directories.
+        /// </summary>
+        public static string RepakView_ForceOverwriteExistingFilesDirectories {
+            get {
+                return ResourceManager.GetString("RepakView_ForceOverwriteExistingFilesDirectories", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hides normal output such as progress bar and completion status.
+        /// </summary>
+        public static string RepakView_HidesNormalOutputSuchAsProgressBarAndCompletionStatus {
+            get {
+                return ResourceManager.GetString("RepakView_HidesNormalOutputSuchAsProgressBarAndCompletionStatus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Include Pattern.
+        /// </summary>
+        public static string RepakView_Include {
+            get {
+                return ResourceManager.GetString("RepakView_Include", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mount Point.
+        /// </summary>
+        public static string RepakView_MountPoint {
+            get {
+                return ResourceManager.GetString("RepakView_MountPoint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Mount point (default: ../../../).
+        /// </summary>
+        public static string RepakView_MountPointDefault {
+            get {
+                return ResourceManager.GetString("RepakView_MountPointDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path Hash Seed.
+        /// </summary>
+        public static string RepakView_PathHashSeed {
+            get {
+                return ResourceManager.GetString("RepakView_PathHashSeed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path hash seed for &gt;= V10 (default: 0).
+        /// </summary>
+        public static string RepakView_PathHashSeedForV10Default0 {
+            get {
+                return ResourceManager.GetString("RepakView_PathHashSeedForV10Default0", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Path to file to read to stdout.
+        /// </summary>
+        public static string RepakView_PathToFileToReadToStdout {
+            get {
+                return ResourceManager.GetString("RepakView_PathToFileToReadToStdout", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Prefix to strip from entry path (default: ../../../).
+        /// </summary>
+        public static string RepakView_PrefixToStripFromEntryPathDefault {
+            get {
+                return ResourceManager.GetString("RepakView_PrefixToStripFromEntryPathDefault", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Quiet.
+        /// </summary>
+        public static string RepakView_Quiet {
+            get {
+                return ResourceManager.GetString("RepakView_Quiet", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Repak Branch.
+        /// </summary>
+        public static string RepakView_RepakBranch {
+            get {
+                return ResourceManager.GetString("RepakView_RepakBranch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Strip Prefix.
+        /// </summary>
+        public static string RepakView_StripPrefix {
+            get {
+                return ResourceManager.GetString("RepakView_StripPrefix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Verbose.
+        /// </summary>
+        public static string RepakView_Verbose {
+            get {
+                return ResourceManager.GetString("RepakView_Verbose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Version.
+        /// </summary>
+        public static string RepakView_Version {
+            get {
+                return ResourceManager.GetString("RepakView_Version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Key.
+        /// </summary>
+        public static string RetocRepak_AESKey {
+            get {
+                return ResourceManager.GetString("RetocRepak_AESKey", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Command Preview.
+        /// </summary>
+        public static string RetocRepak_CommandPreview {
+            get {
+                return ResourceManager.GetString("RetocRepak_CommandPreview", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Execute Command.
+        /// </summary>
+        public static string RetocRepak_ExecuteCommand {
+            get {
+                return ResourceManager.GetString("RetocRepak_ExecuteCommand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to All Chunks.
+        /// </summary>
+        public static string RetocView_AllChunks {
+            get {
+                return ResourceManager.GetString("RetocView_AllChunks", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Asset file name filter.
+        /// </summary>
+        public static string RetocView_AssetFileNameFilter {
+            get {
+                return ResourceManager.GetString("RetocView_AssetFileNameFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Asset Filter.
+        /// </summary>
+        public static string RetocView_AssetFilter {
+            get {
+                return ResourceManager.GetString("RetocView_AssetFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to By default only unique chunks will be listed. --all will also list chunks overriden by patch containers.
+        /// </summary>
+        public static string RetocView_ByDefaultOnlyUniqueChunksWillBeListedAllWillAlsoListChunksOverridenByPatchContainers {
+            get {
+                return ResourceManager.GetString("RetocView_ByDefaultOnlyUniqueChunksWillBeListedAllWillAlsoListChunksOverridenByPa" +
+                        "tchContainers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Clear.
+        /// </summary>
+        public static string RetocView_Clear {
+            get {
+                return ResourceManager.GetString("RetocView_Clear", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Command.
+        /// </summary>
+        public static string RetocView_Command {
+            get {
+                return ResourceManager.GetString("RetocView_Command", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Debug.
+        /// </summary>
+        public static string RetocView_Debug {
+            get {
+                return ResourceManager.GetString("RetocView_Debug", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Debug logging.
+        /// </summary>
+        public static string RetocView_DebugLogging {
+            get {
+                return ResourceManager.GetString("RetocView_DebugLogging", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do not output any files (dry run). Useful for testing conversion.
+        /// </summary>
+        public static string RetocView_DoNotOutputAnyFilesDryRunUsefulForTestingConversion {
+            get {
+                return ResourceManager.GetString("RetocView_DoNotOutputAnyFilesDryRunUsefulForTestingConversion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Do not run in parallel. Useful for debugging.
+        /// </summary>
+        public static string RetocView_DoNotRunInParallelUsefulForDebugging {
+            get {
+                return ResourceManager.GetString("RetocView_DoNotRunInParallelUsefulForDebugging", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dry Run.
+        /// </summary>
+        public static string RetocView_DryRun {
+            get {
+                return ResourceManager.GetString("RetocView_DryRun", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Engine Version.
+        /// </summary>
+        public static string RetocView_EngineVersion {
+            get {
+                return ResourceManager.GetString("RetocView_EngineVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File.
+        /// </summary>
+        public static string RetocView_File {
+            get {
+                return ResourceManager.GetString("RetocView_File", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to File/Folder Paths.
+        /// </summary>
+        public static string RetocView_FileFolderPaths {
+            get {
+                return ResourceManager.GetString("RetocView_FileFolderPaths", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Folder.
+        /// </summary>
+        public static string RetocView_Folder {
+            get {
+                return ResourceManager.GetString("RetocView_Folder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to ID.
+        /// </summary>
+        public static string RetocView_ID {
+            get {
+                return ResourceManager.GetString("RetocView_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Input Path.
+        /// </summary>
+        public static string RetocView_InputPath {
+            get {
+                return ResourceManager.GetString("RetocView_InputPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;AES_KEY&gt;.
+        /// </summary>
+        public static string RetocView_LtAES_KEYGt {
+            get {
+                return ResourceManager.GetString("RetocView_LtAES_KEYGt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Assets.
+        /// </summary>
+        public static string RetocView_NoAssets {
+            get {
+                return ResourceManager.GetString("RetocView_NoAssets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Compress Shaders.
+        /// </summary>
+        public static string RetocView_NoCompressShaders {
+            get {
+                return ResourceManager.GetString("RetocView_NoCompressShaders", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Parallel.
+        /// </summary>
+        public static string RetocView_NoParallel {
+            get {
+                return ResourceManager.GetString("RetocView_NoParallel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Script Objects.
+        /// </summary>
+        public static string RetocView_NoScriptObjects {
+            get {
+                return ResourceManager.GetString("RetocView_NoScriptObjects", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Shaders.
+        /// </summary>
+        public static string RetocView_NoShaders {
+            get {
+                return ResourceManager.GetString("RetocView_NoShaders", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Options.
+        /// </summary>
+        public static string RetocView_Options {
+            get {
+                return ResourceManager.GetString("RetocView_Options", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Output Path.
+        /// </summary>
+        public static string RetocView_OutputPath {
+            get {
+                return ResourceManager.GetString("RetocView_OutputPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Override Container Header Version.
+        /// </summary>
+        public static string RetocView_OverrideContainerHeaderVersion {
+            get {
+                return ResourceManager.GetString("RetocView_OverrideContainerHeaderVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Override TOC Version.
+        /// </summary>
+        public static string RetocView_OverrideTOCVersion {
+            get {
+                return ResourceManager.GetString("RetocView_OverrideTOCVersion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Script Cell.
+        /// </summary>
+        public static string RetocView_ScriptCell {
+            get {
+                return ResourceManager.GetString("RetocView_ScriptCell", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select Command.
+        /// </summary>
+        public static string RetocView_SelectCommand {
+            get {
+                return ResourceManager.GetString("RetocView_SelectCommand", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show chunk content hash.
+        /// </summary>
+        public static string RetocView_ShowChunkContentHash {
+            get {
+                return ResourceManager.GetString("RetocView_ShowChunkContentHash", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show chunk path.
+        /// </summary>
+        public static string RetocView_ShowChunkPath {
+            get {
+                return ResourceManager.GetString("RetocView_ShowChunkPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show chunk size.
+        /// </summary>
+        public static string RetocView_ShowChunkSize {
+            get {
+                return ResourceManager.GetString("RetocView_ShowChunkSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show Hash.
+        /// </summary>
+        public static string RetocView_ShowHash {
+            get {
+                return ResourceManager.GetString("RetocView_ShowHash", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show Package.
+        /// </summary>
+        public static string RetocView_ShowPackage {
+            get {
+                return ResourceManager.GetString("RetocView_ShowPackage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show package ID.
+        /// </summary>
+        public static string RetocView_ShowPackageID {
+            get {
+                return ResourceManager.GetString("RetocView_ShowPackageID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show package store entry.
+        /// </summary>
+        public static string RetocView_ShowPackageStoreEntry {
+            get {
+                return ResourceManager.GetString("RetocView_ShowPackageStoreEntry", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show Path.
+        /// </summary>
+        public static string RetocView_ShowPath {
+            get {
+                return ResourceManager.GetString("RetocView_ShowPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show Size.
+        /// </summary>
+        public static string RetocView_ShowSize {
+            get {
+                return ResourceManager.GetString("RetocView_ShowSize", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Show Store.
+        /// </summary>
+        public static string RetocView_ShowStore {
+            get {
+                return ResourceManager.GetString("RetocView_ShowStore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Skip compression of shader libraries.
+        /// </summary>
+        public static string RetocView_SkipCompressionOfShaderLibraries {
+            get {
+                return ResourceManager.GetString("RetocView_SkipCompressionOfShaderLibraries", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Skip conversion of assets.
+        /// </summary>
+        public static string RetocView_SkipConversionOfAssets {
+            get {
+                return ResourceManager.GetString("RetocView_SkipConversionOfAssets", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Skip conversion of shader libraries.
+        /// </summary>
+        public static string RetocView_SkipConversionOfShaderLibraries {
+            get {
+                return ResourceManager.GetString("RetocView_SkipConversionOfShaderLibraries", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Skip extraction of script objects.
+        /// </summary>
+        public static string RetocView_SkipExtractionOfScriptObjects {
+            get {
+                return ResourceManager.GetString("RetocView_SkipExtractionOfScriptObjects", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Verbose.
+        /// </summary>
+        public static string RetocView_Verbose {
+            get {
+                return ResourceManager.GetString("RetocView_Verbose", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Verbose logging.
+        /// </summary>
+        public static string RetocView_VerboseLogging {
+            get {
+                return ResourceManager.GetString("RetocView_VerboseLogging", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select a Folder for Output.
+        /// </summary>
+        public static string SelectAFolderForOutput {
+            get {
+                return ResourceManager.GetString("SelectAFolderForOutput", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select a Folder to Pack.
+        /// </summary>
+        public static string SelectAFolderToPack {
+            get {
+                return ResourceManager.GetString("SelectAFolderToPack", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select a .pak File.
+        /// </summary>
+        public static string SelectAPakFile {
+            get {
+                return ResourceManager.GetString("SelectAPakFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select Input File.
+        /// </summary>
+        public static string SelectInputFile {
+            get {
+                return ResourceManager.GetString("SelectInputFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select Input Folder.
+        /// </summary>
+        public static string SelectInputFolder {
+            get {
+                return ResourceManager.GetString("SelectInputFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select Output File.
+        /// </summary>
+        public static string SelectOutputFile {
+            get {
+                return ResourceManager.GetString("SelectOutputFile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select Output Folder.
+        /// </summary>
+        public static string SelectOutputFolder {
+            get {
+                return ResourceManager.GetString("SelectOutputFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select Output .pak File.
+        /// </summary>
+        public static string SelectOutputPakFile {
+            get {
+                return ResourceManager.GetString("SelectOutputPakFile", resourceCulture);
             }
         }
         
@@ -1315,6 +2120,15 @@ namespace PakMaster.UI.Resources {
         public static string UrlService_Msg_FailedToOpenURL_Desc {
             get {
                 return ResourceManager.GetString("UrlService_Msg_FailedToOpenURL_Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to &lt;UTOC&gt;.
+        /// </summary>
+        public static string UTOC {
+            get {
+                return ResourceManager.GetString("UTOC", resourceCulture);
             }
         }
         

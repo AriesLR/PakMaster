@@ -126,9 +126,6 @@
   <data name="AppSettings_Lbl_Language" xml:space="preserve">
     <value>言語</value>
   </data>
-  <data name="AppSettings_Desc_Language" xml:space="preserve">
-    <value>アプリケーション全体で使用する言語を選択してください。</value>
-  </data>
   <data name="AppSettings_Lbl_AccentColor" xml:space="preserve">
     <value>アクセントカラー</value>
   </data>
@@ -538,6 +535,9 @@
   <data name="AESKeys_HEX" xml:space="preserve">
     <value>HEX</value>
   </data>
+  <data name="RepakSettings_PakVersion" xml:space="preserve">
+    <value>Pakファイルのバージョン</value>
+  </data>
   <data name="RepakSettings_UEVersion" xml:space="preserve">
     <value>UEバージョン</value>
   </data>
@@ -553,7 +553,279 @@
   <data name="RepakSettings_Write" xml:space="preserve">
     <value>書く</value>
   </data>
-  <data name="RepakSettings_PakVersion" xml:space="preserve">
-    <value>Pakファイルのバージョン</value>
+  <data name="CliLogs_Title" xml:space="preserve">
+    <value>Cli ログ</value>
+  </data>
+  <data name="CliLogs_ClearLogs" xml:space="preserve">
+    <value>ログを消去する</value>
+  </data>
+  <data name="RetocView_Command" xml:space="preserve">
+    <value>コマンド</value>
+  </data>
+  <data name="RetocView_SelectCommand" xml:space="preserve">
+    <value>コマンドを選択</value>
+  </data>
+  <data name="RetocView_FileFolderPaths" xml:space="preserve">
+    <value>ファイル／フォルダのパス</value>
+  </data>
+  <data name="RetocView_InputPath" xml:space="preserve">
+    <value>入力パス</value>
+  </data>
+  <data name="RetocView_File" xml:space="preserve">
+    <value>ファイル</value>
+  </data>
+  <data name="RetocView_Folder" xml:space="preserve">
+    <value>フォルダ</value>
+  </data>
+  <data name="RetocView_OutputPath" xml:space="preserve">
+    <value>出力パス</value>
+  </data>
+  <data name="RetocView_Options" xml:space="preserve">
+    <value>オプション</value>
+  </data>
+  <data name="RetocView_ID" xml:space="preserve">
+    <value>ID</value>
+  </data>
+  <data name="RetocView_Clear" xml:space="preserve">
+    <value>クリア</value>
+  </data>
+  <data name="RetocRepak_AESKey" xml:space="preserve">
+    <value>キー</value>
+  </data>
+  <data name="RetocView_OverrideContainerHeaderVersion" xml:space="preserve">
+    <value>コンテナヘッダーのバージョンを上書きする</value>
+  </data>
+  <data name="RetocView_OverrideTOCVersion" xml:space="preserve">
+    <value>目次バージョンの上書き</value>
+  </data>
+  <data name="RetocView_EngineVersion" xml:space="preserve">
+    <value>エンジン仕様</value>
+  </data>
+  <data name="RetocView_AssetFilter" xml:space="preserve">
+    <value>アセットフィルター</value>
+  </data>
+  <data name="RetocView_AllChunks" xml:space="preserve">
+    <value>すべてのチャンク</value>
+  </data>
+  <data name="RetocView_ShowHash" xml:space="preserve">
+    <value>ハッシュを表示</value>
+  </data>
+  <data name="RetocView_ShowPackage" xml:space="preserve">
+    <value>パッケージを表示</value>
+  </data>
+  <data name="RetocView_ShowSize" xml:space="preserve">
+    <value>サイズを表示</value>
+  </data>
+  <data name="RetocView_ShowPath" xml:space="preserve">
+    <value>パスを表示</value>
+  </data>
+  <data name="RetocView_ShowStore" xml:space="preserve">
+    <value>ストアを表示</value>
+  </data>
+  <data name="RetocView_NoAssets" xml:space="preserve">
+    <value>資産なし</value>
+  </data>
+  <data name="RetocView_NoShaders" xml:space="preserve">
+    <value>シェーダーなし</value>
+  </data>
+  <data name="RetocView_NoScriptObjects" xml:space="preserve">
+    <value>スクリプトオブジェクトなし</value>
+  </data>
+  <data name="RetocView_NoCompressShaders" xml:space="preserve">
+    <value>非圧縮シェーダー</value>
+  </data>
+  <data name="RetocView_ScriptCell" xml:space="preserve">
+    <value>スクリプトセル</value>
+  </data>
+  <data name="RetocView_Verbose" xml:space="preserve">
+    <value>詳細表示</value>
+  </data>
+  <data name="RetocView_Debug" xml:space="preserve">
+    <value>デバッグ</value>
+  </data>
+  <data name="RetocView_NoParallel" xml:space="preserve">
+    <value>類似点なし</value>
+  </data>
+  <data name="RetocRepak_CommandPreview" xml:space="preserve">
+    <value>コマンドのプレビュー</value>
+  </data>
+  <data name="RetocRepak_ExecuteCommand" xml:space="preserve">
+    <value>コマンドを実行する</value>
+  </data>
+  <data name="RetocView_DoNotRunInParallelUsefulForDebugging" xml:space="preserve">
+    <value>並列実行しないでください。デバッグに役立ちます。</value>
+  </data>
+  <data name="RetocView_DebugLogging" xml:space="preserve">
+    <value>デバッグログ</value>
+  </data>
+  <data name="RetocView_VerboseLogging" xml:space="preserve">
+    <value>詳細なログ出力</value>
+  </data>
+  <data name="RetocView_SkipCompressionOfShaderLibraries" xml:space="preserve">
+    <value>シェーダーライブラリの圧縮をスキップする</value>
+  </data>
+  <data name="RetocView_SkipExtractionOfScriptObjects" xml:space="preserve">
+    <value>スクリプトオブジェクトの抽出をスキップする</value>
+  </data>
+  <data name="RetocView_SkipConversionOfShaderLibraries" xml:space="preserve">
+    <value>シェーダーライブラリの変換をスキップする</value>
+  </data>
+  <data name="RetocView_SkipConversionOfAssets" xml:space="preserve">
+    <value>資産の変換をスキップする</value>
+  </data>
+  <data name="RetocView_DoNotOutputAnyFilesDryRunUsefulForTestingConversion" xml:space="preserve">
+    <value>ファイルを出力しない（ドライラン）。変換のテストに便利です。</value>
+  </data>
+  <data name="RetocView_ShowPackageStoreEntry" xml:space="preserve">
+    <value>パッケージストアの登録情報を表示</value>
+  </data>
+  <data name="RetocView_ShowChunkPath" xml:space="preserve">
+    <value>チャンクのパスを表示</value>
+  </data>
+  <data name="RetocView_ShowChunkSize" xml:space="preserve">
+    <value>チャンクサイズを表示</value>
+  </data>
+  <data name="RetocView_ShowPackageID" xml:space="preserve">
+    <value>パッケージIDを表示</value>
+  </data>
+  <data name="RetocView_ShowChunkContentHash" xml:space="preserve">
+    <value>チャンクのコンテンツハッシュを表示</value>
+  </data>
+  <data name="RetocView_ByDefaultOnlyUniqueChunksWillBeListedAllWillAlsoListChunksOverridenByPatchContainers" xml:space="preserve">
+    <value>デフォルトでは、一意のチャンクのみが表示されます。--all オプションを指定すると、パッチコンテナによって上書きされたチャンクも表示されます。</value>
+  </data>
+  <data name="RetocView_AssetFileNameFilter" xml:space="preserve">
+    <value>アセットファイル名のフィルタ</value>
+  </data>
+  <data name="RetocView_LtAES_KEYGt" xml:space="preserve">
+    <value>&lt;AESKEY&gt;</value>
+  </data>
+  <data name="RetocView_DryRun" xml:space="preserve">
+    <value>リハーサル</value>
+  </data>
+  <data name="UTOC" xml:space="preserve">
+    <value>&lt;UTOC&gt;</value>
+  </data>
+  <data name="PATH" xml:space="preserve">
+    <value>&lt;PATH&gt;</value>
+  </data>
+  <data name="InputUtocFileContainingScriptObjects" xml:space="preserve">
+    <value>スクリプトオブジェクトを含む .utoc ファイルを入力します</value>
+  </data>
+  <data name="InputAssetRegistryBinFile" xml:space="preserve">
+    <value>AssetRegistry.bin ファイルを入力してください</value>
+  </data>
+  <data name="OUTPUT" xml:space="preserve">
+    <value>&lt;OUTPUT&gt;</value>
+  </data>
+  <data name="InputUtocOrDirectoryWithMultipleUtocEGContentPaks" xml:space="preserve">
+    <value>.utoc ファイル、または複数の .utoc ファイルを含むディレクトリ（例：Content/Paks/）を入力してください。</value>
+  </data>
+  <data name="OutputDirectoryOrPak" xml:space="preserve">
+    <value>出力ディレクトリまたは.pak</value>
+  </data>
+  <data name="INPUT" xml:space="preserve">
+    <value>&lt;INPUT&gt;</value>
+  </data>
+  <data name="OUTPUT_DIR" xml:space="preserve">
+    <value>&lt;OUTPUTDIR&gt;</value>
+  </data>
+  <data name="InputReflectionDataJmapDump" xml:space="preserve">
+    <value>反射データを入力してください .jmap ダンプ</value>
+  </data>
+  <data name="OutputUtocFile" xml:space="preserve">
+    <value>.utoc ファイルを出力する</value>
+  </data>
+  <data name="InputDirectoryOrPak" xml:space="preserve">
+    <value>ディレクトリまたは.pakファイルを入力してください</value>
+  </data>
+  <data name="OutputUtoc" xml:space="preserve">
+    <value>.utoc を出力</value>
+  </data>
+  <data name="OptionalOutputPathOrStdoutIfOrOmitted" xml:space="preserve">
+    <value>出力パスは任意。"-"を指定するか、省略した場合は標準出力（stdout）となる</value>
+  </data>
+  <data name="SelectInputFolder" xml:space="preserve">
+    <value>入力フォルダを選択してください</value>
+  </data>
+  <data name="SelectOutputFolder" xml:space="preserve">
+    <value>出力フォルダを選択してください</value>
+  </data>
+  <data name="SelectInputFile" xml:space="preserve">
+    <value>入力ファイルを選択してください</value>
+  </data>
+  <data name="SelectOutputFile" xml:space="preserve">
+    <value>出力ファイルを選択してください</value>
+  </data>
+  <data name="RepakView_RepakBranch" xml:space="preserve">
+    <value>レパック支店</value>
+  </data>
+  <data name="RepakView_PathToFileToReadToStdout" xml:space="preserve">
+    <value>stdout に出力するための読み込み対象ファイルへのパス</value>
+  </data>
+  <data name="RepakView_StripPrefix" xml:space="preserve">
+    <value>プレフィックスの削除</value>
+  </data>
+  <data name="RepakView_Include" xml:space="preserve">
+    <value>パターンを含める</value>
+  </data>
+  <data name="RepakView_MountPoint" xml:space="preserve">
+    <value>マウントポイント</value>
+  </data>
+  <data name="RepakView_Compression" xml:space="preserve">
+    <value>圧縮</value>
+  </data>
+  <data name="RepakView_PathHashSeed" xml:space="preserve">
+    <value>パスハッシュのシード</value>
+  </data>
+  <data name="RepakView_Version" xml:space="preserve">
+    <value>バージョン</value>
+  </data>
+  <data name="RepakView_Verbose" xml:space="preserve">
+    <value>詳細表示</value>
+  </data>
+  <data name="RepakView_Quiet" xml:space="preserve">
+    <value>静か</value>
+  </data>
+  <data name="RepakView_ForceOverwrite" xml:space="preserve">
+    <value>強制上書き</value>
+  </data>
+  <data name="RepakView_256BitAESEncryptionKeyAsBase64OrHexStringIfThePakIsEncrypted" xml:space="preserve">
+    <value>pakが暗号化されている場合、256ビットAES暗号化キーをBase64または16進数文字列として指定する</value>
+  </data>
+  <data name="RepakView_PrefixToStripFromEntryPathDefault" xml:space="preserve">
+    <value>エントリパスから削除するプレフィックス（デフォルト：../../../）</value>
+  </data>
+  <data name="RepakView_ForceOverwriteExistingFilesDirectories" xml:space="preserve">
+    <value>既存のファイルやディレクトリを上書きする</value>
+  </data>
+  <data name="RepakView_FilesOrDirectoriesToIncludeCanBeSpecifiedMultipleTimesIfNotSpecifiedEverythingIsExtracted" xml:space="preserve">
+    <value>含めるファイルまたはディレクトリ。複数回指定可能です。指定しない場合は、すべてが抽出されます。</value>
+  </data>
+  <data name="RepakView_MountPointDefault" xml:space="preserve">
+    <value>マウントポイント（デフォルト：../../../）</value>
+  </data>
+  <data name="RepakView_PathHashSeedForV10Default0" xml:space="preserve">
+    <value>V10 以降のパスハッシュのシード（デフォルト：0）</value>
+  </data>
+  <data name="RepakView_HidesNormalOutputSuchAsProgressBarAndCompletionStatus" xml:space="preserve">
+    <value>プログレスバーや完了状況などの通常の出力を非表示にします</value>
+  </data>
+  <data name="SelectAFolderToPack" xml:space="preserve">
+    <value>圧縮するフォルダを選択してください</value>
+  </data>
+  <data name="SelectAPakFile" xml:space="preserve">
+    <value>.pak ファイルを選択してください</value>
+  </data>
+  <data name="SelectOutputPakFile" xml:space="preserve">
+    <value>出力用 .pak ファイルを選択してください</value>
+  </data>
+  <data name="SelectAFolderForOutput" xml:space="preserve">
+    <value>出力先のフォルダを選択してください</value>
+  </data>
+  <data name="AppSettings_Desc_Language" xml:space="preserve">
+    <value>アプリケーション全体で使用する言語を選択してください。
+
+*翻訳には不正確な部分がある可能性があります。公式にサポートされている言語は英語のみです。</value>
   </data>
 </root>

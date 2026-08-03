@@ -4,6 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:lex="http://wpflocalizeextension.codeplex.com"
+             lex:LocalizeDictionary.DesignCulture="en"
+             lex:ResxLocalizationProvider.DefaultAssembly="PakMaster"
+             lex:ResxLocalizationProvider.DefaultDictionary="PakMaster.UI.Resources.Resources"
              mc:Ignorable="d"
              d:DesignHeight="700" d:DesignWidth="1200"
              FontFamily="Segoe UI">
@@ -24,7 +28,7 @@
 
                     <!-- Command & Paths -->
                     <StackPanel Grid.Column="0" Margin="0,0,20,0">
-                        <TextBlock Text="Command" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" FontSize="16" FontWeight="SemiBold" />
+                        <TextBlock Text="{lex:Loc RetocView_Command}" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" FontSize="16" FontWeight="SemiBold" />
                         <Separator Background="{StaticResource MahApps.Brushes.Gray.SemiTransparent}" Margin="0,5,0,15" />
 
                         <ComboBox x:Name="CmdSelectComboBox"
@@ -38,7 +42,7 @@
                                   VerticalContentAlignment="Center"
                                   SelectedIndex="0"
                                   SelectionChanged="UpdateCommand_SelectionChanged"
-                                  mah:TextBoxHelper.Watermark="Select Command" Margin="0,0,0,20">
+                                  mah:TextBoxHelper.Watermark="{lex:Loc RetocView_SelectCommand}" Margin="0,0,0,20">
                             <ComboBoxItem Content="manifest" />
                             <ComboBoxItem Content="info" />
                             <ComboBoxItem Content="list" />
@@ -55,56 +59,55 @@
                             <ComboBoxItem Content="asset-registry" />
                         </ComboBox>
 
-                        <TextBlock Text="File/Folder Paths" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" FontSize="16" FontWeight="SemiBold" Margin="0,10,0,0" />
+                        <TextBlock Text="{lex:Loc RetocView_FileFolderPaths}" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" FontSize="16" FontWeight="SemiBold" Margin="0,10,0,0" />
                         <Separator Background="{StaticResource MahApps.Brushes.Gray.SemiTransparent}" Margin="0,5,0,15" />
 
-                        <TextBlock Text="Input Path" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
+                        <TextBlock Text="{lex:Loc RetocView_InputPath}" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
                         <Grid Margin="0,0,0,15">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="Auto" />
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
-                            <TextBox x:Name="InputPathTextBox" Text="" mah:TextBoxHelper.Watermark="Input Path" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
+                            <TextBox x:Name="InputPathTextBox" Text="" mah:TextBoxHelper.Watermark="{lex:Loc RetocView_InputPath}" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
                             <Grid Grid.Column="1" x:Name="InputFileBtnGrid">
                                 <Button Width="55" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="BrowseInputFile_Click">
-                                    <TextBlock Text="File" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    <TextBlock Text="{lex:Loc RetocView_File}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
                                 </Button>
                             </Grid>
                             <Grid Grid.Column="2" x:Name="InputFolderBtnGrid">
                                 <Button Width="55" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="BrowseInputFolder_Click">
-                                    <TextBlock Text="Folder" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    <TextBlock Text="{lex:Loc RetocView_Folder}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
                                 </Button>
                             </Grid>
                         </Grid>
 
                         <StackPanel x:Name="OutputPathGroup">
-                            <TextBlock Text="Output Path" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
+                            <TextBlock Text="{lex:Loc RetocView_OutputPath}" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
                             <Grid Margin="0,0,0,15">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="Auto" />
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <TextBox x:Name="OutputPathTextBox" Text="" mah:TextBoxHelper.Watermark="Output Path" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
+                                <TextBox x:Name="OutputPathTextBox" Text="" mah:TextBoxHelper.Watermark="{lex:Loc RetocView_OutputPath}" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
                                 <Grid Grid.Column="1" x:Name="OutputFileBtnGrid">
                                     <Button Width="55" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="BrowseOutputFile_Click">
-                                        <TextBlock Text="File" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        <TextBlock Text="{lex:Loc RetocView_File}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
                                     </Button>
                                 </Grid>
                                 <Grid Grid.Column="2" x:Name="OutputFolderBtnGrid">
                                     <Button Width="55" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="BrowseOutputFolder_Click">
-                                        <TextBlock Text="Folder" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        <TextBlock Text="{lex:Loc RetocView_Folder}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
                                     </Button>
                                 </Grid>
                             </Grid>
                         </StackPanel>
-
                     </StackPanel>
 
                     <!-- Options -->
                     <StackPanel Grid.Column="1">
-                        <TextBlock Text="Options" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" FontSize="16" FontWeight="SemiBold" />
+                        <TextBlock Text="{lex:Loc RetocView_Options}" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" FontSize="16" FontWeight="SemiBold" />
                         <Separator Background="{DynamicResource MahApps.Brushes.Gray.SemiTransparent}" Margin="0,5,0,15" />
 
                         <StackPanel x:Name="TargetIDGroup" Visibility="Collapsed">
@@ -114,31 +117,31 @@
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <TextBox x:Name="TargetIDTextBox" mah:TextBoxHelper.Watermark="ID" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
+                                <TextBox x:Name="TargetIDTextBox" mah:TextBoxHelper.Watermark="{lex:Loc RetocView_ID}" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
                                 <Grid Grid.Column="1">
                                     <Button Width="80" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="ClearTargetID_Click">
-                                        <TextBlock Text="Clear" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        <TextBlock Text="{lex:Loc RetocView_Clear}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
                                     </Button>
                                 </Grid>
                             </Grid>
                         </StackPanel>
 
                         <StackPanel x:Name="GlobalOptionsGroup">
-                            <TextBlock Text="AES Key (--aes-key)" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
+                            <TextBlock Text="{Binding Source={lex:Loc RetocRepak_AESKey}, StringFormat='{}AES {0} (--aes-key)'}" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
                             <Grid Margin="0,0,0,15">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <TextBox x:Name="AesKeyTextBox" mah:TextBoxHelper.Watermark="&lt;AES_KEY&gt;" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
+                                <TextBox x:Name="AesKeyTextBox" mah:TextBoxHelper.Watermark="{lex:Loc RetocView_LtAES_KEYGt}" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
                                 <Grid Grid.Column="1">
                                     <Button Width="80" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="ClearAesKey_Click">
-                                        <TextBlock Text="Clear" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        <TextBlock Text="{lex:Loc RetocView_Clear}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
                                     </Button>
                                 </Grid>
                             </Grid>
 
-                            <TextBlock Text="Override Container Header Version (--override-container-header-version)" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
+                            <TextBlock Text="{Binding Source={lex:Loc RetocView_OverrideContainerHeaderVersion}, StringFormat='{}{0} (--override-container-header-version)'}" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
                             <ComboBox x:Name="HeaderVerComboBox"
                                       Height="30"
                                       mah:ControlsHelper.CornerRadius="2"
@@ -160,7 +163,7 @@
                                 <ComboBoxItem Content="SoftPackageReferencesOffset" Tag="SoftPackageReferencesOffset" />
                             </ComboBox>
 
-                            <TextBlock Text="Override TOC Version (--override-toc-version)" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
+                            <TextBlock Text="{Binding Source={lex:Loc RetocView_OverrideTOCVersion}, StringFormat='{}{0} (--override-toc-version)'}" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
                             <ComboBox x:Name="TocVerComboBox"
                                       Height="30"
                                       mah:ControlsHelper.CornerRadius="2"
@@ -186,7 +189,7 @@
                         </StackPanel>
 
                         <StackPanel x:Name="EngineVerGroup">
-                            <TextBlock Text="Engine Version (--version)" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
+                            <TextBlock Text="{Binding Source={lex:Loc RetocView_EngineVersion}, StringFormat='{}{0} (--version)'}" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
                             <ComboBox x:Name="EngineVerComboBox"
                                       Height="30"
                                       mah:ControlsHelper.CornerRadius="2"
@@ -213,57 +216,56 @@
                         </StackPanel>
 
                         <StackPanel x:Name="FilterGroup">
-                            <TextBlock Text="Asset Filter (--filter)" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
+                            <TextBlock Text="{Binding Source={lex:Loc RetocView_AssetFilter}, StringFormat='{}{0} (--filter)'}" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
                             <Grid Margin="0,0,0,15">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <TextBox x:Name="FilterStrTextBox" mah:TextBoxHelper.Watermark="Asset file name filter" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
+                                <TextBox x:Name="FilterStrTextBox" mah:TextBoxHelper.Watermark="{lex:Loc RetocView_AssetFileNameFilter}" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
                                 <Grid Grid.Column="1">
                                     <Button Width="80" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="ClearFilter_Click">
-                                        <TextBlock Text="Clear" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        <TextBlock Text="{lex:Loc RetocView_Clear}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
                                     </Button>
                                 </Grid>
                             </Grid>
                         </StackPanel>
 
                         <StackPanel x:Name="ListOptionsGroup" Visibility="Collapsed">
-                            <CheckBox x:Name="ListAllCheckBox" Content="All Chunks (--all)" ToolTip="By default only unique chunks will be listed. --all will also list chunks overriden by patch containers" Margin="0,0,0,5" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
-                            <CheckBox x:Name="ListHashCheckBox" Content="Show Hash (--hash)" ToolTip="Show chunk content hash" Margin="0,0,0,5" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
-                            <CheckBox x:Name="ListPackageCheckBox" Content="Show Package (--package)" ToolTip="Show package ID" Margin="0,0,0,5" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
-                            <CheckBox x:Name="ListSizeCheckBox" Content="Show Size (--size)" ToolTip="Show chunk size" Margin="0,0,0,5" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
-                            <CheckBox x:Name="ListPathCheckBox" Content="Show Path (--path)" ToolTip="Show chunk path" Margin="0,0,0,5" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
-                            <CheckBox x:Name="ListStoreCheckBox" Content="Show Store (--store)" ToolTip="Show package store entry" Margin="0,0,0,15" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
+                            <CheckBox x:Name="ListAllCheckBox" Content="{lex:Loc RetocView_AllChunks}" ContentStringFormat="{}{0} (--all)" ToolTip="{lex:Loc RetocView_ByDefaultOnlyUniqueChunksWillBeListedAllWillAlsoListChunksOverridenByPatchContainers}" Margin="0,0,0,5" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
+                            <CheckBox x:Name="ListHashCheckBox" Content="{lex:Loc RetocView_ShowHash}" ContentStringFormat="{}{0} (--hash)" ToolTip="{lex:Loc RetocView_ShowChunkContentHash}" Margin="0,0,0,5" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
+                            <CheckBox x:Name="ListPackageCheckBox" Content="{lex:Loc RetocView_ShowPackage}" ContentStringFormat="{}{0} (--package)" ToolTip="{lex:Loc RetocView_ShowPackageID}" Margin="0,0,0,5" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
+                            <CheckBox x:Name="ListSizeCheckBox" Content="{lex:Loc RetocView_ShowSize}" ContentStringFormat="{}{0} (--size)" ToolTip="{lex:Loc RetocView_ShowChunkSize}" Margin="0,0,0,5" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
+                            <CheckBox x:Name="ListPathCheckBox" Content="{lex:Loc RetocView_ShowPath}" ContentStringFormat="{}{0} (--path)" ToolTip="{lex:Loc RetocView_ShowChunkPath}" Margin="0,0,0,5" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
+                            <CheckBox x:Name="ListStoreCheckBox" Content="{lex:Loc RetocView_ShowStore}" ContentStringFormat="{}{0} (--store)" ToolTip="{lex:Loc RetocView_ShowPackageStoreEntry}" Margin="0,0,0,15" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
                         </StackPanel>
 
                         <StackPanel x:Name="ConversionOptionsGroup" Visibility="Collapsed">
-                            <CheckBox x:Name="DryRunCheckBox" Content="Dry Run (--dry-run)" ToolTip="Do not output any files (dry run). Useful for testing conversion" Margin="0,0,0,5" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
-                            <CheckBox x:Name="NoAssetsCheckBox" Content="No Assets (--no-assets)" ToolTip="Skip conversion of assets" Margin="0,0,0,5" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
-                            <CheckBox x:Name="NoShadersCheckBox" Content="No Shaders (--no-shaders)" ToolTip="Skip conversion of shader libraries" Margin="0,0,0,5" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
-                            <CheckBox x:Name="NoScriptObjectsCheckBox" Content="No Script Objects (--no-script-objects)" ToolTip="Skip extraction of script objects" Margin="0,0,0,5" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
-                            <CheckBox x:Name="NoCompressShadersCheckBox" Content="No Compress Shaders (--no-compres-shaders)" ToolTip="Skip compression of shader libraries" Margin="0,0,0,5" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
+                            <CheckBox x:Name="DryRunCheckBox" Content="{lex:Loc RetocView_DryRun}" ContentStringFormat="{}{0} (--dry-run)" ToolTip="{lex:Loc RetocView_DoNotOutputAnyFilesDryRunUsefulForTestingConversion}" Margin="0,0,0,5" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
+                            <CheckBox x:Name="NoAssetsCheckBox" Content="{lex:Loc RetocView_NoAssets}" ContentStringFormat="{}{0} (--no-assets)" ToolTip="{lex:Loc RetocView_SkipConversionOfAssets}" Margin="0,0,0,5" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
+                            <CheckBox x:Name="NoShadersCheckBox" Content="{lex:Loc RetocView_NoShaders}" ContentStringFormat="{}{0} (--no-shaders)" ToolTip="{lex:Loc RetocView_SkipConversionOfShaderLibraries}" Margin="0,0,0,5" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
+                            <CheckBox x:Name="NoScriptObjectsCheckBox" Content="{lex:Loc RetocView_NoScriptObjects}" ContentStringFormat="{}{0} (--no-script-objects)" ToolTip="{lex:Loc RetocView_SkipExtractionOfScriptObjects}" Margin="0,0,0,5" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
+                            <CheckBox x:Name="NoCompressShadersCheckBox" Content="{lex:Loc RetocView_NoCompressShaders}" ContentStringFormat="{}{0} (--no-compres-shaders)" ToolTip="{lex:Loc RetocView_SkipCompressionOfShaderLibraries}" Margin="0,0,0,5" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
 
-
-                            <TextBlock Text="Script Cell (--script-cell)" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
+                            <TextBlock Text="{Binding Source={lex:Loc RetocView_ScriptCell}, StringFormat='{}{0} (--script-cell)'}" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
                             <Grid Margin="0,0,0,15">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <TextBox x:Name="ScriptCellTextBox" mah:TextBoxHelper.Watermark="Script Cell" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
+                                <TextBox x:Name="ScriptCellTextBox" mah:TextBoxHelper.Watermark="{lex:Loc RetocView_ScriptCell}" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
                                 <Grid Grid.Column="1">
                                     <Button Width="80" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="ClearScriptCell_Click">
-                                        <TextBlock Text="Clear" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        <TextBlock Text="{lex:Loc RetocView_Clear}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
                                     </Button>
                                 </Grid>
                             </Grid>
                         </StackPanel>
 
                         <StackPanel x:Name="MiscOptionsGroup">
-                            <CheckBox x:Name="VerboseCheckBox" Content="Verbose (--verbose)" ToolTip="Verbose logging" Margin="0,0,0,5" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
-                            <CheckBox x:Name="DebugCheckBox" Content="Debug (--debug)" ToolTip="Debug logging" Margin="0,0,0,5" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
-                            <CheckBox x:Name="NoParallelCheckBox" Content="No Parallel (--no-parallel)" ToolTip="Do not run in parallel. Useful for debugging" Margin="0,0,0,15" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
+                            <CheckBox x:Name="VerboseCheckBox" Content="{lex:Loc RetocView_Verbose}" ContentStringFormat="{}{0} (--verbose)" ToolTip="{lex:Loc RetocView_VerboseLogging}" Margin="0,0,0,5" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
+                            <CheckBox x:Name="DebugCheckBox" Content="{lex:Loc RetocView_Debug}" ContentStringFormat="{}{0} (--debug)" ToolTip="{lex:Loc RetocView_DebugLogging}" Margin="0,0,0,5" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
+                            <CheckBox x:Name="NoParallelCheckBox" Content="{lex:Loc RetocView_NoParallel}" ContentStringFormat="{}{0} (--no-parallel)" ToolTip="{lex:Loc RetocView_DoNotRunInParallelUsefulForDebugging}" Margin="0,0,0,15" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
                         </StackPanel>
                     </StackPanel>
                 </Grid>
@@ -272,13 +274,13 @@
             <!-- Command Preview -->
             <Border Grid.Row="2" BorderBrush="{DynamicResource MahApps.Brushes.Gray.SemiTransparent}" BorderThickness="0,1,0,0" Margin="0,10,0,0" Padding="0,15,0,0">
                 <StackPanel>
-                    <TextBlock Text="Command Preview" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" FontSize="16" FontWeight="SemiBold" Margin="0,0,0,10" />
+                    <TextBlock Text="{lex:Loc RetocRepak_CommandPreview}" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" FontSize="16" FontWeight="SemiBold" Margin="0,0,0,10" />
                     <TextBox x:Name="CmdPreviewTextBox" Height="90" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"
                              FontFamily="Consolas" Foreground="{DynamicResource Alr.Brushes.Yellow100}" Background="{DynamicResource Alr.Brushes.Black.O20}"
                              BorderBrush="{DynamicResource MahApps.Brushes.Gray.SemiTransparent}" Margin="0,0,0,15" Padding="12" />
                     <Grid>
                         <Button Height="45" Background="Transparent" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Click="ExecuteCommand_Click">
-                            <TextBlock Text="Execute Command" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="Bold" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <TextBlock Text="{lex:Loc RetocRepak_ExecuteCommand}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="Bold" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Button>
                     </Grid>
                 </StackPanel>

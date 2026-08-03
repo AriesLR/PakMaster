@@ -260,37 +260,37 @@ namespace PakMaster.UI.Views
                 case "manifest":
                 case "list":
                 case "verify":
-                    inputWatermark = "<UTOC>";
+                    inputWatermark = Lang.UTOC;
                     InputFileBtnGrid?.Visibility = Visibility.Visible;
                     break;
 
                 case "info":
-                    inputWatermark = "<PATH>";
+                    inputWatermark = Lang.PATH;
                     InputFileBtnGrid?.Visibility = Visibility.Visible;
                     InputFolderBtnGrid?.Visibility = Visibility.Visible;
                     break;
 
                 case "print-script-objects":
-                    inputWatermark = "Input .utoc file containing script objects";
+                    inputWatermark = Lang.InputUtocFileContainingScriptObjects;
                     InputFileBtnGrid?.Visibility = Visibility.Visible;
                     break;
 
                 case "asset-registry":
-                    inputWatermark = "Input AssetRegistry.bin file";
+                    inputWatermark = Lang.InputAssetRegistryBinFile;
                     InputFileBtnGrid?.Visibility = Visibility.Visible;
                     break;
 
                 case "unpack":
                 case "unpack-raw":
-                    inputWatermark = "<UTOC>";
-                    outputWatermark = "<OUTPUT>";
+                    inputWatermark = Lang.UTOC;
+                    outputWatermark = Lang.OUTPUT;
                     InputFileBtnGrid?.Visibility = Visibility.Visible;
                     OutputFolderBtnGrid?.Visibility = Visibility.Visible;
                     break;
 
                 case "to-legacy":
-                    inputWatermark = "Input .utoc or directory with multiple .utoc (e.g. Content/Paks/)";
-                    outputWatermark = "Output directory or .pak";
+                    inputWatermark = Lang.InputUtocOrDirectoryWithMultipleUtocEGContentPaks;
+                    outputWatermark = Lang.OutputDirectoryOrPak;
                     InputFileBtnGrid?.Visibility = Visibility.Visible;
                     InputFolderBtnGrid?.Visibility = Visibility.Visible;
                     OutputFileBtnGrid?.Visibility = Visibility.Visible;
@@ -298,38 +298,38 @@ namespace PakMaster.UI.Views
                     break;
 
                 case "dump-test":
-                    inputWatermark = "<INPUT>";
-                    outputWatermark = "<OUTPUT_DIR>";
+                    inputWatermark = Lang.INPUT;
+                    outputWatermark = Lang.OUTPUT_DIR;
                     InputFileBtnGrid?.Visibility = Visibility.Visible;
                     InputFolderBtnGrid?.Visibility = Visibility.Visible;
                     OutputFolderBtnGrid?.Visibility = Visibility.Visible;
                     break;
 
                 case "gen-script-objects":
-                    inputWatermark = "Input reflection data .jmap dump";
-                    outputWatermark = "Output .utoc file";
+                    inputWatermark = Lang.InputReflectionDataJmapDump;
+                    outputWatermark = Lang.OutputUtocFile;
                     InputFileBtnGrid?.Visibility = Visibility.Visible;
                     OutputFileBtnGrid?.Visibility = Visibility.Visible;
                     break;
 
                 case "pack-raw":
-                    inputWatermark = "<INPUT>";
-                    outputWatermark = "<UTOC>";
+                    inputWatermark = Lang.INPUT;
+                    outputWatermark = Lang.UTOC;
                     InputFolderBtnGrid?.Visibility = Visibility.Visible;
                     OutputFileBtnGrid?.Visibility = Visibility.Visible;
                     break;
 
                 case "to-zen":
-                    inputWatermark = "Input directory or .pak";
-                    outputWatermark = "Output .utoc";
+                    inputWatermark = Lang.InputDirectoryOrPak;
+                    outputWatermark = Lang.OutputUtoc;
                     InputFileBtnGrid?.Visibility = Visibility.Visible;
                     InputFolderBtnGrid?.Visibility = Visibility.Visible;
                     OutputFileBtnGrid?.Visibility = Visibility.Visible;
                     break;
 
                 case "get":
-                    inputWatermark = "Input .utoc or directory with multiple .utoc (e.g. Content/Paks/)";
-                    outputWatermark = "Optional output path or stdout if \"-\" or omitted";
+                    inputWatermark = Lang.InputUtocOrDirectoryWithMultipleUtocEGContentPaks;
+                    outputWatermark = Lang.OptionalOutputPathOrStdoutIfOrOmitted;
                     InputFileBtnGrid?.Visibility = Visibility.Visible;
                     InputFolderBtnGrid?.Visibility = Visibility.Visible;
                     OutputFileBtnGrid?.Visibility = Visibility.Visible;
@@ -650,7 +650,7 @@ namespace PakMaster.UI.Views
 
             var openFileDialog = new OpenFileDialog
             {
-                Title = "Select Input File",
+                Title = Lang.SelectInputFile,
                 CheckFileExists = true,
                 CheckPathExists = true,
                 Filter = filter
@@ -667,7 +667,7 @@ namespace PakMaster.UI.Views
 
         private void BrowseInputFolder_Click(object sender, RoutedEventArgs e)
         {
-            var folderDialog = new OpenFolderDialog { Title = "Select Input Folder" };
+            var folderDialog = new OpenFolderDialog { Title = Lang.SelectInputFolder };
             if (!string.IsNullOrEmpty(inputFolderPath)) folderDialog.InitialDirectory = inputFolderPath;
 
             if (folderDialog.ShowDialog() == true)
@@ -686,7 +686,7 @@ namespace PakMaster.UI.Views
 
             var saveDialog = new SaveFileDialog
             {
-                Title = "Select Output File",
+                Title = Lang.SelectOutputFile,
                 Filter = wantsUtocFile ? "UTOC Files (*.utoc)|*.utoc" : wantsPakFile ? "PAK Files (*.pak)|*.pak" : "All Files (*.*)|*.*",
                 DefaultExt = wantsUtocFile ? ".utoc" : wantsPakFile ? ".pak" : "",
                 ValidateNames = false,
@@ -704,7 +704,7 @@ namespace PakMaster.UI.Views
 
         private void BrowseOutputFolder_Click(object sender, RoutedEventArgs e)
         {
-            var folderDialog = new OpenFolderDialog { Title = "Select Output Folder" };
+            var folderDialog = new OpenFolderDialog { Title = Lang.SelectOutputFolder };
             if (!string.IsNullOrEmpty(outputFolderPath)) folderDialog.InitialDirectory = outputFolderPath;
 
             if (folderDialog.ShowDialog() == true)
