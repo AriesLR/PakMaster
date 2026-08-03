@@ -17,7 +17,7 @@
         <EnableCompressionInSingleFile>false</EnableCompressionInSingleFile>
 
         <!-- ================ Versioning ================ -->
-		<MasterVersion>0.2.0.0</MasterVersion>
+		<MasterVersion>1.0.0.0</MasterVersion>
 
 		<AssemblyVersion>$(MasterVersion)</AssemblyVersion>
 		<FileVersion>$(MasterVersion)</FileVersion>
@@ -32,7 +32,7 @@
 		<!-- No Spaces -->
 		<AssemblyName>PakMaster</AssemblyName>
 		
-        <Description>A GUI Wrapper for Repak, ZenTools, and UnrealPak.</Description>
+        <Description>A GUI Wrapper for Repak and Retoc.</Description>
 		
         <Company>AriesLR</Company>
         <Authors>AriesLR</Authors>
