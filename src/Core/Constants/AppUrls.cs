@@ -34,8 +34,30 @@ namespace PakMaster.Core.Constants
 
         // ============ PakMaster Dependencies ============
 
-        public const string RepakUrl = "https://github.com/trumank/repak/releases/download/v0.2.3/repak_cli-x86_64-pc-windows-msvc.zip";
+        // Base Dependencies
+        public const string RetocUrl = "https://github.com/trumank/retoc/releases/latest/download/retoc_cli-x86_64-pc-windows-msvc.zip";
 
-        public const string ZenToolsUrl = "https://github.com/LongerWarrior/ZenTools/releases/download/1.06UE5.1-5.2/ZenTools.exe";
+        public const string RepakUrl = "https://github.com/trumank/repak/releases/latest/download/repak_cli-x86_64-pc-windows-msvc.zip";
+
+        // Repak Branches
+        public const string RepakChunkedCompressionUrl = "https://github.com/AriesLR/PakMaster-Dependencies/releases/download/latest-branch-builds/repak-chunked-compression.exe";
+
+        public const string RepakCSBindingsUrl = "https://github.com/AriesLR/PakMaster-Dependencies/releases/download/latest-branch-builds/repak-cs-bindings.exe";
+
+        public const string RepakPatchBack4BloodUrl = "https://github.com/AriesLR/PakMaster-Dependencies/releases/download/latest-branch-builds/repak-patch-back4blood.exe";
+
+        public const string RepakDeadByDaylightUrl = "https://github.com/AriesLR/PakMaster-Dependencies/releases/download/latest-branch-builds/repak-patch-dead-by-daylight.exe";
+
+        public const string RepakDragonQuestXiUrl = "https://github.com/AriesLR/PakMaster-Dependencies/releases/download/latest-branch-builds/repak-patch-dragon-quest-xi.exe";
+
+        public const string RepakMarvelRivalsUrl = "https://github.com/AriesLR/PakMaster-Dependencies/releases/download/latest-branch-builds/repak-patch-marvel-rivals.exe";
+
+        public const string RepakOutlastTrialsUrl = "https://github.com/AriesLR/PakMaster-Dependencies/releases/download/latest-branch-builds/repak-patch-outlast-trials.exe";
+
+        public const string RepakTorchlightUrl = "https://github.com/AriesLR/PakMaster-Dependencies/releases/download/latest-branch-builds/repak-patch-torchlight.exe";
+
+        public const string RepakVisionsOfManaUrl = "https://github.com/AriesLR/PakMaster-Dependencies/releases/download/latest-branch-builds/repak-patch-visions-of-mana.exe";
+
+        public const string RepakWutheringWavesUrl = "https://github.com/AriesLR/PakMaster-Dependencies/releases/download/latest-branch-builds/repak-patch-wuthering-waves.exe";
     }
 }
