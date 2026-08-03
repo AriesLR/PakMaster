@@ -739,14 +739,7 @@ namespace PakMaster.UI.Views
             if (string.IsNullOrWhiteSpace(CmdPreviewTextBox?.Text)) return;
 
             await RetocEngine.ExecuteCommandAsync(CmdPreviewTextBox.Text, output =>
-            {
-                string displayOutput = output;
-                if (!string.IsNullOrWhiteSpace(displayOutput) && displayOutput.Length > 2000)
-                {
-                    displayOutput = string.Concat(displayOutput.AsSpan(0, 2000), "\n...[Output truncated, please check the logs for full details]");
-                }
-                _ = MessageManager.ShowInfo("Retoc Output", string.IsNullOrWhiteSpace(displayOutput) ? "Command executed successfully with no output." : displayOutput);
-            });
+            { });
         }
     }
 }
