@@ -26,6 +26,15 @@ namespace PakMaster
             UrlOperations.OpenUrlAsync(AppUrls.GithubRepoUrl);
         }
 
+        private void OpenCliLogsFlyoutTemp_Click(object sender, RoutedEventArgs e)
+        {
+            GLogger.Here().Debug("User clicked Cli Logs Flyout button.");
+            if (DataContext is MainWindowState vm)
+            {
+                vm.OpenCliLogsFlyout();
+            }
+        }
+
         // ============ Event Handlers ============
 
         // OnStateChanged Method

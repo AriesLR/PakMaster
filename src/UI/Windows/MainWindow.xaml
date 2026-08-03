@@ -65,6 +65,10 @@
                                   VerticalAlignment="Center" Margin="0,0,-112,0" />
                 <TextBlock Text="Retoc" VerticalAlignment="Center" Margin="5,0,0,0" />
             </StackPanel>
+            
+            <Button Click="OpenCliLogsFlyoutTemp_Click" ToolTip="View Cli Logs">
+                <iconPacks:PackIconMaterial Width="22" Height="22" Kind="ClipboardTextMultiple" />
+            </Button>
         </mah:WindowCommands>
     </mah:MetroWindow.RightWindowCommands>
 
