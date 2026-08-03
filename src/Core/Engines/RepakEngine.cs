@@ -1,4 +1,3 @@
-using PakMaster.Infrastructure.Diagnostics;
 namespace PakMaster.Core.Engines
 {
     public static class RepakEngine
@@ -14,10 +13,18 @@ namespace PakMaster.Core.Engines
 
             if (commandString.StartsWith("repak.exe", StringComparison.OrdinalIgnoreCase))
             {
-                commandString = commandString.Substring("repak.exe".Length).TrimStart();
+                commandString = commandString["repak.exe".Length..].TrimStart();
             }
 
-            await ProcessEngine.RunToolAsync("repak", "repak.exe", commandString, outputCallback, ct);
+            string branchName = ConfigManager.CurrentSettings?.ActiveRepakBranch ?? "main";
+            string exeName = "repak.exe";
+
+            if (!string.IsNullOrWhiteSpace(branchName) && branchName != "main")
+            {
+                exeName = $"repak-{branchName}.exe";
+            }
+
+            await ProcessEngine.RunToolAsync("repak", exeName, commandString, outputCallback, ct);
         }
     }
 }
