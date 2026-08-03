@@ -2,6 +2,10 @@ namespace PakMaster.Core.Engines
 {
     public static class ProcessEngine
     {
+        public static event Action<string>? OnCliProcessStarted;
+        public static event Action? OnCliProcessEnded;
+        public static event Action<string>? OnCliOutputLine;
+
         public static async Task RunToolAsync(string toolFolderName, string executableName, IEnumerable<string> arguments, Action<string> outputCallback, CancellationToken ct = default)
         {
             try
@@ -47,12 +51,15 @@ namespace PakMaster.Core.Engines
             StringBuilder outputBuilder = new();
             object lockObj = new();
 
-            GLogger.Here().Debug("Initializing command execution process"); var pipeTarget = PipeTarget.ToDelegate(
+            GLogger.Here().Debug("Initializing command execution process"); 
+            var pipeTarget = PipeTarget.ToDelegate(
                 line =>
                 {
                     lock (lockObj)
                     {
-                        outputBuilder.AppendLine(line); GLogger.Here().Information("[{0}]: {1}", Path.GetFileName(executablePath), line);
+                        outputBuilder.AppendLine(line); 
+                        GLogger.Here().Information("[{0}]: {1}", Path.GetFileName(executablePath), line);
+                        OnCliOutputLine?.Invoke(line);
                     }
                 }
             );
@@ -64,7 +71,10 @@ namespace PakMaster.Core.Engines
                 .WithStandardOutputPipe(pipeTarget)
                 .WithStandardErrorPipe(pipeTarget);
 
-            await cmd.ExecuteAsync(ct); GLogger.Here().Information("Command execution finished successfully");
+            OnCliProcessStarted?.Invoke(Path.GetFileName(executablePath));
+            await cmd.ExecuteAsync(ct); 
+            GLogger.Here().Information("Command execution finished successfully");
+            OnCliProcessEnded?.Invoke();
 
             outputCallback?.Invoke(outputBuilder.ToString());
         }
@@ -74,12 +84,15 @@ namespace PakMaster.Core.Engines
             StringBuilder outputBuilder = new();
             object lockObj = new();
 
-            GLogger.Here().Debug("Initializing command execution process"); var pipeTarget = PipeTarget.ToDelegate(
+            GLogger.Here().Debug("Initializing command execution process"); 
+            var pipeTarget = PipeTarget.ToDelegate(
                 line =>
                 {
                     lock (lockObj)
                     {
-                        outputBuilder.AppendLine(line); GLogger.Here().Information("[{0}]: {1}", Path.GetFileName(executablePath), line);
+                        outputBuilder.AppendLine(line); 
+                        GLogger.Here().Information("[{0}]: {1}", Path.GetFileName(executablePath), line);
+                        OnCliOutputLine?.Invoke(line);
                     }
                 }
             );
@@ -91,7 +104,10 @@ namespace PakMaster.Core.Engines
                 .WithStandardOutputPipe(pipeTarget)
                 .WithStandardErrorPipe(pipeTarget);
 
-            await cmd.ExecuteAsync(ct); GLogger.Here().Information("Command execution finished successfully");
+            OnCliProcessStarted?.Invoke(Path.GetFileName(executablePath));
+            await cmd.ExecuteAsync(ct); 
+            GLogger.Here().Information("Command execution finished successfully");
+            OnCliProcessEnded?.Invoke();
 
             outputCallback?.Invoke(outputBuilder.ToString());
         }
