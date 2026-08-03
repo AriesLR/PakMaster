@@ -5,11 +5,7 @@
              xmlns:options="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"
              xmlns:converters="clr-namespace:PakMaster.UI.Converters"
              xmlns:local="clr-namespace:PakMaster"
-             xmlns:models="clr-namespace:PakMaster.Core.Models"
-             xmlns:views="clr-namespace:PakMaster.UI.Views"
-             xmlns:core="clr-namespace:Notification.Core;assembly=Notification.Core"
-             xmlns:notifWpf="clr-namespace:Notification.Wpf;assembly=Notification.Wpf"
-             xmlns:notifications="clr-namespace:Notification.Wpf.Controls;assembly=Notification.Wpf">
+             xmlns:models="clr-namespace:PakMaster.Core.Models">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -19,8 +15,6 @@
                 <ResourceDictionary Source="pack://application:,,,/MahApps.Metro;component/Styles/Themes/Dark.Steel.xaml" />
                 <!-- Theme Resources -->
                 <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/ThemeResources.xaml" />
-                <!-- Overrides -->
-                <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Overrides/Button.xaml" />
             </ResourceDictionary.MergedDictionaries>
 
             <!-- Progess Bar Override -->
@@ -31,22 +25,6 @@
 
             <converters:StringNullOrEmptyToVisibilityConverter x:Key="StringNullOrEmptyToVisibilityConverter" />
             <converters:AllStringsNullOrEmptyToVisibilityConverter x:Key="AllStringsNullOrEmptyToVisibilityConverter" />
-
-            <!-- Toast DataTemplate -->
-            <DataTemplate DataType="{x:Type notifWpf:NotificationContent}">
-                <views:CustomToastView />
-            </DataTemplate>
-
-            <!-- Toast Style Override -->
-            <Style TargetType="{x:Type notifications:Notification}">
-                <Setter Property="Template">
-                    <Setter.Value>
-                        <ControlTemplate TargetType="{x:Type notifications:Notification}">
-                            <ContentPresenter Content="{TemplateBinding Content}" />
-                        </ControlTemplate>
-                    </Setter.Value>
-                </Setter>
-            </Style>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
