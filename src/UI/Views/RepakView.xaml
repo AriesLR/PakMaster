@@ -1,0 +1,257 @@
+<UserControl x:Class="PakMaster.UI.Views.RepakView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+             mc:Ignorable="d"
+             d:DesignHeight="700" d:DesignWidth="1200"
+             FontFamily="Segoe UI">
+    <Grid Margin="20">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="600" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <!-- Command & Paths -->
+                    <StackPanel Grid.Column="0" Margin="0,0,20,0">
+                        <TextBlock Text="Command" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" FontSize="16" FontWeight="SemiBold" />
+                        <Separator Background="{StaticResource MahApps.Brushes.Gray.SemiTransparent}" Margin="0,5,0,15" />
+
+                        <ComboBox x:Name="CmdSelectComboBox"
+                                  Height="30"
+                                  Grid.Column="1"
+                                  mah:ControlsHelper.CornerRadius="2"
+                                  Background="{DynamicResource MahApps.Brushes.Transparent}"
+                                  BorderBrush="{DynamicResource MahApps.Brushes.Gray7}"
+                                  VerticalAlignment="Center"
+                                  BorderThickness="1"
+                                  VerticalContentAlignment="Center"
+                                  SelectedIndex="0"
+                                  SelectionChanged="UpdateCommand_SelectionChanged"
+                                  mah:TextBoxHelper.Watermark="Select Command" Margin="0,0,0,20">
+                            <ComboBoxItem Content="info" />
+                            <ComboBoxItem Content="list" />
+                            <ComboBoxItem Content="hash-list" />
+                            <ComboBoxItem Content="unpack" />
+                            <ComboBoxItem Content="pack" />
+                            <ComboBoxItem Content="get" />
+                        </ComboBox>
+
+                        <TextBlock Text="File/Folder Paths" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" FontSize="16" FontWeight="SemiBold" Margin="0,10,0,0" />
+                        <Separator Background="{StaticResource MahApps.Brushes.Gray.SemiTransparent}" Margin="0,5,0,15" />
+
+                        <TextBlock Text="Input Path" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
+                        <Grid Margin="0,0,0,15">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBox x:Name="InputPathTextBox" Text="" mah:TextBoxHelper.Watermark="Input Path" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
+                            <Grid Grid.Column="1">
+                                <Button Width="80" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="BrowseInputFolder_Click">
+                                    <TextBlock Text="Browse" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                </Button>
+                            </Grid>
+                        </Grid>
+
+                        <StackPanel x:Name="OutputPathGroup">
+                            <TextBlock Text="Output Path" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
+                            <Grid Margin="0,0,0,15">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <TextBox x:Name="OutputPathTextBox" Text="" mah:TextBoxHelper.Watermark="Output Path" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
+                                <Grid Grid.Column="1">
+                                    <Button Width="80" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="BrowseOutputFolder_Click">
+                                        <TextBlock Text="Browse" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                        </StackPanel>
+
+                        <StackPanel x:Name="GetFileGroup" Visibility="Collapsed">
+                            <TextBlock Text="File" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
+                            <Grid Margin="0,0,0,15">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <TextBox x:Name="GetFileTextBox" mah:TextBoxHelper.Watermark="Path to file to read to stdout" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
+                                <Grid Grid.Column="1">
+                                    <Button Width="80" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="ClearGetFile_Click">
+                                        <TextBlock Text="Clear" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                        </StackPanel>
+                    </StackPanel>
+
+                    <!-- Options -->
+                    <StackPanel x:Name="GlobalOptionsGroup" Grid.Column="1">
+                        <TextBlock Text="Options" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" FontSize="16" FontWeight="SemiBold" />
+                        <Separator Background="{StaticResource MahApps.Brushes.Gray.SemiTransparent}" Margin="0,5,0,15" />
+
+                        <StackPanel x:Name="AesKeyGroup">
+                            <TextBlock Text="AES Key (--aes-key)" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
+                            <Grid Margin="0,0,0,15">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <TextBox x:Name="AesKeyTextBox" mah:TextBoxHelper.Watermark="256 bit AES encryption key as base64 or hex string if the pak is encrypted" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
+                                <Grid Grid.Column="1">
+                                    <Button Width="80" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="ClearAesKey_Click">
+                                        <TextBlock Text="Clear" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                        </StackPanel>
+
+                        <StackPanel x:Name="StripPrefixGroup">
+                            <TextBlock Text="Strip Prefix (--strip-prefix)" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
+                            <Grid Margin="0,0,0,15">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <TextBox x:Name="StripPrefixTextBox" mah:TextBoxHelper.Watermark="Prefix to strip from entry path (default: ../../../)" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
+                                <Grid Grid.Column="1">
+                                    <Button Width="80" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="ClearStripPrefix_Click">
+                                        <TextBlock Text="Clear" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                        </StackPanel>
+
+                        <StackPanel x:Name="UnpackOptionsGroup">
+                            <CheckBox x:Name="ForceCheckBox" Content="Force Overwrite (--force)" ToolTip="Force overwrite existing files/directories" Margin="0,0,0,10" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
+                            <TextBlock Text="Include Pattern (--include)" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
+                            <Grid Margin="0,0,0,15">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <TextBox x:Name="IncludeTextBox" mah:TextBoxHelper.Watermark="Files or directories to include. Can be specified multiple times. If not specified, everything is extracted" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
+                                <Grid Grid.Column="1">
+                                    <Button Width="80" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="ClearInclude_Click">
+                                        <TextBlock Text="Clear" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                        </StackPanel>
+
+                        <StackPanel x:Name="PackOptionsGroup">
+                            <TextBlock Text="Mount Point (--mount-point)" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
+                            <Grid Margin="0,0,0,15">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <TextBox x:Name="MountPointTextBox" mah:TextBoxHelper.Watermark="Mount point (default: ../../../)" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
+                                <Grid Grid.Column="1">
+                                    <Button Width="80" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="ClearMountPoint_Click">
+                                        <TextBlock Text="Clear" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Button>
+                                </Grid>
+                            </Grid>
+
+                            <TextBlock Text="Compression (--compression)" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
+                            <ComboBox x:Name="CompressionComboBox"
+                                      Height="30"
+                                      mah:ControlsHelper.CornerRadius="2"
+                                      Background="{DynamicResource MahApps.Brushes.Transparent}"
+                                      BorderBrush="{DynamicResource MahApps.Brushes.Gray7}"
+                                      VerticalAlignment="Center"
+                                      BorderThickness="1"
+                                      VerticalContentAlignment="Center"
+                                      SelectedIndex="0"
+                                      SelectionChanged="UpdateCommand_SelectionChanged"
+                                      Margin="0,0,0,15">
+                                <ComboBoxItem Content="" />
+                                <ComboBoxItem Content="Zlib" />
+                                <ComboBoxItem Content="Gzip" />
+                                <ComboBoxItem Content="Oodle" />
+                                <ComboBoxItem Content="Zstd" />
+                                <ComboBoxItem Content="LZ4" />
+                            </ComboBox>
+
+                            <TextBlock Text="Path Hash Seed (--path-hash-seed)" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
+                            <Grid Margin="0,0,0,15">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <TextBox x:Name="PathHashSeedTextBox" mah:TextBoxHelper.Watermark="Path hash seed for >= V10 (default: 0)" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
+                                <Grid Grid.Column="1">
+                                    <Button Width="80" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="ClearPathHashSeed_Click">
+                                        <TextBlock Text="Clear" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Button>
+                                </Grid>
+                            </Grid>
+                        </StackPanel>
+
+                        <StackPanel x:Name="RepakVersionGroup">
+                            <TextBlock Text="Version (--version)" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
+                            <ComboBox x:Name="RepakVersionSwitchDropdown"
+                                      Height="30"
+                                      mah:ControlsHelper.CornerRadius="2"
+                                      Background="{DynamicResource MahApps.Brushes.Transparent}"
+                                      BorderBrush="{DynamicResource MahApps.Brushes.Gray7}"
+                                      VerticalAlignment="Center"
+                                      BorderThickness="1"
+                                      VerticalContentAlignment="Center"
+                                      SelectedIndex="0"
+                                      SelectionChanged="ComboBox_RepakVersion"
+                                      Margin="0,0,0,15">
+                                <ComboBoxItem Content="" />
+                                <ComboBoxItem Content="V11" />
+                                <ComboBoxItem Content="V10" />
+                                <ComboBoxItem Content="V9" />
+                                <ComboBoxItem Content="V8B" />
+                                <ComboBoxItem Content="V8A" />
+                                <ComboBoxItem Content="V7" />
+                                <ComboBoxItem Content="V6" />
+                                <ComboBoxItem Content="V5" />
+                                <ComboBoxItem Content="V4" />
+                                <ComboBoxItem Content="V3" />
+                                <ComboBoxItem Content="V2" />
+                                <ComboBoxItem Content="V1" />
+                            </ComboBox>
+                        </StackPanel>
+
+                        <StackPanel x:Name="GlobalMiscGroup">
+                            <CheckBox x:Name="VerboseCheckBox" Content="Verbose (--verbose)" ToolTip="Verbose" Margin="0,0,0,10" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
+                            <CheckBox x:Name="QuietCheckBox" Content="Quiet (--quiet)" ToolTip="Hides normal output such as progress bar and completion status" Margin="0,0,0,15" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
+                        </StackPanel>
+                    </StackPanel>
+                </Grid>
+            </ScrollViewer>
+
+            <!-- Command Preview -->
+            <Border Grid.Row="2" BorderBrush="{DynamicResource MahApps.Brushes.Gray.SemiTransparent}" BorderThickness="0,1,0,0" Margin="0,10,0,0" Padding="0,15,0,0">
+                <StackPanel>
+                    <TextBlock Text="Command Preview" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" FontSize="16" FontWeight="SemiBold" Margin="0,0,0,10" />
+                    <TextBox x:Name="CmdPreviewTextBox" Height="90" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"
+                             FontFamily="Consolas" Foreground="{DynamicResource Alr.Brushes.Yellow100}" Background="{DynamicResource Alr.Brushes.Black.O20}"
+                             BorderBrush="{DynamicResource MahApps.Brushes.Gray.SemiTransparent}" Margin="0,0,0,15" Padding="12" />
+                    <Grid>
+                        <Button Height="45" Background="Transparent" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Click="ExecuteCommand_Click">
+                            <TextBlock Text="Execute Command" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="Bold" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                        </Button>
+                    </Grid>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </Grid>
+</UserControl>
