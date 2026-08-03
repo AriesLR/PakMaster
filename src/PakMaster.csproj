@@ -3,7 +3,7 @@
     <PropertyGroup>
 		<!-- ================ Build Info ================ -->
         <OutputType>WinExe</OutputType>
-        <TargetFramework>net8.0-windows</TargetFramework>
+        <TargetFramework>net10.0-windows7.0</TargetFramework>
         <RootNamespace>PakMaster</RootNamespace>
         <Nullable>enable</Nullable>
         <ImplicitUsings>disable</ImplicitUsings>
