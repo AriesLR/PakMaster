@@ -24,6 +24,7 @@ namespace PakMaster.UI.Views
         {
             isInitializing = true;
             string cmd = ConfigManager.CurrentSettings.ActiveRepakCommand;
+            string branch = ConfigManager.CurrentSettings.ActiveRepakBranch;
 
             if (CmdSelectComboBox != null)
             {
@@ -37,10 +38,33 @@ namespace PakMaster.UI.Views
                 }
             }
 
+            if (BranchSelectComboBox != null)
+            {
+                foreach (ComboBoxItem item in BranchSelectComboBox.Items)
+                {
+                    if (item.Content?.ToString() == branch)
+                    {
+                        BranchSelectComboBox.SelectedItem = item;
+                        break;
+                    }
+                }
+            }
+
             LoadStateForCommand(cmd);
 
             isInitializing = false;
             UpdateCommand();
+        }
+
+        private void BranchSelectComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (!IsLoaded || isInitializing) return;
+
+            if (BranchSelectComboBox.SelectedItem is ComboBoxItem selectedItem)
+            {
+                ConfigManager.CurrentSettings.ActiveRepakBranch = selectedItem.Content.ToString() ?? "main";
+                ConfigManager.SaveConfig(ConfigManager.CurrentSettings);
+            }
         }
 
         private void LoadStateForCommand(string cmd)
@@ -264,7 +288,7 @@ namespace PakMaster.UI.Views
                 if (force) finalCmd += " --force";
                 if (!string.IsNullOrWhiteSpace(includeStr))
                 {
-                    var includes = includeStr.Split(new[] { ',', ';' }, StringSplitOptions.RemoveEmptyEntries);
+                    var includes = includeStr.Split([',', ';'], StringSplitOptions.RemoveEmptyEntries);
                     foreach (var inc in includes)
                     {
                         finalCmd += $" --include \"{inc.Trim()}\"";
@@ -310,7 +334,7 @@ namespace PakMaster.UI.Views
             {
                 var folderDialog = new OpenFolderDialog
                 {
-                    Title = "Select a Folder to Pack"
+                    Title = Lang.SelectAFolderToPack
                 };
                 if (!string.IsNullOrEmpty(inputFolderPath)) folderDialog.InitialDirectory = inputFolderPath;
 
@@ -324,7 +348,7 @@ namespace PakMaster.UI.Views
             {
                 var openFileDialog = new OpenFileDialog
                 {
-                    Title = "Select a .pak File",
+                    Title = Lang.SelectAPakFile,
                     CheckFileExists = true,
                     CheckPathExists = true,
                     Filter = "Pak Files (*.pak)|*.pak|All Files (*.*)|*.*"
@@ -348,7 +372,7 @@ namespace PakMaster.UI.Views
             {
                 var saveDialog = new SaveFileDialog
                 {
-                    Title = "Select Output .pak File",
+                    Title = Lang.SelectOutputPakFile,
                     Filter = "Pak Files (*.pak)|*.pak",
                     DefaultExt = ".pak",
                     ValidateNames = false,
@@ -372,7 +396,7 @@ namespace PakMaster.UI.Views
             {
                 var folderDialog = new OpenFolderDialog
                 {
-                    Title = "Select a Folder for Output"
+                    Title = Lang.SelectAFolderForOutput
                 };
                 if (!string.IsNullOrEmpty(outputFolderPath))
                 {

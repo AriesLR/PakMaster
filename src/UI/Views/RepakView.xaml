@@ -4,6 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+             xmlns:lex="http://wpflocalizeextension.codeplex.com"
+             lex:LocalizeDictionary.DesignCulture="en"
+             lex:ResxLocalizationProvider.DefaultAssembly="PakMaster"
+             lex:ResxLocalizationProvider.DefaultDictionary="PakMaster.UI.Resources.Resources"
              mc:Ignorable="d"
              d:DesignHeight="700" d:DesignWidth="1200"
              FontFamily="Segoe UI">
@@ -24,7 +28,34 @@
 
                     <!-- Command & Paths -->
                     <StackPanel Grid.Column="0" Margin="0,0,20,0">
-                        <TextBlock Text="Command" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" FontSize="16" FontWeight="SemiBold" />
+                        <TextBlock Text="{lex:Loc RepakView_RepakBranch}" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" FontSize="16" FontWeight="SemiBold" />
+                        <Separator Background="{StaticResource MahApps.Brushes.Gray.SemiTransparent}" Margin="0,5,0,15" />
+
+                        <ComboBox x:Name="BranchSelectComboBox"
+                                  Height="30"
+                                  mah:ControlsHelper.CornerRadius="2"
+                                  Background="{DynamicResource MahApps.Brushes.Transparent}"
+                                  BorderBrush="{DynamicResource MahApps.Brushes.Gray7}"
+                                  VerticalAlignment="Center"
+                                  BorderThickness="1"
+                                  VerticalContentAlignment="Center"
+                                  SelectedIndex="0"
+                                  SelectionChanged="BranchSelectComboBox_SelectionChanged"
+                                  mah:TextBoxHelper.Watermark="Select Branch" Margin="0,0,0,20">
+                            <ComboBoxItem Content="main" />
+                            <ComboBoxItem Content="chunked-compression" />
+                            <ComboBoxItem Content="cs-bindings" />
+                            <ComboBoxItem Content="patch-back4blood" />
+                            <ComboBoxItem Content="patch-dead-by-daylight" />
+                            <ComboBoxItem Content="patch-dragon-quest-xi" />
+                            <ComboBoxItem Content="patch-marvel-rivals" />
+                            <ComboBoxItem Content="patch-outlast-trials" />
+                            <ComboBoxItem Content="patch-torchlight" />
+                            <ComboBoxItem Content="patch-visions-of-mana" />
+                            <ComboBoxItem Content="patch-wuthering-waves" />
+                        </ComboBox>
+
+                        <TextBlock Text="{lex:Loc RetocView_Command}" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" FontSize="16" FontWeight="SemiBold" />
                         <Separator Background="{StaticResource MahApps.Brushes.Gray.SemiTransparent}" Margin="0,5,0,15" />
 
                         <ComboBox x:Name="CmdSelectComboBox"
@@ -38,7 +69,7 @@
                                   VerticalContentAlignment="Center"
                                   SelectedIndex="0"
                                   SelectionChanged="UpdateCommand_SelectionChanged"
-                                  mah:TextBoxHelper.Watermark="Select Command" Margin="0,0,0,20">
+                                  mah:TextBoxHelper.Watermark="{lex:Loc RetocView_SelectCommand}" Margin="0,0,0,20">
                             <ComboBoxItem Content="info" />
                             <ComboBoxItem Content="list" />
                             <ComboBoxItem Content="hash-list" />
@@ -47,50 +78,50 @@
                             <ComboBoxItem Content="get" />
                         </ComboBox>
 
-                        <TextBlock Text="File/Folder Paths" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" FontSize="16" FontWeight="SemiBold" Margin="0,10,0,0" />
+                        <TextBlock Text="{lex:Loc RetocView_FileFolderPaths}" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" FontSize="16" FontWeight="SemiBold" Margin="0,10,0,0" />
                         <Separator Background="{StaticResource MahApps.Brushes.Gray.SemiTransparent}" Margin="0,5,0,15" />
 
-                        <TextBlock Text="Input Path" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
+                        <TextBlock Text="{lex:Loc RetocView_InputPath}" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
                         <Grid Margin="0,0,0,15">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
-                            <TextBox x:Name="InputPathTextBox" Text="" mah:TextBoxHelper.Watermark="Input Path" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
+                            <TextBox x:Name="InputPathTextBox" Text="" mah:TextBoxHelper.Watermark="{lex:Loc RetocView_InputPath}" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
                             <Grid Grid.Column="1">
                                 <Button Width="80" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="BrowseInputFolder_Click">
-                                    <TextBlock Text="Browse" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    <TextBlock Text="{lex:Loc Btn_Browse}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
                                 </Button>
                             </Grid>
                         </Grid>
 
                         <StackPanel x:Name="OutputPathGroup">
-                            <TextBlock Text="Output Path" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
+                            <TextBlock Text="{lex:Loc RetocView_OutputPath}" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
                             <Grid Margin="0,0,0,15">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <TextBox x:Name="OutputPathTextBox" Text="" mah:TextBoxHelper.Watermark="Output Path" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
+                                <TextBox x:Name="OutputPathTextBox" Text="" mah:TextBoxHelper.Watermark="{lex:Loc RetocView_OutputPath}" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
                                 <Grid Grid.Column="1">
                                     <Button Width="80" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="BrowseOutputFolder_Click">
-                                        <TextBlock Text="Browse" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        <TextBlock Text="{lex:Loc Btn_Browse}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
                                     </Button>
                                 </Grid>
                             </Grid>
                         </StackPanel>
 
                         <StackPanel x:Name="GetFileGroup" Visibility="Collapsed">
-                            <TextBlock Text="File" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
+                            <TextBlock Text="{lex:Loc RetocView_File}" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
                             <Grid Margin="0,0,0,15">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <TextBox x:Name="GetFileTextBox" mah:TextBoxHelper.Watermark="Path to file to read to stdout" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
+                                <TextBox x:Name="GetFileTextBox" mah:TextBoxHelper.Watermark="{lex:Loc RepakView_PathToFileToReadToStdout}" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
                                 <Grid Grid.Column="1">
                                     <Button Width="80" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="ClearGetFile_Click">
-                                        <TextBlock Text="Clear" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        <TextBlock Text="{lex:Loc RetocView_Clear}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
                                     </Button>
                                 </Grid>
                             </Grid>
@@ -99,74 +130,74 @@
 
                     <!-- Options -->
                     <StackPanel x:Name="GlobalOptionsGroup" Grid.Column="1">
-                        <TextBlock Text="Options" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" FontSize="16" FontWeight="SemiBold" />
+                        <TextBlock Text="{lex:Loc RetocView_Options}" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" FontSize="16" FontWeight="SemiBold" />
                         <Separator Background="{StaticResource MahApps.Brushes.Gray.SemiTransparent}" Margin="0,5,0,15" />
 
                         <StackPanel x:Name="AesKeyGroup">
-                            <TextBlock Text="AES Key (--aes-key)" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
+                            <TextBlock Text="{Binding Source={lex:Loc RetocRepak_AESKey}, StringFormat='{}AES {0} (--aes-key)'}" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
                             <Grid Margin="0,0,0,15">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <TextBox x:Name="AesKeyTextBox" mah:TextBoxHelper.Watermark="256 bit AES encryption key as base64 or hex string if the pak is encrypted" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
+                                <TextBox x:Name="AesKeyTextBox" mah:TextBoxHelper.Watermark="{lex:Loc RepakView_256BitAESEncryptionKeyAsBase64OrHexStringIfThePakIsEncrypted}" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
                                 <Grid Grid.Column="1">
                                     <Button Width="80" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="ClearAesKey_Click">
-                                        <TextBlock Text="Clear" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        <TextBlock Text="{lex:Loc RetocView_Clear}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
                                     </Button>
                                 </Grid>
                             </Grid>
                         </StackPanel>
 
                         <StackPanel x:Name="StripPrefixGroup">
-                            <TextBlock Text="Strip Prefix (--strip-prefix)" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
+                            <TextBlock Text="{Binding Source={lex:Loc RepakView_StripPrefix}, StringFormat='{}{0} (--strip-prefix)'}" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
                             <Grid Margin="0,0,0,15">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <TextBox x:Name="StripPrefixTextBox" mah:TextBoxHelper.Watermark="Prefix to strip from entry path (default: ../../../)" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
+                                <TextBox x:Name="StripPrefixTextBox" mah:TextBoxHelper.Watermark="{lex:Loc RepakView_PrefixToStripFromEntryPathDefault}" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
                                 <Grid Grid.Column="1">
                                     <Button Width="80" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="ClearStripPrefix_Click">
-                                        <TextBlock Text="Clear" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        <TextBlock Text="{lex:Loc RetocView_Clear}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
                                     </Button>
                                 </Grid>
                             </Grid>
                         </StackPanel>
 
                         <StackPanel x:Name="UnpackOptionsGroup">
-                            <CheckBox x:Name="ForceCheckBox" Content="Force Overwrite (--force)" ToolTip="Force overwrite existing files/directories" Margin="0,0,0,10" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
-                            <TextBlock Text="Include Pattern (--include)" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
+                            <CheckBox x:Name="ForceCheckBox" Content="{lex:Loc RepakView_ForceOverwrite}" ContentStringFormat="{}{0} (--force)" ToolTip="{lex:Loc RepakView_ForceOverwriteExistingFilesDirectories}" Margin="0,0,0,10" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
+                            <TextBlock Text="{Binding Source={lex:Loc RepakView_Include}, StringFormat='{}{0} (--include)'}" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
                             <Grid Margin="0,0,0,15">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <TextBox x:Name="IncludeTextBox" mah:TextBoxHelper.Watermark="Files or directories to include. Can be specified multiple times. If not specified, everything is extracted" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
+                                <TextBox x:Name="IncludeTextBox" mah:TextBoxHelper.Watermark="{lex:Loc RepakView_FilesOrDirectoriesToIncludeCanBeSpecifiedMultipleTimesIfNotSpecifiedEverythingIsExtracted}" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
                                 <Grid Grid.Column="1">
                                     <Button Width="80" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="ClearInclude_Click">
-                                        <TextBlock Text="Clear" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        <TextBlock Text="{lex:Loc RetocView_Clear}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
                                     </Button>
                                 </Grid>
                             </Grid>
                         </StackPanel>
 
                         <StackPanel x:Name="PackOptionsGroup">
-                            <TextBlock Text="Mount Point (--mount-point)" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
+                            <TextBlock Text="{Binding Source={lex:Loc RepakView_MountPoint}, StringFormat='{}{0} (--mount-point)'}" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
                             <Grid Margin="0,0,0,15">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <TextBox x:Name="MountPointTextBox" mah:TextBoxHelper.Watermark="Mount point (default: ../../../)" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
+                                <TextBox x:Name="MountPointTextBox" mah:TextBoxHelper.Watermark="{lex:Loc RepakView_MountPointDefault}" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
                                 <Grid Grid.Column="1">
                                     <Button Width="80" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="ClearMountPoint_Click">
-                                        <TextBlock Text="Clear" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        <TextBlock Text="{lex:Loc RetocView_Clear}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
                                     </Button>
                                 </Grid>
                             </Grid>
 
-                            <TextBlock Text="Compression (--compression)" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
+                            <TextBlock Text="{Binding Source={lex:Loc RepakView_Compression}, StringFormat='{}{0} (--compression)'}" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
                             <ComboBox x:Name="CompressionComboBox"
                                       Height="30"
                                       mah:ControlsHelper.CornerRadius="2"
@@ -186,23 +217,23 @@
                                 <ComboBoxItem Content="LZ4" />
                             </ComboBox>
 
-                            <TextBlock Text="Path Hash Seed (--path-hash-seed)" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
+                            <TextBlock Text="{Binding Source={lex:Loc RepakView_PathHashSeed}, StringFormat='{}{0} (--path-hash-seed)'}" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
                             <Grid Margin="0,0,0,15">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <TextBox x:Name="PathHashSeedTextBox" mah:TextBoxHelper.Watermark="Path hash seed for >= V10 (default: 0)" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
+                                <TextBox x:Name="PathHashSeedTextBox" mah:TextBoxHelper.Watermark="{lex:Loc RepakView_PathHashSeedForV10Default0}" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
                                 <Grid Grid.Column="1">
                                     <Button Width="80" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="ClearPathHashSeed_Click">
-                                        <TextBlock Text="Clear" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        <TextBlock Text="{lex:Loc RetocView_Clear}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
                                     </Button>
                                 </Grid>
                             </Grid>
                         </StackPanel>
 
                         <StackPanel x:Name="RepakVersionGroup">
-                            <TextBlock Text="Version (--version)" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
+                            <TextBlock Text="{Binding Source={lex:Loc RepakView_Version}, StringFormat='{}{0} (--version)'}" FontSize="13" FontWeight="SemiBold" Margin="0,0,0,5" />
                             <ComboBox x:Name="RepakVersionSwitchDropdown"
                                       Height="30"
                                       mah:ControlsHelper.CornerRadius="2"
@@ -231,8 +262,8 @@
                         </StackPanel>
 
                         <StackPanel x:Name="GlobalMiscGroup">
-                            <CheckBox x:Name="VerboseCheckBox" Content="Verbose (--verbose)" ToolTip="Verbose" Margin="0,0,0,10" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
-                            <CheckBox x:Name="QuietCheckBox" Content="Quiet (--quiet)" ToolTip="Hides normal output such as progress bar and completion status" Margin="0,0,0,15" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
+                            <CheckBox x:Name="VerboseCheckBox" Content="{lex:Loc RepakView_Verbose}" ContentStringFormat="{}{0} (--verbose)" ToolTip="{lex:Loc RetocView_Verbose}" Margin="0,0,0,10" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
+                            <CheckBox x:Name="QuietCheckBox" Content="{lex:Loc RepakView_Quiet}" ContentStringFormat="{}{0} (--quiet)" ToolTip="{lex:Loc RepakView_HidesNormalOutputSuchAsProgressBarAndCompletionStatus}" Margin="0,0,0,15" Checked="UpdateCommand_Event" Unchecked="UpdateCommand_Event" Style="{StaticResource RoundedCheckBoxStyle}" />
                         </StackPanel>
                     </StackPanel>
                 </Grid>
@@ -241,13 +272,13 @@
             <!-- Command Preview -->
             <Border Grid.Row="2" BorderBrush="{DynamicResource MahApps.Brushes.Gray.SemiTransparent}" BorderThickness="0,1,0,0" Margin="0,10,0,0" Padding="0,15,0,0">
                 <StackPanel>
-                    <TextBlock Text="Command Preview" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" FontSize="16" FontWeight="SemiBold" Margin="0,0,0,10" />
+                    <TextBlock Text="{lex:Loc RetocRepak_CommandPreview}" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" FontSize="16" FontWeight="SemiBold" Margin="0,0,0,10" />
                     <TextBox x:Name="CmdPreviewTextBox" Height="90" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"
                              FontFamily="Consolas" Foreground="{DynamicResource Alr.Brushes.Yellow100}" Background="{DynamicResource Alr.Brushes.Black.O20}"
                              BorderBrush="{DynamicResource MahApps.Brushes.Gray.SemiTransparent}" Margin="0,0,0,15" Padding="12" />
                     <Grid>
                         <Button Height="45" Background="Transparent" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Click="ExecuteCommand_Click">
-                            <TextBlock Text="Execute Command" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="Bold" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                            <TextBlock Text="{lex:Loc RetocRepak_ExecuteCommand}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="Bold" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" />
                         </Button>
                     </Grid>
                 </StackPanel>
