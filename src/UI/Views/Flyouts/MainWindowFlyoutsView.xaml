@@ -30,7 +30,7 @@
                 Width="{lex:Loc Num_AppSettings_Flyout_Width}"
                 Foreground="{DynamicResource MahApps.Brushes.Flyout.Foreground}"
                 Background="{DynamicResource Alr.Brushes.Flyout.Background}"
-                BorderBrush="{DynamicResource MahApps.Brushes.Accent}"
+                BorderBrush="{DynamicResource MahApps.Brushes.AccentBase}"
                 BorderThickness="0 0 1 0"
                 IsOpen="{Binding IsAppSettingsFlyoutOpen}">
 
@@ -93,7 +93,7 @@
 
                     <!-- Appearance Section -->
                     <Separator Grid.Row="0" Background="{StaticResource MahApps.Brushes.Gray.SemiTransparent}" Margin="0,10,0,20" />
-                    <TextBlock Grid.Row="1" Text="{lex:Loc AppSettings_Section_Appearance}" Foreground="{DynamicResource MahApps.Brushes.Accent}" FontSize="16" FontWeight="SemiBold" Margin="0,0,0,15" />
+                    <TextBlock Grid.Row="1" Text="{lex:Loc AppSettings_Section_Appearance}" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" FontSize="16" FontWeight="SemiBold" Margin="0,0,0,15" />
 
                     <!-- Language Dropdown -->
                     <Grid Grid.Row="2" Margin="0,0,0,20">
@@ -216,7 +216,7 @@
 
                     <!-- Application Behavior Section -->
                     <Separator Grid.Row="5" Background="{StaticResource MahApps.Brushes.Gray.SemiTransparent}" Margin="0,10,0,20" />
-                    <TextBlock Grid.Row="6" Text="{lex:Loc AppSettings_Section_ApplicationBehavior}" Foreground="{DynamicResource MahApps.Brushes.Accent}" FontSize="16" FontWeight="SemiBold" Margin="0,0,0,15" />
+                    <TextBlock Grid.Row="6" Text="{lex:Loc AppSettings_Section_ApplicationBehavior}" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" FontSize="16" FontWeight="SemiBold" Margin="0,0,0,15" />
 
                     <!-- Start With Windows Toggle -->
                     <Grid Grid.Row="7" Margin="0,0,0,20">
@@ -277,7 +277,7 @@
 
                     <!-- Updates Section -->
                     <Separator Grid.Row="10" Background="{StaticResource MahApps.Brushes.Gray.SemiTransparent}" Margin="0,10,0,20" />
-                    <TextBlock Grid.Row="11" Text="{lex:Loc AppSettings_Section_Updates}" Foreground="{DynamicResource MahApps.Brushes.Accent}" FontSize="16" FontWeight="SemiBold" Margin="0,0,0,15" />
+                    <TextBlock Grid.Row="11" Text="{lex:Loc AppSettings_Section_Updates}" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" FontSize="16" FontWeight="SemiBold" Margin="0,0,0,15" />
 
                     <!-- Check for Updates on Startup -->
                     <Grid Grid.Row="12" Margin="0,0,0,20">
@@ -348,7 +348,7 @@
 
                     <!-- Logging Section -->
                     <Separator Grid.Row="14" Background="{StaticResource MahApps.Brushes.Gray.SemiTransparent}" Margin="0,10,0,20" />
-                    <TextBlock Grid.Row="15" Text="{lex:Loc AppSettings_Section_Logging}" Foreground="{DynamicResource MahApps.Brushes.Accent}" FontSize="16" FontWeight="SemiBold" Margin="0,0,0,15" />
+                    <TextBlock Grid.Row="15" Text="{lex:Loc AppSettings_Section_Logging}" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" FontSize="16" FontWeight="SemiBold" Margin="0,0,0,15" />
 
                     <!-- Enable Debug Logging Toggle -->
                     <Grid Grid.Row="16" Margin="0,0,0,20">
@@ -410,7 +410,7 @@
 
                     <!-- Maintenance Section -->
                     <Separator Grid.Row="18" Background="{StaticResource MahApps.Brushes.Gray.SemiTransparent}" Margin="0,10,0,20" />
-                    <TextBlock Grid.Row="19" Text="{lex:Loc AppSettings_Section_Maintenance}" Foreground="{DynamicResource MahApps.Brushes.Accent}" FontSize="16" FontWeight="SemiBold" Margin="0,0,0,15" />
+                    <TextBlock Grid.Row="19" Text="{lex:Loc AppSettings_Section_Maintenance}" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" FontSize="16" FontWeight="SemiBold" Margin="0,0,0,15" />
 
                     <!-- Reset To Factory Settings Button -->
                     <Grid Grid.Row="20" Margin="0,0,0,20">
@@ -569,7 +569,7 @@
             Width="{lex:Loc Num_About_Flyout_Width}"
             Foreground="{DynamicResource MahApps.Brushes.Flyout.Foreground}"
             Background="{DynamicResource Alr.Brushes.Flyout.Background}"
-            BorderBrush="{DynamicResource MahApps.Brushes.Accent}"
+            BorderBrush="{DynamicResource MahApps.Brushes.AccentBase}"
             BorderThickness="0 0 1 0"
             IsOpen="{Binding IsAboutFlyoutOpen}">
 
@@ -599,7 +599,7 @@
                             </MultiBinding>
                         </StackPanel.Visibility>
 
-                        <TextBlock Text="{lex:Loc About_Section_SupportTheDeveloper}" HorizontalAlignment="Center" Foreground="{DynamicResource MahApps.Brushes.Accent}" FontSize="15" FontWeight="SemiBold" Margin="0,0,0,20" />
+                        <TextBlock Text="{lex:Loc About_Section_SupportTheDeveloper}" HorizontalAlignment="Center" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" FontSize="15" FontWeight="SemiBold" Margin="0,0,0,20" />
 
                         <TextBlock Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontSize="12" TextAlignment="Center" TextWrapping="Wrap" Margin="0,0,0,40" Padding="20,0,20,0" Text="{lex:Loc About_Section_SupportTheDeveloper_Desc}" />
 
@@ -625,7 +625,7 @@
 
                     <!-- ================ Application Information START ================ -->
                     <StackPanel Grid.Row="3" Margin="0,5,0,10">
-                        <TextBlock Text="{lex:Loc About_Section_ApplicationInformation}" FontSize="15" FontWeight="SemiBold" Foreground="{DynamicResource MahApps.Brushes.Accent}" Margin="0,0,0,20" TextAlignment="Center" />
+                        <TextBlock Text="{lex:Loc About_Section_ApplicationInformation}" FontSize="15" FontWeight="SemiBold" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" Margin="0,0,0,20" TextAlignment="Center" />
 
                         <UniformGrid Columns="2" Margin="0,0,0,15">
                             <StackPanel Margin="5,0" HorizontalAlignment="Center">
@@ -658,7 +658,7 @@
                                                         <Setter Property="Foreground" Value="{DynamicResource MahApps.Brushes.Flyout.Foreground}" />
                                                     </Trigger>
                                                     <Trigger Property="IsMouseOver" Value="True">
-                                                        <Setter Property="Foreground" Value="{DynamicResource MahApps.Brushes.Accent}" />
+                                                        <Setter Property="Foreground" Value="{DynamicResource MahApps.Brushes.AccentBase}" />
                                                     </Trigger>
                                                 </Style.Triggers>
                                             </Style>
@@ -691,4 +691,37 @@
         </Grid>
     </mah:Flyout>
     <!-- ============ About Flyout END ============ -->
+
+    <!-- ============ Cli Logs Flyout START ============ -->
+
+    <mah:Flyout x:Name="CliLogsFlyout"
+            Header="Cli Logs"
+            Position="Bottom"
+            Height="400"
+            Foreground="{DynamicResource MahApps.Brushes.Flyout.Foreground}"
+            Background="{DynamicResource Alr.Brushes.Flyout.Background}"
+            BorderBrush="{DynamicResource MahApps.Brushes.AccentBase}"
+            BorderThickness="0 1 0 0"
+            IsOpen="{Binding IsCliLogsFlyoutOpen}">
+        <Grid Margin="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <TextBox x:Name="CliLogsTextBox"
+                     IsReadOnly="True"
+                     TextWrapping="Wrap" 
+                     VerticalScrollBarVisibility="Auto"
+                     FontFamily="Consolas" 
+                     Foreground="{DynamicResource Alr.Brushes.Yellow100}" 
+                     Background="{DynamicResource Alr.Brushes.Black.O20}"
+                     BorderBrush="{DynamicResource MahApps.Brushes.Gray.SemiTransparent}" 
+                     Padding="12" />
+            <Button Grid.Row="1" Height="30" Margin="0,10,0,0" Width="100" HorizontalAlignment="Right" Background="Transparent" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Click="ClearLogs_Click">
+                <TextBlock Text="Clear Logs" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="Bold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
+            </Button>
+        </Grid>
+    </mah:Flyout>
+
+    <!-- ============ Cli Logs Flyout END ============ -->
 </mah:FlyoutsControl>

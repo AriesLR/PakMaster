@@ -4,6 +4,7 @@ namespace PakMaster.UI.State
     {
         private bool _isAppSettingsFlyoutOpen;
         private bool _isAboutFlyoutOpen;
+        private bool _isCliLogsFlyoutOpen;
 
         public ObservableCollection<SidebarModel> MenuItems { get; set; }
         public ObservableCollection<SidebarModel> OptionsMenuItems { get; set; }
@@ -107,6 +108,34 @@ namespace PakMaster.UI.State
                 IsAboutFlyoutOpen = false;
             }
             IsAboutFlyoutOpen = true;
+        }
+
+        // ============ Cli Logs Flyout ============
+        private void SidebarCliLogs_Click(object? sender, RoutedEventArgs e)
+        {
+            OpenCliLogsFlyout();
+        }
+
+        public bool IsCliLogsFlyoutOpen
+        {
+            get => _isCliLogsFlyoutOpen;
+            set
+            {
+                if (_isCliLogsFlyoutOpen != value)
+                {
+                    _isCliLogsFlyoutOpen = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        public void OpenCliLogsFlyout()
+        {
+            if (IsCliLogsFlyoutOpen)
+            {
+                IsCliLogsFlyoutOpen = false;
+            }
+            IsCliLogsFlyoutOpen = true;
         }
 
         // ============ Property/Language Changed Helpers ============

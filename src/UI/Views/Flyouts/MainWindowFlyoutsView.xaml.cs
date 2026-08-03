@@ -9,7 +9,34 @@ namespace PakMaster.UI.Views.Flyouts
             AccentColorDropdown.ItemsSource = ThemeBuilder.AvailableAccents;
             LanguageDropdown.ItemsSource = LanguageManager.SupportedLanguages;
 
+            PakMaster.Core.Engines.ProcessEngine.OnCliProcessStarted += ProcessEngine_OnCliProcessStarted;
+            PakMaster.Core.Engines.ProcessEngine.OnCliOutputLine += ProcessEngine_OnCliOutputLine;
+
             this.Loaded += MainWindowFlyoutsView_Loaded;
+        }
+
+        private void ProcessEngine_OnCliProcessStarted(string executableName)
+        {
+            Application.Current.Dispatcher.InvokeAsync(() =>
+            {
+                CliLogsTextBox.Clear();
+                CliLogsTextBox.AppendText($"--- Started {executableName} ---\n");
+                CliLogsFlyout.IsOpen = true;
+            });
+        }
+
+        private void ProcessEngine_OnCliOutputLine(string line)
+        {
+            Application.Current.Dispatcher.InvokeAsync(() =>
+            {
+                CliLogsTextBox.AppendText(line + Environment.NewLine);
+                CliLogsTextBox.ScrollToEnd();
+            });
+        }
+
+        private void ClearLogs_Click(object sender, RoutedEventArgs e)
+        {
+            CliLogsTextBox.Clear();
         }
 
         private void MainWindowFlyoutsView_Loaded(object sender, RoutedEventArgs e)
