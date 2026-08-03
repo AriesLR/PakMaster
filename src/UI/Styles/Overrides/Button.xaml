@@ -6,15 +6,9 @@
 
     <Style TargetType="{x:Type Button}" BasedOn="{StaticResource {x:Type Button}}">
         <Style.Resources>
-            <SolidColorBrush x:Key="MahApps.Brushes.Button.Border"
-                             Color="{StaticResource MahApps.Colors.Gray7}"
-                             options:Freeze="True" />
-            <SolidColorBrush x:Key="MahApps.Brushes.Button.Border.Focus"
-                             Color="{StaticResource MahApps.Colors.Gray7}"
-                             options:Freeze="True" />
-            <SolidColorBrush x:Key="MahApps.Brushes.Button.Border.MouseOver"
-                             Color="{StaticResource MahApps.Colors.Gray5}"
-                             options:Freeze="True" />
+            <SolidColorBrush x:Key="MahApps.Brushes.Button.Border" Color="{StaticResource MahApps.Colors.Gray7}" options:Freeze="True" />
+            <SolidColorBrush x:Key="MahApps.Brushes.Button.Border.Focus" Color="{StaticResource MahApps.Colors.Gray7}" options:Freeze="True" />
+            <SolidColorBrush x:Key="MahApps.Brushes.Button.Border.MouseOver" Color="{StaticResource MahApps.Colors.Gray5}" options:Freeze="True" />
         </Style.Resources>
     </Style>
 </ResourceDictionary>

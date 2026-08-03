@@ -80,5 +80,27 @@
         <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Controls/CrashReporter.xaml" />
 
         <!--  ************* CONTROL STYLES END *************  -->
+
+        <!--  ************* STYLE OVERRIDES START *************  -->
+
+        <!-- Button -->
+        <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Overrides/Button.xaml" />
+
+        <!-- ComboBox -->
+        <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Overrides/ComboBox.xaml" />
+
+        <!-- TextBox -->
+        <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Overrides/TextBox.xaml" />
+
+        <!-- ToastStyle -->
+        <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Overrides/ToastStyle.xaml" />
+
+        <!-- ToggleSwitch -->
+        <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Overrides/ToggleSwitch.xaml" />
+
+        <!-- CheckBox -->
+        <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Overrides/CheckBox.xaml" />
+
+        <!--  ************* STYLE OVERRIDES END *************  -->
     </ResourceDictionary.MergedDictionaries>
 </ResourceDictionary>
