@@ -16,24 +16,12 @@ namespace PakMaster.UI.State
             // Top Menu Items
             MenuItems =
             [
-                /*new SidebarModel
-                {
-                    TextGetter = () => Lang.AESKeys_Title,
-                    Icon = "ShieldKey",
-                    Command = new RelayCommand((sender, e) => SidebarAESKeys_Click(sender, e))
-                },
                 new SidebarModel
                 {
-                    TextGetter = () => Lang.RepakSettings_Title,
-                    Icon = "AlphaRBox",
-                    Command = new RelayCommand((sender, e) => SidebarRepakSettings_Click(sender, e))
-                },
-                new SidebarModel
-                {
-                    TextGetter = () => Lang.ZenToolsSettings_Title,
-                    Icon = "AlphaZBox",
-                    Command = new RelayCommand((sender, e) => SidebarZenToolsSettings_Click(sender, e))
-                }*/
+                    TextGetter = () => Lang.CliLogs_Title,
+                    Icon = "ClipboardTextMultiple",
+                    Command = new RelayCommand((sender, e) => SidebarCliLogs_Click(sender, e))
+                }
             ];
 
             // Bottom Menu Items

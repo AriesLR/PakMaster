@@ -27,7 +27,7 @@
 
                                        ItemTemplate="{DynamicResource MenuTemplate}"
                                        ItemContainerStyle="{DynamicResource ItemStyle}"
-                                       ItemsSource="{x:Null}"
+                                       ItemsSource="{Binding MenuItems}"
 
                                        OptionsItemTemplate="{DynamicResource MenuTemplate}"
                                        OptionsItemContainerStyle="{DynamicResource ItemStyle}"
