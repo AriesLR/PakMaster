@@ -123,9 +123,6 @@
   <data name="AppSettings_Section_Appearance" xml:space="preserve">
     <value>المظهر</value>
   </data>
-  <data name="AppSettings_Lbl_Language" xml:space="preserve">
-    <value>اللغة</value>
-  </data>
   <data name="AppSettings_Desc_Language" xml:space="preserve">
     <value>اختر اللغة المستخدمة في التطبيق.
 
@@ -558,6 +555,9 @@
   <data name="RepakSettings_Write" xml:space="preserve">
     <value>اكتب</value>
   </data>
+  <data name="CliLogs_Title" xml:space="preserve">
+    <value>مخرجات CLI</value>
+  </data>
   <data name="CliLogs_ClearLogs" xml:space="preserve">
     <value>مسح السجلات</value>
   </data>
@@ -872,7 +872,7 @@
   <data name="DependencyDownloadsComplete" xml:space="preserve">
     <value>اكتمل تنزيل المكونات التبعية!</value>
   </data>
-  <data name="CliLogs_Title" xml:space="preserve">
-    <value>مخرجات CLI</value>
+  <data name="AppSettings_Lbl_Language" xml:space="preserve">
+    <value>اللغة*</value>
   </data>
 </root>

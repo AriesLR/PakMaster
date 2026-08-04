@@ -123,9 +123,6 @@
   <data name="AppSettings_Section_Appearance" xml:space="preserve">
     <value>দৃষ্টি</value>
   </data>
-  <data name="AppSettings_Lbl_Language" xml:space="preserve">
-    <value>ভাষা</value>
-  </data>
   <data name="AppSettings_Desc_Language" xml:space="preserve">
     <value>অ্যাপ্লিকেশন জুড়ে ব্যবহৃত ভাষা নির্বাচন করুন।
 
@@ -558,6 +555,9 @@
   <data name="RepakSettings_Write" xml:space="preserve">
     <value>লিখুন</value>
   </data>
+  <data name="CliLogs_Title" xml:space="preserve">
+    <value>কমান্ড লাইন ইন্টারফেসের আউটপুট</value>
+  </data>
   <data name="CliLogs_ClearLogs" xml:space="preserve">
     <value>লগসমূহ মুছুন</value>
   </data>
@@ -872,7 +872,7 @@
   <data name="DependencyDownloadsComplete" xml:space="preserve">
     <value>নির্ভরতা ডাউনলোড সম্পন্ন!</value>
   </data>
-  <data name="CliLogs_Title" xml:space="preserve">
-    <value>কমান্ড লাইন ইন্টারফেসের আউটপুট</value>
+  <data name="AppSettings_Lbl_Language" xml:space="preserve">
+    <value>ভাষা*</value>
   </data>
 </root>

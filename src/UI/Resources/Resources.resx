@@ -126,7 +126,7 @@
     <comment>Appearance section</comment>
   </data>
   <data name="AppSettings_Lbl_Language" xml:space="preserve">
-    <value>Language</value>
+    <value>Language*</value>
     <comment>Language dropdown label</comment>
   </data>
   <data name="AppSettings_Desc_Language" xml:space="preserve">

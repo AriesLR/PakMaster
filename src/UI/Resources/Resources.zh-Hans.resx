@@ -123,9 +123,6 @@
   <data name="AppSettings_Section_Appearance" xml:space="preserve">
     <value>外观</value>
   </data>
-  <data name="AppSettings_Lbl_Language" xml:space="preserve">
-    <value>语言</value>
-  </data>
   <data name="AppSettings_Desc_Language" xml:space="preserve">
     <value>请选择应用程序中使用的语言。
 
@@ -558,6 +555,9 @@
   <data name="RepakSettings_Write" xml:space="preserve">
     <value>写</value>
   </data>
+  <data name="CliLogs_Title" xml:space="preserve">
+    <value>CLI 输出</value>
+  </data>
   <data name="CliLogs_ClearLogs" xml:space="preserve">
     <value>清除日志</value>
   </data>
@@ -872,7 +872,7 @@
   <data name="DependencyDownloadsComplete" xml:space="preserve">
     <value>依赖项下载已完成！</value>
   </data>
-  <data name="CliLogs_Title" xml:space="preserve">
-    <value>CLI 输出</value>
+  <data name="AppSettings_Lbl_Language" xml:space="preserve">
+    <value>语言*</value>
   </data>
 </root>

@@ -566,7 +566,7 @@ namespace PakMaster.UI.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Language.
+        ///   Looks up a localized string similar to Language*.
         /// </summary>
         public static string AppSettings_Lbl_Language {
             get {

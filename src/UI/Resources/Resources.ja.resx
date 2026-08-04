@@ -123,9 +123,6 @@
   <data name="AppSettings_Section_Appearance" xml:space="preserve">
     <value>外観</value>
   </data>
-  <data name="AppSettings_Lbl_Language" xml:space="preserve">
-    <value>言語</value>
-  </data>
   <data name="AppSettings_Desc_Language" xml:space="preserve">
     <value>アプリケーション全体で使用する言語を選択してください。
 
@@ -558,6 +555,9 @@
   <data name="RepakSettings_Write" xml:space="preserve">
     <value>書く</value>
   </data>
+  <data name="CliLogs_Title" xml:space="preserve">
+    <value>CLIの出力</value>
+  </data>
   <data name="CliLogs_ClearLogs" xml:space="preserve">
     <value>ログを消去する</value>
   </data>
@@ -872,7 +872,7 @@ PakMasterは、依存関係が揃っていないと動作しません。</value>
   <data name="DependencyDownloadsComplete" xml:space="preserve">
     <value>依存関係のダウンロードが完了しました！</value>
   </data>
-  <data name="CliLogs_Title" xml:space="preserve">
-    <value>CLIの出力</value>
+  <data name="AppSettings_Lbl_Language" xml:space="preserve">
+    <value>言語*</value>
   </data>
 </root>

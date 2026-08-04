@@ -123,9 +123,6 @@
   <data name="AppSettings_Section_Appearance" xml:space="preserve">
     <value>Aspecto</value>
   </data>
-  <data name="AppSettings_Lbl_Language" xml:space="preserve">
-    <value>Idioma</value>
-  </data>
   <data name="AppSettings_Desc_Language" xml:space="preserve">
     <value>Elige el idioma que se utilizará en toda la aplicación.
 
@@ -558,6 +555,9 @@ Ruta: {0}</value>
   <data name="RepakSettings_Write" xml:space="preserve">
     <value>Escribir</value>
   </data>
+  <data name="CliLogs_Title" xml:space="preserve">
+    <value>Salida de la CLI</value>
+  </data>
   <data name="CliLogs_ClearLogs" xml:space="preserve">
     <value>Borrar registros</value>
   </data>
@@ -872,7 +872,7 @@ PakMaster no funcionará sin las dependencias.</value>
   <data name="DependencyDownloadsComplete" xml:space="preserve">
     <value>¡Se han completado las descargas de las dependencias!</value>
   </data>
-  <data name="CliLogs_Title" xml:space="preserve">
-    <value>Salida de la CLI</value>
+  <data name="AppSettings_Lbl_Language" xml:space="preserve">
+    <value>Idioma*</value>
   </data>
 </root>
