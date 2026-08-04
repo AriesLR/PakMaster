@@ -126,6 +126,11 @@
   <data name="AppSettings_Lbl_Language" xml:space="preserve">
     <value>भाषा</value>
   </data>
+  <data name="AppSettings_Desc_Language" xml:space="preserve">
+    <value>अनुप्रयोग में उपयोग की जाने वाली भाषा चुनें।
+
+*अनुवाद सटीक नहीं हो सकते हैं, अंग्रेज़ी ही एकमात्र आधिकारिक रूप से समर्थित भाषा है।</value>
+  </data>
   <data name="AppSettings_Lbl_AccentColor" xml:space="preserve">
     <value>उल्लेखनीय रंग</value>
   </data>
@@ -553,9 +558,6 @@
   <data name="RepakSettings_Write" xml:space="preserve">
     <value>लिखें</value>
   </data>
-  <data name="CliLogs_Title" xml:space="preserve">
-    <value>क्लि लॉग्स</value>
-  </data>
   <data name="CliLogs_ClearLogs" xml:space="preserve">
     <value>लॉग्स साफ़ करें</value>
   </data>
@@ -823,11 +825,6 @@
   <data name="SelectAFolderForOutput" xml:space="preserve">
     <value>आउटपुट के लिए एक फ़ोल्डर चुनें</value>
   </data>
-  <data name="AppSettings_Desc_Language" xml:space="preserve">
-    <value>अनुप्रयोग में उपयोग की जाने वाली भाषा चुनें।
-
-*अनुवाद सटीक नहीं हो सकते हैं, अंग्रेज़ी ही एकमात्र आधिकारिक रूप से समर्थित भाषा है।</value>
-  </data>
   <data name="ErrorRunningCommand" xml:space="preserve">
     <value>कमांड चलाने में त्रुटि:</value>
   </data>
@@ -874,5 +871,8 @@
   </data>
   <data name="DependencyDownloadsComplete" xml:space="preserve">
     <value>निर्भरता डाउनलोड पूरी हो गई!</value>
+  </data>
+  <data name="CliLogs_Title" xml:space="preserve">
+    <value>सीएलआई आउटपुट</value>
   </data>
 </root>

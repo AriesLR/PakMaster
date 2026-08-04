@@ -126,6 +126,11 @@
   <data name="AppSettings_Lbl_Language" xml:space="preserve">
     <value>Язык</value>
   </data>
+  <data name="AppSettings_Desc_Language" xml:space="preserve">
+    <value>Выберите язык, который будет использоваться во всем приложении.
+
+*Переводы могут быть неточными; английский язык является единственным официально поддерживаемым языком.</value>
+  </data>
   <data name="AppSettings_Lbl_AccentColor" xml:space="preserve">
     <value>Акцентный цвет</value>
   </data>
@@ -553,9 +558,6 @@
   <data name="RepakSettings_Write" xml:space="preserve">
     <value>Написать</value>
   </data>
-  <data name="CliLogs_Title" xml:space="preserve">
-    <value>Журналы Cli</value>
-  </data>
   <data name="CliLogs_ClearLogs" xml:space="preserve">
     <value>Очистить журналы</value>
   </data>
@@ -823,11 +825,6 @@
   <data name="SelectAFolderForOutput" xml:space="preserve">
     <value>Выберите папку для сохранения</value>
   </data>
-  <data name="AppSettings_Desc_Language" xml:space="preserve">
-    <value>Выберите язык, который будет использоваться во всем приложении.
-
-*Переводы могут быть неточными; английский язык является единственным официально поддерживаемым языком.</value>
-  </data>
   <data name="ErrorRunningCommand" xml:space="preserve">
     <value>Ошибка при выполнении команды:</value>
   </data>
@@ -874,5 +871,8 @@ PakMaster не будет работать без этих компоненто�
   </data>
   <data name="DependencyDownloadsComplete" xml:space="preserve">
     <value>Загрузка зависимостей завершена!</value>
+  </data>
+  <data name="CliLogs_Title" xml:space="preserve">
+    <value>Вывод CLI</value>
   </data>
 </root>

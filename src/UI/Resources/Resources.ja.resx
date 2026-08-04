@@ -126,6 +126,11 @@
   <data name="AppSettings_Lbl_Language" xml:space="preserve">
     <value>言語</value>
   </data>
+  <data name="AppSettings_Desc_Language" xml:space="preserve">
+    <value>アプリケーション全体で使用する言語を選択してください。
+
+*翻訳には不正確な部分がある可能性があります。公式にサポートされている言語は英語のみです。</value>
+  </data>
   <data name="AppSettings_Lbl_AccentColor" xml:space="preserve">
     <value>アクセントカラー</value>
   </data>
@@ -553,9 +558,6 @@
   <data name="RepakSettings_Write" xml:space="preserve">
     <value>書く</value>
   </data>
-  <data name="CliLogs_Title" xml:space="preserve">
-    <value>Cli ログ</value>
-  </data>
   <data name="CliLogs_ClearLogs" xml:space="preserve">
     <value>ログを消去する</value>
   </data>
@@ -823,11 +825,6 @@
   <data name="SelectAFolderForOutput" xml:space="preserve">
     <value>出力先のフォルダを選択してください</value>
   </data>
-  <data name="AppSettings_Desc_Language" xml:space="preserve">
-    <value>アプリケーション全体で使用する言語を選択してください。
-
-*翻訳には不正確な部分がある可能性があります。公式にサポートされている言語は英語のみです。</value>
-  </data>
   <data name="ErrorRunningCommand" xml:space="preserve">
     <value>コマンドの実行中にエラーが発生しました：</value>
   </data>
@@ -874,5 +871,8 @@ PakMasterは、依存関係が揃っていないと動作しません。</value>
   </data>
   <data name="DependencyDownloadsComplete" xml:space="preserve">
     <value>依存関係のダウンロードが完了しました！</value>
+  </data>
+  <data name="CliLogs_Title" xml:space="preserve">
+    <value>CLIの出力</value>
   </data>
 </root>

@@ -126,6 +126,11 @@
   <data name="AppSettings_Lbl_Language" xml:space="preserve">
     <value>Мова</value>
   </data>
+  <data name="AppSettings_Desc_Language" xml:space="preserve">
+    <value>Виберіть мову, яка використовується в додатку.
+
+*Переклади можуть бути неточними; англійська — єдина офіційно підтримувана мова.</value>
+  </data>
   <data name="AppSettings_Lbl_AccentColor" xml:space="preserve">
     <value>Акцентний колір</value>
   </data>
@@ -553,9 +558,6 @@
   <data name="RepakSettings_Write" xml:space="preserve">
     <value>Написати</value>
   </data>
-  <data name="CliLogs_Title" xml:space="preserve">
-    <value>Журнали Cli</value>
-  </data>
   <data name="CliLogs_ClearLogs" xml:space="preserve">
     <value>Очистити журнали</value>
   </data>
@@ -823,11 +825,6 @@
   <data name="SelectAFolderForOutput" xml:space="preserve">
     <value>Виберіть папку для збереження</value>
   </data>
-  <data name="AppSettings_Desc_Language" xml:space="preserve">
-    <value>Виберіть мову, яка використовується в додатку.
-
-*Переклади можуть бути неточними; англійська — єдина офіційно підтримувана мова.</value>
-  </data>
   <data name="ErrorRunningCommand" xml:space="preserve">
     <value>Помилка під час виконання команди:</value>
   </data>
@@ -874,5 +871,8 @@ PakMaster не працюватиме без цих залежностей.</val
   </data>
   <data name="DependencyDownloadsComplete" xml:space="preserve">
     <value>Завантаження залежностей завершено!</value>
+  </data>
+  <data name="CliLogs_Title" xml:space="preserve">
+    <value>Вивід командного рядка</value>
   </data>
 </root>

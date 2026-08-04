@@ -126,6 +126,11 @@
   <data name="AppSettings_Lbl_Language" xml:space="preserve">
     <value>ভাষা</value>
   </data>
+  <data name="AppSettings_Desc_Language" xml:space="preserve">
+    <value>অ্যাপ্লিকেশন জুড়ে ব্যবহৃত ভাষা নির্বাচন করুন।
+
+*অনুবাদগুলি সঠিক নাও হতে পারে, ইংরেজিই একমাত্র আনুষ্ঠানিকভাবে সমর্থিত ভাষা।</value>
+  </data>
   <data name="AppSettings_Lbl_AccentColor" xml:space="preserve">
     <value>হাইলাইট রঙ</value>
   </data>
@@ -553,9 +558,6 @@
   <data name="RepakSettings_Write" xml:space="preserve">
     <value>লিখুন</value>
   </data>
-  <data name="CliLogs_Title" xml:space="preserve">
-    <value>ক্লি লগস</value>
-  </data>
   <data name="CliLogs_ClearLogs" xml:space="preserve">
     <value>লগসমূহ মুছুন</value>
   </data>
@@ -823,11 +825,6 @@
   <data name="SelectAFolderForOutput" xml:space="preserve">
     <value>আউটপুটের জন্য একটি ফোল্ডার নির্বাচন করুন</value>
   </data>
-  <data name="AppSettings_Desc_Language" xml:space="preserve">
-    <value>অ্যাপ্লিকেশন জুড়ে ব্যবহৃত ভাষা নির্বাচন করুন।
-
-*অনুবাদগুলি সঠিক নাও হতে পারে, ইংরেজিই একমাত্র আনুষ্ঠানিকভাবে সমর্থিত ভাষা।</value>
-  </data>
   <data name="ErrorRunningCommand" xml:space="preserve">
     <value>কমান্ড চালানোর সময় ত্রুটি:</value>
   </data>
@@ -874,5 +871,8 @@
   </data>
   <data name="DependencyDownloadsComplete" xml:space="preserve">
     <value>নির্ভরতা ডাউনলোড সম্পন্ন!</value>
+  </data>
+  <data name="CliLogs_Title" xml:space="preserve">
+    <value>কমান্ড লাইন ইন্টারফেসের আউটপুট</value>
   </data>
 </root>

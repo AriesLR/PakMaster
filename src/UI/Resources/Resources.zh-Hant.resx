@@ -126,6 +126,11 @@
   <data name="AppSettings_Lbl_Language" xml:space="preserve">
     <value>语言</value>
   </data>
+  <data name="AppSettings_Desc_Language" xml:space="preserve">
+    <value>請選擇應用程式中使用的語言。
+
+*翻譯內容可能不盡準確，英文是唯一官方支援的語言。</value>
+  </data>
   <data name="AppSettings_Lbl_AccentColor" xml:space="preserve">
     <value>点缀色</value>
   </data>
@@ -553,9 +558,6 @@
   <data name="RepakSettings_Write" xml:space="preserve">
     <value>写</value>
   </data>
-  <data name="CliLogs_Title" xml:space="preserve">
-    <value>Cli 日誌</value>
-  </data>
   <data name="CliLogs_ClearLogs" xml:space="preserve">
     <value>清除日誌</value>
   </data>
@@ -823,11 +825,6 @@
   <data name="SelectAFolderForOutput" xml:space="preserve">
     <value>選擇輸出資料夾</value>
   </data>
-  <data name="AppSettings_Desc_Language" xml:space="preserve">
-    <value>請選擇應用程式中使用的語言。
-
-*翻譯內容可能不盡準確，英文是唯一官方支援的語言。</value>
-  </data>
   <data name="ErrorRunningCommand" xml:space="preserve">
     <value>執行指令時發生錯誤：</value>
   </data>
@@ -874,5 +871,8 @@
   </data>
   <data name="DependencyDownloadsComplete" xml:space="preserve">
     <value>依賴項下載完成！</value>
+  </data>
+  <data name="CliLogs_Title" xml:space="preserve">
+    <value>CLI 輸出</value>
   </data>
 </root>

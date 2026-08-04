@@ -719,7 +719,7 @@ namespace PakMaster.UI.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Cli Logs.
+        ///   Looks up a localized string similar to CLI Output.
         /// </summary>
         public static string CliLogs_Title {
             get {

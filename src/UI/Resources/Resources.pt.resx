@@ -126,6 +126,11 @@
   <data name="AppSettings_Lbl_Language" xml:space="preserve">
     <value>Idioma</value>
   </data>
+  <data name="AppSettings_Desc_Language" xml:space="preserve">
+    <value>Escolha o idioma a utilizar em toda a aplicação.
+
+*As traduções podem não ser precisas; o inglês é o único idioma oficialmente suportado.</value>
+  </data>
   <data name="AppSettings_Lbl_AccentColor" xml:space="preserve">
     <value>Cor de destaque</value>
   </data>
@@ -553,9 +558,6 @@ Caminho: {0}</value>
   <data name="RepakSettings_Write" xml:space="preserve">
     <value>Escrever</value>
   </data>
-  <data name="CliLogs_Title" xml:space="preserve">
-    <value>Registos do Cli</value>
-  </data>
   <data name="CliLogs_ClearLogs" xml:space="preserve">
     <value>Limpar registos</value>
   </data>
@@ -823,11 +825,6 @@ Caminho: {0}</value>
   <data name="SelectAFolderForOutput" xml:space="preserve">
     <value>Selecione uma pasta para os ficheiros de saída</value>
   </data>
-  <data name="AppSettings_Desc_Language" xml:space="preserve">
-    <value>Escolha o idioma a utilizar em toda a aplicação.
-
-*As traduções podem não ser precisas; o inglês é o único idioma oficialmente suportado.</value>
-  </data>
   <data name="ErrorRunningCommand" xml:space="preserve">
     <value>Erro ao executar o comando:</value>
   </data>
@@ -874,5 +871,8 @@ O PakMaster não funcionará sem as dependências.</value>
   </data>
   <data name="DependencyDownloadsComplete" xml:space="preserve">
     <value>As transferências das dependências estão concluídas!</value>
+  </data>
+  <data name="CliLogs_Title" xml:space="preserve">
+    <value>Saída da CLI</value>
   </data>
 </root>
