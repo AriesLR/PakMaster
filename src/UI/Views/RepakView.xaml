@@ -275,7 +275,15 @@
                     <TextBlock Text="{lex:Loc RetocRepak_CommandPreview}" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" FontSize="16" FontWeight="SemiBold" Margin="0,0,0,10" />
                     <TextBox x:Name="CmdPreviewTextBox" Height="90" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" IsReadOnly="True"
                              FontFamily="Consolas" Foreground="{DynamicResource Alr.Brushes.Yellow100}" Background="{DynamicResource Alr.Brushes.Black.O20}"
-                             BorderBrush="{DynamicResource MahApps.Brushes.Gray.SemiTransparent}" Margin="0,0,0,15" Padding="12" />
+                             Margin="0,0,0,15" Padding="12">
+
+                        <TextBox.Resources>
+                            <SolidColorBrush x:Key="MahApps.Brushes.TextBox.Border.MouseOver" Color="{StaticResource MahApps.Colors.Gray.SemiTransparent}" />
+                            <SolidColorBrush x:Key="MahApps.Brushes.TextBox.Border.Focus" Color="{StaticResource MahApps.Colors.Gray.SemiTransparent}" />
+                            <SolidColorBrush x:Key="MahApps.Brushes.TextBox.Border" Color="{StaticResource MahApps.Colors.Gray.SemiTransparent}" />
+                        </TextBox.Resources>
+                        
+                    </TextBox>
                     <Grid>
                         <Button Height="45" Background="Transparent" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Click="ExecuteCommand_Click">
                             <TextBlock Text="{lex:Loc RetocRepak_ExecuteCommand}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="Bold" FontSize="14" HorizontalAlignment="Center" VerticalAlignment="Center" />
