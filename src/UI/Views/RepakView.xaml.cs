@@ -261,70 +261,7 @@ namespace PakMaster.UI.Views
             AesKeyGroup?.Visibility = Visibility.Visible;
             GlobalOptionsGroup?.Visibility = Visibility.Visible;
 
-            string finalCmd = "repak.exe";
-
-            if (!string.IsNullOrWhiteSpace(aesKey)) finalCmd += $" --aes-key {aesKey}";
-
-            finalCmd += $" {cmd}";
-
-            if (isPack)
-            {
-                if (!string.IsNullOrWhiteSpace(mountPoint)) finalCmd += $" --mount-point \"{mountPoint}\"";
-                if (!string.IsNullOrWhiteSpace(repakVersion)) finalCmd += $" --version {repakVersion}";
-                if (!string.IsNullOrWhiteSpace(compression)) finalCmd += $" --compression {compression}";
-                if (!string.IsNullOrWhiteSpace(pathHashSeed)) finalCmd += $" --path-hash-seed {pathHashSeed}";
-                if (verbose) finalCmd += " --verbose";
-                if (quiet) finalCmd += " --quiet";
-            }
-            else if (isUnpack)
-            {
-                string modifiedOutputPath = outputPath;
-                if (!string.IsNullOrWhiteSpace(inputPath) && !string.IsNullOrWhiteSpace(modifiedOutputPath))
-                {
-                    string pakName = Path.GetFileNameWithoutExtension(inputPath);
-                    modifiedOutputPath = Path.Combine(modifiedOutputPath, pakName);
-                }
-
-                if (!string.IsNullOrWhiteSpace(modifiedOutputPath)) finalCmd += $" --output \"{modifiedOutputPath}\"";
-                if (!string.IsNullOrWhiteSpace(stripPrefix)) finalCmd += $" --strip-prefix \"{stripPrefix}\"";
-                if (force) finalCmd += " --force";
-                if (!string.IsNullOrWhiteSpace(includeStr))
-                {
-                    var includes = includeStr.Split([',', ';'], StringSplitOptions.RemoveEmptyEntries);
-                    foreach (var inc in includes)
-                    {
-                        finalCmd += $" --include \"{inc.Trim()}\"";
-                    }
-                }
-                if (verbose) finalCmd += " --verbose";
-                if (quiet) finalCmd += " --quiet";
-            }
-            else if (new[] { "list", "hash-list", "get" }.Contains(cmd))
-            {
-                if (!string.IsNullOrWhiteSpace(stripPrefix)) finalCmd += $" --strip-prefix \"{stripPrefix}\"";
-            }
-
-            if (!string.IsNullOrWhiteSpace(inputPath)) finalCmd += $" \"{inputPath}\"";
-
-            if (isGet && !string.IsNullOrWhiteSpace(getFile))
-            {
-                finalCmd += $" \"{getFile}\"";
-            }
-            else if (isPack && !string.IsNullOrWhiteSpace(outputPath))
-            {
-                string modifiedOutputPath = outputPath;
-                if (Directory.Exists(modifiedOutputPath))
-                {
-                    if (!string.IsNullOrWhiteSpace(inputPath))
-                    {
-                        string dirName = Path.GetFileName(inputPath.TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar));
-                        modifiedOutputPath = Path.Combine(modifiedOutputPath, dirName + ".pak");
-                    }
-                }
-                finalCmd += $" \"{modifiedOutputPath}\"";
-            }
-
-            CmdPreviewTextBox.Text = finalCmd;
+            CmdPreviewTextBox.Text = PakMaster.Core.Engines.RepakEngine.BuildCommandString(settings);
         }
 
         private void BrowseInputFolder_Click(object sender, RoutedEventArgs e)

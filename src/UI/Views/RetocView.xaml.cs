@@ -573,81 +573,9 @@ namespace PakMaster.UI.Views
             DebugCheckBox?.Visibility = needsDebugParallel ? Visibility.Visible : Visibility.Collapsed;
             NoParallelCheckBox?.Visibility = needsDebugParallel ? Visibility.Visible : Visibility.Collapsed;
 
-            bool hasGlobal = true;
             GlobalOptionsGroup?.Visibility = Visibility.Visible;
 
-            string finalCmd = "retoc.exe";
-
-            if (hasGlobal)
-            {
-                if (!string.IsNullOrWhiteSpace(aesKey)) finalCmd += $" -a \"{aesKey}\"";
-                if (!string.IsNullOrWhiteSpace(headerVer)) finalCmd += $" --override-container-header-version {headerVer}";
-                if (!string.IsNullOrWhiteSpace(tocVer)) finalCmd += $" --override-toc-version {tocVer}";
-            }
-
-            finalCmd += $" {cmd}";
-
-            if (cmd == "list")
-            {
-                if (listAll) finalCmd += " --all";
-                if (listHash) finalCmd += " --hash";
-                if (listPackage) finalCmd += " --package";
-                if (listSize) finalCmd += " --size";
-                if (listPath) finalCmd += " --path";
-                if (listStore) finalCmd += " --store";
-            }
-
-            if (needsEngineVer && !string.IsNullOrWhiteSpace(engineVer)) finalCmd += $" --version {engineVer}";
-            if (needsFilter && !string.IsNullOrWhiteSpace(filterStr)) finalCmd += $" --filter \"{filterStr}\"";
-            if (needsVerbose && verbose) finalCmd += " -v";
-
-            if (cmd == "to-legacy")
-            {
-                if (!string.IsNullOrWhiteSpace(scriptCell)) finalCmd += $" --script-cell \"{scriptCell}\"";
-                if (noAssets) finalCmd += " --no-assets";
-                if (noShaders) finalCmd += " --no-shaders";
-                if (noScriptObjects) finalCmd += " --no-script-objects";
-                if (noCompressShaders) finalCmd += " --no-compres-shaders";
-                if (dryRun) finalCmd += " -d";
-            }
-            else if (cmd == "to-zen")
-            {
-                if (!string.IsNullOrWhiteSpace(scriptCell)) finalCmd += $" --script-cell \"{scriptCell}\"";
-            }
-
-            if (needsDebugParallel)
-            {
-                if (debug) finalCmd += " --debug";
-                if (noParallel) finalCmd += " --no-parallel";
-            }
-
-            if (!string.IsNullOrWhiteSpace(inputPath)) finalCmd += $" \"{inputPath}\"";
-
-            if (cmd == "get" && !string.IsNullOrWhiteSpace(targetId)) finalCmd += $" \"{targetId}\"";
-
-            if (cmd == "dump-test" && !string.IsNullOrWhiteSpace(outputPath)) finalCmd += $" \"{outputPath}\"";
-            if (cmd == "dump-test" && !string.IsNullOrWhiteSpace(targetId)) finalCmd += $" \"{targetId}\"";
-
-            if (cmd != "dump-test" && needsOutput && !string.IsNullOrWhiteSpace(outputPath))
-            {
-                string modifiedOutputPath = outputPath;
-
-                bool shouldAppend = (cmd == "unpack" || cmd == "unpack-raw");
-                if ((cmd == "to-legacy" || cmd == "to-zen") && string.IsNullOrEmpty(Path.GetExtension(modifiedOutputPath))) 
-                {
-                    shouldAppend = true;
-                }
-
-                if (shouldAppend && !string.IsNullOrWhiteSpace(inputPath))
-                {
-                    string baseName = Path.GetFileNameWithoutExtension(inputPath.TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar));
-                    modifiedOutputPath = Path.Combine(modifiedOutputPath, baseName);
-                }
-
-                finalCmd += $" \"{modifiedOutputPath}\"";
-            }
-
-            CmdPreviewTextBox.Text = finalCmd;
+            CmdPreviewTextBox.Text = PakMaster.Core.Engines.RetocEngine.BuildCommandString(settings);
         }
 
         private void BrowseInputFile_Click(object sender, RoutedEventArgs e)
