@@ -628,7 +628,24 @@ namespace PakMaster.UI.Views
             if (cmd == "dump-test" && !string.IsNullOrWhiteSpace(outputPath)) finalCmd += $" \"{outputPath}\"";
             if (cmd == "dump-test" && !string.IsNullOrWhiteSpace(targetId)) finalCmd += $" \"{targetId}\"";
 
-            if (cmd != "dump-test" && needsOutput && !string.IsNullOrWhiteSpace(outputPath)) finalCmd += $" \"{outputPath}\"";
+            if (cmd != "dump-test" && needsOutput && !string.IsNullOrWhiteSpace(outputPath))
+            {
+                string modifiedOutputPath = outputPath;
+
+                bool shouldAppend = (cmd == "unpack" || cmd == "unpack-raw");
+                if ((cmd == "to-legacy" || cmd == "to-zen") && string.IsNullOrEmpty(Path.GetExtension(modifiedOutputPath))) 
+                {
+                    shouldAppend = true;
+                }
+
+                if (shouldAppend && !string.IsNullOrWhiteSpace(inputPath))
+                {
+                    string baseName = Path.GetFileNameWithoutExtension(inputPath.TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar));
+                    modifiedOutputPath = Path.Combine(modifiedOutputPath, baseName);
+                }
+
+                finalCmd += $" \"{modifiedOutputPath}\"";
+            }
 
             CmdPreviewTextBox.Text = finalCmd;
         }
