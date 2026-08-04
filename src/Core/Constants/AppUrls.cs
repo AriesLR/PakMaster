@@ -14,7 +14,7 @@ namespace PakMaster.Core.Constants
         public const string GithubRepoUrl = "https://github.com/AriesLR/PakMaster";
 
         // GitHub Issues URL
-        public const string GithubIssuesUrl = "https://github.com/AriesLR/PakMaster/issues/new?template=issue---pakmaster.md";
+        public const string GithubIssuesUrl = "https://github.com/AriesLR/PakMaster/issues/new?template=issue.md";
 
         // BuyMeACoffee URL
         public const string BuyMeACoffeeUrl = "https://buymeacoffee.com/arieslr";
