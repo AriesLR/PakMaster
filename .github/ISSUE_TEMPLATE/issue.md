@@ -1,8 +1,8 @@
 ---
-name: Issue - PakMaster
+name: Bug Report
 about: PakMaster
-title: "Unhandled Exception Bug Report"
-labels: ""
+title: "Bug Report - <Short_Description_Here>"
+labels: "bug"
 assignees: AriesLR
 
 ---
