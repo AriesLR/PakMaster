@@ -828,4 +828,51 @@
 
 *翻譯內容可能不盡準確，英文是唯一官方支援的語言。</value>
   </data>
+  <data name="ErrorRunningCommand" xml:space="preserve">
+    <value>執行指令時發生錯誤：</value>
+  </data>
+  <data name="CommandCannotBeEmpty" xml:space="preserve">
+    <value>指令不能為空。</value>
+  </data>
+  <data name="DependencyManager" xml:space="preserve">
+    <value>依賴項管理器</value>
+  </data>
+  <data name="RepakIsMissingNNWouldYouLikeToDownloadItNow" xml:space="preserve">
+    <value>Repak 遺失了。
+
+您現在要下載嗎？</value>
+  </data>
+  <data name="AnUpdateForRepakIsAvailable" xml:space="preserve">
+    <value>Repak 已有更新版本（{0} → {1}）。
+
+您要現在進行更新嗎？</value>
+  </data>
+  <data name="RetocIsMissingNNWouldYouLikeToDownloadItNow" xml:space="preserve">
+    <value>Retoc 缺失。
+
+您要現在下載嗎？</value>
+  </data>
+  <data name="AnUpdateForRetocIsAvailable" xml:space="preserve">
+    <value>Retoc 已有更新版本（{0} → {1}）。
+
+您要現在進行更新嗎？</value>
+  </data>
+  <data name="DownloadingRepakNNPleaseWait" xml:space="preserve">
+    <value>下載 Repak
+
+請稍候...</value>
+  </data>
+  <data name="DownloadingRetocNNPleaseWait" xml:space="preserve">
+    <value>下載 Retoc
+
+請稍候...</value>
+  </data>
+  <data name="MissingDependencies" xml:space="preserve">
+    <value>缺少依賴項！
+
+若缺少這些依賴項，PakMaster 將無法運作。</value>
+  </data>
+  <data name="DependencyDownloadsComplete" xml:space="preserve">
+    <value>依賴項下載完成！</value>
+  </data>
 </root>

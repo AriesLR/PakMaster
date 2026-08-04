@@ -828,4 +828,51 @@
 
 *翻译内容可能不准确，英语是唯一官方支持的语言。</value>
   </data>
+  <data name="ErrorRunningCommand" xml:space="preserve">
+    <value>执行命令时出错：</value>
+  </data>
+  <data name="CommandCannotBeEmpty" xml:space="preserve">
+    <value>命令不能为空。</value>
+  </data>
+  <data name="DependencyManager" xml:space="preserve">
+    <value>依赖管理器</value>
+  </data>
+  <data name="RepakIsMissingNNWouldYouLikeToDownloadItNow" xml:space="preserve">
+    <value>Repak 缺失。
+
+您现在要下载吗？</value>
+  </data>
+  <data name="AnUpdateForRepakIsAvailable" xml:space="preserve">
+    <value>Repak 已有更新（{0} -&gt; {1}）。
+
+您现在要更新吗？</value>
+  </data>
+  <data name="RetocIsMissingNNWouldYouLikeToDownloadItNow" xml:space="preserve">
+    <value>Retoc 缺失。
+
+您现在要下载吗？</value>
+  </data>
+  <data name="AnUpdateForRetocIsAvailable" xml:space="preserve">
+    <value>Retoc 已有更新（{0} -&gt; {1}）。
+
+您现在要更新吗？</value>
+  </data>
+  <data name="DownloadingRepakNNPleaseWait" xml:space="preserve">
+    <value>下载 Repak
+
+请稍候...</value>
+  </data>
+  <data name="DownloadingRetocNNPleaseWait" xml:space="preserve">
+    <value>下载 Retoc
+
+请稍候...</value>
+  </data>
+  <data name="MissingDependencies" xml:space="preserve">
+    <value>缺少依赖项！
+
+如果没有这些依赖项，PakMaster 将无法运行。</value>
+  </data>
+  <data name="DependencyDownloadsComplete" xml:space="preserve">
+    <value>依赖项下载已完成！</value>
+  </data>
 </root>

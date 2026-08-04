@@ -828,4 +828,51 @@ Phiên bản của bạn: {1}</value>
 
 *Các bản dịch có thể không chính xác; tiếng Anh là ngôn ngữ duy nhất được hỗ trợ chính thức.</value>
   </data>
+  <data name="ErrorRunningCommand" xml:space="preserve">
+    <value>Lỗi khi thực thi lệnh:</value>
+  </data>
+  <data name="CommandCannotBeEmpty" xml:space="preserve">
+    <value>Lệnh không được để trống.</value>
+  </data>
+  <data name="DependencyManager" xml:space="preserve">
+    <value>Trình quản lý phụ thuộc</value>
+  </data>
+  <data name="RepakIsMissingNNWouldYouLikeToDownloadItNow" xml:space="preserve">
+    <value>Repak hiện không có sẵn.
+
+Bạn có muốn tải xuống ngay bây giờ không?</value>
+  </data>
+  <data name="AnUpdateForRepakIsAvailable" xml:space="preserve">
+    <value>Có bản cập nhật cho Repak ({0} -&gt; {1}).
+
+Bạn có muốn cập nhật ngay bây giờ không?</value>
+  </data>
+  <data name="RetocIsMissingNNWouldYouLikeToDownloadItNow" xml:space="preserve">
+    <value>Retoc hiện không có sẵn.
+
+Bạn có muốn tải xuống ngay bây giờ không?</value>
+  </data>
+  <data name="AnUpdateForRetocIsAvailable" xml:space="preserve">
+    <value>Có bản cập nhật cho Retoc ({0} -&gt; {1}).
+
+Bạn có muốn cập nhật ngay bây giờ không?</value>
+  </data>
+  <data name="DownloadingRepakNNPleaseWait" xml:space="preserve">
+    <value>Tải xuống Repak
+
+Vui lòng chờ...</value>
+  </data>
+  <data name="DownloadingRetocNNPleaseWait" xml:space="preserve">
+    <value>Tải xuống Retoc
+
+Vui lòng đợi...</value>
+  </data>
+  <data name="MissingDependencies" xml:space="preserve">
+    <value>Thiếu các thành phần phụ thuộc!
+
+PakMaster sẽ không hoạt động nếu thiếu các thành phần phụ thuộc.</value>
+  </data>
+  <data name="DependencyDownloadsComplete" xml:space="preserve">
+    <value>Việc tải xuống các gói phụ thuộc đã hoàn tất!</value>
+  </data>
 </root>

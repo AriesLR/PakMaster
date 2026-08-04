@@ -828,4 +828,51 @@
 
 *قد تكون الترجمات غير دقيقة، واللغة الإنجليزية هي اللغة الوحيدة المدعومة رسميًا.</value>
   </data>
+  <data name="ErrorRunningCommand" xml:space="preserve">
+    <value>حدث خطأ أثناء تنفيذ الأمر:</value>
+  </data>
+  <data name="CommandCannotBeEmpty" xml:space="preserve">
+    <value>لا يمكن أن يكون الأمر فارغًا.</value>
+  </data>
+  <data name="DependencyManager" xml:space="preserve">
+    <value>مدير التبعيات</value>
+  </data>
+  <data name="RepakIsMissingNNWouldYouLikeToDownloadItNow" xml:space="preserve">
+    <value>برنامج Repak مفقود.
+
+هل ترغب في تنزيله الآن؟</value>
+  </data>
+  <data name="AnUpdateForRepakIsAvailable" xml:space="preserve">
+    <value>يتوفر تحديث لبرنامج Repak ({0} -&gt; {1}).
+
+هل ترغب في تحديثه الآن؟</value>
+  </data>
+  <data name="RetocIsMissingNNWouldYouLikeToDownloadItNow" xml:space="preserve">
+    <value>برنامج Retoc غير موجود.
+
+هل ترغب في تنزيله الآن؟</value>
+  </data>
+  <data name="AnUpdateForRetocIsAvailable" xml:space="preserve">
+    <value>يتوفر تحديث لبرنامج Retoc ({0} -&gt; {1}).
+
+هل ترغب في تحديثه الآن؟</value>
+  </data>
+  <data name="DownloadingRepakNNPleaseWait" xml:space="preserve">
+    <value>تنزيل Repak
+
+يرجى الانتظار...</value>
+  </data>
+  <data name="DownloadingRetocNNPleaseWait" xml:space="preserve">
+    <value>تنزيل Retoc
+
+يرجى الانتظار...</value>
+  </data>
+  <data name="MissingDependencies" xml:space="preserve">
+    <value>التبعيات مفقودة!
+
+لن يعمل برنامج PakMaster بدون التبعيات.</value>
+  </data>
+  <data name="DependencyDownloadsComplete" xml:space="preserve">
+    <value>اكتمل تنزيل المكونات التبعية!</value>
+  </data>
 </root>

@@ -828,4 +828,51 @@
 
 *अनुवाद सटीक नहीं हो सकते हैं, अंग्रेज़ी ही एकमात्र आधिकारिक रूप से समर्थित भाषा है।</value>
   </data>
+  <data name="ErrorRunningCommand" xml:space="preserve">
+    <value>कमांड चलाने में त्रुटि:</value>
+  </data>
+  <data name="CommandCannotBeEmpty" xml:space="preserve">
+    <value>कमांड खाली नहीं हो सकती।</value>
+  </data>
+  <data name="DependencyManager" xml:space="preserve">
+    <value>निर्भरता प्रबंधक</value>
+  </data>
+  <data name="RepakIsMissingNNWouldYouLikeToDownloadItNow" xml:space="preserve">
+    <value>रिपैक गायब है।
+
+क्या आप इसे अभी डाउनलोड करना चाहेंगे?</value>
+  </data>
+  <data name="AnUpdateForRepakIsAvailable" xml:space="preserve">
+    <value>Repak के लिए एक अपडेट उपलब्ध है ({0} -&gt; {1}).
+
+क्या आप इसे अभी अपडेट करना चाहेंगे?</value>
+  </data>
+  <data name="RetocIsMissingNNWouldYouLikeToDownloadItNow" xml:space="preserve">
+    <value>Retoc गायब है।
+
+क्या आप इसे अभी डाउनलोड करना चाहेंगे?</value>
+  </data>
+  <data name="AnUpdateForRetocIsAvailable" xml:space="preserve">
+    <value>Retoc के लिए एक अपडेट उपलब्ध है ({0} -&gt; {1}).
+
+क्या आप इसे अभी अपडेट करना चाहेंगे?</value>
+  </data>
+  <data name="DownloadingRepakNNPleaseWait" xml:space="preserve">
+    <value>रिपैक डाउनलोड हो रहा है
+
+कृपया प्रतीक्षा करें...</value>
+  </data>
+  <data name="DownloadingRetocNNPleaseWait" xml:space="preserve">
+    <value>Retoc डाउनलोड हो रहा है
+
+कृपया प्रतीक्षा करें...</value>
+  </data>
+  <data name="MissingDependencies" xml:space="preserve">
+    <value>अनिवार्य निर्भरताएँ!
+
+निर्भरताओं के बिना PakMaster काम नहीं करेगा।</value>
+  </data>
+  <data name="DependencyDownloadsComplete" xml:space="preserve">
+    <value>निर्भरता डाउनलोड पूरी हो गई!</value>
+  </data>
 </root>

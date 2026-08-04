@@ -828,4 +828,51 @@
 
 *Переклади можуть бути неточними; англійська — єдина офіційно підтримувана мова.</value>
   </data>
+  <data name="ErrorRunningCommand" xml:space="preserve">
+    <value>Помилка під час виконання команди:</value>
+  </data>
+  <data name="CommandCannotBeEmpty" xml:space="preserve">
+    <value>Команда не може бути порожньою.</value>
+  </data>
+  <data name="DependencyManager" xml:space="preserve">
+    <value>Менеджер залежностей</value>
+  </data>
+  <data name="RepakIsMissingNNWouldYouLikeToDownloadItNow" xml:space="preserve">
+    <value>Repak відсутній.
+
+Чи хочете ви завантажити його зараз?</value>
+  </data>
+  <data name="AnUpdateForRepakIsAvailable" xml:space="preserve">
+    <value>Доступне оновлення для Repak ({0} → {1}).
+
+Чи бажаєте ви оновити програму зараз?</value>
+  </data>
+  <data name="RetocIsMissingNNWouldYouLikeToDownloadItNow" xml:space="preserve">
+    <value>Retoc відсутній.
+
+Чи хочете ви завантажити його зараз?</value>
+  </data>
+  <data name="AnUpdateForRetocIsAvailable" xml:space="preserve">
+    <value>Доступне оновлення для Retoc ({0} → {1}).
+
+Чи бажаєте ви оновити програму зараз?</value>
+  </data>
+  <data name="DownloadingRepakNNPleaseWait" xml:space="preserve">
+    <value>Завантаження Repak
+
+Будь ласка, зачекайте...</value>
+  </data>
+  <data name="DownloadingRetocNNPleaseWait" xml:space="preserve">
+    <value>Завантаження Retoc
+
+Будь ласка, зачекайте...</value>
+  </data>
+  <data name="MissingDependencies" xml:space="preserve">
+    <value>Відсутні залежності!
+
+PakMaster не працюватиме без цих залежностей.</value>
+  </data>
+  <data name="DependencyDownloadsComplete" xml:space="preserve">
+    <value>Завантаження залежностей завершено!</value>
+  </data>
 </root>

@@ -907,4 +907,51 @@ Path: {0}</value>
   <data name="SelectAFolderForOutput" xml:space="preserve">
     <value>Select a Folder for Output</value>
   </data>
+  <data name="ErrorRunningCommand" xml:space="preserve">
+    <value>Error running command:</value>
+  </data>
+  <data name="CommandCannotBeEmpty" xml:space="preserve">
+    <value>Command cannot be empty.</value>
+  </data>
+  <data name="DependencyManager" xml:space="preserve">
+    <value>Dependency Manager</value>
+  </data>
+  <data name="RepakIsMissingNNWouldYouLikeToDownloadItNow" xml:space="preserve">
+    <value>Repak is missing.
+
+Would you like to download it now?</value>
+  </data>
+  <data name="AnUpdateForRepakIsAvailable" xml:space="preserve">
+    <value>An update for Repak is available ({0} -&gt; {1}).
+
+Would you like to update it now?</value>
+  </data>
+  <data name="RetocIsMissingNNWouldYouLikeToDownloadItNow" xml:space="preserve">
+    <value>Retoc is missing.
+
+Would you like to download it now?</value>
+  </data>
+  <data name="AnUpdateForRetocIsAvailable" xml:space="preserve">
+    <value>An update for Retoc is available ({0} -&gt; {1}).
+
+Would you like to update it now?</value>
+  </data>
+  <data name="DownloadingRepakNNPleaseWait" xml:space="preserve">
+    <value>Downloading Repak
+
+Please wait...</value>
+  </data>
+  <data name="DownloadingRetocNNPleaseWait" xml:space="preserve">
+    <value>Downloading Retoc
+
+Please wait...</value>
+  </data>
+  <data name="MissingDependencies" xml:space="preserve">
+    <value>Missing Dependencies!
+
+PakMaster will not work without the dependencies.</value>
+  </data>
+  <data name="DependencyDownloadsComplete" xml:space="preserve">
+    <value>Dependency downloads complete!</value>
+  </data>
 </root>

@@ -205,6 +205,28 @@ namespace PakMaster.UI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An update for Repak is available ({0} -&gt; {1}).
+        ///
+        ///Would you like to update it now?.
+        /// </summary>
+        public static string AnUpdateForRepakIsAvailable {
+            get {
+                return ResourceManager.GetString("AnUpdateForRepakIsAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to An update for Retoc is available ({0} -&gt; {1}).
+        ///
+        ///Would you like to update it now?.
+        /// </summary>
+        public static string AnUpdateForRetocIsAvailable {
+            get {
+                return ResourceManager.GetString("AnUpdateForRetocIsAvailable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An instance of this application is already running..
         /// </summary>
         public static string App_Msg_AlreadyRunning_Desc {
@@ -706,6 +728,15 @@ namespace PakMaster.UI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Command cannot be empty..
+        /// </summary>
+        public static string CommandCannotBeEmpty {
+            get {
+                return ResourceManager.GetString("CommandCannotBeEmpty", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Close.
         /// </summary>
         public static string CrashReportWindow_Btn_Close {
@@ -811,6 +842,24 @@ namespace PakMaster.UI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dependency downloads complete!.
+        /// </summary>
+        public static string DependencyDownloadsComplete {
+            get {
+                return ResourceManager.GetString("DependencyDownloadsComplete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Dependency Manager.
+        /// </summary>
+        public static string DependencyManager {
+            get {
+                return ResourceManager.GetString("DependencyManager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to This application requires additional components to function correctly. Do you want to download and install them now?.
         /// </summary>
         public static string DependencyService_Msg_DepsFound_Desc {
@@ -879,6 +928,37 @@ namespace PakMaster.UI.Resources {
         public static string DependencyService_Msg_RestartRequired_Title {
             get {
                 return ResourceManager.GetString("DependencyService_Msg_RestartRequired_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Downloading Repak
+        ///
+        ///Please wait....
+        /// </summary>
+        public static string DownloadingRepakNNPleaseWait {
+            get {
+                return ResourceManager.GetString("DownloadingRepakNNPleaseWait", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Downloading Retoc
+        ///
+        ///Please wait....
+        /// </summary>
+        public static string DownloadingRetocNNPleaseWait {
+            get {
+                return ResourceManager.GetString("DownloadingRetocNNPleaseWait", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Error running command:.
+        /// </summary>
+        public static string ErrorRunningCommand {
+            get {
+                return ResourceManager.GetString("ErrorRunningCommand", resourceCulture);
             }
         }
         
@@ -1173,6 +1253,17 @@ namespace PakMaster.UI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Missing Dependencies!
+        ///
+        ///PakMaster will not work without the dependencies..
+        /// </summary>
+        public static string MissingDependencies {
+            get {
+                return ResourceManager.GetString("MissingDependencies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Error.
         /// </summary>
         public static string Msg_Error_Title {
@@ -1277,6 +1368,17 @@ namespace PakMaster.UI.Resources {
         public static string PATH {
             get {
                 return ResourceManager.GetString("PATH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Repak is missing.
+        ///
+        ///Would you like to download it now?.
+        /// </summary>
+        public static string RepakIsMissingNNWouldYouLikeToDownloadItNow {
+            get {
+                return ResourceManager.GetString("RepakIsMissingNNWouldYouLikeToDownloadItNow", resourceCulture);
             }
         }
         
@@ -1503,6 +1605,17 @@ namespace PakMaster.UI.Resources {
         public static string RepakView_Version {
             get {
                 return ResourceManager.GetString("RepakView_Version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Retoc is missing.
+        ///
+        ///Would you like to download it now?.
+        /// </summary>
+        public static string RetocIsMissingNNWouldYouLikeToDownloadItNow {
+            get {
+                return ResourceManager.GetString("RetocIsMissingNNWouldYouLikeToDownloadItNow", resourceCulture);
             }
         }
         

@@ -828,4 +828,51 @@
 
 *অনুবাদগুলি সঠিক নাও হতে পারে, ইংরেজিই একমাত্র আনুষ্ঠানিকভাবে সমর্থিত ভাষা।</value>
   </data>
+  <data name="ErrorRunningCommand" xml:space="preserve">
+    <value>কমান্ড চালানোর সময় ত্রুটি:</value>
+  </data>
+  <data name="CommandCannotBeEmpty" xml:space="preserve">
+    <value>কমান্ড ফাঁকা হতে পারে না।</value>
+  </data>
+  <data name="DependencyManager" xml:space="preserve">
+    <value>নির্ভরতা ব্যবস্থাপক</value>
+  </data>
+  <data name="RepakIsMissingNNWouldYouLikeToDownloadItNow" xml:space="preserve">
+    <value>Repak অনুপস্থিত।
+
+আপনি কি এখন এটি ডাউনলোড করতে চান?</value>
+  </data>
+  <data name="AnUpdateForRepakIsAvailable" xml:space="preserve">
+    <value>Repak-এর জন্য একটি আপডেট উপলব্ধ আছে ({0} -&gt; {1})।
+
+আপনি কি এখন এটি আপডেট করতে চান?</value>
+  </data>
+  <data name="RetocIsMissingNNWouldYouLikeToDownloadItNow" xml:space="preserve">
+    <value>Retoc অনুপস্থিত।
+
+আপনি কি এখন এটি ডাউনলোড করতে চান?</value>
+  </data>
+  <data name="AnUpdateForRetocIsAvailable" xml:space="preserve">
+    <value>Retoc-এর জন্য একটি আপডেট উপলব্ধ ({0} -&gt; {1})।
+
+আপনি কি এখন এটি আপডেট করতে চান?</value>
+  </data>
+  <data name="DownloadingRepakNNPleaseWait" xml:space="preserve">
+    <value>Repak ডাউনলোড হচ্ছে
+
+অনুগ্রহ করে অপেক্ষা করুন...</value>
+  </data>
+  <data name="DownloadingRetocNNPleaseWait" xml:space="preserve">
+    <value>রেটোক ডাউনলোড হচ্ছে
+
+অনুগ্রহ করে অপেক্ষা করুন...</value>
+  </data>
+  <data name="MissingDependencies" xml:space="preserve">
+    <value>নির্ভরতা অনুপস্থিত!
+
+নির্ভরতা ছাড়া PakMaster কাজ করবে না।</value>
+  </data>
+  <data name="DependencyDownloadsComplete" xml:space="preserve">
+    <value>নির্ভরতা ডাউনলোড সম্পন্ন!</value>
+  </data>
 </root>

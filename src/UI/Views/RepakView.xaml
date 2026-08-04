@@ -273,7 +273,7 @@
             <Border Grid.Row="2" BorderBrush="{DynamicResource MahApps.Brushes.Gray.SemiTransparent}" BorderThickness="0,1,0,0" Margin="0,10,0,0" Padding="0,15,0,0">
                 <StackPanel>
                     <TextBlock Text="{lex:Loc RetocRepak_CommandPreview}" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" FontSize="16" FontWeight="SemiBold" Margin="0,0,0,10" />
-                    <TextBox x:Name="CmdPreviewTextBox" Height="90" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"
+                    <TextBox x:Name="CmdPreviewTextBox" Height="90" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" IsReadOnly="True"
                              FontFamily="Consolas" Foreground="{DynamicResource Alr.Brushes.Yellow100}" Background="{DynamicResource Alr.Brushes.Black.O20}"
                              BorderBrush="{DynamicResource MahApps.Brushes.Gray.SemiTransparent}" Margin="0,0,0,15" Padding="12" />
                     <Grid>

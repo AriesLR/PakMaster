@@ -828,4 +828,51 @@
 
 *翻訳には不正確な部分がある可能性があります。公式にサポートされている言語は英語のみです。</value>
   </data>
+  <data name="ErrorRunningCommand" xml:space="preserve">
+    <value>コマンドの実行中にエラーが発生しました：</value>
+  </data>
+  <data name="CommandCannotBeEmpty" xml:space="preserve">
+    <value>コマンドは空にできません。</value>
+  </data>
+  <data name="DependencyManager" xml:space="preserve">
+    <value>依存関係マネージャー</value>
+  </data>
+  <data name="RepakIsMissingNNWouldYouLikeToDownloadItNow" xml:space="preserve">
+    <value>Repakが見つかりません。
+
+今すぐダウンロードしますか？</value>
+  </data>
+  <data name="AnUpdateForRepakIsAvailable" xml:space="preserve">
+    <value>Repak のアップデートが利用可能です（{0} → {1}）。
+
+今すぐアップデートしますか？</value>
+  </data>
+  <data name="RetocIsMissingNNWouldYouLikeToDownloadItNow" xml:space="preserve">
+    <value>Retocが見つかりません。
+
+今すぐダウンロードしますか？</value>
+  </data>
+  <data name="AnUpdateForRetocIsAvailable" xml:space="preserve">
+    <value>Retocのアップデートが利用可能です（{0} → {1}）。
+
+今すぐアップデートしますか？</value>
+  </data>
+  <data name="DownloadingRepakNNPleaseWait" xml:space="preserve">
+    <value>Repakのダウンロード
+
+しばらくお待ちください...</value>
+  </data>
+  <data name="DownloadingRetocNNPleaseWait" xml:space="preserve">
+    <value>Retocのダウンロード
+
+しばらくお待ちください...</value>
+  </data>
+  <data name="MissingDependencies" xml:space="preserve">
+    <value>依存関係が不足しています！
+
+PakMasterは、依存関係が揃っていないと動作しません。</value>
+  </data>
+  <data name="DependencyDownloadsComplete" xml:space="preserve">
+    <value>依存関係のダウンロードが完了しました！</value>
+  </data>
 </root>

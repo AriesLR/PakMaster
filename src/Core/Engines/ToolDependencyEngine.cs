@@ -151,7 +151,7 @@ namespace PakMaster.Core.Engines
             // Check if repak.exe exists in bin/repak
             if (!CheckIfDependencyExists("repak", "repak.exe"))
             {
-                bool userConfirmed = await MessageManager.ShowYesNo("Dependency Manager", "Repak is missing.\n\nWould you like to download it now?");
+                bool userConfirmed = await MessageManager.ShowYesNo(Lang.DependencyManager, Lang.RepakIsMissingNNWouldYouLikeToDownloadItNow);
 
                 if (userConfirmed)
                 {
@@ -168,7 +168,9 @@ namespace PakMaster.Core.Engines
                 string latestVer = await GetLatestGitHubReleaseTagAsync("trumank/repak");
                 if (!string.IsNullOrEmpty(localVer) && !string.IsNullOrEmpty(latestVer) && localVer != latestVer)
                 {
-                    bool userConfirmed = await MessageManager.ShowYesNo("Dependency Manager", $"An update for Repak is available ({localVer} -> {latestVer}).\n\nWould you like to update it now?");
+                    string message = string.Format(Lang.AnUpdateForRepakIsAvailable, localVer, latestVer);
+
+                    bool userConfirmed = await MessageManager.ShowYesNo(Lang.DependencyManager, message);
                     if (userConfirmed) { repakDownload = true; }
                 }
                 else
@@ -186,7 +188,7 @@ namespace PakMaster.Core.Engines
 
             if (!CheckIfDependencyExists("retoc", retocExeName))
             {
-                bool userConfirmed = await MessageManager.ShowYesNo("Dependency Manager", "Retoc is missing.\n\nWould you like to download it now?");
+                bool userConfirmed = await MessageManager.ShowYesNo(Lang.DependencyManager, Lang.RetocIsMissingNNWouldYouLikeToDownloadItNow);
 
                 if (userConfirmed)
                 {
@@ -203,7 +205,9 @@ namespace PakMaster.Core.Engines
                 string latestVer = await GetLatestGitHubReleaseTagAsync("trumank/retoc");
                 if (!string.IsNullOrEmpty(localVer) && !string.IsNullOrEmpty(latestVer) && localVer != latestVer)
                 {
-                    bool userConfirmed = await MessageManager.ShowYesNo("Dependency Manager", $"An update for Retoc is available ({localVer} -> {latestVer}).\n\nWould you like to update it now?");
+                    string message = string.Format(Lang.AnUpdateForRetocIsAvailable, localVer, latestVer);
+
+                    bool userConfirmed = await MessageManager.ShowYesNo(Lang.DependencyManager, message);
                     if (userConfirmed) { retocDownload = true; }
                 }
                 else
@@ -223,7 +227,7 @@ namespace PakMaster.Core.Engines
 
             if (repakDownload)
             {
-                await MessageManager.ShowProgress("Dependency Manager", "Downloading Repak\n\nPlease wait...", async progress =>
+                await MessageManager.ShowProgress(Lang.DependencyManager, Lang.DownloadingRepakNNPleaseWait, async progress =>
                 {
                     var downloadAll = Task.Run(async () =>
                     {
@@ -263,7 +267,7 @@ namespace PakMaster.Core.Engines
 
             if (retocDownload)
             {
-                await MessageManager.ShowProgress("Dependency Manager", "Downloading Retoc\n\nPlease wait...", async progress =>
+                await MessageManager.ShowProgress(Lang.DependencyManager, Lang.DownloadingRetocNNPleaseWait, async progress =>
                 {
                     var downloadDependency = DependenciesManagerAsync(AppUrls.RetocUrl, "retoc");
 
@@ -280,12 +284,12 @@ namespace PakMaster.Core.Engines
 
             if (missingDependencies)
             {
-                await MessageManager.ShowInfo("Dependency Manager", "Missing Dependencies!\n\nPakMaster will not work without the dependencies.");
+                await MessageManager.ShowInfo(Lang.DependencyManager, Lang.MissingDependencies);
                 Application.Current.Shutdown();
             }
             else if (repakDownloaded || retocDownloaded)
             {
-                await MessageManager.ShowInfo("Dependency Manager", "Dependency downloads complete!");
+                await MessageManager.ShowInfo(Lang.DependencyManager, Lang.DependencyDownloadsComplete);
             }
         }
     }

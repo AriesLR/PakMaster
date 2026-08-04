@@ -828,4 +828,51 @@ Caminho: {0}</value>
 
 *As traduções podem não ser precisas; o inglês é o único idioma oficialmente suportado.</value>
   </data>
+  <data name="ErrorRunningCommand" xml:space="preserve">
+    <value>Erro ao executar o comando:</value>
+  </data>
+  <data name="CommandCannotBeEmpty" xml:space="preserve">
+    <value>O comando não pode estar vazio.</value>
+  </data>
+  <data name="DependencyManager" xml:space="preserve">
+    <value>Gestor de Dependências</value>
+  </data>
+  <data name="RepakIsMissingNNWouldYouLikeToDownloadItNow" xml:space="preserve">
+    <value>O Repak não está instalado.
+
+Deseja descarregá-lo agora?</value>
+  </data>
+  <data name="AnUpdateForRepakIsAvailable" xml:space="preserve">
+    <value>Está disponível uma atualização para o Repak ({0} -&gt; {1}).
+
+Deseja atualizá-lo agora?</value>
+  </data>
+  <data name="RetocIsMissingNNWouldYouLikeToDownloadItNow" xml:space="preserve">
+    <value>O Retoc não está instalado.
+
+Deseja descarregá-lo agora?</value>
+  </data>
+  <data name="AnUpdateForRetocIsAvailable" xml:space="preserve">
+    <value>Está disponível uma atualização para o Retoc ({0} -&gt; {1}).
+
+Deseja atualizá-lo agora?</value>
+  </data>
+  <data name="DownloadingRepakNNPleaseWait" xml:space="preserve">
+    <value>A descarregar o Repak
+
+Por favor, aguarde...</value>
+  </data>
+  <data name="DownloadingRetocNNPleaseWait" xml:space="preserve">
+    <value>A descarregar o Retoc
+
+Por favor, aguarde...</value>
+  </data>
+  <data name="MissingDependencies" xml:space="preserve">
+    <value>Faltam dependências!
+
+O PakMaster não funcionará sem as dependências.</value>
+  </data>
+  <data name="DependencyDownloadsComplete" xml:space="preserve">
+    <value>As transferências das dependências estão concluídas!</value>
+  </data>
 </root>

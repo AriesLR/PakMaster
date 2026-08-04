@@ -13,7 +13,7 @@ namespace PakMaster.Core.Engines
             GLogger.Here().Information("Starting Retoc command execution: {CommandString}", commandString);
             if (string.IsNullOrWhiteSpace(commandString))
             {
-                await MessageManager.ShowWarning("Command cannot be empty.");
+                await MessageManager.ShowWarning(Lang.CommandCannotBeEmpty);
                 return;
             }
 
@@ -26,4 +26,3 @@ namespace PakMaster.Core.Engines
         }
     }
 }
-

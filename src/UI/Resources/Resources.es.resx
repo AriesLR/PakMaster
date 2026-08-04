@@ -828,4 +828,51 @@ Ruta: {0}</value>
 
 *Las traducciones pueden ser inexactas; el inglés es el único idioma oficialmente compatible.</value>
   </data>
+  <data name="ErrorRunningCommand" xml:space="preserve">
+    <value>Error al ejecutar el comando:</value>
+  </data>
+  <data name="CommandCannotBeEmpty" xml:space="preserve">
+    <value>El comando no puede estar vacío.</value>
+  </data>
+  <data name="DependencyManager" xml:space="preserve">
+    <value>Gestor de dependencias</value>
+  </data>
+  <data name="RepakIsMissingNNWouldYouLikeToDownloadItNow" xml:space="preserve">
+    <value>Falta Repak.
+
+¿Quieres descargarlo ahora?</value>
+  </data>
+  <data name="AnUpdateForRepakIsAvailable" xml:space="preserve">
+    <value>Hay una actualización disponible para Repak ({0} -&gt; {1}).
+
+¿Quieres actualizarlo ahora?</value>
+  </data>
+  <data name="RetocIsMissingNNWouldYouLikeToDownloadItNow" xml:space="preserve">
+    <value>Falta Retoc.
+
+¿Quieres descargarlo ahora?</value>
+  </data>
+  <data name="AnUpdateForRetocIsAvailable" xml:space="preserve">
+    <value>Hay una actualización disponible para Retoc ({0} -&gt; {1}).
+
+¿Quieres actualizarlo ahora?</value>
+  </data>
+  <data name="DownloadingRepakNNPleaseWait" xml:space="preserve">
+    <value>Descargando Repak
+
+Por favor, espera...</value>
+  </data>
+  <data name="DownloadingRetocNNPleaseWait" xml:space="preserve">
+    <value>Descargando Retoc
+
+Por favor, espera...</value>
+  </data>
+  <data name="MissingDependencies" xml:space="preserve">
+    <value>¡Faltan dependencias!
+
+PakMaster no funcionará sin las dependencias.</value>
+  </data>
+  <data name="DependencyDownloadsComplete" xml:space="preserve">
+    <value>¡Se han completado las descargas de las dependencias!</value>
+  </data>
 </root>
