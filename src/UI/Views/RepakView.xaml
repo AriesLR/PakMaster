@@ -90,7 +90,7 @@
                             <TextBox x:Name="InputPathTextBox" Text="" mah:TextBoxHelper.Watermark="{lex:Loc RetocView_InputPath}" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
                             <Grid Grid.Column="1">
                                 <Button Width="80" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="BrowseInputFolder_Click">
-                                    <TextBlock Text="{lex:Loc Btn_Browse}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    <TextBlock x:Name="InputBrowseBtnText" Text="{lex:Loc Btn_Browse}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
                                 </Button>
                             </Grid>
                         </Grid>
@@ -105,7 +105,7 @@
                                 <TextBox x:Name="OutputPathTextBox" Text="" mah:TextBoxHelper.Watermark="{lex:Loc RetocView_OutputPath}" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
                                 <Grid Grid.Column="1">
                                     <Button Width="80" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="BrowseOutputFolder_Click">
-                                        <TextBlock Text="{lex:Loc Btn_Browse}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                        <TextBlock x:Name="OutputBrowseBtnText" Text="{lex:Loc Btn_Browse}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
                                     </Button>
                                 </Grid>
                             </Grid>

@@ -248,6 +248,16 @@ namespace PakMaster.UI.Views
             OutputPathGroup?.Visibility = needsOutput ? Visibility.Visible : Visibility.Collapsed;
             GetFileGroup?.Visibility = isGet ? Visibility.Visible : Visibility.Collapsed;
             UnpackOptionsGroup?.Visibility = isUnpack ? Visibility.Visible : Visibility.Collapsed;
+
+            if (InputBrowseBtnText != null)
+            {
+                InputBrowseBtnText.Text = isPack ? Lang.RetocView_Folder : Lang.RetocView_File;
+            }
+            
+            if (OutputBrowseBtnText != null)
+            {
+                OutputBrowseBtnText.Text = isPack ? Lang.RetocView_File : Lang.RetocView_Folder;
+            }
             PackOptionsGroup?.Visibility = isPack ? Visibility.Visible : Visibility.Collapsed;
             StripPrefixGroup?.Visibility = new[] { "unpack", "list", "hash-list", "get" }.Contains(cmd) ? Visibility.Visible : Visibility.Collapsed;
 
