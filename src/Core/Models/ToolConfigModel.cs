@@ -10,6 +10,7 @@ namespace PakMaster.Core.Models
         public RepakGetConfig RepakGet { get; set; } = new();
         public string ActiveRepakCommand { get; set; } = "info";
         public string ActiveRepakBranch { get; set; } = "main";
+        public bool IsRetocViewActive { get; set; } = false;
 
         public string ActiveRetocCommand { get; set; } = "manifest";
         public RetocManifestConfig RetocManifest { get; set; } = new();

@@ -1,5 +1,3 @@
-using PakMaster.UI.Taskbar;
-
 namespace PakMaster
 {
     public partial class MainWindow : MetroWindow
@@ -15,6 +13,19 @@ namespace PakMaster
         {
             Loaded -= MainWindow_Loaded;
             TrayIconManager.UpdateTrayIconVisibility();
+
+            if (ViewSwitcherToggle != null)
+            {
+                ViewSwitcherToggle.IsOn = ConfigManager.CurrentSettings.IsRetocViewActive;
+                ViewSwitcherToggle.Toggled += ViewSwitcherToggle_Toggled;
+            }
+        }
+
+        private void ViewSwitcherToggle_Toggled(object sender, RoutedEventArgs e)
+        {
+            if (!IsLoaded || ViewSwitcherToggle == null) return;
+            ConfigManager.CurrentSettings.IsRetocViewActive = ViewSwitcherToggle.IsOn;
+            ConfigManager.SaveConfig(ConfigManager.CurrentSettings);
         }
 
         // ============ Button Clicks ============
