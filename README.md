@@ -4,11 +4,15 @@
 
   #### A GUI Wrapper for Repak and Retoc
 
-  <a href="https://github.com/AriesLR/PakMaster/releases"><img src="https://img.shields.io/github/v/release/AriesLR/PakMaster?color=emerald" align="center"></a>
   <a href="docs/version/CHANGELOG.md"><img src="https://img.shields.io/badge/changelog-latest-blue" align="center"></a>
-  <a href="LICENSE"><img src="https://img.shields.io/github/license/AriesLR/PakMaster?color=orange" align="center"></a>
-  <a href="https://github.com/AriesLR/PakMaster/releases"><img src="https://img.shields.io/github/downloads/AriesLR/PakMaster/total" align="center"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/github/license/AriesLR/PakMaster?color=indigo" align="center"></a>
+  <a href="https://github.com/AriesLR/PakMaster/releases"><img src="https://img.shields.io/github/downloads/AriesLR/PakMaster/total?color=darkviolet" align="center"></a>
 
+  <br/>
+
+  <a href="https://github.com/AriesLR/PakMaster/releases?q=prerelease%3Atrue"><img src="https://img.shields.io/github/v/tag/AriesLR/PakMaster?filter=*rc*&sort=semver&display_name=tag&label=pre-release" align="center"></a>
+  <a href="https://github.com/AriesLR/PakMaster/releases/latest"><img src="https://img.shields.io/github/v/release/AriesLR/PakMaster?color=limegreen" align="center"></a>
+  
   <br/>
 
   <a href="https://www.patreon.com/c/arieslr/membership"><img src="https://img.shields.io/badge/Patreon-F96854?style=flat&logo=patreon&logoColor=white" align="center"></a>
