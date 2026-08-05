@@ -66,6 +66,12 @@ namespace PakMaster.Core.Engines
                     headerVer = settings.RetocManifest.OverrideContainerHeaderVersion;
                     tocVer = settings.RetocManifest.OverrideTocVersion;
                     break;
+                case "info":
+                    inputPath = settings.RetocInfo.InputPath;
+                    aesKey = settings.RetocInfo.AesKey;
+                    headerVer = settings.RetocInfo.OverrideContainerHeaderVersion;
+                    tocVer = settings.RetocInfo.OverrideTocVersion;
+                    break;
                 case "list":
                     inputPath = settings.RetocList.InputPath;
                     aesKey = settings.RetocList.AesKey;
@@ -199,7 +205,7 @@ namespace PakMaster.Core.Engines
             if (needsFilter && !string.IsNullOrWhiteSpace(filterStr)) finalCmd += $" --filter \"{filterStr}\"";
             
             bool needsVerbose = cmd == "unpack" || cmd == "to-legacy" || cmd == "to-zen";
-            if (needsVerbose && verbose) finalCmd += " -v";
+            if (needsVerbose && verbose) finalCmd += " --verbose";
 
             if (cmd == "to-legacy")
             {
