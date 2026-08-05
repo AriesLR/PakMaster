@@ -29,7 +29,7 @@
                 Position="Left"
                 Width="{lex:Loc Num_AppSettings_Flyout_Width}"
                 Foreground="{DynamicResource MahApps.Brushes.Flyout.Foreground}"
-                Background="{DynamicResource Alr.Brushes.Flyout.Background}"
+                Background="{DynamicResource Alr.Brushes.DarkBg800}"
                 BorderBrush="{DynamicResource MahApps.Brushes.AccentBase}"
                 BorderThickness="0 0 1 0"
                 IsOpen="{Binding IsAppSettingsFlyoutOpen}">
@@ -550,7 +550,7 @@
             </ScrollViewer>
 
             <!-- App Settings Flyout Footer -->
-            <Border Grid.Row="1" Background="{StaticResource Alr.Brushes.Flyout.Footer.Background}" BorderBrush="{StaticResource MahApps.Brushes.Gray.SemiTransparent}" BorderThickness="0 1 0 0" Padding="15">
+            <Border Grid.Row="1" Background="{StaticResource Alr.Brushes.DarkBg900}" BorderBrush="{StaticResource MahApps.Brushes.Gray.SemiTransparent}" BorderThickness="0 1 0 0" Padding="15">
                 <TextBlock Grid.Row="1"
                            Foreground="{DynamicResource MahApps.Brushes.Gray2}"
                            FontSize="12"
@@ -568,7 +568,7 @@
             Position="Left"
             Width="{lex:Loc Num_About_Flyout_Width}"
             Foreground="{DynamicResource MahApps.Brushes.Flyout.Foreground}"
-            Background="{DynamicResource Alr.Brushes.Flyout.Background}"
+            Background="{DynamicResource Alr.Brushes.DarkBg800}"
             BorderBrush="{DynamicResource MahApps.Brushes.AccentBase}"
             BorderThickness="0 0 1 0"
             IsOpen="{Binding IsAboutFlyoutOpen}">
@@ -699,7 +699,7 @@
             Position="Bottom"
             Height="400"
             Foreground="{DynamicResource MahApps.Brushes.Flyout.Foreground}"
-            Background="{DynamicResource Alr.Brushes.Flyout.Background}"
+            Background="{DynamicResource Alr.Brushes.DarkBg800}"
             BorderBrush="{DynamicResource MahApps.Brushes.AccentBase}"
             BorderThickness="0 1 0 0"
             IsOpen="{Binding IsCliLogsFlyoutOpen}">

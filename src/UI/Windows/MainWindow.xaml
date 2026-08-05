@@ -26,6 +26,7 @@
                  FontFamily="Segoe UI"
                  GlowBrush="{DynamicResource MahApps.Brushes.Accent}"
                  NonActiveGlowBrush="{DynamicResource MahApps.Brushes.Accent}"
+                 Background="{DynamicResource Alr.Brushes.DarkBg900}"
                  WindowStyle="SingleBorderWindow"
                  ResizeMode="CanResizeWithGrip"
                  WindowStartupLocation="Manual"

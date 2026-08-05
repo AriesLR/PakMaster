@@ -48,6 +48,9 @@
         <!-- Lime -->
         <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Colors/Lime.xaml" />
 
+        <!-- Misc -->
+        <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Colors/Misc.xaml" />
+
         <!-- Orange -->
         <ResourceDictionary Source="pack://application:,,,/PakMaster;component/UI/Styles/Colors/Orange.xaml" />
 

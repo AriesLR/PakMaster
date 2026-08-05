@@ -87,7 +87,7 @@
                                 <ColumnDefinition Width="*" />
                                 <ColumnDefinition Width="Auto" />
                             </Grid.ColumnDefinitions>
-                            <TextBox x:Name="InputPathTextBox" Text="" mah:TextBoxHelper.Watermark="{lex:Loc RetocView_InputPath}" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
+                            <TextBox x:Name="InputPathTextBox" Text="" mah:TextBoxHelper.Watermark="{lex:Loc RetocView_InputPath}" Background="Transparent" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
                             <Grid Grid.Column="1">
                                 <Button Width="80" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="BrowseInputFolder_Click">
                                     <TextBlock x:Name="InputBrowseBtnText" Text="{lex:Loc Btn_Browse}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
@@ -102,7 +102,7 @@
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <TextBox x:Name="OutputPathTextBox" Text="" mah:TextBoxHelper.Watermark="{lex:Loc RetocView_OutputPath}" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
+                                <TextBox x:Name="OutputPathTextBox" Text="" mah:TextBoxHelper.Watermark="{lex:Loc RetocView_OutputPath}" Background="Transparent" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
                                 <Grid Grid.Column="1">
                                     <Button Width="80" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="BrowseOutputFolder_Click">
                                         <TextBlock x:Name="OutputBrowseBtnText" Text="{lex:Loc Btn_Browse}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
@@ -118,7 +118,7 @@
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <TextBox x:Name="GetFileTextBox" mah:TextBoxHelper.Watermark="{lex:Loc RepakView_PathToFileToReadToStdout}" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
+                                <TextBox x:Name="GetFileTextBox" mah:TextBoxHelper.Watermark="{lex:Loc RepakView_PathToFileToReadToStdout}" Background="Transparent" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
                                 <Grid Grid.Column="1">
                                     <Button Width="80" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="ClearGetFile_Click">
                                         <TextBlock Text="{lex:Loc RetocView_Clear}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
@@ -140,7 +140,7 @@
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <TextBox x:Name="AesKeyTextBox" mah:TextBoxHelper.Watermark="{lex:Loc RepakView_256BitAESEncryptionKeyAsBase64OrHexStringIfThePakIsEncrypted}" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
+                                <TextBox x:Name="AesKeyTextBox" mah:TextBoxHelper.Watermark="{lex:Loc RepakView_256BitAESEncryptionKeyAsBase64OrHexStringIfThePakIsEncrypted}" Background="Transparent" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
                                 <Grid Grid.Column="1">
                                     <Button Width="80" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="ClearAesKey_Click">
                                         <TextBlock Text="{lex:Loc RetocView_Clear}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
@@ -156,7 +156,7 @@
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <TextBox x:Name="StripPrefixTextBox" mah:TextBoxHelper.Watermark="{lex:Loc RepakView_PrefixToStripFromEntryPathDefault}" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
+                                <TextBox x:Name="StripPrefixTextBox" mah:TextBoxHelper.Watermark="{lex:Loc RepakView_PrefixToStripFromEntryPathDefault}" Background="Transparent" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
                                 <Grid Grid.Column="1">
                                     <Button Width="80" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="ClearStripPrefix_Click">
                                         <TextBlock Text="{lex:Loc RetocView_Clear}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
@@ -173,7 +173,7 @@
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <TextBox x:Name="IncludeTextBox" mah:TextBoxHelper.Watermark="{lex:Loc RepakView_FilesOrDirectoriesToIncludeCanBeSpecifiedMultipleTimesIfNotSpecifiedEverythingIsExtracted}" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
+                                <TextBox x:Name="IncludeTextBox" mah:TextBoxHelper.Watermark="{lex:Loc RepakView_FilesOrDirectoriesToIncludeCanBeSpecifiedMultipleTimesIfNotSpecifiedEverythingIsExtracted}" Background="Transparent" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
                                 <Grid Grid.Column="1">
                                     <Button Width="80" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="ClearInclude_Click">
                                         <TextBlock Text="{lex:Loc RetocView_Clear}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
@@ -189,7 +189,7 @@
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <TextBox x:Name="MountPointTextBox" mah:TextBoxHelper.Watermark="{lex:Loc RepakView_MountPointDefault}" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
+                                <TextBox x:Name="MountPointTextBox" mah:TextBoxHelper.Watermark="{lex:Loc RepakView_MountPointDefault}" Background="Transparent" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
                                 <Grid Grid.Column="1">
                                     <Button Width="80" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="ClearMountPoint_Click">
                                         <TextBlock Text="{lex:Loc RetocView_Clear}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
@@ -223,7 +223,7 @@
                                     <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="Auto" />
                                 </Grid.ColumnDefinitions>
-                                <TextBox x:Name="PathHashSeedTextBox" mah:TextBoxHelper.Watermark="{lex:Loc RepakView_PathHashSeedForV10Default0}" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
+                                <TextBox x:Name="PathHashSeedTextBox" mah:TextBoxHelper.Watermark="{lex:Loc RepakView_PathHashSeedForV10Default0}" Background="Transparent" TextChanged="UpdateCommand_TextChanged" VerticalAlignment="Center" VerticalContentAlignment="Center" Height="30" mah:ControlsHelper.CornerRadius="2" />
                                 <Grid Grid.Column="1">
                                     <Button Width="80" Height="30" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="ClearPathHashSeed_Click">
                                         <TextBlock Text="{lex:Loc RetocView_Clear}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" HorizontalAlignment="Center" VerticalAlignment="Center" />
