@@ -1,4 +1,4 @@
-## [v1.0.0]
+## [v1.0.0-rc.1]
 
 ###### *Note: This release represents a nearly complete rewrite of the application. Because the scope of the rewrite was so extensive, it is difficult to articulate every single change. Consider this a fresh slate; all future updates will resume with detailed changelogs.*
 
