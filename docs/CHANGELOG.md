@@ -10,10 +10,10 @@
 - Changed how the application is packaged; it now outputs as a single `.exe` file rather than an unpackaged folder, significantly improving portability.
 - Migrated the project framework from .NET 8 to .NET 10.
 - Integrated CliWrap for improved command-line process handling.
-- Implemented much deeper configurations, including the ability to save input/output paths between sessions (Addresses #2).
+- Implemented much deeper configurations, including the ability to save input/output paths between sessions (Addresses [Issue #2](https://github.com/AriesLR/PakMaster/issues/2)).
 
 ### Fixed
-- Fixed a bug related to an outdated Repak version (Addresses #5).
+- Fixed a bug related to an outdated Repak version (Addresses [Issue #5](https://github.com/AriesLR/PakMaster/issues/5)).
 
 ### Removed
-- Totally removed support for ZenTools and UnrealPak, as Retoc is now powerful enough to replace the need for them entirely (Addresses #4).
+- Totally removed support for ZenTools and UnrealPak, as Retoc is now powerful enough to replace the need for them entirely (Addresses [Issue #4](https://github.com/AriesLR/PakMaster/issues/4)).
