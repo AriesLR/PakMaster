@@ -589,7 +589,7 @@ namespace PakMaster.UI.Views
 
             string filter = "Unreal Files (*.utoc;*.pak)|*.utoc;*.pak|All Files (*.*)|*.*";
             if (wantsJmap) filter = "Jmap Dump (*.jmap)|*.jmap|All Files (*.*)|*.*";
-            else if (wantsBin) filter = "Asset Registry (AssetRegistry.bin)|AssetRegistry.bin|All Files (*.*)|*.*";
+            else if (wantsBin) filter = "Asset Registry (AssetRegistry.bin)|*.bin|All Files (*.*)|*.*";
             else if (wantsPak) filter = "PAK Files (*.pak)|*.pak|All Files (*.*)|*.*";
             else if (wantsUtoc) filter = "UTOC Files (*.utoc)|*.utoc|All Files (*.*)|*.*";
 
