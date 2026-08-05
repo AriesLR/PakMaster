@@ -71,7 +71,11 @@ By using PakMaster, users must also adhere to the licenses of Repak and Retoc in
   - Since PakMaster relies on CLI tools under the hood, their live outputs are captured and displayed directly within the GUI. This allows you to monitor progress in real-time and easily troubleshoot issues if they arise.
 
 - **Customizable Interface**
-  - Deep quality-of-life features, including language switching, customizable accent colors, and adjustable interface scaling.
+  - Deep QoL features, including language switching, customizable accent colors, and adjustable interface scaling.
+
+- **Repak Branch Switching**
+  - Easily toggle between different branches of Repak. 
+  - While most games operate perfectly with the standard Repak executable, certain games require specialized builds. PakMaster allows you to easily swap between branch-specific builds (such as ones for Dead by Daylight, Back 4 Blood, etc.)
 
 ## Installation
 
@@ -89,38 +93,66 @@ It is expected that you are already familiar with how [Repak](https://github.com
 
 To update **PakMaster**, download the [Latest Release](https://github.com/AriesLR/PakMaster/releases/latest) and replace your current version of `PakMaster.exe`.
 
-## Screenshots (TODO)
+## Screenshots
+
 <table align="center">
   <tr>
-    <td><a href="docs/img/01.png"><img src="docs/img/01.png" alt="Main Page" /></a></td>
-    <td><a href="docs/img/02.png"><img src="docs/img/02.png" alt="Information Flyout" /></a></td>
+    <td align="center">
+      <b>Repak Unpack Example</b><br />
+      <a href="docs/img/Repak_UnpackExample.png"><img src="docs/img/Repak_UnpackExample.png" alt="Repak Unpack Example" /></a>
+    </td>
+    <td align="center">
+      <b>Repak Unpack CLI Output Example</b><br />
+      <a href="docs/img/Repak_UnpackExample_CLI_Output.png"><img src="docs/img/Repak_UnpackExample_CLI_Output.png" alt="Repak Unpack CLI Output Example" /></a>
+    </td>
   </tr>
   <tr>
-    <td><a href="docs/img/03.png"><img src="docs/img/03.png" alt="Modlist Tools Flyout" /></a></td>
-    <td><a href="docs/img/04.png"><img src="docs/img/04.png" alt="Mod Browser Flyout" /></a></td>
+    <td align="center">
+      <b>Repak Pack Example</b><br />
+      <a href="docs/img/Repak_PackExample.png"><img src="docs/img/Repak_PackExample.png" alt="Repak Pack Example" /></a>
+    </td>
+    <td align="center">
+      <b>Repak Pack CLI Output Example</b><br />
+      <a href="docs/img/Repak_PackExample_CLI_Output.png"><img src="docs/img/Repak_PackExample_CLI_Output.png" alt="Repak Pack CLI Output Example" /></a>
+    </td>
   </tr>
   <tr>
-    <td><a href="docs/img/05.png"><img src="docs/img/05.png" alt="Application Settings Flyout" /></a></td>
-    <td><a href="docs/img/06.png"><img src="docs/img/06.png" alt="Search Filtering" /></a></td>
+    <td align="center">
+      <b>Retoc Unpack Example</b><br />
+      <a href="docs/img/Retoc_UnpackExample.png"><img src="docs/img/Retoc_UnpackExample.png" alt="Retoc Unpack Example" /></a>
+    </td>
+    <td align="center">
+      <b>Retoc Unpack CLI Output Example</b><br />
+      <a href="docs/img/Retoc_UnpackExample_CLI_Output.png"><img src="docs/img/Retoc_UnpackExample_CLI_Output.png" alt="Retoc Unpack CLI Output Example" /></a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <b>Retoc Unpack-Raw Example</b><br />
+      <a href="docs/img/Retoc_UnpackRawExample.png"><img src="docs/img/Retoc_UnpackRawExample.png" alt="Retoc Unpack-Raw Example" /></a>
+    </td>
+    <td align="center">
+      <b>Retoc Unpack-Raw CLI Output Example</b><br />
+      <a href="docs/img/Retoc_UnpackRawExample_CLI_Output.png"><img src="docs/img/Retoc_UnpackRawExample_CLI_Output.png" alt="Retoc Unpack-Raw CLI Output Example" /></a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center">
+      <b>Retoc Pack-Raw Example</b><br />
+      <a href="docs/img/Retoc_PackRawExample.png"><img src="docs/img/Retoc_PackRawExample.png" alt="Retoc Pack-Raw Example" /></a>
+    </td>
+    <td align="center">
+      <b>Retoc Pack-Raw CLI Output Example</b><br />
+      <a href="docs/img/Retoc_PackRawExample_CLI_Output.png"><img src="docs/img/Retoc_PackRawExample_CLI_Output.png" alt="Retoc Pack-Raw CLI Output Example" /></a>
+    </td>
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <a href="docs/img/Before_After.png"><img src="docs/img/Before_After.png" alt="Before / After Comparison" /></a>
+      <b>Before / After Comparison</b><br />
+      <a href="docs/img/BeforeAndAfter.gif"><img src="docs/img/BeforeAndAfter.gif" alt="Before / After Comparison" /></a>
     </td>
   </tr>
 </table>
-
-### Normal Mode Unpacking
-![Normal Mode Unpacking](https://raw.githubusercontent.com/AriesLR/PakMaster/refs/heads/main/docs/images/pakmaster-normal-unpack.png)
-
-### Normal Mode Packing
-![Normal Mode Repacking](https://raw.githubusercontent.com/AriesLR/PakMaster/refs/heads/main/docs/images/pakmaster-normal-repack.png)
-
-### IoStore Mode Unpacking
-![IoStore Mode Unpacking](https://raw.githubusercontent.com/AriesLR/PakMaster/refs/heads/main/docs/images/pakmaster-iostore-unpack.png)
-
-### IoStore Mode Packing
-![IoStore Mode Repacking](https://raw.githubusercontent.com/AriesLR/PakMaster/refs/heads/main/docs/images/pakmaster-iostore-repack.png)
 
 ## Tools Used
 
@@ -129,6 +161,7 @@ To update **PakMaster**, download the [Latest Release](https://github.com/AriesL
 **Packing/Unpacking (.pak, .utoc, .ucas)** - [Retoc](https://github.com/trumank/retoc)
  
 ## Acknowledgements
+
 - [Repak](https://github.com/trumank/repak) - Backbone of Pak file operations.
 
 - [Retoc](https://github.com/trumank/retoc) - CLI responsible for handling IoStore Container operations.
