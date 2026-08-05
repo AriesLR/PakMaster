@@ -44,7 +44,13 @@ namespace PakMaster.Infrastructure.Web
 
             try
             {
-                string response = await _httpClient.GetStringAsync(jsonUrl);
+                string requestUrl = jsonUrl.Contains('?') ? $"{jsonUrl}&t={DateTime.UtcNow.Ticks}" : $"{jsonUrl}?t={DateTime.UtcNow.Ticks}";
+                using var request = new HttpRequestMessage(HttpMethod.Get, requestUrl);
+                request.Headers.CacheControl = new System.Net.Http.Headers.CacheControlHeaderValue { NoCache = true };
+
+                using var responseMessage = await _httpClient.SendAsync(request);
+                responseMessage.EnsureSuccessStatusCode();
+                string response = await responseMessage.Content.ReadAsStringAsync();
 
                 GLogger.Here().Debug("Successfully fetched update response from server.");
                 var updateInfo = JsonSerializer.Deserialize<UpdateInfo>(response, _jsonOptions);
@@ -107,7 +113,14 @@ namespace PakMaster.Infrastructure.Web
         {
             try
             {
-                string response = await _httpClient.GetStringAsync(jsonUrl);
+                string requestUrl = jsonUrl.Contains('?') ? $"{jsonUrl}&t={DateTime.UtcNow.Ticks}" : $"{jsonUrl}?t={DateTime.UtcNow.Ticks}";
+                using var request = new HttpRequestMessage(HttpMethod.Get, requestUrl);
+                request.Headers.CacheControl = new System.Net.Http.Headers.CacheControlHeaderValue { NoCache = true };
+
+                using var responseMessage = await _httpClient.SendAsync(request);
+                responseMessage.EnsureSuccessStatusCode();
+                string response = await responseMessage.Content.ReadAsStringAsync();
+
                 var updateInfo = JsonSerializer.Deserialize<UpdateInfo>(response, _jsonOptions);
 
                 if (updateInfo?.LatestVersion == null || updateInfo.DownloadUrl == null)
