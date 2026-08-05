@@ -10,6 +10,7 @@ namespace PakMaster.UI.Views.Flyouts
             LanguageDropdown.ItemsSource = LanguageManager.SupportedLanguages;
 
             PakMaster.Core.Engines.ProcessEngine.OnCliProcessStarted += ProcessEngine_OnCliProcessStarted;
+            PakMaster.Core.Engines.ProcessEngine.OnCliProcessEnded += ProcessEngine_OnCliProcessEnded;
             PakMaster.Core.Engines.ProcessEngine.OnCliOutputLine += ProcessEngine_OnCliOutputLine;
 
             this.Loaded += MainWindowFlyoutsView_Loaded;
@@ -22,6 +23,15 @@ namespace PakMaster.UI.Views.Flyouts
                 CliLogsTextBox.Clear();
                 CliLogsTextBox.AppendText($"--- Started {executableName} ---\n");
                 CliLogsFlyout.IsOpen = true;
+            });
+        }
+
+        private void ProcessEngine_OnCliProcessEnded(string executableName)
+        {
+            Application.Current.Dispatcher.InvokeAsync(() =>
+            {
+                CliLogsTextBox.AppendText($"\n--- Finished {executableName} ---\n");
+                CliLogsTextBox.ScrollToEnd();
             });
         }
 

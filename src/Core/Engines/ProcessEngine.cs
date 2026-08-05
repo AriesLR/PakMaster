@@ -4,7 +4,7 @@ namespace PakMaster.Core.Engines
     {
         public static event Action<string>? OnCliProcessStarted;
 
-        public static event Action? OnCliProcessEnded;
+        public static event Action<string>? OnCliProcessEnded;
 
         public static event Action<string>? OnCliOutputLine;
 
@@ -84,7 +84,7 @@ namespace PakMaster.Core.Engines
             OnCliProcessStarted?.Invoke(Path.GetFileName(executablePath));
             await cmd.ExecuteAsync(ct);
             GLogger.Here().Information("Command execution finished successfully");
-            OnCliProcessEnded?.Invoke();
+            OnCliProcessEnded?.Invoke(Path.GetFileName(executablePath));
 
             outputCallback?.Invoke(outputBuilder.ToString());
         }
@@ -117,7 +117,7 @@ namespace PakMaster.Core.Engines
             OnCliProcessStarted?.Invoke(Path.GetFileName(executablePath));
             await cmd.ExecuteAsync(ct);
             GLogger.Here().Information("Command execution finished successfully");
-            OnCliProcessEnded?.Invoke();
+            OnCliProcessEnded?.Invoke(Path.GetFileName(executablePath));
 
             outputCallback?.Invoke(outputBuilder.ToString());
         }
