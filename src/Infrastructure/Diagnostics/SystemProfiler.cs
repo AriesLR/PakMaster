@@ -4,7 +4,7 @@ namespace PakMaster.Infrastructure.Diagnostics
     {
         public static string GenerateLogHeader(object initialSettings)
         {
-            var appVersion = AppConfig.DisplayAppVersion;
+            var appVersion = AppConfig.AppVersion;
 
             // Early load settings
             var settings = initialSettings as AppSettingsModel;

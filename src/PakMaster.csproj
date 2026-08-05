@@ -18,10 +18,12 @@
 
         <!-- ================ Versioning ================ -->
 		<MasterVersion>1.0.0.0</MasterVersion>
+		<Version>1.0.0-rc.1</Version>
 
 		<AssemblyVersion>$(MasterVersion)</AssemblyVersion>
 		<FileVersion>$(MasterVersion)</FileVersion>
-		<InformationalVersion>$(MasterVersion.Remove($(MasterVersion.LastIndexOf('.'))))</InformationalVersion>
+		
+		<InformationalVersion>$(Version)</InformationalVersion>
         <IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
 
         <!-- ================ File Info ================ -->
@@ -72,6 +74,7 @@
         <PackageReference Include="MahApps.Metro.IconPacks.Material" Version="6.2.1" />
         <PackageReference Include="MahApps.Metro.IconPacks.SimpleIcons" Version="6.2.1" />
         <PackageReference Include="Notification.Wpf" Version="11.0.0" />
+        <PackageReference Include="NuGet.Versioning" Version="7.6.0" />
         <PackageReference Include="Serilog" Version="4.4.0" />
         <PackageReference Include="Serilog.Sinks.File" Version="7.0.0" />
         <PackageReference Include="WPFLocalizeExtension" Version="3.10.0" />

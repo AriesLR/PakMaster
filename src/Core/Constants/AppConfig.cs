@@ -27,10 +27,7 @@ namespace PakMaster.Core.Constants
         public static string AppAuthor { get; } = Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyCompanyAttribute>()?.Company ?? "Unknown Author";
 
         // App Version
-        public static string AppVersion => _assemblyVersion != null ? $"{_assemblyVersion.Major}.{_assemblyVersion.Minor}.{_assemblyVersion.Build}.{_assemblyVersion.Revision}" : "Unknown Version";
-
-        // Display App Version
-        public static string DisplayAppVersion => _assemblyVersion != null ? $"{_assemblyVersion.Major}.{_assemblyVersion.Minor}.{_assemblyVersion.Build}" : "Unknown Version";
+        public static string AppVersion => Assembly.GetExecutingAssembly().GetCustomAttribute<AssemblyInformationalVersionAttribute>()?.InformationalVersion ?? "Unknown Version";
 
         // OS Architecture
         public static string OsArchitecture { get; } = $"Windows {RuntimeInformation.ProcessArchitecture.ToString().Replace("X", "x")}";
@@ -73,9 +70,6 @@ namespace PakMaster.Core.Constants
         public static string CryptoConfigPath { get; } = Path.Combine(PakMasterConfigsFolder, "Crypto.json");
 
         // ============ Helpers ============
-
-        // App Version Helper
-        private static readonly Version? _assemblyVersion = Assembly.GetExecutingAssembly().GetName().Version;
 
         // App License Helper
         public static string AppLicense { get => string.IsNullOrWhiteSpace(_appLicense) ? "Unknown License" : _appLicense; set => _appLicense = value; }

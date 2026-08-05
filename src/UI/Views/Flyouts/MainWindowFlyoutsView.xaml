@@ -634,7 +634,7 @@
                             </StackPanel>
                             <StackPanel Margin="5,0" HorizontalAlignment="Center">
                                 <TextBlock Text="{lex:Loc About_Lbl_Version}" FontSize="10" FontWeight="Bold" Foreground="{DynamicResource MahApps.Brushes.Gray4}" Margin="0,0,0,2" TextAlignment="Center" />
-                                <TextBlock Text="{x:Static constants:AppConfig.DisplayAppVersion}" FontSize="13" FontWeight="SemiBold" TextAlignment="Center" />
+                                <TextBlock Text="{x:Static constants:AppConfig.AppVersion}" FontSize="13" FontWeight="SemiBold" TextAlignment="Center" />
                             </StackPanel>
                         </UniformGrid>
 

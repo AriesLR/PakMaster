@@ -145,20 +145,13 @@ namespace PakMaster.Infrastructure.Web
         {
             try
             {
-                var currentParts = currentVersion.Split('.');
-                var latestParts = latestVersion.Split('.');
-
-                int maxLength = Math.Max(currentParts.Length, latestParts.Length);
-
-                for (int i = 0; i < maxLength; i++)
+                if (NuGet.Versioning.NuGetVersion.TryParse(currentVersion, out var currentNugetVer) &&
+                    NuGet.Versioning.NuGetVersion.TryParse(latestVersion, out var latestNugetVer))
                 {
-                    int currentPart = i < currentParts.Length ? int.Parse(currentParts[i]) : 0;
-                    int latestPart = i < latestParts.Length ? int.Parse(latestParts[i]) : 0;
-
-                    if (currentPart < latestPart) return -1;
-                    if (currentPart > latestPart) return 1;
+                    return currentNugetVer.CompareTo(latestNugetVer);
                 }
 
+                GLogger.Here().Warning("Failed to parse versions as NuGetVersion. Local='{Local}' Remote='{Remote}'", currentVersion, latestVersion);
                 return 0;
             }
             catch (Exception ex)
