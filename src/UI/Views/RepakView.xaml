@@ -42,17 +42,6 @@
                                   SelectedIndex="0"
                                   SelectionChanged="BranchSelectComboBox_SelectionChanged"
                                   mah:TextBoxHelper.Watermark="Select Branch" Margin="0,0,0,20">
-                            <ComboBoxItem Content="main" />
-                            <ComboBoxItem Content="chunked-compression" />
-                            <ComboBoxItem Content="cs-bindings" />
-                            <ComboBoxItem Content="patch-back4blood" />
-                            <ComboBoxItem Content="patch-dead-by-daylight" />
-                            <ComboBoxItem Content="patch-dragon-quest-xi" />
-                            <ComboBoxItem Content="patch-marvel-rivals" />
-                            <ComboBoxItem Content="patch-outlast-trials" />
-                            <ComboBoxItem Content="patch-torchlight" />
-                            <ComboBoxItem Content="patch-visions-of-mana" />
-                            <ComboBoxItem Content="patch-wuthering-waves" />
                         </ComboBox>
 
                         <TextBlock Text="{lex:Loc RetocView_Command}" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" FontSize="16" FontWeight="SemiBold" />
