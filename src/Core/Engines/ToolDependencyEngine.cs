@@ -2,13 +2,88 @@ namespace PakMaster.Core.Engines
 {
     public static class ToolDependencyEngine
     {
-        // Method to check if dependencies exist in the specified subdirectory
+        public static event Action? PackagesUpdated;
+
+        public static List<PackageModel> AvailablePackages = new()
+        {
+            new PackageModel { DisplayName = "Retoc (Main)", ExecutableName = "retoc.exe", DownloadUrl = AppUrls.RetocUrl, ToolType = "Retoc" },
+            new PackageModel { DisplayName = "Repak (Main)", ExecutableName = "repak.exe", DownloadUrl = AppUrls.RepakUrl, ToolType = "Repak" },
+            new PackageModel { DisplayName = "Repak - Chunked Compression", ExecutableName = "repak-chunked-compression.exe", DownloadUrl = AppUrls.RepakChunkedCompressionUrl, ToolType = "Repak" },
+            new PackageModel { DisplayName = "Repak - CS Bindings", ExecutableName = "repak-cs-bindings.exe", DownloadUrl = AppUrls.RepakCSBindingsUrl, ToolType = "Repak" },
+            new PackageModel { DisplayName = "Repak - Back4Blood", ExecutableName = "repak-patch-back4blood.exe", DownloadUrl = AppUrls.RepakPatchBack4BloodUrl, ToolType = "Repak" },
+            new PackageModel { DisplayName = "Repak - Dead by Daylight", ExecutableName = "repak-patch-dead-by-daylight.exe", DownloadUrl = AppUrls.RepakDeadByDaylightUrl, ToolType = "Repak" },
+            new PackageModel { DisplayName = "Repak - Dragon Quest XI", ExecutableName = "repak-patch-dragon-quest-xi.exe", DownloadUrl = AppUrls.RepakDragonQuestXiUrl, ToolType = "Repak" },
+            new PackageModel { DisplayName = "Repak - Marvel Rivals", ExecutableName = "repak-patch-marvel-rivals.exe", DownloadUrl = AppUrls.RepakMarvelRivalsUrl, ToolType = "Repak" },
+            new PackageModel { DisplayName = "Repak - Outlast Trials", ExecutableName = "repak-patch-outlast-trials.exe", DownloadUrl = AppUrls.RepakOutlastTrialsUrl, ToolType = "Repak" },
+            new PackageModel { DisplayName = "Repak - Torchlight", ExecutableName = "repak-patch-torchlight.exe", DownloadUrl = AppUrls.RepakTorchlightUrl, ToolType = "Repak" },
+            new PackageModel { DisplayName = "Repak - Visions of Mana", ExecutableName = "repak-patch-visions-of-mana.exe", DownloadUrl = AppUrls.RepakVisionsOfManaUrl, ToolType = "Repak" },
+            new PackageModel { DisplayName = "Repak - Wuthering Waves", ExecutableName = "repak-patch-wuthering-waves.exe", DownloadUrl = AppUrls.RepakWutheringWavesUrl, ToolType = "Repak" },
+        };
+
         public static bool CheckIfDependencyExists(string subDirectory, string exeName)
         {
+            if (exeName.Equals("retoc.exe", StringComparison.OrdinalIgnoreCase))
+            {
+                if (File.Exists(Path.Combine(AppConfig.PakMasterDependencyFolder, subDirectory, "retoc.exe")))
+                    return true;
+                if (File.Exists(Path.Combine(AppConfig.PakMasterDependencyFolder, subDirectory, "Retoc.exe")))
+                    return true;
+                return false;
+            }
+
             string targetDirectory = Path.Combine(AppConfig.PakMasterDependencyFolder, subDirectory);
             string targetFilePath = Path.Combine(targetDirectory, exeName);
 
             return File.Exists(targetFilePath);
+        }
+
+        public static void UpdatePackageStates()
+        {
+            foreach (var pkg in AvailablePackages)
+            {
+                pkg.IsInstalled = CheckIfDependencyExists(pkg.ToolType.ToLower(), pkg.ExecutableName);
+            }
+        }
+
+        public static List<PackageModel> GetAvailableBranches(string toolType)
+        {
+            UpdatePackageStates();
+            return AvailablePackages.Where(p => p.ToolType.Equals(toolType, StringComparison.OrdinalIgnoreCase) && p.IsInstalled).ToList();
+        }
+
+        public static List<PackageModel> GetAllPackages()
+        {
+            UpdatePackageStates();
+            return AvailablePackages;
+        }
+
+        public static bool UninstallDependency(string subDirectory, string exeName)
+        {
+            try
+            {
+                string targetPath = Path.Combine(AppConfig.PakMasterDependencyFolder, subDirectory, exeName);
+                if (File.Exists(targetPath))
+                {
+                    File.Delete(targetPath);
+                }
+                else if (exeName.Equals("retoc.exe", StringComparison.OrdinalIgnoreCase))
+                {
+                    string alternatePath = Path.Combine(AppConfig.PakMasterDependencyFolder, subDirectory, "Retoc.exe");
+                    if (File.Exists(alternatePath))
+                    {
+                        File.Delete(alternatePath);
+                    }
+                }
+                
+                UpdatePackageStates();
+                PackagesUpdated?.Invoke();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                GLogger.Here().Error(ex, $"Failed to uninstall dependency {exeName}.");
+                return false;
+            }
         }
 
         public static async Task DependenciesManagerAsync(string fileUrl, string subDirectory)
@@ -58,238 +133,13 @@ namespace PakMaster.Core.Engines
 
                     GLogger.Here().Information("File downloaded to: {TargetFilePath}", targetFilePath);
                 }
+
+                UpdatePackageStates();
+                PackagesUpdated?.Invoke();
             }
             catch (Exception ex)
             {
                 GLogger.Here().Error(ex, "An error occurred while downloading the file.");
-            }
-        }
-
-        private static bool ShouldCheckForUpdates()
-        {
-            string timeFile = Path.Combine(AppConfig.PakMasterDependencyFolder, ".last_update_check");
-            if (File.Exists(timeFile))
-            {
-                if (DateTime.TryParse(File.ReadAllText(timeFile), out DateTime lastCheck))
-                {
-                    if ((DateTime.UtcNow - lastCheck).TotalMinutes < 3)
-                        return false;
-                }
-            }
-            return true;
-        }
-
-        private static void MarkUpdateCheck()
-        {
-            string timeFile = Path.Combine(AppConfig.PakMasterDependencyFolder, ".last_update_check");
-            Directory.CreateDirectory(AppConfig.PakMasterDependencyFolder);
-            File.WriteAllText(timeFile, DateTime.UtcNow.ToString("o"));
-        }
-
-        private static async Task<string> GetLatestGitHubReleaseTagAsync(string repo)
-        {
-            try
-            {
-                using HttpClient client = new();
-                client.DefaultRequestHeaders.Add("User-Agent", "PakMaster-App");
-                client.DefaultRequestHeaders.Add("Accept", "application/vnd.github.v3+json");
-                string url = $"https://api.github.com/repos/{repo}/releases/latest";
-                string json = await client.GetStringAsync(url);
-
-                using var doc = JsonDocument.Parse(json);
-                if (doc.RootElement.TryGetProperty("tag_name", out var tagProp))
-                {
-                    return tagProp.GetString()?.Trim('v', ' ') ?? "";
-                }
-            }
-            catch (Exception ex)
-            {
-                GLogger.Here().Warning(ex, $"Failed to check GitHub releases for {repo}.");
-            }
-            return "";
-        }
-
-        private static async Task<string> GetLocalToolVersionAsync(string subDirectory, string exeName)
-        {
-            try
-            {
-                string targetFilePath = Path.Combine(AppConfig.PakMasterDependencyFolder, subDirectory, exeName);
-                if (!File.Exists(targetFilePath)) return "";
-
-                using var process = new Process();
-                process.StartInfo.FileName = targetFilePath;
-                process.StartInfo.Arguments = "-V";
-                process.StartInfo.UseShellExecute = false;
-                process.StartInfo.RedirectStandardOutput = true;
-                process.StartInfo.CreateNoWindow = true;
-                process.Start();
-
-                string output = await process.StandardOutput.ReadToEndAsync();
-                await process.WaitForExitAsync();
-
-                var parts = output.Trim().Split(' ');
-                if (parts.Length >= 2) return parts[1].Trim();
-                return output.Trim();
-            }
-            catch (Exception ex)
-            {
-                GLogger.Here().Warning(ex, $"Failed to get local version for {exeName}.");
-            }
-            return "";
-        }
-
-        public static async Task CheckAndDownloadToolDependenciesAsync()
-        {
-            bool repakDownload = false;
-            bool repakDownloaded = false;
-            bool retocDownload = false;
-            bool retocDownloaded = false;
-            bool missingDependencies = false;
-
-            bool checkUpdates = ShouldCheckForUpdates();
-
-            // Check if repak.exe exists in bin/repak
-            if (!CheckIfDependencyExists("repak", "repak.exe"))
-            {
-                bool userConfirmed = await MessageManager.ShowYesNo(Lang.DependencyManager, Lang.RepakIsMissingNNWouldYouLikeToDownloadItNow);
-
-                if (userConfirmed)
-                {
-                    repakDownload = true;
-                }
-                else
-                {
-                    missingDependencies = true;
-                }
-            }
-            else if (checkUpdates)
-            {
-                string localVer = await GetLocalToolVersionAsync("repak", "repak.exe");
-                string latestVer = await GetLatestGitHubReleaseTagAsync("trumank/repak");
-                if (!string.IsNullOrEmpty(localVer) && !string.IsNullOrEmpty(latestVer) && localVer != latestVer)
-                {
-                    string message = string.Format(Lang.AnUpdateForRepakIsAvailable, localVer, latestVer);
-
-                    bool userConfirmed = await MessageManager.ShowYesNo(Lang.DependencyManager, message);
-                    if (userConfirmed) { repakDownload = true; }
-                }
-                else
-                {
-                    GLogger.Here().Debug("repak.exe is up to date.");
-                }
-            }
-            else
-            {
-                GLogger.Here().Debug("repak.exe exists (update check skipped).");
-            }
-
-            // Check if retoc.exe exists in bin/retoc
-            string retocExeName = CheckIfDependencyExists("retoc", "retoc.exe") ? "retoc.exe" : "Retoc.exe";
-
-            if (!CheckIfDependencyExists("retoc", retocExeName))
-            {
-                bool userConfirmed = await MessageManager.ShowYesNo(Lang.DependencyManager, Lang.RetocIsMissingNNWouldYouLikeToDownloadItNow);
-
-                if (userConfirmed)
-                {
-                    retocDownload = true;
-                }
-                else
-                {
-                    missingDependencies = true;
-                }
-            }
-            else if (checkUpdates)
-            {
-                string localVer = await GetLocalToolVersionAsync("retoc", retocExeName);
-                string latestVer = await GetLatestGitHubReleaseTagAsync("trumank/retoc");
-                if (!string.IsNullOrEmpty(localVer) && !string.IsNullOrEmpty(latestVer) && localVer != latestVer)
-                {
-                    string message = string.Format(Lang.AnUpdateForRetocIsAvailable, localVer, latestVer);
-
-                    bool userConfirmed = await MessageManager.ShowYesNo(Lang.DependencyManager, message);
-                    if (userConfirmed) { retocDownload = true; }
-                }
-                else
-                {
-                    GLogger.Here().Debug("Retoc.exe is up to date.");
-                }
-            }
-            else
-            {
-                GLogger.Here().Debug("Retoc.exe exists (update check skipped).");
-            }
-
-            if (checkUpdates)
-            {
-                MarkUpdateCheck();
-            }
-
-            if (repakDownload)
-            {
-                await MessageManager.ShowProgress(Lang.DependencyManager, Lang.DownloadingRepakNNPleaseWait, async progress =>
-                {
-                    var downloadAll = Task.Run(async () =>
-                    {
-                        await DependenciesManagerAsync(AppUrls.RepakUrl, "repak");
-
-                        var extraTasks = new List<Task>();
-
-                        if (!CheckIfDependencyExists("repak", "repak-chunked-compression.exe")) extraTasks.Add(DependenciesManagerAsync(AppUrls.RepakChunkedCompressionUrl, "repak"));
-                        if (!CheckIfDependencyExists("repak", "repak-cs-bindings.exe")) extraTasks.Add(DependenciesManagerAsync(AppUrls.RepakCSBindingsUrl, "repak"));
-                        if (!CheckIfDependencyExists("repak", "repak-patch-back4blood.exe")) extraTasks.Add(DependenciesManagerAsync(AppUrls.RepakPatchBack4BloodUrl, "repak"));
-                        if (!CheckIfDependencyExists("repak", "repak-patch-dead-by-daylight.exe")) extraTasks.Add(DependenciesManagerAsync(AppUrls.RepakDeadByDaylightUrl, "repak"));
-                        if (!CheckIfDependencyExists("repak", "repak-patch-dragon-quest-xi.exe")) extraTasks.Add(DependenciesManagerAsync(AppUrls.RepakDragonQuestXiUrl, "repak"));
-                        if (!CheckIfDependencyExists("repak", "repak-patch-marvel-rivals.exe")) extraTasks.Add(DependenciesManagerAsync(AppUrls.RepakMarvelRivalsUrl, "repak"));
-                        if (!CheckIfDependencyExists("repak", "repak-patch-outlast-trials.exe")) extraTasks.Add(DependenciesManagerAsync(AppUrls.RepakOutlastTrialsUrl, "repak"));
-                        if (!CheckIfDependencyExists("repak", "repak-patch-torchlight.exe")) extraTasks.Add(DependenciesManagerAsync(AppUrls.RepakTorchlightUrl, "repak"));
-                        if (!CheckIfDependencyExists("repak", "repak-patch-visions-of-mana.exe")) extraTasks.Add(DependenciesManagerAsync(AppUrls.RepakVisionsOfManaUrl, "repak"));
-                        if (!CheckIfDependencyExists("repak", "repak-patch-wuthering-waves.exe")) extraTasks.Add(DependenciesManagerAsync(AppUrls.RepakWutheringWavesUrl, "repak"));
-
-                        if (extraTasks.Count > 0)
-                        {
-                            await Task.WhenAll(extraTasks);
-                        }
-                    });
-
-                    for (int i = 0; i <= 100; i++)
-                    {
-                        if (downloadAll.IsCompleted) break;
-                        await Task.Delay(50);
-                        progress.Report(i / 100.0);
-                    }
-
-                    await downloadAll;
-                    progress.Report(1.0);
-                    repakDownloaded = true;
-                });
-            }
-
-            if (retocDownload)
-            {
-                await MessageManager.ShowProgress(Lang.DependencyManager, Lang.DownloadingRetocNNPleaseWait, async progress =>
-                {
-                    var downloadDependency = DependenciesManagerAsync(AppUrls.RetocUrl, "retoc");
-
-                    for (int i = 0; i <= 100; i++)
-                    {
-                        await Task.Delay(50);
-                        progress.Report(i / 100.0);
-                    }
-
-                    await downloadDependency;
-                    retocDownloaded = true;
-                });
-            }
-
-            if (missingDependencies)
-            {
-                await MessageManager.ShowInfo(Lang.DependencyManager, Lang.MissingDependencies);
-                Application.Current.Shutdown();
-            }
-            else if (repakDownloaded || retocDownloaded)
-            {
-                await MessageManager.ShowInfo(Lang.DependencyManager, Lang.DependencyDownloadsComplete);
             }
         }
     }
