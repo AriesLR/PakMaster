@@ -1,3 +1,24 @@
+## [v1.0.0-rc.2]
+
+> [!WARNING]
+> **Pre-Release Build:** Expect bugs! Please [report any issues](https://github.com/AriesLR/PakMaster/issues/new?template=issue.md) you run into so I can get them fixed.
+
+### Added
+- Added Package Manager to select which tools you need instead of downloading everything.
+- Added Profile Switching to create and manage multiple configurations/profiles.
+- Added PakMaster Settings flyout to hold profile settings and provide easy access to the Package Manager.
+
+### Changed
+- Light code refactoring.
+
+### Fixed
+- Fixed missing localization.
+
+### Removed
+- Cleaned up deprecated and unused code.
+
+---
+
 ## [v1.0.0-rc.1]
 
 > [!WARNING]
