@@ -89,33 +89,11 @@
             <!-- ================  Main Content START ================ -->
             <mah:SplitView.Content>
                 <Grid>
-                    <!-- RepakView (Visible by default) -->
-                    <views:RepakView>
-                        <views:RepakView.Style>
-                            <Style TargetType="UserControl">
-                                <Setter Property="Visibility" Value="Visible" />
-                                <Style.Triggers>
-                                    <DataTrigger Binding="{Binding IsOn, ElementName=ViewSwitcherToggle}" Value="True">
-                                        <Setter Property="Visibility" Value="Collapsed" />
-                                    </DataTrigger>
-                                </Style.Triggers>
-                            </Style>
-                        </views:RepakView.Style>
-                    </views:RepakView>
+                    <!-- RepakView -->
+                    <views:RepakView x:Name="RepakViewControl" Visibility="Visible" />
 
-                    <!-- RetocView (Hidden by default) -->
-                    <views:RetocView>
-                        <views:RetocView.Style>
-                            <Style TargetType="UserControl">
-                                <Setter Property="Visibility" Value="Collapsed" />
-                                <Style.Triggers>
-                                    <DataTrigger Binding="{Binding IsOn, ElementName=ViewSwitcherToggle}" Value="True">
-                                        <Setter Property="Visibility" Value="Visible" />
-                                    </DataTrigger>
-                                </Style.Triggers>
-                            </Style>
-                        </views:RetocView.Style>
-                    </views:RetocView>
+                    <!-- RetocView -->
+                    <views:RetocView x:Name="RetocViewControl" Visibility="Collapsed" />
                 </Grid>
             </mah:SplitView.Content>
             <!-- ================  Main Content END ================ -->
