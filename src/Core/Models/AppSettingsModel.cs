@@ -2,6 +2,9 @@ namespace PakMaster.Core.Models
 {
     public class AppSettingsModel
     {
+        // ================ PakMaster Settings ================
+        public string ActiveProfileName { get; set; } = "tools-config.json";
+
         // ================ Appearance ================
 
         // Language
