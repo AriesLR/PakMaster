@@ -954,4 +954,64 @@ PakMaster will not work without the dependencies.</value>
   <data name="DependencyDownloadsComplete" xml:space="preserve">
     <value>Dependency downloads complete!</value>
   </data>
+  <data name="MainWindowFlyoutsView_PakMasterSettings" xml:space="preserve">
+    <value>PakMaster Settings</value>
+  </data>
+  <data name="PackageManagerWindow_PackageManager" xml:space="preserve">
+    <value>Package Manager</value>
+  </data>
+  <data name="MainWindowFlyoutsView_ProfileManagement" xml:space="preserve">
+    <value>Profile Management</value>
+  </data>
+  <data name="MainWindowFlyoutsView_SelectProfile" xml:space="preserve">
+    <value>Select Profile...</value>
+  </data>
+  <data name="MainWindowFlyoutsView_AddProfile" xml:space="preserve">
+    <value>Add Profile</value>
+  </data>
+  <data name="MainWindowFlyoutsView_DeleteProfile" xml:space="preserve">
+    <value>Delete Profile</value>
+  </data>
+  <data name="MainWindowFlyoutsView_ResetActiveProfile" xml:space="preserve">
+    <value>Reset Active Profile</value>
+  </data>
+  <data name="MainWindowFlyoutsView_OpenPackageManager" xml:space="preserve">
+    <value>Open Package Manager</value>
+  </data>
+  <data name="NoPackagesSelected" xml:space="preserve">
+    <value>No Packages Selected</value>
+  </data>
+  <data name="YouMustInstallAtLeastOnePackageToContinue" xml:space="preserve">
+    <value>You must install at least one package to continue.</value>
+  </data>
+  <data name="UpdatingPackages" xml:space="preserve">
+    <value>Updating Packages</value>
+  </data>
+  <data name="PleaseWaitWhilePackagesAreBeingUpdated" xml:space="preserve">
+    <value>Please wait while packages are being updated...</value>
+  </data>
+  <data name="PackageManagerWindow_SelectAll" xml:space="preserve">
+    <value>Select All</value>
+  </data>
+  <data name="AreYouSureYouWantToDeleteProfile" xml:space="preserve">
+    <value>Are you sure you want to delete profile "{0}?"</value>
+  </data>
+  <data name="ResetProfile" xml:space="preserve">
+    <value>Reset Profile</value>
+  </data>
+  <data name="AreYouSureYouWantToResetTheCurrentProfileToDefaultSettings" xml:space="preserve">
+    <value>Are you sure you want to reset the current profile to default settings?</value>
+  </data>
+  <data name="CannotDeleteTheDefaultProfile" xml:space="preserve">
+    <value>Cannot delete the default profile.</value>
+  </data>
+  <data name="NewProfile" xml:space="preserve">
+    <value>New Profile</value>
+  </data>
+  <data name="EnterANameForTheNewProfile" xml:space="preserve">
+    <value>Enter a name for the new profile:</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Warning</value>
+  </data>
 </root>

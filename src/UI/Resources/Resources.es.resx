@@ -123,6 +123,9 @@
   <data name="AppSettings_Section_Appearance" xml:space="preserve">
     <value>Aspecto</value>
   </data>
+  <data name="AppSettings_Lbl_Language" xml:space="preserve">
+    <value>Idioma*</value>
+  </data>
   <data name="AppSettings_Desc_Language" xml:space="preserve">
     <value>Elige el idioma que se utilizará en toda la aplicación.
 
@@ -872,7 +875,61 @@ PakMaster no funcionará sin las dependencias.</value>
   <data name="DependencyDownloadsComplete" xml:space="preserve">
     <value>¡Se han completado las descargas de las dependencias!</value>
   </data>
-  <data name="AppSettings_Lbl_Language" xml:space="preserve">
-    <value>Idioma*</value>
+  <data name="PackageManagerWindow_PackageManager" xml:space="preserve">
+    <value>Gestor de paquetes</value>
+  </data>
+  <data name="MainWindowFlyoutsView_ProfileManagement" xml:space="preserve">
+    <value>Gestión de perfiles</value>
+  </data>
+  <data name="MainWindowFlyoutsView_SelectProfile" xml:space="preserve">
+    <value>Seleccionar perfil...</value>
+  </data>
+  <data name="MainWindowFlyoutsView_AddProfile" xml:space="preserve">
+    <value>Añadir perfil</value>
+  </data>
+  <data name="MainWindowFlyoutsView_DeleteProfile" xml:space="preserve">
+    <value>Eliminar perfil</value>
+  </data>
+  <data name="MainWindowFlyoutsView_ResetActiveProfile" xml:space="preserve">
+    <value>Restablecer perfil activo</value>
+  </data>
+  <data name="MainWindowFlyoutsView_OpenPackageManager" xml:space="preserve">
+    <value>Abrir el gestor de paquetes</value>
+  </data>
+  <data name="NoPackagesSelected" xml:space="preserve">
+    <value>No se ha seleccionado ningún paquete</value>
+  </data>
+  <data name="YouMustInstallAtLeastOnePackageToContinue" xml:space="preserve">
+    <value>Debes instalar al menos un paquete para continuar.</value>
+  </data>
+  <data name="UpdatingPackages" xml:space="preserve">
+    <value>Actualización de paquetes</value>
+  </data>
+  <data name="PleaseWaitWhilePackagesAreBeingUpdated" xml:space="preserve">
+    <value>Por favor, espera mientras se actualizan los paquetes...</value>
+  </data>
+  <data name="PackageManagerWindow_SelectAll" xml:space="preserve">
+    <value>Seleccionar todo</value>
+  </data>
+  <data name="AreYouSureYouWantToDeleteProfile" xml:space="preserve">
+    <value>¿Estás seguro de que quieres eliminar el perfil «{0}»?</value>
+  </data>
+  <data name="ResetProfile" xml:space="preserve">
+    <value>Restablecer perfil</value>
+  </data>
+  <data name="AreYouSureYouWantToResetTheCurrentProfileToDefaultSettings" xml:space="preserve">
+    <value>¿Estás seguro de que quieres restablecer la configuración predeterminada del perfil actual?</value>
+  </data>
+  <data name="CannotDeleteTheDefaultProfile" xml:space="preserve">
+    <value>No se puede eliminar el perfil predeterminado.</value>
+  </data>
+  <data name="NewProfile" xml:space="preserve">
+    <value>Nuevo perfil</value>
+  </data>
+  <data name="EnterANameForTheNewProfile" xml:space="preserve">
+    <value>Introduce un nombre para el nuevo perfil:</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Advertencia</value>
   </data>
 </root>

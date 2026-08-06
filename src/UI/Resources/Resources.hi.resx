@@ -123,6 +123,9 @@
   <data name="AppSettings_Section_Appearance" xml:space="preserve">
     <value>दृश्यमानता</value>
   </data>
+  <data name="AppSettings_Lbl_Language" xml:space="preserve">
+    <value>भाषा*</value>
+  </data>
   <data name="AppSettings_Desc_Language" xml:space="preserve">
     <value>अनुप्रयोग में उपयोग की जाने वाली भाषा चुनें।
 
@@ -872,7 +875,61 @@
   <data name="DependencyDownloadsComplete" xml:space="preserve">
     <value>निर्भरता डाउनलोड पूरी हो गई!</value>
   </data>
-  <data name="AppSettings_Lbl_Language" xml:space="preserve">
-    <value>भाषा*</value>
+  <data name="PackageManagerWindow_PackageManager" xml:space="preserve">
+    <value>पैकेज प्रबंधक</value>
+  </data>
+  <data name="MainWindowFlyoutsView_ProfileManagement" xml:space="preserve">
+    <value>प्रोफ़ाइल प्रबंधन</value>
+  </data>
+  <data name="MainWindowFlyoutsView_SelectProfile" xml:space="preserve">
+    <value>प्रोफ़ाइल चुनें...</value>
+  </data>
+  <data name="MainWindowFlyoutsView_AddProfile" xml:space="preserve">
+    <value>प्रोफ़ाइल जोड़ें</value>
+  </data>
+  <data name="MainWindowFlyoutsView_DeleteProfile" xml:space="preserve">
+    <value>प्रोफ़ाइल हटाएँ</value>
+  </data>
+  <data name="MainWindowFlyoutsView_ResetActiveProfile" xml:space="preserve">
+    <value>सक्रिय प्रोफ़ाइल रीसेट करें</value>
+  </data>
+  <data name="MainWindowFlyoutsView_OpenPackageManager" xml:space="preserve">
+    <value>पैकेज मैनेजर खोलें</value>
+  </data>
+  <data name="NoPackagesSelected" xml:space="preserve">
+    <value>कोई पैकेज नहीं चुना गया</value>
+  </data>
+  <data name="YouMustInstallAtLeastOnePackageToContinue" xml:space="preserve">
+    <value>जारी रखने के लिए आपको कम से कम एक पैकेज स्थापित करना होगा।</value>
+  </data>
+  <data name="UpdatingPackages" xml:space="preserve">
+    <value>पैकेज अपडेट हो रहे हैं</value>
+  </data>
+  <data name="PleaseWaitWhilePackagesAreBeingUpdated" xml:space="preserve">
+    <value>कृपया प्रतीक्षा करें जब तक पैकेज अपडेट हो रहे हैं...</value>
+  </data>
+  <data name="PackageManagerWindow_SelectAll" xml:space="preserve">
+    <value>सभी चुनें</value>
+  </data>
+  <data name="AreYouSureYouWantToDeleteProfile" xml:space="preserve">
+    <value>क्या आप प्रोफ़ाइल "{0}" को हटाना चाहते हैं?</value>
+  </data>
+  <data name="ResetProfile" xml:space="preserve">
+    <value>प्रोफ़ाइल रीसेट करें</value>
+  </data>
+  <data name="AreYouSureYouWantToResetTheCurrentProfileToDefaultSettings" xml:space="preserve">
+    <value>क्या आप सुनिश्चित हैं कि आप वर्तमान प्रोफ़ाइल को डिफ़ॉल्ट सेटिंग्स पर रीसेट करना चाहते हैं?</value>
+  </data>
+  <data name="CannotDeleteTheDefaultProfile" xml:space="preserve">
+    <value>डिफ़ॉल्ट प्रोफ़ाइल को हटाया नहीं जा सकता।</value>
+  </data>
+  <data name="NewProfile" xml:space="preserve">
+    <value>नया प्रोफ़ाइल</value>
+  </data>
+  <data name="EnterANameForTheNewProfile" xml:space="preserve">
+    <value>नए प्रोफ़ाइल के लिए एक नाम दर्ज करें:</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>चेतावनी</value>
   </data>
 </root>

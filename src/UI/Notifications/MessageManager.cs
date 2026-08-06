@@ -32,7 +32,7 @@ namespace PakMaster.UI.Notifications
             {
                 AffirmativeButtonText = Lang.Btn_Ok
             };
-            await Application.Current.Dispatcher.InvokeSafeAsync(() => mainWindow.ShowMessageAsync("Warning", message, MessageDialogStyle.Affirmative, settings));
+            await Application.Current.Dispatcher.InvokeSafeAsync(() => mainWindow.ShowMessageAsync(Lang.Warning, message, MessageDialogStyle.Affirmative, settings));
         }
 
         // Error
@@ -44,7 +44,7 @@ namespace PakMaster.UI.Notifications
             {
                 AffirmativeButtonText = Lang.Btn_Ok
             };
-            await Application.Current.Dispatcher.InvokeSafeAsync(() => mainWindow.ShowMessageAsync("Error", message, MessageDialogStyle.Affirmative, settings));
+            await Application.Current.Dispatcher.InvokeSafeAsync(() => mainWindow.ShowMessageAsync(Lang.Msg_Error_Title, message, MessageDialogStyle.Affirmative, settings));
         }
 
         // Show Progress Bar

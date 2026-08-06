@@ -123,6 +123,9 @@
   <data name="AppSettings_Section_Appearance" xml:space="preserve">
     <value>外观</value>
   </data>
+  <data name="AppSettings_Lbl_Language" xml:space="preserve">
+    <value>语言*</value>
+  </data>
   <data name="AppSettings_Desc_Language" xml:space="preserve">
     <value>请选择应用程序中使用的语言。
 
@@ -872,7 +875,61 @@
   <data name="DependencyDownloadsComplete" xml:space="preserve">
     <value>依赖项下载已完成！</value>
   </data>
-  <data name="AppSettings_Lbl_Language" xml:space="preserve">
-    <value>语言*</value>
+  <data name="PackageManagerWindow_PackageManager" xml:space="preserve">
+    <value>包管理器</value>
+  </data>
+  <data name="MainWindowFlyoutsView_ProfileManagement" xml:space="preserve">
+    <value>个人资料管理</value>
+  </data>
+  <data name="MainWindowFlyoutsView_SelectProfile" xml:space="preserve">
+    <value>选择个人资料...</value>
+  </data>
+  <data name="MainWindowFlyoutsView_AddProfile" xml:space="preserve">
+    <value>添加个人资料</value>
+  </data>
+  <data name="MainWindowFlyoutsView_DeleteProfile" xml:space="preserve">
+    <value>删除个人资料</value>
+  </data>
+  <data name="MainWindowFlyoutsView_ResetActiveProfile" xml:space="preserve">
+    <value>重置当前配置文件</value>
+  </data>
+  <data name="MainWindowFlyoutsView_OpenPackageManager" xml:space="preserve">
+    <value>打开软件包管理器</value>
+  </data>
+  <data name="NoPackagesSelected" xml:space="preserve">
+    <value>未选择任何软件包</value>
+  </data>
+  <data name="YouMustInstallAtLeastOnePackageToContinue" xml:space="preserve">
+    <value>您必须至少安装一个软件包才能继续。</value>
+  </data>
+  <data name="UpdatingPackages" xml:space="preserve">
+    <value>更新软件包</value>
+  </data>
+  <data name="PleaseWaitWhilePackagesAreBeingUpdated" xml:space="preserve">
+    <value>请稍等，系统正在更新软件包……</value>
+  </data>
+  <data name="PackageManagerWindow_SelectAll" xml:space="preserve">
+    <value>全选</value>
+  </data>
+  <data name="AreYouSureYouWantToDeleteProfile" xml:space="preserve">
+    <value>您确定要删除个人资料“{0}”吗？</value>
+  </data>
+  <data name="ResetProfile" xml:space="preserve">
+    <value>重置个人资料</value>
+  </data>
+  <data name="AreYouSureYouWantToResetTheCurrentProfileToDefaultSettings" xml:space="preserve">
+    <value>您确定要将当前配置文件重置为默认设置吗？</value>
+  </data>
+  <data name="CannotDeleteTheDefaultProfile" xml:space="preserve">
+    <value>无法删除默认配置文件。</value>
+  </data>
+  <data name="NewProfile" xml:space="preserve">
+    <value>新建个人资料</value>
+  </data>
+  <data name="EnterANameForTheNewProfile" xml:space="preserve">
+    <value>请输入新配置文件的名称：</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>警告</value>
   </data>
 </root>
