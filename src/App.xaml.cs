@@ -150,8 +150,19 @@ namespace PakMaster
                 };
 
                 // Show MainWindow and Hide Splash Screen
-                mainWindow.Show();
                 splashScreen.Close();
+
+                string firstLaunchFile = Path.Combine(AppConfig.PakMasterConfigsFolder, "firstlaunch.complete");
+                ToolDependencyEngine.UpdatePackageStates();
+                bool hasAnyPackages = ToolDependencyEngine.GetAllPackages().Any(p => p.IsInstalled);
+
+                if (!File.Exists(firstLaunchFile) || !hasAnyPackages)
+                {
+                    var packageManagerWindow = new PackageManagerWindow();
+                    packageManagerWindow.ShowDialog();
+                }
+
+                mainWindow.Show();
 
                 stopwatch.Stop();
 
@@ -159,8 +170,6 @@ namespace PakMaster
 
                 // Init Update Service
                 await UpdateManager.InitializeAsync();
-
-                await ToolDependencyEngine.CheckAndDownloadToolDependenciesAsync();
             }
             catch (Exception ex)
             {

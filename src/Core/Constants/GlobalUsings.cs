@@ -24,6 +24,7 @@ global using PakMaster.UI.Notifications;
 global using PakMaster.UI.Notifications.Interfaces;
 global using PakMaster.UI.State;
 global using PakMaster.UI.Taskbar;
+global using PakMaster.UI.Windows;
 global using Serilog;
 global using Serilog.Core;
 global using System;

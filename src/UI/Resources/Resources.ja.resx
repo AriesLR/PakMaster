@@ -123,6 +123,9 @@
   <data name="AppSettings_Section_Appearance" xml:space="preserve">
     <value>外観</value>
   </data>
+  <data name="AppSettings_Lbl_Language" xml:space="preserve">
+    <value>言語*</value>
+  </data>
   <data name="AppSettings_Desc_Language" xml:space="preserve">
     <value>アプリケーション全体で使用する言語を選択してください。
 
@@ -872,7 +875,61 @@ PakMasterは、依存関係が揃っていないと動作しません。</value>
   <data name="DependencyDownloadsComplete" xml:space="preserve">
     <value>依存関係のダウンロードが完了しました！</value>
   </data>
-  <data name="AppSettings_Lbl_Language" xml:space="preserve">
-    <value>言語*</value>
+  <data name="PackageManagerWindow_PackageManager" xml:space="preserve">
+    <value>パッケージマネージャー</value>
+  </data>
+  <data name="MainWindowFlyoutsView_ProfileManagement" xml:space="preserve">
+    <value>プロファイル管理</value>
+  </data>
+  <data name="MainWindowFlyoutsView_SelectProfile" xml:space="preserve">
+    <value>プロフィールを選択...</value>
+  </data>
+  <data name="MainWindowFlyoutsView_AddProfile" xml:space="preserve">
+    <value>プロフィールを追加</value>
+  </data>
+  <data name="MainWindowFlyoutsView_DeleteProfile" xml:space="preserve">
+    <value>プロフィールを削除</value>
+  </data>
+  <data name="MainWindowFlyoutsView_ResetActiveProfile" xml:space="preserve">
+    <value>アクティブなプロファイルをリセット</value>
+  </data>
+  <data name="MainWindowFlyoutsView_OpenPackageManager" xml:space="preserve">
+    <value>パッケージマネージャーを開く</value>
+  </data>
+  <data name="NoPackagesSelected" xml:space="preserve">
+    <value>選択されたパッケージはありません</value>
+  </data>
+  <data name="YouMustInstallAtLeastOnePackageToContinue" xml:space="preserve">
+    <value>続行するには、少なくとも1つのパッケージをインストールする必要があります。</value>
+  </data>
+  <data name="UpdatingPackages" xml:space="preserve">
+    <value>パッケージの更新</value>
+  </data>
+  <data name="PleaseWaitWhilePackagesAreBeingUpdated" xml:space="preserve">
+    <value>パッケージの更新中ですので、しばらくお待ちください...</value>
+  </data>
+  <data name="PackageManagerWindow_SelectAll" xml:space="preserve">
+    <value>すべて選択</value>
+  </data>
+  <data name="AreYouSureYouWantToDeleteProfile" xml:space="preserve">
+    <value>「{0}」というプロフィールを削除してもよろしいですか？</value>
+  </data>
+  <data name="ResetProfile" xml:space="preserve">
+    <value>プロフィールのリセット</value>
+  </data>
+  <data name="AreYouSureYouWantToResetTheCurrentProfileToDefaultSettings" xml:space="preserve">
+    <value>現在のプロファイルをデフォルト設定にリセットしてもよろしいですか？</value>
+  </data>
+  <data name="CannotDeleteTheDefaultProfile" xml:space="preserve">
+    <value>デフォルトのプロファイルを削除できません。</value>
+  </data>
+  <data name="NewProfile" xml:space="preserve">
+    <value>新しいプロフィール</value>
+  </data>
+  <data name="EnterANameForTheNewProfile" xml:space="preserve">
+    <value>新しいプロファイルの名前を入力してください：</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>警告</value>
   </data>
 </root>

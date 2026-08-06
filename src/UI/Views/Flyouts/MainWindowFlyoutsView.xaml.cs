@@ -9,9 +9,9 @@ namespace PakMaster.UI.Views.Flyouts
             AccentColorDropdown.ItemsSource = ThemeBuilder.AvailableAccents;
             LanguageDropdown.ItemsSource = LanguageManager.SupportedLanguages;
 
-            PakMaster.Core.Engines.ProcessEngine.OnCliProcessStarted += ProcessEngine_OnCliProcessStarted;
-            PakMaster.Core.Engines.ProcessEngine.OnCliProcessEnded += ProcessEngine_OnCliProcessEnded;
-            PakMaster.Core.Engines.ProcessEngine.OnCliOutputLine += ProcessEngine_OnCliOutputLine;
+            ProcessEngine.OnCliProcessStarted += ProcessEngine_OnCliProcessStarted;
+            ProcessEngine.OnCliProcessEnded += ProcessEngine_OnCliProcessEnded;
+            ProcessEngine.OnCliOutputLine += ProcessEngine_OnCliOutputLine;
 
             this.Loaded += MainWindowFlyoutsView_Loaded;
         }
@@ -320,6 +320,106 @@ namespace PakMaster.UI.Views.Flyouts
 
             // Sync Language Dropdown
             LanguageDropdown.SelectedItem = LanguageManager.SupportedLanguages.FirstOrDefault(lang => string.Equals(lang.CultureCode, settings.Language, StringComparison.OrdinalIgnoreCase)) ?? LanguageManager.SupportedLanguages[0];
+
+            RefreshProfileList();
+        }
+
+        // ============ PakMaster Settings Flyout ============
+
+        private class ProfileItem
+        {
+            public string FileName { get; set; } = string.Empty;
+            public string DisplayName { get; set; } = string.Empty;
+        }
+
+        private void RefreshProfileList()
+        {
+            var profiles = ConfigManager.GetAvailableProfiles();
+            var items = new List<ProfileItem>();
+            foreach (var p in profiles)
+            {
+                string disp = p;
+                if (p.Equals("tools-config.json", StringComparison.OrdinalIgnoreCase) || p.Equals("tools-config.json", StringComparison.OrdinalIgnoreCase))
+                {
+                    disp = "default";
+                }
+                else if (p.EndsWith(".json", StringComparison.OrdinalIgnoreCase))
+                {
+                    disp = p.Substring(0, p.Length - 5);
+                }
+
+                items.Add(new ProfileItem
+                {
+                    FileName = p,
+                    DisplayName = disp
+                });
+            }
+
+            ProfileComboBox.DisplayMemberPath = "DisplayName";
+            ProfileComboBox.SelectedValuePath = "FileName";
+            ProfileComboBox.ItemsSource = items;
+
+            string activeProfile = AppSettingsManager.CurrentSettings?.ActiveProfileName ?? "tools-config.json";
+            ProfileComboBox.SelectedValue = activeProfile;
+        }
+
+        private void ProfileComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (!App.IsLoaded || ProfileComboBox.SelectedValue is not string selectedFile) return;
+
+            ConfigManager.SetActiveProfile(selectedFile);
+        }
+
+        private async void AddProfileButton_Click(object sender, RoutedEventArgs e)
+        {
+            string newProfileName = await MessageManager.ShowInput(Lang.NewProfile, Lang.EnterANameForTheNewProfile);
+            if (!string.IsNullOrWhiteSpace(newProfileName))
+            {
+                if (!newProfileName.EndsWith(".json", StringComparison.OrdinalIgnoreCase)) newProfileName += ".json";
+                ConfigManager.CreateProfile(newProfileName);
+
+                RefreshProfileList();
+                ProfileComboBox.SelectedValue = newProfileName;
+            }
+        }
+
+        private async void DeleteProfileButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (ProfileComboBox.SelectedValue is string selectedFile)
+            {
+                if (selectedFile.Equals("tools-config.json", StringComparison.OrdinalIgnoreCase) || selectedFile.Equals("tools-config.json", StringComparison.OrdinalIgnoreCase))
+                {
+                    await MessageManager.ShowError(Lang.CannotDeleteTheDefaultProfile);
+                    return;
+                }
+
+                string message = string.Format(Lang.AreYouSureYouWantToDeleteProfile, selectedFile);
+
+                bool confirm = await MessageManager.ShowYesNo(Lang.MainWindowFlyoutsView_DeleteProfile, message);
+                if (confirm)
+                {
+                    ConfigManager.DeleteProfile(selectedFile);
+                    ConfigManager.SetActiveProfile("tools-config.json");
+                    RefreshProfileList();
+                    ProfileComboBox.SelectedValue = "tools-config.json";
+                }
+            }
+        }
+
+        private async void ResetProfileButton_Click(object sender, RoutedEventArgs e)
+        {
+            bool confirm = await MessageManager.ShowYesNo(Lang.ResetProfile, Lang.AreYouSureYouWantToResetTheCurrentProfileToDefaultSettings);
+            if (confirm)
+            {
+                ConfigManager.ResetProfile();
+                await App.Toasts.ShowConfigSaved();
+            }
+        }
+
+        private void OpenPackageManagerButton_Click(object sender, RoutedEventArgs e)
+        {
+            var packageManagerWindow = new PackageManagerWindow();
+            packageManagerWindow.ShowDialog();
         }
     }
 }

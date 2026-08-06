@@ -14,11 +14,51 @@ namespace PakMaster
             Loaded -= MainWindow_Loaded;
             TrayIconManager.UpdateTrayIconVisibility();
 
-            if (ViewSwitcherToggle != null)
+            ToolDependencyEngine.PackagesUpdated -= UpdateViewSwitcherVisibility;
+            ToolDependencyEngine.PackagesUpdated += UpdateViewSwitcherVisibility;
+
+            UpdateViewSwitcherVisibility();
+        }
+
+        private void UpdateViewSwitcherVisibility()
+        {
+            Application.Current.Dispatcher.Invoke(() =>
             {
-                ViewSwitcherToggle.IsOn = ConfigManager.CurrentSettings.IsRetocViewActive;
-                ViewSwitcherToggle.Toggled += ViewSwitcherToggle_Toggled;
-            }
+                if (ViewSwitcherToggle != null && ViewSwitcherPanel != null)
+                {
+                    bool hasRepak = ToolDependencyEngine.GetAvailableBranches("Repak").Count > 0;
+                    bool hasRetoc = ToolDependencyEngine.GetAvailableBranches("Retoc").Count > 0;
+
+                    if (!hasRepak && !hasRetoc)
+                    {
+                        ViewSwitcherPanel.Visibility = Visibility.Collapsed;
+                    }
+                    else if (hasRepak && hasRetoc)
+                    {
+                        ViewSwitcherPanel.Visibility = Visibility.Visible;
+                        ViewSwitcherToggle.IsOn = ConfigManager.CurrentSettings.IsRetocViewActive;
+                    }
+                    else
+                    {
+                        ViewSwitcherPanel.Visibility = Visibility.Collapsed;
+                        ViewSwitcherToggle.IsOn = hasRetoc;
+                        ConfigManager.CurrentSettings.IsRetocViewActive = hasRetoc;
+                    }
+
+                    ViewSwitcherToggle.Toggled -= ViewSwitcherToggle_Toggled;
+                    ViewSwitcherToggle.Toggled += ViewSwitcherToggle_Toggled;
+                    
+                    UpdateViewsVisibility(ViewSwitcherToggle.IsOn);
+                }
+            });
+        }
+
+        private void UpdateViewsVisibility(bool isRetocViewActive)
+        {
+            if (RepakViewControl != null)
+                RepakViewControl.Visibility = isRetocViewActive ? Visibility.Collapsed : Visibility.Visible;
+            if (RetocViewControl != null)
+                RetocViewControl.Visibility = isRetocViewActive ? Visibility.Visible : Visibility.Collapsed;
         }
 
         private void ViewSwitcherToggle_Toggled(object sender, RoutedEventArgs e)
@@ -26,6 +66,8 @@ namespace PakMaster
             if (!IsLoaded || ViewSwitcherToggle == null) return;
             ConfigManager.CurrentSettings.IsRetocViewActive = ViewSwitcherToggle.IsOn;
             ConfigManager.SaveConfig(ConfigManager.CurrentSettings);
+            
+            UpdateViewsVisibility(ViewSwitcherToggle.IsOn);
         }
 
         // ============ Button Clicks ============
@@ -57,6 +99,7 @@ namespace PakMaster
         // OnClosing Method
         protected override void OnClosing(CancelEventArgs e)
         {
+            ToolDependencyEngine.PackagesUpdated -= UpdateViewSwitcherVisibility;
             base.OnClosing(e);
 
             WindowPositionManager.SavePosition(this);

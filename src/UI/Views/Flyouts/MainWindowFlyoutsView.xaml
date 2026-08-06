@@ -692,6 +692,75 @@
     </mah:Flyout>
     <!-- ============ About Flyout END ============ -->
 
+    <!-- ============ PakMaster Settings Flyout START ============ -->
+
+    <mah:Flyout x:Name="PakMasterSettingsFlyout"
+            Header="{lex:Loc MainWindowFlyoutsView_PakMasterSettings}"
+            Position="Left"
+            Width="{lex:Loc Num_About_Flyout_Width}"
+            Foreground="{DynamicResource MahApps.Brushes.Flyout.Foreground}"
+            Background="{DynamicResource Alr.Brushes.DarkBg800}"
+            BorderBrush="{DynamicResource MahApps.Brushes.AccentBase}"
+            BorderThickness="0 0 1 0"
+            IsOpen="{Binding IsPakMasterSettingsFlyoutOpen}">
+
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Separator Grid.Row="0" Background="{StaticResource MahApps.Brushes.Gray.SemiTransparent}" Margin="0,15,0,15" />
+
+            <TextBlock Grid.Row="1" Text="{lex:Loc MainWindowFlyoutsView_ProfileManagement}" FontSize="16" FontWeight="SemiBold" Foreground="{DynamicResource MahApps.Brushes.AccentBase}" Margin="0,0,0,10"/>
+            
+            <Grid Grid.Row="2" Margin="0,0,0,20">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+                
+                <ComboBox x:Name="ProfileComboBox"
+                          Height="35"
+                          mah:ControlsHelper.CornerRadius="2"
+                          Background="{DynamicResource MahApps.Brushes.Transparent}"
+                          BorderBrush="{DynamicResource MahApps.Brushes.Gray7}"
+                          VerticalAlignment="Center"
+                          VerticalContentAlignment="Center"
+                          mah:TextBoxHelper.Watermark="{lex:Loc MainWindowFlyoutsView_SelectProfile}"
+                          SelectionChanged="ProfileComboBox_SelectionChanged" />
+                          
+                <Button Grid.Column="1" x:Name="AddProfileButton" Width="35" Height="35" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="AddProfileButton_Click" ToolTip="{lex:Loc MainWindowFlyoutsView_AddProfile}">
+                    <iconPacks:PackIconMaterial Kind="Plus" Foreground="{DynamicResource MahApps.Brushes.Gray5}" Width="16" Height="16" />
+                </Button>
+                
+                <Button Grid.Column="2" x:Name="DeleteProfileButton" Width="35" Height="35" Margin="5,0,0,0" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="DeleteProfileButton_Click" ToolTip="{lex:Loc MainWindowFlyoutsView_DeleteProfile}">
+                    <iconPacks:PackIconMaterial Kind="Minus" Foreground="{DynamicResource MahApps.Brushes.Gray5}" Width="16" Height="16" />
+                </Button>
+            </Grid>
+
+            <Button Grid.Row="3" x:Name="ResetProfileButton" Height="35" Margin="0,0,0,20" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="ResetProfileButton_Click">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <iconPacks:PackIconMaterial Kind="BackupRestore" Foreground="{DynamicResource MahApps.Brushes.Gray5}" Width="16" Height="16" VerticalAlignment="Center" Margin="0,0,8,0" />
+                    <TextBlock Text="{lex:Loc MainWindowFlyoutsView_ResetActiveProfile}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" VerticalAlignment="Center" />
+                </StackPanel>
+            </Button>
+
+            <Button Grid.Row="4" x:Name="OpenPackageManagerButton" Height="35" Margin="0,40,0,0" VerticalAlignment="Bottom" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Background="Transparent" Click="OpenPackageManagerButton_Click">
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                    <iconPacks:PackIconMaterial Kind="PackageVariant" Foreground="{DynamicResource MahApps.Brushes.Gray5}" Width="16" Height="16" VerticalAlignment="Center" Margin="0,0,8,0" />
+                    <TextBlock Text="{lex:Loc MainWindowFlyoutsView_OpenPackageManager}" Foreground="{DynamicResource MahApps.Brushes.Gray6}" FontWeight="SemiBold" FontSize="12" VerticalAlignment="Center" />
+                </StackPanel>
+            </Button>
+        </Grid>
+    </mah:Flyout>
+
+    <!-- ============ PakMaster Settings Flyout END ============ -->
+
     <!-- ============ Cli Logs Flyout START ============ -->
 
     <mah:Flyout x:Name="CliLogsFlyout"

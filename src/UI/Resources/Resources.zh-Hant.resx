@@ -123,6 +123,9 @@
   <data name="AppSettings_Section_Appearance" xml:space="preserve">
     <value>外观</value>
   </data>
+  <data name="AppSettings_Lbl_Language" xml:space="preserve">
+    <value>語言*</value>
+  </data>
   <data name="AppSettings_Desc_Language" xml:space="preserve">
     <value>請選擇應用程式中使用的語言。
 
@@ -872,7 +875,61 @@
   <data name="DependencyDownloadsComplete" xml:space="preserve">
     <value>依賴項下載完成！</value>
   </data>
-  <data name="AppSettings_Lbl_Language" xml:space="preserve">
-    <value>語言*</value>
+  <data name="PackageManagerWindow_PackageManager" xml:space="preserve">
+    <value>套件管理員</value>
+  </data>
+  <data name="MainWindowFlyoutsView_ProfileManagement" xml:space="preserve">
+    <value>個人資料管理</value>
+  </data>
+  <data name="MainWindowFlyoutsView_SelectProfile" xml:space="preserve">
+    <value>選擇個人資料...</value>
+  </data>
+  <data name="MainWindowFlyoutsView_AddProfile" xml:space="preserve">
+    <value>新增個人資料</value>
+  </data>
+  <data name="MainWindowFlyoutsView_DeleteProfile" xml:space="preserve">
+    <value>刪除個人資料</value>
+  </data>
+  <data name="MainWindowFlyoutsView_ResetActiveProfile" xml:space="preserve">
+    <value>重設當前設定檔</value>
+  </data>
+  <data name="MainWindowFlyoutsView_OpenPackageManager" xml:space="preserve">
+    <value>開啟套件管理員</value>
+  </data>
+  <data name="NoPackagesSelected" xml:space="preserve">
+    <value>未選取任何套件</value>
+  </data>
+  <data name="YouMustInstallAtLeastOnePackageToContinue" xml:space="preserve">
+    <value>您必須安裝至少一個套件才能繼續。</value>
+  </data>
+  <data name="UpdatingPackages" xml:space="preserve">
+    <value>更新套件</value>
+  </data>
+  <data name="PleaseWaitWhilePackagesAreBeingUpdated" xml:space="preserve">
+    <value>請稍候，系統正在更新套件中……</value>
+  </data>
+  <data name="PackageManagerWindow_SelectAll" xml:space="preserve">
+    <value>全選</value>
+  </data>
+  <data name="AreYouSureYouWantToDeleteProfile" xml:space="preserve">
+    <value>您確定要刪除「{0}」這個個人檔案嗎？</value>
+  </data>
+  <data name="ResetProfile" xml:space="preserve">
+    <value>重設個人資料</value>
+  </data>
+  <data name="AreYouSureYouWantToResetTheCurrentProfileToDefaultSettings" xml:space="preserve">
+    <value>您確定要將當前設定檔重設為預設設定嗎？</value>
+  </data>
+  <data name="CannotDeleteTheDefaultProfile" xml:space="preserve">
+    <value>無法刪除預設設定檔。</value>
+  </data>
+  <data name="NewProfile" xml:space="preserve">
+    <value>新個人資料</value>
+  </data>
+  <data name="EnterANameForTheNewProfile" xml:space="preserve">
+    <value>請輸入新設定檔的名稱：</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>警告</value>
   </data>
 </root>

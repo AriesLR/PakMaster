@@ -123,6 +123,9 @@
   <data name="AppSettings_Section_Appearance" xml:space="preserve">
     <value>Внешний вид</value>
   </data>
+  <data name="AppSettings_Lbl_Language" xml:space="preserve">
+    <value>Язык*</value>
+  </data>
   <data name="AppSettings_Desc_Language" xml:space="preserve">
     <value>Выберите язык, который будет использоваться во всем приложении.
 
@@ -872,7 +875,61 @@ PakMaster не будет работать без этих компоненто�
   <data name="DependencyDownloadsComplete" xml:space="preserve">
     <value>Загрузка зависимостей завершена!</value>
   </data>
-  <data name="AppSettings_Lbl_Language" xml:space="preserve">
-    <value>Язык*</value>
+  <data name="PackageManagerWindow_PackageManager" xml:space="preserve">
+    <value>Менеджер пакетов</value>
+  </data>
+  <data name="MainWindowFlyoutsView_ProfileManagement" xml:space="preserve">
+    <value>Управление профилем</value>
+  </data>
+  <data name="MainWindowFlyoutsView_SelectProfile" xml:space="preserve">
+    <value>Выбрать профиль...</value>
+  </data>
+  <data name="MainWindowFlyoutsView_AddProfile" xml:space="preserve">
+    <value>Добавить профиль</value>
+  </data>
+  <data name="MainWindowFlyoutsView_DeleteProfile" xml:space="preserve">
+    <value>Удалить профиль</value>
+  </data>
+  <data name="MainWindowFlyoutsView_ResetActiveProfile" xml:space="preserve">
+    <value>Сбросить активный профиль</value>
+  </data>
+  <data name="MainWindowFlyoutsView_OpenPackageManager" xml:space="preserve">
+    <value>Открыть диспетчер пакетов</value>
+  </data>
+  <data name="NoPackagesSelected" xml:space="preserve">
+    <value>Пакеты не выбраны</value>
+  </data>
+  <data name="YouMustInstallAtLeastOnePackageToContinue" xml:space="preserve">
+    <value>Чтобы продолжить, необходимо установить хотя бы один пакет.</value>
+  </data>
+  <data name="UpdatingPackages" xml:space="preserve">
+    <value>Обновление пакетов</value>
+  </data>
+  <data name="PleaseWaitWhilePackagesAreBeingUpdated" xml:space="preserve">
+    <value>Пожалуйста, подождите, пока происходит обновление пакетов...</value>
+  </data>
+  <data name="PackageManagerWindow_SelectAll" xml:space="preserve">
+    <value>Выделить всё</value>
+  </data>
+  <data name="AreYouSureYouWantToDeleteProfile" xml:space="preserve">
+    <value>Вы уверены, что хотите удалить профиль «{0}»?</value>
+  </data>
+  <data name="ResetProfile" xml:space="preserve">
+    <value>Сбросить настройки профиля</value>
+  </data>
+  <data name="AreYouSureYouWantToResetTheCurrentProfileToDefaultSettings" xml:space="preserve">
+    <value>Вы уверены, что хотите сбросить текущий профиль до настроек по умолчанию?</value>
+  </data>
+  <data name="CannotDeleteTheDefaultProfile" xml:space="preserve">
+    <value>Не удается удалить профиль по умолчанию.</value>
+  </data>
+  <data name="NewProfile" xml:space="preserve">
+    <value>Новый профиль</value>
+  </data>
+  <data name="EnterANameForTheNewProfile" xml:space="preserve">
+    <value>Введите название нового профиля:</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Предупреждение</value>
   </data>
 </root>

@@ -10,6 +10,24 @@ namespace PakMaster.UI.Views
         {
             InitializeComponent();
             this.Loaded += RetocView_Loaded;
+            this.Unloaded += RetocView_Unloaded;
+            ConfigManager.ProfileChanged += ConfigManager_ProfileChanged;
+        }
+
+        private void RetocView_Unloaded(object sender, RoutedEventArgs e)
+        {
+            ConfigManager.ProfileChanged -= ConfigManager_ProfileChanged;
+        }
+
+        private void ConfigManager_ProfileChanged()
+        {
+            Application.Current.Dispatcher.Invoke(() =>
+            {
+                if (IsLoaded)
+                {
+                    LoadState();
+                }
+            });
         }
 
         private void RetocView_Loaded(object sender, RoutedEventArgs e)
@@ -575,7 +593,7 @@ namespace PakMaster.UI.Views
 
             GlobalOptionsGroup?.Visibility = Visibility.Visible;
 
-            CmdPreviewTextBox.Text = PakMaster.Core.Engines.RetocEngine.BuildCommandString(settings);
+            CmdPreviewTextBox.Text = RetocEngine.BuildCommandString(settings);
         }
 
         private void BrowseInputFile_Click(object sender, RoutedEventArgs e)

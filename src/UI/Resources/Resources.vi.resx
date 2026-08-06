@@ -123,6 +123,9 @@
   <data name="AppSettings_Section_Appearance" xml:space="preserve">
     <value>Hình thức</value>
   </data>
+  <data name="AppSettings_Lbl_Language" xml:space="preserve">
+    <value>Ngôn ngữ*</value>
+  </data>
   <data name="AppSettings_Desc_Language" xml:space="preserve">
     <value>Chọn ngôn ngữ được sử dụng trong toàn bộ ứng dụng.
 
@@ -872,7 +875,61 @@ PakMaster sẽ không hoạt động nếu thiếu các thành phần phụ thu�
   <data name="DependencyDownloadsComplete" xml:space="preserve">
     <value>Việc tải xuống các gói phụ thuộc đã hoàn tất!</value>
   </data>
-  <data name="AppSettings_Lbl_Language" xml:space="preserve">
-    <value>Ngôn ngữ*</value>
+  <data name="PackageManagerWindow_PackageManager" xml:space="preserve">
+    <value>Trình quản lý gói</value>
+  </data>
+  <data name="MainWindowFlyoutsView_ProfileManagement" xml:space="preserve">
+    <value>Quản lý hồ sơ</value>
+  </data>
+  <data name="MainWindowFlyoutsView_SelectProfile" xml:space="preserve">
+    <value>Chọn hồ sơ...</value>
+  </data>
+  <data name="MainWindowFlyoutsView_AddProfile" xml:space="preserve">
+    <value>Thêm hồ sơ</value>
+  </data>
+  <data name="MainWindowFlyoutsView_DeleteProfile" xml:space="preserve">
+    <value>Xóa hồ sơ</value>
+  </data>
+  <data name="MainWindowFlyoutsView_ResetActiveProfile" xml:space="preserve">
+    <value>Đặt lại hồ sơ đang hoạt động</value>
+  </data>
+  <data name="MainWindowFlyoutsView_OpenPackageManager" xml:space="preserve">
+    <value>Mở Trình quản lý gói</value>
+  </data>
+  <data name="NoPackagesSelected" xml:space="preserve">
+    <value>Chưa chọn gói nào</value>
+  </data>
+  <data name="YouMustInstallAtLeastOnePackageToContinue" xml:space="preserve">
+    <value>Bạn phải cài đặt ít nhất một gói phần mềm để tiếp tục.</value>
+  </data>
+  <data name="UpdatingPackages" xml:space="preserve">
+    <value>Cập nhật các gói phần mềm</value>
+  </data>
+  <data name="PleaseWaitWhilePackagesAreBeingUpdated" xml:space="preserve">
+    <value>Vui lòng đợi trong khi các gói phần mềm đang được cập nhật...</value>
+  </data>
+  <data name="PackageManagerWindow_SelectAll" xml:space="preserve">
+    <value>Chọn tất cả</value>
+  </data>
+  <data name="AreYouSureYouWantToDeleteProfile" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn xóa hồ sơ "{0}" không?</value>
+  </data>
+  <data name="ResetProfile" xml:space="preserve">
+    <value>Đặt lại hồ sơ</value>
+  </data>
+  <data name="AreYouSureYouWantToResetTheCurrentProfileToDefaultSettings" xml:space="preserve">
+    <value>Bạn có chắc chắn muốn khôi phục cài đặt mặc định cho hồ sơ hiện tại không?</value>
+  </data>
+  <data name="CannotDeleteTheDefaultProfile" xml:space="preserve">
+    <value>Không thể xóa hồ sơ mặc định.</value>
+  </data>
+  <data name="NewProfile" xml:space="preserve">
+    <value>Hồ sơ mới</value>
+  </data>
+  <data name="EnterANameForTheNewProfile" xml:space="preserve">
+    <value>Nhập tên cho hồ sơ mới:</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Cảnh báo</value>
   </data>
 </root>

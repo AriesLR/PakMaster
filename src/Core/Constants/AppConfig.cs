@@ -63,12 +63,6 @@ namespace PakMaster.Core.Constants
         // PakMaster Tool Config Path
         public static string ToolConfigPath { get; } = Path.Combine(PakMasterConfigsFolder, "tools-config.json");
 
-        // PakMaster ZenTools Config Path
-        public static string ZenToolsConfigPath { get; } = Path.Combine(PakMasterConfigsFolder, "zentools-aeskey.json");
-
-        // PakMaster Crypto Config Path
-        public static string CryptoConfigPath { get; } = Path.Combine(PakMasterConfigsFolder, "Crypto.json");
-
         // ============ Helpers ============
 
         // App License Helper

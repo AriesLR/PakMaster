@@ -10,6 +10,37 @@ namespace PakMaster.UI.Views
         {
             InitializeComponent();
             this.Loaded += RepakView_Loaded;
+            this.Unloaded += RepakView_Unloaded;
+            ToolDependencyEngine.PackagesUpdated += ToolDependencyEngine_PackagesUpdated;
+            ConfigManager.ProfileChanged += ConfigManager_ProfileChanged;
+        }
+
+        private void RepakView_Unloaded(object sender, RoutedEventArgs e)
+        {
+            ToolDependencyEngine.PackagesUpdated -= ToolDependencyEngine_PackagesUpdated;
+            ConfigManager.ProfileChanged -= ConfigManager_ProfileChanged;
+        }
+
+        private void ConfigManager_ProfileChanged()
+        {
+            Application.Current.Dispatcher.Invoke(() =>
+            {
+                if (IsLoaded)
+                {
+                    LoadState();
+                }
+            });
+        }
+
+        private void ToolDependencyEngine_PackagesUpdated()
+        {
+            Application.Current.Dispatcher.Invoke(() =>
+            {
+                if (IsLoaded)
+                {
+                    LoadState();
+                }
+            });
         }
 
         private void RepakView_Loaded(object sender, RoutedEventArgs e)
@@ -40,6 +71,13 @@ namespace PakMaster.UI.Views
 
             if (BranchSelectComboBox != null)
             {
+                BranchSelectComboBox.Items.Clear();
+                var branches = ToolDependencyEngine.GetAvailableBranches("Repak");
+                foreach (var b in branches)
+                {
+                    BranchSelectComboBox.Items.Add(new ComboBoxItem { Content = b.DisplayName });
+                }
+
                 foreach (ComboBoxItem item in BranchSelectComboBox.Items)
                 {
                     if (item.Content?.ToString() == branch)
@@ -47,6 +85,11 @@ namespace PakMaster.UI.Views
                         BranchSelectComboBox.SelectedItem = item;
                         break;
                     }
+                }
+                
+                if (BranchSelectComboBox.SelectedItem == null && BranchSelectComboBox.Items.Count > 0)
+                {
+                    BranchSelectComboBox.SelectedIndex = 0;
                 }
             }
 
@@ -261,7 +304,7 @@ namespace PakMaster.UI.Views
             AesKeyGroup?.Visibility = Visibility.Visible;
             GlobalOptionsGroup?.Visibility = Visibility.Visible;
 
-            CmdPreviewTextBox.Text = PakMaster.Core.Engines.RepakEngine.BuildCommandString(settings);
+            CmdPreviewTextBox.Text = RepakEngine.BuildCommandString(settings);
         }
 
         private void BrowseInputFolder_Click(object sender, RoutedEventArgs e)

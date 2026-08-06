@@ -665,6 +665,24 @@ namespace PakMaster.UI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to delete profile &quot;{0}?&quot;.
+        /// </summary>
+        public static string AreYouSureYouWantToDeleteProfile {
+            get {
+                return ResourceManager.GetString("AreYouSureYouWantToDeleteProfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Are you sure you want to reset the current profile to default settings?.
+        /// </summary>
+        public static string AreYouSureYouWantToResetTheCurrentProfileToDefaultSettings {
+            get {
+                return ResourceManager.GetString("AreYouSureYouWantToResetTheCurrentProfileToDefaultSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Browse.
         /// </summary>
         public static string Btn_Browse {
@@ -706,6 +724,15 @@ namespace PakMaster.UI.Resources {
         public static string Btn_Yes {
             get {
                 return ResourceManager.GetString("Btn_Yes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Cannot delete the default profile..
+        /// </summary>
+        public static string CannotDeleteTheDefaultProfile {
+            get {
+                return ResourceManager.GetString("CannotDeleteTheDefaultProfile", resourceCulture);
             }
         }
         
@@ -950,6 +977,15 @@ namespace PakMaster.UI.Resources {
         public static string DownloadingRetocNNPleaseWait {
             get {
                 return ResourceManager.GetString("DownloadingRetocNNPleaseWait", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enter a name for the new profile:.
+        /// </summary>
+        public static string EnterANameForTheNewProfile {
+            get {
+                return ResourceManager.GetString("EnterANameForTheNewProfile", resourceCulture);
             }
         }
         
@@ -1199,6 +1235,24 @@ namespace PakMaster.UI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add Profile.
+        /// </summary>
+        public static string MainWindowFlyoutsView_AddProfile {
+            get {
+                return ResourceManager.GetString("MainWindowFlyoutsView_AddProfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Delete Profile.
+        /// </summary>
+        public static string MainWindowFlyoutsView_DeleteProfile {
+            get {
+                return ResourceManager.GetString("MainWindowFlyoutsView_DeleteProfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Are you absolutely sure you want to reset all application settings back to factory defaults? This action cannot be undone..
         /// </summary>
         public static string MainWindowFlyoutsView_Msg_ResetToFactorySettings_Desc {
@@ -1253,6 +1307,51 @@ namespace PakMaster.UI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Open Package Manager.
+        /// </summary>
+        public static string MainWindowFlyoutsView_OpenPackageManager {
+            get {
+                return ResourceManager.GetString("MainWindowFlyoutsView_OpenPackageManager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to PakMaster Settings.
+        /// </summary>
+        public static string MainWindowFlyoutsView_PakMasterSettings {
+            get {
+                return ResourceManager.GetString("MainWindowFlyoutsView_PakMasterSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Profile Management.
+        /// </summary>
+        public static string MainWindowFlyoutsView_ProfileManagement {
+            get {
+                return ResourceManager.GetString("MainWindowFlyoutsView_ProfileManagement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reset Active Profile.
+        /// </summary>
+        public static string MainWindowFlyoutsView_ResetActiveProfile {
+            get {
+                return ResourceManager.GetString("MainWindowFlyoutsView_ResetActiveProfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select Profile....
+        /// </summary>
+        public static string MainWindowFlyoutsView_SelectProfile {
+            get {
+                return ResourceManager.GetString("MainWindowFlyoutsView_SelectProfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Missing Dependencies!
         ///
         ///PakMaster will not work without the dependencies..
@@ -1269,6 +1368,24 @@ namespace PakMaster.UI.Resources {
         public static string Msg_Error_Title {
             get {
                 return ResourceManager.GetString("Msg_Error_Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Profile.
+        /// </summary>
+        public static string NewProfile {
+            get {
+                return ResourceManager.GetString("NewProfile", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to No Packages Selected.
+        /// </summary>
+        public static string NoPackagesSelected {
+            get {
+                return ResourceManager.GetString("NoPackagesSelected", resourceCulture);
             }
         }
         
@@ -1363,11 +1480,38 @@ namespace PakMaster.UI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Package Manager.
+        /// </summary>
+        public static string PackageManagerWindow_PackageManager {
+            get {
+                return ResourceManager.GetString("PackageManagerWindow_PackageManager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select All.
+        /// </summary>
+        public static string PackageManagerWindow_SelectAll {
+            get {
+                return ResourceManager.GetString("PackageManagerWindow_SelectAll", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to &lt;PATH&gt;.
         /// </summary>
         public static string PATH {
             get {
                 return ResourceManager.GetString("PATH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please wait while packages are being updated....
+        /// </summary>
+        public static string PleaseWaitWhilePackagesAreBeingUpdated {
+            get {
+                return ResourceManager.GetString("PleaseWaitWhilePackagesAreBeingUpdated", resourceCulture);
             }
         }
         
@@ -1605,6 +1749,15 @@ namespace PakMaster.UI.Resources {
         public static string RepakView_Version {
             get {
                 return ResourceManager.GetString("RepakView_Version", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Reset Profile.
+        /// </summary>
+        public static string ResetProfile {
+            get {
+                return ResourceManager.GetString("ResetProfile", resourceCulture);
             }
         }
         
@@ -2228,6 +2381,15 @@ namespace PakMaster.UI.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Updating Packages.
+        /// </summary>
+        public static string UpdatingPackages {
+            get {
+                return ResourceManager.GetString("UpdatingPackages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Failed to open URL: {0}.
         /// </summary>
         public static string UrlService_Msg_FailedToOpenURL_Desc {
@@ -2242,6 +2404,24 @@ namespace PakMaster.UI.Resources {
         public static string UTOC {
             get {
                 return ResourceManager.GetString("UTOC", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Warning.
+        /// </summary>
+        public static string Warning {
+            get {
+                return ResourceManager.GetString("Warning", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to You must install at least one package to continue..
+        /// </summary>
+        public static string YouMustInstallAtLeastOnePackageToContinue {
+            get {
+                return ResourceManager.GetString("YouMustInstallAtLeastOnePackageToContinue", resourceCulture);
             }
         }
         
