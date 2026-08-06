@@ -5,6 +5,7 @@ namespace PakMaster.UI.State
         private bool _isAppSettingsFlyoutOpen;
         private bool _isAboutFlyoutOpen;
         private bool _isCliLogsFlyoutOpen;
+        private bool _isPakMasterSettingsFlyoutOpen;
 
         public ObservableCollection<SidebarModel> MenuItems { get; set; }
         public ObservableCollection<SidebarModel> OptionsMenuItems { get; set; }
@@ -16,6 +17,12 @@ namespace PakMaster.UI.State
             // Top Menu Items
             MenuItems =
             [
+                new SidebarModel
+                {
+                    TextGetter = () => Lang.MainWindowFlyoutsView_PakMasterSettings,
+                    Icon = "FileCog",
+                    Command = new RelayCommand((sender, e) => SidebarPakMasterSettings_Click(sender, e))
+                },
                 new SidebarModel
                 {
                     TextGetter = () => Lang.CliLogs_Title,
@@ -96,6 +103,34 @@ namespace PakMaster.UI.State
                 IsAboutFlyoutOpen = false;
             }
             IsAboutFlyoutOpen = true;
+        }
+
+        // ============ Config Manager Flyout ============
+        private void SidebarPakMasterSettings_Click(object? sender, RoutedEventArgs e)
+        {
+            OpenPakMasterSettingsFlyout();
+        }
+
+        public bool IsPakMasterSettingsFlyoutOpen
+        {
+            get => _isPakMasterSettingsFlyoutOpen;
+            set
+            {
+                if (_isPakMasterSettingsFlyoutOpen != value)
+                {
+                    _isPakMasterSettingsFlyoutOpen = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        public void OpenPakMasterSettingsFlyout()
+        {
+            if (IsPakMasterSettingsFlyoutOpen)
+            {
+                IsPakMasterSettingsFlyoutOpen = false;
+            }
+            IsPakMasterSettingsFlyoutOpen = true;
         }
 
         // ============ Cli Logs Flyout ============
