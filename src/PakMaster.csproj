@@ -18,7 +18,7 @@
 
         <!-- ================ Versioning ================ -->
 		<MasterVersion>1.0.0.0</MasterVersion>
-		<Version>1.0.0-rc.1</Version>
+		<Version>1.0.0-rc.2</Version>
 
 		<AssemblyVersion>$(MasterVersion)</AssemblyVersion>
 		<FileVersion>$(MasterVersion)</FileVersion>
