@@ -211,6 +211,7 @@
                                 <ComboBoxItem Content="UE5_3" />
                                 <ComboBoxItem Content="UE5_4" />
                                 <ComboBoxItem Content="UE5_5" />
+                                <ComboBoxItem Content="UE5_6" />
                                 <ComboBoxItem Content="UE5_7" />
                             </ComboBox>
                         </StackPanel>
@@ -284,7 +285,6 @@
                             <SolidColorBrush x:Key="MahApps.Brushes.TextBox.Border.Focus" Color="{StaticResource MahApps.Colors.Gray.SemiTransparent}" />
                             <SolidColorBrush x:Key="MahApps.Brushes.TextBox.Border" Color="{StaticResource MahApps.Colors.Gray.SemiTransparent}" />
                         </TextBox.Resources>
-
                     </TextBox>
                     <Grid>
                         <Button Height="45" Background="Transparent" BorderBrush="{DynamicResource MahApps.Brushes.Gray7}" Click="ExecuteCommand_Click">
