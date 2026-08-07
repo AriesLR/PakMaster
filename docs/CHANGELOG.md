@@ -1,3 +1,13 @@
+## [v1.0.0-rc.3]
+
+> [!WARNING]
+> **Pre-Release Build:** Expect bugs! Please [report any issues](https://github.com/AriesLR/PakMaster/issues/new?template=issue.md) you run into so I can get them fixed.
+
+### Fixed
+- Fixed a missing version in Retoc's command builder. ([Issue #24](https://github.com/AriesLR/PakMaster/issues/24))
+
+---
+
 ## [v1.0.0-rc.2]
 
 > [!WARNING]
