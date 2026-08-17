@@ -7,9 +7,9 @@
 
     <Style TargetType="{x:Type mah:ToggleSwitch}" BasedOn="{StaticResource {x:Type mah:ToggleSwitch}}">
         <Style.Resources>
-            <SolidColorBrush x:Key="MahApps.Brushes.ToggleSwitch.FillOn" Color="{DynamicResource Alr.Colors.Gray400}" />
-            <SolidColorBrush x:Key="MahApps.Brushes.ToggleSwitch.FillOnPointerOver" Color="{DynamicResource Alr.Colors.Gray300}" />
-            <SolidColorBrush x:Key="MahApps.Brushes.ToggleSwitch.FillOnPressed" Color="{DynamicResource MahApps.Colors.Gray1}" />
+            <SolidColorBrush x:Key="MahApps.Brushes.ToggleSwitch.FillOn" Color="{DynamicResource Alr.Colors.White.O40}" />
+            <SolidColorBrush x:Key="MahApps.Brushes.ToggleSwitch.FillOnPointerOver" Color="{DynamicResource Alr.Colors.White.O60}" />
+            <SolidColorBrush x:Key="MahApps.Brushes.ToggleSwitch.FillOnPressed" Color="{DynamicResource MahApps.Colors.White.O80}" />
         </Style.Resources>
     </Style>
 </ResourceDictionary>
