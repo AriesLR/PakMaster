@@ -7,11 +7,11 @@ It's been about a week without any issues so I feel comfortable calling this a f
 - Small code refactoring on a few lines in the MainWindow.xaml.cs
 
 ### Removed
-- Removed Telemetry, I was unaware of GDPR laws surrounding telemetry. The entire system has been removed from the app and the database will be wiped.[^1]
+- Removed Telemetry, I was unaware of GDPR laws surrounding telemetry. The entire system has been removed from the app and the database will be wiped.
 
 #
 
-###### To ease any concerns, the only thing that was tracked was the amount of users mainly to make myself feel good. However to prevent duplicated a hashed IP and hardware fingerprint were also present in the database. Due to strict laws that I need to look into I'm just going to remove it. It was a fully custom system so google or any other company was never touching your data nor could I do anything very useful with it. An example of the database can be seen [here](https://github.com/AriesLR/PakMaster/blob/main/docs/img/Telem-DB-Example.png), this is my entry. I've hidden parts of each hash in the off chance someone was able to reverse engineer it.
+###### To ease any concerns, the only thing that was tracked was the amount of users mainly to make myself feel good. However to prevent duplicate entries a hashed IP and hardware fingerprint were also present in the database. Due to strict laws that I need to look into I'm just going to remove it. It was a fully custom system so google or any other company was never touching your data nor could I do anything very useful with it. An example of the database can be seen [here](https://github.com/AriesLR/PakMaster/blob/main/docs/img/Telem-DB-Example.png), this is my entry. I've hidden parts of each hash in the off chance someone was able to reverse engineer it.
 
 ---
 
