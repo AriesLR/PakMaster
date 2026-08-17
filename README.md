@@ -7,10 +7,6 @@
   <a href="docs/version/CHANGELOG.md"><img src="https://img.shields.io/badge/changelog-latest-blue" align="center"></a>
   <a href="LICENSE"><img src="https://img.shields.io/github/license/AriesLR/PakMaster?color=indigo" align="center"></a>
   <a href="https://github.com/AriesLR/PakMaster/releases"><img src="https://img.shields.io/github/downloads/AriesLR/PakMaster/total?color=darkviolet" align="center"></a>
-
-  <br/>
-
-  <a href="https://github.com/AriesLR/PakMaster/releases?q=prerelease%3Atrue"><img src="https://img.shields.io/github/v/tag/AriesLR/PakMaster?filter=*rc*&sort=semver&display_name=tag&label=pre-release" align="center"></a>
   <a href="https://github.com/AriesLR/PakMaster/releases/latest"><img src="https://img.shields.io/github/v/release/AriesLR/PakMaster?color=limegreen" align="center"></a>
   
   <br/>
@@ -75,7 +71,7 @@ By using PakMaster, users must also adhere to the licenses of Repak and Retoc in
   - Since PakMaster relies on CLI tools under the hood, their live outputs are captured and displayed directly within the GUI. This allows you to monitor progress in real-time and easily troubleshoot issues if they arise.
 
 - **Customizable Interface**
-  - Deep QoL features, including language switching, customizable accent colors, and adjustable interface scaling.
+  - QoL features, including language switching, customizable accent colors, and adjustable interface scaling.
 
 - **Repak Branch Switching**
   - Easily toggle between different branches of Repak. 
