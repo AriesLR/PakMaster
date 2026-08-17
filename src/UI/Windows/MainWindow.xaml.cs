@@ -47,7 +47,7 @@ namespace PakMaster
 
                     ViewSwitcherToggle.Toggled -= ViewSwitcherToggle_Toggled;
                     ViewSwitcherToggle.Toggled += ViewSwitcherToggle_Toggled;
-                    
+
                     UpdateViewsVisibility(ViewSwitcherToggle.IsOn);
                 }
             });
@@ -55,10 +55,8 @@ namespace PakMaster
 
         private void UpdateViewsVisibility(bool isRetocViewActive)
         {
-            if (RepakViewControl != null)
-                RepakViewControl.Visibility = isRetocViewActive ? Visibility.Collapsed : Visibility.Visible;
-            if (RetocViewControl != null)
-                RetocViewControl.Visibility = isRetocViewActive ? Visibility.Visible : Visibility.Collapsed;
+            RepakViewControl?.Visibility = isRetocViewActive ? Visibility.Collapsed : Visibility.Visible;
+            RetocViewControl?.Visibility = isRetocViewActive ? Visibility.Visible : Visibility.Collapsed;
         }
 
         private void ViewSwitcherToggle_Toggled(object sender, RoutedEventArgs e)
@@ -66,7 +64,7 @@ namespace PakMaster
             if (!IsLoaded || ViewSwitcherToggle == null) return;
             ConfigManager.CurrentSettings.IsRetocViewActive = ViewSwitcherToggle.IsOn;
             ConfigManager.SaveConfig(ConfigManager.CurrentSettings);
-            
+
             UpdateViewsVisibility(ViewSwitcherToggle.IsOn);
         }
 

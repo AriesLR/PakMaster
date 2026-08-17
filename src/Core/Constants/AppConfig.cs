@@ -84,15 +84,5 @@ namespace PakMaster.Core.Constants
 
         // App GUID
         public const string AppGuid = "$guid1$";
-
-        // Other
-
-        // This won't get you very far if you are a bad actor digging around.
-        // Regardless of what you do with this information there are still several layers of security on the server side.
-        // I guess if you want to add a fake user to my db every 15 days be my guest, it only makes me feel better about myself seeing number go up.
-        // Also not worth trying to see the db, everything of even slight value is hashed.
-        public static readonly byte[] WhyAreYouLookingHere = [104, 116, 116, 112, 115, 58, 47, 47, 97, 112, 105, 46, 97, 114, 105, 101, 115, 108, 114, 46, 120, 121, 122];
-
-        public static readonly byte[] LookSomewhereElse = [99, 53, 105, 68, 114, 80, 50, 88, 48, 119, 118, 104, 113, 69];
     }
 }

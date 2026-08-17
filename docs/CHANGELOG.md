@@ -1,3 +1,27 @@
+## [v1.0.0]
+
+It's been about a week without any issues so I feel comfortable calling this a full release now.
+
+### Changed
+- Changed the Repak/Retoc toggle style slightly.
+- Small code refactoring on a few lines in the MainWindow.xaml.cs
+
+### Removed
+- Removed Telemetry, I was unaware of GDPR laws surrounding telemetry. The entire system has been removed from the app and the database will be wiped.
+
+#
+
+###### To ease any concerns, the only thing that was tracked was the amount of users mainly to make myself feel good. However to prevent duplicate entries a hashed IP and hardware fingerprint were also present in the database. Due to strict laws that I need to look into I'm just going to remove it. It was a fully custom system so google or any other company was never touching your data nor could I do anything very useful with it. An example of the database can be seen [here](https://github.com/AriesLR/PakMaster/blob/main/docs/img/Telem-DB-Example.png), this is my entry. I've hidden parts of each hash in the off chance someone was able to reverse engineer it.
+
+## Virus Scan
+
+> [!NOTE]
+> [VirusTotal Report (1/71)](https://www.virustotal.com/gui/file/a15d269145aeebc455425a2765c0ff12d2d1dab3d415b6c82344dc9ee253218e)
+>
+> The single flag from **SecureAge** is a false positive, I've had this vendor flag another project of mine in the past. I've submitted the file as a false positive again, hopefully they actually remove the flag this time.
+
+---
+
 ## [v1.0.0-rc.3]
 
 > [!WARNING]
@@ -5,6 +29,13 @@
 
 ### Fixed
 - Fixed a missing version in Retoc's command builder. ([Issue #24](https://github.com/AriesLR/PakMaster/issues/24))
+
+## Virus Scan
+
+> [!NOTE]
+> [VirusTotal Report (1/70)](https://www.virustotal.com/gui/file/90edaa2dc9c6bb7d637607ec18fc55cf9499ec9bdf40d914074ec0985b3fe522)
+>
+> The single flag from **SecureAge** is a false positive, I've had this vendor flag another project of mine in the past. A false positive report has been submitted to the vendor and the flag should clear within a few days.
 
 ---
 
@@ -26,6 +57,13 @@
 
 ### Removed
 - Cleaned up deprecated and unused code.
+
+## Virus Scan
+
+> [!NOTE]
+> [VirusTotal Report (1/70)](https://www.virustotal.com/gui/file/90edaa2dc9c6bb7d637607ec18fc55cf9499ec9bdf40d914074ec0985b3fe522)
+>
+> The single flag from **SecureAge** is a false positive, I've had this vendor flag another project of mine in the past. A false positive report has been submitted to the vendor and the flag should clear within a few days.
 
 ---
 
