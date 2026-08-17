@@ -10,8 +10,6 @@ namespace PakMaster
         private static bool _ownsMutex;
         public static ToastManager Toasts { get; } = new();
 
-        private readonly TelemetryManager _telemetry = new();
-
         private static readonly JsonSerializerOptions _serializerOptions = new() { WriteIndented = true };
 
         // Startup
@@ -118,14 +116,6 @@ namespace PakMaster
                     {
                         ThemeBuilder.Initialize(AppSettingsManager.CurrentSettings);
                     });
-
-                    // Init Telemetry Service
-                    if (DebugConfig.Telemetry)
-                    {
-                        await ReportProgressAsync(Lang.App_ReportProgress_InitTelemetryService);
-                        await _telemetry.InitializeAsync();
-                        await _telemetry.SendAsync(true);
-                    }
 
                     // Final Splash Message
                     await ReportProgressAsync(Lang.App_ReportProgress_Final);
@@ -290,11 +280,6 @@ namespace PakMaster
                     catch (Exception) { }
                 }
                 _appMutex.Dispose();
-            }
-
-            if (DebugConfig.Telemetry)
-            {
-                _telemetry.Send(false);
             }
 
             base.OnExit(e);
